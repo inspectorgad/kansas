@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Compose supplies the real theme; this is the pre-Compose window theme so
-         the app does not flash a default background at launch. -->
-    <style name="Theme.KansasSenate" parent="android:Theme.Material.DayNight.NoActionBar">
+    <!--
+      The pre-Compose window theme, so the app does not flash a default
+      background before Compose paints.
+
+      Deliberately NOT a DayNight parent: android:Theme.Material.DayNight does
+      not exist in the framework — DayNight variants live in AppCompat, and the
+      framework's own DeviceDefault.DayNight only arrived at API 29 while this
+      app supports 26. So the light parent lives here and the dark one in
+      values-night/, which is the mechanism that actually works at minSdk 26.
+    -->
+    <style name="Theme.KansasSenate" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 </resources>

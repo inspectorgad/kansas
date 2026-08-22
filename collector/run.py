@@ -334,6 +334,11 @@ def main() -> int:
     parser.add_argument("--data-dir", default=config.DATA_DIR)
     parser.add_argument("--dry-run", action="store_true", help="collect but write nothing")
     parser.add_argument(
+        "--probe-markets",
+        action="store_true",
+        help="list what the prediction-market platforms offer, and exit",
+    )
+    parser.add_argument(
         "--probe-ads",
         action="store_true",
         help="report what the FCC political-file API actually serves, and exit",
@@ -357,6 +362,7 @@ def main() -> int:
 
     probes = {
         "probe_results": ("sources.results", "diagnose"),
+        "probe_markets": ("sources.markets", "diagnose"),
         "probe_ads": ("sources.ads", "diagnose"),
         "probe_ground": ("sources.ground", "diagnose"),
     }

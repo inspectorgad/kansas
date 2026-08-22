@@ -15,6 +15,7 @@ from fetch import SourceError
 from sources.polls import parse_polls, poll_id
 
 FIXTURE = Path(__file__).parent / "fixtures" / "polling_table.wikitext"
+MULTILINE = Path(__file__).parent / "fixtures" / "polling_table_multiline.wikitext"
 
 
 @pytest.fixture(scope="module")
@@ -142,3 +143,53 @@ def test_row_with_unparseable_date_is_skipped_and_reported():
     assert len(result.polls) == 1
     assert len(result.skipped) == 1
     assert "Bad Poll" in result.skipped[0]
+
+
+class TestMultiLineHeaders:
+    """Wikipedia's real header style: one cell per line.
+
+    This is the form the live article uses, and reading only the first header
+    line saw a single column and reported "no polling table found" — while the
+    single-line fixture passed. The fixture had been shaped to the parser instead
+    of to the source.
+    """
+
+    @pytest.fixture
+    def parsed(self):
+        return parse_polls(MULTILINE.read_text())
+
+    def test_finds_the_table(self, parsed):
+        assert len(parsed.polls) == 3
+        assert parsed.skipped == []
+
+    def test_reads_candidate_columns_through_style_attributes(self, parsed):
+        """Real header cells carry party-shading style attributes."""
+        emerson = next(p for p in parsed.polls if p.pollster == "Emerson College")
+        assert emerson.results.marshall == 47.0
+        assert emerson.results.hamilton == 46.0
+
+    def test_reads_the_other_columns_too(self, parsed):
+        emerson = next(p for p in parsed.polls if p.pollster == "Emerson College")
+        assert emerson.sample_size == 1000
+        assert emerson.population == "LV"
+        assert emerson.margin_of_error == 3.0
+        assert emerson.undecided == 4.0
+
+    def test_ignores_the_table_caption(self, parsed):
+        assert not any("2026 Kansas" in p.pollster for p in parsed.polls)
+
+    def test_header_helper_returns_every_cell(self):
+        from sources.wikitext import header_row, iter_tables
+
+        header = header_row(iter_tables(MULTILINE.read_text())[0])
+        assert len(header) == 8
+        assert any("Marshall" in cell for cell in header)
+        assert any("Hamilton" in cell for cell in header)
+
+    def test_both_header_styles_yield_the_same_header(self):
+        """The one-line and one-cell-per-line forms must parse identically."""
+        from sources.wikitext import header_row, iter_tables
+
+        single = header_row(iter_tables(FIXTURE.read_text())[0])
+        multi = header_row(iter_tables(MULTILINE.read_text())[0])
+        assert single == multi

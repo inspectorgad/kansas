@@ -1,0 +1,24 @@
+<!--
+SYNTHETIC TEST FIXTURE in the header style real Wikipedia articles use: one
+header cell per line, with rowspan/colspan attributes and templates. The
+single-line `!!` style is covered by polling_table.wikitext. Numbers are
+illustrative and are NOT a record of real polling.
+-->
+=== General election polling ===
+{| class="wikitable sortable" style="text-align:center"
+|+ 2026 Kansas U.S. Senate general election
+! rowspan="2" | Poll source
+! rowspan="2" | Date(s)<br>administered
+! rowspan="2" | Sample<br>size
+! rowspan="2" | Margin<br>of&nbsp;error
+! style="background:#ffb6b6;" | [[Roger Marshall]]<br>(R)
+! style="background:#b6d1ff;" | Adam Hamilton<br>(D)
+! rowspan="2" | Other
+! rowspan="2" | Undecided
+|-
+| Emerson College || August 14&ndash;17, 2026 || 1,000 (LV) || &plusmn; 3.0% || '''47%''' || 46% || 3% || 4%
+|-
+| Public Policy Polling || August 6&ndash;8, 2026 || 700 (LV) || &plusmn; 3.7% || '''46%''' || 45% || 2% || 7%
+|-
+| Marist College || July 30 &ndash; August 3, 2026 || 890 (RV) || &plusmn; 3.3% || '''48%''' || 44% || 3% || 5%
+|}

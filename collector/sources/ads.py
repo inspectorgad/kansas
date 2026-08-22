@@ -53,6 +53,22 @@ AUTHORISED_MARKERS = ("for kansas", "for senate", "for us senate", "committee to
 
 MONEY = re.compile(r"\$?\s*([\d,]+(?:\.\d{2})?)")
 
+# The OPIF API's paths are not something to guess at once and give up on: the
+# first live run took a 404 on a single assumed path. These are tried in order
+# and the probe reports which, if any, answers.
+FACILITY_SEARCH_PATHS = (
+    "/api/service/facility/search/state/{state}.json",
+    "/api/manager/search/facilities.json?state={state}",
+    "/api/service/facility/search/state/{state}",
+    "/api/facility/search/state/{state}.json",
+)
+
+POLITICAL_FILE_PATHS = (
+    "/api/service/{service}/facility/{facility_id}/politicalfiles.json",
+    "/api/service/{service}/facility/{facility_id}/political-files.json",
+    "/api/service/{service}/facility/{facility_id}/folder/politicalfiles.json",
+)
+
 
 @dataclass
 class AdsResult:
@@ -169,6 +185,31 @@ def _as_date(value) -> date | None:
         return None
 
 
+def _facility_search(state: str) -> tuple[dict | None, str | None]:
+    """Try each known facility-search path; return the first that answers."""
+    for template in FACILITY_SEARCH_PATHS:
+        path = template.format(state=state)
+        try:
+            payload = get_json(f"{FCC_PUBLIC_FILES_API}{path}")
+        except SourceError:
+            continue
+        if isinstance(payload, dict):
+            return payload, path
+    return None, None
+
+
+def _political_file(service: str, facility_id: object) -> dict | None:
+    for template in POLITICAL_FILE_PATHS:
+        path = template.format(service=service, facility_id=facility_id)
+        try:
+            payload = get_json(f"{FCC_PUBLIC_FILES_API}{path}")
+        except SourceError:
+            continue
+        if isinstance(payload, dict):
+            return payload
+    return None
+
+
 def fetch_broadcast(warnings: list[str]) -> list[AdFiling]:
     """Pull political-file entries for Kansas broadcast stations.
 
@@ -178,18 +219,18 @@ def fetch_broadcast(warnings: list[str]) -> list[AdFiling]:
     """
     filings: list[AdFiling] = []
 
-    try:
-        facilities = get_json(
-            f"{FCC_PUBLIC_FILES_API}/api/service/facility/search/state/KS.json"
+    facilities, used_path = _facility_search("KS")
+    if facilities is None:
+        raise SourceError(
+            "no FCC facility-search path answered for Kansas "
+            f"(tried {len(FACILITY_SEARCH_PATHS)}); run --probe-ads"
         )
-    except SourceError as exc:
-        raise SourceError(f"FCC facility search failed: {exc}") from exc
 
     rows = facilities.get("results") or facilities.get("facilities") or []
     if not rows:
         raise SourceError(
-            "FCC facility search returned no Kansas stations — the endpoint shape "
-            "has probably changed; run --probe-ads"
+            f"FCC facility search at {used_path} returned no Kansas stations — "
+            "the response shape has probably changed; run --probe-ads"
         )
 
     for facility in rows[:60]:  # bounded: a full sweep is hundreds of requests
@@ -202,13 +243,9 @@ def fetch_broadcast(warnings: list[str]) -> list[AdFiling]:
         if not facility_id:
             continue
 
-        try:
-            documents = get_json(
-                f"{FCC_PUBLIC_FILES_API}/api/service/{service}/facility/"
-                f"{facility_id}/politicalfiles.json"
-            )
-        except SourceError as exc:
-            warnings.append(f"{call_sign}: political file unavailable ({exc})")
+        documents = _political_file(service, facility_id)
+        if documents is None:
+            warnings.append(f"{call_sign}: no political-file path answered")
             continue
 
         for entry in documents.get("results") or documents.get("documents") or []:
@@ -335,18 +372,42 @@ def collect() -> AdsResult:
 
 
 def diagnose() -> str:
-    """Report what the FCC API actually serves, for pinning the shape down."""
+    """Report which FCC paths answer, and what shape they return."""
     lines = ["FCC political file probe", "=" * 40]
-    try:
-        facilities = get_json(
-            f"{FCC_PUBLIC_FILES_API}/api/service/facility/search/state/KS.json"
-        )
-    except SourceError as exc:
-        return "\n".join(lines + [f"facility search FAILED: {exc}"])
 
-    rows = facilities.get("results") or facilities.get("facilities") or []
-    lines.append(f"facility search OK: {len(rows)} Kansas stations")
-    lines.append(f"top-level keys: {sorted(facilities)[:10]}")
+    answered: dict | None = None
+    used: str | None = None
+    for template in FACILITY_SEARCH_PATHS:
+        path = template.format(state="KS")
+        try:
+            payload = get_json(f"{FCC_PUBLIC_FILES_API}{path}")
+        except SourceError as exc:
+            lines.append(f"  [MISS] {path}: {exc}")
+            continue
+        lines.append(f"  [OK  ] {path}")
+        if answered is None and isinstance(payload, dict):
+            answered, used = payload, path
+
+    if answered is None:
+        lines.append("\nNo facility-search path answered. Broadcast ads are not")
+        lines.append("collectable until one is found; the payload reports this rather")
+        lines.append("than showing an empty chart as though there were no spending.")
+        return "\n".join(lines)
+
+    rows = answered.get("results") or answered.get("facilities") or []
+    lines.append(f"\nusing {used}")
+    lines.append(f"  top-level keys: {sorted(answered)[:10]}")
+    lines.append(f"  Kansas stations: {len(rows)}")
     if rows:
-        lines.append(f"first facility keys: {sorted(rows[0])[:15]}")
+        lines.append(f"  first facility keys: {sorted(rows[0])[:15]}")
+        facility_id = rows[0].get("id") or rows[0].get("facilityId")
+        service = (rows[0].get("service") or "tv").lower()
+        lines.append(f"\n  political file for facility {facility_id}:")
+        for template in POLITICAL_FILE_PATHS:
+            path = template.format(service=service, facility_id=facility_id)
+            try:
+                get_json(f"{FCC_PUBLIC_FILES_API}{path}")
+                lines.append(f"    [OK  ] {path}")
+            except SourceError as exc:
+                lines.append(f"    [MISS] {path}: {exc}")
     return "\n".join(lines)

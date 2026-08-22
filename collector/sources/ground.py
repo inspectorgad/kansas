@@ -21,7 +21,7 @@ import re
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 
-from config import ADVANCE_DASHBOARDS, KS_SOS_REGISTRATION
+from config import ADVANCE_DASHBOARDS, ADVANCE_VOTING_OPENS, KS_SOS_REGISTRATION
 from fetch import SourceError, get_text
 from schemas import Attribution
 from schemas.ground import AdvanceBallots, CountyAdvance, CountyRegistration, Registration
@@ -290,6 +290,19 @@ def collect() -> GroundResult:
         warnings.append(f"registration statistics unavailable: {exc}")
 
     covered: list[CountyAdvance] = []
+    today = datetime.now(UTC).date()
+    if today < ADVANCE_VOTING_OPENS:
+        # Whatever these pages are showing now is not general-election advance
+        # voting. The first live run matched figures on two of them in August;
+        # those were primary numbers, and publishing them here would have been
+        # confidently wrong rather than merely empty.
+        warnings.append(
+            f"advance voting opens {ADVANCE_VOTING_OPENS.isoformat()}; "
+            "county dashboards not read yet"
+        )
+        result.advance_ballots = AdvanceBallots(counties_covered=[], counties=[])
+        return result
+
     for dashboard in ADVANCE_DASHBOARDS:
         try:
             html = get_text(dashboard.url)

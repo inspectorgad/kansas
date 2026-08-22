@@ -106,12 +106,48 @@ def split_rows(table: str) -> list[list[str]]:
 
 
 def header_row(table: str) -> list[str] | None:
-    """The first row that looks like a header (`!` cells)."""
-    for chunk in table.split("\n"):
-        if chunk.strip().startswith("!"):
-            parts = re.split(r"!!", chunk.strip().lstrip("!"))
-            return [clean(strip_cell_attributes(p)) for p in parts]
-    return None
+    """All header cells of the first header block.
+
+    Wikipedia writes headers two ways, and real articles overwhelmingly use the
+    second:
+
+        ! Poll source !! Date(s) !! Marshall (R) !! Hamilton (D)
+
+        ! Poll source
+        ! Date(s)
+        ! Marshall (R)
+        ! Hamilton (D)
+
+    Reading only the first line handles the one-line form and silently sees a
+    single column in the other — which is exactly how this parser found no
+    candidate columns on the live article while passing against a one-line
+    fixture. So consecutive `!` lines are accumulated, and `!!` within any of
+    them is split as well.
+
+    A `|-` row separator or a `|` data cell ends the header block; a `!` line
+    appearing after data (a mid-table section heading) is not part of it.
+    """
+    cells: list[str] = []
+    for raw in table.split("\n"):
+        line = raw.strip()
+        if not line:
+            continue
+        if line.startswith("{|") or line.startswith("|+"):
+            continue  # table opener and caption
+        if line.startswith("!"):
+            for part in re.split(r"!!", line.lstrip("!")):
+                cells.append(clean(strip_cell_attributes(part)))
+            continue
+        if line.startswith("|-"):
+            # End of a header block. Header cells may continue after the first
+            # separator in a two-row header, so keep going only while nothing
+            # has been collected yet.
+            if cells:
+                break
+            continue
+        if line.startswith("|") or line.startswith("|}"):
+            break  # data has started
+    return cells or None
 
 
 def parse_percent(cell: str) -> float | None:

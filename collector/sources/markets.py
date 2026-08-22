@@ -231,14 +231,75 @@ def build_consensus(
     )
 
 
+MAX_PAGES = 12
+PAGE_SIZE = 200
+
+
+def _kalshi_pages() -> tuple[list[dict], int]:
+    """Walk Kalshi's market list, returning raw rows and how many were scanned.
+
+    Pagination matters here: the first live run asked for one 200-row page and
+    concluded no market existed for this race. Kalshi lists thousands of open
+    markets and a single state Senate race is nowhere near the top, so one page
+    was never going to contain it.
+    """
+    rows: list[dict] = []
+    cursor: str | None = None
+    scanned = 0
+
+    for _ in range(MAX_PAGES):
+        params: dict[str, object] = {"status": "open", "limit": PAGE_SIZE}
+        if cursor:
+            params["cursor"] = cursor
+        payload = get_json(f"{KALSHI_API}/markets", params)
+        page = payload.get("markets") or []
+        scanned += len(page)
+        rows.extend(page)
+
+        cursor = payload.get("cursor") or None
+        if not cursor or not page:
+            break
+
+    return rows, scanned
+
+
+def _polymarket_pages() -> tuple[list[dict], int]:
+    """Walk Polymarket's Gamma listing by offset, for the same reason."""
+    rows: list[dict] = []
+    scanned = 0
+
+    for page in range(MAX_PAGES):
+        payload = get_json(
+            f"{POLYMARKET_GAMMA_API}/markets",
+            {
+                "closed": "false",
+                "limit": PAGE_SIZE,
+                "offset": page * PAGE_SIZE,
+                "order": "volumeNum",
+                "ascending": "false",
+            },
+        )
+        batch = payload if isinstance(payload, list) else payload.get("data", [])
+        if not batch:
+            break
+        scanned += len(batch)
+        rows.extend(batch)
+        if len(batch) < PAGE_SIZE:
+            break
+
+    return rows, scanned
+
+
 def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
     markets: list[Market] = []
     warnings: list[str] = []
     attribution: list[Attribution] = []
+    scanned_total = 0
 
     try:
-        payload = get_json(f"{KALSHI_API}/markets", {"status": "open", "limit": 200})
-        found = _kalshi_markets(payload)
+        rows, scanned = _kalshi_pages()
+        scanned_total += scanned
+        found = _kalshi_markets({"markets": rows})
         markets.extend(found)
         if found:
             attribution.append(KALSHI_ATTRIBUTION)
@@ -246,11 +307,9 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
         warnings.append(f"kalshi unavailable: {exc}")
 
     try:
-        payload = get_json(
-            f"{POLYMARKET_GAMMA_API}/markets",
-            {"closed": "false", "limit": 200, "order": "volumeNum", "ascending": "false"},
-        )
-        found = _polymarket_markets(payload)
+        rows, scanned = _polymarket_pages()
+        scanned_total += scanned
+        found = _polymarket_markets(rows)
         markets.extend(found)
         if found:
             attribution.append(POLYMARKET_ATTRIBUTION)
@@ -264,8 +323,8 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
         if warnings:
             raise SourceError("; ".join(warnings))
         raise SourceError(
-            "both platforms responded but no market matched this race — "
-            "market titles have probably changed"
+            f"scanned {scanned_total} open markets across both platforms and none "
+            "matched this race — run --probe-markets to see what is listed"
         )
 
     return MarketsResult(
@@ -274,3 +333,37 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
         attribution=attribution,
         warnings=warnings,
     )
+
+
+def diagnose() -> str:
+    """List what the platforms actually offer, so matching can be tuned.
+
+    The failure this exists for is silent: both APIs answer, nothing matches, and
+    the reason could be pagination, a renamed market, or a title that never says
+    "Kansas". Printing the near-misses distinguishes them in one run.
+    """
+    lines = ["Prediction market probe", "=" * 40]
+
+    for label, loader, title_of in (
+        ("kalshi", _kalshi_pages, lambda r: f"{r.get('title', '')} {r.get('yes_sub_title', '')} [{r.get('ticker', '')}]"),
+        ("polymarket", _polymarket_pages, lambda r: r.get("question") or r.get("title") or ""),
+    ):
+        lines.append(f"\n[{label}]")
+        try:
+            rows, scanned = loader()
+        except SourceError as exc:
+            lines.append(f"  FAILED: {exc}")
+            continue
+
+        lines.append(f"  scanned {scanned} open markets")
+        senate = [title_of(r) for r in rows if "senate" in title_of(r).lower()]
+        kansas = [t for t in senate if "kansas" in t.lower() or " ks" in t.lower()]
+
+        lines.append(f"  mentioning 'senate': {len(senate)}")
+        for title in senate[:12]:
+            marker = "  <-- matches Kansas" if title in kansas else ""
+            lines.append(f"    · {title.strip()}{marker}")
+        if not senate:
+            lines.append("    (none — either pagination is short or titles differ)")
+
+    return "\n".join(lines)

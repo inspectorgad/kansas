@@ -138,3 +138,48 @@ class TestAdvanceBallots:
         assert advance.mail_ballots_sent is None
         assert advance.in_person_votes is None
         assert advance.total_advance == 8_455
+
+
+class TestAdvanceVotingWindow:
+    """County dashboards are not read before general-election advance voting opens.
+
+    The first live run matched figures on two county dashboards in August. Those
+    were primary numbers. Publishing them as general-election early vote would
+    have been confidently wrong rather than merely empty, which is the worse of
+    the two failures.
+    """
+
+    def test_the_window_opens_twenty_days_before_the_election(self):
+        from config import ADVANCE_VOTING_OPENS
+        from schemas import ELECTION_DATE
+
+        assert ADVANCE_VOTING_OPENS < ELECTION_DATE
+        assert (ELECTION_DATE - ADVANCE_VOTING_OPENS).days == 20
+
+    def test_dashboards_are_not_read_before_the_window(self, monkeypatch):
+        import sources.ground as ground
+
+        calls: list[str] = []
+
+        def fail_if_called(url):
+            calls.append(url)
+            raise AssertionError("county dashboards must not be fetched yet")
+
+        monkeypatch.setattr(ground, "get_text", fail_if_called)
+        monkeypatch.setattr(ground, "parse_registration_table", lambda _html: None)
+
+        # Registration is still attempted, so let that one fetch fail cleanly.
+        from fetch import SourceError
+
+        def registration_only(url):
+            if "sos.ks.gov" in url:
+                raise SourceError("skipped in test")
+            return fail_if_called(url)
+
+        monkeypatch.setattr(ground, "get_text", registration_only)
+
+        result = ground.collect()
+        assert result.advance_ballots.counties == []
+        assert result.advance_ballots.counties_covered == []
+        assert any("advance voting opens" in w for w in result.warnings)
+        assert calls == []

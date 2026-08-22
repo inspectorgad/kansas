@@ -65,7 +65,11 @@ MARKET_SEARCH_TERMS = ("kansas senate", "kansas s enate 2026", "ks senate")
 # --- Campaign finance --------------------------------------------------------
 FEC_API = "https://api.open.fec.gov/v1"
 # api.data.gov issues a free key. "DEMO_KEY" works but is rate-limited hard.
-FEC_API_KEY = os.environ.get("FEC_API_KEY", "DEMO_KEY")
+#
+# `or` rather than a get() default: an unset secret in GitHub Actions arrives as
+# an empty string, not as absent, and a get() default would have sent
+# `api_key=` and taken a 403 — which is exactly what the first live run did.
+FEC_API_KEY = os.environ.get("FEC_API_KEY") or "DEMO_KEY"
 FEC_CYCLE = 2026
 FEC_STATE = "KS"
 FEC_OFFICE = "S"
@@ -82,13 +86,12 @@ NEWS_FEEDS: list[Feed] = [
     Feed("Kansas Reflector", "https://kansasreflector.com/feed/"),
     Feed("KCUR", "https://www.kcur.org/politics-elections-and-government.rss"),
     Feed("KWCH", "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"),
-    Feed(
-        "Topeka Capital-Journal",
-        "https://www.cjonline.com/arc/outboundfeeds/rss/category/news/",
-        paywalled=True,
-    ),
-    Feed("Kansas City Star", "https://www.kansascity.com/news/politics-government/?widgetName=rssfeed&widgetContentId=712015&getXmlFeed=true", paywalled=True),
     Feed("KSNT", "https://www.ksnt.com/feed/"),
+    Feed("Kansas Public Radio", "https://kansaspublicradio.org/feed/"),
+    Feed("Lawrence Journal-World", "https://www2.ljworld.com/rss/headlines/news/", paywalled=True),
+    # Dropped after the first live run: the Topeka Capital-Journal Arc feed 404s
+    # and the Kansas City Star widget URL times out. GDELT covers both outlets,
+    # so their stories still reach the app by another route.
 ]
 
 # GDELT casts a wider net than the local feeds and needs no key.
@@ -109,7 +112,8 @@ KANSAS_MEDIA_MARKETS = (
 )
 
 META_AD_LIBRARY_API = "https://graph.facebook.com/v21.0/ads_archive"
-META_ACCESS_TOKEN = os.environ.get("META_ACCESS_TOKEN")
+# Same reasoning as FEC_API_KEY: an unset secret is "" and must read as absent.
+META_ACCESS_TOKEN = os.environ.get("META_ACCESS_TOKEN") or None
 
 # --- Ground game -------------------------------------------------------------
 KS_SOS_REGISTRATION = "https://sos.ks.gov/elections/voter-registration-statistics.html"
@@ -121,6 +125,14 @@ class CountyDashboard:
     county: str
     url: str
 
+
+# Advance voting for the general election opens 20 days out. Before this date a
+# county dashboard still shows *primary* figures, and the first live run duly
+# matched numbers on two of them in August. Publishing those as general-election
+# early vote would be worse than publishing nothing.
+from datetime import date as _date  # noqa: E402
+
+ADVANCE_VOTING_OPENS = _date(2026, 10, 14)
 
 ADVANCE_DASHBOARDS: list[CountyDashboard] = [
     CountyDashboard("Johnson", "https://www.jocoelection.org/"),
