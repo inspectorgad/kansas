@@ -160,8 +160,6 @@ class TestResultsWindow:
 
     def test_a_real_results_file_is_not_clobbered_by_the_placeholder(self, fixtures, tmp_path):
         """A collected results.json must survive ensure_placeholders."""
-        import json
-
         run.run(["polls"], str(tmp_path), write=True)
         live = json.loads((tmp_path / "results.json").read_text())
         live["status"] = "live"
@@ -172,3 +170,47 @@ class TestResultsWindow:
         after = json.loads((tmp_path / "results.json").read_text())
         assert after["status"] == "live"
         assert after["total_votes"] == 801019
+
+
+class TestResolvedFecIds:
+    """race.json must not publish an unverified FEC id.
+
+    config's ids are hints that steer the finance lookup, and one was wrong:
+    it guessed S0KS00232 for Marshall while the API returned S0KS00315. The two
+    published files then disagreed about the same fact.
+    """
+
+    def test_the_resolved_id_is_published_not_the_config_hint(self, fixtures, tmp_path):
+        (tmp_path / "finance.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": 1,
+                    "generated_at": "2026-08-22T15:00:00Z",
+                    "candidates": {
+                        "marshall": {
+                            "candidate_id": "marshall",
+                            "fec_candidate_id": "S0KS00315",
+                        }
+                    },
+                }
+            )
+        )
+        report = run.run(["race"], str(tmp_path), write=True)
+        assert report.ok(), report.summary()
+
+        published = json.loads((tmp_path / "race.json").read_text())
+        marshall = next(c for c in published["candidates"] if c["id"] == "marshall")
+        assert marshall["fec_candidate_id"] == "S0KS00315"
+
+    def test_no_id_is_published_when_none_was_resolved(self, fixtures, tmp_path):
+        """Better absent than confidently wrong."""
+        report = run.run(["race"], str(tmp_path), write=True)
+        assert report.ok(), report.summary()
+
+        published = json.loads((tmp_path / "race.json").read_text())
+        for candidate in published["candidates"]:
+            assert "fec_candidate_id" not in candidate
+
+    def test_a_corrupt_finance_file_does_not_break_the_race_payload(self, fixtures, tmp_path):
+        (tmp_path / "finance.json").write_text("{ truncated")
+        assert run.run(["race"], str(tmp_path), write=True).ok()

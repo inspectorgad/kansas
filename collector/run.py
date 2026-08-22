@@ -82,7 +82,29 @@ def days_until_election(today: date | None = None) -> int:
     return (ELECTION_DATE - (today or datetime.now(UTC).date())).days
 
 
-def collect_race(report: RunReport) -> RacePayload:
+def _resolved_fec_ids(data_dir: str) -> dict[str, str]:
+    """Read the FEC candidate ids the finance collector actually resolved.
+
+    The ids in config are hints used only to steer that lookup, and one of them
+    was wrong: config guessed S0KS00232 for Marshall while the API returned
+    S0KS00315. Publishing the hint in race.json meant two files disagreeing about
+    the same fact, so race.json now carries the resolved id or none at all.
+    """
+    existing = Path(data_dir) / "finance.json"
+    if not existing.exists():
+        return {}
+    try:
+        previous = json.loads(existing.read_text())
+    except json.JSONDecodeError:
+        return {}
+    return {
+        cid: record["fec_candidate_id"]
+        for cid, record in (previous.get("candidates") or {}).items()
+        if record.get("fec_candidate_id")
+    }
+
+
+def collect_race(report: RunReport, data_dir: str) -> RacePayload:
     from sources.ratings import collect as collect_ratings
 
     ratings = []
@@ -90,12 +112,22 @@ def collect_race(report: RunReport) -> RacePayload:
         ratings = collect_ratings()
     except SourceError as exc:
         report.warnings.append(f"race ratings unavailable: {exc}")
+    if not ratings:
+        report.warnings.append(
+            "no race ratings parsed — the handicappers' pages may have changed"
+        )
+
+    resolved = _resolved_fec_ids(data_dir)
+    candidates = [
+        candidate.model_copy(update={"fec_candidate_id": resolved.get(candidate.id)})
+        for candidate in config.CANDIDATES
+    ]
 
     return RacePayload(
         generated_at=publish.now(),
         election_date=ELECTION_DATE,
         days_until_election=days_until_election(),
-        candidates=config.CANDIDATES,
+        candidates=candidates,
         ratings=ratings,
     )
 
@@ -198,7 +230,7 @@ def collect_news(report: RunReport) -> NewsPayload:
 
 
 # Collectors that need to read their own prior output to stay idempotent.
-NEEDS_DATA_DIR = {"polls", "markets"}
+NEEDS_DATA_DIR = {"race", "polls", "markets"}
 
 def collect_ads(report: RunReport) -> AdsPayload:
     from sources.ads import collect
