@@ -35,10 +35,10 @@ class RefreshWorker(
 
         if (!snapshot.hasAnyData) return Result.retry()
 
-        val prefs = applicationContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-        if (prefs.getBoolean(KEY_NOTIFICATIONS_ENABLED, true)) {
+        val store = PreferenceStore.of(applicationContext, PREFS)
+        if (store.getBoolean(KEY_NOTIFICATIONS_ENABLED, true)) {
             val notifier = Notifier(applicationContext)
-            ChangeDetector(prefs).eventsFor(snapshot).forEach(notifier::notify)
+            ChangeDetector(store).eventsFor(snapshot).forEach(notifier::notify)
         }
 
         // Every file failing is worth retrying; some failing is normal weather.

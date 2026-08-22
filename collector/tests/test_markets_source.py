@@ -235,3 +235,92 @@ class TestConsensus:
         consensus = build_consensus([market], [])
         assert consensus.change_24h is None
         assert consensus.change_7d is None
+
+
+class TestStateAndTickerMatching:
+    """Matching added after a live run scanned 2,500 markets and matched none.
+
+    Two ways to get this wrong, and both were live risks rather than theory:
+    requiring the literal "kansas" misses exchange tickers, which spell the state
+    KS and concatenate it (KXSENATEKS-26); loosening the boundary far enough to
+    catch those starts matching NHL *Senators* markets, because "Blackhawks" ends
+    in "ks" and "Senators" satisfies the office half.
+    """
+
+    @pytest.mark.parametrize(
+        "title",
+        [
+            "Kansas Senate election 2026",
+            "KXSENATEKS-26-RM Roger Marshall",
+            "KXSENKS-26 Marshall",
+            "Senate KS 2026",
+            "Will Marshall beat Hamilton in Kansas?",
+        ],
+    )
+    def test_identifies_this_race(self, title):
+        assert _matches_race(title)
+
+    @pytest.mark.parametrize(
+        "title",
+        [
+            "Texas Senate 2026",
+            "KXSENATETX-26 John Doe",
+            "Kansas governor race",
+            "Senate control 2026",
+            "KXNBAKS-26 Kansas basketball",
+        ],
+    )
+    def test_rejects_other_races(self, title):
+        assert not _matches_race(title)
+
+    @pytest.mark.parametrize(
+        "title",
+        [
+            "Will the Senators beat the Blackhawks?",
+            "Ottawa Senators vs Chicago Blackhawks",
+            "KSS earnings beat",
+            "New York Knicks title",
+            "",
+        ],
+    )
+    def test_rejects_sports_and_tickers_that_merely_contain_ks(self, title):
+        assert not _matches_race(title)
+
+    def test_a_ticker_naming_office_and_state_settles_both_halves(self):
+        """KXSENATEKS-26 says Senate and Kansas in one word."""
+        from sources.markets import _ticker_identifies_race
+
+        assert _ticker_identifies_race("KXSENATEKS-26-RM")
+        assert not _ticker_identifies_race("KXSENATETX-26")
+        assert not _ticker_identifies_race("KXNBAKS-26")
+
+    def test_state_abbreviation_needs_both_word_boundaries(self):
+        from sources.markets import _mentions_state
+
+        assert _mentions_state("senate ks 2026")
+        assert not _mentions_state("chicago blackhawks")
+
+
+class TestNearMisses:
+    """A failure should carry its own evidence into the CI log."""
+
+    def test_reports_listings_mentioning_the_office(self):
+        from sources.markets import near_misses
+
+        report = near_misses(
+            ["Texas Senate 2026", "Ohio Senate 2026", "Weather in Wichita", ""]
+        )
+        assert "Texas Senate 2026" in report
+        assert "Ohio Senate 2026" in report
+        assert "Weather" not in report
+
+    def test_empty_when_nothing_mentions_the_office(self):
+        from sources.markets import near_misses
+
+        assert near_misses(["Weather", "Stocks"]) == ""
+
+    def test_is_capped_so_the_message_stays_readable(self):
+        from sources.markets import near_misses
+
+        report = near_misses([f"State {i} Senate race" for i in range(50)], limit=4)
+        assert report.count(";") == 3

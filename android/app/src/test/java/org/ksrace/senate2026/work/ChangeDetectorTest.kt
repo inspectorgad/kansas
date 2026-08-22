@@ -1,6 +1,5 @@
 package org.ksrace.senate2026.work
 
-import android.content.SharedPreferences
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -24,45 +23,41 @@ import org.ksrace.senate2026.data.RaceSnapshot
  */
 class ChangeDetectorTest {
 
-    /** An in-memory SharedPreferences, so this stays a plain JVM test. */
-    private class FakePrefs : SharedPreferences {
-        val values = mutableMapOf<String, Any?>()
+    /**
+     * An in-memory store, so this stays a plain JVM test.
+     *
+     * Six methods, because [ChangeDetector] depends on [KeyValueStore] rather
+     * than on SharedPreferences. Faking the platform interface instead meant
+     * implementing twenty-odd members the detector never calls — and missing two
+     * of them broke the build without catching a single bug.
+     */
+    private class FakeStore : KeyValueStore {
+        val values = mutableMapOf<String, Any>()
 
-        override fun getString(key: String, defValue: String?) = values[key] as? String ?: defValue
+        override fun getString(key: String) = values[key] as? String
 
         @Suppress("UNCHECKED_CAST")
-        override fun getStringSet(key: String, defValues: Set<String>?) =
-            values[key] as? Set<String> ?: defValues
+        override fun getStringSet(key: String) = values[key] as? Set<String> ?: emptySet()
 
-        override fun getFloat(key: String, defValue: Float) = values[key] as? Float ?: defValue
-        override fun getBoolean(key: String, defValue: Boolean) = values[key] as? Boolean ?: defValue
+        override fun getFloat(key: String) = values[key] as? Float
 
-        // Written out longhand deliberately: a helper named `apply` would collide
-        // with both the Editor.apply() override and Kotlin's stdlib `apply`.
-        override fun edit(): SharedPreferences.Editor = object : SharedPreferences.Editor {
-            override fun putString(key: String, value: String?): SharedPreferences.Editor {
-                values[key] = value
-                return this
-            }
+        override fun getBoolean(key: String, default: Boolean) =
+            values[key] as? Boolean ?: default
 
-            override fun putStringSet(key: String, v: Set<String>?): SharedPreferences.Editor {
-                values[key] = v
-                return this
-            }
+        override fun putString(key: String, value: String) {
+            values[key] = value
+        }
 
-            override fun putFloat(key: String, value: Float): SharedPreferences.Editor {
-                values[key] = value
-                return this
-            }
+        override fun putStringSet(key: String, value: Set<String>) {
+            values[key] = value
+        }
 
-            override fun putBoolean(key: String, value: Boolean): SharedPreferences.Editor {
-                values[key] = value
-                return this
-            }
+        override fun putFloat(key: String, value: Float) {
+            values[key] = value
+        }
 
-            override fun apply() {
-                // Writes land immediately in this fake; nothing to flush.
-            }
+        override fun putBoolean(key: String, value: Boolean) {
+            values[key] = value
         }
     }
 
@@ -94,14 +89,14 @@ class ChangeDetectorTest {
 
     @Test
     fun `the first run is silent about polls that already existed`() {
-        val detector = ChangeDetector(FakePrefs())
+        val detector = ChangeDetector(FakeStore())
         val events = detector.eventsFor(snapshotWithPolls("a", "b", "c"))
         assertTrue("first run must not announce a back catalogue", events.none { it.id.startsWith("poll-") })
     }
 
     @Test
     fun `a genuinely new poll notifies once`() {
-        val prefs = FakePrefs()
+        val prefs = FakeStore()
         ChangeDetector(prefs).eventsFor(snapshotWithPolls("a", "b"))
 
         val events = ChangeDetector(prefs).eventsFor(snapshotWithPolls("new", "a", "b"))
@@ -115,7 +110,7 @@ class ChangeDetectorTest {
 
     @Test
     fun `several new polls collapse into one notification`() {
-        val prefs = FakePrefs()
+        val prefs = FakeStore()
         ChangeDetector(prefs).eventsFor(snapshotWithPolls("a"))
         val events = ChangeDetector(prefs).eventsFor(snapshotWithPolls("x", "y", "z", "a"))
         assertEquals("3 new polls", events.single { it.id.startsWith("poll-") }.title)
@@ -123,7 +118,7 @@ class ChangeDetectorTest {
 
     @Test
     fun `a poll that disappears and returns does not notify twice`() {
-        val prefs = FakePrefs()
+        val prefs = FakeStore()
         ChangeDetector(prefs).eventsFor(snapshotWithPolls("a"))
         ChangeDetector(prefs).eventsFor(snapshotWithPolls("blip", "a"))
         ChangeDetector(prefs).eventsFor(snapshotWithPolls("a"))
@@ -137,7 +132,7 @@ class ChangeDetectorTest {
 
     @Test
     fun `a small market move stays quiet`() {
-        val prefs = FakePrefs()
+        val prefs = FakeStore()
         ChangeDetector(prefs).eventsFor(snapshotWithMarket(0.70))
         val events = ChangeDetector(prefs).eventsFor(snapshotWithMarket(0.72))
         assertTrue("2 points is noise", events.none { it.id.startsWith("market-") })
@@ -145,7 +140,7 @@ class ChangeDetectorTest {
 
     @Test
     fun `a large market move notifies with a direction`() {
-        val prefs = FakePrefs()
+        val prefs = FakeStore()
         ChangeDetector(prefs).eventsFor(snapshotWithMarket(0.70))
         val event = ChangeDetector(prefs).eventsFor(snapshotWithMarket(0.78))
             .single { it.id.startsWith("market-") }
@@ -157,7 +152,7 @@ class ChangeDetectorTest {
 
     @Test
     fun `a large market move the other way names the other candidate`() {
-        val prefs = FakePrefs()
+        val prefs = FakeStore()
         ChangeDetector(prefs).eventsFor(snapshotWithMarket(0.70))
         val event = ChangeDetector(prefs).eventsFor(snapshotWithMarket(0.60))
             .single { it.id.startsWith("market-") }
@@ -166,7 +161,7 @@ class ChangeDetectorTest {
 
     @Test
     fun `a new filing notifies but the same one does not`() {
-        val prefs = FakePrefs()
+        val prefs = FakeStore()
         fun snapshot(date: String) = RaceSnapshot(
             finance = FinancePayload(
                 generatedAt = "2026-08-22T12:00:00Z",
@@ -193,7 +188,7 @@ class ChangeDetectorTest {
 
     @Test
     fun `results going live is announced exactly once`() {
-        val prefs = FakePrefs()
+        val prefs = FakeStore()
         val live = RaceSnapshot(
             results = ResultsPayload(
                 generatedAt = "2026-11-03T23:10:00Z",
@@ -206,6 +201,6 @@ class ChangeDetectorTest {
 
     @Test
     fun `an empty snapshot produces nothing`() {
-        assertTrue(ChangeDetector(FakePrefs()).eventsFor(RaceSnapshot()).isEmpty())
+        assertTrue(ChangeDetector(FakeStore()).eventsFor(RaceSnapshot()).isEmpty())
     }
 }

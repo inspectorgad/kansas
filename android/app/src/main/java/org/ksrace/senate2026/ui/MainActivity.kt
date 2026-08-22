@@ -11,8 +11,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.filled.AccountBalance
-import androidx.compose.material.icons.filled.Article
 import androidx.compose.material.icons.filled.HowToVote
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Poll
@@ -78,7 +78,7 @@ private enum class Tab(val label: String, val icon: ImageVector) {
     HOME("Race", Icons.Filled.HowToVote),
     POLLS("Polls", Icons.Filled.Poll),
     MONEY("Money", Icons.Filled.AccountBalance),
-    NEWS("News", Icons.Filled.Article),
+    NEWS("News", Icons.AutoMirrored.Filled.Article),
     MORE("More", Icons.Filled.MoreHoriz),
 }
 

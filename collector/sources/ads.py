@@ -26,6 +26,7 @@ from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 
 from config import (
+    FCC_ENABLED,
     FCC_PUBLIC_FILES_API,
     KANSAS_MEDIA_MARKETS,
     META_ACCESS_TOKEN,
@@ -356,13 +357,19 @@ def collect() -> AdsResult:
     warnings: list[str] = []
     result = AdsResult(warnings=warnings)
 
-    try:
-        filings = fetch_broadcast(warnings)
-        result.broadcast = aggregate(filings)
-        if filings:
-            result.attribution.append(FCC_ATTRIBUTION)
-    except SourceError as exc:
-        warnings.append(f"broadcast ads unavailable: {exc}")
+    if not FCC_ENABLED:
+        warnings.append(
+            "broadcast ads disabled: no working FCC facility-search path is known "
+            "(run --probe-ads to retry the documented shapes)"
+        )
+    else:
+        try:
+            filings = fetch_broadcast(warnings)
+            result.broadcast = aggregate(filings)
+            if filings:
+                result.attribution.append(FCC_ATTRIBUTION)
+        except SourceError as exc:
+            warnings.append(f"broadcast ads unavailable: {exc}")
 
     result.digital = fetch_digital(warnings)
     if result.digital.available:

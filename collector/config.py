@@ -88,10 +88,10 @@ NEWS_FEEDS: list[Feed] = [
     Feed("KWCH", "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"),
     Feed("KSNT", "https://www.ksnt.com/feed/"),
     Feed("Kansas Public Radio", "https://kansaspublicradio.org/feed/"),
-    Feed("Lawrence Journal-World", "https://www2.ljworld.com/rss/headlines/news/", paywalled=True),
-    # Dropped after the first live run: the Topeka Capital-Journal Arc feed 404s
-    # and the Kansas City Star widget URL times out. GDELT covers both outlets,
-    # so their stories still reach the app by another route.
+    # Dropped after live runs: the Topeka Capital-Journal Arc feed and the
+    # Lawrence Journal-World feed 404, and the Kansas City Star widget URL times
+    # out. GDELT covers those outlets, so their stories still reach the app by
+    # another route.
 ]
 
 # GDELT casts a wider net than the local feeds and needs no key.
@@ -103,6 +103,12 @@ NEWS_REQUIRED_TERMS = ("marshall", "hamilton", "kansas senate", "senate race")
 
 # --- Broadcast ads -----------------------------------------------------------
 FCC_PUBLIC_FILES_API = "https://publicfiles.fcc.gov"
+
+# Broadcast ad collection is off until a working facility-search path is found.
+# Four documented shapes were tried against the live API and all four 404'd, so
+# every run was spending four requests to fail. `--probe-ads` still tries them
+# all on demand; flip this to True once one answers.
+FCC_ENABLED = False
 # Kansas is split across these DMAs; the two that matter are Wichita and KC.
 KANSAS_MEDIA_MARKETS = (
     "Wichita-Hutchinson",

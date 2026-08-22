@@ -1,6 +1,5 @@
 package org.ksrace.senate2026.ui.settings
 
-import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -27,6 +26,7 @@ import org.ksrace.senate2026.data.RaceSnapshot
 import org.ksrace.senate2026.format.formatAge
 import org.ksrace.senate2026.ui.components.SectionCard
 import org.ksrace.senate2026.ui.components.ThinDivider
+import org.ksrace.senate2026.work.PreferenceStore
 import org.ksrace.senate2026.work.RefreshWorker
 
 /**
@@ -45,11 +45,9 @@ fun SettingsScreen(
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
-    val prefs = remember {
-        context.getSharedPreferences(RefreshWorker.PREFS, Context.MODE_PRIVATE)
-    }
+    val store = remember { PreferenceStore.of(context, RefreshWorker.PREFS) }
     var notificationsEnabled by remember {
-        mutableStateOf(prefs.getBoolean(RefreshWorker.KEY_NOTIFICATIONS_ENABLED, true))
+        mutableStateOf(store.getBoolean(RefreshWorker.KEY_NOTIFICATIONS_ENABLED, true))
     }
 
     LazyColumn(
@@ -81,9 +79,7 @@ fun SettingsScreen(
                         checked = notificationsEnabled,
                         onCheckedChange = { enabled ->
                             notificationsEnabled = enabled
-                            prefs.edit()
-                                .putBoolean(RefreshWorker.KEY_NOTIFICATIONS_ENABLED, enabled)
-                                .apply()
+                            store.putBoolean(RefreshWorker.KEY_NOTIFICATIONS_ENABLED, enabled)
                         },
                     )
                 }

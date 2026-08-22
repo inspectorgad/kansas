@@ -14,6 +14,7 @@ one being down degrades to the other rather than failing the run.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 
@@ -29,11 +30,28 @@ POLYMARKET_ATTRIBUTION = Attribution(
     name="Polymarket", url="https://polymarket.com", note="Public Gamma API."
 )
 
-# Matched against market titles to find this race.
+# Matched against market titles, subtitles and tickers to find this race.
+#
+# "kansas" alone was too strict: a live run scanned 2,500 open markets and matched
+# none, because exchange tickers spell the state "KS" (KXSENATEKS-26) and the
+# readable state name often sits on the parent event rather than the market row.
+# So a bare "ks" token counts too — a token, not a substring, or anything
+# containing "ks" (Knicks, KSS) would qualify.
 RACE_TERMS = ("kansas",)
-SENATE_TERMS = ("senate",)
+SENATE_TERMS = ("senate", "senator")
 MARSHALL_TERMS = ("marshall",)
 HAMILTON_TERMS = ("hamilton",)
+
+# "KS" as a standalone word, for prose like "Senate KS 2026". Both boundaries are
+# required: a right boundary alone would match "Blackhawks", and Kalshi lists
+# plenty of NHL *Senators* markets — "Senators beat the Blackhawks" would then
+# satisfy both halves of the test and be collected as this race.
+STATE_WORD = re.compile(r"(?:^|[^a-z])ks(?:[^a-z]|$)", re.IGNORECASE)
+
+# Exchange tickers concatenate, so KXSENATEKS-26 never yields a token boundary
+# around its "KS". Matching an all-caps token that contains both SEN and KS picks
+# those up without loosening the prose rule.
+TICKER_TOKEN = re.compile(r"\b[A-Z][A-Z0-9]{2,}\b")
 
 
 @dataclass
@@ -44,9 +62,33 @@ class MarketsResult:
     warnings: list[str] = field(default_factory=list)
 
 
+def _ticker_identifies_race(raw: str) -> bool:
+    """An all-caps token holding both SEN and KS names the office and the state.
+
+    KXSENATEKS-26 says "Senate" and "Kansas" in one word, so it settles both
+    halves of the test at once — which is why this is checked before the state
+    and office rules rather than feeding into them.
+    """
+    return any("SEN" in token and "KS" in token for token in TICKER_TOKEN.findall(raw))
+
+
+def _mentions_state(text: str) -> bool:
+    """Does this text name Kansas, spelled out or abbreviated as a word?"""
+    return any(term in text for term in RACE_TERMS) or bool(STATE_WORD.search(text))
+
+
 def _matches_race(title: str) -> bool:
-    text = (title or "").lower()
-    if not any(term in text for term in RACE_TERMS):
+    """True when this text identifies the Kansas Senate race.
+
+    Requires the state *and* either the office or both candidates. Dropping
+    either half is how this goes wrong: state-only would match the Kansas
+    governor's race, office-only would match the other 33 Senate contests.
+    """
+    raw = title or ""
+    text = raw.lower()
+    if _ticker_identifies_race(raw):
+        return True
+    if not _mentions_state(text):
         return False
     if any(term in text for term in SENATE_TERMS):
         return True
@@ -78,7 +120,16 @@ def _kalshi_markets(payload: dict) -> list[Market]:
     for market in payload.get("markets", []):
         title = market.get("title") or market.get("subtitle") or ""
         ticker = market.get("ticker") or ""
-        if not _matches_race(f"{title} {ticker}"):
+        # The state can sit on any of these: a market row often carries only the
+        # candidate name while its parent event holds "Kansas Senate".
+        haystack = " ".join(
+            str(market.get(key, ""))
+            for key in (
+                "title", "subtitle", "yes_sub_title", "no_sub_title",
+                "ticker", "event_ticker", "series_ticker", "category",
+            )
+        )
+        if not _matches_race(haystack):
             continue
 
         # Kalshi quotes cents on the "yes" side of one named outcome.
@@ -121,7 +172,11 @@ def _polymarket_markets(payload: list | dict) -> list[Market]:
     out: list[Market] = []
     for market in rows:
         question = market.get("question") or market.get("title") or ""
-        if not _matches_race(question):
+        haystack = " ".join(
+            str(market.get(key, ""))
+            for key in ("question", "title", "slug", "groupItemTitle")
+        )
+        if not _matches_race(haystack):
             continue
 
         outcomes = _parse_maybe_json(market.get("outcomes")) or []
@@ -290,15 +345,31 @@ def _polymarket_pages() -> tuple[list[dict], int]:
     return rows, scanned
 
 
+def near_misses(titles: list[str], limit: int = 6) -> str:
+    """Listings that mention the office, to show why matching failed.
+
+    A failure saying only "nothing matched" sends the next person off to run a
+    separate probe. Carrying the near-misses in the message means the CI log
+    itself distinguishes a renamed market from short pagination.
+    """
+    senate = [t.strip() for t in titles if "senate" in t.lower() and t.strip()]
+    return "; ".join(sorted(set(senate))[:limit])
+
+
 def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
     markets: list[Market] = []
     warnings: list[str] = []
     attribution: list[Attribution] = []
     scanned_total = 0
+    seen_titles: list[str] = []
 
     try:
         rows, scanned = _kalshi_pages()
         scanned_total += scanned
+        seen_titles.extend(
+            f"{r.get('title', '')} {r.get('yes_sub_title', '')} [{r.get('ticker', '')}]"
+            for r in rows
+        )
         found = _kalshi_markets({"markets": rows})
         markets.extend(found)
         if found:
@@ -309,6 +380,7 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
     try:
         rows, scanned = _polymarket_pages()
         scanned_total += scanned
+        seen_titles.extend(str(r.get("question") or r.get("title") or "") for r in rows)
         found = _polymarket_markets(rows)
         markets.extend(found)
         if found:
@@ -322,9 +394,11 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
         # a silently missing headline number is not.
         if warnings:
             raise SourceError("; ".join(warnings))
+        nearest = near_misses(seen_titles)
         raise SourceError(
             f"scanned {scanned_total} open markets across both platforms and none "
-            "matched this race — run --probe-markets to see what is listed"
+            f"matched this race. Nearest listings mentioning the office: "
+            f"{nearest or '(none)'}"
         )
 
     return MarketsResult(

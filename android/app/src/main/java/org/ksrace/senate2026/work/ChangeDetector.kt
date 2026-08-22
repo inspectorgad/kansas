@@ -1,6 +1,5 @@
 package org.ksrace.senate2026.work
 
-import android.content.SharedPreferences
 import org.ksrace.senate2026.data.RaceSnapshot
 import org.ksrace.senate2026.format.formatShortDollars
 import kotlin.math.abs
@@ -14,10 +13,10 @@ import kotlin.math.roundToInt
  * new polls, market moves past a threshold, new filings, rating changes, and the
  * one moment that matters most — returns starting to come in.
  *
- * State lives in SharedPreferences rather than being derived from the data, so a
+ * State lives in a KeyValueStore rather than being derived from the data, so a
  * poll that appears, disappears and reappears upstream cannot notify twice.
  */
-class ChangeDetector(private val prefs: SharedPreferences) {
+class ChangeDetector(private val prefs: KeyValueStore) {
 
     fun eventsFor(snapshot: RaceSnapshot): List<RaceEvent> {
         val events = mutableListOf<RaceEvent>()
@@ -33,7 +32,7 @@ class ChangeDetector(private val prefs: SharedPreferences) {
 
     private fun newPolls(snapshot: RaceSnapshot): RaceEvent? {
         val polls = snapshot.polls?.polls?.takeIf { it.isNotEmpty() } ?: return null
-        val seen = prefs.getStringSet(KEY_SEEN_POLLS, emptySet()).orEmpty()
+        val seen = prefs.getStringSet(KEY_SEEN_POLLS)
         val fresh = polls.filter { it.id !in seen }
 
         // Accumulate, never replace. Overwriting with just the currently visible
@@ -43,7 +42,7 @@ class ChangeDetector(private val prefs: SharedPreferences) {
         val remembered = (seen + polls.map { it.id }).let { ids ->
             if (ids.size <= MAX_REMEMBERED_POLLS) ids else ids.take(MAX_REMEMBERED_POLLS).toSet()
         }
-        prefs.edit().putStringSet(KEY_SEEN_POLLS, remembered).apply()
+        prefs.putStringSet(KEY_SEEN_POLLS, remembered)
 
         // First run: learn the back catalogue silently rather than announcing it.
         if (seen.isEmpty() || fresh.isEmpty()) return null
@@ -63,10 +62,12 @@ class ChangeDetector(private val prefs: SharedPreferences) {
     private fun marketSwing(snapshot: RaceSnapshot): RaceEvent? {
         val consensus = snapshot.markets?.consensus ?: return null
         val current = consensus.marshall
-        val last = prefs.getFloat(KEY_LAST_MARKET, Float.NaN)
-        prefs.edit().putFloat(KEY_LAST_MARKET, current.toFloat()).apply()
+        val last = prefs.getFloat(KEY_LAST_MARKET)
+        prefs.putFloat(KEY_LAST_MARKET, current.toFloat())
 
-        if (last.isNaN()) return null
+        // No prior reading means there is no movement to report, which is not
+        // the same as a move from zero.
+        if (last == null) return null
         val move = current - last
         if (abs(move) < MARKET_SWING_THRESHOLD) return null
 
@@ -84,8 +85,8 @@ class ChangeDetector(private val prefs: SharedPreferences) {
         val filings = snapshot.finance?.filings?.takeIf { it.isNotEmpty() } ?: return null
         val newest = filings.first()
         val key = "${newest.committeeId}-${newest.date}-${newest.formType}"
-        val seen = prefs.getString(KEY_LAST_FILING, null)
-        prefs.edit().putString(KEY_LAST_FILING, key).apply()
+        val seen = prefs.getString(KEY_LAST_FILING)
+        prefs.putString(KEY_LAST_FILING, key)
 
         if (seen == null || seen == key) return null
         val amount = newest.totalReceipts?.let { " — ${formatShortDollars(it)} raised" } ?: ""
@@ -99,8 +100,8 @@ class ChangeDetector(private val prefs: SharedPreferences) {
     private fun ratingChange(snapshot: RaceSnapshot): RaceEvent? {
         val ratings = snapshot.race?.ratings?.takeIf { it.isNotEmpty() } ?: return null
         val fingerprint = ratings.joinToString("|") { "${it.source}=${it.rating}" }
-        val seen = prefs.getString(KEY_LAST_RATINGS, null)
-        prefs.edit().putString(KEY_LAST_RATINGS, fingerprint).apply()
+        val seen = prefs.getString(KEY_LAST_RATINGS)
+        prefs.putString(KEY_LAST_RATINGS, fingerprint)
 
         if (seen == null || seen == fingerprint) return null
         val summary = ratings.joinToString(", ") { "${it.source}: ${it.rating}" }
@@ -114,7 +115,7 @@ class ChangeDetector(private val prefs: SharedPreferences) {
     private fun resultsLive(snapshot: RaceSnapshot): RaceEvent? {
         if (!snapshot.resultsAreLive) return null
         if (prefs.getBoolean(KEY_RESULTS_ANNOUNCED, false)) return null
-        prefs.edit().putBoolean(KEY_RESULTS_ANNOUNCED, true).apply()
+        prefs.putBoolean(KEY_RESULTS_ANNOUNCED, true)
         return RaceEvent(
             id = "results-live",
             title = "Results are coming in",
