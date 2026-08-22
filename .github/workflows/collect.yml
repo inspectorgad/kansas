@@ -28,26 +28,42 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - name: Check out the data branch
-        uses: actions/checkout@v4
-        # The data branch does not exist on the first run; the next step creates
-        # it. continue-on-error must sit at step level, not under `with`.
-        continue-on-error: true
-        with:
-          ref: data
-          path: published
-
+      # The data branch is prepared by hand rather than with actions/checkout.
+      #
+      # The previous version checked it out with continue-on-error and then
+      # created an orphan branch only `if [ ! -d published/.git ]`. But checkout
+      # runs `git init` before it discovers the ref is missing, so on the very
+      # first run that directory already existed: the guard skipped, no branch
+      # named `data` was ever created, and the commit went nowhere. Every run
+      # collected real data and then died on `src refspec data does not match
+      # any`.
+      #
+      # `git init -b data` cannot fail that way — the branch exists before
+      # anything else happens, whether or not the remote has one yet.
       - name: Prepare the data branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ ! -d published/.git ]; then
-            echo "No data branch yet — creating an orphan branch."
-            rm -rf published
-            git clone --no-checkout . published
-            cd published
-            git checkout --orphan data
-            git rm -rfq --cached . 2>/dev/null || true
-            mkdir -p data
+          set -euo pipefail
+          rm -rf published
+          mkdir -p published
+          cd published
+          git init -q -b data
+          git remote add origin \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git config user.name "ks-senate-collector"
+          git config user.email "noreply@github.com"
+
+          # Carry the existing branch forward when there is one. The history in
+          # data/history/ is what the trend charts are built from, so starting
+          # fresh each run would quietly flatten them.
+          if git fetch --depth=1 origin data 2>/dev/null; then
+            echo "Existing data branch fetched."
+            git reset --hard FETCH_HEAD
+          else
+            echo "No data branch yet; starting one."
           fi
+          mkdir -p data
 
       - uses: actions/setup-python@v5
         with:
@@ -64,6 +80,9 @@ jobs:
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
         run: |
+          # pipefail matters: without it `$?` reports tee's exit status, so a
+          # failed collection looked like a successful one.
+          set -o pipefail
           set +e
           python collector/run.py \
             --data-dir published/data \
@@ -74,19 +93,19 @@ jobs:
       - name: Publish
         working-directory: published
         run: |
-          git config user.name "ks-senate-collector"
-          git config user.email "noreply@github.com"
           git add -A data
           if git diff --cached --quiet; then
             echo "Nothing changed; not committing."
             exit 0
           fi
           git commit -m "Data update $(date -u +%Y-%m-%dT%H:%MZ)"
+          # HEAD:data is explicit: pushing the bare name `data` depends on a
+          # local branch of that name resolving, which is what broke before.
           for attempt in 1 2 3 4; do
-            if git push origin data; then exit 0; fi
+            if git push origin HEAD:data; then exit 0; fi
             echo "Push failed (attempt $attempt); retrying."
             sleep $((2 ** attempt))
-            git fetch origin data && git rebase origin/data || true
+            git fetch --depth=1 origin data && git rebase FETCH_HEAD || true
           done
           echo "Push failed after 4 attempts." >&2
           exit 1
