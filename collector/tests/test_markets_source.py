@@ -617,3 +617,134 @@ class TestCombinationMarginalisation:
         from sources.markets import marginalise_combos
 
         assert marginalise_combos([{"ticker": m["ticker"]} for m in self.GRID]) is None
+
+
+class TestArkansasIsNotKansas:
+    """The state name matched inside another state's name.
+
+    Taken verbatim from the live run of 2026-08-22, which pulled these rows into
+    this race's market set: "arkansas" ends with the letters "kansas", and the
+    state test was a substring test. Forty markets were collected for a Kansas
+    Senate race and some of them were Arkansas's.
+    """
+
+    ARKANSAS = (
+        "Will Democratics win the Senate race in Arkansas? "
+        "Democratic party [SENATEAR-28-D]"
+    )
+    KANSAS = (
+        "Will Democratics win the Senate race in Kansas? "
+        "Democratic party [SENATEKS-28-D]"
+    )
+
+    def test_arkansas_is_not_this_race(self):
+        from sources.markets import _matches_race
+
+        assert not _matches_race(self.ARKANSAS)
+
+    def test_kansas_still_is(self):
+        from sources.markets import _matches_race
+
+        assert _matches_race(self.KANSAS)
+
+    @pytest.mark.parametrize(
+        "text",
+        [
+            "Will the Arkansas Senate seat flip?",
+            "Arkansas Senate 2026 winner",
+            "arkansas senate republican",
+        ],
+    )
+    def test_no_arkansas_phrasing_matches(self, text):
+        from sources.markets import _matches_race
+
+        assert not _matches_race(text)
+
+    def test_the_state_test_itself_rejects_the_longer_name(self):
+        from sources.markets import _mentions_state
+
+        assert _mentions_state("kansas senate")
+        assert _mentions_state("Kansas Senate")
+        assert not _mentions_state("arkansas senate")
+
+
+class TestGridsAreNotPooledAcrossStates:
+    """Two states' combination grids must never be summed together.
+
+    The live grid keys were the outcome pair alone, so Arkansas's DEMDEM
+    overwrote Kansas's. Four entries remained, which read as a complete
+    partition, and the derived probability would have been assembled from two
+    different races — real prices, wrong contest, nothing visibly wrong.
+    """
+
+    KANSAS = [
+        {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMDEM", "last_price": 11},
+        {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMREP", "last_price": 19},
+        {"ticker": "KXKSSENGOVCOMBO-26NOV-REPDEM", "last_price": 22},
+        {"ticker": "KXKSSENGOVCOMBO-26NOV-REPREP", "last_price": 48},
+    ]
+    ARKANSAS = [
+        {"ticker": "KXARSENGOVCOMBO-26NOV-DEMDEM", "last_price": 90},
+        {"ticker": "KXARSENGOVCOMBO-26NOV-DEMREP", "last_price": 90},
+        {"ticker": "KXARSENGOVCOMBO-26NOV-REPDEM", "last_price": 90},
+        {"ticker": "KXARSENGOVCOMBO-26NOV-REPREP", "last_price": 90},
+    ]
+
+    def test_another_states_grid_does_not_move_the_number(self):
+        from sources.markets import marginalise_combos
+
+        alone = marginalise_combos(self.KANSAS)
+        mixed = marginalise_combos(self.KANSAS + self.ARKANSAS)
+        assert alone == mixed
+        assert mixed[0] == pytest.approx(0.67, abs=1e-4)
+
+    def test_another_states_grid_alone_yields_nothing(self):
+        from sources.markets import marginalise_combos
+
+        assert marginalise_combos(self.ARKANSAS) is None
+
+    def test_two_partial_grids_do_not_add_up_to_one_complete_one(self):
+        """Three Kansas cells plus one Arkansas cell is not a partition."""
+        from sources.markets import marginalise_combos
+
+        assert marginalise_combos(self.KANSAS[:3] + self.ARKANSAS[3:]) is None
+
+    def test_the_grid_is_grouped_by_series(self):
+        from sources.markets import combo_grid
+
+        grids = combo_grid(self.KANSAS + self.ARKANSAS, kansas_only=False)
+        assert set(grids) == {"KXKSSENGOVCOMBO-26NOV", "KXARSENGOVCOMBO-26NOV"}
+        assert len(grids["KXKSSENGOVCOMBO-26NOV"]) == 4
+
+    def test_only_kansas_series_are_kept_by_default(self):
+        from sources.markets import combo_grid
+
+        assert set(combo_grid(self.KANSAS + self.ARKANSAS)) == {"KXKSSENGOVCOMBO-26NOV"}
+
+
+class TestGridDiagnostic:
+    """The warning must name the missing cells rather than say "nothing matched".
+
+    A capped title sample could not distinguish a race nobody quotes from a grid
+    one cell short, and guessing which cost two rounds.
+    """
+
+    def test_missing_cells_are_named(self):
+        from sources.markets import describe_grid
+
+        note = describe_grid(TestGridsAreNotPooledAcrossStates.KANSAS[:3])
+        assert "KXKSSENGOVCOMBO-26NOV" in note
+        assert "kansas" in note
+        assert "REPREP" in note.split("missing=")[1]
+
+    def test_other_states_are_labelled_not_hidden(self):
+        from sources.markets import describe_grid
+
+        note = describe_grid(TestGridsAreNotPooledAcrossStates.ARKANSAS)
+        assert "KXARSENGOVCOMBO-26NOV" in note
+        assert "other-state" in note
+
+    def test_a_scan_with_no_combos_says_so(self):
+        from sources.markets import describe_grid
+
+        assert describe_grid([{"ticker": "KXNBA-26-LAL"}]) == "no combination series found"

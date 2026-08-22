@@ -37,7 +37,12 @@ POLYMARKET_ATTRIBUTION = Attribution(
 # readable state name often sits on the parent event rather than the market row.
 # So a bare "ks" token counts too — a token, not a substring, or anything
 # containing "ks" (Knicks, KSS) would qualify.
-RACE_TERMS = ("kansas",)
+# Both boundaries are required, and the reason is embarrassing: "arkansas" ends
+# with the letters "kansas", so a substring test made every Arkansas contest a
+# Kansas one. A live run pulled "Will Democratics win the Senate race in
+# Arkansas?" into this race's market set. Same class of fault as the AKSEN ticker
+# below — a state name matched inside another state's name.
+STATE_NAME = re.compile(r"(?:^|[^a-z])kansas(?:[^a-z]|$)", re.IGNORECASE)
 SENATE_TERMS = ("senate", "senator")
 MARSHALL_TERMS = ("marshall",)
 HAMILTON_TERMS = ("hamilton",)
@@ -108,8 +113,12 @@ def _ticker_identifies_race(raw: str) -> bool:
 
 
 def _mentions_state(text: str) -> bool:
-    """Does this text name Kansas, spelled out or abbreviated as a word?"""
-    return any(term in text for term in RACE_TERMS) or bool(STATE_WORD.search(text))
+    """Does this text name Kansas, spelled out or abbreviated as a word?
+
+    Both forms are word-bounded. Neither "arkansas" nor "Blackhawks" names this
+    state, and both matched before.
+    """
+    return bool(STATE_NAME.search(text)) or bool(STATE_WORD.search(text))
 
 
 def _is_combo(ticker: str) -> bool:
@@ -156,20 +165,31 @@ def _matches_race(title: str) -> bool:
     return any(t in text for t in MARSHALL_TERMS) and any(t in text for t in HAMILTON_TERMS)
 
 
-def marginalise_combos(rows: list[dict]) -> tuple[float, float] | None:
-    """Derive the Senate probability from a complete governor-by-senate grid.
+ALL_OUTCOMES = (("DEM", "DEM"), ("DEM", "REP"), ("REP", "DEM"), ("REP", "REP"))
 
-    All four outcomes must be present. With fewer, the missing mass is unknown and
-    renormalising the rest would invent a number rather than derive one — so a
-    partial grid yields nothing instead of a plausible guess.
+
+def combo_grid(rows: list[dict], kansas_only: bool = True) -> dict[str, dict[tuple[str, str], float]]:
+    """Group combination outcomes by series ticker: {series: {(gov, sen): price}}.
+
+    Grouping is the whole point. Keyed on the outcome pair alone, as this was, a
+    scan that reached two states' grids pooled them — Arkansas's DEMDEM
+    overwriting Kansas's — and the result still held four entries, so it read as
+    a complete partition while being assembled from two different races. That is
+    the worst failure available here: real prices, wrong contest, a number that
+    looks entirely normal on screen.
+
+    Series must also positively identify Kansas and the Senate. Excluding other
+    states by name is not enough when the ticker is all that distinguishes them.
     """
-    outcomes: dict[tuple[str, str], float] = {}
+    grids: dict[str, dict[tuple[str, str], float]] = {}
 
     for market in rows:
-        ticker = str(market.get("ticker", ""))
+        ticker = str(market.get("ticker", "")).upper()
         if not _is_combo(ticker) or not _is_this_cycle(ticker):
             continue
-        match = COMBO_OUTCOME.search(ticker.upper())
+        if kansas_only and not _ticker_identifies_race(ticker):
+            continue
+        match = COMBO_OUTCOME.search(ticker)
         if not match:
             continue
         price = market.get("last_price")
@@ -177,8 +197,46 @@ def marginalise_combos(rows: list[dict]) -> tuple[float, float] | None:
             price = market.get("yes_bid")
         if price is None:
             continue
-        outcomes[(match.group(1), match.group(2))] = float(price) / 100.0
+        series = ticker[: match.start()]
+        grids.setdefault(series, {})[(match.group(1), match.group(2))] = float(price) / 100.0
 
+    return grids
+
+
+def describe_grid(rows: list[dict]) -> str:
+    """Name every combination series found and which of its four cells are priced.
+
+    The generic "no market listed" warning could not distinguish a race nobody
+    quotes from a grid one cell short, and inferring which from a truncated
+    sample cost two rounds of guessing. This says it outright.
+    """
+    grids = combo_grid(rows, kansas_only=False)
+    if not grids:
+        return "no combination series found"
+
+    parts = []
+    for series, outcomes in sorted(grids.items()):
+        have = ",".join(f"{gov}{sen}" for gov, sen in ALL_OUTCOMES if (gov, sen) in outcomes)
+        missing = ",".join(f"{gov}{sen}" for gov, sen in ALL_OUTCOMES if (gov, sen) not in outcomes)
+        mine = "kansas" if _ticker_identifies_race(series) else "other-state"
+        parts.append(f"{series} [{mine}] priced={have or 'none'} missing={missing or 'none'}")
+    return "; ".join(parts)
+
+
+def marginalise_combos(rows: list[dict]) -> tuple[float, float] | None:
+    """Derive the Senate probability from a complete governor-by-senate grid.
+
+    All four outcomes of one Kansas series must be present. With fewer, the
+    missing mass is unknown and renormalising the rest would invent a number
+    rather than derive one — so a partial grid yields nothing instead of a
+    plausible guess.
+    """
+    grids = combo_grid(rows)
+    if not grids:
+        return None
+
+    # One series covers this race. If several appear, the fullest is the live one.
+    _series, outcomes = max(grids.items(), key=lambda item: len(item[1]))
     if len(outcomes) != 4:
         return None
 
@@ -641,6 +699,11 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
                     "no standalone Kansas Senate contract exists; the probability is "
                     "marginalised from Kalshi's four governor-by-senate outcomes"
                 )
+            else:
+                # Say which cells are priced. "Nothing matched" and "the grid is
+                # one cell short" need entirely different fixes, and a capped
+                # title sample cannot tell them apart.
+                warnings.append(f"combination grid unusable: {describe_grid(rows)}")
         markets.extend(found)
         if found:
             attribution.append(KALSHI_ATTRIBUTION)
