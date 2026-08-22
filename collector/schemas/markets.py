@@ -46,7 +46,7 @@ class Consensus(Strict):
 
 
 class MarketsPayload(Payload):
-    markets: list[Market]
+    markets: list[Market] = []
     consensus: Consensus | None = None
     attribution: list[Attribution] = []
     disclaimer: str = (

@@ -1,0 +1,18 @@
+{
+  "query": {
+    "pages": [
+      {
+        "title": "2026 United States Senate election in Kansas",
+        "revisions": [
+          {
+            "slots": {
+              "main": {
+                "content": "<!--\nSYNTHETIC TEST FIXTURE. Hand-authored to mirror the structure of the polling\ntables on the Wikipedia race article, which was not reachable from the\nenvironment this parser was written in. The numbers are illustrative and are\nNOT a record of real polling; the live-check CI job validates the parser against\nthe real article. Rows here deliberately include the awkward cases the parser\nmust survive: bolded leaders, an unreported sample size, a cross-month date\nrange, a campaign-sponsored poll, a dash for a missing value, refs, templates,\nand a trailing \"aggregate\" row that is not a poll.\n-->\n== General election ==\n\n=== Polling ===\n{| class=\"wikitable sortable\"\n! Poll source !! Date(s)<br>administered !! Sample<br>size !! Margin<br>of&nbsp;error !! [[Roger Marshall]] (R) !! Adam<br>Hamilton (D) !! Other !! Undecided\n|-\n| [https://example.org/poll1 Public Policy Polling] || August 6&ndash;8, 2026 || 700 (LV) || &plusmn; 3.7% || '''46%''' || 45% || 2% || 7%\n|-\n| GBAO (for Hamilton campaign)<ref name=\"gbao\">{{cite web|url=https://example.org/gbao|title=Internal}}</ref> || August 3&ndash;6, 2026 || 600 (LV) || &plusmn; 4.0% || '''48%''' || 44% || 3% || 5%\n|-\n| Emerson College || July 28 &ndash; August 2, 2026 || 1,024 (RV) || &plusmn; 3.0% || '''47%''' || 44% || 4% || 5%\n|-\n| Cygnal || July 20&ndash;22, 2026 || &mdash; || &mdash; || '''51%''' || 41% || 3% || 5%\n|-\n| SurveyUSA || June 11&ndash;15, 2026 || 850 (LV) || &plusmn; 3.4% || '''49%''' || 42% || &ndash; || 9%\n|-\n| Emerson College || December 29, 2025 &ndash; January 3, 2026 || 900 (RV) || &plusmn; 3.2% || '''53%''' || 38% || 4% || 5%\n|-\n! colspan=\"8\" | Aggregate\n|}\n\n=== Primary polling ===\n{| class=\"wikitable sortable\"\n! Poll source !! Date(s) !! [[Roger Marshall]] (R) !! Some Challenger (R)\n|-\n| Example Research || July 1&ndash;3, 2026 || '''78%''' || 12%\n|}\n"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

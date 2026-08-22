@@ -66,10 +66,17 @@ def write(name: str, payload: Payload, data_dir: str | Path = DATA_DIR) -> bool:
     target.write_text(text + "\n")
 
     if changed:
-        stamp = payload.generated_at.strftime("%Y%m%dT%H%M%SZ")
+        # Microsecond precision keeps lexicographic filename order chronological
+        # and stops two writes in the same second from clobbering a data point.
+        stamp = payload.generated_at.strftime("%Y%m%dT%H%M%S_%fZ")
         snapshot_dir = root / HISTORY_DIR / Path(name).stem
         snapshot_dir.mkdir(parents=True, exist_ok=True)
-        (snapshot_dir / f"{stamp}.json").write_text(text + "\n")
+        snapshot = snapshot_dir / f"{stamp}.json"
+        suffix = 2
+        while snapshot.exists():
+            snapshot = snapshot_dir / f"{stamp}~{suffix}.json"
+            suffix += 1
+        snapshot.write_text(text + "\n")
 
     return changed
 
