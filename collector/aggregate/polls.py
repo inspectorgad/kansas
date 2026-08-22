@@ -163,6 +163,16 @@ def _point(polls: list[Poll], as_of: date) -> tuple[float, float, float, int, fl
     return marshall, hamilton, margin, len(eligible), band
 
 
+def _round(value: float, places: int = 2) -> float:
+    """Round for publication, collapsing negative zero to zero.
+
+    round(-0.001, 2) is -0.0, which serialises as "-0.0" and renders as a small
+    decline when the real answer is no change. The published trend carried it.
+    """
+    rounded = round(value, places)
+    return 0.0 if rounded == 0 else rounded
+
+
 def aggregate_polls(
     polls: list[Poll], as_of: date, history_days: int = 120
 ) -> Aggregate | None:
@@ -186,9 +196,9 @@ def aggregate_polls(
         history.append(
             AggregatePoint(
                 date=day,
-                marshall=round(point[0], 2),
-                hamilton=round(point[1], 2),
-                margin=round(point[2], 2),
+                marshall=_round(point[0]),
+                hamilton=_round(point[1]),
+                margin=_round(point[2]),
                 n_polls=point[3],
             )
         )
@@ -196,18 +206,18 @@ def aggregate_polls(
     trend_7d = None
     week_ago = _point(polls, as_of - timedelta(days=7))
     if week_ago is not None:
-        trend_7d = round(margin - week_ago[2], 2)
+        trend_7d = _round(margin - week_ago[2])
 
     from datetime import datetime
 
     return Aggregate(
         as_of=datetime.combine(as_of, datetime.min.time(), tzinfo=UTC),
         method=METHOD,
-        marshall=round(marshall, 2),
-        hamilton=round(hamilton, 2),
-        margin=round(margin, 2),
+        marshall=_round(marshall),
+        hamilton=_round(hamilton),
+        margin=_round(margin),
         leader=MARSHALL if margin >= 0 else HAMILTON,
-        band=round(band, 2),
+        band=_round(band),
         n_polls_used=n_polls,
         trend_7d=trend_7d,
         history=history,

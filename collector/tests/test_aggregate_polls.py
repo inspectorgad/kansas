@@ -191,3 +191,30 @@ def test_matches_hand_computed_average(poll_factory):
     assert agg.marshall == 47.0
     assert agg.hamilton == 44.0
     assert agg.margin == 3.0
+
+
+class TestNegativeZeroIsNotPublished:
+    """-0.0 serialises as "-0.0" and reads as a decline when nothing moved.
+
+    The live aggregate published "trend_7d": -0.0 on 2026-08-22.
+    """
+
+    def test_the_rounding_helper_collapses_negative_zero(self):
+        from aggregate.polls import _round
+
+        assert repr(_round(-0.001)) == "0.0"
+        assert repr(_round(-0.0)) == "0.0"
+        assert repr(_round(0.0)) == "0.0"
+
+    def test_real_values_are_untouched(self):
+        from aggregate.polls import _round
+
+        assert _round(-1.234) == -1.23
+        assert _round(3.456) == 3.46
+        assert _round(0.005, 2) in (0.0, 0.01)  # banker's rounding, either is fine
+
+    def test_no_published_aggregate_field_is_negative_zero(self):
+        from aggregate.polls import _round
+
+        for value in (-0.0, -0.0001, -0.004):
+            assert not repr(_round(value)).startswith("-")

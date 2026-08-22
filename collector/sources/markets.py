@@ -607,7 +607,10 @@ def build_consensus(
         past = [p for p in series if p.t <= cutoff]
         if not past:
             return None
-        return round(marshall - past[-1].marshall, 4)
+        # Negative zero serialises as "-0.0" and reads as a small decline when
+        # nothing moved, which is what the poll trend was publishing.
+        change = round(marshall - past[-1].marshall, 4)
+        return 0.0 if change == 0 else change
 
     return Consensus(
         as_of=now,
