@@ -8,7 +8,9 @@ import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.ksrace.senate2026.data.model.CandidateIds
+import org.ksrace.senate2026.data.model.AdsPayload
 import org.ksrace.senate2026.data.model.FinancePayload
+import org.ksrace.senate2026.data.model.GroundPayload
 import org.ksrace.senate2026.data.model.MarketsPayload
 import org.ksrace.senate2026.data.model.NewsPayload
 import org.ksrace.senate2026.data.model.PollsPayload
@@ -173,5 +175,61 @@ class ContractParsingTest {
         DataFile.core.forEach { file ->
             assertNotNull("no fixture for ${file.fileName}", load(file.fileName))
         }
+    }
+
+    @Test
+    fun `parses ads including an unattributed buy with no amount`() {
+        val ads = json.decodeFromString<AdsPayload>(load("ads.json"))
+        val broadcast = ads.broadcast
+
+        assertEquals(3, broadcast.byWeek.size)
+        assertEquals(2, broadcast.byMarket.size)
+        assertEquals(1_850_000.0, broadcast.totalBySide.getValue(CandidateIds.MARSHALL), 0.01)
+
+        // Money that could not be attributed to either side keeps its own bucket
+        // rather than being folded into a candidate's column.
+        assertEquals(260_000.0, broadcast.totalBySide.getValue("unattributed"), 0.01)
+
+        val unattributed = broadcast.filings.single { it.advertiser == "Sunflower Values Fund" }
+        assertNull("an unattributable buy names no side", unattributed.side)
+        assertTrue(unattributed.isOutsideGroup)
+        // A missing amount must stay null: a filing with no figure is not a $0 buy.
+        assertNull(unattributed.amount)
+        assertNull(unattributed.market)
+    }
+
+    @Test
+    fun `digital ads report their own unavailability with a reason`() {
+        val ads = json.decodeFromString<AdsPayload>(load("ads.json"))
+        assertFalse(ads.digital.available)
+        assertTrue(ads.digital.unavailableReason!!.contains("identity verification"))
+    }
+
+    @Test
+    fun `parses ground data and a partially-read county dashboard`() {
+        val ground = json.decodeFromString<GroundPayload>(load("ground.json"))
+
+        val statewide = ground.registration.statewide!!
+        assertEquals(2_004_800, statewide.total)
+        assertEquals(875_400 - 498_200, statewide.partyGap)
+        assertEquals(3, ground.registration.byCounty.size)
+
+        val advance = ground.advanceBallots
+        assertEquals(listOf("Johnson", "Sedgwick"), advance.countiesCovered)
+
+        // Sedgwick's dashboard yielded only one figure. The others must read as
+        // null — unknown — never as zero.
+        val sedgwick = advance.counties.single { it.county == "Sedgwick" }
+        assertEquals(6_900, sedgwick.mailBallotsReturned)
+        assertNull(sedgwick.mailBallotsSent)
+        assertNull(sedgwick.inPersonVotes)
+    }
+
+    @Test
+    fun `advance coverage is described rather than implied`() {
+        val ground = json.decodeFromString<GroundPayload>(load("ground.json"))
+        // The payload must carry its own caveat, so the app cannot present
+        // five counties as though they were the state.
+        assertTrue(ground.advanceBallots.coverageNote.contains("no statewide"))
     }
 }

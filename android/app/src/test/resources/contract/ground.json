@@ -1,13 +1,74 @@
 {
   "advance_ballots": {
-    "counties": [],
-    "counties_covered": [],
+    "counties": [
+      {
+        "as_of": "2026-08-22T14:02:06.980469Z",
+        "county": "Johnson",
+        "in_person_votes": 12300,
+        "mail_ballots_returned": 8455,
+        "mail_ballots_sent": 20104,
+        "source_url": "https://www.jocoelection.org/",
+        "total_advance": 20755
+      },
+      {
+        "as_of": "2026-08-22T14:02:06.980469Z",
+        "county": "Sedgwick",
+        "mail_ballots_returned": 6900,
+        "source_url": "https://www.sedgwickcounty.org/elections/",
+        "total_advance": 6900
+      }
+    ],
+    "counties_covered": [
+      "Johnson",
+      "Sedgwick"
+    ],
     "coverage_note": "Kansas publishes no statewide daily advance-vote feed. These figures cover only counties that operate a public dashboard."
   },
-  "attribution": [],
-  "generated_at": "2026-08-22T13:43:48.254350Z",
+  "attribution": [
+    {
+      "license": "U.S. state government work",
+      "name": "Kansas Secretary of State \u2014 voter registration statistics",
+      "url": "https://sos.ks.gov/elections/"
+    }
+  ],
+  "generated_at": "2026-08-22T14:02:06.980469Z",
   "registration": {
-    "by_county": []
+    "as_of": "2026-08-01",
+    "by_county": [
+      {
+        "county": "Johnson",
+        "democrat": 118904,
+        "libertarian": 3101,
+        "republican": 142301,
+        "total": 385761,
+        "unaffiliated": 121455
+      },
+      {
+        "county": "Sedgwick",
+        "democrat": 84203,
+        "libertarian": 2880,
+        "republican": 128455,
+        "total": 311658,
+        "unaffiliated": 96120
+      },
+      {
+        "county": "Wyandotte",
+        "democrat": 44301,
+        "libertarian": 701,
+        "republican": 18902,
+        "total": 89784,
+        "unaffiliated": 25880
+      }
+    ],
+    "source_url": "https://sos.ks.gov/elections/",
+    "statewide": {
+      "county": "Statewide",
+      "democrat": 498200,
+      "libertarian": 18900,
+      "republican": 875400,
+      "total": 2004800,
+      "unaffiliated": 612300
+    }
   },
   "schema_version": 1
 }

@@ -56,6 +56,7 @@ fun HomeScreen(
     now: Long,
     onRefresh: () -> Unit,
     onResultsVisible: () -> Unit,
+    onOpenResults: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     if (!snapshot.hasAnyData) {
@@ -94,7 +95,7 @@ fun HomeScreen(
         }
 
         if (snapshot.resultsAreLive) {
-            item { LiveResultsCard(snapshot, now) }
+            item { LiveResultsCard(snapshot, now, onOpenResults) }
         } else {
             item { MarketCard(snapshot, now) }
         }
@@ -349,7 +350,7 @@ private fun LatestHeadlineCard(snapshot: RaceSnapshot, now: Long) {
  * share, because it is the only time one exists.
  */
 @Composable
-private fun LiveResultsCard(snapshot: RaceSnapshot, now: Long) {
+private fun LiveResultsCard(snapshot: RaceSnapshot, now: Long, onOpenResults: () -> Unit) {
     val palette = LocalChartPalette.current
     val results = snapshot.results ?: return
 
@@ -373,6 +374,7 @@ private fun LiveResultsCard(snapshot: RaceSnapshot, now: Long) {
         }
 
         Spacer(Modifier.height(8.dp))
+        TextButton(onClick = onOpenResults) { Text("See all 105 counties") }
         Text(
             text = "Unofficial returns from the Kansas Secretary of State. " +
                 "Updated every minute; refreshed ${formatAge(snapshot.ageMillis(DataFile.RESULTS, now))}.",

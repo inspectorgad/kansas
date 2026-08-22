@@ -1,16 +1,81 @@
 {
-  "attribution": [],
+  "attribution": [
+    {
+      "license": "U.S. Government work, public domain",
+      "name": "FCC Online Public Inspection File",
+      "note": "Licensed broadcast stations only.",
+      "url": "https://publicfiles.fcc.gov/"
+    }
+  ],
   "broadcast": {
-    "by_market": [],
-    "by_week": [],
-    "filings": [],
-    "total_by_side": {}
+    "by_market": [
+      {
+        "hamilton": 760000.0,
+        "market": "Wichita-Hutchinson",
+        "marshall": 820000.0,
+        "outside": 1400000.0
+      },
+      {
+        "hamilton": 1340000.0,
+        "market": "Kansas City",
+        "marshall": 1030000.0,
+        "outside": 2000000.0
+      }
+    ],
+    "by_week": [
+      {
+        "hamilton": 210000.0,
+        "marshall": 180000.0,
+        "outside": 340000.0,
+        "week_start": "2026-08-03"
+      },
+      {
+        "hamilton": 260000.0,
+        "marshall": 220000.0,
+        "outside": 410000.0,
+        "week_start": "2026-08-10"
+      },
+      {
+        "hamilton": 290000.0,
+        "marshall": 310000.0,
+        "outside": 520000.0,
+        "week_start": "2026-08-17"
+      }
+    ],
+    "filings": [
+      {
+        "advertiser": "Marshall for Kansas",
+        "amount": 48500.0,
+        "filed_at": "2026-08-15T14:30:00Z",
+        "flight_end": "2026-08-23",
+        "flight_start": "2026-08-17",
+        "id": "f1",
+        "is_outside_group": false,
+        "market": "Wichita-Hutchinson",
+        "side": "marshall",
+        "station": "KWCH"
+      },
+      {
+        "advertiser": "Sunflower Values Fund",
+        "flight_start": "2026-08-17",
+        "id": "f2",
+        "is_outside_group": true,
+        "station": "KSNW"
+      }
+    ],
+    "total_by_side": {
+      "hamilton": 2100000.0,
+      "marshall": 1850000.0,
+      "outside": 3400000.0,
+      "unattributed": 260000.0
+    }
   },
   "digital": {
     "available": false,
     "by_page": [],
-    "total_by_side": {}
+    "total_by_side": {},
+    "unavailable_reason": "Meta Ad Library access requires an approved app and identity verification; no token is configured."
   },
-  "generated_at": "2026-08-22T13:43:48.254278Z",
+  "generated_at": "2026-08-22T14:02:06.980469Z",
   "schema_version": 1
 }

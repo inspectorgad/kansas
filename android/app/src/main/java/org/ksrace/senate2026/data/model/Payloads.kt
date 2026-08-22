@@ -2,6 +2,7 @@ package org.ksrace.senate2026.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonObject
 
 /**
  * The published data contract, mirroring the pydantic models in
@@ -274,6 +275,123 @@ data class NewsPayload(
     @SerialName("schema_version") val schemaVersion: Int = 1,
     @SerialName("generated_at") val generatedAt: String,
     val items: List<NewsItem> = emptyList(),
+    val attribution: List<Attribution> = emptyList(),
+)
+
+
+// --- ads.json ----------------------------------------------------------------
+
+@Serializable
+data class AdFiling(
+    val id: String,
+    val station: String,
+    val market: String? = null,
+    val advertiser: String,
+    /** candidate id the buy helps, or null when it could not be justified. */
+    val side: String? = null,
+    @SerialName("is_outside_group") val isOutsideGroup: Boolean = false,
+    val amount: Double? = null,
+    @SerialName("flight_start") val flightStart: String? = null,
+    @SerialName("flight_end") val flightEnd: String? = null,
+    @SerialName("filed_at") val filedAt: String? = null,
+    val url: String? = null,
+)
+
+@Serializable
+data class WeeklySpend(
+    @SerialName("week_start") val weekStart: String,
+    val marshall: Double = 0.0,
+    val hamilton: Double = 0.0,
+    val outside: Double = 0.0,
+) {
+    val total: Double get() = marshall + hamilton + outside
+}
+
+@Serializable
+data class MarketSpend(
+    val market: String,
+    val marshall: Double = 0.0,
+    val hamilton: Double = 0.0,
+    val outside: Double = 0.0,
+) {
+    val total: Double get() = marshall + hamilton + outside
+}
+
+@Serializable
+data class BroadcastAds(
+    @SerialName("total_by_side") val totalBySide: Map<String, Double> = emptyMap(),
+    @SerialName("by_week") val byWeek: List<WeeklySpend> = emptyList(),
+    @SerialName("by_market") val byMarket: List<MarketSpend> = emptyList(),
+    val filings: List<AdFiling> = emptyList(),
+) {
+    val total: Double get() = totalBySide.values.sum()
+}
+
+@Serializable
+data class DigitalAds(
+    val available: Boolean = false,
+    @SerialName("unavailable_reason") val unavailableReason: String? = null,
+    @SerialName("total_by_side") val totalBySide: Map<String, Double> = emptyMap(),
+    @SerialName("by_page") val byPage: List<JsonObject> = emptyList(),
+)
+
+@Serializable
+data class AdsPayload(
+    @SerialName("schema_version") val schemaVersion: Int = 1,
+    @SerialName("generated_at") val generatedAt: String,
+    val broadcast: BroadcastAds = BroadcastAds(),
+    val digital: DigitalAds = DigitalAds(),
+    val attribution: List<Attribution> = emptyList(),
+)
+
+// --- ground.json -------------------------------------------------------------
+
+@Serializable
+data class CountyRegistration(
+    val county: String,
+    val republican: Int = 0,
+    val democrat: Int = 0,
+    val unaffiliated: Int = 0,
+    val libertarian: Int = 0,
+    val total: Int = 0,
+) {
+    /** Positive means more registered Republicans than Democrats. */
+    val partyGap: Int get() = republican - democrat
+}
+
+@Serializable
+data class Registration(
+    @SerialName("as_of") val asOf: String? = null,
+    val statewide: CountyRegistration? = null,
+    @SerialName("by_county") val byCounty: List<CountyRegistration> = emptyList(),
+    @SerialName("source_url") val sourceUrl: String? = null,
+)
+
+@Serializable
+data class CountyAdvance(
+    val county: String,
+    @SerialName("mail_ballots_sent") val mailBallotsSent: Int? = null,
+    @SerialName("mail_ballots_returned") val mailBallotsReturned: Int? = null,
+    @SerialName("in_person_votes") val inPersonVotes: Int? = null,
+    @SerialName("total_advance") val totalAdvance: Int? = null,
+    @SerialName("party_breakdown") val partyBreakdown: Map<String, Int>? = null,
+    @SerialName("as_of") val asOf: String? = null,
+    @SerialName("source_url") val sourceUrl: String? = null,
+)
+
+@Serializable
+data class AdvanceBallots(
+    @SerialName("coverage_note") val coverageNote: String = "",
+    @SerialName("counties_covered") val countiesCovered: List<String> = emptyList(),
+    val counties: List<CountyAdvance> = emptyList(),
+)
+
+@Serializable
+data class GroundPayload(
+    @SerialName("schema_version") val schemaVersion: Int = 1,
+    @SerialName("generated_at") val generatedAt: String,
+    val registration: Registration = Registration(),
+    @SerialName("advance_ballots") val advanceBallots: AdvanceBallots = AdvanceBallots(),
     val attribution: List<Attribution> = emptyList(),
 )
 

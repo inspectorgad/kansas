@@ -5,7 +5,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.serialization.json.Json
+import org.ksrace.senate2026.data.model.AdsPayload
 import org.ksrace.senate2026.data.model.FinancePayload
+import org.ksrace.senate2026.data.model.GroundPayload
 import org.ksrace.senate2026.data.model.MarketsPayload
 import org.ksrace.senate2026.data.model.NewsPayload
 import org.ksrace.senate2026.data.model.PollsPayload
@@ -25,6 +27,8 @@ data class RaceSnapshot(
     val markets: MarketsPayload? = null,
     val finance: FinancePayload? = null,
     val news: NewsPayload? = null,
+    val ads: AdsPayload? = null,
+    val ground: GroundPayload? = null,
     val results: ResultsPayload? = null,
     /** Epoch millis when each file was last written to cache. */
     val fetchedAt: Map<DataFile, Long> = emptyMap(),
@@ -121,8 +125,9 @@ class RaceRepository(
                 DataFile.MARKETS -> next.copy(markets = decode<MarketsPayload>(body) ?: next.markets)
                 DataFile.FINANCE -> next.copy(finance = decode<FinancePayload>(body) ?: next.finance)
                 DataFile.NEWS -> next.copy(news = decode<NewsPayload>(body) ?: next.news)
+                DataFile.ADS -> next.copy(ads = decode<AdsPayload>(body) ?: next.ads)
+                DataFile.GROUND -> next.copy(ground = decode<GroundPayload>(body) ?: next.ground)
                 DataFile.RESULTS -> next.copy(results = decode<ResultsPayload>(body) ?: next.results)
-                else -> next
             }
         }
         val stamps = DataFile.core.mapNotNull { file -> cache.fetchedAt(file)?.let { file to it } }.toMap()

@@ -16,7 +16,7 @@ enum class DataFile(val fileName: String) {
     ;
 
     companion object {
-        /** The files the app's four v1 screens actually need. */
-        val core = listOf(RACE, POLLS, MARKETS, FINANCE, NEWS, RESULTS)
+        /** Every file the app reads. Refreshed together on each round. */
+        val core = entries.toList()
     }
 }

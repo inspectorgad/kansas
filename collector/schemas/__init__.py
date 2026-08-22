@@ -4,6 +4,7 @@ One model per published file. `FILES` maps each output filename to its model,
 and is what the publisher and the contract-check CI job both iterate over.
 """
 
+from . import ads, common, finance, ground, markets, news, polls, race, results  # noqa: F401
 from .ads import AdsPayload
 from .common import (
     CANDIDATE_IDS,
@@ -39,6 +40,15 @@ FILES: dict[str, type[Payload]] = {
 }
 
 __all__ = [
+    "ads",
+    "common",
+    "finance",
+    "ground",
+    "markets",
+    "news",
+    "polls",
+    "race",
+    "results",
     "FILES",
     "SCHEMA_VERSION",
     "CANDIDATE_IDS",

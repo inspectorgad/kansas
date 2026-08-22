@@ -16,15 +16,21 @@ per-host delay.
 | **GDELT 2.0** | Wider news sweep | Doc API, no key | Continuous | Catches coverage the local feeds miss. |
 | **Cook Political Report, Sabato's Crystal Ball, Inside Elections** | Race ratings | Page scrape | Rare | A rating change is among the more newsworthy events in a race. |
 
-## Built, awaiting data
+## Collecting, format unverified
+
+These three are written as **probes** rather than single parsers: each tries the
+plausible shapes, reports which matched, and prints what was actually served when
+none did. `--probe-ads`, `--probe-ground` and `--probe-results` turn that into a
+diagnosis run. None of these endpoints was reachable from the environment the
+collector was written in.
 
 | Source | Provides | Access | Status |
 |---|---|---|---|
-| **FCC Online Public Inspection File** | Broadcast ad buys by station, market and flight | Public API, no key | Schema defined; collector is Phase 3. Broadcast only — cable, streaming, digital and mail do not appear, so totals are a floor. |
-| **Meta Ad Library** | Digital ad spend | Requires an approved app and identity verification | Setup friction is real; the payload reports `available: false` with a reason until a token exists. |
-| **Kansas Secretary of State** | Voter registration by county and party | Published statistics | Monthly cadence. |
-| **County election offices** — Johnson, Sedgwick, Shawnee, Wyandotte, Douglas | Advance ballots sent, returned, in-person | Public dashboards | **Partial coverage by design.** Kansas publishes no statewide daily feed. These five counties hold roughly half the state's registered voters and lean urban; the payload says so and the app labels it. |
-| **Kansas SoS election night reporting** (`ent.sos.ks.gov`) | Live returns, statewide and by county | Goes live 5pm CT, Nov 3 | **Format unverified** — the site was unreachable from the environment this was written in. Must be probed against the August 2026 primary archive well before election day. Paid AP Elections API is the named fallback. |
+| **FCC Online Public Inspection File** | Broadcast ad buys by station, market and flight | Public API, no key | Collecting. Broadcast only — cable, streaming, digital and mail do not appear, so totals are a floor. Attribution is inference: a filing naming no candidate is reported unattributed, never assigned on a hunch. |
+| **Meta Ad Library** | Digital ad spend | Requires an approved app and identity verification | Setup friction is real; the payload reports `available: false` with the reason, and the app shows it. Meta reports spend as a range, so figures are range midpoints and are estimates. |
+| **Kansas Secretary of State** | Voter registration by county and party | Published statistics | Collecting, monthly cadence. Statistics are sometimes published as PDF or XLSX, which the table parser cannot read; `--probe-ground` says which. |
+| **County election offices** — Johnson, Sedgwick, Shawnee, Wyandotte, Douglas | Advance ballots sent, returned, in-person | Public dashboards | Collecting. **Partial coverage by design.** Kansas publishes no statewide daily feed. These five counties hold roughly half the state's registered voters and lean urban; the payload says so and the app labels it. A dashboard that cannot be read is reported as *uncovered*, never as zero. |
+| **Kansas SoS election night reporting** (`ent.sos.ks.gov`) | Live returns, statewide and by county | Goes live 5pm CT, Nov 3 | Handles a JSON feed, embedded JSON, or an HTML table. Collection switches on automatically three days out. **Probe it against the August 2026 primary archive before election day** — see [ELECTION_NIGHT.md](ELECTION_NIGHT.md). Paid AP Elections API is the named fallback. |
 
 ## Deliberately out of scope
 
