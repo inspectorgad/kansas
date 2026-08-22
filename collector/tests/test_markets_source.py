@@ -550,3 +550,70 @@ class TestStallMetric:
             "kalshi", scanned=2400, titles=[f"m{i % 200}" for i in range(2400)]
         )
         assert report.pagination_stalled
+
+
+class TestCombinationMarginalisation:
+    """Deriving the Senate probability from Kalshi's governor-by-senate grid.
+
+    A live scan of 2,400 Kalshi events and 1,200 Polymarket markets found no
+    standalone 2026 Kansas Senate contract on either platform — only these four
+    combination outcomes, plus a 2028 Kansas race. Since the four are mutually
+    exclusive and exhaustive, P(Senate R) = P(gov D, sen R) + P(gov R, sen R) is
+    exact arithmetic rather than a model.
+    """
+
+    GRID = [
+        {"ticker": "KXKSSENGOVCOMBO-26NOV-REPREP", "last_price": 48},
+        {"ticker": "KXKSSENGOVCOMBO-26NOV-REPDEM", "last_price": 22},
+        {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMREP", "last_price": 19},
+        {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMDEM", "last_price": 11},
+    ]
+
+    def test_sums_the_two_republican_senate_outcomes(self):
+        from sources.markets import marginalise_combos
+
+        marshall, hamilton = marginalise_combos(self.GRID)
+        # REPREP + DEMREP = 48 + 19 = 67 of 100.
+        assert marshall == pytest.approx(0.67, abs=1e-4)
+        assert hamilton == pytest.approx(0.33, abs=1e-4)
+        assert marshall + hamilton == pytest.approx(1.0)
+
+    def test_the_governor_outcome_does_not_leak_in(self):
+        """Governor-Republican mass must not be counted as Senate-Republican."""
+        from sources.markets import marginalise_combos
+
+        # Governor R in 70 of 100, Senate R in only 30.
+        grid = [
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-REPREP", "last_price": 20},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-REPDEM", "last_price": 50},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMREP", "last_price": 10},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMDEM", "last_price": 20},
+        ]
+        marshall, _ = marginalise_combos(grid)
+        assert marshall == pytest.approx(0.30, abs=1e-4)
+
+    def test_an_incomplete_grid_yields_nothing(self):
+        """Missing mass is unknown; renormalising the rest would invent a number."""
+        from sources.markets import marginalise_combos
+
+        assert marginalise_combos(self.GRID[:3]) is None
+        assert marginalise_combos(self.GRID[:1]) is None
+        assert marginalise_combos([]) is None
+
+    def test_prices_are_normalised_when_the_grid_does_not_sum_to_one(self):
+        from sources.markets import marginalise_combos
+
+        wide = [dict(m, last_price=m["last_price"] + 5) for m in self.GRID]
+        marshall, hamilton = marginalise_combos(wide)
+        assert marshall + hamilton == pytest.approx(1.0)
+
+    def test_the_wrong_cycle_is_excluded_from_the_grid(self):
+        from sources.markets import marginalise_combos
+
+        stale = [dict(m, ticker=m["ticker"].replace("26NOV", "28NOV")) for m in self.GRID]
+        assert marginalise_combos(stale) is None
+
+    def test_a_grid_with_no_prices_yields_nothing(self):
+        from sources.markets import marginalise_combos
+
+        assert marginalise_combos([{"ticker": m["ticker"]} for m in self.GRID]) is None

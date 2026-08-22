@@ -49,11 +49,19 @@ HAMILTON_TERMS = ("hamilton",)
 # market names the candidate.
 PARTY_TO_CANDIDATE = {"republican": MARSHALL, "democratic": HAMILTON, "democrat": HAMILTON}
 
-# Markets covering two offices at once ("Governor winner AND Senate winner")
-# cannot be read as a Senate probability without marginalising over the governor
-# outcome. That is a modelling step, not a parse, and combos are thin — so they
-# are skipped and named in a warning rather than silently converted.
+# Markets covering two offices at once ("Governor winner AND Senate winner") are
+# not a Senate probability on their own. But Kalshi lists all four outcomes of the
+# governor-by-senate grid, and four mutually exclusive, exhaustive outcomes can be
+# marginalised exactly: P(Senate R) = P(gov D, sen R) + P(gov R, sen R). That is
+# arithmetic on a complete partition, not a model.
+#
+# As it turns out this is the only route available. A live scan of 2,400 Kalshi
+# events and 1,200 Polymarket markets found no standalone 2026 Kansas Senate
+# contract on either platform — only these combos, plus a 2028 Kansas race.
 COMBO_MARKERS = ("GOVCOMBO", "COMBO", "SWEEP")
+
+# The trailing segment encodes governor then senate, three letters each.
+COMBO_OUTCOME = re.compile(r"-(DEM|REP)(DEM|REP)(?:-|$)")
 
 # This race is November 2026. Kalshi also lists a 2028 Kansas Senate market
 # (SENATEKS-28-D), which would otherwise match every rule here.
@@ -146,6 +154,42 @@ def _matches_race(title: str) -> bool:
         return True
     # Some titles name the candidates instead of the office.
     return any(t in text for t in MARSHALL_TERMS) and any(t in text for t in HAMILTON_TERMS)
+
+
+def marginalise_combos(rows: list[dict]) -> tuple[float, float] | None:
+    """Derive the Senate probability from a complete governor-by-senate grid.
+
+    All four outcomes must be present. With fewer, the missing mass is unknown and
+    renormalising the rest would invent a number rather than derive one — so a
+    partial grid yields nothing instead of a plausible guess.
+    """
+    outcomes: dict[tuple[str, str], float] = {}
+
+    for market in rows:
+        ticker = str(market.get("ticker", ""))
+        if not _is_combo(ticker) or not _is_this_cycle(ticker):
+            continue
+        match = COMBO_OUTCOME.search(ticker.upper())
+        if not match:
+            continue
+        price = market.get("last_price")
+        if price is None:
+            price = market.get("yes_bid")
+        if price is None:
+            continue
+        outcomes[(match.group(1), match.group(2))] = float(price) / 100.0
+
+    if len(outcomes) != 4:
+        return None
+
+    total = sum(outcomes.values())
+    if total <= 0:
+        return None
+
+    # The second element of each key is the Senate outcome.
+    senate_r = sum(v for (_gov, sen), v in outcomes.items() if sen == "REP")
+    senate_d = sum(v for (_gov, sen), v in outcomes.items() if sen == "DEM")
+    return normalise(senate_r / total, senate_d / total)
 
 
 def normalise(marshall: float | None, hamilton: float | None) -> tuple[float, float] | None:
@@ -579,6 +623,24 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
             for r in rows
         ]
         found = _kalshi_markets({"markets": rows})
+        if not found:
+            # No standalone contract; derive it from the combination grid.
+            derived = marginalise_combos(rows)
+            if derived is not None:
+                found = [
+                    Market(
+                        platform="kalshi",
+                        market_id="KXKSSENGOVCOMBO-derived",
+                        title="Kansas Senate 2026 (derived from governor/Senate combinations)",
+                        marshall=round(derived[0], 4),
+                        hamilton=round(derived[1], 4),
+                        fetched_at=datetime.now(UTC),
+                    )
+                ]
+                warnings.append(
+                    "no standalone Kansas Senate contract exists; the probability is "
+                    "marginalised from Kalshi's four governor-by-senate outcomes"
+                )
         markets.extend(found)
         if found:
             attribution.append(KALSHI_ATTRIBUTION)
@@ -603,17 +665,23 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
             warnings.append(f"{report.platform} pagination stalled: {report.describe()}")
 
     if not markets:
-        # Leaving the previous markets.json in place and failing loudly beats
-        # publishing an empty file: a slightly stale probability is recoverable,
-        # a silently missing headline number is not.
-        #
-        # The message carries the evidence rather than pointing at another
-        # command, because "nothing matched" alone cannot distinguish a renamed
-        # market from pagination that never advanced.
         detail = " || ".join(r.describe() for r in reports)
-        if warnings:
-            raise SourceError(f"{'; '.join(warnings)} || {detail}")
-        raise SourceError(f"no market matched this race. {detail}")
+        healthy = all(not r.pagination_stalled and r.scanned > 0 for r in reports)
+
+        # A platform that errored, or pagination that stalled, means we did not
+        # really look — that is breakage, and the last good file should stay.
+        if not healthy:
+            raise SourceError(f"market scan unhealthy: {detail}")
+
+        # Both platforms answered and neither lists this race. That is a fact
+        # about the world rather than a fault, and failing forever on it would
+        # keep the collector permanently red over something no fix can change.
+        # The app already renders a null consensus as "no market is quoting this
+        # race", which is the honest thing to show.
+        warnings.append(f"no market for this race is listed on either platform. {detail}")
+        return MarketsResult(
+            markets=[], consensus=None, attribution=[], warnings=warnings
+        )
 
     if any(m.platform == "kalshi" for m in markets):
         warnings.append(

@@ -90,6 +90,25 @@ probability pair summing to exactly 1, so nothing can render as two numbers that
 do not add up. The consensus across platforms is weighted by trading volume,
 since a deep book carries more information than a thin one.
 
+### Where the number comes from
+
+Neither platform lists a standalone 2026 Kansas Senate contract. A scan of 2,400
+Kalshi events and 1,200 Polymarket markets found only a 2028 Kansas race and
+Kalshi's four *governor-by-Senate* combination outcomes.
+
+Those four are mutually exclusive and exhaustive, so the Senate probability is
+recovered exactly by marginalising over the governor:
+
+    P(Senate R) = P(gov D, Senate R) + P(gov R, Senate R)
+
+That is arithmetic on a complete partition, not a model — but it is a derivation
+rather than a quoted price, so the app labels it as such. All four outcomes must
+be present: with three, the missing mass is unknown, and renormalising the rest
+would invent a number instead of deriving one.
+
+If no market of any kind is listed, the app says so rather than showing a stale
+figure, and the headline falls back to the polling average.
+
 **This is a probability of winning, not a projected vote share.** A candidate at
 72% is not expected to receive 72% of the vote. The app never labels it as a
 share, and the payload carries a disclaimer to that effect. It also reflects what
