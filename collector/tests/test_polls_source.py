@@ -193,3 +193,102 @@ class TestMultiLineHeaders:
         single = header_row(iter_tables(FIXTURE.read_text())[0])
         multi = header_row(iter_tables(MULTILINE.read_text())[0])
         assert single == multi
+
+
+class TestForecastersAreNotPolls:
+    """Model rows must not feed an average that claims to be our own.
+
+    The live run published Silver Bulletin and Race to the WH as polls, and both
+    fed the aggregate — an average partly composed of other people's averages,
+    double-counting the polls underneath them, which is exactly what
+    docs/METHODOLOGY.md says this does not do.
+    """
+
+    TABLE = """
+{| class="wikitable"
+! Poll source !! Date(s) administered !! Sample size !! Margin of error !! Roger Marshall (R) !! Adam Hamilton (D) !! Undecided
+|-
+| Silver Bulletin || August 8, 2026 || – || – || 48.5% || 44.3% || 7.2%
+|-
+| Race to the WH || August 8, 2026 || – || – || 47.5% || 43.2% || 9.3%
+|-
+| Public Policy Polling || August 7–8, 2026 || 569 || – || 46% || 45% || –
+|-
+| GBAO || July 8–13, 2026 || 600 || ± 4.0% || 47% || 43% || 10%
+|}
+"""
+
+    def _parsed(self):
+        from sources.polls import parse_polls
+
+        return parse_polls(self.TABLE)
+
+    def test_the_two_model_rows_are_excluded(self):
+        names = [poll.pollster for poll in self._parsed().polls]
+        assert "Silver Bulletin" not in names
+        assert "Race to the WH" not in names
+
+    def test_the_real_pollsters_survive(self):
+        """Public Policy Polling has no margin of error and must be kept."""
+        names = [poll.pollster for poll in self._parsed().polls]
+        assert names == ["Public Policy Polling", "GBAO"] or set(names) == {
+            "Public Policy Polling",
+            "GBAO",
+        }
+
+    def test_the_exclusion_is_reported_with_a_reason(self):
+        skipped = self._parsed().skipped
+        assert any("Silver Bulletin" in note and "forecast" in note for note in skipped)
+
+    @pytest.mark.parametrize(
+        "name",
+        [
+            "Silver Bulletin",
+            "FiveThirtyEight",
+            "RealClearPolitics average",
+            "Decision Desk HQ forecast",
+            "Sabato's Crystal Ball",
+            "Cook Political Report",
+            "Polymarket",
+            "Split Ticket",
+            "Race to the White House",
+        ],
+    )
+    def test_known_forecasters_are_recognised(self, name):
+        from sources.polls import _is_a_forecast
+
+        assert _is_a_forecast(name)
+
+    @pytest.mark.parametrize(
+        "name",
+        [
+            "Public Policy Polling",
+            "GBAO",
+            "Tavern Research",
+            "Cygnal",
+            "Emerson College",
+            "Marist",
+            "SurveyUSA",
+            "co/efficient",
+        ],
+    )
+    def test_real_pollsters_are_not_mistaken_for_forecasters(self, name):
+        from sources.polls import _is_a_forecast
+
+        assert not _is_a_forecast(name)
+
+    def test_a_sampleless_poll_is_kept_but_noted(self):
+        """Kept, because dropping it would lose real polls; noted, so it is visible."""
+        from sources.polls import parse_polls
+
+        table = """
+{| class="wikitable"
+! Poll source !! Date(s) administered !! Sample size !! Margin of error !! Marshall (R) !! Hamilton (D)
+|-
+| Cygnal || July 20–22, 2026 || – || – || 48% || 44%
+|}
+"""
+        result = parse_polls(table)
+        assert [poll.pollster for poll in result.polls] == ["Cygnal"]
+        assert result.skipped == []
+        assert any("Cygnal" in note and "unlisted forecaster" in note for note in result.notes)

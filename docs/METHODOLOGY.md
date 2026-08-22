@@ -12,6 +12,23 @@ or PollingSource's. That keeps the licensing clean, but the real reason is that
 a borrowed average is a black box — this one is auditable, and its
 implementation of record is [`collector/aggregate/polls.py`](../collector/aggregate/polls.py).
 
+**What counts as a poll.** Only surveys. The Wikipedia article lists forecast
+models and averages — Silver Bulletin, Race to the White House, and others —
+in among the pollsters, and for several runs this collector read them as polls
+and averaged them. That made our "own" average partly an average of other
+people's averages, double-counting every poll underneath them and contradicting
+the paragraph above. Named forecasters and anything whose name contains
+*average*, *aggregate*, *forecast*, *projection* or *model* are now excluded, and
+each exclusion is named in the collector log.
+
+A structural rule was tried first and abandoned: a row with neither a sample size
+nor a margin of error describes no survey, but it also describes real polls that
+Wikipedia lists without either, and with only a handful of polls in this race
+losing genuine ones costs more than catching an unnamed model. So such rows are
+kept and reported in the run warnings instead. That report is how the next
+unlisted forecaster is meant to be found — by appearing in a log, rather than by
+a rule written in advance for a row nobody has seen.
+
 Each poll receives a weight that is the product of three factors.
 
 **Recency.** Exponential decay on the poll's *end* date with a 14-day half-life.

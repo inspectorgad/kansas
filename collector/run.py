@@ -156,6 +156,8 @@ def collect_polls(report: RunReport, data_dir: str) -> PollsPayload:
     result = collect()
     for note in result.skipped:
         report.warnings.append(f"poll row skipped: {note}")
+    for note in result.notes:
+        report.warnings.append(f"poll row kept, worth checking: {note}")
 
     # Carry added_at forward for polls we have already seen. Stamping it fresh
     # each run would make every run look like a change, which would both bloat

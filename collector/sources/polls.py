@@ -40,6 +40,10 @@ ATTRIBUTION = Attribution(
 class PollsResult:
     polls: list[Poll]
     skipped: list[str] = field(default_factory=list)
+    # Rows that were kept but are worth a second look. Separate from `skipped`,
+    # which means dropped: folding the two together made a note read as a
+    # discarded poll, in the log and in two tests.
+    notes: list[str] = field(default_factory=list)
     attribution: list[Attribution] = field(default_factory=lambda: [ATTRIBUTION])
 
 
@@ -79,6 +83,54 @@ def _find_column(header: list[str], keys: tuple[str, ...]) -> int | None:
             if key in cell:
                 return index
     return None
+
+
+# Forecast models are not polls. The live article lists Silver Bulletin and Race
+# to the WH among the pollsters, and both were being collected and averaged — an
+# aggregate partly composed of other people's aggregates, which double-counts the
+# polls underneath them and is precisely what docs/METHODOLOGY.md promises this
+# does not do. Neither carries a sample size, because neither is a survey.
+#
+# Exclusion is by name only. A structural rule was tried first — no sample size
+# and no margin of error describes no survey — and it dropped real polls: the
+# suite already asserts that a poll missing its sample size is kept, which is the
+# right call when the whole race has five polls. Catching an unnamed forecaster is
+# not worth discarding genuine ones.
+#
+# So the unknown case is made visible instead of guessed at. A poll kept with
+# neither a sample size nor a margin of error is reported in the run warnings,
+# which is how the next unlisted forecaster gets found: by being named in a log
+# rather than by a rule written in advance for a row nobody has seen.
+FORECASTERS = (
+    "silver bulletin",
+    "race to the wh",
+    "race to the white house",
+    "fivethirtyeight",
+    "realclearpolitics",
+    "real clear politics",
+    "decision desk",
+    "split ticket",
+    "jhk forecast",
+    "cook political",
+    "sabato",
+    "crystal ball",
+    "inside elections",
+    "the economist",
+    "polymarket",
+    "kalshi",
+    "election betting odds",
+    "average",
+    "aggregate",
+    "forecast",
+    "projection",
+    "model",
+)
+
+
+def _is_a_forecast(pollster: str) -> bool:
+    """Is this row a named model or average rather than a poll?"""
+    lowered = (pollster or "").lower()
+    return any(name in lowered for name in FORECASTERS)
 
 
 def _find_candidate_column(header: list[str], surname: str) -> int | None:
@@ -126,6 +178,7 @@ def parse_polls(wikitext: str, default_year: int = 2026) -> PollsResult:
 
     polls: dict[str, Poll] = {}
     skipped: list[str] = []
+    notes: list[str] = []
     tables_matched = 0
 
     for table in iter_tables(wikitext):
@@ -174,6 +227,22 @@ def parse_polls(wikitext: str, default_year: int = 2026) -> PollsResult:
                 continue
 
             sample, population = parse_sample(cell(sample_col)) if sample_col is not None else (None, None)
+            moe = parse_margin_of_error(cell(moe_col)) if moe_col is not None else None
+
+            if _is_a_forecast(pollster):
+                skipped.append(
+                    f"{pollster} ({end}): a forecast or average, not a poll — excluded "
+                    "so the aggregate is not built from other aggregates"
+                )
+                continue
+
+            if sample is None and moe is None:
+                # Kept, but said out loud: this is the shape a forecaster takes,
+                # and the next unlisted one should be visible rather than silent.
+                notes.append(
+                    f"{pollster} ({end}): kept with no sample size and no margin of "
+                    "error — confirm it is a poll and not an unlisted forecaster"
+                )
 
             identifier = poll_id(pollster, start, end)
             polls[identifier] = Poll(
@@ -185,7 +254,7 @@ def parse_polls(wikitext: str, default_year: int = 2026) -> PollsResult:
                 end_date=end,
                 sample_size=sample,
                 population=population,
-                margin_of_error=parse_margin_of_error(cell(moe_col)) if moe_col is not None else None,
+                margin_of_error=moe,
                 results=CandidatePair(marshall=marshall, hamilton=hamilton),
                 other=parse_percent(cell(other_col)) if other_col is not None else None,
                 undecided=parse_percent(cell(undecided_col)) if undecided_col is not None else None,
@@ -199,7 +268,7 @@ def parse_polls(wikitext: str, default_year: int = 2026) -> PollsResult:
         )
 
     ordered = sorted(polls.values(), key=lambda p: (p.end_date, p.pollster), reverse=True)
-    return PollsResult(polls=ordered, skipped=skipped)
+    return PollsResult(polls=ordered, skipped=skipped, notes=notes)
 
 
 def collect() -> PollsResult:
