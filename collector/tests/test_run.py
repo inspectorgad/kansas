@@ -135,3 +135,40 @@ def test_a_new_poll_appearing_is_reported_as_a_change(fixtures, tmp_path, monkey
 
     payload = json.loads((tmp_path / "polls.json").read_text())
     assert any(p["pollster"] == "Brand New Poll" for p in payload["polls"])
+
+
+class TestResultsWindow:
+    """Results collection switches itself on only as election day approaches."""
+
+    def test_results_are_skipped_months_out(self):
+        from datetime import date
+
+        assert "results" not in run.default_targets(date(2026, 8, 22))
+
+    def test_results_switch_on_within_the_window(self):
+        from datetime import date
+
+        assert "results" in run.default_targets(date(2026, 11, 1))
+        assert "results" in run.default_targets(date(2026, 11, 3))
+
+    def test_the_ordinary_sources_are_always_collected(self):
+        from datetime import date
+
+        for day in (date(2026, 8, 22), date(2026, 11, 3)):
+            targets = run.default_targets(day)
+            assert {"race", "polls", "markets", "finance", "news"} <= set(targets)
+
+    def test_a_real_results_file_is_not_clobbered_by_the_placeholder(self, fixtures, tmp_path):
+        """A collected results.json must survive ensure_placeholders."""
+        import json
+
+        run.run(["polls"], str(tmp_path), write=True)
+        live = json.loads((tmp_path / "results.json").read_text())
+        live["status"] = "live"
+        live["total_votes"] = 801019
+        (tmp_path / "results.json").write_text(json.dumps(live))
+
+        run.run(["polls"], str(tmp_path), write=True)
+        after = json.loads((tmp_path / "results.json").read_text())
+        assert after["status"] == "live"
+        assert after["total_votes"] == 801019

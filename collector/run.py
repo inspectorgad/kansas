@@ -40,8 +40,17 @@ from schemas import (  # noqa: E402
     RacePayload,
     ResultsPayload,
 )
+from schemas.results import ResultsStatus  # noqa: E402
 
-SOURCES = ("race", "polls", "markets", "finance", "news")
+SOURCES = ("race", "polls", "markets", "finance", "news", "ads", "ground", "results")
+
+# Collected on every scheduled run. `results` is deliberately excluded until the
+# election is near: probing a dormant endpoint every 20 minutes for months would
+# fill the log with misses, and the dormant placeholder serves the app fine.
+DEFAULT_SOURCES = ("race", "polls", "markets", "finance", "news", "ads", "ground")
+
+# Days before election day at which results collection switches on by itself.
+RESULTS_WINDOW_DAYS = 3
 
 
 @dataclass
@@ -191,12 +200,74 @@ def collect_news(report: RunReport) -> NewsPayload:
 # Collectors that need to read their own prior output to stay idempotent.
 NEEDS_DATA_DIR = {"polls", "markets"}
 
+def collect_ads(report: RunReport) -> AdsPayload:
+    from sources.ads import collect
+
+    result = collect()
+    report.warnings.extend(result.warnings)
+    return AdsPayload(
+        generated_at=publish.now(),
+        broadcast=result.broadcast,
+        digital=result.digital,
+        attribution=result.attribution,
+    )
+
+
+def collect_ground(report: RunReport) -> GroundPayload:
+    from sources.ground import collect
+
+    result = collect()
+    report.warnings.extend(result.warnings)
+    return GroundPayload(
+        generated_at=publish.now(),
+        registration=result.registration,
+        advance_ballots=result.advance_ballots,
+        attribution=result.attribution,
+    )
+
+
+def collect_results(report: RunReport) -> ResultsPayload:
+    """Election-night returns.
+
+    Publishes a dormant file rather than failing when there is nothing to report,
+    because for all but a few hours of the cycle "no results yet" is the correct
+    answer. Every probe attempt is recorded as a warning so a format change shows
+    up in the run log well before it matters.
+    """
+    from sources.results import collect
+
+    data = collect()
+    for attempt in data.probes:
+        if not attempt.ok:
+            report.warnings.append(f"results probe [{attempt.shape}]: {attempt.detail}")
+
+    if data.status == ResultsStatus.PENDING:
+        report.warnings.append("no results published yet (expected until election night)")
+
+    return ResultsPayload(
+        generated_at=publish.now(),
+        status=data.status,
+        statewide=data.statewide,
+        total_votes=data.total_votes,
+        precincts_reporting=data.precincts_reporting,
+        precincts_total=data.precincts_total,
+        pct_reporting=data.pct_reporting,
+        counties=data.counties,
+        last_updated=publish.now() if data.statewide else None,
+        source_url=data.source_url,
+        attribution=data.attribution,
+    )
+
+
 COLLECTORS = {
     "race": ("race.json", collect_race),
     "polls": ("polls.json", collect_polls),
     "markets": ("markets.json", collect_markets),
     "finance": ("finance.json", collect_finance),
     "news": ("news.json", collect_news),
+    "ads": ("ads.json", collect_ads),
+    "ground": ("ground.json", collect_ground),
+    "results": ("results.json", collect_results),
 }
 
 
@@ -213,14 +284,24 @@ def ensure_placeholders(data_dir: str, report: RunReport) -> None:
         ("ground.json", GroundPayload(generated_at=publish.now())),
         ("results.json", ResultsPayload(generated_at=publish.now())),
     ):
+        if name in report.collected:
+            continue
         if not (root / name).exists():
             publish.write(name, payload, data_dir)
             report.collected.append(name)
 
 
+def default_targets(today: date | None = None) -> list[str]:
+    """The sources a scheduled run collects, adding results near election day."""
+    targets = list(DEFAULT_SOURCES)
+    if days_until_election(today) <= RESULTS_WINDOW_DAYS:
+        targets.append("results")
+    return targets
+
+
 def run(only: list[str] | None, data_dir: str, write: bool) -> RunReport:
     report = RunReport(started_at=publish.now())
-    targets = only or list(SOURCES)
+    targets = only or default_targets()
 
     for name in targets:
         if name not in COLLECTORS:
@@ -253,11 +334,42 @@ def main() -> int:
     parser.add_argument("--data-dir", default=config.DATA_DIR)
     parser.add_argument("--dry-run", action="store_true", help="collect but write nothing")
     parser.add_argument(
+        "--probe-ads",
+        action="store_true",
+        help="report what the FCC political-file API actually serves, and exit",
+    )
+    parser.add_argument(
+        "--probe-ground",
+        action="store_true",
+        help="report what the registration and county dashboards serve, and exit",
+    )
+    parser.add_argument(
+        "--probe-results",
+        action="store_true",
+        help="diagnose the Kansas election-night results format and exit",
+    )
+    parser.add_argument(
         "--live-check",
         action="store_true",
         help="verify live endpoints still match the contract; writes nothing",
     )
     args = parser.parse_args()
+
+    probes = {
+        "probe_results": ("sources.results", "diagnose"),
+        "probe_ads": ("sources.ads", "diagnose"),
+        "probe_ground": ("sources.ground", "diagnose"),
+    }
+    for flag, (module_name, function_name) in probes.items():
+        if getattr(args, flag):
+            import importlib
+
+            module = importlib.import_module(module_name)
+            try:
+                print(getattr(module, function_name)())
+            finally:
+                close()
+            return 0
 
     try:
         report = run(args.only, args.data_dir, write=not (args.dry_run or args.live_check))
