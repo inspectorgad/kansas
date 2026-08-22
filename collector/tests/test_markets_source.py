@@ -356,3 +356,89 @@ class TestScanReport:
         from sources.markets import ScanReport
 
         assert ScanReport("kalshi", scanned=3, titles=["", "  ", "Real"]).distinct == 1
+
+
+class TestRealTickersFromLiveRuns:
+    """Ticker matching, pinned against tickers actually observed in CI.
+
+    The Alaska cases are the ones that matter. Kalshi spells that race
+    KXAKSENGOVCOMBO — KX + AK + SEN — and "AKSEN" contains "KS" as a substring
+    that means nothing. A "contains SEN and KS" rule collected Alaska's whole
+    Senate slate as this race, which is the worst kind of wrong: real market
+    prices, confidently attributed to the wrong contest.
+
+    That same output revealed the naming scheme (KX + state + SEN + qualifier),
+    so Kansas reads KXKSSEN... — which is why these are pinned rather than
+    reasoned about.
+    """
+
+    ALASKA = (
+        "Will Alaska Governor winner be Republican party and Alaska Senate winner "
+        "be Republican party? Republicans sweep [KXAKSENGOVCOMBO-26NOV-REPREP]"
+    )
+    ALASKA_RUNOFF = (
+        "Will Carol Hafner qualify for the runoff in the 2026 Alaska Senate race? "
+        "Carol Hafner [KXAKSENADVANCE-26AUG18-CHAF]"
+    )
+
+    @pytest.mark.parametrize(
+        "title",
+        [
+            "KXKSSEN-26NOV-RM Roger Marshall",
+            "KXKSSENGOVCOMBO-26NOV-REPREP",
+            "KXSENATEKS-26-RM",
+        ],
+    )
+    def test_matches_kansas_ticker_forms(self, title):
+        assert _matches_race(title)
+
+    @pytest.mark.parametrize("title", [ALASKA, ALASKA_RUNOFF, "KXAKSENGOVCOMBO-26NOV-DEMDEM"])
+    def test_rejects_alaska(self, title):
+        assert not _matches_race(title)
+
+    @pytest.mark.parametrize(
+        "title",
+        [
+            "2026 Balance of Power: R Senate, R House",
+            "Mitch McConnell steps down from Senate before his term ends?",
+        ],
+    )
+    def test_rejects_national_senate_markets(self, title):
+        """Chamber-control and individual-senator markets are not this race."""
+        assert not _matches_race(title)
+
+    def test_the_ticker_rule_itself_rejects_the_alaska_prefix(self):
+        from sources.markets import _ticker_identifies_race
+
+        assert _ticker_identifies_race("KXKSSEN-26NOV")
+        assert not _ticker_identifies_race("KXAKSENGOVCOMBO-26NOV")
+        assert not _ticker_identifies_race("KXAKSENADVANCE-26AUG18")
+
+
+class TestCursorExtraction:
+    """Pagination that never advances is worse than pagination that stops.
+
+    A live run reported 2,400 events scanned and 118 distinct: the cursor was
+    read from a key the response did not have, so page one came back twelve
+    times and the large scan count read as thoroughness.
+    """
+
+    @pytest.mark.parametrize(
+        "payload,expected",
+        [
+            ({"cursor": "abc"}, "abc"),
+            ({"next_cursor": "def"}, "def"),
+            ({"nextCursor": "ghi"}, "ghi"),
+            ({"pagination": {"next_cursor": "jkl"}}, "jkl"),
+        ],
+    )
+    def test_finds_the_cursor_wherever_it_sits(self, payload, expected):
+        from sources.markets import _extract_cursor
+
+        assert _extract_cursor(payload) == expected
+
+    @pytest.mark.parametrize("payload", [{}, {"events": []}, {"cursor": ""}, {"cursor": None}])
+    def test_absent_or_empty_cursor_reads_as_no_more_pages(self, payload):
+        from sources.markets import _extract_cursor
+
+        assert _extract_cursor(payload) is None

@@ -48,10 +48,18 @@ HAMILTON_TERMS = ("hamilton",)
 # satisfy both halves of the test and be collected as this race.
 STATE_WORD = re.compile(r"(?:^|[^a-z])ks(?:[^a-z]|$)", re.IGNORECASE)
 
-# Exchange tickers concatenate, so KXSENATEKS-26 never yields a token boundary
-# around its "KS". Matching an all-caps token that contains both SEN and KS picks
-# those up without loosening the prose rule.
+# Exchange tickers concatenate, so no token boundary appears around the state
+# code. A live run showed why "contains SEN and KS" is not good enough: Kalshi
+# spells the Alaska Senate race KXAKSENGOVCOMBO, and "AKSEN" contains "KS" as a
+# substring, so every Alaska contest matched as Kansas.
+#
+# That same run revealed the real shape — KX + state + SEN + qualifier — so
+# Kansas reads KXKSSEN..., with the state code immediately before the office.
+# KSSEN is therefore the primary pattern; SEN...KS covers the reverse ordering
+# some series use, anchored to the end of the alpha run so AKSEN cannot satisfy
+# it either.
 TICKER_TOKEN = re.compile(r"\b[A-Z][A-Z0-9]{2,}\b")
+KANSAS_SENATE_TICKER = re.compile(r"KSSEN|SEN[A-Z]*KS(?![A-Z])")
 
 
 @dataclass
@@ -63,13 +71,14 @@ class MarketsResult:
 
 
 def _ticker_identifies_race(raw: str) -> bool:
-    """An all-caps token holding both SEN and KS names the office and the state.
+    """A ticker naming both Kansas and the Senate settles the test at once.
 
-    KXSENATEKS-26 says "Senate" and "Kansas" in one word, so it settles both
-    halves of the test at once — which is why this is checked before the state
-    and office rules rather than feeding into them.
+    Checked before the state and office rules because one token carries both.
+    The pattern is deliberately narrow: a looser "contains SEN and KS" collected
+    the whole Alaska Senate slate, whose tickers read KXAKSEN... — the "KS" there
+    is the tail of "AK" plus the head of "SEN", meaning nothing.
     """
-    return any("SEN" in token and "KS" in token for token in TICKER_TOKEN.findall(raw))
+    return any(KANSAS_SENATE_TICKER.search(token) for token in TICKER_TOKEN.findall(raw))
 
 
 def _mentions_state(text: str) -> bool:
@@ -307,6 +316,28 @@ def _is_parlay(ticker: str) -> bool:
     return any(marker in upper for marker in PARLAY_MARKERS)
 
 
+CURSOR_KEYS = ("cursor", "next_cursor", "nextCursor")
+
+
+def _extract_cursor(payload: dict) -> str | None:
+    """Find the continuation token wherever the response puts it.
+
+    A live run scanned 2,400 events and found 118 distinct — the cursor was being
+    read from a key that was not there, so page one came back twelve times.
+    """
+    for key in CURSOR_KEYS:
+        value = payload.get(key)
+        if isinstance(value, str) and value:
+            return value
+    nested = payload.get("pagination")
+    if isinstance(nested, dict):
+        for key in CURSOR_KEYS:
+            value = nested.get(key)
+            if isinstance(value, str) and value:
+                return value
+    return None
+
+
 def _kalshi_event_markets() -> tuple[list[dict], int]:
     """Find this race through Kalshi's event list rather than its market list.
 
@@ -318,6 +349,7 @@ def _kalshi_event_markets() -> tuple[list[dict], int]:
     rows: list[dict] = []
     scanned = 0
     cursor: str | None = None
+    seen_events: set[str] = set()
 
     for _ in range(MAX_PAGES):
         params: dict[str, object] = {"status": "open", "limit": KALSHI_PAGE_SIZE}
@@ -326,6 +358,14 @@ def _kalshi_event_markets() -> tuple[list[dict], int]:
         payload = get_json(f"{KALSHI_API}/events", params)
         events = payload.get("events") or []
         scanned += len(events)
+
+        # Stop the moment a page repeats itself. Without this a cursor that never
+        # advances quietly refetches page one until the page budget runs out, and
+        # the resulting large "scanned" count reads as a thorough search.
+        tickers = {str(e.get("event_ticker", "")) for e in events if e.get("event_ticker")}
+        if tickers and tickers <= seen_events:
+            break
+        seen_events |= tickers
 
         for event in events:
             haystack = " ".join(
@@ -349,7 +389,7 @@ def _kalshi_event_markets() -> tuple[list[dict], int]:
                 market.setdefault("title", event.get("title", ""))
                 rows.append(market)
 
-        cursor = payload.get("cursor") or None
+        cursor = _extract_cursor(payload)
         if not cursor or not events:
             break
 
@@ -377,7 +417,7 @@ def _kalshi_pages() -> tuple[list[dict], int]:
         page = payload.get("markets") or []
         scanned += len(page)
         fallback.extend(m for m in page if not _is_parlay(str(m.get("ticker", ""))))
-        cursor = payload.get("cursor") or None
+        cursor = _extract_cursor(payload)
         if not cursor or not page:
             break
 
