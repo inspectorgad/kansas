@@ -33,6 +33,11 @@ jobs:
         working-directory: collector
         run: pytest
 
+      - name: Election-night rehearsal
+        # Runs the full results path against recorded pages. This is the one code
+        # path that gets a single live outing, so it is exercised on every push.
+        run: python collector/rehearse.py
+
   live-check:
     name: Live endpoint check
     runs-on: ubuntu-latest

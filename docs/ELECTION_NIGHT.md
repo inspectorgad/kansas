@@ -31,6 +31,27 @@ signal.** If it prints `NO SHAPE MATCHED`, it also prints the first 600
 characters of what was actually served — enough to add the missing parser in
 `collector/sources/results.py` in one sitting.
 
+### Rehearse the rest of the path offline
+
+Knowing the page's shape is only half of it. The other half — parse, reconcile,
+publish, render — can be rehearsed today, with no network at all:
+
+```sh
+python collector/rehearse.py                     # all three stages
+python collector/rehearse.py --stage mid
+python collector/rehearse.py --data-dir /tmp/enr  # keep the files to inspect
+```
+
+It replays recorded pages at three points in the night, prints what the app's
+Race tab would show at each, and reconciles the county rows against the statewide
+totals. It runs on every push in CI. A passing rehearsal means everything
+downstream of the parser is sound; it says nothing about whether the real page
+matches, which is what `--probe-results` is for.
+
+The fixtures deliberately reproduce the misreading described below — the early
+count leads one way and the final count the other. If that ever stops holding,
+the fixtures have lost the case they exist for.
+
 Then confirm the app end to end:
 
 ```sh
