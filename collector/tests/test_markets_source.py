@@ -931,3 +931,96 @@ class TestKalshiDollarFields:
         assert market.marshall == pytest.approx(0.56)
         assert market.volume_usd == pytest.approx(1234.0)
         assert market.open_interest == pytest.approx(567.0)
+
+
+class TestMarginLadderIsNotAWinProbability:
+    """The ladder that actually reached markets.json, verbatim from the run.
+
+    KXMIDTERMMOV-KSSENR-P3 asks whether the Republican margin will be at least
+    three points. Its yes price is P(R wins by 3+), not P(R wins). Eleven rungs
+    were attributed by party and volume-weighted into a published headline of
+    Marshall .3727 / Hamilton .6273 — real Kansas Senate prices answering a
+    question nobody asked, reading as Hamilton being the favourite.
+
+    It also masked the combination grid: because the ladder counted as markets
+    found, the marginalisation that produces the real number never ran.
+    """
+
+    LADDER = [
+        (3, 0.745), (5, 0.635), (7, 0.485), (9, 0.34), (11, 0.205),
+        (13, 0.14), (15, 0.0875), (17, 0.064), (19, 0.0455), (21, 0.039),
+        (23, 0.0335),
+    ]
+
+    def _rung(self, points: int, price: float) -> dict:
+        return {
+            "ticker": f"KXMIDTERMMOV-KSSENR-P{points}",
+            "title": (
+                "Will the margin of victory for Republicans in the U.S. Senate "
+                f"election in Kansas be at least {points} percentage points?"
+            ),
+            "yes_sub_title": "Republican party",
+            "yes_bid_dollars": price - 0.01,
+            "yes_ask_dollars": price + 0.01,
+            "volume_fp": 1000.0,
+        }
+
+    def test_no_rung_is_read_as_a_win_probability(self):
+        from sources.markets import _kalshi_markets
+
+        rungs = [self._rung(points, price) for points, price in self.LADDER]
+        assert _kalshi_markets({"markets": rungs}) == []
+
+    def test_the_ladder_is_still_recognised_as_this_race(self):
+        """It is about this race — that is why matching alone could not stop it."""
+        from sources.markets import _matches_race
+
+        assert _matches_race(self._rung(3, 0.745)["title"])
+
+    def test_the_ticker_alone_is_enough_to_reject_it(self):
+        from sources.markets import _asks_who_wins
+
+        assert not _asks_who_wins("KXMIDTERMMOV-KSSENR-P3", "some other wording")
+
+    def test_the_wording_alone_is_enough_to_reject_it(self):
+        """A renamed ticker must not smuggle the same question back in."""
+        from sources.markets import _asks_who_wins
+
+        assert not _asks_who_wins("KXNEWTICKER-26", self._rung(9, 0.34)["title"])
+
+    def test_a_real_winner_market_still_passes(self):
+        from sources.markets import _asks_who_wins
+
+        assert _asks_who_wins("KXKSSEN-26NOV-R", "Will Kansas Senate winner be Republican party?")
+        assert _asks_who_wins("KXSENKS-26-RM", "Kansas Senate 2026 Roger Marshall")
+
+    @pytest.mark.parametrize(
+        "text",
+        [
+            "What will turnout be in the Kansas Senate election?",
+            "Republican vote share in the Kansas Senate race",
+            "How many votes will Roger Marshall receive?",
+            "Will Republicans win the Kansas Senate seat by at least 5 points?",
+        ],
+    )
+    def test_other_non_winner_questions_are_rejected(self, text):
+        from sources.markets import _asks_who_wins
+
+        assert not _asks_who_wins("KX-26", text)
+
+    def test_the_combination_grid_is_reached_once_the_ladder_is_gone(self):
+        """The ladder counting as "found" is what suppressed the real number."""
+        from sources.markets import _kalshi_markets, marginalise_combos
+
+        rungs = [self._rung(points, price) for points, price in self.LADDER]
+        grid = [
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMDEM", "yes_bid_dollars": 0.10, "yes_ask_dollars": 0.12},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMREP", "yes_bid_dollars": 0.18, "yes_ask_dollars": 0.20},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-REPDEM", "yes_bid_dollars": 0.21, "yes_ask_dollars": 0.23},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-REPREP", "yes_bid_dollars": 0.47, "yes_ask_dollars": 0.49},
+        ]
+        rows = rungs + grid
+        assert _kalshi_markets({"markets": rows}) == []
+        marshall, hamilton = marginalise_combos(rows)
+        assert marshall == pytest.approx(0.67, abs=1e-4)
+        assert marshall + hamilton == pytest.approx(1.0)

@@ -190,7 +190,17 @@ def collect_markets(report: RunReport, data_dir: str) -> MarketsPayload:
             ]
         except (json.JSONDecodeError, ValueError) as exc:
             report.warnings.append(f"could not read prior market history: {exc}")
-    history = history[-config.INLINE_HISTORY_POINTS :]
+
+    # Points from before the epoch answered a different question and cannot be
+    # made comparable, so they are dropped rather than carried forward. See
+    # config.MARKET_HISTORY_EPOCH for what was wrong with them.
+    kept = [point for point in history if point.t >= config.MARKET_HISTORY_EPOCH]
+    if len(kept) != len(history):
+        report.warnings.append(
+            f"discarded {len(history) - len(kept)} market history point(s) "
+            f"recorded before {config.MARKET_HISTORY_EPOCH.isoformat()}"
+        )
+    history = kept[-config.INLINE_HISTORY_POINTS :]
 
     result = collect(history)
     report.warnings.extend(result.warnings)

@@ -214,3 +214,84 @@ class TestResolvedFecIds:
     def test_a_corrupt_finance_file_does_not_break_the_race_payload(self, fixtures, tmp_path):
         (tmp_path / "finance.json").write_text("{ truncated")
         assert run.run(["race"], str(tmp_path), write=True).ok()
+
+
+class TestMarketHistoryEpoch:
+    """History from before the epoch is dropped, not carried forward.
+
+    The 17:28 run on 2026-08-22 published Marshall .3727 from the KXMIDTERMMOV
+    margin ladder. The series is read back from the previous markets.json each
+    run, so that one point would have ridden forward for as long as the inline
+    window held it — a phantom forty-point swing on the sparkline and a poisoned
+    24h delta for a day.
+    """
+
+    def _published(self, tmp_path, timestamp: str, marshall: float) -> None:
+        (tmp_path / "markets.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": 1,
+                    "generated_at": timestamp,
+                    "markets": [],
+                    "consensus": {
+                        "as_of": timestamp,
+                        "marshall": marshall,
+                        "hamilton": round(1.0 - marshall, 4),
+                        "platforms": ["kalshi"],
+                        "history": [
+                            {"t": timestamp, "marshall": marshall,
+                             "hamilton": round(1.0 - marshall, 4)}
+                        ],
+                    },
+                }
+            )
+        )
+
+    def _history_seen_by_collect(self, monkeypatch, tmp_path):
+        """Capture the series actually handed to the collector.
+
+        Asserting on the republished file would prove nothing here: there is no
+        Kalshi fixture, so the collection fails and the seeded file is correctly
+        left untouched. What matters is which points reach the consensus, so that
+        is what is captured.
+        """
+        seen: list = []
+
+        import sources.markets as markets_module
+
+        def fake_collect(history=None):
+            seen.append(list(history or []))
+            raise SourceError("no network in tests")
+
+        monkeypatch.setattr(markets_module, "collect", fake_collect)
+        return seen
+
+    def test_a_pre_epoch_point_is_discarded_and_reported(
+        self, fixtures, tmp_path, monkeypatch
+    ):
+        seen = self._history_seen_by_collect(monkeypatch, tmp_path)
+        self._published(tmp_path, "2026-08-22T17:28:06.677338Z", 0.3727)
+        report = run.run(["markets"], str(tmp_path), write=True)
+
+        assert any("discarded 1 market history point" in w for w in report.warnings), (
+            report.warnings
+        )
+        assert seen == [[]]
+
+    def test_a_post_epoch_point_is_kept(self, fixtures, tmp_path, monkeypatch):
+        seen = self._history_seen_by_collect(monkeypatch, tmp_path)
+        self._published(tmp_path, "2026-08-23T09:00:00Z", 0.61)
+        report = run.run(["markets"], str(tmp_path), write=True)
+
+        assert not any("discarded" in w for w in report.warnings), report.warnings
+        assert [point.marshall for point in seen[0]] == [0.61]
+
+    def test_a_failed_collection_leaves_the_published_file_alone(
+        self, fixtures, tmp_path, monkeypatch
+    ):
+        """Dropping bad history must not become a way to lose good data."""
+        self._history_seen_by_collect(monkeypatch, tmp_path)
+        self._published(tmp_path, "2026-08-23T09:00:00Z", 0.61)
+        before = (tmp_path / "markets.json").read_text()
+        run.run(["markets"], str(tmp_path), write=True)
+        assert (tmp_path / "markets.json").read_text() == before

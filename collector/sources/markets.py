@@ -54,6 +54,64 @@ HAMILTON_TERMS = ("hamilton",)
 # market names the candidate.
 PARTY_TO_CANDIDATE = {"republican": MARSHALL, "democratic": HAMILTON, "democrat": HAMILTON}
 
+# A market can be unmistakably about this race and still not be about who wins
+# it. The margin ladder is the one that actually got published:
+# KXMIDTERMMOV-KSSENR-P3 asks whether the Republican margin will be at least
+# three points, so its yes price is P(R wins by 3+) rather than P(R wins). Eleven
+# rungs of that ladder were attributed by party and volume-weighted into a
+# headline of Marshall .37 / Hamilton .63 — real Kansas Senate prices answering a
+# question nobody asked, and a number that reads as Hamilton being the favourite.
+#
+# Two tests rather than one. The exclusions catch the question shapes known to
+# exist, and the winner requirement catches the ones that do not yet: a blocklist
+# alone grows forever and only ever describes yesterday's exchange, while a
+# positive test alone can be defeated by a rephrasing. A market must pass both.
+NON_WINNER_TICKERS = ("MIDTERMMOV", "TURNOUT", "VOTESHARE", "MARGIN", "SPREAD")
+NON_WINNER_PHRASES = (
+    "margin of victory",
+    "percentage points",
+    "vote share",
+    "turnout",
+    "by at least",
+    "how many",
+    "number of",
+    "share of the vote",
+)
+# "win" covers wins, winner and winning. Naming a candidate or a party counts
+# too, because the real listings put the question in the title and the answer in
+# the outcome: Kalshi titles a market "Kansas Senate 2026" and carries "Roger
+# Marshall" in yes_sub_title, while Polymarket keeps the names in outcomes. A
+# market offering Marshall against Hamilton is a market on who wins, whatever
+# its title says.
+#
+# Ordering carries the safety here. The margin ladder also names a party — "the
+# margin of victory for Republicans" — so it would satisfy this test; it never
+# reaches it, because the exclusions above are checked first.
+WINNER_PHRASES = (
+    "win",
+    "republican",
+    "democratic",
+    "democrat",
+    *MARSHALL_TERMS,
+    *HAMILTON_TERMS,
+)
+
+
+def _asks_who_wins(ticker: str, text: str) -> bool:
+    """Does this market quote who takes the seat, rather than by how much?
+
+    Exclusions first, then the positive test — a question shape known not to be
+    about winning must be rejected even when it names a candidate or a party.
+    """
+    upper = (ticker or "").upper()
+    if any(marker in upper for marker in NON_WINNER_TICKERS):
+        return False
+    lowered = (text or "").lower()
+    if any(phrase in lowered for phrase in NON_WINNER_PHRASES):
+        return False
+    return any(phrase in lowered for phrase in WINNER_PHRASES)
+
+
 # Markets covering two offices at once ("Governor winner AND Senate winner") are
 # not a Senate probability on their own. But Kalshi lists all four outcomes of the
 # governor-by-senate grid, and four mutually exclusive, exhaustive outcomes can be
@@ -392,6 +450,8 @@ def _kalshi_markets(payload: dict) -> list[Market]:
         )
         if not _matches_race(haystack):
             continue
+        if not _asks_who_wins(ticker, haystack):
+            continue
 
         # Kalshi quotes cents on the "yes" side of one named outcome.
         probability = kalshi_price(market)
@@ -445,6 +505,13 @@ def _polymarket_markets(payload: list | dict) -> list[Market]:
             for key in ("question", "title", "slug", "groupItemTitle")
         )
         if not _matches_race(haystack):
+            continue
+        # The outcomes are what define the question here: a Gamma market titled
+        # only "Kansas Senate 2026" offers "Roger Marshall" and "Adam Hamilton"
+        # in outcomes, which the haystack above does not include.
+        if not _asks_who_wins(
+            str(market.get("slug", "")), f"{haystack} {market.get('outcomes', '')}"
+        ):
             continue
 
         outcomes = _parse_maybe_json(market.get("outcomes")) or []

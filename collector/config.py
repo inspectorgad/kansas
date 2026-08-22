@@ -135,7 +135,24 @@ class CountyDashboard:
 # county dashboard still shows *primary* figures, and the first live run duly
 # matched numbers on two of them in August. Publishing those as general-election
 # early vote would be worse than publishing nothing.
+from datetime import UTC, datetime  # noqa: E402
 from datetime import date as _date  # noqa: E402
+
+# Market history recorded before this instant was produced by a derivation now
+# known to be wrong, and is discarded on read rather than carried forward.
+#
+# The run at 17:28 on 2026-08-22 published Marshall .3727 / Hamilton .6273 from
+# eleven rungs of the KXMIDTERMMOV margin-of-victory ladder — prices for "will
+# the Republican margin be at least N points", volume-weighted as if each were a
+# win probability. Since the series is read back from the previous markets.json
+# each run, that single point would otherwise ride forward for as long as the
+# inline window holds it, showing a phantom forty-point swing on the sparkline
+# and poisoning every 1h and 24h delta for a day.
+#
+# Points are dropped rather than corrected because they cannot be corrected: the
+# prices behind them answered a different question. Raise this whenever the
+# derivation changes in a way that makes earlier points incomparable.
+MARKET_HISTORY_EPOCH = datetime(2026, 8, 22, 18, 0, tzinfo=UTC)
 
 ADVANCE_VOTING_OPENS = _date(2026, 10, 14)
 
