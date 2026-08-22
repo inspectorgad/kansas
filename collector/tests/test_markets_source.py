@@ -763,19 +763,19 @@ class TestKalshiPriceFields:
         """The mid is the current implied probability; a last trade can be hours old."""
         from sources.markets import kalshi_price
 
-        assert kalshi_price({"yes_bid": 46, "yes_ask": 50, "last_price": 12}) == 48.0
+        assert kalshi_price({"yes_bid": 46, "yes_ask": 50, "last_price": 12}) == 0.48
 
     def test_falls_back_through_the_trade_fields(self):
         from sources.markets import kalshi_price
 
-        assert kalshi_price({"last_price": 33}) == 33.0
-        assert kalshi_price({"previous_price": 27}) == 27.0
-        assert kalshi_price({"yes_bid": 41}) == 41.0
+        assert kalshi_price({"last_price": 33}) == 0.33
+        assert kalshi_price({"previous_price": 27}) == 0.27
+        assert kalshi_price({"yes_bid": 41}) == 0.41
 
     def test_a_no_side_quote_implies_the_yes_price(self):
         from sources.markets import kalshi_price
 
-        assert kalshi_price({"no_bid": 70, "no_ask": 74}) == pytest.approx(28.0)
+        assert kalshi_price({"no_bid": 70, "no_ask": 74}) == pytest.approx(0.28)
 
     def test_a_row_with_no_price_at_all_yields_none(self):
         from sources.markets import kalshi_price
@@ -834,3 +834,100 @@ class TestUnpricedGridDiagnostic:
         from sources.markets import describe_grid
 
         assert describe_grid([{"ticker": "KXNBA-26-LAL"}]) == "no combination series found"
+
+
+class TestKalshiDollarFields:
+    """Kalshi renamed every price field and changed its unit.
+
+    The key list below is verbatim from the live row for
+    KXKSSENGOVCOMBO-26NOV-REPREP on 2026-08-22: no yes_bid, no last_price, no
+    volume, no open_interest. Prices are dollars per contract, so 48% reads 0.48,
+    and the cent-era divide-by-a-hundred would have published half a percent
+    instead of a half — a wrong number that renders perfectly.
+    """
+
+    LIVE_KEYS = [
+        "can_close_early", "close_time", "created_time", "custom_strike",
+        "early_close_condition", "event_ticker", "exchange_index",
+        "expected_expiration_time", "expiration_time", "expiration_value",
+        "last_price_dollars", "latest_expiration_time", "liquidity_dollars",
+        "market_type", "no_ask_dollars", "no_bid_dollars", "no_sub_title",
+        "notional_value_dollars", "occurrence_datetime", "open_interest_fp",
+        "open_time", "previous_price_dollars", "previous_yes_ask_dollars",
+        "previous_yes_bid_dollars", "price_level_structure", "price_ranges",
+        "result", "rules_primary", "rules_secondary", "settlement_timer_seconds",
+        "status", "strike_type", "ticker", "title", "updated_time",
+        "volume_24h_fp", "volume_fp", "yes_ask_dollars", "yes_ask_size_fp",
+        "yes_bid_dollars", "yes_bid_size_fp", "yes_sub_title",
+    ]
+
+    def _row(self, ticker: str, **overrides) -> dict:
+        row = dict.fromkeys(self.LIVE_KEYS)
+        row["ticker"] = ticker
+        row.update(overrides)
+        return row
+
+    def test_dollar_prices_are_probabilities_already(self):
+        from sources.markets import kalshi_price
+
+        row = self._row("X", yes_bid_dollars=0.46, yes_ask_dollars=0.50)
+        assert kalshi_price(row) == pytest.approx(0.48)
+
+    def test_a_dollar_price_is_not_divided_by_a_hundred(self):
+        """The failure this guards against renders as 0.5% and looks fine."""
+        from sources.markets import kalshi_price
+
+        assert kalshi_price(self._row("X", last_price_dollars=0.48)) == pytest.approx(0.48)
+
+    def test_strings_parse(self):
+        from sources.markets import kalshi_price
+
+        assert kalshi_price(self._row("X", last_price_dollars="0.48")) == pytest.approx(0.48)
+
+    def test_the_no_side_in_dollars_implies_the_yes_price(self):
+        from sources.markets import kalshi_price
+
+        row = self._row("X", no_bid_dollars=0.70, no_ask_dollars=0.74)
+        assert kalshi_price(row) == pytest.approx(0.28)
+
+    def test_a_row_of_the_live_shape_with_no_prices_yields_none(self):
+        from sources.markets import kalshi_price
+
+        assert kalshi_price(self._row("KXKSSENGOVCOMBO-26NOV-REPREP")) is None
+
+    def test_a_dollar_value_above_one_is_refused_not_clamped(self):
+        """Out of range means the unit is wrong; a clamp would hide that."""
+        from sources.markets import kalshi_price
+
+        assert kalshi_price(self._row("X", last_price_dollars=48)) is None
+
+    def test_the_real_grid_marginalises(self):
+        from sources.markets import marginalise_combos
+
+        grid = [
+            self._row("KXKSSENGOVCOMBO-26NOV-DEMDEM", yes_bid_dollars=0.10, yes_ask_dollars=0.12),
+            self._row("KXKSSENGOVCOMBO-26NOV-DEMREP", yes_bid_dollars=0.18, yes_ask_dollars=0.20),
+            self._row("KXKSSENGOVCOMBO-26NOV-REPDEM", yes_bid_dollars=0.21, yes_ask_dollars=0.23),
+            self._row("KXKSSENGOVCOMBO-26NOV-REPREP", yes_bid_dollars=0.47, yes_ask_dollars=0.49),
+        ]
+        marshall, hamilton = marginalise_combos(grid)
+        # Senate R = DEMREP 0.19 + REPREP 0.48 = 0.67.
+        assert marshall == pytest.approx(0.67, abs=1e-4)
+        assert marshall + hamilton == pytest.approx(1.0)
+
+    def test_volume_and_open_interest_come_from_the_renamed_fields(self):
+        from sources.markets import _kalshi_markets
+
+        row = self._row(
+            "KXKSSEN-26NOV-R",
+            title="Will Kansas Senate winner be Republican party?",
+            yes_sub_title="Republican party",
+            yes_bid_dollars=0.55,
+            yes_ask_dollars=0.57,
+            volume_fp=1234.0,
+            open_interest_fp=567.0,
+        )
+        market = _kalshi_markets({"markets": [row]})[0]
+        assert market.marshall == pytest.approx(0.56)
+        assert market.volume_usd == pytest.approx(1234.0)
+        assert market.open_interest == pytest.approx(567.0)

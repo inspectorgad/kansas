@@ -165,44 +165,99 @@ def _matches_race(title: str) -> bool:
     return any(t in text for t in MARSHALL_TERMS) and any(t in text for t in HAMILTON_TERMS)
 
 
-def kalshi_price(market: dict) -> float | None:
-    """Cents on the yes side, from whichever field the row actually carries.
+# Kalshi renamed every price field, and changed their unit with them. A live row
+# for KXKSSENGOVCOMBO-26NOV-REPREP carries yes_bid_dollars, yes_ask_dollars and
+# last_price_dollars — and no yes_bid, last_price, volume or open_interest at all.
+# The new fields are quoted in dollars per contract, so a market at 48% reads
+# 0.48 rather than 48. Dividing those by a hundred, as the cent-era code did,
+# would have published a probability of half a percent instead of a half: the
+# most plausible-looking wrong number available, since it renders perfectly.
+#
+# Each family is tried in turn, newest first, so a rollback to the cent names
+# keeps working. Every value is range-checked against its own unit rather than
+# assumed, because a field that falls outside 0..1 after scaling means the unit
+# is not what this table claims and the right answer is to publish nothing.
+PRICE_FAMILIES = (
+    (
+        "yes_bid_dollars",
+        "yes_ask_dollars",
+        ("last_price_dollars", "previous_price_dollars", "previous_yes_bid_dollars"),
+        "no_bid_dollars",
+        "no_ask_dollars",
+        1.0,
+    ),
+    (
+        "yes_bid",
+        "yes_ask",
+        ("last_price", "previous_price", "previous_yes_bid"),
+        "no_bid",
+        "no_ask",
+        100.0,
+    ),
+)
 
-    Reading only last_price was not enough. A live run found all four Kansas
-    combination outcomes listed and derived nothing from them, because the rows
-    carried no last_price and no yes_bid: the grid was rejected before it was
-    ever grouped, and the warning could only say "no combination series found".
+
+def _as_probability(value: object, scale: float) -> float | None:
+    """Scale one raw quote to a probability, or reject it.
+
+    Strings are accepted because Kalshi has sent prices both ways. Anything that
+    lands outside 0..1 is refused rather than clamped — an out-of-range value
+    means this code has the unit wrong, and a clamp would hide that behind a
+    number that looks reasonable.
+    """
+    # bool is an int subclass, so an unrelated flag would otherwise price.
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    if number != number or number in (float("inf"), float("-inf")):
+        return None
+    probability = number / scale
+    if not 0.0 <= probability <= 1.0:
+        return None
+    return probability
+
+
+def kalshi_price(market: dict) -> float | None:
+    """The yes-side probability, 0 to 1, from whichever fields the row carries.
 
     The bid/ask midpoint is preferred where both sides are quoted, and that is
-    better methodology rather than a workaround — a last trade can be hours
-    stale, while the mid is the market's current implied probability. A quote on
-    the no side implies the yes price and is used before giving up.
+    better methodology rather than a workaround: a last trade can be hours stale
+    on a thin market, while the mid is what the book currently implies. A quote
+    on the no side implies the yes price and is tried before giving up.
     """
+    for bid_key, ask_key, trade_keys, no_bid_key, no_ask_key, scale in PRICE_FAMILIES:
+        bid = _as_probability(market.get(bid_key), scale)
+        ask = _as_probability(market.get(ask_key), scale)
+        if bid is not None and ask is not None and (bid > 0 or ask > 0):
+            return (bid + ask) / 2.0
 
-    def cents(key: str) -> float | None:
-        value = market.get(key)
-        # bool is an int subclass; a True here would read as one cent.
-        if isinstance(value, bool) or not isinstance(value, (int, float)):
-            return None
-        return float(value)
+        for key in trade_keys:
+            value = _as_probability(market.get(key), scale)
+            if value is not None and value > 0:
+                return value
 
-    bid, ask = cents("yes_bid"), cents("yes_ask")
-    if bid is not None and ask is not None and (bid > 0 or ask > 0):
-        return (bid + ask) / 2.0
+        no_bid = _as_probability(market.get(no_bid_key), scale)
+        no_ask = _as_probability(market.get(no_ask_key), scale)
+        if no_bid is not None and no_ask is not None and (no_bid > 0 or no_ask > 0):
+            return 1.0 - (no_bid + no_ask) / 2.0
 
-    for key in ("last_price", "previous_price", "previous_yes_bid"):
-        value = cents(key)
-        if value is not None and value > 0:
-            return value
+        # A genuine zero is a price — a market quoted at nothing — and keeping it
+        # lets the grid report itself as priced rather than as missing.
+        for key in (bid_key, ask_key, *trade_keys):
+            value = _as_probability(market.get(key), scale)
+            if value is not None:
+                return value
 
-    no_bid, no_ask = cents("no_bid"), cents("no_ask")
-    if no_bid is not None and no_ask is not None and (no_bid > 0 or no_ask > 0):
-        return 100.0 - (no_bid + no_ask) / 2.0
+    return None
 
-    # A genuine zero is a price — a market quoted at nothing — and keeping it
-    # lets the grid report itself as priced rather than as missing.
-    for key in ("yes_bid", "last_price", "yes_ask"):
-        value = cents(key)
+
+def _first_number(market: dict, *keys: str) -> float | None:
+    """First of these keys carrying a number. Zero counts; absence does not."""
+    for key in keys:
+        value = _as_float(market.get(key))
         if value is not None:
             return value
     return None
@@ -239,7 +294,7 @@ def combo_grid(rows: list[dict], kansas_only: bool = True) -> dict[str, dict[tup
         if price is None:
             continue
         series = ticker[: match.start()]
-        grids.setdefault(series, {})[(match.group(1), match.group(2))] = float(price) / 100.0
+        grids.setdefault(series, {})[(match.group(1), match.group(2))] = price
 
     return grids
 
@@ -339,10 +394,9 @@ def _kalshi_markets(payload: dict) -> list[Market]:
             continue
 
         # Kalshi quotes cents on the "yes" side of one named outcome.
-        yes = kalshi_price(market)
-        if yes is None:
+        probability = kalshi_price(market)
+        if probability is None:
             continue
-        probability = yes / 100.0
 
         if _is_combo(ticker) or not _is_this_cycle(ticker):
             continue
@@ -372,8 +426,8 @@ def _kalshi_markets(payload: dict) -> list[Market]:
                 url=f"https://kalshi.com/markets/{ticker}" if ticker else None,
                 marshall=round(pair[0], 4),
                 hamilton=round(pair[1], 4),
-                volume_usd=_as_float(market.get("volume")),
-                open_interest=_as_float(market.get("open_interest")),
+                volume_usd=_first_number(market, "volume", "volume_fp"),
+                open_interest=_first_number(market, "open_interest", "open_interest_fp"),
                 fetched_at=now,
             )
         )
