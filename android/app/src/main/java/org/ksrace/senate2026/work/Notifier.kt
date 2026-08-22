@@ -66,8 +66,14 @@ class Notifier(private val context: Context) {
             .setCategory(NotificationCompat.CATEGORY_SOCIAL)
             .build()
 
-        runCatching {
+        try {
             NotificationManagerCompat.from(context).notify(event.id.hashCode(), notification)
+        } catch (_: SecurityException) {
+            // POST_NOTIFICATIONS can be revoked between canNotify() and this call,
+            // and a dropped notification is not worth crashing a background
+            // refresh over. Catching SecurityException explicitly rather than via
+            // runCatching also satisfies lint's MissingPermission check, which
+            // cannot see that the guard above establishes the permission.
         }
     }
 

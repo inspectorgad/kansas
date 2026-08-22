@@ -301,26 +301,58 @@ class TestStateAndTickerMatching:
         assert not _mentions_state("chicago blackhawks")
 
 
-class TestNearMisses:
-    """A failure should carry its own evidence into the CI log."""
+class TestScanReport:
+    """Diagnostics for a market search that finds nothing.
 
-    def test_reports_listings_mentioning_the_office(self):
-        from sources.markets import near_misses
+    Two live runs failed here, and a bare "nothing matched" could not tell them
+    apart: the first was short pagination, the second an unmatched title. So the
+    report measures distinct titles against scanned rows, because pagination that
+    refetches page one looks exactly like a thorough search in a plain count.
+    """
 
-        report = near_misses(
-            ["Texas Senate 2026", "Ohio Senate 2026", "Weather in Wichita", ""]
+    def test_a_healthy_scan_is_not_flagged(self):
+        from sources.markets import ScanReport
+
+        report = ScanReport("kalshi", scanned=400, titles=[f"Market {i}" for i in range(400)])
+        assert report.distinct == 400
+        assert not report.pagination_stalled
+
+    def test_pagination_that_never_advanced_is_flagged(self):
+        from sources.markets import ScanReport
+
+        # 2,400 rows fetched but only 200 unique: page one, twelve times.
+        report = ScanReport(
+            "kalshi", scanned=2400, titles=[f"Market {i % 200}" for i in range(2400)]
         )
-        assert "Texas Senate 2026" in report
-        assert "Ohio Senate 2026" in report
-        assert "Weather" not in report
+        assert report.distinct == 200
+        assert report.pagination_stalled
+        assert "PAGINATION STALLED" in report.describe()
 
-    def test_empty_when_nothing_mentions_the_office(self):
-        from sources.markets import near_misses
+    def test_an_empty_scan_is_not_flagged_as_stalled(self):
+        from sources.markets import ScanReport
 
-        assert near_misses(["Weather", "Stocks"]) == ""
+        assert not ScanReport("kalshi").pagination_stalled
 
-    def test_is_capped_so_the_message_stays_readable(self):
-        from sources.markets import near_misses
+    def test_office_mentions_are_surfaced(self):
+        from sources.markets import ScanReport
 
-        report = near_misses([f"State {i} Senate race" for i in range(50)], limit=4)
-        assert report.count(";") == 3
+        report = ScanReport(
+            "polymarket",
+            scanned=3,
+            titles=["Texas Senate 2026", "Ohio Senate 2026", "Weather in Wichita"],
+        )
+        assert report.office_mentions() == ["Ohio Senate 2026", "Texas Senate 2026"]
+        assert "Weather" not in report.describe()
+
+    def test_a_sample_is_shown_when_nothing_mentions_the_office(self):
+        from sources.markets import ScanReport
+
+        report = ScanReport("kalshi", scanned=2, titles=["Bitcoin above 100k", "Rain in Miami"])
+        described = report.describe()
+        assert "no office mentions" in described
+        assert "Bitcoin" in described
+
+    def test_blank_titles_are_not_counted_as_distinct(self):
+        from sources.markets import ScanReport
+
+        assert ScanReport("kalshi", scanned=3, titles=["", "  ", "Real"]).distinct == 1

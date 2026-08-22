@@ -345,61 +345,102 @@ def _polymarket_pages() -> tuple[list[dict], int]:
     return rows, scanned
 
 
-def near_misses(titles: list[str], limit: int = 6) -> str:
-    """Listings that mention the office, to show why matching failed.
+@dataclass
+class ScanReport:
+    """What one platform's listing actually contained.
 
-    A failure saying only "nothing matched" sends the next person off to run a
-    separate probe. Carrying the near-misses in the message means the CI log
-    itself distinguishes a renamed market from short pagination.
+    `distinct` is the load-bearing field. When it is far below `scanned`, the
+    pagination is not advancing and we fetched the same page repeatedly — which
+    looks identical to "we searched thoroughly and found nothing" in a plain
+    count, and is the reason this is measured rather than assumed.
     """
-    senate = [t.strip() for t in titles if "senate" in t.lower() and t.strip()]
-    return "; ".join(sorted(set(senate))[:limit])
+
+    platform: str
+    scanned: int = 0
+    titles: list[str] = field(default_factory=list)
+
+    @property
+    def distinct(self) -> int:
+        return len({t.strip() for t in self.titles if t.strip()})
+
+    @property
+    def pagination_stalled(self) -> bool:
+        return self.scanned > 0 and self.distinct * 2 <= self.scanned
+
+    def office_mentions(self, limit: int = 5) -> list[str]:
+        found = sorted({t.strip() for t in self.titles if "senate" in t.lower() and t.strip()})
+        return found[:limit]
+
+    def sample(self, limit: int = 5) -> list[str]:
+        seen: list[str] = []
+        for title in self.titles:
+            cleaned = title.strip()
+            if cleaned and cleaned not in seen:
+                seen.append(cleaned)
+            if len(seen) >= limit:
+                break
+        return seen
+
+    def describe(self) -> str:
+        parts = [f"{self.platform}: scanned={self.scanned} distinct={self.distinct}"]
+        if self.pagination_stalled:
+            parts.append("PAGINATION STALLED (same page refetched)")
+        office = self.office_mentions()
+        parts.append(
+            f"office mentions={office}" if office else f"no office mentions; sample={self.sample(3)}"
+        )
+        return " | ".join(parts)
 
 
 def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
     markets: list[Market] = []
     warnings: list[str] = []
     attribution: list[Attribution] = []
-    scanned_total = 0
-    seen_titles: list[str] = []
+    reports: list[ScanReport] = []
 
+    kalshi = ScanReport("kalshi")
     try:
-        rows, scanned = _kalshi_pages()
-        scanned_total += scanned
-        seen_titles.extend(
+        rows, kalshi.scanned = _kalshi_pages()
+        kalshi.titles = [
             f"{r.get('title', '')} {r.get('yes_sub_title', '')} [{r.get('ticker', '')}]"
             for r in rows
-        )
+        ]
         found = _kalshi_markets({"markets": rows})
         markets.extend(found)
         if found:
             attribution.append(KALSHI_ATTRIBUTION)
     except SourceError as exc:
         warnings.append(f"kalshi unavailable: {exc}")
+    reports.append(kalshi)
 
+    poly = ScanReport("polymarket")
     try:
-        rows, scanned = _polymarket_pages()
-        scanned_total += scanned
-        seen_titles.extend(str(r.get("question") or r.get("title") or "") for r in rows)
+        rows, poly.scanned = _polymarket_pages()
+        poly.titles = [str(r.get("question") or r.get("title") or "") for r in rows]
         found = _polymarket_markets(rows)
         markets.extend(found)
         if found:
             attribution.append(POLYMARKET_ATTRIBUTION)
     except SourceError as exc:
         warnings.append(f"polymarket unavailable: {exc}")
+    reports.append(poly)
+
+    for report in reports:
+        if report.pagination_stalled:
+            warnings.append(f"{report.platform} pagination stalled: {report.describe()}")
 
     if not markets:
         # Leaving the previous markets.json in place and failing loudly beats
         # publishing an empty file: a slightly stale probability is recoverable,
         # a silently missing headline number is not.
+        #
+        # The message carries the evidence rather than pointing at another
+        # command, because "nothing matched" alone cannot distinguish a renamed
+        # market from pagination that never advanced.
+        detail = " || ".join(r.describe() for r in reports)
         if warnings:
-            raise SourceError("; ".join(warnings))
-        nearest = near_misses(seen_titles)
-        raise SourceError(
-            f"scanned {scanned_total} open markets across both platforms and none "
-            f"matched this race. Nearest listings mentioning the office: "
-            f"{nearest or '(none)'}"
-        )
+            raise SourceError(f"{'; '.join(warnings)} || {detail}")
+        raise SourceError(f"no market matched this race. {detail}")
 
     return MarketsResult(
         markets=markets,
