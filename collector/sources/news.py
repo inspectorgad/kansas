@@ -14,12 +14,12 @@ from __future__ import annotations
 import hashlib
 import re
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from urllib.parse import urlparse, urlunparse
 
 from config import GDELT_DOC_API, GDELT_QUERY, NEWS_FEEDS
 from fetch import SourceError, get_json, get_text
-from schemas import Attribution, HAMILTON, MARSHALL
+from schemas import HAMILTON, MARSHALL, Attribution
 from schemas.news import NewsItem
 
 MAX_ITEMS = 120
@@ -85,7 +85,7 @@ def _parse_feed_time(entry) -> datetime | None:
     for key in ("published_parsed", "updated_parsed"):
         parsed = getattr(entry, key, None) or entry.get(key)
         if parsed:
-            return datetime.fromtimestamp(calendar.timegm(parsed), tz=timezone.utc)
+            return datetime.fromtimestamp(calendar.timegm(parsed), tz=UTC)
     return None
 
 
@@ -168,7 +168,7 @@ def from_gdelt(warnings: list[str]) -> list[NewsItem]:
         stamp = article.get("seendate")
         if stamp:
             try:
-                when = datetime.strptime(stamp, "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc)
+                when = datetime.strptime(stamp, "%Y%m%dT%H%M%SZ").replace(tzinfo=UTC)
             except ValueError:
                 when = None
         identifier = item_id(url)
@@ -203,7 +203,7 @@ def collect() -> NewsResult:
 
     items = sorted(
         merged.values(),
-        key=lambda i: i.published_at or datetime.min.replace(tzinfo=timezone.utc),
+        key=lambda i: i.published_at or datetime.min.replace(tzinfo=UTC),
         reverse=True,
     )[:MAX_ITEMS]
 

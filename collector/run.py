@@ -21,7 +21,7 @@ import json
 import sys
 import traceback
 from dataclasses import dataclass, field
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -70,7 +70,7 @@ class RunReport:
 
 
 def days_until_election(today: date | None = None) -> int:
-    return (ELECTION_DATE - (today or datetime.now(timezone.utc).date())).days
+    return (ELECTION_DATE - (today or datetime.now(UTC).date())).days
 
 
 def collect_race(report: RunReport) -> RacePayload:
@@ -128,7 +128,7 @@ def collect_polls(report: RunReport, data_dir: str) -> PollsPayload:
     return PollsPayload(
         generated_at=publish.now(),
         polls=result.polls,
-        aggregate=aggregate_polls(result.polls, datetime.now(timezone.utc).date()),
+        aggregate=aggregate_polls(result.polls, datetime.now(UTC).date()),
         attribution=result.attribution,
     )
 

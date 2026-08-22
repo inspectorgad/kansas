@@ -9,7 +9,7 @@ of what the numbers looked like last week.
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from config import DATA_DIR, HISTORY_DIR
@@ -17,7 +17,7 @@ from schemas import FILES, Payload
 
 
 def now() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)
 
 
 def _serialize(payload: Payload) -> str:

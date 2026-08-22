@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import hashlib
 from dataclasses import dataclass, field
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 
 from config import PARTISAN_POLLSTERS, WIKIPEDIA_API, WIKIPEDIA_ARTICLE
 from fetch import SourceError, get_json
@@ -113,8 +113,16 @@ def _split_sponsor(pollster_cell: str) -> tuple[str, str | None]:
 
 def parse_polls(wikitext: str, default_year: int = 2026) -> PollsResult:
     """Extract every general-election poll of this race from the article."""
-    from .wikitext import clean, header_row, iter_tables, parse_date_range
-    from .wikitext import parse_margin_of_error, parse_percent, parse_sample, split_rows
+    from .wikitext import (
+        clean,
+        header_row,
+        iter_tables,
+        parse_date_range,
+        parse_margin_of_error,
+        parse_percent,
+        parse_sample,
+        split_rows,
+    )
 
     polls: dict[str, Poll] = {}
     skipped: list[str] = []
@@ -141,7 +149,9 @@ def parse_polls(wikitext: str, default_year: int = 2026) -> PollsResult:
         for row in split_rows(table):
             if len(row) < width - 1:
                 continue  # header repeat, section divider, or a merged-cell note
-            def cell(index: int | None) -> str:
+
+            def cell(index: int | None, row: list[str] = row) -> str:
+                """Read one cell, tolerating a short row or an absent column."""
                 if index is None or index >= len(row):
                     return ""
                 return row[index]
@@ -179,7 +189,7 @@ def parse_polls(wikitext: str, default_year: int = 2026) -> PollsResult:
                 results=CandidatePair(marshall=marshall, hamilton=hamilton),
                 other=parse_percent(cell(other_col)) if other_col is not None else None,
                 undecided=parse_percent(cell(undecided_col)) if undecided_col is not None else None,
-                added_at=datetime.now(timezone.utc),
+                added_at=datetime.now(UTC),
             )
 
     if tables_matched == 0:

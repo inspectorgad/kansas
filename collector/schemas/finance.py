@@ -6,7 +6,7 @@ so it gets equal billing with the candidates' own committees.
 
 from __future__ import annotations
 
-from datetime import date, datetime
+from datetime import date
 
 from pydantic import Field
 

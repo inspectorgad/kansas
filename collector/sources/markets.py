@@ -15,7 +15,7 @@ one being down degrades to the other rather than failing the run.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from config import KALSHI_API, POLYMARKET_GAMMA_API
 from fetch import SourceError, get_json
@@ -73,7 +73,7 @@ def normalise(marshall: float | None, hamilton: float | None) -> tuple[float, fl
 
 
 def _kalshi_markets(payload: dict) -> list[Market]:
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     out: list[Market] = []
     for market in payload.get("markets", []):
         title = market.get("title") or market.get("subtitle") or ""
@@ -116,7 +116,7 @@ def _kalshi_markets(payload: dict) -> list[Market]:
 
 
 def _polymarket_markets(payload: list | dict) -> list[Market]:
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     rows = payload if isinstance(payload, list) else payload.get("data", [])
     out: list[Market] = []
     for market in rows:
@@ -130,7 +130,7 @@ def _polymarket_markets(payload: list | dict) -> list[Market]:
             continue
 
         marshall = hamilton = None
-        for outcome, price in zip(outcomes, prices):
+        for outcome, price in zip(outcomes, prices, strict=True):
             label = str(outcome).lower()
             value = _as_float(price)
             if value is None:
@@ -206,10 +206,10 @@ def build_consensus(
 
     weights = [(m.volume_usd or 0.0) + 1.0 for m in markets]  # +1 so a zero-volume book still counts
     total = sum(weights)
-    marshall = sum(m.marshall * w for m, w in zip(markets, weights)) / total
-    hamilton = sum(m.hamilton * w for m, w in zip(markets, weights)) / total
+    marshall = sum(m.marshall * w for m, w in zip(markets, weights, strict=True)) / total
+    hamilton = sum(m.hamilton * w for m, w in zip(markets, weights, strict=True)) / total
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     series = sorted(history or [], key=lambda p: p.t)
 
     def change_since(delta: timedelta) -> float | None:

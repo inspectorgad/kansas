@@ -8,7 +8,7 @@ so a missing key skips one collector instead of failing the whole run.
 from __future__ import annotations
 
 import os
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 from schemas import HAMILTON, MARSHALL, Candidate, Party
 

@@ -15,7 +15,6 @@ that field null rather than losing the totals.
 
 from __future__ import annotations
 
-from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import date, datetime
 

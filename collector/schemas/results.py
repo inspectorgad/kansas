@@ -7,14 +7,12 @@ night reporting site goes live at 5pm on November 3, 2026.
 from __future__ import annotations
 
 from datetime import datetime
-from enum import Enum
-
-from pydantic import Field
+from enum import StrEnum
 
 from .common import Attribution, Payload, Strict
 
 
-class ResultsStatus(str, Enum):
+class ResultsStatus(StrEnum):
     PENDING = "pending"
     LIVE = "live"
     FINAL = "final"

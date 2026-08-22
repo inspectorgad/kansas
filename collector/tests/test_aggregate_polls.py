@@ -8,6 +8,8 @@ the arithmetic for a simple two-poll case.
 
 from datetime import date, timedelta
 
+from conftest import make_poll
+
 from aggregate.polls import (
     HALF_LIFE_DAYS,
     PARTISAN_WEIGHT,
@@ -15,7 +17,6 @@ from aggregate.polls import (
     is_partisan,
     poll_weight,
 )
-from conftest import make_poll
 
 AS_OF = date(2026, 8, 22)
 

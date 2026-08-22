@@ -116,8 +116,9 @@ def test_a_new_poll_appearing_is_reported_as_a_change(fixtures, tmp_path, monkey
     run.run(["polls"], str(tmp_path), write=True)
 
     # Simulate the article gaining a poll between runs.
-    import sources.polls as polls_source
     from datetime import date
+
+    import sources.polls as polls_source
 
     original = polls_source.collect
 

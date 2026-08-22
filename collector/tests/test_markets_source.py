@@ -5,6 +5,8 @@ published pair must be two probabilities summing to 1. A market that rendered as
 "72% vs 41%" would be indefensible, and it is the easiest bug to introduce here.
 """
 
+from datetime import UTC
+
 import pytest
 
 from sources.markets import (
@@ -189,7 +191,7 @@ class TestConsensus:
 
         from schemas.markets import Market
 
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         thin = Market(platform="kalshi", market_id="a", marshall=0.60, hamilton=0.40,
                       volume_usd=1_000, fetched_at=now)
         deep = Market(platform="polymarket", market_id="b", marshall=0.80, hamilton=0.20,
@@ -205,7 +207,7 @@ class TestConsensus:
 
         from schemas.markets import Market, MarketPoint
 
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         history = [
             MarketPoint(t=now - timedelta(days=8), marshall=0.60, hamilton=0.40),
             MarketPoint(t=now - timedelta(days=2), marshall=0.65, hamilton=0.35),
@@ -229,7 +231,7 @@ class TestConsensus:
         from schemas.markets import Market
 
         market = Market(platform="kalshi", market_id="a", marshall=0.70,
-                        hamilton=0.30, fetched_at=datetime.now(timezone.utc))
+                        hamilton=0.30, fetched_at=datetime.now(UTC))
         consensus = build_consensus([market], [])
         assert consensus.change_24h is None
         assert consensus.change_7d is None

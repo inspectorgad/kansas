@@ -23,7 +23,7 @@ disagreement is real uncertainty and belongs in the band.
 from __future__ import annotations
 
 import math
-from datetime import date, timedelta
+from datetime import UTC, date, timedelta
 
 from config import PARTISAN_POLLSTERS
 from schemas import HAMILTON, MARSHALL
@@ -94,7 +94,7 @@ def _eligible(polls: list[Poll], as_of: date) -> list[Poll]:
 def _house_effects(polls: list[Poll], weights: list[float], naive_margin: float) -> dict[str, float]:
     """Per-pollster bias vs. the naive average, shrunk toward zero by sample count."""
     residuals: dict[str, list[float]] = {}
-    for poll, weight in zip(polls, weights):
+    for poll, weight in zip(polls, weights, strict=True):
         if weight <= 0:
             continue
         margin = poll.results.marshall - poll.results.hamilton
@@ -114,7 +114,7 @@ def _weighted_mean(values: list[float], weights: list[float]) -> float:
     total = sum(weights)
     if total <= 0:
         return 0.0
-    return sum(v * w for v, w in zip(values, weights)) / total
+    return sum(v * w for v, w in zip(values, weights, strict=True)) / total
 
 
 def _point(polls: list[Poll], as_of: date) -> tuple[float, float, float, int, float] | None:
@@ -129,14 +129,14 @@ def _point(polls: list[Poll], as_of: date) -> tuple[float, float, float, int, fl
 
     marshall_raw = [p.results.marshall for p in eligible]
     hamilton_raw = [p.results.hamilton for p in eligible]
-    margins = [m - h for m, h in zip(marshall_raw, hamilton_raw)]
+    margins = [m - h for m, h in zip(marshall_raw, hamilton_raw, strict=True)]
 
     # Two passes: naive average, then remove shrunk house effects.
     naive_margin = _weighted_mean(margins, weights)
     effects = _house_effects(eligible, weights, naive_margin)
 
     adjusted_marshall, adjusted_hamilton = [], []
-    for poll, marshall, hamilton in zip(eligible, marshall_raw, hamilton_raw):
+    for poll, marshall, hamilton in zip(eligible, marshall_raw, hamilton_raw, strict=True):
         bias = effects.get(poll.pollster.strip().lower(), 0.0)
         # Split the correction between the two candidates so shares stay sensible.
         adjusted_marshall.append(marshall - bias / 2.0)
@@ -149,11 +149,11 @@ def _point(polls: list[Poll], as_of: date) -> tuple[float, float, float, int, fl
     # Band: sampling error at the weighted effective sample, combined with the
     # observed spread between pollsters.
     effective_n = sum(
-        w * (p.sample_size or REFERENCE_SAMPLE) for p, w in zip(eligible, weights)
+        w * (p.sample_size or REFERENCE_SAMPLE) for p, w in zip(eligible, weights, strict=True)
     )
     sampling = 1.96 * math.sqrt(0.25 / effective_n) * 100.0 if effective_n > 0 else MIN_BAND
 
-    adjusted_margins = [m - h for m, h in zip(adjusted_marshall, adjusted_hamilton)]
+    adjusted_margins = [m - h for m, h in zip(adjusted_marshall, adjusted_hamilton, strict=True)]
     mean_margin = _weighted_mean(adjusted_margins, weights)
     variance = _weighted_mean([(m - mean_margin) ** 2 for m in adjusted_margins], weights)
     spread = math.sqrt(variance)
@@ -198,10 +198,10 @@ def aggregate_polls(
     if week_ago is not None:
         trend_7d = round(margin - week_ago[2], 2)
 
-    from datetime import datetime, timezone
+    from datetime import datetime
 
     return Aggregate(
-        as_of=datetime.combine(as_of, datetime.min.time(), tzinfo=timezone.utc),
+        as_of=datetime.combine(as_of, datetime.min.time(), tzinfo=UTC),
         method=METHOD,
         marshall=round(marshall, 2),
         hamilton=round(hamilton, 2),

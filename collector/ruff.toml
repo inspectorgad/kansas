@@ -1,0 +1,13 @@
+line-length = 100
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+ignore = [
+  "E501",  # long lines are usually explanatory comments here
+  "B008",  # pydantic Field() in defaults is the idiom
+]
+
+[lint.per-file-ignores]
+# Tests import fixtures by name and assert on private helpers deliberately.
+"tests/*" = ["F401", "F811"]

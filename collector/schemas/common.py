@@ -8,7 +8,7 @@ The Kotlin @Serializable DTOs in the Android app mirror these one-for-one; the
 from __future__ import annotations
 
 from datetime import date, datetime
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -23,7 +23,7 @@ CANDIDATE_IDS = (MARSHALL, HAMILTON)
 ELECTION_DATE = date(2026, 11, 3)
 
 
-class Party(str, Enum):
+class Party(StrEnum):
     REPUBLICAN = "R"
     DEMOCRAT = "D"
     LIBERTARIAN = "L"
