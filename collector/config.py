@@ -87,11 +87,10 @@ NEWS_FEEDS: list[Feed] = [
     Feed("KCUR", "https://www.kcur.org/politics-elections-and-government.rss"),
     Feed("KWCH", "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"),
     Feed("KSNT", "https://www.ksnt.com/feed/"),
-    Feed("Kansas Public Radio", "https://kansaspublicradio.org/feed/"),
-    # Dropped after live runs: the Topeka Capital-Journal Arc feed and the
-    # Lawrence Journal-World feed 404, and the Kansas City Star widget URL times
-    # out. GDELT covers those outlets, so their stories still reach the app by
-    # another route.
+    # Dropped after live runs, each verified 404 or timeout: Topeka
+    # Capital-Journal, Lawrence Journal-World, Kansas Public Radio, and the
+    # Kansas City Star widget URL. Only feeds that actually answered are kept —
+    # a 404 per outlet per run is noise that buries real failures.
 ]
 
 # GDELT casts a wider net than the local feeds and needs no key.

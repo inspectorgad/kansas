@@ -66,6 +66,11 @@ That is the go/no-go check for election night — see
 Set `FEC_API_KEY` (free from [api.data.gov](https://api.data.gov/signup/)) for
 campaign finance. Everything else needs no key.
 
+Without it the collector falls back to the shared `DEMO_KEY`, which is
+rate-limited to a handful of requests an hour — enough for candidate totals, not
+for outside spending or filings. It skips those rather than 429ing through them,
+and says so in the run log.
+
 ### Tests
 
 ```sh

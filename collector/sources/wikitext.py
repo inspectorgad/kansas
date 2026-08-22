@@ -81,10 +81,19 @@ def iter_tables(wikitext: str) -> list[str]:
 
 
 def split_rows(table: str) -> list[list[str]]:
-    """Split a wikitable into rows of raw cell strings."""
+    """Split a wikitable into rows of raw cell strings.
+
+    Header rows are excluded. They used to come back as ordinary rows, and the
+    poll parser then reported "unparseable date 'Date(s) administered'" for each
+    one — harmless, but it filled the run log with warnings that looked like real
+    dropped polls.
+    """
     rows: list[list[str]] = []
     for chunk in re.split(r"\n\|-+", table)[1:]:
         chunk = chunk.split("\n|}")[0]
+        content = [line.strip() for line in chunk.split("\n") if line.strip()]
+        if content and all(line.startswith("!") for line in content):
+            continue  # a header block, not data
         cells: list[str] = []
         for line in chunk.split("\n"):
             line = line.strip()

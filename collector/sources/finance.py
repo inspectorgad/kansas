@@ -29,6 +29,12 @@ from schemas.finance import (
     TopSpender,
 )
 
+# api.data.gov's shared demo key allows only a handful of requests per hour, and
+# the live run duly 429'd on every schedule-E and filings call. With no real key
+# the deep sweeps are skipped rather than attempted and failed: the candidate
+# totals still come through, and the log says why the rest did not.
+USING_DEMO_KEY = FEC_API_KEY == "DEMO_KEY"
+
 ATTRIBUTION = Attribution(
     name="Federal Election Commission (openFEC)",
     url="https://api.open.fec.gov/developers/",
@@ -313,6 +319,14 @@ def collect() -> FinanceResult:
         result.candidates[candidate.id] = candidate_finance(
             candidate.id, candidate.name, candidate.fec_candidate_id, warnings
         )
+
+    if USING_DEMO_KEY:
+        warnings.append(
+            "no FEC_API_KEY set: using the shared demo key, which is rate-limited "
+            "too hard for outside spending and filings. Candidate totals only. "
+            "A free key from api.data.gov lifts this."
+        )
+        return result
 
     fec_ids = {
         cid: record.fec_candidate_id

@@ -286,40 +286,110 @@ def build_consensus(
     )
 
 
+# Gamma caps `limit` at 100 and silently returns 100 for a larger ask. The first
+# paginated run requested 200, got 100, and its "short page means last page"
+# check ended the loop after page one — so 100 markets were mistaken for the
+# whole exchange.
+POLYMARKET_PAGE_SIZE = 100
+KALSHI_PAGE_SIZE = 200
 MAX_PAGES = 12
-PAGE_SIZE = 200
+
+# Kalshi's open-market list is dominated by sports parlay shards — a live scan of
+# 2,400 rows returned nothing but Real Madrid, MLB over/unders and WNBA props.
+# Elections are far past any page budget worth spending, so the race is found
+# through /events (hundreds of entries, human-readable titles) instead, and these
+# combinatorial shards are dropped so a diagnostic sample stays readable.
+PARLAY_MARKERS = ("CROSSCATEGORY", "-SHARD", "MULTIVENTURE", "KXMVE")
 
 
-def _kalshi_pages() -> tuple[list[dict], int]:
-    """Walk Kalshi's market list, returning raw rows and how many were scanned.
+def _is_parlay(ticker: str) -> bool:
+    upper = (ticker or "").upper()
+    return any(marker in upper for marker in PARLAY_MARKERS)
 
-    Pagination matters here: the first live run asked for one 200-row page and
-    concluded no market existed for this race. Kalshi lists thousands of open
-    markets and a single state Senate race is nowhere near the top, so one page
-    was never going to contain it.
+
+def _kalshi_event_markets() -> tuple[list[dict], int]:
+    """Find this race through Kalshi's event list rather than its market list.
+
+    Events group markets and number in the hundreds rather than the hundreds of
+    thousands, and their titles carry the readable contest name. Scanning markets
+    directly cannot work: the open-market list is mostly sports parlays and the
+    election contests sit well beyond any sane page budget.
     """
     rows: list[dict] = []
-    cursor: str | None = None
     scanned = 0
+    cursor: str | None = None
 
     for _ in range(MAX_PAGES):
-        params: dict[str, object] = {"status": "open", "limit": PAGE_SIZE}
+        params: dict[str, object] = {"status": "open", "limit": KALSHI_PAGE_SIZE}
         if cursor:
             params["cursor"] = cursor
-        payload = get_json(f"{KALSHI_API}/markets", params)
-        page = payload.get("markets") or []
-        scanned += len(page)
-        rows.extend(page)
+        payload = get_json(f"{KALSHI_API}/events", params)
+        events = payload.get("events") or []
+        scanned += len(events)
+
+        for event in events:
+            haystack = " ".join(
+                str(event.get(key, ""))
+                for key in ("title", "sub_title", "event_ticker", "series_ticker", "category")
+            )
+            if not _matches_race(haystack):
+                continue
+            # The event names the race; its markets name the candidates.
+            ticker = event.get("event_ticker")
+            if not ticker:
+                continue
+            try:
+                detail = get_json(
+                    f"{KALSHI_API}/markets", {"event_ticker": ticker, "limit": 100}
+                )
+            except SourceError:
+                continue
+            for market in detail.get("markets") or []:
+                # Carry the event's title down so candidate rows inherit the race.
+                market.setdefault("title", event.get("title", ""))
+                rows.append(market)
 
         cursor = payload.get("cursor") or None
-        if not cursor or not page:
+        if not cursor or not events:
             break
 
     return rows, scanned
 
 
+def _kalshi_pages() -> tuple[list[dict], int]:
+    """Event-first discovery, falling back to a bounded market scan.
+
+    The fallback exists only so a change to /events does not take the source down
+    entirely; it is not expected to find anything on its own, for the reason
+    above.
+    """
+    rows, scanned = _kalshi_event_markets()
+    if rows:
+        return rows, scanned
+
+    fallback: list[dict] = []
+    cursor: str | None = None
+    for _ in range(MAX_PAGES):
+        params: dict[str, object] = {"status": "open", "limit": KALSHI_PAGE_SIZE}
+        if cursor:
+            params["cursor"] = cursor
+        payload = get_json(f"{KALSHI_API}/markets", params)
+        page = payload.get("markets") or []
+        scanned += len(page)
+        fallback.extend(m for m in page if not _is_parlay(str(m.get("ticker", ""))))
+        cursor = payload.get("cursor") or None
+        if not cursor or not page:
+            break
+
+    return fallback, scanned
+
+
 def _polymarket_pages() -> tuple[list[dict], int]:
-    """Walk Polymarket's Gamma listing by offset, for the same reason."""
+    """Walk Polymarket's Gamma listing by offset.
+
+    The page size must match Gamma's cap of 100: asking for more returns 100
+    anyway, and any "a short page is the last page" rule then fires immediately.
+    """
     rows: list[dict] = []
     scanned = 0
 
@@ -328,8 +398,8 @@ def _polymarket_pages() -> tuple[list[dict], int]:
             f"{POLYMARKET_GAMMA_API}/markets",
             {
                 "closed": "false",
-                "limit": PAGE_SIZE,
-                "offset": page * PAGE_SIZE,
+                "limit": POLYMARKET_PAGE_SIZE,
+                "offset": page * POLYMARKET_PAGE_SIZE,
                 "order": "volumeNum",
                 "ascending": "false",
             },
@@ -339,7 +409,7 @@ def _polymarket_pages() -> tuple[list[dict], int]:
             break
         scanned += len(batch)
         rows.extend(batch)
-        if len(batch) < PAGE_SIZE:
+        if len(batch) < POLYMARKET_PAGE_SIZE:
             break
 
     return rows, scanned
