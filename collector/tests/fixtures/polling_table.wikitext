@@ -1,0 +1,37 @@
+<!--
+SYNTHETIC TEST FIXTURE. Hand-authored to mirror the structure of the polling
+tables on the Wikipedia race article, which was not reachable from the
+environment this parser was written in. The numbers are illustrative and are
+NOT a record of real polling; the live-check CI job validates the parser against
+the real article. Rows here deliberately include the awkward cases the parser
+must survive: bolded leaders, an unreported sample size, a cross-month date
+range, a campaign-sponsored poll, a dash for a missing value, refs, templates,
+and a trailing "aggregate" row that is not a poll.
+-->
+== General election ==
+
+=== Polling ===
+{| class="wikitable sortable"
+! Poll source !! Date(s)<br>administered !! Sample<br>size !! Margin<br>of&nbsp;error !! [[Roger Marshall]] (R) !! Adam<br>Hamilton (D) !! Other !! Undecided
+|-
+| [https://example.org/poll1 Public Policy Polling] || August 6&ndash;8, 2026 || 700 (LV) || &plusmn; 3.7% || '''46%''' || 45% || 2% || 7%
+|-
+| GBAO (for Hamilton campaign)<ref name="gbao">{{cite web|url=https://example.org/gbao|title=Internal}}</ref> || August 3&ndash;6, 2026 || 600 (LV) || &plusmn; 4.0% || '''48%''' || 44% || 3% || 5%
+|-
+| Emerson College || July 28 &ndash; August 2, 2026 || 1,024 (RV) || &plusmn; 3.0% || '''47%''' || 44% || 4% || 5%
+|-
+| Cygnal || July 20&ndash;22, 2026 || &mdash; || &mdash; || '''51%''' || 41% || 3% || 5%
+|-
+| SurveyUSA || June 11&ndash;15, 2026 || 850 (LV) || &plusmn; 3.4% || '''49%''' || 42% || &ndash; || 9%
+|-
+| Emerson College || December 29, 2025 &ndash; January 3, 2026 || 900 (RV) || &plusmn; 3.2% || '''53%''' || 38% || 4% || 5%
+|-
+! colspan="8" | Aggregate
+|}
+
+=== Primary polling ===
+{| class="wikitable sortable"
+! Poll source !! Date(s) !! [[Roger Marshall]] (R) !! Some Challenger (R)
+|-
+| Example Research || July 1&ndash;3, 2026 || '''78%''' || 12%
+|}
