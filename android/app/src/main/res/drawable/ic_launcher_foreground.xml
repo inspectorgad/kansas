@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Two poll bars at different heights: legible at launcher size, and it says
+     "this app is about margins" without needing a candidate's face on it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Baseline -->
+    <path
+        android:fillColor="#F2F4F8"
+        android:pathData="M34,74 h40 v4 h-40 z" />
+
+    <!-- Left bar (taller) -->
+    <path
+        android:fillColor="#E4572E"
+        android:pathData="M38,42 h12 v30 h-12 z" />
+
+    <!-- Right bar (shorter) -->
+    <path
+        android:fillColor="#4A90D9"
+        android:pathData="M58,50 h12 v22 h-12 z" />
+</vector>

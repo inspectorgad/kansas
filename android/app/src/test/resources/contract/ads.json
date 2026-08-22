@@ -1,0 +1,16 @@
+{
+  "attribution": [],
+  "broadcast": {
+    "by_market": [],
+    "by_week": [],
+    "filings": [],
+    "total_by_side": {}
+  },
+  "digital": {
+    "available": false,
+    "by_page": [],
+    "total_by_side": {}
+  },
+  "generated_at": "2026-08-22T13:43:48.254278Z",
+  "schema_version": 1
+}

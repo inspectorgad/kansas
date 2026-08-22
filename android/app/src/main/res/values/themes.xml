@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Compose supplies the real theme; this is the pre-Compose window theme so
+         the app does not flash a default background at launch. -->
+    <style name="Theme.KansasSenate" parent="android:Theme.Material.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,75 @@
+{
+  "attribution": [
+    {
+      "license": "U.S. Government work, public domain",
+      "name": "Federal Election Commission (openFEC)",
+      "url": "https://api.open.fec.gov/developers/"
+    }
+  ],
+  "candidates": {
+    "hamilton": {
+      "candidate_id": "hamilton",
+      "cash_on_hand": 2300000.0,
+      "debts_owed": 0.0,
+      "individual_contributions": 0.0,
+      "pac_contributions": 0.0,
+      "total_disbursements": 3900000.0,
+      "total_receipts": 6200000.0
+    },
+    "marshall": {
+      "burn_rate_monthly": 170000.0,
+      "candidate_id": "marshall",
+      "cash_on_hand": 3300000.0,
+      "committee_id": "C00700001",
+      "committee_name": "Marshall for Kansas",
+      "coverage_end_date": "2026-06-30",
+      "debts_owed": 0.0,
+      "fec_candidate_id": "S0KS00232",
+      "in_state_pct": 41.2,
+      "individual_contributions": 5900000.0,
+      "pac_contributions": 1800000.0,
+      "total_disbursements": 5100000.0,
+      "total_receipts": 8400000.0
+    }
+  },
+  "cycle": 2026,
+  "filings": [
+    {
+      "committee_id": "C00700001",
+      "committee_name": "Marshall for Kansas",
+      "coverage_end_date": "2026-06-30",
+      "date": "2026-07-15",
+      "form_type": "F3",
+      "report_type": "July Quarterly",
+      "total_receipts": 1900000.0
+    }
+  ],
+  "generated_at": "2026-08-22T13:43:48.498421Z",
+  "outside_spending": {
+    "opposing": {
+      "hamilton": 3400000.0
+    },
+    "recent": [
+      {
+        "amount": 420000.0,
+        "candidate_id": "hamilton",
+        "committee_name": "Example Senate PAC",
+        "date": "2026-08-18",
+        "purpose": "Broadcast advertising",
+        "support_oppose": "O"
+      }
+    ],
+    "supporting": {
+      "marshall": 2100000.0
+    },
+    "top_spenders": [
+      {
+        "amount": 3400000.0,
+        "committee_name": "Example Senate PAC",
+        "opposes": "hamilton"
+      }
+    ],
+    "total": 5500000.0
+  },
+  "schema_version": 1
+}

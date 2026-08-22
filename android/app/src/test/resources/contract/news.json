@@ -1,0 +1,32 @@
+{
+  "attribution": [
+    {
+      "name": "Kansas Reflector",
+      "url": "https://kansasreflector.com/feed/"
+    }
+  ],
+  "generated_at": "2026-08-22T13:43:48.498421Z",
+  "items": [
+    {
+      "id": "a1b2c3d4e5f6",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-08-22T08:43:48.498421Z",
+      "source": "Kansas Reflector",
+      "title": "Kansas Senate race tightens as candidates trade attacks",
+      "url": "https://example.org/story"
+    },
+    {
+      "id": "f6e5d4c3b2a1",
+      "mentions": [
+        "marshall"
+      ],
+      "source": "KCUR",
+      "title": "Senate candidates spar over cost of living",
+      "url": "https://example.org/other"
+    }
+  ],
+  "schema_version": 1
+}

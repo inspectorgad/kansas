@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KS Senate 2026</string>
+
+    <string name="tab_home">Race</string>
+    <string name="tab_polls">Polls</string>
+    <string name="tab_money">Money</string>
+    <string name="tab_news">News</string>
+
+    <string name="notification_channel_name">Race updates</string>
+    <string name="notification_channel_description">New polls, market moves, and filings.</string>
+</resources>
