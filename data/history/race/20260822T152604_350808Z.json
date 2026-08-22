@@ -1,0 +1,24 @@
+{
+  "candidates": [
+    {
+      "fec_candidate_id": "S0KS00232",
+      "id": "marshall",
+      "incumbent": true,
+      "name": "Roger Marshall",
+      "party": "R"
+    },
+    {
+      "id": "hamilton",
+      "incumbent": false,
+      "name": "Adam Hamilton",
+      "party": "D"
+    }
+  ],
+  "days_until_election": 73,
+  "election_date": "2026-11-03",
+  "generated_at": "2026-08-22T15:26:04.350808Z",
+  "office": "U.S. Senate",
+  "ratings": [],
+  "schema_version": 1,
+  "state": "KS"
+}

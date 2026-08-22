@@ -1,0 +1,947 @@
+{
+  "aggregate": {
+    "as_of": "2026-08-22T00:00:00Z",
+    "band": 4.18,
+    "hamilton": 43.97,
+    "history": [
+      {
+        "date": "2026-04-24",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-04-25",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-04-26",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-04-27",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-04-28",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-04-29",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-04-30",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-01",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-02",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-03",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-04",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-05",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-06",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-07",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-08",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-09",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-10",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-11",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-12",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-13",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-14",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-15",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-16",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-17",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-18",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-19",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-20",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-21",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-22",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-23",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-24",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-25",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-26",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-27",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-28",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-29",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-30",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-05-31",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-01",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-02",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-03",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-04",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-05",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-06",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-07",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-08",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-09",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-10",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-11",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-12",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-13",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-14",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-15",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-16",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-17",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-18",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-19",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-20",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-21",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-22",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-23",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-24",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-25",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-26",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-27",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-28",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-29",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-06-30",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-01",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-02",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-03",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-04",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-05",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-06",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-07",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-08",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-09",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-10",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-11",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-12",
+        "hamilton": 51.0,
+        "margin": -2.0,
+        "marshall": 49.0,
+        "n_polls": 1
+      },
+      {
+        "date": "2026-07-13",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-14",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-15",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-16",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-17",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-18",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-19",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-20",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-21",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-22",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-23",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-24",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-25",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-26",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-27",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-28",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-29",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-30",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-07-31",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-08-01",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-08-02",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-08-03",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-08-04",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-08-05",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-08-06",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-08-07",
+        "hamilton": 43.01,
+        "margin": 4.0,
+        "marshall": 47.0,
+        "n_polls": 2
+      },
+      {
+        "date": "2026-08-08",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-09",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-10",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-11",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-12",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-13",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-14",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-15",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-16",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-17",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-18",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-19",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-20",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-21",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      },
+      {
+        "date": "2026-08-22",
+        "hamilton": 43.97,
+        "margin": 3.54,
+        "marshall": 47.51,
+        "n_polls": 4
+      }
+    ],
+    "leader": "marshall",
+    "margin": 3.54,
+    "marshall": 47.51,
+    "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
+    "n_polls_used": 4,
+    "trend_7d": -0.0
+  },
+  "attribution": [
+    {
+      "license": "CC BY-SA 4.0",
+      "name": "Wikipedia \u2014 2026 United States Senate election in Kansas",
+      "note": "Poll table maintained by Wikipedia contributors; parsed, not modified.",
+      "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
+    }
+  ],
+  "generated_at": "2026-08-22T15:26:04.504810Z",
+  "polls": [
+    {
+      "added_at": "2026-08-22T15:26:04.503663Z",
+      "end_date": "2026-08-08",
+      "id": "67e7e1b8d2eb",
+      "other": 7.2,
+      "pollster": "Silver Bulletin",
+      "results": {
+        "hamilton": 44.3,
+        "marshall": 48.5
+      },
+      "start_date": "2026-08-08",
+      "undecided": 7.2
+    },
+    {
+      "added_at": "2026-08-22T15:26:04.503553Z",
+      "end_date": "2026-08-08",
+      "id": "55c0758c8d43",
+      "other": 9.3,
+      "pollster": "Race to the WH",
+      "results": {
+        "hamilton": 43.2,
+        "marshall": 47.5
+      },
+      "start_date": "2026-08-08",
+      "undecided": 9.3
+    },
+    {
+      "added_at": "2026-08-22T15:26:04.504223Z",
+      "end_date": "2026-08-08",
+      "id": "965f0bffc998",
+      "partisan": "D",
+      "pollster": "Public Policy Polling",
+      "population": "LV",
+      "results": {
+        "hamilton": 45.0,
+        "marshall": 46.0
+      },
+      "sample_size": 569,
+      "sponsor": "D",
+      "start_date": "2026-08-07"
+    },
+    {
+      "added_at": "2026-08-22T15:26:04.504317Z",
+      "end_date": "2026-07-13",
+      "id": "ed87fc575468",
+      "margin_of_error": 4.0,
+      "partisan": "D",
+      "pollster": "GBAO",
+      "population": "LV",
+      "results": {
+        "hamilton": 43.0,
+        "marshall": 47.0
+      },
+      "sample_size": 600,
+      "sponsor": "D",
+      "start_date": "2026-07-08",
+      "undecided": 10.0
+    },
+    {
+      "added_at": "2026-08-22T15:26:04.504743Z",
+      "end_date": "2026-01-28",
+      "id": "69fd4bfe28be",
+      "margin_of_error": 4.0,
+      "pollster": "Tavern Research",
+      "population": "LV",
+      "results": {
+        "hamilton": 51.0,
+        "marshall": 49.0
+      },
+      "sample_size": 1013,
+      "sponsor": "D",
+      "start_date": "2026-01-26"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "advance_ballots": {
+    "counties": [],
+    "counties_covered": [],
+    "coverage_note": "Kansas publishes no statewide daily advance-vote feed. These figures cover only counties that operate a public dashboard."
+  },
+  "attribution": [],
+  "generated_at": "2026-08-22T15:26:53.464277Z",
+  "registration": {
+    "by_county": []
+  },
+  "schema_version": 1
+}

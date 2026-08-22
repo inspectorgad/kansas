@@ -1,0 +1,17 @@
+{
+  "attribution": [],
+  "broadcast": {
+    "by_market": [],
+    "by_week": [],
+    "filings": [],
+    "total_by_side": {}
+  },
+  "digital": {
+    "available": false,
+    "by_page": [],
+    "total_by_side": {},
+    "unavailable_reason": "Meta Ad Library access requires an approved app and identity verification; no token is configured."
+  },
+  "generated_at": "2026-08-22T15:26:53.325139Z",
+  "schema_version": 1
+}

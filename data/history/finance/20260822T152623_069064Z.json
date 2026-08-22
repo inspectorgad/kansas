@@ -1,0 +1,58 @@
+{
+  "attribution": [
+    {
+      "license": "U.S. Government work, public domain",
+      "name": "Federal Election Commission (openFEC)",
+      "url": "https://api.open.fec.gov/developers/"
+    }
+  ],
+  "candidates": {
+    "hamilton": {
+      "burn_rate_monthly": 80158.35,
+      "candidate_id": "hamilton",
+      "cash_on_hand": 1730620.91,
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "coverage_end_date": "2026-07-15",
+      "coverage_start_date": "2026-02-26",
+      "debts_owed": 50000.0,
+      "fec_candidate_id": "S6KS00312",
+      "in_state_amount": 2335485.75,
+      "in_state_pct": 70.0,
+      "individual_contributions": 4097828.55,
+      "pac_contributions": 17500.0,
+      "small_dollar_contributions": 767188.6,
+      "total_disbursements": 2438456.9,
+      "total_receipts": 4169077.81
+    },
+    "marshall": {
+      "burn_rate_monthly": 10716.95,
+      "candidate_id": "marshall",
+      "cash_on_hand": 5388078.28,
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "coverage_end_date": "2026-07-15",
+      "coverage_start_date": "2025-01-01",
+      "debts_owed": 0.0,
+      "fec_candidate_id": "S0KS00315",
+      "in_state_amount": 444498.42,
+      "in_state_pct": 18.0,
+      "individual_contributions": 1719571.25,
+      "pac_contributions": 1493250.0,
+      "small_dollar_contributions": 151383.88,
+      "total_disbursements": 326015.09,
+      "total_receipts": 4009074.73
+    }
+  },
+  "cycle": 2026,
+  "filings": [],
+  "generated_at": "2026-08-22T15:26:23.069064Z",
+  "outside_spending": {
+    "opposing": {},
+    "recent": [],
+    "supporting": {},
+    "top_spenders": [],
+    "total": 0.0
+  },
+  "schema_version": 1
+}
