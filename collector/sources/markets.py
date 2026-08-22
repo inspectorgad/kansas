@@ -165,6 +165,49 @@ def _matches_race(title: str) -> bool:
     return any(t in text for t in MARSHALL_TERMS) and any(t in text for t in HAMILTON_TERMS)
 
 
+def kalshi_price(market: dict) -> float | None:
+    """Cents on the yes side, from whichever field the row actually carries.
+
+    Reading only last_price was not enough. A live run found all four Kansas
+    combination outcomes listed and derived nothing from them, because the rows
+    carried no last_price and no yes_bid: the grid was rejected before it was
+    ever grouped, and the warning could only say "no combination series found".
+
+    The bid/ask midpoint is preferred where both sides are quoted, and that is
+    better methodology rather than a workaround — a last trade can be hours
+    stale, while the mid is the market's current implied probability. A quote on
+    the no side implies the yes price and is used before giving up.
+    """
+
+    def cents(key: str) -> float | None:
+        value = market.get(key)
+        # bool is an int subclass; a True here would read as one cent.
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            return None
+        return float(value)
+
+    bid, ask = cents("yes_bid"), cents("yes_ask")
+    if bid is not None and ask is not None and (bid > 0 or ask > 0):
+        return (bid + ask) / 2.0
+
+    for key in ("last_price", "previous_price", "previous_yes_bid"):
+        value = cents(key)
+        if value is not None and value > 0:
+            return value
+
+    no_bid, no_ask = cents("no_bid"), cents("no_ask")
+    if no_bid is not None and no_ask is not None and (no_bid > 0 or no_ask > 0):
+        return 100.0 - (no_bid + no_ask) / 2.0
+
+    # A genuine zero is a price — a market quoted at nothing — and keeping it
+    # lets the grid report itself as priced rather than as missing.
+    for key in ("yes_bid", "last_price", "yes_ask"):
+        value = cents(key)
+        if value is not None:
+            return value
+    return None
+
+
 ALL_OUTCOMES = (("DEM", "DEM"), ("DEM", "REP"), ("REP", "DEM"), ("REP", "REP"))
 
 
@@ -192,9 +235,7 @@ def combo_grid(rows: list[dict], kansas_only: bool = True) -> dict[str, dict[tup
         match = COMBO_OUTCOME.search(ticker)
         if not match:
             continue
-        price = market.get("last_price")
-        if price is None:
-            price = market.get("yes_bid")
+        price = kalshi_price(market)
         if price is None:
             continue
         series = ticker[: match.start()]
@@ -212,6 +253,17 @@ def describe_grid(rows: list[dict]) -> str:
     """
     grids = combo_grid(rows, kansas_only=False)
     if not grids:
+        # "No series found" conflated a race nobody quotes with combination rows
+        # whose price fields are named something else — one is a fact about the
+        # exchange, the other a bug here, and they need opposite responses. Name
+        # the keys so the next run settles it instead of prompting another guess.
+        combos = [r for r in rows if _is_combo(str(r.get("ticker", "")))]
+        if combos:
+            first = combos[0]
+            return (
+                f"{len(combos)} combination rows present, none priced; "
+                f"{first.get('ticker')} carries keys={sorted(first)}"
+            )
         return "no combination series found"
 
     parts = []
@@ -287,12 +339,10 @@ def _kalshi_markets(payload: dict) -> list[Market]:
             continue
 
         # Kalshi quotes cents on the "yes" side of one named outcome.
-        yes = market.get("last_price")
-        if yes is None:
-            yes = market.get("yes_bid")
+        yes = kalshi_price(market)
         if yes is None:
             continue
-        probability = float(yes) / 100.0
+        probability = yes / 100.0
 
         if _is_combo(ticker) or not _is_this_cycle(ticker):
             continue

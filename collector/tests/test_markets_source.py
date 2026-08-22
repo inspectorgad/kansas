@@ -748,3 +748,89 @@ class TestGridDiagnostic:
         from sources.markets import describe_grid
 
         assert describe_grid([{"ticker": "KXNBA-26-LAL"}]) == "no combination series found"
+
+
+class TestKalshiPriceFields:
+    """Which field the yes-side price is read from.
+
+    The live run of 2026-08-22 listed all four Kansas combination outcomes and
+    derived nothing from them: the rows carried neither last_price nor yes_bid,
+    so the grid was rejected before it was grouped and the warning could only say
+    "no combination series found".
+    """
+
+    def test_the_midpoint_is_preferred_over_a_stale_last_trade(self):
+        """The mid is the current implied probability; a last trade can be hours old."""
+        from sources.markets import kalshi_price
+
+        assert kalshi_price({"yes_bid": 46, "yes_ask": 50, "last_price": 12}) == 48.0
+
+    def test_falls_back_through_the_trade_fields(self):
+        from sources.markets import kalshi_price
+
+        assert kalshi_price({"last_price": 33}) == 33.0
+        assert kalshi_price({"previous_price": 27}) == 27.0
+        assert kalshi_price({"yes_bid": 41}) == 41.0
+
+    def test_a_no_side_quote_implies_the_yes_price(self):
+        from sources.markets import kalshi_price
+
+        assert kalshi_price({"no_bid": 70, "no_ask": 74}) == pytest.approx(28.0)
+
+    def test_a_row_with_no_price_at_all_yields_none(self):
+        from sources.markets import kalshi_price
+
+        assert kalshi_price({"ticker": "KXKSSENGOVCOMBO-26NOV-REPREP"}) is None
+        assert kalshi_price({"yes_bid": None, "last_price": None}) is None
+
+    def test_a_genuine_zero_is_a_price_not_a_gap(self):
+        from sources.markets import kalshi_price
+
+        assert kalshi_price({"yes_bid": 0, "yes_ask": 0}) == 0.0
+
+    def test_a_boolean_is_not_read_as_one_cent(self):
+        """bool is an int subclass, so an unrelated flag would price at 1."""
+        from sources.markets import kalshi_price
+
+        assert kalshi_price({"last_price": True}) is None
+
+    def test_a_grid_priced_only_on_the_book_still_marginalises(self):
+        from sources.markets import marginalise_combos
+
+        book = [
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMDEM", "yes_bid": 10, "yes_ask": 12},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMREP", "yes_bid": 18, "yes_ask": 20},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-REPDEM", "yes_bid": 21, "yes_ask": 23},
+            {"ticker": "KXKSSENGOVCOMBO-26NOV-REPREP", "yes_bid": 47, "yes_ask": 49},
+        ]
+        marshall, hamilton = marginalise_combos(book)
+        # Senate R = DEMREP 19 + REPREP 48 = 67 of 100.
+        assert marshall == pytest.approx(0.67, abs=1e-4)
+        assert marshall + hamilton == pytest.approx(1.0)
+
+
+class TestUnpricedGridDiagnostic:
+    """An unpriced grid must name the fields the rows actually carry.
+
+    "No combination series found" covered both a race nobody quotes and rows
+    whose price fields are named something else. Those need opposite responses,
+    and guessing between them cost a round.
+    """
+
+    def test_unpriced_combination_rows_report_their_keys(self):
+        from sources.markets import describe_grid
+
+        note = describe_grid(
+            [
+                {"ticker": "KXKSSENGOVCOMBO-26NOV-REPREP", "status": "active", "volume": 0},
+                {"ticker": "KXKSSENGOVCOMBO-26NOV-DEMDEM", "status": "active", "volume": 0},
+            ]
+        )
+        assert "2 combination rows present, none priced" in note
+        assert "KXKSSENGOVCOMBO-26NOV-REPREP" in note
+        assert "status" in note and "volume" in note
+
+    def test_a_scan_with_no_combination_rows_still_says_so(self):
+        from sources.markets import describe_grid
+
+        assert describe_grid([{"ticker": "KXNBA-26-LAL"}]) == "no combination series found"
