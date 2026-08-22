@@ -442,3 +442,111 @@ class TestCursorExtraction:
         from sources.markets import _extract_cursor
 
         assert _extract_cursor(payload) is None
+
+
+class TestPartyQuotedMarkets:
+    """Kalshi quotes this race by party, not by candidate.
+
+    The live listing offers "Will Kansas Senate winner be Republican party",
+    never a contract named for Marshall. Each candidate is their party's nominee,
+    so the mapping is sound — but it is a mapping, and the payload says so rather
+    than implying the market named the candidate.
+    """
+
+    def test_a_party_contract_maps_to_the_nominee(self):
+        payload = {
+            "markets": [
+                {
+                    "ticker": "KXKSSEN-26NOV-REP",
+                    "title": "Will Kansas Senate winner be Republican party?",
+                    "yes_sub_title": "Republican party",
+                    "last_price": 72,
+                    "volume": 50000,
+                }
+            ]
+        }
+        market = _kalshi_markets(payload)[0]
+        assert market.marshall == pytest.approx(0.72)
+        assert market.hamilton == pytest.approx(0.28)
+
+    def test_a_democratic_contract_maps_to_hamilton(self):
+        payload = {
+            "markets": [
+                {
+                    "ticker": "KXKSSEN-26NOV-DEM",
+                    "title": "Will Kansas Senate winner be Democratic party?",
+                    "yes_sub_title": "Democratic party",
+                    "last_price": 28,
+                }
+            ]
+        }
+        market = _kalshi_markets(payload)[0]
+        assert market.marshall == pytest.approx(0.72)
+        assert market.hamilton == pytest.approx(0.28)
+
+    def test_the_wrong_cycle_is_rejected(self):
+        """Kalshi also lists a 2028 Kansas Senate race, which matches every other rule."""
+        from sources.markets import _is_this_cycle
+
+        assert _is_this_cycle("KXKSSEN-26NOV-REP")
+        assert not _is_this_cycle("SENATEKS-28-D")
+
+        payload = {
+            "markets": [
+                {
+                    "ticker": "SENATEKS-28-D",
+                    "title": "Will Democratics win the Senate race in Kansas?",
+                    "yes_sub_title": "Democratic party",
+                    "last_price": 30,
+                }
+            ]
+        }
+        assert _kalshi_markets(payload) == []
+
+    def test_two_office_combos_are_skipped_not_converted(self):
+        """A governor-and-senate combo needs marginalising, which is modelling."""
+        from sources.markets import _is_combo
+
+        assert _is_combo("KXKSSENGOVCOMBO-26NOV-DEMDEM")
+        assert not _is_combo("KXKSSEN-26NOV-REP")
+
+        payload = {
+            "markets": [
+                {
+                    "ticker": "KXKSSENGOVCOMBO-26NOV-DEMDEM",
+                    "title": "Will Kansas Governor winner be Democratic and Senate winner be Democratic?",
+                    "yes_sub_title": "Democrats sweep",
+                    "last_price": 12,
+                }
+            ]
+        }
+        assert _kalshi_markets(payload) == []
+
+
+class TestStallMetric:
+    """The stall flag must compare like with like.
+
+    It once counted Kalshi *events* as `scanned` while `titles` held the markets
+    drawn from the matching few, so 2,400 events yielding 40 markets was reported
+    as stalled pagination when pagination was working correctly.
+    """
+
+    def test_events_walked_do_not_trip_the_stall_flag(self):
+        from sources.markets import ScanReport
+
+        report = ScanReport(
+            "kalshi",
+            scanned=40,
+            titles=[f"market {i}" for i in range(40)],
+            containers_scanned=2400,
+        )
+        assert not report.pagination_stalled
+        assert "events=2400" in report.describe()
+
+    def test_genuinely_repeated_pages_still_trip_it(self):
+        from sources.markets import ScanReport
+
+        report = ScanReport(
+            "kalshi", scanned=2400, titles=[f"m{i % 200}" for i in range(2400)]
+        )
+        assert report.pagination_stalled

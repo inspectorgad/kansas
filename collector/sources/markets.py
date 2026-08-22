@@ -20,7 +20,7 @@ from datetime import UTC, datetime, timedelta
 
 from config import KALSHI_API, POLYMARKET_GAMMA_API
 from fetch import SourceError, get_json
-from schemas import Attribution
+from schemas import HAMILTON, MARSHALL, Attribution
 from schemas.markets import Consensus, Market, MarketPoint
 
 KALSHI_ATTRIBUTION = Attribution(
@@ -41,6 +41,24 @@ RACE_TERMS = ("kansas",)
 SENATE_TERMS = ("senate", "senator")
 MARSHALL_TERMS = ("marshall",)
 HAMILTON_TERMS = ("hamilton",)
+
+# Kalshi quotes this race by *party*, not by candidate: the live listing offers
+# "Will Kansas Senate winner be Republican party" rather than a market named for
+# Marshall. Since each is their party's nominee, the party market is the race, and
+# mapping it across is sound — but the payload says so rather than implying the
+# market names the candidate.
+PARTY_TO_CANDIDATE = {"republican": MARSHALL, "democratic": HAMILTON, "democrat": HAMILTON}
+
+# Markets covering two offices at once ("Governor winner AND Senate winner")
+# cannot be read as a Senate probability without marginalising over the governor
+# outcome. That is a modelling step, not a parse, and combos are thin — so they
+# are skipped and named in a warning rather than silently converted.
+COMBO_MARKERS = ("GOVCOMBO", "COMBO", "SWEEP")
+
+# This race is November 2026. Kalshi also lists a 2028 Kansas Senate market
+# (SENATEKS-28-D), which would otherwise match every rule here.
+CYCLE_MARKERS = ("26NOV", "-26-", "26AUG", "2026")
+WRONG_CYCLE = re.compile(r"-(2[0-9])-|-(2[0-9])[A-Z]{3}")
 
 # "KS" as a standalone word, for prose like "Senate KS 2026". Both boundaries are
 # required: a right boundary alone would match "Blackhawks", and Kalshi lists
@@ -84,6 +102,31 @@ def _ticker_identifies_race(raw: str) -> bool:
 def _mentions_state(text: str) -> bool:
     """Does this text name Kansas, spelled out or abbreviated as a word?"""
     return any(term in text for term in RACE_TERMS) or bool(STATE_WORD.search(text))
+
+
+def _is_combo(ticker: str) -> bool:
+    upper = (ticker or "").upper()
+    return any(marker in upper for marker in COMBO_MARKERS)
+
+
+def _is_this_cycle(ticker: str) -> bool:
+    """Reject other cycles. Absent a year marker, assume the current one."""
+    upper = (ticker or "").upper()
+    if any(marker in upper for marker in CYCLE_MARKERS):
+        return True
+    match = WRONG_CYCLE.search(upper)
+    if match:
+        year = match.group(1) or match.group(2)
+        return year == "26"
+    return True
+
+
+def _party_candidate(text: str) -> str | None:
+    lowered = (text or "").lower()
+    for party, candidate in PARTY_TO_CANDIDATE.items():
+        if party in lowered:
+            return candidate
+    return None
 
 
 def _matches_race(title: str) -> bool:
@@ -149,13 +192,23 @@ def _kalshi_markets(payload: dict) -> list[Market]:
             continue
         probability = float(yes) / 100.0
 
+        if _is_combo(ticker) or not _is_this_cycle(ticker):
+            continue
+
         subject = f"{title} {market.get('yes_sub_title', '')} {ticker}".lower()
         if any(t in subject for t in MARSHALL_TERMS):
             pair = normalise(probability, None)
         elif any(t in subject for t in HAMILTON_TERMS):
             pair = normalise(None, probability)
         else:
-            continue  # a market on this race we cannot attribute to a candidate
+            # No candidate named, so fall back to the party the contract is on.
+            party = _party_candidate(market.get("yes_sub_title") or "")
+            if party == MARSHALL:
+                pair = normalise(probability, None)
+            elif party == HAMILTON:
+                pair = normalise(None, probability)
+            else:
+                continue  # a market on this race we cannot attribute
         if pair is None:
             continue
 
@@ -459,15 +512,20 @@ def _polymarket_pages() -> tuple[list[dict], int]:
 class ScanReport:
     """What one platform's listing actually contained.
 
-    `distinct` is the load-bearing field. When it is far below `scanned`, the
-    pagination is not advancing and we fetched the same page repeatedly — which
-    looks identical to "we searched thoroughly and found nothing" in a plain
-    count, and is the reason this is measured rather than assumed.
+    `scanned` must count the same things `titles` holds, or the stall check
+    compares apples to oranges. It did exactly that for one run: `scanned`
+    counted Kalshi *events* while `titles` held the *markets* pulled from the few
+    matching ones, so 2,400 events yielding 40 markets was reported as
+    "PAGINATION STALLED" when pagination was working perfectly.
+
+    `containers_scanned` carries the event count separately, as context rather
+    than as a denominator.
     """
 
     platform: str
     scanned: int = 0
     titles: list[str] = field(default_factory=list)
+    containers_scanned: int = 0
 
     @property
     def distinct(self) -> int:
@@ -493,6 +551,8 @@ class ScanReport:
 
     def describe(self) -> str:
         parts = [f"{self.platform}: scanned={self.scanned} distinct={self.distinct}"]
+        if self.containers_scanned:
+            parts.insert(1, f"events={self.containers_scanned}")
         if self.pagination_stalled:
             parts.append("PAGINATION STALLED (same page refetched)")
         office = self.office_mentions()
@@ -510,7 +570,10 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
 
     kalshi = ScanReport("kalshi")
     try:
-        rows, kalshi.scanned = _kalshi_pages()
+        rows, kalshi.containers_scanned = _kalshi_pages()
+        # scanned must count what titles holds — markets, not the events walked
+        # to reach them — or the stall check compares unlike things.
+        kalshi.scanned = len(rows)
         kalshi.titles = [
             f"{r.get('title', '')} {r.get('yes_sub_title', '')} [{r.get('ticker', '')}]"
             for r in rows
@@ -525,7 +588,7 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
 
     poly = ScanReport("polymarket")
     try:
-        rows, poly.scanned = _polymarket_pages()
+        rows, poly.scanned = _polymarket_pages()  # markets are the unit here
         poly.titles = [str(r.get("question") or r.get("title") or "") for r in rows]
         found = _polymarket_markets(rows)
         markets.extend(found)
@@ -551,6 +614,13 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
         if warnings:
             raise SourceError(f"{'; '.join(warnings)} || {detail}")
         raise SourceError(f"no market matched this race. {detail}")
+
+    if any(m.platform == "kalshi" for m in markets):
+        warnings.append(
+            "Kalshi quotes this race by party rather than by candidate; the "
+            "Republican contract is read as Marshall and the Democratic one as "
+            "Hamilton, each being their party's nominee."
+        )
 
     return MarketsResult(
         markets=markets,
