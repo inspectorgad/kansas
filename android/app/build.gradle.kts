@@ -37,9 +37,32 @@ android {
         )
     }
 
+    // A checked-in debug key, so every CI build is signed the same way.
+    //
+    // Without this, Gradle falls back to ~/.android/debug.keystore, which does not
+    // exist on a fresh CI runner and is generated with a new random key on every
+    // run. Each artifact was therefore signed differently, and installing one over
+    // another failed with INSTALL_FAILED_UPDATE_INCOMPATIBLE — a full uninstall,
+    // losing cached data and settings, for every build.
+    //
+    // This key secures nothing and is not meant to. It carries the conventional
+    // debug credentials, so anyone with the repository can build an APK that
+    // installs over this one; that is the accepted cost of being able to sideload
+    // successive builds, and it is why release signing is deliberately kept out of
+    // it. Never point the release type at this config.
+    signingConfigs {
+        getByName("debug") {
+            storeFile = rootProject.file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
+            signingConfig = signingConfigs.getByName("debug")
         }
         release {
             isMinifyEnabled = true
