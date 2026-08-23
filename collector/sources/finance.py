@@ -220,7 +220,14 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
         if page == LARGE_DONOR_PAGE_BUDGET - 1 and reported and len(seen) < reported:
             truncated = True
 
-    ranked = sorted(totals.values(), key=lambda e: e["amount"], reverse=True)
+    corrections, correction_sum = _apply_corrections(committee_id, totals, warnings)
+
+    # Net of refunds, a donor can fall below the threshold or turn negative.
+    ranked = sorted(
+        (e for e in totals.values() if e["amount"] >= LARGE_DONOR_THRESHOLD),
+        key=lambda e: e["amount"],
+        reverse=True,
+    )
     donors = [
         LargeDonor(
             name=entry["name"],
@@ -236,14 +243,93 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
 
     coverage = (
         f"Read the {len(seen)} largest of {reported} contributions at or above "
-        f"${LARGE_DONOR_THRESHOLD:,.0f}. Donors who reached a large total through "
-        "smaller gifts are not ranked here."
+        f"${LARGE_DONOR_THRESHOLD:,.0f}."
         if truncated and reported
-        else "Ranked from every contribution at or above "
-        f"${LARGE_DONOR_THRESHOLD:,.0f}. A donor who reached a large total through "
-        "smaller gifts is not counted."
+        else f"Every contribution at or above ${LARGE_DONOR_THRESHOLD:,.0f}."
+    )
+    coverage += (
+        " Totals are net of refunds and reattributions"
+        + (
+            f" ({corrections} correction(s), ${correction_sum:,.2f})."
+            if corrections
+            else "."
+        )
+        + " A donor who reached a large total through smaller gifts is not ranked."
     )
     return donors, coverage
+
+
+def _apply_corrections(
+    committee_id: str, totals: dict, warnings: list[str]
+) -> tuple[int, float]:
+    """Subtract refunds and reattributions from the running donor totals.
+
+    The audit that prompted this found four rows for one of Marshall's donors:
+    one un-memoed contribution of $14,000 and three memo-coded rows summing to
+    minus $7,000. Refunds and reattributions are filed as negative amounts, and
+    the min_amount floor used to find large contributions excludes every one of
+    them — so the collector was reporting gross giving and never subtracting money
+    that had been given back. A donor whose contribution was refunded stayed on
+    the list at full value.
+
+    Negatives are a small set, so they are fetched by asking for them directly
+    rather than by scanning everything: one query, largest magnitude first.
+    """
+    applied = 0
+    total = 0.0
+    params: dict = {
+        "committee_id": committee_id,
+        "two_year_transaction_period": FEC_CYCLE,
+        "max_amount": -0.01,
+        "sort": "contribution_receipt_amount",
+        "is_individual": "true",
+        "per_page": 100,
+    }
+    seen: set = set()
+
+    for page in range(LARGE_DONOR_PAGE_BUDGET):
+        try:
+            payload = _get("/schedules/schedule_a/", params)
+        except SourceError as exc:
+            warnings.append(f"refunds and reattributions unavailable ({exc})")
+            break
+
+        rows = payload.get("results") or []
+        fresh = 0
+        for row in rows:
+            identity = row.get("sub_id") or (
+                row.get("contributor_name"),
+                row.get("contribution_receipt_date"),
+                row.get("contribution_receipt_amount"),
+            )
+            if identity in seen:
+                continue
+            seen.add(identity)
+            fresh += 1
+
+            name = _individual_name(row)
+            if name is None:
+                continue
+            key = (name, (row.get("contributor_city") or "").upper() or None)
+            entry = totals.get(key)
+            if entry is None:
+                # A refund to someone who is not on the large-donor list anyway.
+                continue
+            amount = _as_float(row.get("contribution_receipt_amount"))
+            entry["amount"] += amount
+            applied += 1
+            total += amount
+
+        if not rows or fresh == 0:
+            break
+
+        last = (payload.get("pagination") or {}).get("last_indexes")
+        params = {**params, **last} if isinstance(last, dict) and last else {
+            **params,
+            "page": page + 2,
+        }
+
+    return applied, total
 
 
 def _donor_groups(path: str, committee_id: str, label_keys: tuple[str, ...],

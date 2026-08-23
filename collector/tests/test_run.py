@@ -475,14 +475,19 @@ class TestDonorDetail:
     COMMITTEE = "C00576173"
 
     def _patched(self, monkeypatch, *, rows=(), count=None, employers=(),
-                 occupations=(), sizes=()):
+                 occupations=(), sizes=(), refunds=()):
         import sources.finance as finance
 
         calls: list[str] = []
 
         def fake_get(path, params=None):
+            params = params or {}
             calls.append(path)
             if path == "/schedules/schedule_a/":
+                # The refunds pass asks for negatives with max_amount; serving the
+                # positive rows to both would add every contribution twice.
+                if params.get("max_amount") is not None:
+                    return {"results": list(refunds), "pagination": {"count": len(refunds)}}
                 return {
                     "results": list(rows),
                     "pagination": {"count": count if count is not None else len(rows)},
@@ -769,3 +774,80 @@ class TestIdenticalAmountAudit:
             "C1", [self._donor(n) for n in ("A, A", "B, B", "C, C")], warnings
         )
         assert any("could not fetch rows" in w for w in warnings)
+
+
+class TestRefundsAndReattributions:
+    """Donor totals must be net of money that was given back.
+
+    The audit of Marshall's $17,500 donor found one un-memoed $14,000 row and
+    three memo-coded rows summing to minus $7,000. Refunds and reattributions file
+    as negative amounts, and the min_amount floor that finds large contributions
+    excludes every one of them, so the collector was publishing gross giving. A
+    donor whose contribution was refunded stayed on the list at full value.
+    """
+
+    def _run(self, monkeypatch, rows, refunds):
+        import sources.finance as finance
+
+        def fake_get(path, params=None):
+            params = params or {}
+            if path != "/schedules/schedule_a/":
+                return {"results": []}
+            if params.get("max_amount") is not None:
+                return {"results": list(refunds), "pagination": {"count": len(refunds)}}
+            return {"results": list(rows), "pagination": {"count": len(rows)}}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        return finance._large_donors("C00576173", [])
+
+    def _row(self, name, amount, sub_id, city="WICHITA"):
+        return {
+            "contributor_name": name,
+            "contribution_receipt_amount": amount,
+            "contributor_city": city,
+            "contributor_state": "KS",
+            "contribution_receipt_date": "2026-06-01",
+            "sub_id": sub_id,
+        }
+
+    def test_a_refund_is_subtracted(self, monkeypatch):
+        donors, coverage = self._run(
+            monkeypatch,
+            [self._row("VANDERGRIEND, DAVID J.", 14000.0, "1")],
+            [self._row("VANDERGRIEND, DAVID J.", -7000.0, "2")],
+        )
+        assert [d.amount for d in donors] == [7000.0]
+        assert "net of refunds" in coverage
+        assert "1 correction(s)" in coverage
+
+    def test_a_fully_refunded_donor_drops_off_the_list(self, monkeypatch):
+        """Below the threshold once netted, so not a large donor at all."""
+        donors, _ = self._run(
+            monkeypatch,
+            [self._row("GAVE, THEN, TOOK", 5000.0, "1")],
+            [self._row("GAVE, THEN, TOOK", -4500.0, "2")],
+        )
+        assert donors == []
+
+    def test_a_refund_to_someone_not_on_the_list_is_ignored(self, monkeypatch):
+        donors, _ = self._run(
+            monkeypatch,
+            [self._row("BIG, DONOR", 9000.0, "1")],
+            [self._row("SMALL, PERSON", -50.0, "2", city="TOPEKA")],
+        )
+        assert [(d.name, d.amount) for d in donors] == [("BIG, DONOR", 9000.0)]
+
+    def test_no_refunds_still_says_totals_are_net(self, monkeypatch):
+        """The reader should not have to guess whether netting happened."""
+        donors, coverage = self._run(
+            monkeypatch, [self._row("CLEAN, DONOR", 7000.0, "1")], []
+        )
+        assert [d.amount for d in donors] == [7000.0]
+        assert "net of refunds and reattributions." in coverage
+
+    def test_the_positive_rows_are_not_counted_twice(self, monkeypatch):
+        """The refunds query must not be served the contributions."""
+        donors, _ = self._run(
+            monkeypatch, [self._row("ONCE, ONLY", 3000.0, "1")], []
+        )
+        assert [d.amount for d in donors] == [3000.0]

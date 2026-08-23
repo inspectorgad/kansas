@@ -104,7 +104,7 @@ How each part is built:
 |---|---|---|
 | Top employers, occupations | `schedule_a/by_employer/`, `by_occupation/` | Aggregated by the FEC over all itemized individual money. Self-reported, so "retired" and "self-employed" dominate. |
 | Size bands, small-dollar share | `schedule_a/by_size/` | The FEC's own bands. This is where the under-$200 total comes from. |
-| Largest donors | `schedule_a/`, `min_amount=1000`, largest first | Ranked from contributions of $1,000 or more. A donor who reached a large total through several smaller gifts is **not** ranked, and the payload says so. Bounded at eight pages; if that truncates, the coverage note reports it. |
+| Largest donors | `schedule_a/`, `min_amount=1000`, largest first, plus a second pass for negatives | Ranked from contributions of $1,000 or more, **net of refunds and reattributions**. A donor who reached a large total through several smaller gifts is **not** ranked, and the payload says so. |
 | Cities | Derived from the named list | The FEC groups geography by state and ZIP, never by city, so this ranks *large-donor* dollars only and is labelled that way on screen. |
 | In-state share | `schedule_a/by_state/` | Itemized individual money only — the same threshold applies. |
 
@@ -114,3 +114,28 @@ grouping on the raw value splits one donor into several and understates every
 large one. And the FEC's sale-or-use restriction forbids using contributor
 information to solicit contributions or for any commercial purpose; the app states
 this on the card rather than leaving a reader to assume it is a mailing list.
+
+### Refunds are why the largest-donor list needs two queries
+
+An audit of one of Marshall's donors returned four rows: a single un-memoed
+contribution of $14,000, and three memo-coded rows summing to **minus $7,000**.
+Refunds and reattributions are filed as negative amounts, and the `min_amount`
+floor that finds large contributions excludes every negative row by definition.
+So the first version of this list published gross giving — a donor whose money had
+been refunded stayed on it at full value.
+
+The collector now runs a second query for negative rows and nets them against the
+running totals, which is also why a donor can disappear from the list between
+runs: below the threshold once netted, they were never a large donor. The coverage
+note states the netting and counts the corrections applied, so a reader never has
+to guess whether it happened.
+
+One further caution about these rows, visible in the same audit. That $14,000
+single contribution exceeds what an individual may give a candidate committee for
+a whole cycle, which means some rows on this endpoint are not simple individual
+contributions — joint fundraising allocations and conduit transfers appear here
+too. Contrast Hamilton's list, where sixteen donors sit at exactly $7,000: that is
+$3,500 for the primary plus $3,500 for the general, the individual maximum, and
+those rows audit clean with no memo entries at all. Treat a total well above
+$7,000 as a sign the money arrived through a structure rather than as one
+person's cheque.
