@@ -633,3 +633,60 @@ class TestDonorDetail:
         assert detail.large_donors == []
         assert detail.top_employers == []
         assert len(warnings) >= 3
+
+
+class TestNonAnswerLabels:
+    """"NONE" is not an employer and "NULL" is not an occupation.
+
+    The first live run with donor detail ranked "NONE" as Marshall's largest
+    employer at $69,200 and "NULL" as his fourth occupation at $60,322. Both are
+    what the form carries when nobody filled it in, presented as findings.
+    """
+
+    @pytest.mark.parametrize(
+        "label",
+        ["NONE", "None", "null", "N/A", "n/a", "NOT APPLICABLE", "INFORMATION REQUESTED",
+         "UNKNOWN", "REFUSED", "  ", "-", "--", ".", "Best Efforts"],
+    )
+    def test_non_answers_are_rejected(self, label):
+        from sources.finance import _is_non_answer
+
+        assert _is_non_answer(label)
+
+    @pytest.mark.parametrize(
+        "label",
+        ["RETIRED", "HOMEMAKER", "SELF-EMPLOYED", "NOT EMPLOYED", "ATTORNEY",
+         "KOCH INDUSTRIES", "CEO", "Physician", "EURONET"],
+    )
+    def test_real_answers_are_kept(self, label):
+        """Retired and homemaker are real answers, and informative ones."""
+        from sources.finance import _is_non_answer
+
+        assert not _is_non_answer(label)
+
+    def test_placeholders_are_dropped_from_the_published_groups(self, monkeypatch):
+        import sources.finance as finance
+
+        def fake_get(path, params=None):
+            if path == "/schedules/schedule_a/by_employer/":
+                return {
+                    "results": [
+                        {"employer": "NONE", "total": 69200.0, "count": 40},
+                        {"employer": "KOCH INDUSTRIES", "total": 21000.0, "count": 7},
+                        {"employer": "NULL", "total": 15000.0, "count": 9},
+                        {"employer": "SELF-EMPLOYED", "total": 25300.0, "count": 12},
+                    ]
+                }
+            return {"results": []}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        groups = finance._donor_groups(
+            "/schedules/schedule_a/by_employer/",
+            "C00576173",
+            ("employer",),
+            [],
+            "employer",
+        )
+        labels = [g.label for g in groups]
+        assert "NONE" not in labels and "NULL" not in labels
+        assert labels == ["SELF-EMPLOYED", "KOCH INDUSTRIES"]

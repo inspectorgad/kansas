@@ -89,14 +89,54 @@ def _as_date(value) -> date | None:
 # by_employer, by_occupation, by_size — which is both cheaper and more complete
 # than anything we could assemble from a truncated row scan.
 #
-# Rows are requested largest-first with a $1,000 floor, so eight pages reach the
-# top 800 contributions rather than 800 arbitrary ones. What that misses is a
-# donor who arrived at a large total through several smaller gifts, and the
-# payload says so rather than implying a complete ranking.
+# Rows are requested largest-first with a $1,000 floor, so the budget reaches the
+# largest contributions rather than an arbitrary slice. Sixteen pages, because
+# eight was not enough: the first live run read 800 of 1,002 such contributions
+# for Marshall and 800 of 1,218 for Hamilton, and said so — but a complete
+# ranking is worth two more requests. What no budget can fix is a donor who
+# arrived at a large total through several smaller gifts, and the payload says so.
 LARGE_DONOR_THRESHOLD = 1000.0
-LARGE_DONOR_PAGE_BUDGET = 8
+LARGE_DONOR_PAGE_BUDGET = 16
 MAX_LARGE_DONORS = 25
 MAX_DONOR_GROUPS = 10
+
+
+# Employer and occupation are free text typed by whoever filled in the form, and
+# a large share of it is a non-answer. The first live run ranked "NONE" as
+# Marshall's top employer at $69,200 and "NULL" as his fourth occupation at
+# $60,322 — placeholders presented as findings. They are dropped rather than
+# displayed, because a chart whose largest bar is the absence of data is worse
+# than a shorter chart.
+#
+# Kept deliberately: RETIRED, HOMEMAKER, SELF-EMPLOYED, NOT EMPLOYED. Those are
+# real answers about how someone spends their time, and for a donor base's
+# composition they are among the more informative ones.
+NON_ANSWERS = {
+    "",
+    "NONE",
+    "NULL",
+    "N/A",
+    "NA",
+    "NOT APPLICABLE",
+    "NOT PROVIDED",
+    "REQUESTED",
+    "INFORMATION REQUESTED",
+    "INFO REQUESTED",
+    "BEST EFFORTS",
+    "UNKNOWN",
+    "UNDISCLOSED",
+    "REFUSED",
+    "DECLINED",
+    "-",
+    "--",
+    ".",
+}
+
+
+def _is_non_answer(label: str) -> bool:
+    """Is this employer or occupation string a blank rather than an answer?"""
+    cleaned = " ".join((label or "").split()).upper().strip(" .-")
+    return cleaned in NON_ANSWERS or not cleaned
 
 
 def _individual_name(row: dict) -> str | None:
@@ -221,7 +261,7 @@ def _donor_groups(path: str, committee_id: str, label_keys: tuple[str, ...],
             (str(row[key]).strip() for key in label_keys if row.get(key)), None
         )
         amount = _as_float(row.get("total"))
-        if not label or amount <= 0:
+        if not label or amount <= 0 or _is_non_answer(label):
             continue
         groups.append(
             DonorGroup(label=label, amount=round(amount, 2), donors=int(row.get("count") or 0))
