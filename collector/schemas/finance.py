@@ -13,6 +13,82 @@ from pydantic import Field
 from .common import Attribution, Payload, Strict
 
 
+# The itemization threshold is the single most important thing to know when
+# reading any of this. Federal law only requires a committee to name a donor once
+# that donor passes $200 in aggregate for the cycle; everything under it is
+# reported as one unitemized lump with no names attached. So a named-donor list is
+# not a sample of a campaign's supporters — it is a census of its larger ones, and
+# it under-represents a small-dollar campaign far more than a big-cheque one.
+#
+# For this race that asymmetry is not hypothetical: Hamilton raises about 70% of
+# his money in-state on a small-dollar profile. Any screen showing these fields
+# has to say so, which is what `itemized_note` is for — it travels with the data
+# rather than living only in a design comment.
+class DonorGroup(Strict):
+    """Itemized individual money grouped by employer, occupation, or city."""
+
+    label: str
+    amount: float
+    donors: int = Field(default=0, description="Distinct contributors in the group.")
+
+
+class SizeBucket(Strict):
+    """Itemized individual money by contribution size, from the FEC's own bands."""
+
+    label: str
+    amount: float
+    count: int = 0
+
+
+class LargeDonor(Strict):
+    """One named individual, summed over their large itemized contributions.
+
+    Named individuals are public record under federal disclosure, but the FEC's
+    sale-or-use restriction forbids using contributor information to solicit
+    contributions or for commercial purposes. That restriction rides along in the
+    payload's attribution rather than being left to whoever reads the file.
+    """
+
+    name: str
+    city: str | None = None
+    state: str | None = None
+    employer: str | None = None
+    occupation: str | None = None
+    amount: float
+    gifts: int = Field(default=1, description="Contributions of $1,000 or more.")
+
+
+class DonorDetail(Strict):
+    """Who is funding one candidate, in as much detail as disclosure allows."""
+
+    threshold: float = Field(
+        default=1000.0, description="Minimum single contribution in `large_donors`."
+    )
+    itemized_note: str = Field(
+        default=(
+            "Federal law itemizes donors only above $200 for the cycle. Smaller "
+            "contributions are reported as one unnamed total, so these lists show "
+            "a campaign's larger donors and not its typical one."
+        ),
+        description="Shown on screen wherever donor detail appears.",
+    )
+    large_donors: list[LargeDonor] = []
+    top_employers: list[DonorGroup] = []
+    top_occupations: list[DonorGroup] = []
+    top_cities: list[DonorGroup] = []
+    size_buckets: list[SizeBucket] = []
+    itemized_total: float | None = Field(
+        default=None, description="Itemized individual contributions this cycle."
+    )
+    unitemized_total: float | None = Field(
+        default=None, description="Contributions under the $200 itemization floor."
+    )
+    large_donor_coverage: str | None = Field(
+        default=None,
+        description="How complete `large_donors` is, when it had to be truncated.",
+    )
+
+
 class CandidateFinance(Strict):
     candidate_id: str
     fec_candidate_id: str | None = None
@@ -36,6 +112,7 @@ class CandidateFinance(Strict):
     burn_rate_monthly: float | None = Field(
         default=None, description="Mean monthly disbursements this cycle."
     )
+    donors: DonorDetail | None = None
 
 
 class IndependentExpenditure(Strict):

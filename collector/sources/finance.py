@@ -23,9 +23,13 @@ from fetch import SourceError, get_json
 from schemas import Attribution
 from schemas.finance import (
     CandidateFinance,
+    DonorDetail,
+    DonorGroup,
     Filing,
     IndependentExpenditure,
+    LargeDonor,
     OutsideSpending,
+    SizeBucket,
     TopSpender,
 )
 
@@ -78,6 +82,242 @@ def _as_date(value) -> date | None:
             return date.fromisoformat(str(value)[:10])
         except ValueError:
             return None
+
+
+# The named-donor list is the only part of donor detail that needs paging, and it
+# is deliberately bounded. FEC aggregate endpoints do the grouping server-side —
+# by_employer, by_occupation, by_size — which is both cheaper and more complete
+# than anything we could assemble from a truncated row scan.
+#
+# Rows are requested largest-first with a $1,000 floor, so eight pages reach the
+# top 800 contributions rather than 800 arbitrary ones. What that misses is a
+# donor who arrived at a large total through several smaller gifts, and the
+# payload says so rather than implying a complete ranking.
+LARGE_DONOR_THRESHOLD = 1000.0
+LARGE_DONOR_PAGE_BUDGET = 8
+MAX_LARGE_DONORS = 25
+MAX_DONOR_GROUPS = 10
+
+
+def _individual_name(row: dict) -> str | None:
+    """A contributor's name, normalised enough to group their gifts together.
+
+    The FEC's own strings vary in spacing and case between filings, so grouping on
+    the raw value splits one donor into several and understates every large one.
+    """
+    raw = (row.get("contributor_name") or "").strip()
+    if not raw:
+        return None
+    return " ".join(raw.split()).upper()
+
+
+def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDonor], str | None]:
+    """Named individuals giving at or above the threshold, summed per person."""
+    totals: dict[tuple[str, str | None], dict] = {}
+    params: dict = {
+        "committee_id": committee_id,
+        "two_year_transaction_period": FEC_CYCLE,
+        "min_amount": LARGE_DONOR_THRESHOLD,
+        "sort": "-contribution_receipt_amount",
+        "is_individual": "true",
+        "per_page": 100,
+    }
+    seen: set = set()
+    reported: int | None = None
+    truncated = False
+
+    for page in range(LARGE_DONOR_PAGE_BUDGET):
+        try:
+            payload = _get("/schedules/schedule_a/", params)
+        except SourceError as exc:
+            warnings.append(f"large donors page {page + 1} unavailable ({exc})")
+            break
+
+        rows = payload.get("results") or []
+        pagination = payload.get("pagination") or {}
+        if reported is None:
+            reported = pagination.get("count")
+
+        fresh = 0
+        for row in rows:
+            identity = row.get("sub_id") or (
+                row.get("contributor_name"),
+                row.get("contribution_receipt_date"),
+                row.get("contribution_receipt_amount"),
+            )
+            if identity in seen:
+                continue
+            seen.add(identity)
+            fresh += 1
+
+            name = _individual_name(row)
+            if name is None:
+                continue
+            key = (name, (row.get("contributor_city") or "").upper() or None)
+            entry = totals.setdefault(
+                key,
+                {
+                    "name": (row.get("contributor_name") or "").strip(),
+                    "city": row.get("contributor_city"),
+                    "state": row.get("contributor_state"),
+                    "employer": row.get("contributor_employer"),
+                    "occupation": row.get("contributor_occupation"),
+                    "amount": 0.0,
+                    "gifts": 0,
+                },
+            )
+            entry["amount"] += _as_float(row.get("contribution_receipt_amount"))
+            entry["gifts"] += 1
+
+        if not rows or fresh == 0:
+            break
+
+        last = pagination.get("last_indexes")
+        params = {**params, **last} if isinstance(last, dict) and last else {
+            **params,
+            "page": page + 2,
+        }
+        if page == LARGE_DONOR_PAGE_BUDGET - 1 and reported and len(seen) < reported:
+            truncated = True
+
+    ranked = sorted(totals.values(), key=lambda e: e["amount"], reverse=True)
+    donors = [
+        LargeDonor(
+            name=entry["name"],
+            city=entry["city"],
+            state=entry["state"],
+            employer=entry["employer"],
+            occupation=entry["occupation"],
+            amount=round(entry["amount"], 2),
+            gifts=entry["gifts"],
+        )
+        for entry in ranked[:MAX_LARGE_DONORS]
+    ]
+
+    coverage = (
+        f"Read the {len(seen)} largest of {reported} contributions at or above "
+        f"${LARGE_DONOR_THRESHOLD:,.0f}. Donors who reached a large total through "
+        "smaller gifts are not ranked here."
+        if truncated and reported
+        else "Ranked from every contribution at or above "
+        f"${LARGE_DONOR_THRESHOLD:,.0f}. A donor who reached a large total through "
+        "smaller gifts is not counted."
+    )
+    return donors, coverage
+
+
+def _donor_groups(path: str, committee_id: str, label_keys: tuple[str, ...],
+                  warnings: list[str], what: str) -> list[DonorGroup]:
+    """One of the FEC's server-side groupings of itemized individual money."""
+    try:
+        payload = _get(path, {"committee_id": committee_id, "cycle": FEC_CYCLE})
+    except SourceError as exc:
+        warnings.append(f"{what} breakdown unavailable ({exc})")
+        return []
+
+    groups: list[DonorGroup] = []
+    for row in payload.get("results", []):
+        label = next(
+            (str(row[key]).strip() for key in label_keys if row.get(key)), None
+        )
+        amount = _as_float(row.get("total"))
+        if not label or amount <= 0:
+            continue
+        groups.append(
+            DonorGroup(label=label, amount=round(amount, 2), donors=int(row.get("count") or 0))
+        )
+    groups.sort(key=lambda g: g.amount, reverse=True)
+    return groups[:MAX_DONOR_GROUPS]
+
+
+def _size_buckets(committee_id: str, warnings: list[str]) -> list[SizeBucket]:
+    """Itemized individual money by the FEC's own contribution-size bands."""
+    try:
+        payload = _get(
+            "/schedules/schedule_a/by_size/",
+            {"committee_id": committee_id, "cycle": FEC_CYCLE},
+        )
+    except SourceError as exc:
+        warnings.append(f"contribution size breakdown unavailable ({exc})")
+        return []
+
+    labels = {
+        0: "Under $200",
+        200: "$200 to $499",
+        500: "$500 to $999",
+        1000: "$1,000 to $1,999",
+        2000: "$2,000 and above",
+    }
+    buckets: list[SizeBucket] = []
+    for row in payload.get("results", []):
+        floor = row.get("size")
+        amount = _as_float(row.get("total"))
+        if floor is None:
+            continue
+        buckets.append(
+            SizeBucket(
+                label=labels.get(int(floor), f"${int(floor):,} and above"),
+                amount=round(amount, 2),
+                count=int(row.get("count") or 0),
+            )
+        )
+    buckets.sort(key=lambda b: b.label)
+    return buckets
+
+
+def _donor_detail(committee_id: str, warnings: list[str]) -> DonorDetail:
+    """Everything disclosure allows about who funds one campaign."""
+    donors, coverage = _large_donors(committee_id, warnings)
+    buckets = _size_buckets(committee_id, warnings)
+    under_200 = next((b.amount for b in buckets if b.label == "Under $200"), None)
+    itemized = sum(b.amount for b in buckets if b.label != "Under $200") or None
+
+    return DonorDetail(
+        large_donors=donors,
+        large_donor_coverage=coverage,
+        top_employers=_donor_groups(
+            "/schedules/schedule_a/by_employer/",
+            committee_id,
+            ("employer", "contributor_employer"),
+            warnings,
+            "employer",
+        ),
+        top_occupations=_donor_groups(
+            "/schedules/schedule_a/by_occupation/",
+            committee_id,
+            ("occupation", "contributor_occupation"),
+            warnings,
+            "occupation",
+        ),
+        top_cities=_donor_cities(donors),
+        size_buckets=buckets,
+        itemized_total=round(itemized, 2) if itemized else None,
+        unitemized_total=under_200,
+    )
+
+
+def _donor_cities(donors: list[LargeDonor]) -> list[DonorGroup]:
+    """Cities ranked by large-donor dollars.
+
+    Built from the named list rather than from a server-side aggregate, because
+    openFEC groups geography by state and ZIP and not by city. It therefore
+    describes where the large money is, not where all the money is, and the label
+    on screen says exactly that.
+    """
+    totals: dict[str, dict] = {}
+    for donor in donors:
+        if not donor.city:
+            continue
+        label = f"{donor.city.title()}, {donor.state}" if donor.state else donor.city.title()
+        entry = totals.setdefault(label, {"amount": 0.0, "donors": 0})
+        entry["amount"] += donor.amount
+        entry["donors"] += 1
+    groups = [
+        DonorGroup(label=label, amount=round(entry["amount"], 2), donors=entry["donors"])
+        for label, entry in totals.items()
+    ]
+    groups.sort(key=lambda g: g.amount, reverse=True)
+    return groups[:MAX_DONOR_GROUPS]
 
 
 def resolve_candidate_id(name: str, hint: str | None = None) -> str | None:
@@ -189,6 +429,13 @@ def candidate_finance(candidate_id: str, name: str, hint: str | None, warnings: 
             record.in_state_amount, record.in_state_pct = _in_state_share(record.committee_id)
         except SourceError as exc:
             warnings.append(f"{name}: in-state breakdown unavailable ({exc})")
+
+        # Donor detail is a deep sweep: several aggregate calls plus a paged scan
+        # per candidate. It is skipped on the demo key for the same reason the
+        # schedule E and filings sweeps are — the shared key 429s long before it
+        # finishes, and a partial donor list is worse than none.
+        if not USING_DEMO_KEY:
+            record.donors = _donor_detail(record.committee_id, warnings)
 
     return record
 

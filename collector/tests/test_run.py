@@ -467,3 +467,169 @@ class TestOutsideSpendingFromRows:
         monkeypatch.setattr(finance, "_get", fake_get)
         finance.outside_spending({"marshall": self.MARSHALL_ID}, [])
         assert len(pages) == 2, f"walked {len(pages)} pages; should stop on the repeat"
+
+
+class TestDonorDetail:
+    """Who funds each campaign, within what disclosure actually allows."""
+
+    COMMITTEE = "C00576173"
+
+    def _patched(self, monkeypatch, *, rows=(), count=None, employers=(),
+                 occupations=(), sizes=()):
+        import sources.finance as finance
+
+        calls: list[str] = []
+
+        def fake_get(path, params=None):
+            calls.append(path)
+            if path == "/schedules/schedule_a/":
+                return {
+                    "results": list(rows),
+                    "pagination": {"count": count if count is not None else len(rows)},
+                }
+            if path == "/schedules/schedule_a/by_employer/":
+                return {"results": list(employers)}
+            if path == "/schedules/schedule_a/by_occupation/":
+                return {"results": list(occupations)}
+            if path == "/schedules/schedule_a/by_size/":
+                return {"results": list(sizes)}
+            return {"results": []}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        return finance, calls
+
+    def _gift(self, name, amount, city="WICHITA", state="KS", **extra):
+        row = {
+            "contributor_name": name,
+            "contribution_receipt_amount": amount,
+            "contributor_city": city,
+            "contributor_state": state,
+            "contributor_employer": "SELF-EMPLOYED",
+            "contributor_occupation": "RANCHER",
+            "contribution_receipt_date": "2026-06-01",
+        }
+        row.update(extra)
+        return row
+
+    def test_one_donor_giving_twice_is_one_entry(self, monkeypatch):
+        finance, _ = self._patched(
+            monkeypatch,
+            rows=[
+                self._gift("SMITH, JANE", 2500.0, sub_id="1"),
+                self._gift("SMITH, JANE", 1500.0, sub_id="2"),
+            ],
+        )
+        detail = finance._donor_detail(self.COMMITTEE, [])
+
+        assert len(detail.large_donors) == 1
+        donor = detail.large_donors[0]
+        assert donor.amount == 4000.0
+        assert donor.gifts == 2
+
+    def test_spacing_and_case_do_not_split_a_donor(self, monkeypatch):
+        """FEC strings vary between filings; grouping on the raw value understates."""
+        finance, _ = self._patched(
+            monkeypatch,
+            rows=[
+                self._gift("SMITH, JANE", 2500.0, sub_id="1"),
+                self._gift("smith,   jane", 1000.0, sub_id="2"),
+            ],
+        )
+        detail = finance._donor_detail(self.COMMITTEE, [])
+        assert len(detail.large_donors) == 1
+        assert detail.large_donors[0].amount == 3500.0
+
+    def test_donors_are_ranked_by_total(self, monkeypatch):
+        finance, _ = self._patched(
+            monkeypatch,
+            rows=[
+                self._gift("SMALL, SAM", 1000.0, sub_id="1"),
+                self._gift("BIG, BEA", 3300.0, sub_id="2"),
+                self._gift("MID, MO", 2000.0, sub_id="3"),
+            ],
+        )
+        names = [d.name for d in finance._donor_detail(self.COMMITTEE, []).large_donors]
+        assert names == ["BIG, BEA", "MID, MO", "SMALL, SAM"]
+
+    def test_employer_and_occupation_come_from_the_aggregate_endpoints(self, monkeypatch):
+        finance, calls = self._patched(
+            monkeypatch,
+            employers=[
+                {"employer": "KOCH INDUSTRIES", "total": 55000.0, "count": 30},
+                {"employer": "RETIRED", "total": 120000.0, "count": 400},
+            ],
+            occupations=[{"occupation": "ATTORNEY", "total": 44000.0, "count": 60}],
+        )
+        detail = finance._donor_detail(self.COMMITTEE, [])
+
+        assert [g.label for g in detail.top_employers] == ["RETIRED", "KOCH INDUSTRIES"]
+        assert detail.top_employers[0].donors == 400
+        assert detail.top_occupations[0].label == "ATTORNEY"
+        assert "/schedules/schedule_a/by_employer/" in calls
+
+    def test_size_buckets_separate_itemized_from_unitemized(self, monkeypatch):
+        finance, _ = self._patched(
+            monkeypatch,
+            sizes=[
+                {"size": 0, "total": 900000.0, "count": 41000},
+                {"size": 200, "total": 300000.0, "count": 900},
+                {"size": 2000, "total": 700000.0, "count": 350},
+            ],
+        )
+        detail = finance._donor_detail(self.COMMITTEE, [])
+
+        assert detail.unitemized_total == 900000.0
+        assert detail.itemized_total == 1000000.0
+        assert {b.label for b in detail.size_buckets} >= {"Under $200", "$200 to $499"}
+
+    def test_cities_are_labelled_as_large_money_only(self, monkeypatch):
+        """openFEC groups geography by state and ZIP, never by city."""
+        finance, _ = self._patched(
+            monkeypatch,
+            rows=[
+                self._gift("A, A", 5000.0, city="OVERLAND PARK", sub_id="1"),
+                self._gift("B, B", 2000.0, city="WICHITA", sub_id="2"),
+                self._gift("C, C", 1000.0, city="WICHITA", sub_id="3"),
+            ],
+        )
+        cities = finance._donor_detail(self.COMMITTEE, []).top_cities
+
+        assert cities[0].label == "Overland Park, KS"
+        assert cities[0].amount == 5000.0
+        assert cities[1].label == "Wichita, KS"
+        assert cities[1].donors == 2
+
+    def test_the_itemization_caveat_travels_with_the_data(self, monkeypatch):
+        """A screen must not be able to render these lists without it."""
+        finance, _ = self._patched(monkeypatch, rows=[self._gift("A, A", 1000.0, sub_id="1")])
+        detail = finance._donor_detail(self.COMMITTEE, [])
+        assert "$200" in detail.itemized_note
+        assert detail.threshold == 1000.0
+
+    def test_a_truncated_scan_says_what_it_missed(self, monkeypatch):
+        finance, _ = self._patched(
+            monkeypatch, rows=[self._gift("A, A", 9999.0, sub_id="1")], count=50000
+        )
+        coverage = finance._donor_detail(self.COMMITTEE, []).large_donor_coverage
+        assert "smaller gifts" in coverage
+
+    def test_a_complete_scan_still_states_the_limit(self, monkeypatch):
+        """Even complete, the ranking misses donors who accumulated in small gifts."""
+        finance, _ = self._patched(monkeypatch, rows=[self._gift("A, A", 1000.0, sub_id="1")])
+        coverage = finance._donor_detail(self.COMMITTEE, []).large_donor_coverage
+        assert "smaller gifts" in coverage
+
+    def test_a_failed_lookup_degrades_rather_than_raising(self, monkeypatch):
+        import sources.finance as finance
+        from fetch import SourceError
+
+        def fake_get(path, params=None):
+            raise SourceError("429 rate limited")
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        warnings: list[str] = []
+        detail = finance._donor_detail(self.COMMITTEE, warnings)
+
+        assert detail.large_donors == []
+        assert detail.top_employers == []
+        assert len(warnings) >= 3

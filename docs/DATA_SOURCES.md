@@ -81,3 +81,36 @@ consequences worth knowing when reading `finance.json`:
 - Committee names come from a separate `/committees/` lookup, because the
   row-level response omits them. Only the committees about to be displayed are
   looked up.
+
+## Donor detail, and what it cannot tell you
+
+Named donors come from FEC Schedule A, which is public record: federal law
+requires committees to itemize a contributor's name, city, state, employer and
+occupation once that contributor passes $200 in aggregate for the cycle.
+
+The threshold is the whole caveat. Everything below $200 is reported as a single
+unnamed total, so a named-donor list is not a sample of a campaign's supporters —
+it is a census of its larger ones, and it under-represents a small-dollar campaign
+far more than a big-cheque one. In this race that asymmetry has a direction:
+Hamilton raises roughly 70% of his money in state on a small-dollar profile, so
+his named donors account for a smaller share of his total than Marshall's do of
+his. Showing the two lists side by side without saying that would invite exactly
+the wrong comparison, which is why the caveat is the card's subtitle in the app
+and a field in the payload rather than a comment in the code.
+
+How each part is built:
+
+| Part | Source | Limit worth knowing |
+|---|---|---|
+| Top employers, occupations | `schedule_a/by_employer/`, `by_occupation/` | Aggregated by the FEC over all itemized individual money. Self-reported, so "retired" and "self-employed" dominate. |
+| Size bands, small-dollar share | `schedule_a/by_size/` | The FEC's own bands. This is where the under-$200 total comes from. |
+| Largest donors | `schedule_a/`, `min_amount=1000`, largest first | Ranked from contributions of $1,000 or more. A donor who reached a large total through several smaller gifts is **not** ranked, and the payload says so. Bounded at eight pages; if that truncates, the coverage note reports it. |
+| Cities | Derived from the named list | The FEC groups geography by state and ZIP, never by city, so this ranks *large-donor* dollars only and is labelled that way on screen. |
+| In-state share | `schedule_a/by_state/` | Itemized individual money only — the same threshold applies. |
+
+Two further points. Contributions are grouped per donor on a normalised name plus
+city, because the FEC's own strings vary in spacing and case between filings and
+grouping on the raw value splits one donor into several and understates every
+large one. And the FEC's sale-or-use restriction forbids using contributor
+information to solicit contributions or for any commercial purpose; the app states
+this on the card rather than leaving a reader to assume it is a mailing list.

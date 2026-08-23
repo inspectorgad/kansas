@@ -17,6 +17,8 @@ import org.ksrace.senate2026.data.DataFile
 import org.ksrace.senate2026.data.RaceSnapshot
 import org.ksrace.senate2026.data.model.CandidateFinance
 import org.ksrace.senate2026.data.model.CandidateIds
+import org.ksrace.senate2026.data.model.DonorDetail
+import org.ksrace.senate2026.data.model.DonorGroup
 import org.ksrace.senate2026.format.formatDollars
 import org.ksrace.senate2026.format.formatIsoDate
 import org.ksrace.senate2026.format.formatShare
@@ -93,8 +95,24 @@ fun MoneyScreen(snapshot: RaceSnapshot, now: Long, modifier: Modifier = Modifier
             }
         }
 
-        marshall?.let { item { CandidateDetail("Roger Marshall", it) } }
-        hamilton?.let { item { CandidateDetail("Adam Hamilton", it) } }
+        marshall?.let { record ->
+            item { CandidateDetail("Roger Marshall", record) }
+            record.donors?.takeIf { it.hasAnything }?.let { donors ->
+                item { DonorMix("Roger Marshall", donors) }
+                if (donors.largeDonors.isNotEmpty()) {
+                    item { LargestDonors("Roger Marshall", donors) }
+                }
+            }
+        }
+        hamilton?.let { record ->
+            item { CandidateDetail("Adam Hamilton", record) }
+            record.donors?.takeIf { it.hasAnything }?.let { donors ->
+                item { DonorMix("Adam Hamilton", donors) }
+                if (donors.largeDonors.isNotEmpty()) {
+                    item { LargestDonors("Adam Hamilton", donors) }
+                }
+            }
+        }
 
         if (outside.total > 0) {
             item {
@@ -220,6 +238,169 @@ fun MoneyScreen(snapshot: RaceSnapshot, now: Long, modifier: Modifier = Modifier
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
+    }
+}
+
+/**
+ * Where one campaign's money comes from, in aggregate.
+ *
+ * The itemization caveat is the card's subtitle rather than a footnote, because
+ * it is not a disclaimer — it changes what the numbers mean. Donors are named
+ * only above $200 for the cycle, so a named list describes a campaign's larger
+ * givers and under-represents a small-dollar campaign the most. In this race that
+ * cuts one way: Hamilton raises about 70% of his money in state on a small-dollar
+ * profile, so his named donors cover a smaller share of his total than Marshall's
+ * do of his. Putting the two lists side by side without saying that would invite
+ * exactly the wrong comparison.
+ */
+@Composable
+private fun DonorMix(name: String, donors: DonorDetail) {
+    SectionCard(
+        title = "Who funds $name",
+        subtitle = donors.itemizedNote,
+    ) {
+        val itemized = donors.itemizedTotal
+        val unitemized = donors.unitemizedTotal
+        if (itemized != null || unitemized != null) {
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+            ) {
+                unitemized?.let {
+                    StatTile(
+                        label = "Under \$200",
+                        value = formatShortDollars(it),
+                        caption = "no names disclosed",
+                        modifier = Modifier.weight(1f),
+                    )
+                }
+                itemized?.let {
+                    StatTile(
+                        label = "Itemized",
+                        value = formatShortDollars(it),
+                        caption = "donors named",
+                        modifier = Modifier.weight(1f),
+                    )
+                }
+            }
+            val total = (itemized ?: 0.0) + (unitemized ?: 0.0)
+            if (total > 0 && unitemized != null) {
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    text = "${formatShare(unitemized / total * 100.0)}% of individual money " +
+                        "came from donors too small to name.",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            Spacer(Modifier.height(12.dp))
+            ThinDivider()
+            Spacer(Modifier.height(12.dp))
+        }
+
+        GroupList("Top employers", donors.topEmployers)
+        GroupList("Top occupations", donors.topOccupations)
+        GroupList(
+            "Where the large money is",
+            donors.topCities,
+            note = "Cities ranked by donations of \$1,000 or more only — the FEC " +
+                "groups all giving by state and ZIP, never by city.",
+        )
+    }
+}
+
+@Composable
+private fun GroupList(heading: String, groups: List<DonorGroup>, note: String? = null) {
+    if (groups.isEmpty()) return
+    Text(
+        text = heading,
+        style = MaterialTheme.typography.titleSmall,
+        color = MaterialTheme.colorScheme.onSurface,
+    )
+    Spacer(Modifier.height(6.dp))
+    groups.take(6).forEach { group ->
+        DetailRow(
+            label = group.label,
+            value = formatShortDollars(group.amount),
+        )
+    }
+    note?.let {
+        Text(
+            text = it,
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+    Spacer(Modifier.height(12.dp))
+}
+
+/**
+ * Named individuals, largest first.
+ *
+ * These are public record — federal law requires the disclosure — but the FEC's
+ * sale-or-use restriction forbids using contributor information to solicit
+ * contributions or for any commercial purpose, so the card says so rather than
+ * leaving a reader to assume this is a mailing list.
+ */
+@Composable
+private fun LargestDonors(name: String, donors: DonorDetail) {
+    SectionCard(
+        title = "$name's largest donors",
+        subtitle = donors.largeDonorCoverage,
+    ) {
+        donors.largeDonors.forEachIndexed { index, donor ->
+            if (index > 0) {
+                Spacer(Modifier.height(8.dp))
+                ThinDivider()
+                Spacer(Modifier.height(8.dp))
+            }
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+            ) {
+                Column(Modifier.weight(1f)) {
+                    Text(
+                        text = donor.name,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    val detail = listOfNotNull(
+                        donor.place,
+                        donor.occupation?.takeIf { it.isNotBlank() },
+                        donor.employer?.takeIf { it.isNotBlank() },
+                    ).joinToString(" · ")
+                    if (detail.isNotEmpty()) {
+                        Text(
+                            text = detail,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+                Column {
+                    Text(
+                        text = formatDollars(donor.amount),
+                        style = TabularNumberStyle,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    if (donor.gifts > 1) {
+                        Text(
+                            text = "${donor.gifts} gifts",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+            }
+        }
+        Spacer(Modifier.height(12.dp))
+        Text(
+            text = "Public record under federal disclosure. FEC rules forbid using " +
+                "contributor information to solicit contributions or for commercial " +
+                "purposes.",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
     }
 }
 

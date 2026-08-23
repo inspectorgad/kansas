@@ -200,7 +200,65 @@ data class CandidateFinance(
     @SerialName("in_state_amount") val inStateAmount: Double? = null,
     @SerialName("in_state_pct") val inStatePct: Double? = null,
     @SerialName("burn_rate_monthly") val burnRateMonthly: Double? = null,
+    val donors: DonorDetail? = null,
 )
+
+@Serializable
+data class DonorGroup(
+    val label: String,
+    val amount: Double,
+    val donors: Int = 0,
+)
+
+@Serializable
+data class SizeBucket(
+    val label: String,
+    val amount: Double,
+    val count: Int = 0,
+)
+
+@Serializable
+data class LargeDonor(
+    val name: String,
+    val city: String? = null,
+    val state: String? = null,
+    val employer: String? = null,
+    val occupation: String? = null,
+    val amount: Double,
+    val gifts: Int = 1,
+) {
+    /** "Wichita, KS" — or whichever half of it disclosure actually carried. */
+    val place: String?
+        get() = listOfNotNull(city?.takeIf { it.isNotBlank() }, state?.takeIf { it.isNotBlank() })
+            .takeIf { it.isNotEmpty() }
+            ?.joinToString(", ")
+}
+
+/**
+ * Who funds a campaign, as far as federal disclosure goes.
+ *
+ * [itemizedNote] is not decoration. Donors are only named above $200 for the
+ * cycle, so every list here describes a campaign's larger givers rather than its
+ * typical one, and it under-represents a small-dollar campaign the most. The
+ * caption travels with the data so no screen can render these lists without it.
+ */
+@Serializable
+data class DonorDetail(
+    val threshold: Double = 1000.0,
+    @SerialName("itemized_note") val itemizedNote: String,
+    @SerialName("large_donors") val largeDonors: List<LargeDonor> = emptyList(),
+    @SerialName("top_employers") val topEmployers: List<DonorGroup> = emptyList(),
+    @SerialName("top_occupations") val topOccupations: List<DonorGroup> = emptyList(),
+    @SerialName("top_cities") val topCities: List<DonorGroup> = emptyList(),
+    @SerialName("size_buckets") val sizeBuckets: List<SizeBucket> = emptyList(),
+    @SerialName("itemized_total") val itemizedTotal: Double? = null,
+    @SerialName("unitemized_total") val unitemizedTotal: Double? = null,
+    @SerialName("large_donor_coverage") val largeDonorCoverage: String? = null,
+) {
+    val hasAnything: Boolean
+        get() = largeDonors.isNotEmpty() || topEmployers.isNotEmpty() ||
+            topOccupations.isNotEmpty() || sizeBuckets.isNotEmpty()
+}
 
 @Serializable
 data class IndependentExpenditure(
