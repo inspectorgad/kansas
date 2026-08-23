@@ -11,7 +11,7 @@ per-host delay.
 | **Wikipedia** — [2026 Kansas Senate election](https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas) | Every public general-election poll | MediaWiki API, no key | On change | CC BY-SA 4.0, attributed in-app. Hand-maintained markup, so the parser is defensive and reports rows it cannot read. **No free polling API exists** — this is the most complete free structured source. |
 | **Kalshi** | Win probability | Public REST, no auth | Continuous | CFTC-regulated exchange. |
 | **Polymarket** | Win probability | Gamma API, no auth | Continuous | Returns some list fields as JSON-encoded strings. |
-| **FEC (openFEC)** | Receipts, disbursements, cash on hand, in-state share, independent expenditures, filings | `api.data.gov` key (free) | Per filing | Public domain. Candidate ids are resolved at runtime, never trusted from config. |
+| **FEC (openFEC)** | Receipts, disbursements, cash on hand, in-state share, independent expenditures, filings | `api.data.gov` key (free) | Per filing | Public domain. Candidate ids are resolved at runtime, never trusted from config. The for/against split is summed from each expenditure's own `support_oppose_indicator`, not from `schedule_e/by_candidate` — see below. |
 | **Kansas newsrooms** — Kansas Reflector, KCUR, KWCH, KSNT, Topeka Capital-Journal, KC Star | Headlines | RSS | Continuous | Headline, outlet and link only; paywalled outlets get no summary. |
 | **GDELT 2.0** | Wider news sweep | Doc API, no key | Continuous | Catches coverage the local feeds miss. |
 | **Cook Political Report, Sabato's Crystal Ball, Inside Elections** | Race ratings | Page scrape | Rare | A rating change is among the more newsworthy events in a race. |
@@ -52,3 +52,32 @@ keys from repository secrets; the app only ever fetches static JSON.
 | `META_ACCESS_TOKEN` | Digital ad spend | Digital ads report as unavailable, with the reason shown |
 
 Every other source needs no authentication.
+
+## Why outside spending is read row by row
+
+The obvious way to get money-for and money-against is openFEC's
+`/schedules/schedule_e/by_candidate/` aggregate with a `support_oppose_indicator`
+filter. That is what this collector did, and on the first live run with a real API
+key it was wrong in two different ways at once.
+
+For Marshall it returned identical rows for both values of the filter: the same
+$214,014.88 appeared as money supporting him and money opposing him, the published
+total was exactly twice the real figure, and every committee — Senate
+Conservatives Fund included — was labelled as both supporting and opposing the
+same candidate.
+
+For Hamilton it returned nothing at all, so he was absent from the breakdown
+entirely, while the row-level endpoint in the very same run showed more than $1.1M
+of television placed against him.
+
+The split is now summed from `/schedules/schedule_e/`, where each expenditure
+carries its own indicator. Those were correct for both candidates in the same run
+that produced the bad aggregate, which is the whole reason for trusting them. Two
+consequences worth knowing when reading `finance.json`:
+
+- Totals are paginated over a twenty-page budget. If a candidate has more rows
+  than that, the run warns that the figure is a floor rather than a total. It will
+  never silently understate the money in the race.
+- Committee names come from a separate `/committees/` lookup, because the
+  row-level response omits them. Only the committees about to be displayed are
+  looked up.

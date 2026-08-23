@@ -297,115 +297,173 @@ class TestMarketHistoryEpoch:
         assert (tmp_path / "markets.json").read_text() == before
 
 
-class TestOutsideSpendingContradiction:
-    """A committee cannot support and oppose the same candidate for the same sum.
+class TestOutsideSpendingFromRows:
+    """The for/against split comes from each row's own indicator.
 
-    The first live run with a real FEC key published exactly that: $214,014.88 as
-    money supporting Marshall and the identical figure as money opposing him, a
-    total of twice the real amount, and Senate Conservatives Fund labelled both
-    ways. openFEC's by_candidate endpoint had returned the same rows for both
-    values of support_oppose_indicator.
+    The by_candidate aggregate was wrong two different ways on the first live run
+    with a real FEC key. For Marshall it ignored support_oppose_indicator and
+    returned the identical $214,014.88 as both supporting and opposing him. For
+    Hamilton it returned nothing at all, while the row-level endpoint showed over
+    $1.1M of television placed against him in the same run.
     """
 
-    def _patched(self, monkeypatch, support_rows, oppose_rows, recent=()):
+    MARSHALL_ID = "S0KS00315"
+    HAMILTON_ID = "S6KS00312"
+
+    def _rows(self, monkeypatch, by_fec_id, committees=None, count=None):
+        """Serve schedule E rows per candidate and record every path called."""
         import sources.finance as finance
+
+        calls: list[str] = []
 
         def fake_get(path, params=None):
             params = params or {}
-            if path.startswith("/schedules/schedule_e/by_candidate"):
-                indicator = params.get("support_oppose_indicator")
-                return {"results": support_rows if indicator == "S" else oppose_rows}
-            if path.startswith("/schedules/schedule_e/"):
-                return {"results": list(recent)}
+            calls.append(path)
+            if path == "/schedules/schedule_e/":
+                rows = by_fec_id.get(params.get("candidate_id"), [])
+                return {
+                    "results": rows,
+                    "pagination": {"count": count if count is not None else len(rows)},
+                }
+            if path == "/committees/":
+                wanted = params.get("committee_id") or []
+                return {
+                    "results": [
+                        {"committee_id": cid, "name": name}
+                        for cid, name in (committees or {}).items()
+                        if cid in wanted
+                    ]
+                }
             return {"results": []}
 
         monkeypatch.setattr(finance, "_get", fake_get)
-        return finance
+        return finance, calls
 
-    ROWS = [
-        {"committee_id": "C00448696", "committee_name": "SENATE CONSERVATIVES FUND", "total": 180108.96},
-        {"committee_id": "C00524181", "committee_name": "SENATE CONSERVATIVES ACTION", "total": 33905.92},
-    ]
-
-    def test_identical_sides_are_withheld_not_published(self, monkeypatch):
-        finance = self._patched(monkeypatch, self.ROWS, self.ROWS)
-        warnings: list[str] = []
-        result = finance.outside_spending({"marshall": "S0KS00315"}, warnings)
-
-        assert result.supporting == {}
-        assert result.opposing == {}
-        assert result.total == 0.0
-        assert result.top_spenders == []
-        assert any("same rows for support and oppose" in w for w in warnings), warnings
-
-    def test_the_warning_reports_what_it_saw(self, monkeypatch):
-        finance = self._patched(monkeypatch, self.ROWS, self.ROWS)
-        warnings: list[str] = []
-        finance.outside_spending({"marshall": "S0KS00315"}, warnings)
-
-        note = next(w for w in warnings if "same rows" in w)
-        assert "2 committee(s)" in note
-        assert "214,014.88" in note
-
-    def test_a_genuine_split_is_published(self, monkeypatch):
-        """Different committees on each side is the normal, correct case."""
-        finance = self._patched(
-            monkeypatch,
-            [{"committee_id": "C1", "committee_name": "PRO PAC", "total": 100000.0}],
-            [{"committee_id": "C2", "committee_name": "ANTI PAC", "total": 40000.0}],
-        )
-        warnings: list[str] = []
-        result = finance.outside_spending({"marshall": "S0KS00315"}, warnings)
-
-        assert result.supporting == {"marshall": 100000.0}
-        assert result.opposing == {"marshall": 40000.0}
-        assert result.total == 140000.0
-        assert not any("same rows" in w for w in warnings)
-        by_name = {s.committee_name: s for s in result.top_spenders}
-        assert by_name["PRO PAC"].supports == "marshall"
-        assert by_name["PRO PAC"].opposes is None
-        assert by_name["ANTI PAC"].opposes == "marshall"
-
-    def test_one_committee_on_both_sides_with_different_sums_is_kept(self, monkeypatch):
-        """Only equal-to-the-cent duplication is the impossible case."""
-        finance = self._patched(
-            monkeypatch,
-            [{"committee_id": "C1", "committee_name": "BOTH PAC", "total": 90000.0}],
-            [{"committee_id": "C1", "committee_name": "BOTH PAC", "total": 12.5}],
-        )
-        warnings: list[str] = []
-        result = finance.outside_spending({"marshall": "S0KS00315"}, warnings)
-
-        assert result.supporting == {"marshall": 90000.0}
-        assert result.opposing == {"marshall": 12.5}
-        assert not any("same rows" in w for w in warnings)
-
-    def test_recent_rows_are_deduplicated(self, monkeypatch):
-        duplicate = {
-            "expenditure_date": "2026-08-06",
-            "committee_id": "C00957928",
-            "expenditure_amount": 586399.0,
-            "support_oppose_indicator": "O",
+    def _row(self, committee_id, amount, indicator, day="2026-08-06", **extra):
+        row = {
+            "committee_id": committee_id,
+            "expenditure_amount": amount,
+            "support_oppose_indicator": indicator,
+            "expenditure_date": day,
             "expenditure_description": "PLACED MEDIA: TV",
         }
-        finance = self._patched(monkeypatch, [], [], recent=[duplicate, dict(duplicate)])
-        result = finance.outside_spending({"hamilton": "S6KS00312"}, [])
+        row.update(extra)
+        return row
+
+    def test_hamilton_appears_in_the_breakdown(self, monkeypatch):
+        """The bug: he was absent while over $1.1M was spent against him."""
+        finance, _ = self._rows(
+            monkeypatch,
+            {
+                self.HAMILTON_ID: [
+                    self._row("C00957928", 586399.0, "O", sub_id="1"),
+                    self._row("C00957928", 549123.1, "O", day="2026-08-05", sub_id="2"),
+                ]
+            },
+        )
+        warnings: list[str] = []
+        result = finance.outside_spending({"hamilton": self.HAMILTON_ID}, warnings)
+
+        assert result.opposing == {"hamilton": 1135522.1}
+        assert result.supporting == {}
+        assert result.total == 1135522.1
+
+    def test_both_candidates_are_counted_on_their_own_sides(self, monkeypatch):
+        finance, _ = self._rows(
+            monkeypatch,
+            {
+                self.MARSHALL_ID: [self._row("C00448696", 1000.0, "S", sub_id="m1")],
+                self.HAMILTON_ID: [self._row("C00957928", 4000.0, "O", sub_id="h1")],
+            },
+        )
+        result = finance.outside_spending(
+            {"marshall": self.MARSHALL_ID, "hamilton": self.HAMILTON_ID}, []
+        )
+
+        assert result.supporting == {"marshall": 1000.0}
+        assert result.opposing == {"hamilton": 4000.0}
+        assert result.total == 5000.0
+
+    def test_the_same_money_is_never_counted_on_both_sides(self, monkeypatch):
+        """The exact failure that shipped: total was twice the real figure."""
+        finance, _ = self._rows(
+            monkeypatch,
+            {self.MARSHALL_ID: [self._row("C00448696", 214014.88, "S", sub_id="x")]},
+        )
+        result = finance.outside_spending({"marshall": self.MARSHALL_ID}, [])
+
+        assert result.supporting == {"marshall": 214014.88}
+        assert result.opposing == {}
+        assert result.total == 214014.88
+        spender = result.top_spenders[0]
+        assert spender.supports == "marshall"
+        assert spender.opposes is None
+
+    def test_the_broken_aggregate_endpoint_is_not_used(self, monkeypatch):
+        """Regression guard: by_candidate must not come back."""
+        finance, calls = self._rows(
+            monkeypatch, {self.MARSHALL_ID: [self._row("C1", 1.0, "S", sub_id="a")]}
+        )
+        finance.outside_spending({"marshall": self.MARSHALL_ID}, [])
+        assert not any("by_candidate" in path for path in calls), calls
+
+    def test_a_row_with_no_indicator_is_skipped_not_assumed_against(self, monkeypatch):
+        """The old code defaulted to "O", filing support as opposition."""
+        finance, _ = self._rows(
+            monkeypatch,
+            {self.MARSHALL_ID: [self._row("C1", 5000.0, None, sub_id="n1")]},
+        )
+        warnings: list[str] = []
+        result = finance.outside_spending({"marshall": self.MARSHALL_ID}, warnings)
+
+        assert result.supporting == {} and result.opposing == {}
+        assert any("no support/oppose indicator" in w for w in warnings), warnings
+
+    def test_committee_names_are_looked_up(self, monkeypatch):
+        finance, _ = self._rows(
+            monkeypatch,
+            {self.MARSHALL_ID: [self._row("C00448696", 900.0, "S", sub_id="s1")]},
+            committees={"C00448696": "SENATE CONSERVATIVES FUND"},
+        )
+        result = finance.outside_spending({"marshall": self.MARSHALL_ID}, [])
+
+        assert result.top_spenders[0].committee_name == "SENATE CONSERVATIVES FUND"
+        assert result.recent[0].committee_name == "SENATE CONSERVATIVES FUND"
+
+    def test_repeated_filings_of_one_expenditure_collapse(self, monkeypatch):
+        duplicate = self._row("C00957928", 586399.0, "O")
+        finance, _ = self._rows(
+            monkeypatch, {self.HAMILTON_ID: [duplicate, dict(duplicate)]}
+        )
+        result = finance.outside_spending({"hamilton": self.HAMILTON_ID}, [])
         assert len(result.recent) == 1
 
-    def test_a_committee_name_is_filled_in_from_the_aggregate(self, monkeypatch):
-        """recent rows carry no committee_name; the by_candidate rows do."""
-        finance = self._patched(
+    def test_a_truncated_read_is_reported_as_a_floor(self, monkeypatch):
+        """Silently understating the money in the race is the thing to avoid."""
+        finance, _ = self._rows(
             monkeypatch,
-            [{"committee_id": "C00957928", "committee_name": "REAL PAC NAME", "total": 500.0}],
-            [],
-            recent=[
-                {
-                    "expenditure_date": "2026-08-06",
-                    "committee_id": "C00957928",
-                    "expenditure_amount": 1000.0,
-                    "support_oppose_indicator": "O",
-                }
-            ],
+            {self.MARSHALL_ID: [self._row("C1", 100.0, "S", sub_id="p1")]},
+            count=5000,
         )
-        result = finance.outside_spending({"marshall": "S0KS00315"}, [])
-        assert result.recent[0].committee_name == "REAL PAC NAME"
+        warnings: list[str] = []
+        finance.outside_spending({"marshall": self.MARSHALL_ID}, warnings)
+        assert any("a floor, not a total" in w for w in warnings), warnings
+
+    def test_a_repeated_page_stops_the_walk(self, monkeypatch):
+        """A cursor that never advances must not burn the whole page budget."""
+        import sources.finance as finance
+
+        pages: list[int] = []
+
+        def fake_get(path, params=None):
+            if path == "/schedules/schedule_e/":
+                pages.append(1)
+                return {
+                    "results": [self._row("C1", 10.0, "S", sub_id="same")],
+                    "pagination": {"count": 999},
+                }
+            return {"results": []}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        finance.outside_spending({"marshall": self.MARSHALL_ID}, [])
+        assert len(pages) == 2, f"walked {len(pages)} pages; should stop on the repeat"
