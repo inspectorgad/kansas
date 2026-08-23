@@ -398,6 +398,11 @@ def main() -> int:
         help="diagnose the Kansas election-night results format and exit",
     )
     parser.add_argument(
+        "--probe-donors",
+        action="store_true",
+        help="dump the raw FEC rows behind the largest donors, and exit",
+    )
+    parser.add_argument(
         "--live-check",
         action="store_true",
         help="verify live endpoints still match the contract; writes nothing",
@@ -409,6 +414,7 @@ def main() -> int:
         "probe_markets": ("sources.markets", "diagnose"),
         "probe_ads": ("sources.ads", "diagnose"),
         "probe_ground": ("sources.ground", "diagnose"),
+        "probe_donors": ("sources.finance", "diagnose"),
     }
     for flag, (module_name, function_name) in probes.items():
         if getattr(args, flag):

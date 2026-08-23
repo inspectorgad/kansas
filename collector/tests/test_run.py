@@ -690,3 +690,82 @@ class TestNonAnswerLabels:
         labels = [g.label for g in groups]
         assert "NONE" not in labels and "NULL" not in labels
         assert labels == ["SELF-EMPLOYED", "KOCH INDUSTRIES"]
+
+
+class TestIdenticalAmountAudit:
+    """Several donors at an identical total is the shape a double count makes.
+
+    Marshall's top five each came back at exactly $31,500 over exactly three
+    gifts — five different people, five different states. $10,500 apiece is above
+    the per-election individual limit, so either joint-fundraising structure
+    explains it or rows are being summed that should not be. Only fields no total
+    carries can tell the two apart, so the rows get fetched and reported.
+    """
+
+    def _audit(self, monkeypatch, donors, rows=()):
+        import sources.finance as finance
+
+        calls: list[dict] = []
+
+        def fake_get(path, params=None):
+            calls.append({"path": path, "params": params or {}})
+            return {"results": list(rows), "pagination": {"count": len(rows)}}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        warnings: list[str] = []
+        finance._identical_amount_audit("C00576173", donors, warnings)
+        return warnings, calls
+
+    def _donor(self, name, amount=31500.0, gifts=3):
+        from schemas.finance import LargeDonor
+
+        return LargeDonor(name=name, amount=amount, gifts=gifts)
+
+    def test_a_cluster_is_flagged_and_audited(self, monkeypatch):
+        donors = [self._donor(n) for n in ("A, A", "B, B", "C, C", "D, D", "E, E")]
+        rows = [
+            {"sub_id": "1", "contribution_receipt_amount": 10500.0, "receipt_type": "15E",
+             "line_number": "11AI", "memo_code": "X"},
+            {"sub_id": "2", "contribution_receipt_amount": 10500.0, "receipt_type": "15E",
+             "line_number": "11AI"},
+        ]
+        warnings, calls = self._audit(monkeypatch, donors, rows)
+
+        assert any("5 donors share an identical total" in w for w in warnings), warnings
+        audit = next(w for w in warnings if w.startswith("audit of"))
+        assert "memo-coded 1" in audit
+        assert "un-memoed 1" in audit
+        assert "distinct sub_id" in audit
+        assert calls[0]["params"]["contributor_name"] == "A, A"
+
+    def test_distinct_amounts_are_not_audited(self, monkeypatch):
+        """Hamilton's list looks like this, and must cost no extra request."""
+        donors = [
+            self._donor("A, A", 21000.0, 6),
+            self._donor("B, B", 12597.0, 4),
+            self._donor("C, C", 11552.0, 4),
+        ]
+        warnings, calls = self._audit(monkeypatch, donors)
+        assert warnings == []
+        assert calls == []
+
+    def test_two_matching_donors_are_not_enough(self, monkeypatch):
+        """Two people giving the same round number is unremarkable."""
+        donors = [self._donor("A, A", 7000.0), self._donor("B, B", 7000.0)]
+        warnings, calls = self._audit(monkeypatch, donors)
+        assert warnings == []
+        assert calls == []
+
+    def test_a_failed_audit_degrades(self, monkeypatch):
+        import sources.finance as finance
+        from fetch import SourceError
+
+        def fake_get(path, params=None):
+            raise SourceError("429")
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        warnings: list[str] = []
+        finance._identical_amount_audit(
+            "C1", [self._donor(n) for n in ("A, A", "B, B", "C, C")], warnings
+        )
+        assert any("could not fetch rows" in w for w in warnings)

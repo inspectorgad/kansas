@@ -305,9 +305,75 @@ def _size_buckets(committee_id: str, warnings: list[str]) -> list[SizeBucket]:
     return buckets
 
 
+def _identical_amount_audit(
+    committee_id: str, donors: list[LargeDonor], warnings: list[str]
+) -> None:
+    """Report the raw rows when several donors share an identical total.
+
+    Five of Marshall's top donors came back at exactly $31,500 over exactly three
+    gifts each — five different people in five different states. An identical
+    figure repeating across unrelated donors is the shape a double count makes,
+    and $10,500 apiece is above the per-election individual limit, so either
+    joint-fundraising structure explains it or these rows are being summed when
+    they should not be.
+
+    Which of those it is lives in fields no total carries: memo_code marks a
+    transaction the FEC considers already counted elsewhere, and earmarked money
+    routed through a conduit is reported twice by design. So rather than guessing
+    from the pattern, one such donor's rows are fetched and the memo split
+    reported. Bounded to a single extra request, and only when the pattern
+    actually appears.
+    """
+    by_amount: dict[float, list[LargeDonor]] = {}
+    for donor in donors:
+        by_amount.setdefault(round(donor.amount, 2), []).append(donor)
+
+    clusters = {amount: group for amount, group in by_amount.items() if len(group) >= 3}
+    if not clusters:
+        return
+
+    amount, group = max(clusters.items(), key=lambda kv: len(kv[1]))
+    warnings.append(
+        f"{len(group)} donors share an identical total of ${amount:,.2f} "
+        f"({', '.join(d.name for d in group[:4])}) — auditing the raw rows"
+    )
+
+    sample = group[0]
+    try:
+        payload = _get(
+            "/schedules/schedule_a/",
+            {
+                "committee_id": committee_id,
+                "two_year_transaction_period": FEC_CYCLE,
+                "contributor_name": sample.name,
+                "per_page": 30,
+            },
+        )
+    except SourceError as exc:
+        warnings.append(f"identical-total audit could not fetch rows ({exc})")
+        return
+
+    rows = payload.get("results") or []
+    memo = [r for r in rows if r.get("memo_code")]
+    plain = [r for r in rows if not r.get("memo_code")]
+    memo_sum = sum(_as_float(r.get("contribution_receipt_amount")) for r in memo)
+    plain_sum = sum(_as_float(r.get("contribution_receipt_amount")) for r in plain)
+    sub_ids = {r.get("sub_id") for r in rows if r.get("sub_id")}
+    types = sorted({str(r.get("receipt_type") or "?") for r in rows})
+    lines = sorted({str(r.get("line_number") or "?") for r in rows})
+
+    warnings.append(
+        f"audit of {sample.name}: {len(rows)} row(s), {len(sub_ids)} distinct sub_id(s); "
+        f"memo-coded {len(memo)} = ${memo_sum:,.2f}, un-memoed {len(plain)} = "
+        f"${plain_sum:,.2f}; receipt types {types}; lines {lines}; "
+        f"collector summed ${sample.amount:,.2f} over {sample.gifts} gift(s)"
+    )
+
+
 def _donor_detail(committee_id: str, warnings: list[str]) -> DonorDetail:
     """Everything disclosure allows about who funds one campaign."""
     donors, coverage = _large_donors(committee_id, warnings)
+    _identical_amount_audit(committee_id, donors, warnings)
     buckets = _size_buckets(committee_id, warnings)
     under_200 = next((b.amount for b in buckets if b.label == "Under $200"), None)
     itemized = sum(b.amount for b in buckets if b.label != "Under $200") or None
@@ -764,3 +830,105 @@ def collect() -> FinanceResult:
         result.filings = recent_filings(committee_ids, warnings)
 
     return result
+
+
+# Fields that decide whether a donor's rows may be summed. memo_code is the one
+# that matters most: the FEC marks a transaction "X" when it is informational and
+# already counted on another line, and openFEC's own aggregate endpoints exclude
+# those. Earmarked money routed through a conduit appears twice by design — once
+# as the conduit's contribution and once attributed to the original donor — so
+# whether to keep or drop a memo row depends on which of the pair the filer put
+# it on, and that cannot be settled without looking.
+PROBE_FIELDS = (
+    "sub_id",
+    "contribution_receipt_date",
+    "contribution_receipt_amount",
+    "contributor_aggregate_ytd",
+    "memo_code",
+    "memo_text",
+    "receipt_type",
+    "receipt_type_desc",
+    "line_number",
+    "committee_id",
+    "contributor_id",
+    "is_individual",
+    "fec_election_type_desc",
+)
+
+
+def diagnose() -> str:
+    """Dump the raw rows behind the largest donors, for a total that looks wrong.
+
+    Marshall's top five donors each came back at exactly $31,500 across exactly
+    three gifts — five different people in five different states, an identical
+    figure repeating, which is the shape a double count makes. $10,500 apiece is
+    above the per-election individual limit, so joint-fundraising or conduit
+    structure is the innocent explanation and memo-coded duplicates are the guilty
+    one. Both are visible in the raw fields and neither is visible in a total, so
+    this prints the rows rather than reasoning about them.
+    """
+    lines = ["Donor probe", "=" * 72]
+    if USING_DEMO_KEY:
+        lines.append("No FEC_API_KEY set. This probe needs a real key.")
+        return "\n".join(lines)
+
+    warnings: list[str] = []
+    for candidate in CANDIDATES:
+        lines.append(f"\n[{candidate.name}]")
+        fec_id = resolve_candidate_id(candidate.name, candidate.fec_candidate_id)
+        if not fec_id:
+            lines.append("  candidate id did not resolve")
+            continue
+        committee_id, committee_name = _principal_committee(fec_id)
+        lines.append(f"  {fec_id} -> {committee_id} ({committee_name})")
+        if not committee_id:
+            continue
+
+        donors, coverage = _large_donors(committee_id, warnings)
+        lines.append(f"  coverage: {coverage}")
+        if not donors:
+            lines.append("  no donors at or above the threshold")
+            continue
+
+        for donor in donors[:3]:
+            lines.append(f"\n  == {donor.name} — ${donor.amount:,.2f} over {donor.gifts} gift(s)")
+            try:
+                payload = _get(
+                    "/schedules/schedule_a/",
+                    {
+                        "committee_id": committee_id,
+                        "two_year_transaction_period": FEC_CYCLE,
+                        "contributor_name": donor.name,
+                        "per_page": 30,
+                    },
+                )
+            except SourceError as exc:
+                lines.append(f"     lookup failed: {exc}")
+                continue
+
+            rows = payload.get("results") or []
+            count = (payload.get("pagination") or {}).get("count")
+            lines.append(f"     {len(rows)} row(s) returned, api count={count}")
+            for row in rows:
+                shown = {key: row.get(key) for key in PROBE_FIELDS if row.get(key) is not None}
+                lines.append(f"     - {shown}")
+
+            memo = [r for r in rows if r.get("memo_code")]
+            plain = [r for r in rows if not r.get("memo_code")]
+            lines.append(
+                f"     memo-coded: {len(memo)} totalling "
+                f"${sum(_as_float(r.get('contribution_receipt_amount')) for r in memo):,.2f}"
+            )
+            lines.append(
+                f"     un-memoed:  {len(plain)} totalling "
+                f"${sum(_as_float(r.get('contribution_receipt_amount')) for r in plain):,.2f}"
+            )
+            sub_ids = [r.get("sub_id") for r in rows]
+            lines.append(
+                f"     distinct sub_ids: {len({s for s in sub_ids if s})} of {len(sub_ids)}"
+            )
+
+    if warnings:
+        lines.append("\nwarnings:")
+        lines.extend(f"  - {w}" for w in warnings)
+    return "\n".join(lines)

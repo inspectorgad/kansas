@@ -12,6 +12,10 @@ on:
         description: "Space-separated sources to collect (blank = all)"
         required: false
         default: ""
+      probe:
+        description: "Run a probe instead of collecting: donors, markets, ads, ground, results"
+        required: false
+        default: ""
 
 concurrency:
   # Never let two collector runs race to push the same data branch.
@@ -88,13 +92,19 @@ jobs:
           # failed collection looked like a successful one.
           set -o pipefail
           set +e
+          # A probe run reports what an endpoint actually serves and writes
+          # nothing, so publishing is skipped for it below.
           python collector/run.py \
             --data-dir published/data \
+            ${{ github.event.inputs.probe && format('--probe-{0}', github.event.inputs.probe) || '' }} \
             ${{ github.event.inputs.only && format('--only {0}', github.event.inputs.only) || '' }} \
             | tee collect.log
           echo "exit_code=$?" >> "$GITHUB_OUTPUT"
 
       - name: Publish
+        # A probe writes no data; publishing would commit nothing and the
+        # staleness marker would be updated for a run that collected nothing.
+        if: "!github.event.inputs.probe"
         working-directory: published
         env:
           OURS: ${{ github.sha }}
