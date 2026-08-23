@@ -194,12 +194,34 @@ def candidate_finance(candidate_id: str, name: str, hint: str | None, warnings: 
 
 
 def outside_spending(fec_ids: dict[str, str], warnings: list[str]) -> OutsideSpending:
-    """Independent expenditures for and against each candidate."""
+    """Independent expenditures for and against each candidate.
+
+    The for/against split is checked before it is published. openFEC's
+    by_candidate endpoint returned byte-identical rows for both values of
+    support_oppose_indicator on the first live run with a real API key: the same
+    $214,014.88 appeared as money supporting Marshall and money opposing him, the
+    published total was exactly twice the real figure, and every committee —
+    Senate Conservatives Fund included — was labelled as both supporting and
+    opposing the same candidate.
+
+    A committee cannot support and oppose the same candidate for the same amount.
+    That is a contradiction, not a close call, so it is detected and the split is
+    withheld for that candidate rather than published. Whether the endpoint
+    ignores the parameter, or wants it spelled differently, is not knowable from
+    the aggregate alone — so the warning reports the row counts and sums it
+    actually saw, which is what the next run needs to settle it.
+    """
     result = OutsideSpending()
-    spender_totals: dict[tuple[str, str | None], dict] = {}
+    # candidate_id -> indicator -> {(committee_id, name): dollars}
+    sides: dict[str, dict[str, dict[tuple[str | None, str], float]]] = {}
+    # Committee names learned here, to fill in the recent rows below: the
+    # by_candidate response carries them and the per-expenditure response does
+    # not, which is why every recent row read "Unidentified committee" while the
+    # top-spender list beside it had real names.
+    names: dict[str, str] = {}
 
     for candidate_id, fec_id in fec_ids.items():
-        for indicator, bucket in (("S", result.supporting), ("O", result.opposing)):
+        for indicator in ("S", "O"):
             try:
                 payload = _get(
                     "/schedules/schedule_e/by_candidate/",
@@ -213,20 +235,52 @@ def outside_spending(fec_ids: dict[str, str], warnings: list[str]) -> OutsideSpe
                 warnings.append(f"{candidate_id}: schedule E ({indicator}) unavailable ({exc})")
                 continue
 
+            rows: dict[tuple[str | None, str], float] = {}
             for row in payload.get("results", []):
-                amount = _as_float(row.get("total"))
-                bucket[candidate_id] = bucket.get(candidate_id, 0.0) + amount
+                committee_id = row.get("committee_id")
                 name = row.get("committee_name") or "Unidentified committee"
-                key = (name, row.get("committee_id"))
+                if committee_id and name != "Unidentified committee":
+                    names[committee_id] = name
+                key = (committee_id, name)
+                rows[key] = rows.get(key, 0.0) + _as_float(row.get("total"))
+            sides.setdefault(candidate_id, {})[indicator] = rows
+
+        support = sides.get(candidate_id, {}).get("S", {})
+        oppose = sides.get(candidate_id, {}).get("O", {})
+        contradictions = {
+            key
+            for key in set(support) & set(oppose)
+            # Equal to the cent on both sides. A committee genuinely doing both
+            # would not spend the identical amount each way.
+            if abs(support[key] - oppose[key]) < 0.005
+        }
+        if contradictions:
+            warnings.append(
+                f"{candidate_id}: schedule E returned the same rows for support and "
+                f"oppose — {len(contradictions)} committee(s) identical to the cent, "
+                f"${sum(support[k] for k in contradictions):,.2f} on each side. The "
+                "support_oppose_indicator filter is not being applied, so no "
+                "for/against split is published for this candidate."
+            )
+            sides.pop(candidate_id, None)
+
+    for candidate_id, indicators in sides.items():
+        for indicator, bucket in (("S", result.supporting), ("O", result.opposing)):
+            total = sum(indicators.get(indicator, {}).values())
+            if total:
+                bucket[candidate_id] = total
+
+    spender_totals: dict[tuple[str | None, str], dict] = {}
+    for candidate_id, indicators in sides.items():
+        for indicator, rows in indicators.items():
+            for key, amount in rows.items():
                 entry = spender_totals.setdefault(
                     key, {"amount": 0.0, "supports": None, "opposes": None}
                 )
                 entry["amount"] += amount
-                if indicator == "S":
-                    entry["supports"] = candidate_id
-                else:
-                    entry["opposes"] = candidate_id
+                entry["supports" if indicator == "S" else "opposes"] = candidate_id
 
+    for candidate_id, fec_id in fec_ids.items():
         try:
             payload = _get(
                 "/schedules/schedule_e/",
@@ -245,11 +299,16 @@ def outside_spending(fec_ids: dict[str, str], warnings: list[str]) -> OutsideSpe
             when = _as_date(row.get("expenditure_date"))
             if when is None:
                 continue
+            committee_id = row.get("committee_id")
             result.recent.append(
                 IndependentExpenditure(
                     date=when,
-                    committee_id=row.get("committee_id"),
-                    committee_name=row.get("committee_name") or "Unidentified committee",
+                    committee_id=committee_id,
+                    committee_name=(
+                        row.get("committee_name")
+                        or names.get(committee_id or "")
+                        or "Unidentified committee"
+                    ),
                     amount=_as_float(row.get("expenditure_amount")),
                     support_oppose=(row.get("support_oppose_indicator") or "O").upper()[:1],
                     candidate_id=candidate_id,
@@ -266,12 +325,30 @@ def outside_spending(fec_ids: dict[str, str], warnings: list[str]) -> OutsideSpe
             supports=entry["supports"],
             opposes=entry["opposes"],
         )
-        for (name, committee_id), entry in sorted(
+        for (committee_id, name), entry in sorted(
             spender_totals.items(), key=lambda kv: kv[1]["amount"], reverse=True
         )[:MAX_TOP_SPENDERS]
     ]
-    result.recent.sort(key=lambda e: e.date, reverse=True)
-    result.recent = result.recent[:MAX_RECENT_EXPENDITURES]
+
+    # The same expenditure came back more than once — the live run published two
+    # identical $586,399 TV placements dated 2026-08-06, among others. Amendments
+    # and re-filings legitimately repeat a row, so identical rows are collapsed.
+    seen: set[tuple] = set()
+    deduped: list[IndependentExpenditure] = []
+    for item in sorted(result.recent, key=lambda e: e.date, reverse=True):
+        fingerprint = (
+            item.date,
+            item.committee_id,
+            round(item.amount, 2),
+            item.candidate_id,
+            item.support_oppose,
+            item.purpose,
+        )
+        if fingerprint in seen:
+            continue
+        seen.add(fingerprint)
+        deduped.append(item)
+    result.recent = deduped[:MAX_RECENT_EXPENDITURES]
     return result
 
 

@@ -295,3 +295,117 @@ class TestMarketHistoryEpoch:
         before = (tmp_path / "markets.json").read_text()
         run.run(["markets"], str(tmp_path), write=True)
         assert (tmp_path / "markets.json").read_text() == before
+
+
+class TestOutsideSpendingContradiction:
+    """A committee cannot support and oppose the same candidate for the same sum.
+
+    The first live run with a real FEC key published exactly that: $214,014.88 as
+    money supporting Marshall and the identical figure as money opposing him, a
+    total of twice the real amount, and Senate Conservatives Fund labelled both
+    ways. openFEC's by_candidate endpoint had returned the same rows for both
+    values of support_oppose_indicator.
+    """
+
+    def _patched(self, monkeypatch, support_rows, oppose_rows, recent=()):
+        import sources.finance as finance
+
+        def fake_get(path, params=None):
+            params = params or {}
+            if path.startswith("/schedules/schedule_e/by_candidate"):
+                indicator = params.get("support_oppose_indicator")
+                return {"results": support_rows if indicator == "S" else oppose_rows}
+            if path.startswith("/schedules/schedule_e/"):
+                return {"results": list(recent)}
+            return {"results": []}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        return finance
+
+    ROWS = [
+        {"committee_id": "C00448696", "committee_name": "SENATE CONSERVATIVES FUND", "total": 180108.96},
+        {"committee_id": "C00524181", "committee_name": "SENATE CONSERVATIVES ACTION", "total": 33905.92},
+    ]
+
+    def test_identical_sides_are_withheld_not_published(self, monkeypatch):
+        finance = self._patched(monkeypatch, self.ROWS, self.ROWS)
+        warnings: list[str] = []
+        result = finance.outside_spending({"marshall": "S0KS00315"}, warnings)
+
+        assert result.supporting == {}
+        assert result.opposing == {}
+        assert result.total == 0.0
+        assert result.top_spenders == []
+        assert any("same rows for support and oppose" in w for w in warnings), warnings
+
+    def test_the_warning_reports_what_it_saw(self, monkeypatch):
+        finance = self._patched(monkeypatch, self.ROWS, self.ROWS)
+        warnings: list[str] = []
+        finance.outside_spending({"marshall": "S0KS00315"}, warnings)
+
+        note = next(w for w in warnings if "same rows" in w)
+        assert "2 committee(s)" in note
+        assert "214,014.88" in note
+
+    def test_a_genuine_split_is_published(self, monkeypatch):
+        """Different committees on each side is the normal, correct case."""
+        finance = self._patched(
+            monkeypatch,
+            [{"committee_id": "C1", "committee_name": "PRO PAC", "total": 100000.0}],
+            [{"committee_id": "C2", "committee_name": "ANTI PAC", "total": 40000.0}],
+        )
+        warnings: list[str] = []
+        result = finance.outside_spending({"marshall": "S0KS00315"}, warnings)
+
+        assert result.supporting == {"marshall": 100000.0}
+        assert result.opposing == {"marshall": 40000.0}
+        assert result.total == 140000.0
+        assert not any("same rows" in w for w in warnings)
+        by_name = {s.committee_name: s for s in result.top_spenders}
+        assert by_name["PRO PAC"].supports == "marshall"
+        assert by_name["PRO PAC"].opposes is None
+        assert by_name["ANTI PAC"].opposes == "marshall"
+
+    def test_one_committee_on_both_sides_with_different_sums_is_kept(self, monkeypatch):
+        """Only equal-to-the-cent duplication is the impossible case."""
+        finance = self._patched(
+            monkeypatch,
+            [{"committee_id": "C1", "committee_name": "BOTH PAC", "total": 90000.0}],
+            [{"committee_id": "C1", "committee_name": "BOTH PAC", "total": 12.5}],
+        )
+        warnings: list[str] = []
+        result = finance.outside_spending({"marshall": "S0KS00315"}, warnings)
+
+        assert result.supporting == {"marshall": 90000.0}
+        assert result.opposing == {"marshall": 12.5}
+        assert not any("same rows" in w for w in warnings)
+
+    def test_recent_rows_are_deduplicated(self, monkeypatch):
+        duplicate = {
+            "expenditure_date": "2026-08-06",
+            "committee_id": "C00957928",
+            "expenditure_amount": 586399.0,
+            "support_oppose_indicator": "O",
+            "expenditure_description": "PLACED MEDIA: TV",
+        }
+        finance = self._patched(monkeypatch, [], [], recent=[duplicate, dict(duplicate)])
+        result = finance.outside_spending({"hamilton": "S6KS00312"}, [])
+        assert len(result.recent) == 1
+
+    def test_a_committee_name_is_filled_in_from_the_aggregate(self, monkeypatch):
+        """recent rows carry no committee_name; the by_candidate rows do."""
+        finance = self._patched(
+            monkeypatch,
+            [{"committee_id": "C00957928", "committee_name": "REAL PAC NAME", "total": 500.0}],
+            [],
+            recent=[
+                {
+                    "expenditure_date": "2026-08-06",
+                    "committee_id": "C00957928",
+                    "expenditure_amount": 1000.0,
+                    "support_oppose_indicator": "O",
+                }
+            ],
+        )
+        result = finance.outside_spending({"marshall": "S0KS00315"}, [])
+        assert result.recent[0].committee_name == "REAL PAC NAME"
