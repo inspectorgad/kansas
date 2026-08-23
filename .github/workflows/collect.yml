@@ -27,6 +27,10 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
+        with:
+          # Full history, so the staleness guard below can ask git whether the
+          # commit that last wrote the data branch is an ancestor of this one.
+          fetch-depth: 0
 
       # The data branch is prepared by hand rather than with actions/checkout.
       #
@@ -92,8 +96,38 @@ jobs:
 
       - name: Publish
         working-directory: published
+        env:
+          OURS: ${{ github.sha }}
         run: |
-          git add -A data
+          # Refuse to overwrite data written by newer code.
+          #
+          # This is not hypothetical. A workflow_dispatch run created at 15:30 on
+          # f181451 finished at 16:20 — after two fixes had landed and after a
+          # later scheduled run had published correct figures — and its old-code
+          # output replaced them. Hamilton vanished from outside spending again,
+          # the $214,014.88 double-count came back, and every committee was once
+          # more labelled as both supporting and opposing the same candidate.
+          #
+          # Timestamps cannot catch this: the stale run generated its payload at
+          # 16:20, genuinely later than the good one. What separates them is the
+          # commit, so the commit is what gets compared. The concurrency group
+          # serialises runs but says nothing about which code version they carry.
+          PREVIOUS=""
+          if [ -f collector-sha.txt ]; then
+            PREVIOUS="$(tr -d '[:space:]' < collector-sha.txt)"
+          fi
+          if [ -n "$PREVIOUS" ] && [ "$PREVIOUS" != "$OURS" ]; then
+            # Ours is an ancestor of what is already published, so that came from
+            # later code and this run is stale.
+            if git -C "$GITHUB_WORKSPACE" merge-base --is-ancestor "$OURS" "$PREVIOUS" 2>/dev/null; then
+              echo "::warning::Skipping publish. This run is on $OURS; the data branch"
+              echo "::warning::was written by $PREVIOUS, which is newer. Nothing overwritten."
+              exit 0
+            fi
+          fi
+          printf '%s\n' "$OURS" > collector-sha.txt
+
+          git add -A data collector-sha.txt
           if git diff --cached --quiet; then
             echo "Nothing changed; not committing."
             exit 0
