@@ -24,6 +24,17 @@ android {
             "DATA_BASE_URL",
             "\"${project.findProperty("dataBaseUrl") ?: "https://raw.githubusercontent.com/inspectorgad/kansas/data/data/"}\"",
         )
+
+        // Which build this is. Every CI artifact is uploaded under the same name,
+        // so without this there is no way to tell a freshly installed APK from
+        // one built hours earlier — and the symptom of running an old one is a
+        // feature simply not appearing, which reads exactly like a broken feature.
+        // Surfaced under Settings > About.
+        buildConfigField(
+            "String",
+            "GIT_SHA",
+            "\"${(System.getenv("GITHUB_SHA") ?: "local").take(7)}\"",
+        )
     }
 
     buildTypes {

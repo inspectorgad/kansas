@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import org.ksrace.senate2026.data.DataFile
 import org.ksrace.senate2026.data.RaceSnapshot
 import org.ksrace.senate2026.format.formatAge
+import org.ksrace.senate2026.BuildConfig
 import org.ksrace.senate2026.ui.components.SectionCard
 import org.ksrace.senate2026.ui.components.ThinDivider
 import org.ksrace.senate2026.work.PreferenceStore
@@ -197,6 +198,14 @@ fun SettingsScreen(
                         "affiliated with either campaign, any election authority, or any news " +
                         "organisation.",
                     style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Spacer(Modifier.height(8.dp))
+                // Which build this is, so "the feature is missing" can be told
+                // apart from "this APK predates the feature".
+                Text(
+                    text = "Build ${BuildConfig.VERSION_NAME} (${BuildConfig.GIT_SHA})",
+                    style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
