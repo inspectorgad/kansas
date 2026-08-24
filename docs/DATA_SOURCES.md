@@ -13,7 +13,7 @@ per-host delay.
 | **Polymarket** | Win probability | Gamma API, no auth | Continuous | Returns some list fields as JSON-encoded strings. |
 | **FEC (openFEC)** | Receipts, disbursements, cash on hand, in-state share, independent expenditures, filings | `api.data.gov` key (free) | Per filing | Public domain. Candidate ids are resolved at runtime, never trusted from config. The for/against split is summed from each expenditure's own `support_oppose_indicator`, not from `schedule_e/by_candidate` — see below. |
 | **Kansas newsrooms** — Kansas Reflector, KCUR, KWCH, KSNT | Headlines | RSS | Continuous | Headline, outlet and link only; paywalled outlets get no summary. Topeka Capital-Journal, Lawrence Journal-World, Kansas Public Radio and the KC Star widget URL were dropped after each answered 404 or timed out on live runs. `--probe-news` reports, per feed, how many entries it served and how many the relevance filter kept — which is what separates a dead feed from a feed with no race coverage from a filter that is too strict. |
-| **GDELT 2.0** | Wider news sweep | Doc API, no key | Continuous | Catches coverage the local feeds miss. |
+| **GDELT 2.0** | Wider news sweep | Doc API, no key | Continuous | Intended to catch coverage the local feeds miss; has contributed **nothing**, answering HTTP 429 on every attempt of every run. Part of that was ours: the retry schedule slept 1s then 2s, inside the window it was waiting out, so all three attempts were spent throttled. Throttles now back off from 5s and honour `Retry-After`. If it still 429s from shared runner IPs, the Google News search feed in `CANDIDATE_NEWS_FEEDS` does the same job. |
 | **Cook Political Report, Sabato's Crystal Ball, Inside Elections** | Race ratings | Page scrape | Rare | **Disabled.** All three answer 403 Forbidden to this collector — a block, not a moved page — so no parser change reaches them. A rating change would be among the more newsworthy events in the race, which is why the probe stays. |
 
 ## Collecting, format unverified
@@ -31,6 +31,31 @@ collector was written in.
 | **Kansas Secretary of State** | Voter registration by county and party | Published statistics | Collecting, monthly cadence. Statistics are sometimes published as PDF or XLSX, which the table parser cannot read; `--probe-ground` says which. |
 | **County election offices** — Johnson, Sedgwick, Shawnee, Wyandotte, Douglas | Advance ballots sent, returned, in-person | Public dashboards | Collecting. **Partial coverage by design.** Kansas publishes no statewide daily feed. These five counties hold roughly half the state's registered voters and lean urban; the payload says so and the app labels it. A dashboard that cannot be read is reported as *uncovered*, never as zero. |
 | **Kansas SoS election night reporting** (`ent.sos.ks.gov`) | Live returns, statewide and by county | Goes live 5pm CT, Nov 3 | Handles a JSON feed, embedded JSON, or an HTML table. Collection switches on automatically three days out. **Probe it against the August 2026 primary archive before election day** — see [ELECTION_NIGHT.md](ELECTION_NIGHT.md). Paid AP Elections API is the named fallback. |
+
+### What the news probe found on 2026-08-24
+
+Worth recording, because the symptom pointed at the wrong culprit. `news.json` was
+showing seven items, all from one outlet, none newer than five days — which reads
+like a broken parser or an over-strict filter.
+
+```
+Kansas Reflector  100 entries   kept 7   near-miss 0   no candidate 93
+KCUR               10 entries   kept 0   near-miss 0   no candidate 10
+KWCH               20 entries   kept 0   near-miss 0   no candidate 20
+KSNT               50 entries   kept 0   near-miss 0   no candidate 50
+GDELT              HTTP 429
+```
+
+Every feed answered, none was stale, none was malformed, and across 180 entries
+there were **zero near misses** — not one headline that named a candidate and got
+dropped. `is_relevant` is exonerated by count, not by argument.
+
+The feeds are the problem. KWCH's and KSNT's configured URLs are general-news
+firehoses, KCUR's politics feed is ten items deep, and Kansas Reflector was
+carrying the tracker alone. `CANDIDATE_NEWS_FEEDS` holds replacements — politics
+sections, outlets we do not read, and a Google News search feed — none of them
+adopted until the probe has seen it answer and carry this race. Guessing four FCC
+paths blind already cost four 404s a run.
 
 ## Deliberately out of scope
 

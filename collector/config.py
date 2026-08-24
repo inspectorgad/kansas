@@ -94,6 +94,44 @@ NEWS_FEEDS: list[Feed] = [
     # a 404 per outlet per run is noise that buries real failures.
 ]
 
+# Feeds not yet adopted, tested only by `--probe-news`. Nothing here is fetched
+# on a scheduled run.
+#
+# The four adopted feeds answered every request of the 2026-08-24 probe and were
+# still wrong: KWCH and KSNT serve general-news firehoses (crime, weather, K-State
+# volleyball) rather than politics, KCUR's politics feed is only ten items deep,
+# and Kansas Reflector was carrying the entire tracker by itself. None of these
+# candidates is reachable from the environment the collector is written in, and
+# guessing four FCC paths blind already cost four 404s a run, so they are probed
+# before any is adopted.
+CANDIDATE_NEWS_FEEDS: list[Feed] = [
+    # Politics sections of outlets whose general feed we already read.
+    Feed("KSNT politics", "https://www.ksnt.com/news/politics/feed/"),
+    Feed("KSNT Capitol Bureau", "https://www.ksnt.com/news/capitol-bureau/feed/"),
+    Feed("KWCH politics", "https://www.kwch.com/arc/outboundfeeds/rss/category/news/politics/"),
+    # Outlets we do not read at all. The Capital-Journal and KC Star URLs here are
+    # different paths from the ones dropped earlier for 404ing.
+    Feed("Topeka Capital-Journal politics",
+         "https://www.cjonline.com/arc/outboundfeeds/rss/category/news/politics/",
+         paywalled=True),
+    Feed("Wichita Eagle politics",
+         "https://www.kansas.com/news/politics-government/?widgetName=rssfeed"
+         "&widgetContentId=712015&getXmlFeed=true",
+         paywalled=True),
+    Feed("Kansas City Star politics",
+         "https://www.kansascity.com/news/politics-government/?widgetName=rssfeed"
+         "&widgetContentId=712015&getXmlFeed=true",
+         paywalled=True),
+    Feed("KAKE", "https://www.kake.com/rss/news/"),
+    Feed("Kansas Public Radio", "https://kansaspublicradio.org/feed/"),
+    Feed("Salina Post politics", "https://www.salinapost.com/search/?f=rss&t=article&c=news"),
+    # A search feed rather than a section: it returns coverage of this race from
+    # any outlet, which is the job GDELT was meant to do and has never done.
+    Feed("Google News search",
+         "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+"
+         "%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"),
+]
+
 # GDELT casts a wider net than the local feeds and needs no key.
 GDELT_DOC_API = "https://api.gdeltproject.org/api/v2/doc/doc"
 GDELT_QUERY = '("Roger Marshall" OR "Adam Hamilton") ("Kansas Senate" OR "U.S. Senate")'
@@ -212,6 +250,15 @@ USER_AGENT = (
 )
 REQUEST_TIMEOUT = 30.0
 MAX_RETRIES = 3
+
+# A 429 means we tripped a rate limit, so the wait has to outlast the window we
+# tripped. The plain 2**attempt schedule sleeps 1s then 2s, and GDELT — whose free
+# doc API throttles on the order of seconds — answered 429 on all three attempts
+# of every run since collection started. Those retries were spent inside the
+# window they were waiting out, so they could not have succeeded. A Retry-After
+# header from the server wins over both of these.
+THROTTLE_BACKOFF_BASE = 5.0
+THROTTLE_BACKOFF_CAP = 30.0
 DATA_DIR = os.environ.get("DATA_DIR", "data")
 HISTORY_DIR = "history"
 

@@ -17,7 +17,7 @@ from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from urllib.parse import urlparse, urlunparse
 
-from config import GDELT_DOC_API, GDELT_QUERY, NEWS_FEEDS
+from config import CANDIDATE_NEWS_FEEDS, GDELT_DOC_API, GDELT_QUERY, NEWS_FEEDS
 from fetch import SourceError, get_json, get_text
 from schemas import HAMILTON, MARSHALL, Attribution
 from schemas.news import NewsItem
@@ -232,75 +232,84 @@ def _reject_reason(title: str, summary: str = "") -> str | None:
     return f"bare surname ({who}) and the office is not named"
 
 
+def _probe_feed(feed, lines: list[str]) -> None:
+    """Report one feed: did it answer, what did it carry, what did we keep."""
+    import feedparser
+
+    lines.append(f"\n[{feed.name}]{' (paywalled)' if feed.paywalled else ''}")
+    lines.append(f"  {feed.url}")
+    try:
+        body = get_text(feed.url)
+    except SourceError as exc:
+        lines.append(f"  FAILED: {exc}")
+        return
+
+    parsed = feedparser.parse(body)
+    lines.append(f"  {len(body):,} bytes, {len(parsed.entries)} entries, bozo={parsed.bozo}")
+    if parsed.bozo and getattr(parsed, "bozo_exception", None):
+        lines.append(f"  bozo_exception: {parsed.bozo_exception}")
+    if not parsed.entries:
+        lines.append(f"  first 300 chars: {body.strip()[:300]!r}")
+        return
+
+    stamps = [t for t in (_parse_feed_time(e) for e in parsed.entries) if t]
+    if stamps:
+        lines.append(
+            f"  newest entry: {max(stamps).isoformat()}   oldest: {min(stamps).isoformat()}"
+        )
+    else:
+        lines.append("  no parseable dates on any entry")
+
+    kept: list[str] = []
+    near: list[str] = []
+    far = 0
+    for entry in parsed.entries:
+        title = (entry.get("title") or "").strip()
+        link = (entry.get("link") or "").strip()
+        if not title or not link:
+            continue
+        summary = re.sub(r"<[^>]+>", " ", entry.get("summary") or "")[:400]
+        reason = _reject_reason(title, summary)
+        if reason is None:
+            kept.append(title)
+        elif reason == "no candidate named":
+            far += 1
+        else:
+            near.append(f"{title}  <-- {reason}")
+
+    lines.append(f"  kept: {len(kept)}   near-miss: {len(near)}   no candidate at all: {far}")
+    for title in kept[:5]:
+        lines.append(f"    KEEP  {title[:110]}")
+    # The near misses are the diagnostic ones: race coverage our own filter
+    # dropped. Anything listed here is a candidate rule change.
+    for note in near[:8]:
+        lines.append(f"    DROP  {note[:150]}")
+    if not kept and not near:
+        lines.append("    (this feed carries no coverage naming either candidate)")
+        for entry in parsed.entries[:5]:
+            lines.append(f"    ----  {(entry.get('title') or '')[:110]}")
+
+
 def diagnose() -> str:
     """Report what each news feed serves and what the relevance filter does to it.
 
-    news.json has published seven items, every one of them Kansas Reflector, with
-    nothing newer than several days old — while four feeds plus GDELT are
-    configured. That single symptom covers three different problems: feeds that
-    answer nothing, feeds that answer but carry no race coverage, and feeds whose
-    race coverage is_relevant is throwing away. Only the last is a bug in our
-    code, and the counts below are what separate them.
-    """
-    import feedparser
+    The 2026-08-24 run settled the first question this was built for: all four
+    adopted feeds answered, none was stale, and across 180 entries there were zero
+    near misses — not one headline named a candidate and got dropped. The filter is
+    not the problem; the feeds are. Three of the four carry no politics at all and
+    GDELT has never returned anything but 429.
 
+    So the probe now also tests CANDIDATE_NEWS_FEEDS: feeds we do not collect,
+    reported the same way, so a replacement is adopted on evidence that it answers
+    and carries this race rather than on a guess about its URL.
+    """
     lines = ["News probe", "=" * 72]
     lines.append("\nfilter: sources/news.py:is_relevant")
 
+    lines.append("\n\nADOPTED — collected on every run")
+    lines.append("-" * 72)
     for feed in NEWS_FEEDS:
-        lines.append(f"\n[{feed.name}]{' (paywalled)' if feed.paywalled else ''}")
-        lines.append(f"  {feed.url}")
-        try:
-            body = get_text(feed.url)
-        except SourceError as exc:
-            lines.append(f"  FAILED: {exc}")
-            continue
-
-        parsed = feedparser.parse(body)
-        lines.append(f"  {len(body):,} bytes, {len(parsed.entries)} entries, bozo={parsed.bozo}")
-        if parsed.bozo and getattr(parsed, "bozo_exception", None):
-            lines.append(f"  bozo_exception: {parsed.bozo_exception}")
-        if not parsed.entries:
-            lines.append(f"  first 300 chars: {body.strip()[:300]!r}")
-            continue
-
-        stamps = [t for t in (_parse_feed_time(e) for e in parsed.entries) if t]
-        if stamps:
-            lines.append(
-                f"  newest entry: {max(stamps).isoformat()}   "
-                f"oldest: {min(stamps).isoformat()}"
-            )
-        else:
-            lines.append("  no parseable dates on any entry")
-
-        kept: list[str] = []
-        near: list[str] = []
-        far = 0
-        for entry in parsed.entries:
-            title = (entry.get("title") or "").strip()
-            link = (entry.get("link") or "").strip()
-            if not title or not link:
-                continue
-            summary = re.sub(r"<[^>]+>", " ", entry.get("summary") or "")[:400]
-            reason = _reject_reason(title, summary)
-            if reason is None:
-                kept.append(title)
-            elif reason == "no candidate named":
-                far += 1
-            else:
-                near.append(f"{title}  <-- {reason}")
-
-        lines.append(f"  kept: {len(kept)}   near-miss: {len(near)}   no candidate at all: {far}")
-        for title in kept[:5]:
-            lines.append(f"    KEEP  {title[:110]}")
-        # The near misses are the diagnostic ones: race coverage our own filter
-        # dropped. Anything listed here is a candidate rule change.
-        for note in near[:8]:
-            lines.append(f"    DROP  {note[:150]}")
-        if not kept and not near:
-            lines.append("    (this feed carries no coverage naming either candidate)")
-            for entry in parsed.entries[:5]:
-                lines.append(f"    ----  {(entry.get('title') or '')[:110]}")
+        _probe_feed(feed, lines)
 
     lines.append("\n[GDELT]")
     lines.append(f"  {GDELT_DOC_API}")
@@ -339,5 +348,12 @@ def diagnose() -> str:
             lines.append(f"    KEEP  {title[:110]}")
         for note in dropped_g[:5]:
             lines.append(f"    DROP  {note[:150]}")
+
+    lines.append("\n\nCANDIDATES — not collected, tested here only")
+    lines.append("-" * 72)
+    lines.append("Adopt one by moving it into config.NEWS_FEEDS. A feed worth adopting")
+    lines.append("answers, is more than a few days deep, and shows a non-zero kept count.")
+    for feed in CANDIDATE_NEWS_FEEDS:
+        _probe_feed(feed, lines)
 
     return "\n".join(lines)

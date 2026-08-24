@@ -23,7 +23,13 @@ from typing import Any
 
 import httpx
 
-from config import MAX_RETRIES, REQUEST_TIMEOUT, USER_AGENT
+from config import (
+    MAX_RETRIES,
+    REQUEST_TIMEOUT,
+    THROTTLE_BACKOFF_BASE,
+    THROTTLE_BACKOFF_CAP,
+    USER_AGENT,
+)
 
 FIXTURE_DIR = Path(__file__).parent / "tests" / "fixtures"
 _MIN_HOST_INTERVAL = 0.5  # seconds between requests to the same host
@@ -72,6 +78,29 @@ def _throttle(url: str) -> None:
     _last_request_at[host] = time.monotonic()
 
 
+def _retry_delay(error: Exception, attempt: int) -> float:
+    """How long to wait before retrying, in seconds.
+
+    Throttling is a different failure from a transient server error and needs a
+    different wait: a 5xx clears on its own, while a 429 clears only once we stop
+    asking. See config.THROTTLE_BACKOFF_BASE for what the plain schedule got wrong.
+    """
+    response = getattr(error, "response", None)
+    if response is None or response.status_code != 429:
+        return float(2**attempt)
+
+    asked = 0.0
+    header = response.headers.get("Retry-After", "")
+    try:
+        # Retry-After may also be an HTTP date, which we do not honour: a
+        # server that wants us back at a wall-clock time gets our own backoff
+        # instead, which is never shorter than the base.
+        asked = float(header)
+    except ValueError:
+        asked = 0.0
+    return min(max(asked, THROTTLE_BACKOFF_BASE * 2**attempt), THROTTLE_BACKOFF_CAP)
+
+
 def get_text(url: str, params: dict[str, Any] | None = None) -> str:
     """GET a URL and return its body, or replay a recorded fixture."""
     if fixture_mode():
@@ -101,7 +130,7 @@ def get_text(url: str, params: dict[str, Any] | None = None) -> str:
         except (httpx.HTTPError, httpx.HTTPStatusError) as exc:
             last_error = exc
             if attempt < MAX_RETRIES - 1:
-                time.sleep(2**attempt)
+                time.sleep(_retry_delay(exc, attempt))
     raise SourceError(f"GET {url} failed after {MAX_RETRIES} attempts: {last_error}")
 
 
