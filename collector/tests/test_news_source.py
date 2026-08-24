@@ -101,3 +101,52 @@ class TestRejectReason:
     def test_says_which_candidate_was_matched(self):
         assert "marshall" in _reject_reason("Marshall County fair opens Saturday")
         assert "hamilton" in _reject_reason("Lewis Hamilton wins the Grand Prix")
+
+
+RSS = """<?xml version="1.0"?><rss version="2.0"><channel>
+<item><title>{a}</title><link>https://ex.test/1</link></item>
+<item><title>{b}</title><link>https://ex.test/2</link></item>
+</channel></rss>"""
+
+
+class TestFeedYieldReporting:
+    """Per-feed yield is reported on ordinary runs, not only under a probe.
+
+    A tracker showing one outlet and nothing for five days needed a hand-run probe
+    to explain itself, while the numbers that explained it were already being
+    computed and discarded.
+    """
+
+    def _run(self, monkeypatch, body):
+        import config
+        from sources import news
+
+        monkeypatch.setattr(config, "NEWS_FEEDS", [config.Feed("Test Wire", "https://ex.test/f")])
+        monkeypatch.setattr(news, "NEWS_FEEDS", config.NEWS_FEEDS)
+        monkeypatch.setattr(news, "get_text", lambda url, params=None: body)
+        warnings: list[str] = []
+        news.from_feeds(warnings)
+        return warnings
+
+    def test_reports_kept_over_total(self, monkeypatch):
+        warnings = self._run(
+            monkeypatch,
+            RSS.format(a="Marshall and Hamilton debate", b="Wichita weather"),
+        )
+        assert any("feed yield (kept/entries): Test Wire 1/2" in w for w in warnings)
+
+    def test_a_feed_yielding_nothing_still_reports(self, monkeypatch):
+        warnings = self._run(monkeypatch, RSS.format(a="Local fair", b="Traffic stop"))
+        assert any("Test Wire 0/2" in w for w in warnings)
+
+    def test_a_dropped_headline_naming_a_candidate_is_flagged(self, monkeypatch):
+        # The signature of filter drift, and the only rejection worth a warning.
+        warnings = self._run(
+            monkeypatch,
+            RSS.format(a="Roger Marshall tours a salt mine", b="Wichita weather"),
+        )
+        assert any("named a candidate and were dropped" in w for w in warnings)
+
+    def test_ordinary_local_news_raises_no_drift_warning(self, monkeypatch):
+        warnings = self._run(monkeypatch, RSS.format(a="Local fair", b="Traffic stop"))
+        assert not any("named a candidate" in w for w in warnings)

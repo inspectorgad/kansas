@@ -94,6 +94,8 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
 
     items: dict[str, NewsItem] = {}
     attribution: list[Attribution] = []
+    yields: list[str] = []
+    near_misses: list[str] = []
 
     for feed in NEWS_FEEDS:
         try:
@@ -108,6 +110,7 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
             continue
 
         matched = 0
+        near = 0
         for entry in parsed.entries:
             title = (entry.get("title") or "").strip()
             link = (entry.get("link") or "").strip()
@@ -115,6 +118,12 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
                 continue
             summary = re.sub(r"<[^>]+>", " ", entry.get("summary") or "")[:400]
             if not is_relevant(title, summary):
+                # A headline that names a candidate and still gets dropped is the
+                # one rejection worth seeing without running a probe: it is the
+                # signature of a filter that has drifted from the coverage.
+                if _reject_reason(title, summary) != "no candidate named":
+                    near += 1
+                    near_misses.append(f"{feed.name}: {title[:100]}")
                 continue
             identifier = item_id(link)
             items[identifier] = NewsItem(
@@ -129,6 +138,8 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
             )
             matched += 1
 
+        yields.append(f"{feed.name} {matched}/{len(parsed.entries)}")
+
         if matched:
             attribution.append(
                 Attribution(
@@ -137,6 +148,17 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
                     note="Headline and link only." if feed.paywalled else None,
                 )
             )
+
+    # Reported on every run, not just under a probe. The per-feed yield is already
+    # computed above and was being thrown away, which is why a tracker showing one
+    # outlet and nothing for five days needed a special run to explain itself.
+    if yields:
+        warnings.append("feed yield (kept/entries): " + ", ".join(yields))
+    if near_misses:
+        warnings.append(
+            f"{len(near_misses)} headline(s) named a candidate and were dropped "
+            "— the filter may have drifted: " + "; ".join(near_misses[:5])
+        )
 
     return list(items.values()), attribution
 
