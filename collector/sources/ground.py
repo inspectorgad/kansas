@@ -82,6 +82,26 @@ ANCHOR_WINDOW = 90
 
 NUMBER = re.compile(r"\b\d{1,3}(?:,\d{3})+\b|\b\d{3,7}\b")
 
+# A bare four-digit number in this range is a year, not a count.
+#
+# The probe on 2026-08-24 reported "in-person=2026" for both Johnson and Sedgwick
+# counties. That is the year, sitting next to the phrase "advance voting" in a
+# heading, being read as a turnout figure. Harmless today only because advance
+# voting is gated until October 14 — from that date it would have published 2,026
+# in-person votes in two of the largest counties in the state.
+#
+# The discriminator is the thousands separator, and it comes from the pages
+# themselves: they write counts as 14,195 and 6,900 and 8,455, and years as 2026.
+# So a four-digit run with no separator, inside the range a year could occupy, is
+# refused. A real count of 2,026 written with its separator still parses; one
+# written bare is lost, which is a visible gap rather than a confident wrong
+# number, and the probe prints None where it happens.
+YEAR_RANGE = range(1990, 2100)
+
+
+def _is_year(raw: str) -> bool:
+    return "," not in raw and len(raw) == 4 and int(raw) in YEAR_RANGE
+
 
 def _number_near(
     text: str, anchor: re.Match[str], claimed: set[int] | None = None
@@ -108,7 +128,10 @@ def _number_near(
         position = match.start()
         if position in claimed:
             continue
-        value = _to_int(match.group(0))
+        raw = match.group(0)
+        if _is_year(raw):
+            continue
+        value = _to_int(raw)
         if value is None:
             continue
 

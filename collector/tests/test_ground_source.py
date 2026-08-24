@@ -183,3 +183,66 @@ class TestAdvanceVotingWindow:
         assert result.advance_ballots.counties_covered == []
         assert any("advance voting opens" in w for w in result.warnings)
         assert calls == []
+
+
+class TestAYearIsNotAVoteCount:
+    """The probe reported "in-person=2026" for Johnson and Sedgwick.
+
+    That is the year, sitting beside the phrase "advance voting" in a heading,
+    read as a turnout figure. Harmless only because advance voting is gated until
+    October 14 — from that date it would have published 2,026 in-person votes in
+    two of the largest counties in Kansas.
+
+    The discriminator comes from the pages themselves: they write counts as 14,195
+    and 8,455, and years as 2026.
+    """
+
+    def test_a_heading_year_yields_nothing(self):
+        from sources.ground import parse_advance
+
+        page = "<h1>Advance Voting 2026</h1><p>Check back for turnout figures.</p>"
+        assert parse_advance(page, "Johnson", "u") is None
+
+    def test_real_figures_parse_alongside_a_year(self):
+        """The year must be skipped without taking the real numbers with it."""
+        from sources.ground import parse_advance
+
+        page = (
+            "<h2>Advance Voting 2026 General Election</h2>"
+            "<p>Mail ballots sent: 14,195</p>"
+            "<p>Mail ballots returned: 8,455</p>"
+            "<p>Voted in person: 6,900</p>"
+        )
+        parsed = parse_advance(page, "Johnson", "u")
+        assert parsed.mail_ballots_sent == 14195
+        assert parsed.mail_ballots_returned == 8455
+        assert parsed.in_person_votes == 6900
+        assert parsed.total_advance == 15355
+
+    def test_a_separated_two_thousand_and_twenty_six_still_counts(self):
+        from sources.ground import parse_advance
+
+        parsed = parse_advance("<p>Voted in person: 2,026</p>", "Sedgwick", "u")
+        assert parsed.in_person_votes == 2026
+
+    def test_a_bare_year_shaped_count_is_given_up_on_purpose(self):
+        """A visible gap beats a confident wrong number."""
+        from sources.ground import parse_advance
+
+        assert parse_advance("<p>Voted in person: 2026</p>", "Sedgwick", "u") is None
+
+    @pytest.mark.parametrize("raw,is_year", [
+        ("2026", True), ("1990", True), ("2099", True),
+        ("1989", False), ("2100", False),
+        ("2,026", False), ("41205", False), ("900", False), ("14,195", False),
+    ])
+    def test_the_year_test_itself(self, raw, is_year):
+        from sources.ground import _is_year
+
+        assert _is_year(raw) is is_year
+
+    def test_five_digit_counts_are_unaffected(self):
+        from sources.ground import parse_advance
+
+        parsed = parse_advance("<p>Voted in person: 41205</p>", "Sedgwick", "u")
+        assert parsed.in_person_votes == 41205
