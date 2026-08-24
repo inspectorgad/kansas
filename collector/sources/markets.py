@@ -21,7 +21,13 @@ from datetime import UTC, datetime, timedelta
 from config import KALSHI_API, POLYMARKET_GAMMA_API
 from fetch import SourceError, get_json
 from schemas import HAMILTON, MARSHALL, Attribution
-from schemas.markets import Consensus, Market, MarketPoint
+from schemas.markets import (
+    Consensus,
+    MarginBucket,
+    MarginDistribution,
+    Market,
+    MarketPoint,
+)
 
 KALSHI_ATTRIBUTION = Attribution(
     name="Kalshi", url="https://kalshi.com", note="CFTC-regulated event exchange."
@@ -155,6 +161,7 @@ KANSAS_SENATE_TICKER = re.compile(r"KSSEN|SEN[A-Z]*KS(?![A-Z])")
 class MarketsResult:
     markets: list[Market]
     consensus: Consensus | None = None
+    margin: MarginDistribution | None = None
     attribution: list[Attribution] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
 
@@ -386,6 +393,153 @@ def describe_grid(rows: list[dict]) -> str:
         mine = "kansas" if _ticker_identifies_race(series) else "other-state"
         parts.append(f"{series} [{mine}] priced={have or 'none'} missing={missing or 'none'}")
     return "; ".join(parts)
+
+
+# The margin ladder, kept rather than discarded.
+#
+# These rungs are excluded from the win probability — a price for "will the
+# margin be at least N points" is not a probability of winning, and averaging
+# eleven of them once published Marshall at .37 when the real figure was .77.
+# But the ladder is a survival curve over the margin, and the gap between
+# adjacent rungs is the probability of landing between them. That is subtraction
+# on a monotone curve, not a model, and it answers the better question: not who
+# is favoured, but by how much.
+MARGIN_RUNG = re.compile(r"MIDTERMMOV-KSSEN([RD])-P(\d+)")
+
+
+def margin_ladder(rows: list[dict]) -> tuple[str | None, list[tuple[int, float]]]:
+    """Threshold, probability pairs for whichever party the exchange itemises.
+
+    Returns the party's candidate id and the rungs sorted by threshold. Only one
+    party is listed in practice, and mixing two would be meaningless, so the
+    better-populated side wins.
+    """
+    by_party: dict[str, dict[int, float]] = {}
+
+    for market in rows:
+        ticker = str(market.get("ticker", "")).upper()
+        match = MARGIN_RUNG.search(ticker)
+        if not match or not _is_this_cycle(ticker):
+            continue
+        probability = kalshi_price(market)
+        if probability is None:
+            continue
+        party, points = match.group(1), int(match.group(2))
+        candidate = MARSHALL if party == "R" else HAMILTON
+        by_party.setdefault(candidate, {})[points] = probability
+
+    if not by_party:
+        return None, []
+    candidate, rungs = max(by_party.items(), key=lambda item: len(item[1]))
+    return candidate, sorted(rungs.items())
+
+
+def margin_distribution(
+    rows: list[dict], win_probability: dict[str, float] | None
+) -> MarginDistribution | None:
+    """Turn the ladder into bands that sum to one.
+
+    Needs the win probability from elsewhere to close the distribution: the
+    ladder's lowest rung says how likely a margin of at least N is, and the gap
+    between that and the probability of winning at all is the "wins narrowly"
+    band. Without it the bands would not sum to one and the chart would be a
+    survival curve pretending to be a distribution.
+
+    The rungs must not increase with the threshold — a market cannot think a
+    bigger win more likely than a smaller one. Bid/ask noise on a thin book can
+    invert two adjacent rungs, and rather than publish a negative band the whole
+    distribution is withheld.
+    """
+    candidate, rungs = margin_ladder(rows)
+    if candidate is None or len(rungs) < 2:
+        return None
+    if win_probability is None:
+        return None
+
+    winning = win_probability.get(candidate)
+    other = next((cid for cid in win_probability if cid != candidate), None)
+    if winning is None or other is None:
+        return None
+
+    lowest_threshold, lowest_probability = rungs[0]
+    if lowest_probability > winning + 0.01:
+        # The ladder says a big win is likelier than any win. One of the two
+        # numbers is wrong and there is no way here to tell which.
+        return None
+
+    buckets = [
+        MarginBucket(
+            label=f"{_surname(other)} wins",
+            candidate_id=other,
+            probability=round(max(0.0, 1.0 - winning), 4),
+        ),
+        MarginBucket(
+            label=f"{_surname(candidate)} by under {lowest_threshold}",
+            candidate_id=candidate,
+            low=0.0,
+            high=float(lowest_threshold),
+            probability=round(max(0.0, winning - lowest_probability), 4),
+        ),
+    ]
+
+    for (low, low_probability), (high, high_probability) in zip(
+        rungs, rungs[1:], strict=False
+    ):
+        share = low_probability - high_probability
+        if share < -0.005:
+            return None  # the curve inverted; see the docstring
+        buckets.append(
+            MarginBucket(
+                label=f"{_surname(candidate)} by {low}–{high}",
+                candidate_id=candidate,
+                low=float(low),
+                high=float(high),
+                probability=round(max(0.0, share), 4),
+            )
+        )
+
+    top_threshold, top_probability = rungs[-1]
+    buckets.append(
+        MarginBucket(
+            label=f"{_surname(candidate)} by {top_threshold}+",
+            candidate_id=candidate,
+            low=float(top_threshold),
+            high=None,
+            probability=round(top_probability, 4),
+        )
+    )
+
+    median = _median_margin(rungs)
+    return MarginDistribution(
+        median_margin=median,
+        leader=candidate if median is not None else None,
+        buckets=buckets,
+        rungs=len(rungs),
+        detailed_side=candidate,
+    )
+
+
+def _surname(candidate_id: str) -> str:
+    return candidate_id.replace("_", " ").title()
+
+
+def _median_margin(rungs: list[tuple[int, float]]) -> float | None:
+    """Where the survival curve crosses one half, linearly interpolated.
+
+    Undefined when the curve never crosses: a ladder whose lowest rung is already
+    below even money has its median under that threshold, and one whose highest is
+    still above it has a median past the top, and inventing a figure for either
+    would be worse than showing none.
+    """
+    for (low, low_probability), (high, high_probability) in zip(
+        rungs, rungs[1:], strict=False
+    ):
+        if low_probability >= 0.5 >= high_probability:
+            span = low_probability - high_probability
+            if span <= 0:
+                return float(low)
+            return round(low + (low_probability - 0.5) / span * (high - low), 1)
+    return None
 
 
 def marginalise_combos(rows: list[dict]) -> tuple[float, float] | None:
@@ -844,9 +998,11 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
     attribution: list[Attribution] = []
     reports: list[ScanReport] = []
 
+    kalshi_rows: list[dict] = []
     kalshi = ScanReport("kalshi")
     try:
         rows, kalshi.containers_scanned = _kalshi_pages()
+        kalshi_rows = rows
         # scanned must count what titles holds — markets, not the events walked
         # to reach them — or the stall check compares unlike things.
         kalshi.scanned = len(rows)
@@ -927,9 +1083,31 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
             "Hamilton, each being their party's nominee."
         )
 
+    consensus = build_consensus(markets, history)
+
+    # The distribution needs a win probability from somewhere else to close: the
+    # ladder's lowest rung and the probability of winning at all are what bound
+    # the "wins narrowly" band. The consensus supplies it, which is why this is
+    # built here rather than inside the Kalshi block.
+    margin = None
+    if consensus is not None and kalshi_rows:
+        margin = margin_distribution(
+            kalshi_rows,
+            {MARSHALL: consensus.marshall, HAMILTON: consensus.hamilton},
+        )
+        if margin is None and any(
+            MARGIN_RUNG.search(str(r.get("ticker", "")).upper()) for r in kalshi_rows
+        ):
+            warnings.append(
+                "margin ladder found but no distribution derived — the rungs may have "
+                "inverted, which happens on a thin book, or the win probability is "
+                "inconsistent with them"
+            )
+
     return MarketsResult(
         markets=markets,
-        consensus=build_consensus(markets, history),
+        consensus=consensus,
+        margin=margin,
         attribution=attribution,
         warnings=warnings,
     )

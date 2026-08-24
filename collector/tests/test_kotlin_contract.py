@@ -47,6 +47,8 @@ CLASS_TO_MODEL = {
     "Market": schemas.markets.Market,
     "MarketPoint": schemas.markets.MarketPoint,
     "Consensus": schemas.markets.Consensus,
+    "MarginDistribution": schemas.markets.MarginDistribution,
+    "MarginBucket": schemas.markets.MarginBucket,
     "CandidateFinance": schemas.finance.CandidateFinance,
     "DonorDetail": schemas.finance.DonorDetail,
     "DonorGroup": schemas.finance.DonorGroup,

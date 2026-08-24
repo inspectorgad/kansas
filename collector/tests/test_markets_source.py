@@ -1024,3 +1024,123 @@ class TestMarginLadderIsNotAWinProbability:
         marshall, hamilton = marginalise_combos(rows)
         assert marshall == pytest.approx(0.67, abs=1e-4)
         assert marshall + hamilton == pytest.approx(1.0)
+
+
+class TestMarginDistribution:
+    """The margin ladder, turned into bands instead of thrown away.
+
+    These eleven rungs are the ones excluded from the win probability — a price
+    for "will the margin be at least N points" is not a probability of winning,
+    and averaging them once published Marshall at .37 against a real .77. But the
+    ladder is a survival curve, and adjacent rungs differ by the probability of
+    landing between them. Values below are verbatim from the live log.
+    """
+
+    OBSERVED = [(3, 0.745), (5, 0.635), (7, 0.485), (9, 0.34), (11, 0.205),
+                (13, 0.14), (15, 0.0875), (17, 0.064), (19, 0.0455), (21, 0.039),
+                (23, 0.0335)]
+    WINS = {"marshall": 0.7732, "hamilton": 0.2268}
+
+    def _rows(self, ladder=None, party="R"):
+        return [
+            {
+                "ticker": f"KXMIDTERMMOV-KSSEN{party}-P{n}-26NOV",
+                "yes_bid_dollars": p - 0.005,
+                "yes_ask_dollars": p + 0.005,
+            }
+            for n, p in (ladder or self.OBSERVED)
+        ]
+
+    def test_the_bands_sum_to_one(self):
+        """They close using a win probability from a separate market entirely."""
+        from sources.markets import margin_distribution
+
+        d = margin_distribution(self._rows(), self.WINS)
+        assert sum(b.probability for b in d.buckets) == pytest.approx(1.0, abs=5e-4)
+
+    def test_the_median_is_interpolated_across_the_crossing(self):
+        from sources.markets import margin_distribution
+
+        # Survival is .635 at 5 and .485 at 7, so half falls just short of 7.
+        assert margin_distribution(self._rows(), self.WINS).median_margin == 6.8
+
+    def test_a_band_is_the_gap_between_adjacent_rungs(self):
+        from sources.markets import margin_distribution
+
+        bands = {b.label: b.probability for b in margin_distribution(self._rows(), self.WINS).buckets}
+        assert bands["Marshall by 5–7"] == pytest.approx(0.635 - 0.485, abs=1e-3)
+        assert bands["Marshall by 23+"] == pytest.approx(0.0335, abs=1e-3)
+
+    def test_the_narrow_win_band_closes_against_the_win_probability(self):
+        """P(wins) minus P(wins by 3+) — the band the ladder cannot see."""
+        from sources.markets import margin_distribution
+
+        bands = {b.label: b.probability for b in margin_distribution(self._rows(), self.WINS).buckets}
+        assert bands["Marshall by under 3"] == pytest.approx(0.7732 - 0.745, abs=1e-3)
+        assert bands["Hamilton wins"] == pytest.approx(0.2268, abs=1e-3)
+
+    def test_no_band_is_ever_negative(self):
+        from sources.markets import margin_distribution
+
+        for bucket in margin_distribution(self._rows(), self.WINS).buckets:
+            assert bucket.probability >= 0.0
+
+    def test_an_inverted_rung_withholds_the_whole_distribution(self):
+        """A thin book can price a bigger win above a smaller one; that is noise."""
+        from sources.markets import margin_distribution
+
+        broken = list(self.OBSERVED)
+        broken[2] = (7, 0.705)  # above the rung below it
+        assert margin_distribution(self._rows(broken), self.WINS) is None
+
+    def test_a_ladder_exceeding_the_win_probability_is_refused(self):
+        from sources.markets import margin_distribution
+
+        assert margin_distribution(self._rows(), {"marshall": 0.40, "hamilton": 0.60}) is None
+
+    def test_nothing_without_a_win_probability(self):
+        """Unclosed bands would be a survival curve posing as a distribution."""
+        from sources.markets import margin_distribution
+
+        assert margin_distribution(self._rows(), None) is None
+
+    def test_one_rung_is_not_a_ladder(self):
+        from sources.markets import margin_distribution
+
+        assert margin_distribution(self._rows(self.OBSERVED[:1]), self.WINS) is None
+
+    def test_the_itemised_side_is_reported(self):
+        from sources.markets import margin_distribution
+
+        d = margin_distribution(self._rows(), self.WINS)
+        assert d.detailed_side == "marshall"
+        assert d.rungs == 11
+        assert "one candidate only" in d.note
+
+    def test_a_democratic_ladder_is_read_the_same_way(self):
+        from sources.markets import margin_ladder
+
+        candidate, rungs = margin_ladder(self._rows(party="D"))
+        assert candidate == "hamilton"
+        assert len(rungs) == 11
+
+    def test_the_better_populated_side_wins_if_both_exist(self):
+        """Mixing two parties' ladders would be meaningless."""
+        from sources.markets import margin_ladder
+
+        rows = self._rows() + self._rows(self.OBSERVED[:3], party="D")
+        candidate, rungs = margin_ladder(rows)
+        assert candidate == "marshall"
+        assert len(rungs) == 11
+
+    def test_the_wrong_cycle_is_excluded(self):
+        from sources.markets import margin_ladder
+
+        rows = [dict(r, ticker=r["ticker"].replace("26NOV", "28NOV")) for r in self._rows()]
+        assert margin_ladder(rows) == (None, [])
+
+    def test_these_rungs_are_still_not_win_probabilities(self):
+        """The guard that keeps them out of the headline must stay."""
+        from sources.markets import _kalshi_markets
+
+        assert _kalshi_markets({"markets": self._rows()}) == []

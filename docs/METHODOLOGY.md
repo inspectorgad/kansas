@@ -165,3 +165,41 @@ donors and will differ from a true count of all donors.
 - **Every number is as of a timestamp.** The app shows it on every screen. When
   a source breaks, the collector fails loudly and the app keeps showing the last
   good value with its real age, rather than a fresh-looking wrong one.
+
+## The implied margin
+
+The market screen answers who is favoured. This answers by how much, which is the
+more useful question in a race whose poll average and market probability disagree
+as sharply as this one's do.
+
+Kalshi lists a ladder of margin thresholds — `KXMIDTERMMOV-KSSENR-P3` through
+`-P23` — each pricing "will the Republican margin be at least N points". A ladder
+of thresholds is a survival curve, so the gap between adjacent rungs is the
+probability of landing between them. Subtraction on a monotone curve, not a model.
+
+Two things make it publishable rather than suggestive:
+
+**The bands close.** The ladder cannot see the narrow-win band — the space between
+"wins at all" and "wins by at least three" — so that comes from the win
+probability derived from the governor-by-senate combination grid, an entirely
+separate set of contracts. When the observed ladder is combined with the observed
+grid, the thirteen bands sum to 100.00%. Two unrelated markets agreeing to the
+cent is a much stronger claim than either alone, and it is also the check that
+would catch a misread price on either side.
+
+**It refuses rather than guesses.** Prices are not probabilities; a thin book can
+quote a bigger win above a smaller one, which would make a band negative. Any
+inversion withholds the whole distribution instead of clamping it to zero. So does
+a ladder whose lowest rung exceeds the probability of winning at all, because one
+of those two numbers is then wrong and nothing here can say which.
+
+Two limits worth knowing when reading the chart. The exchange lists rungs for one
+candidate only, so that side has a dozen bands and the other has one — an
+asymmetry in the source, not in the race. And the top band is open-ended: "by 23
+or more" has no upper bound, so the distribution has no defined mean, which is why
+the headline figure is the median.
+
+These same rungs are deliberately excluded from the win probability itself.
+Averaging them as if each were a chance of winning once published Marshall at
+.3727 when the real figure was .7732 — the single worst number this project has
+shipped.

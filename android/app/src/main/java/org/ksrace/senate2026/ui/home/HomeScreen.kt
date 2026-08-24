@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import org.ksrace.senate2026.data.DataFile
 import org.ksrace.senate2026.data.RaceSnapshot
 import org.ksrace.senate2026.data.model.CandidateIds
+import org.ksrace.senate2026.data.model.MarginDistribution
 import org.ksrace.senate2026.format.formatAge
 import org.ksrace.senate2026.format.formatCountdown
 import org.ksrace.senate2026.format.formatIsoDate
@@ -101,6 +102,10 @@ fun HomeScreen(
         }
 
         item { PollAverageCard(snapshot, now) }
+        // After the poll average, because the card compares itself to it.
+        snapshot.markets?.margin?.takeIf { it.hasBands }?.let { margin ->
+            item { MarginCard(margin, now, snapshot) }
+        }
         item { MoneySummaryCard(snapshot, now) }
         item { LatestHeadlineCard(snapshot, now) }
         item { Spacer(Modifier.height(8.dp)) }
@@ -205,6 +210,97 @@ private fun MarketCard(snapshot: RaceSnapshot, now: Long) {
 
         Spacer(Modifier.height(8.dp))
         AsOfLabel(snapshot.ageMillis(DataFile.MARKETS, now))
+    }
+}
+
+/**
+ * How close, not just who.
+ *
+ * A single win probability answers the less interesting question. This is built
+ * from Kalshi's margin ladder — each rung a price on "will the margin be at least
+ * N points" — so the gap between adjacent rungs is the chance of landing in that
+ * band. The bands close to one against a win probability taken from a completely
+ * separate market, the governor-by-senate grid, which is the reason to trust the
+ * shape: two unrelated contracts agreeing is a stronger claim than either alone.
+ *
+ * Colour carries polarity only, one hue per candidate, and the two are the pair
+ * already validated for colour-vision separation. Magnitude is bar length and
+ * order is the band sequence, so a lightness ramp inside one candidate's bands
+ * would encode the margin a third time and say nothing new.
+ *
+ * The asymmetry is honest and belongs on screen: the exchange lists rungs for one
+ * candidate only, so that side gets a dozen bands and the other gets one. That is
+ * a fact about the exchange, not about the race.
+ */
+@Composable
+private fun MarginCard(margin: MarginDistribution, now: Long, snapshot: RaceSnapshot) {
+    val palette = LocalChartPalette.current
+
+    SectionCard(
+        title = "How close is it likely to be",
+        subtitle = margin.note,
+    ) {
+        val median = margin.medianMargin
+        if (median != null) {
+            val who = if (margin.leader == CandidateIds.MARSHALL) "Marshall" else "Hamilton"
+            HeroNumber(
+                value = "$who +${formatShare(median)}",
+                label = "Median implied margin",
+                caption = "from ${margin.rungs} threshold markets",
+            )
+            // The poll average is the natural comparison, and the two disagree
+            // sharply at the moment, which is worth seeing side by side rather
+            // than on two different screens.
+            snapshot.polls?.aggregate?.let { aggregate ->
+                val pollLeader =
+                    if (aggregate.leader == CandidateIds.MARSHALL) "Marshall" else "Hamilton"
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    text = "Polling average: $pollLeader " +
+                        "+${formatShare(abs(aggregate.margin))}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            Spacer(Modifier.height(12.dp))
+            ThinDivider()
+            Spacer(Modifier.height(12.dp))
+        }
+
+        ShareBars(
+            rows = margin.buckets.map { bucket ->
+                Triple(
+                    bucket.label,
+                    bucket.probability * 100.0,
+                    if (bucket.candidateId == CandidateIds.HAMILTON) {
+                        palette.hamilton
+                    } else {
+                        palette.marshall
+                    },
+                )
+            },
+            valueLabel = { "${formatShare(it)}%" },
+        )
+
+        margin.modal?.let { modal ->
+            Spacer(Modifier.height(8.dp))
+            Text(
+                text = "Likeliest single outcome: ${modal.label}, " +
+                    "${formatShare(modal.probability * 100)}%.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+        }
+
+        Spacer(Modifier.height(8.dp))
+        Text(
+            text = "Bands are derived from prices, not from a forecast, and they " +
+                "sum to 100%.",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(Modifier.height(8.dp))
+        AsOfLabel(snapshot.ageMillis(DataFile.MARKETS, now), source = "Kalshi")
     }
 }
 

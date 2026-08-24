@@ -210,6 +210,7 @@ def collect_markets(report: RunReport, data_dir: str) -> MarketsPayload:
         generated_at=publish.now(),
         markets=result.markets,
         consensus=result.consensus,
+        margin=result.margin,
         attribution=result.attribution,
     )
 

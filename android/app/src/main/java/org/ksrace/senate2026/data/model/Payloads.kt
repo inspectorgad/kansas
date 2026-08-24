@@ -159,6 +159,43 @@ data class MarketPoint(
 )
 
 @Serializable
+data class MarginBucket(
+    val label: String,
+    @SerialName("candidate_id") val candidateId: String? = null,
+    val low: Double? = null,
+    val high: Double? = null,
+    val probability: Double,
+)
+
+/**
+ * The winning margin the market implies, not just who it favours.
+ *
+ * Built from Kalshi's margin-threshold ladder: each rung prices "will the margin
+ * be at least N points", so the gap between adjacent rungs is the chance of
+ * landing between them. The bands close to one using a win probability derived
+ * from a completely separate market, which is why they are worth showing — two
+ * unrelated contracts agreeing is a stronger claim than either alone.
+ *
+ * [detailedSide] matters for reading the chart. The exchange lists rungs for one
+ * party only, so that candidate gets a dozen bands and the other gets one. The
+ * asymmetry is in the source, not in the race.
+ */
+@Serializable
+data class MarginDistribution(
+    @SerialName("median_margin") val medianMargin: Double? = null,
+    val leader: String? = null,
+    val buckets: List<MarginBucket> = emptyList(),
+    val rungs: Int = 0,
+    @SerialName("detailed_side") val detailedSide: String? = null,
+    val note: String,
+) {
+    val hasBands: Boolean get() = buckets.size >= 2
+
+    /** The likeliest single band, for a direct label rather than labelling all. */
+    val modal: MarginBucket? get() = buckets.maxByOrNull { it.probability }
+}
+
+@Serializable
 data class Consensus(
     @SerialName("as_of") val asOf: String,
     val marshall: Double,
@@ -176,6 +213,7 @@ data class MarketsPayload(
     @SerialName("generated_at") val generatedAt: String,
     val markets: List<Market> = emptyList(),
     val consensus: Consensus? = null,
+    val margin: MarginDistribution? = null,
     val attribution: List<Attribution> = emptyList(),
     val disclaimer: String? = null,
 )
