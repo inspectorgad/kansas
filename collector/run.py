@@ -409,6 +409,11 @@ def main() -> int:
         help="report what the handicappers' rating pages actually serve, and exit",
     )
     parser.add_argument(
+        "--probe-news",
+        action="store_true",
+        help="report what each news feed serves and what the filter drops, and exit",
+    )
+    parser.add_argument(
         "--probe-donors",
         action="store_true",
         help="dump the raw FEC rows behind the largest donors, and exit",
@@ -427,6 +432,7 @@ def main() -> int:
         "probe_ground": ("sources.ground", "diagnose"),
         "probe_donors": ("sources.finance", "diagnose"),
         "probe_ratings": ("sources.ratings", "diagnose"),
+        "probe_news": ("sources.news", "diagnose"),
     }
     for flag, (module_name, function_name) in probes.items():
         if getattr(args, flag):

@@ -13,7 +13,7 @@ on:
         required: false
         default: ""
       probe:
-        description: "Probe instead of collecting. Space-separated: results ratings ads ground donors markets"
+        description: "Probe instead of collecting. Space-separated: results ratings ads ground donors markets news"
         required: false
         default: ""
 

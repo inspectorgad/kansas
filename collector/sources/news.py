@@ -211,3 +211,133 @@ def collect() -> NewsResult:
         warnings.append("no matching news items found across any feed")
 
     return NewsResult(items=items, attribution=attribution, warnings=warnings)
+
+
+def _reject_reason(title: str, summary: str = "") -> str | None:
+    """Why is_relevant turned a story down, or None if it kept it.
+
+    is_relevant answers yes/no, which is all the collector needs but not enough to
+    tell a dead feed from an over-strict filter. This mirrors its branches so the
+    probe can say which test a headline failed.
+    """
+    if is_relevant(title, summary):
+        return None
+    text = f"{title} {summary}".lower()
+    named = mentions(text)
+    if not named:
+        return "no candidate named"
+    who = ", ".join(named)
+    if any(term in text for term in STRONG_TERMS):
+        return f"full name ({who}) but no race context word"
+    return f"bare surname ({who}) and the office is not named"
+
+
+def diagnose() -> str:
+    """Report what each news feed serves and what the relevance filter does to it.
+
+    news.json has published seven items, every one of them Kansas Reflector, with
+    nothing newer than several days old — while four feeds plus GDELT are
+    configured. That single symptom covers three different problems: feeds that
+    answer nothing, feeds that answer but carry no race coverage, and feeds whose
+    race coverage is_relevant is throwing away. Only the last is a bug in our
+    code, and the counts below are what separate them.
+    """
+    import feedparser
+
+    lines = ["News probe", "=" * 72]
+    lines.append("\nfilter: sources/news.py:is_relevant")
+
+    for feed in NEWS_FEEDS:
+        lines.append(f"\n[{feed.name}]{' (paywalled)' if feed.paywalled else ''}")
+        lines.append(f"  {feed.url}")
+        try:
+            body = get_text(feed.url)
+        except SourceError as exc:
+            lines.append(f"  FAILED: {exc}")
+            continue
+
+        parsed = feedparser.parse(body)
+        lines.append(f"  {len(body):,} bytes, {len(parsed.entries)} entries, bozo={parsed.bozo}")
+        if parsed.bozo and getattr(parsed, "bozo_exception", None):
+            lines.append(f"  bozo_exception: {parsed.bozo_exception}")
+        if not parsed.entries:
+            lines.append(f"  first 300 chars: {body.strip()[:300]!r}")
+            continue
+
+        stamps = [t for t in (_parse_feed_time(e) for e in parsed.entries) if t]
+        if stamps:
+            lines.append(
+                f"  newest entry: {max(stamps).isoformat()}   "
+                f"oldest: {min(stamps).isoformat()}"
+            )
+        else:
+            lines.append("  no parseable dates on any entry")
+
+        kept: list[str] = []
+        near: list[str] = []
+        far = 0
+        for entry in parsed.entries:
+            title = (entry.get("title") or "").strip()
+            link = (entry.get("link") or "").strip()
+            if not title or not link:
+                continue
+            summary = re.sub(r"<[^>]+>", " ", entry.get("summary") or "")[:400]
+            reason = _reject_reason(title, summary)
+            if reason is None:
+                kept.append(title)
+            elif reason == "no candidate named":
+                far += 1
+            else:
+                near.append(f"{title}  <-- {reason}")
+
+        lines.append(f"  kept: {len(kept)}   near-miss: {len(near)}   no candidate at all: {far}")
+        for title in kept[:5]:
+            lines.append(f"    KEEP  {title[:110]}")
+        # The near misses are the diagnostic ones: race coverage our own filter
+        # dropped. Anything listed here is a candidate rule change.
+        for note in near[:8]:
+            lines.append(f"    DROP  {note[:150]}")
+        if not kept and not near:
+            lines.append("    (this feed carries no coverage naming either candidate)")
+            for entry in parsed.entries[:5]:
+                lines.append(f"    ----  {(entry.get('title') or '')[:110]}")
+
+    lines.append("\n[GDELT]")
+    lines.append(f"  {GDELT_DOC_API}")
+    lines.append(f"  query: {GDELT_QUERY}")
+    try:
+        payload = get_json(
+            GDELT_DOC_API,
+            {
+                "query": GDELT_QUERY,
+                "mode": "artlist",
+                "format": "json",
+                "maxrecords": 75,
+                "sort": "datedesc",
+            },
+        )
+    except SourceError as exc:
+        lines.append(f"  FAILED: {exc}")
+        lines.append("  (429 here means rate-limited, not broken — GDELT throttles by IP)")
+        payload = None
+
+    if payload is not None:
+        articles = payload.get("articles") or []
+        lines.append(f"  {len(articles)} articles, other keys: {sorted(payload)}")
+        kept_g: list[str] = []
+        dropped_g: list[str] = []
+        for article in articles:
+            title = (article.get("title") or "").strip()
+            if not title:
+                continue
+            reason = _reject_reason(title)
+            (kept_g if reason is None else dropped_g).append(
+                title if reason is None else f"{title}  <-- {reason}"
+            )
+        lines.append(f"  kept: {len(kept_g)}   dropped: {len(dropped_g)}")
+        for title in kept_g[:5]:
+            lines.append(f"    KEEP  {title[:110]}")
+        for note in dropped_g[:5]:
+            lines.append(f"    DROP  {note[:150]}")
+
+    return "\n".join(lines)

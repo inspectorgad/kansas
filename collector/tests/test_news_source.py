@@ -8,7 +8,7 @@ office — so a bare name match would fill the feed with noise.
 
 import pytest
 
-from sources.news import canonical_url, is_relevant, item_id, mentions
+from sources.news import _reject_reason, canonical_url, is_relevant, item_id, mentions
 
 
 class TestRelevance:
@@ -69,3 +69,35 @@ class TestDedup:
 
     def test_different_stories_get_different_ids(self):
         assert item_id("https://ex.com/a") != item_id("https://ex.com/b")
+
+
+class TestRejectReason:
+    """The probe's explanation must agree with the filter it explains.
+
+    _reject_reason mirrors is_relevant's branches by hand, so the two can drift.
+    A probe that reported a different verdict than the collector applies would
+    send someone off fixing the wrong rule.
+    """
+
+    @pytest.mark.parametrize(
+        "headline",
+        [
+            "Kansas Senate race tightens as Hamilton, Marshall trade attacks",
+            "Marshall announces Senate re-election bid",
+            "Marshall County fair opens Saturday",
+            "Wichita weather forecast for the weekend",
+            "Lewis Hamilton wins the Grand Prix",
+            "",
+        ],
+    )
+    def test_agrees_with_is_relevant(self, headline):
+        assert (_reject_reason(headline) is None) == is_relevant(headline)
+
+    def test_names_the_test_that_failed(self):
+        assert _reject_reason("Wichita weather forecast") == "no candidate named"
+        assert "bare surname" in _reject_reason("Marshall announces new grant program")
+        assert "full name" in _reject_reason("Roger Marshall tours a Hutchinson salt mine")
+
+    def test_says_which_candidate_was_matched(self):
+        assert "marshall" in _reject_reason("Marshall County fair opens Saturday")
+        assert "hamilton" in _reject_reason("Lewis Hamilton wins the Grand Prix")

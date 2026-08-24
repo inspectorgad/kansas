@@ -57,6 +57,7 @@ written. Each ships as a probe that reports what it actually found:
 .venv/bin/python collector/run.py --probe-results    # Kansas election-night page
 .venv/bin/python collector/run.py --probe-ads        # FCC political file
 .venv/bin/python collector/run.py --probe-ground     # registration + county dashboards
+.venv/bin/python collector/run.py --probe-news       # per-feed item counts and what the filter dropped
 ```
 
 **Before November 3, run `--probe-results` against the archived August primary.**

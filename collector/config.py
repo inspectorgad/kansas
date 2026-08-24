@@ -98,8 +98,9 @@ NEWS_FEEDS: list[Feed] = [
 GDELT_DOC_API = "https://api.gdeltproject.org/api/v2/doc/doc"
 GDELT_QUERY = '("Roger Marshall" OR "Adam Hamilton") ("Kansas Senate" OR "U.S. Senate")'
 
-# Headlines must mention the race, not just a common name, to be kept.
-NEWS_REQUIRED_TERMS = ("marshall", "hamilton", "kansas senate", "senate race")
+# Relevance filtering lives in sources/news.py:is_relevant, not here. A flat term
+# list used to sit at this spot and was never imported by anything — it read like
+# the live rule and was not, which is worse than no constant at all.
 
 # --- Broadcast ads -----------------------------------------------------------
 FCC_PUBLIC_FILES_API = "https://publicfiles.fcc.gov"
