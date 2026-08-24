@@ -88,3 +88,11 @@ class Rating(Strict):
     previous: str | None = Field(
         default=None, description="Prior rating, set when the source moves the race."
     )
+    entered_by_hand: bool = Field(
+        default=False,
+        description=(
+            "True when a person typed this rather than a scraper reading it. The "
+            "app labels these, because a hand-copied figure and a live one carry "
+            "different guarantees and must not look alike."
+        ),
+    )

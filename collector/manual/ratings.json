@@ -1,0 +1,30 @@
+{
+  "_README": [
+    "Race ratings, entered by hand.",
+    "",
+    "Cook, Sabato's Crystal Ball and Inside Elections all answer 403 Forbidden to",
+    "this collector, so ratings arrive this way or not at all. A rating change is",
+    "among the more newsworthy things that happens in a race, which is why the",
+    "manual route exists rather than the field simply staying empty.",
+    "",
+    "To add or update one:",
+    "  1. Read the rating off the handicapper's own page.",
+    "  2. Add or edit an entry below. Set as_of to the date THEY published it,",
+    "     not today, and set url to the page you read it from so anyone can check.",
+    "  3. When a rating moves, put the old label in `previous` — that is what the",
+    "     app compares to decide a change is worth notifying about.",
+    "  4. Commit. The git history is the audit trail for who changed what, when.",
+    "",
+    "The app labels every entry here as hand-entered. Do not remove that label to",
+    "make the screen tidier: a typed figure and a scraped one carry different",
+    "guarantees and must not look alike.",
+    "",
+    "Entries go stale silently, so the collector warns once an entry passes",
+    "MANUAL_RATING_STALE_DAYS. Re-check the page and bump as_of, or delete it.",
+    "",
+    "lean is R, D, or null. Use null for Toss-up.",
+    "",
+    "Shipped empty on purpose. Nothing here was invented to fill the screen."
+  ],
+  "ratings": []
+}

@@ -136,10 +136,35 @@ private fun RaceHeader(snapshot: RaceSnapshot) {
             if (race.ratings.isNotEmpty()) {
                 Spacer(Modifier.height(4.dp))
                 Text(
-                    text = race.ratings.joinToString(" · ") { "${it.source}: ${it.rating}" },
+                    text = race.ratings.joinToString(" · ") { rating ->
+                        val moved = rating.previous?.let { " (was $it)" } ?: ""
+                        "${rating.source}: ${rating.rating}$moved"
+                    },
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
+                // Every handicapper blocks the collector, so these arrive by hand.
+                // A typed rating is worth showing and must not pass for a live
+                // reading: the label and the date it was published are what make
+                // the difference visible, and the date is the one that matters —
+                // a hand-copied label goes stale without any sign of it.
+                val typed = race.ratings.filter { it.enteredByHand }
+                if (typed.isNotEmpty()) {
+                    val dated = typed.mapNotNull { it.asOf }.distinct().sorted()
+                    val published = dated.lastOrNull()?.let { formatIsoDate(it) }
+                    Text(
+                        text = listOfNotNull(
+                            if (typed.size == race.ratings.size) {
+                                "Entered by hand"
+                            } else {
+                                "${typed.size} entered by hand"
+                            },
+                            published?.let { "published $it" },
+                        ).joinToString(" · "),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
             }
         }
     }

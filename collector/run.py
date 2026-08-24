@@ -109,13 +109,15 @@ def collect_race(report: RunReport, data_dir: str) -> RacePayload:
 
     ratings = []
     try:
-        ratings = collect_ratings()
+        ratings, rating_notes = collect_ratings()
+        report.warnings.extend(rating_notes)
     except SourceError as exc:
         report.warnings.append(f"race ratings unavailable: {exc}")
     if not ratings:
         report.warnings.append(
-            "race ratings disabled: Cook, Sabato and Inside Elections all answer "
-            "403 to this collector (run --probe-ratings to retry)"
+            "no race ratings: scraping is off because Cook, Sabato and Inside "
+            "Elections all answer 403, and collector/manual/ratings.json is empty "
+            "(add an entry there, or run --probe-ratings to retry the pages)"
             if not config.RATINGS_ENABLED
             else "no race ratings parsed — the handicappers' pages may have changed"
         )

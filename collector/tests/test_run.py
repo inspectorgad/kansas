@@ -932,7 +932,8 @@ class TestRatingsAreParked:
             raise AssertionError("a parked source must not fetch anything")
 
         monkeypatch.setattr(ratings, "get_text", explode)
-        assert ratings.collect() == []
+        collected, _ = ratings.collect()
+        assert collected == []
 
     def test_the_parser_is_still_reachable_for_the_probe(self):
         """Parked means not fetched, not deleted — the probe still exercises it."""
@@ -944,6 +945,7 @@ class TestRatingsAreParked:
         report = run.run(["race"], str(tmp_path), write=True)
         assert any("403" in note for note in report.warnings), report.warnings
         assert not any("pages may have changed" in note for note in report.warnings)
+        assert any("manual/ratings.json" in note for note in report.warnings)
 
     def test_re_enabling_restores_the_old_diagnosis(self, fixtures, tmp_path, monkeypatch):
         """The flag is the only thing standing between parked and live."""
@@ -952,3 +954,119 @@ class TestRatingsAreParked:
         monkeypatch.setattr(config, "RATINGS_ENABLED", True)
         report = run.run(["race"], str(tmp_path), write=True)
         assert not any("403" in note for note in report.warnings), report.warnings
+
+
+class TestManualRatings:
+    """Ratings typed by a person, since every handicapper answers 403.
+
+    The route exists because a move from Lean R to Toss-up is among the more
+    newsworthy things that happens in a race, and scraping cannot reach it. The
+    risks it introduces are its own: a typed value can look live, and it goes
+    stale silently. Both are handled here rather than left to whoever reads it.
+    """
+
+    def _file(self, tmp_path, entries, key="ratings"):
+        path = tmp_path / "ratings.json"
+        path.write_text(json.dumps({key: entries}))
+        return path
+
+    def _entry(self, **overrides):
+        entry = {
+            "source": "Cook Political Report",
+            "rating": "Toss Up",
+            "lean": None,
+            "as_of": "2026-08-20",
+            "url": "https://www.cookpolitical.com/senate/race/488581",
+        }
+        entry.update(overrides)
+        return entry
+
+    def test_a_typed_rating_loads_and_is_flagged(self, tmp_path):
+        from datetime import date
+
+        from sources.ratings import load_manual
+
+        ratings, notes = load_manual(
+            self._file(tmp_path, [self._entry()]), today=date(2026, 8, 24)
+        )
+        assert len(ratings) == 1
+        assert ratings[0].entered_by_hand is True
+        assert ratings[0].rating == "Toss Up"
+        assert notes == []
+
+    def test_a_stale_entry_is_reported_but_still_published(self, tmp_path):
+        """An old rating with its date shown beats no rating at all."""
+        from datetime import date
+
+        from sources.ratings import load_manual
+
+        ratings, notes = load_manual(
+            self._file(tmp_path, [self._entry(as_of="2026-01-05")]),
+            today=date(2026, 8, 24),
+        )
+        assert len(ratings) == 1
+        assert any("days old" in note for note in notes), notes
+
+    def test_a_missing_date_is_reported(self, tmp_path):
+        from datetime import date
+
+        from sources.ratings import load_manual
+
+        entry = self._entry()
+        del entry["as_of"]
+        ratings, notes = load_manual(self._file(tmp_path, [entry]), today=date(2026, 8, 24))
+        assert len(ratings) == 1
+        assert any("no as_of date" in note for note in notes), notes
+
+    def test_a_bad_entry_is_skipped_and_named(self, tmp_path):
+        """One typo must not take the other ratings down with it."""
+        from datetime import date
+
+        from sources.ratings import load_manual
+
+        entries = [self._entry(), {"source": "Sabato", "lean": "R"}]  # no rating
+        ratings, notes = load_manual(self._file(tmp_path, entries), today=date(2026, 8, 24))
+        assert [r.source for r in ratings] == ["Cook Political Report"]
+        assert any("Sabato" in note and "rejected" in note for note in notes), notes
+
+    def test_a_malformed_file_is_not_silently_empty(self, tmp_path):
+        from sources.ratings import load_manual
+
+        path = tmp_path / "ratings.json"
+        path.write_text("{ truncated")
+        ratings, notes = load_manual(path)
+        assert ratings == []
+        assert any("unreadable" in note for note in notes), notes
+
+    def test_a_missing_file_is_simply_empty(self, tmp_path):
+        from sources.ratings import load_manual
+
+        ratings, notes = load_manual(tmp_path / "absent.json")
+        assert ratings == [] and notes == []
+
+    def test_a_file_without_the_list_says_so(self, tmp_path):
+        from sources.ratings import load_manual
+
+        ratings, notes = load_manual(self._file(tmp_path, [], key="entries"))
+        assert ratings == []
+        assert any("no 'ratings' list" in note for note in notes), notes
+
+    def test_a_previous_label_survives_for_change_detection(self, tmp_path):
+        from datetime import date
+
+        from sources.ratings import load_manual
+
+        ratings, _ = load_manual(
+            self._file(tmp_path, [self._entry(previous="Lean Republican")]),
+            today=date(2026, 8, 24),
+        )
+        assert ratings[0].previous == "Lean Republican"
+
+    def test_the_shipped_file_is_empty_and_valid(self):
+        """Nothing was invented to fill the screen; it must still parse."""
+        import config
+        from sources.ratings import load_manual
+
+        ratings, notes = load_manual(config.MANUAL_RATINGS_PATH)
+        assert ratings == []
+        assert notes == []

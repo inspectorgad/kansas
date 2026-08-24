@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
+from pathlib import Path
 
 from schemas import HAMILTON, MARSHALL, Candidate, Party
 
@@ -186,6 +187,16 @@ KS_ENR_FALLBACK = "https://www.kssos.org/ent/kssos_ent.html"
 # back. Flip this to True if one of them starts answering, or if a licensed feed
 # gets arranged.
 RATINGS_ENABLED = False
+
+# Ratings entered by hand, since scraping them is not an option. Version
+# controlled on purpose: every edit is a commit, so the git history is the audit
+# trail for who changed a rating and when.
+MANUAL_RATINGS_PATH = Path(__file__).resolve().parent / "manual" / "ratings.json"
+
+# A hand-entered rating goes stale silently, which is the whole risk of the
+# manual route. Past this many days the collector says so rather than letting a
+# months-old label sit on the home screen looking current.
+MANUAL_RATING_STALE_DAYS = 45
 
 RATING_SOURCES = {
     "Cook Political Report": "https://www.cookpolitical.com/senate/race/488581",

@@ -8,9 +8,19 @@ because a missing rating is a cosmetic gap while a failed run is not.
 
 from __future__ import annotations
 
+import json
 import re
+from datetime import UTC, date, datetime
+from pathlib import Path
 
-from config import RATING_SOURCES, RATINGS_ENABLED
+from pydantic import ValidationError
+
+from config import (
+    MANUAL_RATING_STALE_DAYS,
+    MANUAL_RATINGS_PATH,
+    RATING_SOURCES,
+    RATINGS_ENABLED,
+)
 from fetch import SourceError, get_text
 from schemas import Party, Rating
 
@@ -85,15 +95,82 @@ def parse_rating(html: str) -> tuple[str, Party | None] | None:
     return label, party
 
 
-def collect() -> list[Rating]:
-    """Ratings, or nothing while every handicapper refuses the request.
+def load_manual(
+    path=None, today: date | None = None
+) -> tuple[list[Rating], list[str]]:
+    """Ratings a person typed, with warnings about anything wrong or stale.
 
-    See config.RATINGS_ENABLED. The caller reports the reason rather than showing
-    an empty list as though the handicappers had no view.
+    Every handicapper answers 403, so this is the only route by which a rating
+    reaches the app. Each entry is marked entered_by_hand, which the app shows: a
+    typed figure and a scraped one carry different guarantees and must not look
+    alike.
+
+    Staleness is the risk this route brings, and it is silent — a label copied in
+    August still reads as current in November unless something says otherwise. So
+    an entry past MANUAL_RATING_STALE_DAYS is reported and still published, rather
+    than dropped: an old rating with its date visible is more useful than no
+    rating, and the warning is what prompts someone to re-check the page.
     """
-    if not RATINGS_ENABLED:
-        return []
+    warnings: list[str] = []
+    path = path or MANUAL_RATINGS_PATH
+    today = today or datetime.now(UTC).date()
 
+    try:
+        document = json.loads(Path(path).read_text())
+    except FileNotFoundError:
+        return [], warnings
+    except (OSError, json.JSONDecodeError) as exc:
+        # A malformed file must not be indistinguishable from an empty one.
+        return [], [f"manual ratings file unreadable ({exc})"]
+
+    entries = document.get("ratings")
+    if not isinstance(entries, list):
+        return [], ["manual ratings file has no 'ratings' list"]
+
+    ratings: list[Rating] = []
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            warnings.append(f"manual rating {index} is not an object; skipped")
+            continue
+        try:
+            rating = Rating(**{**entry, "entered_by_hand": True})
+        except ValidationError as exc:
+            warnings.append(
+                f"manual rating {index} ({entry.get('source', 'unnamed')}) rejected: "
+                f"{exc.error_count()} problem(s) — {exc.errors()[0].get('msg', '')}"
+            )
+            continue
+
+        if rating.as_of is None:
+            warnings.append(
+                f"{rating.source}: hand-entered with no as_of date, so its age "
+                "cannot be shown — add the date the handicapper published it"
+            )
+        else:
+            age = (today - rating.as_of).days
+            if age > MANUAL_RATING_STALE_DAYS:
+                warnings.append(
+                    f"{rating.source}: hand-entered rating is {age} days old "
+                    f"(published {rating.as_of}) — re-check the page and bump as_of"
+                )
+        ratings.append(rating)
+
+    return ratings, warnings
+
+
+def collect() -> tuple[list[Rating], list[str]]:
+    """Ratings, and any warnings about how they got here.
+
+    Scraping is off because every handicapper answers 403 — see
+    config.RATINGS_ENABLED — so in practice this returns the hand-entered file.
+    Both routes are merged rather than either replacing the other, so turning
+    scraping back on does not silently discard a typed entry.
+    """
+    manual, warnings = load_manual()
+    if not RATINGS_ENABLED:
+        return manual, warnings
+
+    scraped_sources = set()
     ratings: list[Rating] = []
     for source, url in RATING_SOURCES.items():
         try:
@@ -104,7 +181,12 @@ def collect() -> list[Rating]:
         if parsed:
             label, party = parsed
             ratings.append(Rating(source=source, rating=label, lean=party, url=url))
-    return ratings
+            scraped_sources.add(source)
+
+    # A live reading supersedes a typed one for the same handicapper; a typed
+    # entry for anyone else is kept.
+    ratings.extend(entry for entry in manual if entry.source not in scraped_sources)
+    return ratings, warnings
 
 
 def diagnose() -> str:

@@ -65,6 +65,16 @@ data class Rating(
     @SerialName("as_of") val asOf: String? = null,
     val url: String? = null,
     val previous: String? = null,
+    /**
+     * A person typed this rather than a scraper reading it.
+     *
+     * Every handicapper answers 403 to the collector, so ratings arrive by hand
+     * or not at all. A typed value is still worth showing — a move from Lean R to
+     * Toss-up is among the more newsworthy things that happens in a race — but it
+     * carries a different guarantee from a scraped number and must not look the
+     * same. The label is not decoration.
+     */
+    @SerialName("entered_by_hand") val enteredByHand: Boolean = false,
 )
 
 // --- race.json ---------------------------------------------------------------
