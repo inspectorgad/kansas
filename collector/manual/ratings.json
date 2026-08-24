@@ -24,7 +24,34 @@
     "",
     "lean is R, D, or null. Use null for Toss-up.",
     "",
-    "Shipped empty on purpose. Nothing here was invented to fill the screen."
+    "Provenance of the two entries below, recorded because it is not verifiable",
+    "from the collector: both were read off the live pages in a browser on",
+    "2026-08-24 and transcribed here.",
+    "",
+    "Cook carried its own date — 'RACE RATING / Last updated: Aug 5, 2026' — and",
+    "showed the move as SOLID R -> LIKELY R, which is where `previous` comes from.",
+    "",
+    "Sabato's page is a map. Kansas is filled in the legend's 'Likely R' red and",
+    "is not hatched, so no flip is indicated, but the map carries no rating date.",
+    "as_of is therefore left null rather than filled with the day it was read: the",
+    "field means the date the handicapper published, and a wrong date is worse",
+    "than a missing one because the staleness check would then measure nothing.",
+    "The collector warns about the gap on every run, which is correct."
   ],
-  "ratings": []
+  "ratings": [
+    {
+      "source": "Cook Political Report",
+      "rating": "Likely R",
+      "lean": "R",
+      "as_of": "2026-08-05",
+      "url": "https://www.cookpolitical.com/senate/race/488581",
+      "previous": "Solid R"
+    },
+    {
+      "source": "Sabato's Crystal Ball",
+      "rating": "Likely R",
+      "lean": "R",
+      "url": "https://centerforpolitics.org/crystalball/2026-senate/"
+    }
+  ]
 }

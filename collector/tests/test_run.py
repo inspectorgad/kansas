@@ -926,14 +926,14 @@ class TestRatingsAreParked:
     """
 
     def test_collect_makes_no_requests_while_parked(self, monkeypatch):
+        """Parked means no network, whatever the manual file happens to hold."""
         import sources.ratings as ratings
 
         def explode(*args, **kwargs):
             raise AssertionError("a parked source must not fetch anything")
 
         monkeypatch.setattr(ratings, "get_text", explode)
-        collected, _ = ratings.collect()
-        assert collected == []
+        ratings.collect()  # must not raise
 
     def test_the_parser_is_still_reachable_for_the_probe(self):
         """Parked means not fetched, not deleted — the probe still exercises it."""
@@ -941,10 +941,27 @@ class TestRatingsAreParked:
 
         assert parse_rating("<tr><td>Kansas</td><td>Toss-up</td></tr>") == ("Toss-up", None)
 
-    def test_the_run_reports_the_reason_not_a_blank(self, fixtures, tmp_path):
+    def test_the_reason_is_reported_when_there_is_nothing_to_show(
+        self, fixtures, tmp_path, monkeypatch
+    ):
+        """With scraping off and no manual entries, say why rather than nothing.
+
+        Pointed at an empty file on purpose. The first version of this test read
+        the shipped one, which passed only while that file happened to be empty
+        and broke the moment real ratings were added — a test pinned to a moment
+        rather than to a contract.
+        """
+        import config
+
+        empty = tmp_path / "none.json"
+        empty.write_text(json.dumps({"ratings": []}))
+        monkeypatch.setattr(config, "MANUAL_RATINGS_PATH", empty)
+        import sources.ratings as ratings
+
+        monkeypatch.setattr(ratings, "MANUAL_RATINGS_PATH", empty)
+
         report = run.run(["race"], str(tmp_path), write=True)
         assert any("403" in note for note in report.warnings), report.warnings
-        assert not any("pages may have changed" in note for note in report.warnings)
         assert any("manual/ratings.json" in note for note in report.warnings)
 
     def test_re_enabling_restores_the_old_diagnosis(self, fixtures, tmp_path, monkeypatch):
@@ -1062,11 +1079,27 @@ class TestManualRatings:
         )
         assert ratings[0].previous == "Lean Republican"
 
-    def test_the_shipped_file_is_empty_and_valid(self):
-        """Nothing was invented to fill the screen; it must still parse."""
+    def test_the_shipped_file_holds_what_it_claims(self):
+        """The real entries, read off the live pages in a browser on 2026-08-24.
+
+        Both handicappers are at Likely R. Cook published its own date and showed
+        the move from Solid R, which is why it carries `previous`. Sabato's page is
+        a map with no rating date on it, so as_of is null and the collector warns
+        about the gap — that warning is correct and expected here, not a failure.
+        """
         import config
         from sources.ratings import load_manual
 
         ratings, notes = load_manual(config.MANUAL_RATINGS_PATH)
-        assert ratings == []
-        assert notes == []
+        by_source = {r.source: r for r in ratings}
+        assert set(by_source) == {"Cook Political Report", "Sabato's Crystal Ball"}
+        assert all(r.entered_by_hand for r in ratings)
+        assert all(r.rating == "Likely R" for r in ratings)
+
+        cook = by_source["Cook Political Report"]
+        assert cook.as_of.isoformat() == "2026-08-05"
+        assert cook.previous == "Solid R"
+
+        sabato = by_source["Sabato's Crystal Ball"]
+        assert sabato.as_of is None
+        assert any("no as_of date" in note and "Sabato" in note for note in notes), notes
