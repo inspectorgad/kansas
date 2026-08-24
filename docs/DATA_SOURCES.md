@@ -162,3 +162,32 @@ always carries the same complaint is a log nobody reads. That is not
 hypothetical here: it is how `[OK] hamilton: 3,075 (100.0%)` survived a full day
 as a *reported success* in the election-night probe. Keeping the warning list
 short enough to read is a correctness measure, not tidiness.
+
+## Entering a rating by hand
+
+Since no handicapper will serve this collector, `collector/manual/ratings.json`
+is how a rating reaches the app. It ships empty — nothing in it was invented to
+fill the screen.
+
+To add one: read the rating off the handicapper's own page, add an entry, set
+`as_of` to the date **they** published it rather than today, set `url` to the page
+you read, and commit. Put the old label in `previous` when a rating moves; that is
+what the change detection compares. The git history is the audit trail for who
+changed a rating and when, which is the main reason this lives in the repo rather
+than in a database.
+
+Two things the route does that matter more than the mechanics.
+
+**Every entry is labelled.** The payload carries `entered_by_hand`, and the app
+shows "Entered by hand · published 20 Aug" beneath the ratings line. A typed
+figure and a scraped one carry different guarantees and must not look alike. The
+label is not decoration and should not be removed to tidy the screen.
+
+**Stale entries are reported, not dropped.** A hand-copied label goes stale in
+total silence — a rating typed in August still reads as current in November unless
+something says otherwise. Past 45 days the collector warns, naming the source and
+the age, and still publishes: an old rating with its date visible is more useful
+than none, and the warning is what prompts a re-check.
+
+A malformed file is never silently empty, and one bad entry does not take the
+others with it — it is skipped and named in the warnings.
