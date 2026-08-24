@@ -1082,10 +1082,10 @@ class TestManualRatings:
     def test_the_shipped_file_holds_what_it_claims(self):
         """The real entries, read off the live pages in a browser on 2026-08-24.
 
-        Both handicappers are at Likely R. Cook published its own date and showed
-        the move from Solid R, which is why it carries `previous`. Sabato's page is
-        a map with no rating date on it, so as_of is null and the collector warns
-        about the gap — that warning is correct and expected here, not a failure.
+        Both handicappers are at Likely R, both dated, so this file should now
+        load with no warnings at all. Cook showed the move from Solid R, which is
+        why it carries `previous`. Sabato's date does not appear on the map and was
+        supplied separately; it is their publication date, not the day it was read.
         """
         import config
         from sources.ratings import load_manual
@@ -1101,5 +1101,6 @@ class TestManualRatings:
         assert cook.previous == "Solid R"
 
         sabato = by_source["Sabato's Crystal Ball"]
-        assert sabato.as_of is None
-        assert any("no as_of date" in note and "Sabato" in note for note in notes), notes
+        assert sabato.as_of.isoformat() == "2026-08-19"
+        # Both dated and both recent, so nothing should be flagged.
+        assert notes == [], notes

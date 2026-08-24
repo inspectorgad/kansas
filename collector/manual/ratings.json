@@ -32,11 +32,9 @@
     "showed the move as SOLID R -> LIKELY R, which is where `previous` comes from.",
     "",
     "Sabato's page is a map. Kansas is filled in the legend's 'Likely R' red and",
-    "is not hatched, so no flip is indicated, but the map carries no rating date.",
-    "as_of is therefore left null rather than filled with the day it was read: the",
-    "field means the date the handicapper published, and a wrong date is worse",
-    "than a missing one because the staleness check would then measure nothing.",
-    "The collector warns about the gap on every run, which is correct."
+    "is not hatched, so no flip is indicated. The map itself carries no rating",
+    "date; 2026-08-19 was supplied separately on 2026-08-24 and is recorded here",
+    "as their publication date, not the day it was read."
   ],
   "ratings": [
     {
@@ -51,6 +49,7 @@
       "source": "Sabato's Crystal Ball",
       "rating": "Likely R",
       "lean": "R",
+      "as_of": "2026-08-19",
       "url": "https://centerforpolitics.org/crystalball/2026-senate/"
     }
   ]
