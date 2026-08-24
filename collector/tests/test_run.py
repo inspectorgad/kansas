@@ -851,3 +851,65 @@ class TestRefundsAndReattributions:
             monkeypatch, [self._row("ONCE, ONLY", 3000.0, "1")], []
         )
         assert [d.amount for d in donors] == [3000.0]
+
+
+class TestRatingsAreScopedToKansas:
+    """A rating must belong to this race, not to whichever row came first.
+
+    parse_rating took the first rating phrase anywhere on the page. These
+    handicappers publish one page listing every Senate contest, so that was
+    whichever state sorts first — Alabama or Alaska — published as Kansas's
+    rating. The same failure as reading Arkansas as Kansas, and it would have
+    looked entirely plausible on the one field whose purpose is to be quoted.
+    """
+
+    SENATE_TABLE = """
+    <table>
+     <tr><td>Alabama</td><td>Solid Republican</td></tr>
+     <tr><td>Alaska</td><td>Likely Republican</td></tr>
+     <tr><td>Arkansas</td><td>Solid Republican</td></tr>
+     <tr><td>Georgia</td><td>Lean Democratic</td></tr>
+     <tr><td>Kansas</td><td>Toss-up</td></tr>
+     <tr><td>Maine</td><td>Lean Republican</td></tr>
+    </table>
+    """
+
+    def test_the_kansas_row_wins_not_the_first_row(self):
+        from sources.ratings import parse_rating
+
+        assert parse_rating(self.SENATE_TABLE) == ("Toss-up", None)
+
+    def test_a_race_specific_page_still_parses(self):
+        from schemas.common import Party
+        from sources.ratings import parse_rating
+
+        page = "<h1>Kansas Senate</h1><p>Our rating: <b>Lean Republican</b></p>"
+        assert parse_rating(page) == ("Lean Republican", Party.REPUBLICAN)
+
+    def test_a_rating_before_the_state_name_is_found(self):
+        """Some layouts put the label first."""
+        from sources.ratings import parse_rating
+
+        assert parse_rating("<p>Toss-up &mdash; Kansas Senate</p>") == ("Toss-up", None)
+
+    def test_a_page_never_naming_kansas_yields_nothing(self):
+        from sources.ratings import parse_rating
+
+        assert parse_rating("<tr><td>Alabama</td><td>Solid Republican</td></tr>") is None
+
+    def test_arkansas_is_not_kansas_here_either(self):
+        from sources.ratings import parse_rating
+
+        assert parse_rating("<tr><td>Arkansas</td><td>Solid Republican</td></tr>") is None
+
+    def test_kansas_with_no_rating_nearby_yields_nothing(self):
+        """Better empty than another state's label."""
+        from sources.ratings import parse_rating
+
+        assert parse_rating("<p>Kansas holds its primary in August.</p>") is None
+
+    def test_a_distant_rating_is_out_of_reach(self):
+        from sources.ratings import parse_rating
+
+        page = "<p>Kansas Senate</p>" + ("<p>filler. </p>" * 60) + "<p>Solid Republican</p>"
+        assert parse_rating(page) is None

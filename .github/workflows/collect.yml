@@ -13,7 +13,7 @@ on:
         required: false
         default: ""
       probe:
-        description: "Run a probe instead of collecting: donors, markets, ads, ground, results"
+        description: "Probe instead of collecting. Space-separated: results ratings ads ground donors markets"
         required: false
         default: ""
 
@@ -94,12 +94,25 @@ jobs:
           set +e
           # A probe run reports what an endpoint actually serves and writes
           # nothing, so publishing is skipped for it below.
-          python collector/run.py \
-            --data-dir published/data \
-            ${{ github.event.inputs.probe && format('--probe-{0}', github.event.inputs.probe) || '' }} \
-            ${{ github.event.inputs.only && format('--only {0}', github.event.inputs.only) || '' }} \
-            | tee collect.log
-          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          #
+          # Several probes can be named at once, because each answers a separate
+          # unknown and waiting a cron cycle between them wastes the afternoon.
+          # They run in sequence in one job, each printing its own section.
+          PROBES="${{ github.event.inputs.probe }}"
+          if [ -n "$PROBES" ]; then
+            status=0
+            for probe in $PROBES; do
+              echo "######## probe: $probe ########"
+              python collector/run.py --data-dir published/data "--probe-$probe" || status=$?
+            done | tee collect.log
+            echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          else
+            python collector/run.py \
+              --data-dir published/data \
+              ${{ github.event.inputs.only && format('--only {0}', github.event.inputs.only) || '' }} \
+              | tee collect.log
+            echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Publish
         # A probe writes no data; publishing would commit nothing and the
