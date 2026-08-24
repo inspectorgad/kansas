@@ -17,7 +17,14 @@ from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from urllib.parse import urlparse, urlunparse
 
-from config import CANDIDATE_NEWS_FEEDS, GDELT_DOC_API, GDELT_QUERY, NEWS_FEEDS
+from config import (
+    CANDIDATE_NEWS_FEEDS,
+    GDELT_DOC_API,
+    GDELT_ENABLED,
+    GDELT_QUERY,
+    NEWS_FEEDS,
+    Feed,
+)
 from fetch import SourceError, get_json, get_text
 from schemas import HAMILTON, MARSHALL, Attribution
 from schemas.news import NewsItem
@@ -29,12 +36,34 @@ MAX_ITEMS = 120
 RACE_CONTEXT = (
     "senate", "senator", "sen.", "campaign", "election", "ballot", "poll",
     "candidate", "primary", "race", "democrat", "republican", "gop",
+    # Added after the Google News feed showed what a wide net actually catches:
+    # ten real stories were being dropped, and these are the words they used
+    # instead. "Roger Marshall tells Kansas voters to look at who hates me" and
+    # "Adam Hamilton touts shared values with voting bloc" are campaign coverage
+    # by any reading.
+    "vote", "voter", "voting", "incumbent", "town hall", "opponent", "debate",
+    "challenger", "fundrais", "attack ad",
 )
 CANDIDATE_TERMS = {
     MARSHALL: ("roger marshall", "sen. marshall", "senator marshall", "marshall"),
     HAMILTON: ("adam hamilton", "hamilton"),
 }
 STRONG_TERMS = ("roger marshall", "adam hamilton", "sen. marshall", "senator marshall")
+
+# Names that need no further context. This is asymmetric, and the asymmetry is a
+# fact about the two men rather than a convenience: Roger Marshall is a sitting
+# senator and no other Roger Marshall shows up in Kansas coverage, so anything
+# about him is about the incumbent. Adam Hamilton led a large United Methodist
+# congregation for decades and is written about constantly in that capacity — the
+# probe caught "Hamilton honored for connectional leadership" — so his name still
+# has to arrive with the race attached.
+SELF_SUFFICIENT = ("roger marshall", "sen. marshall", "senator marshall")
+
+# Google News is a search feed, not an outlet. Its entries name the real publisher
+# in a <source> element and repeat it as a " - Outlet" suffix on the title, and
+# they link through a redirect rather than to the publisher. All three need
+# handling, or the news tab reads "Google News" sixty times over.
+GOOGLE_NEWS_HOST = "news.google.com"
 
 
 @dataclass
@@ -72,11 +101,51 @@ def is_relevant(title: str, summary: str = "") -> bool:
     # Both candidates named together is unambiguous.
     if len(named) == 2:
         return True
+    # A name that identifies the officeholder on its own.
+    if any(term in text for term in SELF_SUFFICIENT):
+        return True
     # A full name plus any race context.
     if any(term in text for term in STRONG_TERMS) and any(c in text for c in RACE_CONTEXT):
         return True
     # A bare surname needs the office named explicitly.
     return "senate" in text or "senator" in text
+
+
+def _is_syndicated(url: str) -> bool:
+    """True for a link that points at an aggregator rather than the publisher."""
+    try:
+        return urlparse(url).netloc.endswith(GOOGLE_NEWS_HOST)
+    except ValueError:
+        return False
+
+
+def _outlet(entry, title: str) -> tuple[str | None, str]:
+    """The publisher behind a Google News entry, and the title without its suffix.
+
+    Returns (None, title) when the entry names no outlet, so the caller falls back
+    to the feed's own name rather than inventing one.
+    """
+    source = entry.get("source")
+    name = ""
+    if isinstance(source, dict):
+        name = (source.get("title") or "").strip()
+    if not name and " - " in title:
+        # Every entry in this feed carries the suffix; the <source> element is the
+        # better answer and this is the fallback when it is missing.
+        name = title.rsplit(" - ", 1)[1].strip()
+    if not name:
+        return None, title
+    suffix = f" - {name}"
+    return name, title[: -len(suffix)].strip() if title.endswith(suffix) else title
+
+
+def _title_key(title: str) -> str:
+    """A loose key for spotting the same story arriving by two routes.
+
+    Google News republishes headlines we also read straight from the outlet, and
+    the two links differ, so url-based dedup does not catch them.
+    """
+    return re.sub(r"[^a-z0-9]+", "", title.lower())
 
 
 def _parse_feed_time(entry) -> datetime | None:
@@ -96,6 +165,9 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
     attribution: list[Attribution] = []
     yields: list[str] = []
     near_misses: list[str] = []
+    by_title: dict[str, str] = {}
+    origin: dict[str, Feed] = {}
+    duplicates = 0
 
     for feed in NEWS_FEEDS:
         try:
@@ -125,35 +197,60 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
                     near += 1
                     near_misses.append(f"{feed.name}: {title[:100]}")
                 continue
+            matched += 1
+
+            # A search feed reports the publisher; an outlet feed is the publisher.
+            outlet = None
+            if _is_syndicated(link):
+                outlet, title = _outlet(entry, title)
+
             identifier = item_id(link)
-            items[identifier] = NewsItem(
+            item = NewsItem(
                 id=identifier,
                 title=title,
-                source=feed.name,
+                source=outlet or feed.name,
                 url=canonical_url(link),
                 published_at=_parse_feed_time(entry),
                 # Paywalled outlets get headline-only treatment.
                 summary=None if feed.paywalled else (summary.strip() or None),
                 mentions=mentions(f"{title} {summary}"),
             )
-            matched += 1
+
+            key = _title_key(title)
+            prior = by_title.get(key)
+            if prior is not None and prior != identifier:
+                duplicates += 1
+                # Same story, two routes. Keep the one that links to the publisher.
+                if not (_is_syndicated(items[prior].url) and not _is_syndicated(item.url)):
+                    continue
+                del items[prior]
+            items[identifier] = item
+            by_title[key] = identifier
+            origin[identifier] = feed
 
         yields.append(f"{feed.name} {matched}/{len(parsed.entries)}")
 
-        if matched:
-            attribution.append(
-                Attribution(
-                    name=feed.name,
-                    url=feed.url,
-                    note="Headline and link only." if feed.paywalled else None,
-                )
-            )
+
+    # Credit a feed only for the items it actually supplies. A story that arrived
+    # both from its publisher and from the aggregator is published once, under the
+    # publisher, so crediting the aggregator for it too would overstate what this
+    # file owes to whom — and attribution is the one field whose entire purpose is
+    # to be accurate about that.
+    for feed in NEWS_FEEDS:
+        if not any(origin.get(i) is feed for i in items):
+            continue
+        note = "Headline and link only." if feed.paywalled else None
+        if feed.url.startswith(f"https://{GOOGLE_NEWS_HOST}"):
+            note = "Search feed; each item is credited to the outlet that wrote it."
+        attribution.append(Attribution(name=feed.name, url=feed.url, note=note))
 
     # Reported on every run, not just under a probe. The per-feed yield is already
     # computed above and was being thrown away, which is why a tracker showing one
     # outlet and nothing for five days needed a special run to explain itself.
     if yields:
         warnings.append("feed yield (kept/entries): " + ", ".join(yields))
+    if duplicates:
+        warnings.append(f"{duplicates} story(ies) arrived from more than one feed")
     if near_misses:
         warnings.append(
             f"{len(near_misses)} headline(s) named a candidate and were dropped "
@@ -208,7 +305,7 @@ def from_gdelt(warnings: list[str]) -> list[NewsItem]:
 def collect() -> NewsResult:
     warnings: list[str] = []
     feed_items, attribution = from_feeds(warnings)
-    gdelt_items = from_gdelt(warnings)
+    gdelt_items = from_gdelt(warnings) if GDELT_ENABLED else []
 
     # Named outlets win over GDELT's domain-only attribution for the same story.
     merged: dict[str, NewsItem] = {item.id: item for item in gdelt_items}

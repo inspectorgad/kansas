@@ -13,7 +13,8 @@ per-host delay.
 | **Polymarket** | Win probability | Gamma API, no auth | Continuous | Returns some list fields as JSON-encoded strings. |
 | **FEC (openFEC)** | Receipts, disbursements, cash on hand, in-state share, independent expenditures, filings | `api.data.gov` key (free) | Per filing | Public domain. Candidate ids are resolved at runtime, never trusted from config. The for/against split is summed from each expenditure's own `support_oppose_indicator`, not from `schedule_e/by_candidate` — see below. |
 | **Kansas newsrooms** — Kansas Reflector, KCUR, KWCH, KSNT | Headlines | RSS | Continuous | Headline, outlet and link only; paywalled outlets get no summary. Topeka Capital-Journal, Lawrence Journal-World, Kansas Public Radio and the KC Star widget URL were dropped after each answered 404 or timed out on live runs. `--probe-news` reports, per feed, how many entries it served and how many the relevance filter kept — which is what separates a dead feed from a feed with no race coverage from a filter that is too strict. |
-| **GDELT 2.0** | Wider news sweep | Doc API, no key | Continuous | Intended to catch coverage the local feeds miss; has contributed **nothing**, answering HTTP 429 on every attempt of every run. Part of that was ours: the retry schedule slept 1s then 2s, inside the window it was waiting out, so all three attempts were spent throttled. Throttles now back off from 5s and honour `Retry-After`. If it still 429s from shared runner IPs, the Google News search feed in `CANDIDATE_NEWS_FEEDS` does the same job. |
+| **Google News search** | Coverage of this race from any outlet | RSS search, no key | Continuous | The widest net we have: 100 entries spanning four months, 67 of them about this race. Reaches the Kansas City Star, Topeka Capital-Journal, Religion News Service and Cook, none of which we can fetch directly. It is a search feed, not a publisher, so each item is re-credited to the outlet that wrote it, the `" - Outlet"` suffix is stripped from the headline, and a story that also arrives from its publisher's own feed is published under the publisher's direct link rather than the redirect. |
+| **GDELT 2.0** | Wider news sweep | Doc API, no key | — | **Disabled.** Answered HTTP 429 to every attempt of every run for the collector's entire life — zero items, ever. Part of that was ours: the retry schedule slept 1s then 2s, inside the window it was waiting out. It still 429s with a 5s/10s backoff, so the cause is the shared runner IP. Off on the same terms as the FCC endpoint; `--probe-news` still tries it, so a recovery would show. The Google News search feed does this job and does it far better. |
 | **Cook Political Report, Sabato's Crystal Ball, Inside Elections** | Race ratings | Page scrape | Rare | **Disabled.** All three answer 403 Forbidden to this collector — a block, not a moved page — so no parser change reaches them. A rating change would be among the more newsworthy events in the race, which is why the probe stays. |
 
 ## Collecting, format unverified
@@ -50,12 +51,36 @@ Every feed answered, none was stale, none was malformed, and across 180 entries
 there were **zero near misses** — not one headline that named a candidate and got
 dropped. `is_relevant` is exonerated by count, not by argument.
 
-The feeds are the problem. KWCH's and KSNT's configured URLs are general-news
+The feeds were the problem. KWCH's and KSNT's configured URLs are general-news
 firehoses, KCUR's politics feed is ten items deep, and Kansas Reflector was
-carrying the tracker alone. `CANDIDATE_NEWS_FEEDS` holds replacements — politics
-sections, outlets we do not read, and a Google News search feed — none of them
-adopted until the probe has seen it answer and carry this race. Guessing four FCC
-paths blind already cost four 404s a run.
+carrying the tracker alone.
+
+A second round tested ten unadopted feeds. Two were worth having:
+
+```
+Google News search   100 entries, 4 months deep   kept 67   near-miss 10
+KSNT politics         21 entries                  kept  3   near-miss  0
+```
+
+The other eight are recorded as rejected in `config.NEWS_FEEDS` so nobody tries
+them again: two serve valid but empty channels, two 404, two time out, one serves
+HTML instead of a feed, and KAKE answered 429 — throttling rather than a wrong
+URL, so it stays on the candidate list.
+
+The ten near misses were the real finding. With only local feeds there had been
+zero, so the filter looked correct; a wider net showed it dropping ordinary
+coverage of the incumbent that simply never used the word "Senate" — *"Roger
+Marshall tells Kansas voters to look at 'who hates me'"*, *"Marshall spent more
+time, taxpayer money near Florida property"*. `RACE_CONTEXT` gained the words
+those stories used instead, and a full-name match on **Marshall** now stands on
+its own.
+
+That last rule is asymmetric on purpose. Roger Marshall is a sitting senator and
+no other Roger Marshall appears in Kansas coverage, so anything about him is about
+the incumbent. Adam Hamilton led a large United Methodist congregation for decades
+and is written about constantly in that capacity — the probe caught *"Hamilton
+honored for connectional leadership"* — so his name still has to arrive with the
+race attached.
 
 ## Deliberately out of scope
 

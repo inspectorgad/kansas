@@ -88,10 +88,26 @@ NEWS_FEEDS: list[Feed] = [
     Feed("KCUR", "https://www.kcur.org/politics-elections-and-government.rss"),
     Feed("KWCH", "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"),
     Feed("KSNT", "https://www.ksnt.com/feed/"),
+    Feed("KSNT politics", "https://www.ksnt.com/news/politics/feed/"),
+    # A search feed, not an outlet. It answered with 100 entries spanning four
+    # months, 67 of them about this race — an order of magnitude more than the
+    # four local feeds produce between them, and it reaches the Kansas City Star,
+    # the Topeka Capital-Journal, Religion News Service and Cook, none of which we
+    # can fetch directly. Items arriving this way are re-attributed to the outlet
+    # that wrote them; see sources/news.py.
+    Feed("Google News",
+         "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+"
+         "%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"),
     # Dropped after live runs, each verified 404 or timeout: Topeka
     # Capital-Journal, Lawrence Journal-World, Kansas Public Radio, and the
     # Kansas City Star widget URL. Only feeds that actually answered are kept —
     # a 404 per outlet per run is noise that buries real failures.
+    #
+    # Probed 2026-08-24 and rejected, so they are not retried: KSNT Capitol
+    # Bureau and KWCH politics both serve valid but empty channels (846 and 746
+    # bytes, zero entries); cjonline's politics path 404s; the Wichita Eagle and
+    # Kansas City Star widget URLs both time out; kansaspublicradio.org/feed/
+    # 404s; and Salina Post's search URL serves an HTML page, not a feed.
 ]
 
 # Feeds not yet adopted, tested only by `--probe-news`. Nothing here is fetched
@@ -105,34 +121,21 @@ NEWS_FEEDS: list[Feed] = [
 # guessing four FCC paths blind already cost four 404s a run, so they are probed
 # before any is adopted.
 CANDIDATE_NEWS_FEEDS: list[Feed] = [
-    # Politics sections of outlets whose general feed we already read.
-    Feed("KSNT politics", "https://www.ksnt.com/news/politics/feed/"),
-    Feed("KSNT Capitol Bureau", "https://www.ksnt.com/news/capitol-bureau/feed/"),
-    Feed("KWCH politics", "https://www.kwch.com/arc/outboundfeeds/rss/category/news/politics/"),
-    # Outlets we do not read at all. The Capital-Journal and KC Star URLs here are
-    # different paths from the ones dropped earlier for 404ing.
-    Feed("Topeka Capital-Journal politics",
-         "https://www.cjonline.com/arc/outboundfeeds/rss/category/news/politics/",
-         paywalled=True),
-    Feed("Wichita Eagle politics",
-         "https://www.kansas.com/news/politics-government/?widgetName=rssfeed"
-         "&widgetContentId=712015&getXmlFeed=true",
-         paywalled=True),
-    Feed("Kansas City Star politics",
-         "https://www.kansascity.com/news/politics-government/?widgetName=rssfeed"
-         "&widgetContentId=712015&getXmlFeed=true",
-         paywalled=True),
+    # Answered 429, which is throttling rather than a wrong URL, so it is worth
+    # another look later. Everything else from the 2026-08-24 round is recorded as
+    # rejected in the NEWS_FEEDS comment above.
     Feed("KAKE", "https://www.kake.com/rss/news/"),
-    Feed("Kansas Public Radio", "https://kansaspublicradio.org/feed/"),
-    Feed("Salina Post politics", "https://www.salinapost.com/search/?f=rss&t=article&c=news"),
-    # A search feed rather than a section: it returns coverage of this race from
-    # any outlet, which is the job GDELT was meant to do and has never done.
-    Feed("Google News search",
-         "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+"
-         "%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"),
 ]
 
-# GDELT casts a wider net than the local feeds and needs no key.
+# GDELT casts a wider net than the local feeds and needs no key — in theory. In
+# practice it answered HTTP 429 to every attempt of every run for the collector's
+# entire life, contributing exactly zero items, and it still 429s with the longer
+# throttle backoff, so the cause is the shared runner IP rather than our schedule.
+# Off, on the same terms as the FCC endpoint: three requests and 15s of backoff
+# per run for nothing. `--probe-news` still tries it, so a recovery would show.
+# The Google News search feed does this job and does it far better.
+GDELT_ENABLED = False
+
 GDELT_DOC_API = "https://api.gdeltproject.org/api/v2/doc/doc"
 GDELT_QUERY = '("Roger Marshall" OR "Adam Hamilton") ("Kansas Senate" OR "U.S. Senate")'
 
