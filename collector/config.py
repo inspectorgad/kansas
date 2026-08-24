@@ -171,6 +171,22 @@ KS_ENR_BASE = "https://ent.sos.ks.gov"
 KS_ENR_FALLBACK = "https://www.kssos.org/ent/kssos_ent.html"
 
 # --- Race ratings ------------------------------------------------------------
+# Race-rating collection is off because all three handicappers refuse the
+# request. A live probe on 2026-08-24 got 403 Forbidden from every one — Cook,
+# Sabato's Crystal Ball and Inside Elections — not 404, so this is a deliberate
+# block rather than a moved page, and no amount of parser work changes it.
+#
+# Three requests per run were being spent to fail, and the resulting warning fired
+# every twenty minutes about something unfixable. That is worse than silence: a
+# log that always carries the same complaint is a log nobody reads, which is how
+# the election-night parser reporting "3,075 votes, 100% reporting" as a success
+# went unnoticed for a day.
+#
+# `--probe-ratings` still tries all three on demand and reports exactly what came
+# back. Flip this to True if one of them starts answering, or if a licensed feed
+# gets arranged.
+RATINGS_ENABLED = False
+
 RATING_SOURCES = {
     "Cook Political Report": "https://www.cookpolitical.com/senate/race/488581",
     "Sabato's Crystal Ball": "https://centerforpolitics.org/crystalball/2026-senate/",

@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import re
 
-from config import RATING_SOURCES
+from config import RATING_SOURCES, RATINGS_ENABLED
 from fetch import SourceError, get_text
 from schemas import Party, Rating
 
@@ -86,6 +86,14 @@ def parse_rating(html: str) -> tuple[str, Party | None] | None:
 
 
 def collect() -> list[Rating]:
+    """Ratings, or nothing while every handicapper refuses the request.
+
+    See config.RATINGS_ENABLED. The caller reports the reason rather than showing
+    an empty list as though the handicappers had no view.
+    """
+    if not RATINGS_ENABLED:
+        return []
+
     ratings: list[Rating] = []
     for source, url in RATING_SOURCES.items():
         try:

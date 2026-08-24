@@ -913,3 +913,42 @@ class TestRatingsAreScopedToKansas:
 
         page = "<p>Kansas Senate</p>" + ("<p>filler. </p>" * 60) + "<p>Solid Republican</p>"
         assert parse_rating(page) is None
+
+
+class TestRatingsAreParked:
+    """Off until a handicapper answers, and saying so rather than looking empty.
+
+    A live probe got 403 Forbidden from Cook, Sabato and Inside Elections — a
+    block, not a moved page. Three requests per run were being spent to fail, and
+    the warning fired every twenty minutes about something no parser change can
+    fix. A log that always carries the same complaint is a log nobody reads, which
+    is how "3,075 votes, 100% reporting" survived a day as a reported success.
+    """
+
+    def test_collect_makes_no_requests_while_parked(self, monkeypatch):
+        import sources.ratings as ratings
+
+        def explode(*args, **kwargs):
+            raise AssertionError("a parked source must not fetch anything")
+
+        monkeypatch.setattr(ratings, "get_text", explode)
+        assert ratings.collect() == []
+
+    def test_the_parser_is_still_reachable_for_the_probe(self):
+        """Parked means not fetched, not deleted — the probe still exercises it."""
+        from sources.ratings import parse_rating
+
+        assert parse_rating("<tr><td>Kansas</td><td>Toss-up</td></tr>") == ("Toss-up", None)
+
+    def test_the_run_reports_the_reason_not_a_blank(self, fixtures, tmp_path):
+        report = run.run(["race"], str(tmp_path), write=True)
+        assert any("403" in note for note in report.warnings), report.warnings
+        assert not any("pages may have changed" in note for note in report.warnings)
+
+    def test_re_enabling_restores_the_old_diagnosis(self, fixtures, tmp_path, monkeypatch):
+        """The flag is the only thing standing between parked and live."""
+        import config
+
+        monkeypatch.setattr(config, "RATINGS_ENABLED", True)
+        report = run.run(["race"], str(tmp_path), write=True)
+        assert not any("403" in note for note in report.warnings), report.warnings

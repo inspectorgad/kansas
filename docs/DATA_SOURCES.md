@@ -14,7 +14,7 @@ per-host delay.
 | **FEC (openFEC)** | Receipts, disbursements, cash on hand, in-state share, independent expenditures, filings | `api.data.gov` key (free) | Per filing | Public domain. Candidate ids are resolved at runtime, never trusted from config. The for/against split is summed from each expenditure's own `support_oppose_indicator`, not from `schedule_e/by_candidate` — see below. |
 | **Kansas newsrooms** — Kansas Reflector, KCUR, KWCH, KSNT, Topeka Capital-Journal, KC Star | Headlines | RSS | Continuous | Headline, outlet and link only; paywalled outlets get no summary. |
 | **GDELT 2.0** | Wider news sweep | Doc API, no key | Continuous | Catches coverage the local feeds miss. |
-| **Cook Political Report, Sabato's Crystal Ball, Inside Elections** | Race ratings | Page scrape | Rare | A rating change is among the more newsworthy events in a race. |
+| **Cook Political Report, Sabato's Crystal Ball, Inside Elections** | Race ratings | Page scrape | Rare | **Disabled.** All three answer 403 Forbidden to this collector — a block, not a moved page — so no parser change reaches them. A rating change would be among the more newsworthy events in the race, which is why the probe stays. |
 
 ## Collecting, format unverified
 
@@ -139,3 +139,26 @@ $3,500 for the primary plus $3,500 for the general, the individual maximum, and
 those rows audit clean with no memo entries at all. Treat a total well above
 $7,000 as a sign the money arrived through a structure rather than as one
 person's cheque.
+
+## Two sources that are off, and why that is a decision rather than a gap
+
+`FCC_ENABLED` and `RATINGS_ENABLED` are both False, and each is a considered
+answer to a live probe rather than unfinished work.
+
+**Broadcast ads.** Four documented FCC facility-search paths, all 404 against the
+live API. The endpoint shape needs discovering from a browser session; the paths
+in this repo are guesses that have now been ruled out.
+
+**Race ratings.** Cook, Sabato's Crystal Ball and Inside Elections all answer 403
+Forbidden. That is a deliberate block on automated requests, so no amount of
+parser work reaches them. The realistic routes are a licensed feed or entering
+ratings by hand, and a rating change is newsworthy enough that a manual path may
+be worth it.
+
+Both stay off for the same reason, which matters more than either source. A
+disabled source costs nothing and says why. An enabled-but-failing source spends
+requests to fail and files the same warning every twenty minutes — and a log that
+always carries the same complaint is a log nobody reads. That is not
+hypothetical here: it is how `[OK] hamilton: 3,075 (100.0%)` survived a full day
+as a *reported success* in the election-night probe. Keeping the warning list
+short enough to read is a correctness measure, not tidiness.

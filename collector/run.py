@@ -114,7 +114,10 @@ def collect_race(report: RunReport, data_dir: str) -> RacePayload:
         report.warnings.append(f"race ratings unavailable: {exc}")
     if not ratings:
         report.warnings.append(
-            "no race ratings parsed — the handicappers' pages may have changed"
+            "race ratings disabled: Cook, Sabato and Inside Elections all answer "
+            "403 to this collector (run --probe-ratings to retry)"
+            if not config.RATINGS_ENABLED
+            else "no race ratings parsed — the handicappers' pages may have changed"
         )
 
     resolved = _resolved_fec_ids(data_dir)
