@@ -319,6 +319,69 @@ def _precincts(text: str) -> tuple[int | None, int | None]:
 
 # --- the probe ---------------------------------------------------------------
 
+# Kansas cast about 1.35 million votes for Senate in 2020 and a little over a
+# million in the 2022 midterm. A completed statewide count cannot be in the
+# thousands, and the probe needs a number to say so with.
+MIN_PLAUSIBLE_STATEWIDE = 300_000
+
+# Below this share of precincts a partial count legitimately looks nothing like a
+# final one, so the vote-total check is held back until here. The structural
+# checks apply throughout.
+REPORTING_FLOOR = 5.0
+
+
+def implausible(data: ResultsData) -> str | None:
+    """Why this parse cannot be a statewide Senate result, or None if it could be.
+
+    The probe used to accept any non-empty parse, and against the live fallback
+    page on 2026-08-24 that meant declaring success on this:
+
+        hamilton: 3,075 (100.0%)
+        counties: 0 of 105
+        precincts reporting: 100.0%
+
+    One candidate, three thousand votes, every precinct in. On election night
+    that publishes a called race for Hamilton off some stray table, and the app
+    has no way to know it is wrong. A parser that reports success on nonsense is
+    worse than one that fails, because failure is visible and this is not.
+
+    None of these checks are judgement calls about the politics. They are
+    arithmetic and structure: both candidates appear in a two-candidate race, a
+    finished count is not in the thousands, and a hundred per cent reporting with
+    no counties parsed contradicts itself.
+    """
+    votes = {row.candidate_id: row.votes for row in data.statewide}
+    if not votes:
+        return "no candidate rows"
+
+    reporting = data.pct_reporting
+    total = sum(votes.values())
+    missing = [candidate for candidate in (MARSHALL, HAMILTON) if candidate not in votes]
+
+    # A single row is always a parse artefact, at any stage of the count. An ENR
+    # feed enumerates a contest's candidates from the first precinct, so a
+    # candidate with no votes appears as a zero rather than being absent. The
+    # first version of this check only fired above REPORTING_FLOOR, which let a
+    # lone candidate through early in the night — exactly when nobody would be
+    # watching closely enough to catch it.
+    if missing:
+        return (
+            f"only {sorted(votes)} present, {missing} missing"
+            + (f" at {reporting}% reporting" if reporting is not None else "")
+        )
+
+    if reporting is not None and reporting >= 99.0:
+        if total < MIN_PLAUSIBLE_STATEWIDE:
+            return (
+                f"{total:,} votes with {reporting}% of precincts in; a finished "
+                f"Kansas Senate count is above {MIN_PLAUSIBLE_STATEWIDE:,}"
+            )
+        if not data.counties:
+            return f"{reporting}% of precincts in but no county rows parsed"
+
+    return None
+
+
 def probe(url: str | None = None) -> ResultsData:
     """Try each known shape against the ENR page, recording what happened."""
     data = ResultsData()
@@ -333,6 +396,12 @@ def probe(url: str | None = None) -> ResultsData:
             continue
         parsed = _parse_json_results(payload)
         if parsed:
+            reason = implausible(parsed)
+            if reason:
+                data.probes.append(
+                    ResultsProbe("json-feed", False, f"{candidate_url}: rejected — {reason}")
+                )
+                continue
             parsed.probes = data.probes + [ResultsProbe("json-feed", True, candidate_url)]
             parsed.source_url = candidate_url
             parsed.attribution = data.attribution
@@ -353,13 +422,22 @@ def probe(url: str | None = None) -> ResultsData:
         for shape, parser in (("embedded-json", _parse_embedded_json), ("html-table", _parse_html_table)):
             parsed = parser(html)
             if parsed:
-                parsed.probes = data.probes + [ResultsProbe(shape, True, page_url)]
-                parsed.source_url = page_url
-                parsed.attribution = data.attribution
+                # Populated before the plausibility check, which reads them.
                 parsed.precincts_reporting = reporting
                 parsed.precincts_total = total
                 if reporting is not None and total:
                     parsed.pct_reporting = round(reporting / total * 100, 2)
+
+                reason = implausible(parsed)
+                if reason:
+                    data.probes.append(
+                        ResultsProbe(shape, False, f"{page_url}: rejected — {reason}")
+                    )
+                    continue
+
+                parsed.probes = data.probes + [ResultsProbe(shape, True, page_url)]
+                parsed.source_url = page_url
+                parsed.attribution = data.attribution
                 return parsed
             data.probes.append(ResultsProbe(shape, False, f"{page_url}: no match"))
 
@@ -390,8 +468,10 @@ def diagnose(url: str | None = None) -> str:
         if data.pct_reporting is not None:
             lines.append(f"  precincts reporting: {data.pct_reporting}%")
     else:
-        lines.append("NO SHAPE MATCHED. Add a parser for what was served above,")
-        lines.append("or switch to the AP Elections API (paid) as documented.")
+        lines.append("NO USABLE RESULT. Every shape either failed to match or was")
+        lines.append("rejected as implausible — a rejection line above says which and")
+        lines.append("why. Add a parser for what was served, or switch to the AP")
+        lines.append("Elections API (paid) as documented in docs/ELECTION_NIGHT.md.")
     return "\n".join(lines)
 
 

@@ -196,3 +196,108 @@ class TestPrecincts:
 
     def test_absent_precinct_counts_are_none_not_zero(self):
         assert _precincts("Unofficial results") == (None, None)
+
+
+class TestImplausibleResultsAreRejected:
+    """A parser that reports success on nonsense is worse than one that fails.
+
+    Against the live fallback page on 2026-08-24 the probe declared success on:
+
+        hamilton: 3,075 (100.0%)
+        counties: 0 of 105
+        precincts reporting: 100.0%
+
+    One candidate, three thousand votes, every precinct in. On election night
+    that publishes a called race off a stray table, and nothing downstream can
+    tell it is wrong. Failure is visible; this was not.
+    """
+
+    def _data(self, rows, *, reporting=None, counties=()):
+        from schemas.results import CandidateResult
+        from sources.results import ResultsData
+
+        data = ResultsData()
+        total = sum(v for _, v in rows) or 1
+        data.statewide = [
+            CandidateResult(
+                candidate_id=cid, votes=votes, pct=round(votes / total * 100, 2)
+            )
+            for cid, votes in rows
+        ]
+        data.pct_reporting = reporting
+        data.counties = list(counties)
+        return data
+
+    def test_the_exact_live_case_is_rejected(self):
+        from sources.results import implausible
+
+        reason = implausible(self._data([("hamilton", 3075)], reporting=100.0))
+        assert reason is not None
+        assert "marshall" in reason
+
+    def test_one_candidate_missing_is_rejected(self):
+        from sources.results import implausible
+
+        assert implausible(self._data([("marshall", 500000)], reporting=60.0)) is not None
+
+    def test_a_finished_count_in_the_thousands_is_rejected(self):
+        from sources.results import implausible
+
+        reason = implausible(
+            self._data([("marshall", 2000), ("hamilton", 1075)], reporting=100.0)
+        )
+        assert reason is not None
+        assert "3,075" in reason
+
+    def test_full_reporting_with_no_counties_is_rejected(self):
+        """A hundred per cent of precincts in, and not one county parsed."""
+        from sources.results import implausible
+
+        reason = implausible(
+            self._data([("marshall", 700000), ("hamilton", 650000)], reporting=100.0)
+        )
+        assert reason is not None
+        assert "no county rows" in reason
+
+    def test_a_real_finished_count_passes(self):
+        from schemas.results import CountyResult
+        from sources.results import implausible
+
+        counties = [
+            CountyResult(
+                county=name, marshall_votes=1000, hamilton_votes=900, total_votes=1900
+            )
+            for name in ("Sedgwick", "Johnson", "Shawnee")
+        ]
+        assert implausible(
+            self._data(
+                [("marshall", 700000), ("hamilton", 650000)],
+                reporting=100.0,
+                counties=counties,
+            )
+        ) is None
+
+    def test_an_early_partial_count_passes(self):
+        """Small totals are correct at 2% in; only the structure is checked there."""
+        from sources.results import implausible
+
+        assert implausible(
+            self._data([("marshall", 1800), ("hamilton", 1275)], reporting=2.0)
+        ) is None
+
+    def test_a_single_candidate_is_rejected_even_early(self):
+        """An ENR feed lists both candidates from the first precinct."""
+        from sources.results import implausible
+
+        assert implausible(self._data([("hamilton", 40)], reporting=1.0)) is not None
+
+    def test_an_empty_parse_is_rejected(self):
+        from sources.results import implausible
+
+        assert implausible(self._data([])) == "no candidate rows"
+
+    def test_a_feed_without_reporting_figures_still_needs_both_candidates(self):
+        from sources.results import implausible
+
+        assert implausible(self._data([("marshall", 500)])) is not None
+        assert implausible(self._data([("marshall", 500), ("hamilton", 400)])) is None

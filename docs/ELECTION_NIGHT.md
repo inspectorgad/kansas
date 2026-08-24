@@ -108,3 +108,65 @@ The documented fallback is the **AP Elections API**, which is paid. It is the
 reason the results collector is isolated behind a single `collect()` function:
 swapping the source means replacing one module, not touching the app. Decide this
 in October, not on election night.
+
+## What the probe found on 2026-08-24
+
+Run against the archived August 4 primary, nineteen days after it was held. The
+answer is worse than "the format is unknown".
+
+**The official ENR host refuses us outright.** Every path under
+`ent.sos.ks.gov` — four JSON candidates and the page itself — returned
+**403 Forbidden**, not 404. That is a block, not an absence. It may behave
+differently on election night, when the host is actually serving results, but it
+cannot be relied on and there is no way to find out before November 3.
+
+**The fallback page parsed, and what it produced was nonsense:**
+
+```
+[OK  ] html-table: https://www.kssos.org/ent/kssos_ent.html
+  hamilton: 3,075 (100.0%)
+  counties: 0 of 105
+  precincts reporting: 100.0%
+```
+
+One candidate. Three thousand votes in a state that casts over a million. Every
+precinct reporting. Zero counties. And the probe called it a success, because the
+only test was whether a parse returned something non-empty.
+
+That is the most dangerous failure this project has had — worse than the margin
+ladder, worse than the double-counted outside spending — because it would have
+fired on election night, on the one screen that matters, and published a called
+race. Nothing downstream could have caught it: the payload would have validated,
+the app would have rendered it, and a reader would have had no reason to doubt it.
+
+A plausibility gate now stands between a parse and a publish, and a failing parse
+is recorded as a rejection with its reason rather than as a match:
+
+- **Both candidates must appear**, at any stage of the count. An ENR feed
+  enumerates a contest's candidates from the first precinct, so a candidate with
+  no votes shows a zero rather than being absent. A lone row is always an
+  artefact. (The first version of this check only applied above 5% reporting,
+  which let a single candidate through early in the evening — precisely when
+  nobody is watching closely.)
+- **A finished count cannot be in the thousands.** Above 99% reporting the total
+  must exceed 300,000; Kansas cast about 1.35M Senate votes in 2020 and just over
+  a million in the 2022 midterm.
+- **Full reporting with no counties contradicts itself.** 100% of precincts in and
+  not one county row parsed cannot both be true.
+
+None of these are judgements about the politics. They are arithmetic and
+structure.
+
+### What still has to happen before November 3
+
+The gate makes a wrong number impossible to publish. It does **not** make the
+right number possible to collect — that is still unsolved, and it is now the
+open question rather than a suspicion:
+
+1. Find out whether `ent.sos.ks.gov` serves anything on election night, or
+   whether the 403 is permanent. If it is permanent, the AP Elections API (paid)
+   is the named fallback and needs arranging with weeks to spare, not hours.
+2. Work out what the `kssos.org` fallback page actually contains. The 3,075-vote
+   table is *something* — quite possibly a single county or a down-ballot contest —
+   and identifying it is how a real parser gets written.
+3. Rehearse against a full archived general election, not a primary.
