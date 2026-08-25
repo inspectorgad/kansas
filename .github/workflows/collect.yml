@@ -13,7 +13,7 @@ on:
         required: false
         default: ""
       probe:
-        description: "Probe instead of collecting. Space-separated: results ratings ads ground donors markets news industry"
+        description: "Probe instead of collecting. Space-separated: results ratings ads ground donors markets news"
         required: false
         default: ""
 
@@ -87,7 +87,6 @@ jobs:
         env:
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
-          OPENSECRETS_API_KEY: ${{ secrets.OPENSECRETS_API_KEY }}
         run: |
           # pipefail matters: without it `$?` reports tee's exit status, so a
           # failed collection looked like a successful one.

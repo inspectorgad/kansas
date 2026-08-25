@@ -154,9 +154,15 @@ Defend Our Conservative Senate PAC, whose money appears in none of his campaign
 totals; Hamilton holds no office and has only the campaign. Reporting the campaign
 alone would show the incumbent's operation as smaller than it is.
 
-| Source | Provides | Access | Status |
-|---|---|---|---|
-| **OpenSecrets** | Industry and sector classification of donors | Free key, 200 calls/day | **Probe only.** The FEC records an employer string and stops; OpenSecrets maps it to an industry, which is the difference between reproducing a form and answering who funds a campaign. Two constraints shape it: the daily allowance is 200 calls against a collector that runs ~40 times a day, and candidates are identified by a CRP id whose only public lookup lists *sitting members of Congress*. Marshall is one; Hamilton is a challenger and may have no entry at all. An industry breakdown for the incumbent alone would present one side's data as though it described the race, so `--probe-industry` establishes which situation this is before anything is published. |
+There is **no source for industry classification** of donors. OpenSecrets was the
+only organisation publishing the employer-to-industry mapping and discontinued its
+API in 2026; FollowTheMoney was absorbed into OpenSecrets years before that, and
+Stanford's DIME is a post-cycle academic release, so neither covers a race still
+being run. The FEC records a self-reported employer string and nothing more, which
+makes `top_employers` the honest limit — a homegrown rollup of those strings into
+industries would be our own classification presented with the authority of a
+standard one, over a field whose most common values are "RETIRED" and
+"SELF-EMPLOYED".
 
 ## Deliberately out of scope
 

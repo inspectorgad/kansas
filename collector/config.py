@@ -163,21 +163,12 @@ META_AD_LIBRARY_API = "https://graph.facebook.com/v21.0/ads_archive"
 # Same reasoning as FEC_API_KEY: an unset secret is "" and must read as absent.
 META_ACCESS_TOKEN = os.environ.get("META_ACCESS_TOKEN") or None
 
-# --- Industry classification -------------------------------------------------
-# The FEC records a donor's self-reported employer and nothing else. OpenSecrets
-# maps those strings to industries and sectors, which is the difference between a
-# list of company names and an answer to "who funds this campaign".
-#
-# Same empty-string handling as the other secrets: an unset repo secret arrives as
-# "" and has to read as absent, not as a key of length zero.
-OPENSECRETS_API = "https://www.opensecrets.org/api/"
-OPENSECRETS_API_KEY = os.environ.get("OPENSECRETS_API_KEY") or None
-
-# The free key allows 200 calls a day and the collector runs about 40 times a
-# day, so this cannot be fetched every run. Industry mix moves on filing
-# deadlines, not on minutes.
-OPENSECRETS_MIN_HOURS = 24
-OPENSECRETS_CALL_BUDGET = 6
+# Industry classification of donors has no source. OpenSecrets was the only
+# organisation publishing the employer-to-industry mapping and discontinued its
+# API in 2026; FollowTheMoney was absorbed into OpenSecrets years earlier, and
+# Stanford's DIME is a post-cycle academic release, so neither covers a race that
+# is still running. The FEC records a self-reported employer string and nothing
+# else, so top_employers is as far as this can honestly go.
 
 # --- Ground game -------------------------------------------------------------
 KS_SOS_REGISTRATION = "https://sos.ks.gov/elections/voter-registration-statistics.html"

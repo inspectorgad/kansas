@@ -435,11 +435,6 @@ def main() -> int:
         help="dump the raw FEC rows behind the largest donors, and exit",
     )
     parser.add_argument(
-        "--probe-industry",
-        action="store_true",
-        help="report what OpenSecrets serves for this race, and for whom, then exit",
-    )
-    parser.add_argument(
         "--live-check",
         action="store_true",
         help="verify live endpoints still match the contract; writes nothing",
@@ -454,7 +449,6 @@ def main() -> int:
         "probe_donors": ("sources.finance", "diagnose"),
         "probe_ratings": ("sources.ratings", "diagnose"),
         "probe_news": ("sources.news", "diagnose"),
-        "probe_industry": ("sources.industry", "diagnose"),
     }
     for flag, (module_name, function_name) in probes.items():
         if getattr(args, flag):
