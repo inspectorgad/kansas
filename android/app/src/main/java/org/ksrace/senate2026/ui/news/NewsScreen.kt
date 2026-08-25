@@ -85,6 +85,20 @@ fun NewsScreen(snapshot: RaceSnapshot, now: Long, modifier: Modifier = Modifier)
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
+                // Only worth explaining when some are on screen.
+                val official = payload.items.count { it.isOfficial }
+                if (official > 0) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        text = "$official of ${payload.items.size} items are marked " +
+                            "Government source: published on an official .gov site rather " +
+                            "than reported by a newsroom. An officeholder has a press " +
+                            "operation and a challenger does not, so these do not fall " +
+                            "evenly between the two candidates.",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
             }
             Spacer(Modifier.height(16.dp))
         }
@@ -106,6 +120,20 @@ private fun NewsRow(item: NewsItem, now: Long, onOpen: () -> Unit) {
         )
         Spacer(Modifier.height(4.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            // Coloured rather than grey, because this is the one piece of metadata
+            // on the row that changes how the headline above it should be read.
+            if (item.isOfficial) {
+                Text(
+                    text = "Government source",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.tertiary,
+                )
+                Text(
+                    text = "·",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
             Text(
                 text = item.source,
                 style = MaterialTheme.typography.labelSmall,

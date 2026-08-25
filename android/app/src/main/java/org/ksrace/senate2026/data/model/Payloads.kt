@@ -374,7 +374,19 @@ data class NewsItem(
     @SerialName("published_at") val publishedAt: String? = null,
     val summary: String? = null,
     val mentions: List<String> = emptyList(),
-)
+    /** "news" for reporting, "official" for a government release. */
+    val kind: String = "news",
+) {
+    /**
+     * A press release from the incumbent's Senate office, rather than reporting.
+     *
+     * These are real coverage of the race and belong in the feed, but they are the
+     * officeholder's own words, and the challenger holds no office and so has no
+     * equivalent. Showing them unlabelled beside a newsroom's reporting would let
+     * one side's press shop read as journalism.
+     */
+    val isOfficial: Boolean get() = kind == "official"
+}
 
 @Serializable
 data class NewsPayload(

@@ -12,6 +12,7 @@ import pytest
 
 from fetch import SourceError
 from schemas import Attribution
+from schemas.news import SourceKind
 from sources.news import (
     _is_syndicated,
     _outlet,
@@ -20,6 +21,7 @@ from sources.news import (
     is_relevant,
     item_id,
     mentions,
+    source_kind,
 )
 
 
@@ -386,3 +388,60 @@ class TestCarryForward:
         result = self._collect(monkeypatch, None, [])
         assert result.items == []
         assert not any("carried" in w for w in result.warnings)
+
+
+class TestSourceKind:
+    """Government releases are separated from reporting.
+
+    Eleven of the 78 published items are U.S. Senate press releases — the second
+    largest source in the file. They are about this race and belong in it, but they
+    are the incumbent's own words, and the challenger holds no office and so has no
+    equivalent. An unlabelled list makes the two look alike.
+    """
+
+    def test_a_direct_gov_url_is_official(self):
+        assert source_kind("https://www.marshall.senate.gov/news/x/", "U.S. Senate") == (
+            SourceKind.OFFICIAL
+        )
+
+    def test_googles_marker_is_official_because_the_link_is_a_redirect(self):
+        # Every .gov item in the live file links through news.google.com, so the
+        # url carries no evidence at all and the outlet name is all there is.
+        assert source_kind(
+            "https://news.google.com/rss/articles/CBMirgFBVV95cUx", "U.S. Senate (.gov)"
+        ) == SourceKind.OFFICIAL
+
+    @pytest.mark.parametrize(
+        ("url", "source"),
+        [
+            ("https://kansasreflector.com/2026/08/a/", "Kansas Reflector"),
+            ("https://news.google.com/rss/articles/CBMirgF", "Kansas City Star"),
+            # A government second-level domain in another country is not a US .gov.
+            ("https://www.parliament.gov.uk/news/", "Parliament"),
+            # Nor is a lookalike hostname.
+            ("https://notreally-gov.com/x", "Someone"),
+        ],
+    )
+    def test_reporting_is_not_official(self, url, source):
+        assert source_kind(url, source) == SourceKind.NEWS
+
+    def test_items_already_published_get_labelled_on_carry_forward(self, monkeypatch):
+        import config
+        from sources import news
+
+        # As they appear in the live file: no .gov in the url, only in the name.
+        previous = [
+            _item(
+                "Marshall statement on the farm bill in the Senate",
+                "https://news.google.com/rss/articles/CBMirgF",
+                source="U.S. Senate (.gov)",
+            )
+        ]
+        monkeypatch.setattr(
+            news, "NEWS_FEEDS", [config.Feed("Google News", "https://news.google.com/rss/s")]
+        )
+        monkeypatch.setattr(
+            news, "get_text", lambda url, params=None: (_ for _ in ()).throw(SourceError("503"))
+        )
+        result = news.collect(previous, [])
+        assert result.items[0].kind == SourceKind.OFFICIAL

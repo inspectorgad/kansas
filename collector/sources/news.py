@@ -27,7 +27,7 @@ from config import (
 )
 from fetch import SourceError, get_json, get_text
 from schemas import HAMILTON, MARSHALL, Attribution
-from schemas.news import NewsItem
+from schemas.news import NewsItem, SourceKind
 
 MAX_ITEMS = 120
 
@@ -139,6 +139,27 @@ def _outlet(entry, title: str) -> tuple[str | None, str]:
     return name, title[: -len(suffix)].strip() if title.endswith(suffix) else title
 
 
+def source_kind(url: str, source: str) -> SourceKind:
+    """Reporting, or an official government release?
+
+    Two signals, because neither covers the case alone. A feed we fetch straight
+    from a .gov host is obvious from its URL. An item reaching us through Google
+    News is not: its link is a redirect through news.google.com, so all eleven
+    U.S. Senate press releases in the published file had no .gov anywhere in their
+    URL. Google marks those by appending "(.gov)" to the outlet name, which is the
+    only evidence available for them.
+    """
+    try:
+        host = urlparse(url).netloc.split(":")[0].rstrip(".").lower()
+    except ValueError:
+        host = ""
+    if host == "gov" or host.endswith(".gov"):
+        return SourceKind.OFFICIAL
+    if source.strip().lower().endswith("(.gov)"):
+        return SourceKind.OFFICIAL
+    return SourceKind.NEWS
+
+
 def _title_key(title: str) -> str:
     """A loose key for spotting the same story arriving by two routes.
 
@@ -218,6 +239,7 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
                 # Paywalled outlets get headline-only treatment.
                 summary=None if feed.paywalled else (summary.strip() or None),
                 mentions=mentions(f"{title} {summary}"),
+                kind=source_kind(link, outlet or feed.name),
             )
 
             key = _title_key(title)
@@ -385,7 +407,11 @@ def _carry_forward(previous: list[NewsItem], merged: dict[str, NewsItem]) -> tup
         if not is_relevant(item.title, item.summary or ""):
             stale += 1
             continue
-        merged[item.id] = item
+        # Recomputed rather than trusted from the file: it is derived from the
+        # url and the outlet, so a rule change has to reach the items already
+        # published — otherwise the eleven Senate releases already in the file
+        # would stay unlabelled until they aged out.
+        merged[item.id] = item.model_copy(update={"kind": source_kind(item.url, item.source)})
         seen_titles.add(_title_key(item.title))
         carried += 1
     return carried, stale

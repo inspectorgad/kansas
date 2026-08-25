@@ -33,6 +33,19 @@ collector was written in.
 | **County election offices** — Johnson, Sedgwick, Shawnee, Wyandotte, Douglas | Advance ballots sent, returned, in-person | Public dashboards | Collecting. **Partial coverage by design.** Kansas publishes no statewide daily feed. These five counties hold roughly half the state's registered voters and lean urban; the payload says so and the app labels it. A dashboard that cannot be read is reported as *uncovered*, never as zero. |
 | **Kansas SoS election night reporting** (`ent.sos.ks.gov`) | Live returns, statewide and by county | Goes live 5pm CT, Nov 3 | Handles a JSON feed, embedded JSON, or an HTML table. Collection switches on automatically three days out. **Probe it against the August 2026 primary archive before election day** — see [ELECTION_NIGHT.md](ELECTION_NIGHT.md). Paid AP Elections API is the named fallback. |
 
+Items published on a government site are labelled **Government source** in the
+app rather than being dropped or left to pass as reporting. The second-largest
+source in the file is `U.S. Senate (.gov)` — Sen. Marshall's own press releases,
+reaching us through the Google News feed. They are genuinely about this race and
+belong in it, but an officeholder has a press operation and a challenger does not,
+so the two candidates cannot appear there in equal measure and the app says so.
+
+Detection needs two signals. A feed fetched straight from a `.gov` host is obvious
+from its URL; an item arriving via Google News is not, because its link is a
+redirect through `news.google.com` — all eleven Senate releases in the live file
+had no `.gov` anywhere in their URL. Google appends `(.gov)` to the outlet name,
+and for those items that is the only evidence there is.
+
 `news.json` is an **archive, not a mirror**. Items already published are carried
 forward and re-checked against the current filter, rather than the file being
 rebuilt from whatever the feeds happen to serve this minute. Both halves matter:
