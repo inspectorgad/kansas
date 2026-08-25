@@ -58,6 +58,22 @@ class LargeDonor(Strict):
     gifts: int = Field(default=1, description="Contributions of $1,000 or more.")
 
 
+class StateTotal(Strict):
+    """Itemized individual money from one state.
+
+    Itemized only, because Schedule A is where the geography lives and the FEC
+    never records where unitemized money came from. For Hamilton that leaves 19%
+    of his individual total unplaced, so a share here is a share of what can be
+    located rather than of everything raised.
+    """
+
+    state: str = Field(description="Two-letter postal code.")
+    name: str | None = None
+    amount: float
+    donors: int = 0
+    pct: float = Field(default=0.0, description="Share of itemized individual money.")
+
+
 class CommitteeDonor(Strict):
     """One organization giving directly to a campaign.
 
@@ -166,6 +182,10 @@ class CandidateFinance(Strict):
     affiliated_committees: list[AffiliatedCommittee] = []
     in_state_amount: float | None = None
     in_state_pct: float | None = None
+    donor_states: list[StateTotal] = Field(
+        default_factory=list,
+        description="Itemized individual money by state, largest first.",
+    )
     burn_rate_monthly: float | None = Field(
         default=None, description="Mean monthly disbursements this cycle."
     )

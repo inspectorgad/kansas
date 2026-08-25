@@ -253,6 +253,7 @@ data class CandidateFinance(
         emptyList(),
     @SerialName("in_state_amount") val inStateAmount: Double? = null,
     @SerialName("in_state_pct") val inStatePct: Double? = null,
+    @SerialName("donor_states") val donorStates: List<StateTotal> = emptyList(),
     @SerialName("burn_rate_monthly") val burnRateMonthly: Double? = null,
     val donors: DonorDetail? = null,
 )
@@ -268,6 +269,19 @@ data class AffiliatedCommittee(
     val disbursements: Double? = null,
     @SerialName("cash_on_hand") val cashOnHand: Double? = null,
 )
+
+@Serializable
+data class StateTotal(
+    /** Two-letter postal code. */
+    val state: String,
+    val name: String? = null,
+    val amount: Double,
+    val donors: Int = 0,
+    /** Share of itemized individual money, not of everything raised. */
+    val pct: Double = 0.0,
+) {
+    val label: String get() = name ?: state
+}
 
 @Serializable
 data class CommitteeDonor(

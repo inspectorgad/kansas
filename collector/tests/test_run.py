@@ -1349,3 +1349,54 @@ class TestAffiliatedCommittees:
             [{"committee_id": "C00576173", "name": "KANSANS FOR MARSHALL", "designation": "P"}],
         )
         assert found == []
+
+
+class TestDonorGeography:
+    """The whole state distribution, from a call already being made.
+
+    This endpoint was fetched to compute one number — the Kansas share — and
+    forty-nine of its fifty rows were discarded. The distribution was there the
+    entire time.
+    """
+
+    ROWS = [
+        {"state": "KS", "state_full": "KANSAS", "total": 700000.0, "count": 1200},
+        {"state": "MO", "state_full": "MISSOURI", "total": 200000.0, "count": 300},
+        {"state": "CA", "state_full": "CALIFORNIA", "total": 100000.0, "count": 150},
+    ]
+
+    def _run(self, monkeypatch, rows):
+        from sources import finance
+
+        monkeypatch.setattr(finance, "_get", lambda path, params=None: {"results": rows})
+        return finance._donor_geography("C00576173")
+
+    def test_every_state_is_kept_and_ranked(self, monkeypatch):
+        states, _, _ = self._run(monkeypatch, self.ROWS)
+        assert [s.state for s in states] == ["KS", "MO", "CA"]
+        assert [s.pct for s in states] == [70.0, 20.0, 10.0]
+        assert states[0].donors == 1200
+
+    def test_the_kansas_share_is_unchanged(self, monkeypatch):
+        """The number this endpoint was already producing must not move."""
+        _, amount, pct = self._run(monkeypatch, self.ROWS)
+        assert (amount, pct) == (700000.0, 70.0)
+
+    def test_a_candidate_with_no_kansas_money_reports_zero_not_nothing(self, monkeypatch):
+        _, amount, pct = self._run(
+            monkeypatch, [{"state": "MO", "total": 50000.0, "count": 10}]
+        )
+        assert (amount, pct) == (0.0, 0.0)
+
+    def test_rows_without_a_state_are_dropped(self, monkeypatch):
+        states, _, _ = self._run(
+            monkeypatch,
+            [{"state": "", "total": 5000.0}, {"state": "KS", "total": 5000.0}],
+        )
+        assert [s.state for s in states] == ["KS"]
+
+    def test_an_empty_response_is_not_an_error(self, monkeypatch):
+        assert self._run(monkeypatch, []) == ([], None, None)
+
+    def test_a_zero_total_does_not_divide(self, monkeypatch):
+        assert self._run(monkeypatch, [{"state": "KS", "total": 0.0}]) == ([], None, None)

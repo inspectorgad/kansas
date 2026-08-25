@@ -106,6 +106,9 @@ fun MoneyScreen(snapshot: RaceSnapshot, now: Long, modifier: Modifier = Modifier
                     item { CommitteeDonors("Roger Marshall", record, donors) }
                 }
             }
+            if (record.donorStates.isNotEmpty()) {
+                item { DonorStates("Roger Marshall", record) }
+            }
             if (record.affiliatedCommittees.isNotEmpty()) {
                 item { AffiliatedCommittees("Roger Marshall", record) }
             }
@@ -120,6 +123,9 @@ fun MoneyScreen(snapshot: RaceSnapshot, now: Long, modifier: Modifier = Modifier
                 if (donors.committeeDonors.isNotEmpty()) {
                     item { CommitteeDonors("Adam Hamilton", record, donors) }
                 }
+            }
+            if (record.donorStates.isNotEmpty()) {
+                item { DonorStates("Adam Hamilton", record) }
             }
             if (record.affiliatedCommittees.isNotEmpty()) {
                 item { AffiliatedCommittees("Adam Hamilton", record) }
@@ -559,6 +565,93 @@ private fun AffiliatedCommittees(name: String, finance: CandidateFinance) {
     }
 }
 
+/**
+ * Where a campaign's itemized money comes from, by state.
+ *
+ * The share is of money that can be located, not of everything raised: Schedule A
+ * carries itemized receipts, and the FEC never records a state for an unitemized
+ * donation. The footnote says how much is unplaced rather than letting the
+ * percentages imply a completeness they do not have.
+ */
+@Composable
+private fun DonorStates(name: String, finance: CandidateFinance) {
+    val states = finance.donorStates
+    val located = states.sumOf { it.amount }
+    val shown = states.take(8)
+
+    SectionCard(
+        title = "Where $name's money comes from",
+        subtitle = "${states.size} states and territories",
+    ) {
+        shown.forEachIndexed { index, entry ->
+            if (index > 0) Spacer(Modifier.height(8.dp))
+            val home = entry.state == "KS"
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+            ) {
+                Text(
+                    text = entry.label,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (home) {
+                        MaterialTheme.colorScheme.primary
+                    } else {
+                        MaterialTheme.colorScheme.onSurface
+                    },
+                )
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Text(
+                        text = "${formatShare(entry.pct)}%",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Text(
+                        text = formatDollars(entry.amount),
+                        style = TabularNumberStyle,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                }
+            }
+        }
+
+        if (states.size > shown.size) {
+            val rest = states.drop(shown.size)
+            Spacer(Modifier.height(8.dp))
+            ThinDivider()
+            Spacer(Modifier.height(8.dp))
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+            ) {
+                Text(
+                    text = "${rest.size} more",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Text(
+                    text = formatDollars(rest.sumOf { it.amount }),
+                    style = TabularNumberStyle,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+
+        Spacer(Modifier.height(12.dp))
+        val unplaced = finance.individualContributions - located
+        Text(
+            text = if (unplaced > 0) {
+                "Itemized individual donations only. A further " +
+                    "${formatDollars(unplaced)} came from donors under the \$200 " +
+                    "disclosure floor, whose state is never recorded."
+            } else {
+                "Itemized individual donations only."
+            },
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
 @Composable
 private fun CandidateDetail(name: String, finance: CandidateFinance) {
     SectionCard(
@@ -598,6 +691,18 @@ private fun CandidateDetail(name: String, finance: CandidateFinance) {
             DetailRow("Small donors (unitemized, under \$200)", formatDollars(it))
         }
         DetailRow("From PACs", formatDollars(finance.pacContributions))
+        if (finance.partyContributions > 0) {
+            DetailRow("From party committees", formatDollars(finance.partyContributions))
+        }
+        if (finance.transfersIn > 0) {
+            // Not a donation: the candidate moving money in from a committee of
+            // their own. Listed with the receipts because the FEC counts it as
+            // one, named plainly because nobody gave it.
+            DetailRow(
+                "Transferred from own committee",
+                formatDollars(finance.transfersIn),
+            )
+        }
         finance.inStatePct?.let { pct ->
             DetailRow(
                 "From Kansas",

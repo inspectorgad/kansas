@@ -149,6 +149,13 @@ Marshall   1,719,571.25  individual
            4,009,074.73  = receipts, to the cent
 ```
 
+Donor geography covers every state, ranked, and costs nothing extra: the
+`by_state` endpoint was already being called to compute the Kansas share and
+forty-nine of its fifty rows were being thrown away. Shares are of **itemized**
+individual money — Schedule A is itemized receipts, and the FEC never records a
+state for a donation below the $200 floor — so the app names the unplaced amount
+rather than letting the percentages imply a completeness they do not have.
+
 Committees other than the campaign are listed too. Marshall has a leadership PAC,
 Defend Our Conservative Senate PAC, whose money appears in none of his campaign
 totals; Hamilton holds no office and has only the campaign. Reporting the campaign

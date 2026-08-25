@@ -32,6 +32,7 @@ from schemas.finance import (
     LargeDonor,
     OutsideSpending,
     SizeBucket,
+    StateTotal,
     TopSpender,
 )
 
@@ -735,22 +736,52 @@ def _principal_committee(candidate_fec_id: str) -> tuple[str | None, str | None]
     return None, None
 
 
-def _in_state_share(committee_id: str) -> tuple[float | None, float | None]:
-    """Share of itemized individual contributions coming from Kansas."""
+def _donor_geography(
+    committee_id: str,
+) -> tuple[list[StateTotal], float | None, float | None]:
+    """Itemized individual money by state, and the Kansas share of it.
+
+    One request answers both. This endpoint was already being called to compute
+    the in-state share, and forty-nine of its fifty rows were being discarded —
+    the whole distribution was there the entire time.
+
+    Schedule A is itemized receipts only, so unitemized money has no state at all.
+    A share here is therefore a share of what can be located, and every screen
+    showing it has to say so.
+    """
     payload = _get(
         "/schedules/schedule_a/by_state/",
         {"committee_id": committee_id, "cycle": FEC_CYCLE},
     )
     rows = payload.get("results", [])
     if not rows:
-        return None, None
+        return [], None, None
+
     total = sum(_as_float(r.get("total")) for r in rows)
-    in_state = sum(
-        _as_float(r.get("total")) for r in rows if (r.get("state") or "").upper() == FEC_STATE
-    )
     if total <= 0:
-        return None, None
-    return in_state, round(in_state / total * 100.0, 1)
+        return [], None, None
+
+    states: list[StateTotal] = []
+    for row in rows:
+        code = (row.get("state") or "").strip().upper()
+        amount = _as_float(row.get("total"))
+        if not code or amount <= 0:
+            continue
+        states.append(
+            StateTotal(
+                state=code,
+                name=(row.get("state_full") or "").strip() or None,
+                amount=round(amount, 2),
+                donors=int(row.get("count") or 0),
+                pct=round(amount / total * 100.0, 1),
+            )
+        )
+    states.sort(key=lambda entry: entry.amount, reverse=True)
+
+    in_state = next(
+        (entry.amount for entry in states if entry.state == FEC_STATE), 0.0
+    )
+    return states, in_state, round(in_state / total * 100.0, 1)
 
 
 def _burn_rate(totals: dict, coverage_end: date | None) -> float | None:
@@ -812,9 +843,13 @@ def candidate_finance(candidate_id: str, name: str, hint: str | None, warnings: 
 
     if record.committee_id:
         try:
-            record.in_state_amount, record.in_state_pct = _in_state_share(record.committee_id)
+            (
+                record.donor_states,
+                record.in_state_amount,
+                record.in_state_pct,
+            ) = _donor_geography(record.committee_id)
         except SourceError as exc:
-            warnings.append(f"{name}: in-state breakdown unavailable ({exc})")
+            warnings.append(f"{name}: donor geography unavailable ({exc})")
 
         # Donor detail is a deep sweep: several aggregate calls plus a paged scan
         # per candidate. It is skipped on the demo key for the same reason the
