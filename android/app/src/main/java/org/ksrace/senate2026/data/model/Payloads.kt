@@ -245,11 +245,42 @@ data class CandidateFinance(
     @SerialName("individual_contributions") val individualContributions: Double = 0.0,
     @SerialName("small_dollar_contributions") val smallDollarContributions: Double? = null,
     @SerialName("pac_contributions") val pacContributions: Double = 0.0,
+    @SerialName("party_contributions") val partyContributions: Double = 0.0,
+    /** Moved in from another committee the candidate controls, e.g. a prior campaign. */
+    @SerialName("transfers_in") val transfersIn: Double = 0.0,
+    @SerialName("other_receipts") val otherReceipts: Double = 0.0,
+    @SerialName("affiliated_committees") val affiliatedCommittees: List<AffiliatedCommittee> =
+        emptyList(),
     @SerialName("in_state_amount") val inStateAmount: Double? = null,
     @SerialName("in_state_pct") val inStatePct: Double? = null,
     @SerialName("burn_rate_monthly") val burnRateMonthly: Double? = null,
     val donors: DonorDetail? = null,
 )
+
+@Serializable
+data class AffiliatedCommittee(
+    @SerialName("committee_id") val committeeId: String,
+    val name: String,
+    val designation: String? = null,
+    @SerialName("designation_full") val designationFull: String? = null,
+    @SerialName("committee_type") val committeeType: String? = null,
+    val receipts: Double? = null,
+    val disbursements: Double? = null,
+    @SerialName("cash_on_hand") val cashOnHand: Double? = null,
+)
+
+@Serializable
+data class CommitteeDonor(
+    val name: String,
+    @SerialName("committee_id") val committeeId: String? = null,
+    val amount: Double,
+    val gifts: Int = 1,
+    /** "pac", "party", or "transfer" — the FEC line the money was filed on. */
+    val kind: String,
+) {
+    /** Not a donation: money the candidate moved in from a committee of their own. */
+    val isTransfer: Boolean get() = kind == "transfer"
+}
 
 @Serializable
 data class DonorGroup(
@@ -302,10 +333,13 @@ data class DonorDetail(
     @SerialName("itemized_total") val itemizedTotal: Double? = null,
     @SerialName("unitemized_total") val unitemizedTotal: Double? = null,
     @SerialName("large_donor_coverage") val largeDonorCoverage: String? = null,
+    @SerialName("committee_donors") val committeeDonors: List<CommitteeDonor> = emptyList(),
+    @SerialName("committee_donor_note") val committeeDonorNote: String = "",
 ) {
     val hasAnything: Boolean
         get() = largeDonors.isNotEmpty() || topEmployers.isNotEmpty() ||
-            topOccupations.isNotEmpty() || sizeBuckets.isNotEmpty()
+            topOccupations.isNotEmpty() || sizeBuckets.isNotEmpty() ||
+            committeeDonors.isNotEmpty()
 }
 
 @Serializable

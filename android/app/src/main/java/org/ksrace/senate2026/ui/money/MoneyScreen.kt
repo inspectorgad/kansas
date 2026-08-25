@@ -102,6 +102,12 @@ fun MoneyScreen(snapshot: RaceSnapshot, now: Long, modifier: Modifier = Modifier
                 if (donors.largeDonors.isNotEmpty()) {
                     item { LargestDonors("Roger Marshall", donors) }
                 }
+                if (donors.committeeDonors.isNotEmpty()) {
+                    item { CommitteeDonors("Roger Marshall", record, donors) }
+                }
+            }
+            if (record.affiliatedCommittees.isNotEmpty()) {
+                item { AffiliatedCommittees("Roger Marshall", record) }
             }
         }
         hamilton?.let { record ->
@@ -111,6 +117,12 @@ fun MoneyScreen(snapshot: RaceSnapshot, now: Long, modifier: Modifier = Modifier
                 if (donors.largeDonors.isNotEmpty()) {
                     item { LargestDonors("Adam Hamilton", donors) }
                 }
+                if (donors.committeeDonors.isNotEmpty()) {
+                    item { CommitteeDonors("Adam Hamilton", record, donors) }
+                }
+            }
+            if (record.affiliatedCommittees.isNotEmpty()) {
+                item { AffiliatedCommittees("Adam Hamilton", record) }
             }
         }
 
@@ -401,6 +413,149 @@ private fun LargestDonors(name: String, donors: DonorDetail) {
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+    }
+}
+
+/**
+ * Organizations giving directly to a campaign.
+ *
+ * A separate card from the individuals rather than one merged list, because the
+ * split between the two is the most striking thing in this data: committee money
+ * is 37% of Marshall's receipts and under 1% of Hamilton's. Merging them would
+ * bury exactly the comparison worth making.
+ *
+ * A transfer is labelled, because it is not a donation — it is the candidate
+ * moving money in from another committee of their own, and Marshall's $638,753
+ * from an earlier committee would otherwise read as somebody's generosity.
+ */
+@Composable
+private fun CommitteeDonors(name: String, finance: CandidateFinance, donors: DonorDetail) {
+    val organizational = finance.pacContributions + finance.partyContributions
+    val share = if (finance.totalReceipts > 0) {
+        organizational / finance.totalReceipts * 100.0
+    } else {
+        0.0
+    }
+    SectionCard(
+        title = "$name's organizational donors",
+        subtitle = "${formatDollars(organizational)} from committees and parties, " +
+            "${formatShare(share)}% of everything raised",
+    ) {
+        donors.committeeDonors.forEachIndexed { index, donor ->
+            if (index > 0) {
+                Spacer(Modifier.height(8.dp))
+                ThinDivider()
+                Spacer(Modifier.height(8.dp))
+            }
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+            ) {
+                Column(Modifier.weight(1f)) {
+                    Text(
+                        text = donor.name,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    val label = when (donor.kind) {
+                        "party" -> "Party committee"
+                        "transfer" -> "Transfer from the candidate's own committee"
+                        else -> "Political action committee"
+                    }
+                    Text(
+                        text = label,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = if (donor.isTransfer) {
+                            MaterialTheme.colorScheme.tertiary
+                        } else {
+                            MaterialTheme.colorScheme.onSurfaceVariant
+                        },
+                    )
+                }
+                Column {
+                    Text(
+                        text = formatDollars(donor.amount),
+                        style = TabularNumberStyle,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    if (donor.gifts > 1) {
+                        Text(
+                            text = "${donor.gifts} gifts",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+            }
+        }
+        Spacer(Modifier.height(12.dp))
+        Text(
+            text = donors.committeeDonorNote,
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
+/**
+ * Committees the candidate controls beyond the campaign itself.
+ *
+ * Marshall has a leadership PAC whose money appears in none of his campaign
+ * totals. Hamilton, holding no office, has only the campaign. Showing the
+ * campaign alone would make the incumbent's operation look smaller than it is.
+ */
+@Composable
+private fun AffiliatedCommittees(name: String, finance: CandidateFinance) {
+    SectionCard(
+        title = "$name's other committees",
+        subtitle = "Separate from the campaign. None of this money is in the totals above.",
+    ) {
+        finance.affiliatedCommittees.forEachIndexed { index, committee ->
+            if (index > 0) {
+                Spacer(Modifier.height(8.dp))
+                ThinDivider()
+                Spacer(Modifier.height(8.dp))
+            }
+            Text(
+                text = committee.name,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+            Text(
+                text = committee.designationFull ?: committee.designation ?: "Committee",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            if (committee.receipts != null || committee.cashOnHand != null) {
+                Spacer(Modifier.height(8.dp))
+                Row(
+                    Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                ) {
+                    committee.receipts?.let {
+                        StatTile(
+                            label = "Raised",
+                            value = formatShortDollars(it),
+                            modifier = Modifier.weight(1f),
+                        )
+                    }
+                    committee.disbursements?.let {
+                        StatTile(
+                            label = "Spent",
+                            value = formatShortDollars(it),
+                            modifier = Modifier.weight(1f),
+                        )
+                    }
+                    committee.cashOnHand?.let {
+                        StatTile(
+                            label = "On hand",
+                            value = formatShortDollars(it),
+                            modifier = Modifier.weight(1f),
+                        )
+                    }
+                }
+            }
+        }
     }
 }
 

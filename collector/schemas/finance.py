@@ -58,6 +58,47 @@ class LargeDonor(Strict):
     gifts: int = Field(default=1, description="Contributions of $1,000 or more.")
 
 
+class CommitteeDonor(Strict):
+    """One organization giving directly to a campaign.
+
+    Kept separate from individuals because the two answer different questions and
+    because the split between them is itself the story here: committee money is
+    37% of Marshall's receipts and 0.4% of Hamilton's.
+
+    Classified by the FEC line number the contribution was filed on, not by the
+    contributor's entity type. Entity type says ActBlue is a PAC, which is true and
+    misleading — it is a conduit for earmarked individual gifts filed on line 11AI,
+    and ranking it as a donor would put a payment processor near the top of the
+    list. Line 11C is a contribution from another committee, 11B from a party
+    committee, and 12 a transfer from another committee the candidate controls.
+    """
+
+    name: str
+    committee_id: str | None = None
+    amount: float
+    gifts: int = 1
+    kind: str = Field(description="pac, party, or transfer.")
+
+
+class AffiliatedCommittee(Strict):
+    """A committee the candidate controls beyond the campaign itself.
+
+    Marshall has a leadership PAC — Defend Our Conservative Senate PAC — which
+    raises and spends money that never appears in his campaign committee's totals.
+    Hamilton, holding no office, has only the campaign. Reporting the campaign
+    alone would show the incumbent's operation as smaller than it is.
+    """
+
+    committee_id: str
+    name: str
+    designation: str | None = Field(default=None, description="FEC code: D, J, A.")
+    designation_full: str | None = None
+    committee_type: str | None = None
+    receipts: float | None = None
+    disbursements: float | None = None
+    cash_on_hand: float | None = None
+
+
 class DonorDetail(Strict):
     """Who is funding one candidate, in as much detail as disclosure allows."""
 
@@ -87,6 +128,15 @@ class DonorDetail(Strict):
         default=None,
         description="How complete `large_donors` is, when it had to be truncated.",
     )
+    committee_donors: list[CommitteeDonor] = []
+    committee_donor_note: str = Field(
+        default=(
+            "Organizations giving directly to the campaign. Money routed through "
+            "a conduit such as ActBlue or WinRed is individual money and is "
+            "counted with individuals, not here."
+        ),
+        description="Shown on screen wherever committee donors appear.",
+    )
 
 
 class CandidateFinance(Strict):
@@ -107,6 +157,13 @@ class CandidateFinance(Strict):
         default=None, description="Unitemized, i.e. donors under $200."
     )
     pac_contributions: float = 0.0
+    party_contributions: float = 0.0
+    transfers_in: float = Field(
+        default=0.0,
+        description="From other committees the candidate controls, e.g. a prior campaign.",
+    )
+    other_receipts: float = 0.0
+    affiliated_committees: list[AffiliatedCommittee] = []
     in_state_amount: float | None = None
     in_state_pct: float | None = None
     burn_rate_monthly: float | None = Field(

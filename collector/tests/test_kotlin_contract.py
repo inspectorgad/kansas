@@ -54,6 +54,8 @@ CLASS_TO_MODEL = {
     "DonorGroup": schemas.finance.DonorGroup,
     "SizeBucket": schemas.finance.SizeBucket,
     "LargeDonor": schemas.finance.LargeDonor,
+    "CommitteeDonor": schemas.finance.CommitteeDonor,
+    "AffiliatedCommittee": schemas.finance.AffiliatedCommittee,
     "IndependentExpenditure": schemas.finance.IndependentExpenditure,
     "TopSpender": schemas.finance.TopSpender,
     "OutsideSpending": schemas.finance.OutsideSpending,

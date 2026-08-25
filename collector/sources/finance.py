@@ -22,7 +22,9 @@ from config import CANDIDATES, FEC_API, FEC_API_KEY, FEC_CYCLE, FEC_OFFICE, FEC_
 from fetch import SourceError, get_json
 from schemas import Attribution
 from schemas.finance import (
+    AffiliatedCommittee,
     CandidateFinance,
+    CommitteeDonor,
     DonorDetail,
     DonorGroup,
     Filing,
@@ -354,6 +356,147 @@ def _apply_corrections(
     return applied, total
 
 
+# FEC line numbers, which is what actually separates these. Entity type does not:
+# it labels ActBlue a PAC, correctly, while the money it forwards is individual.
+COMMITTEE_LINES = {
+    "11C": "pac",       # contribution from another committee
+    "11B": "party",     # contribution from a party committee
+    "12": "transfer",   # transfer from a committee the candidate controls
+}
+COMMITTEE_PAGE_BUDGET = 8
+MAX_COMMITTEE_DONORS = 20
+
+
+def _committee_donors(committee_id: str, warnings: list[str]) -> list[CommitteeDonor]:
+    """Organizations giving directly to a campaign, summed per organization.
+
+    Only three of the line numbers on this endpoint are a committee giving money.
+    Line 11AI is an individual contribution, which is where the conduits sit —
+    filtering on entity type instead would rank ActBlue among Hamilton's largest
+    donors, and it is a payment processor. Line 13A is the candidate's own loan and
+    line 15 an offset, neither of which is a donation to rank.
+    """
+    totals: dict[tuple[str, str | None], dict] = {}
+    params: dict = {
+        "committee_id": committee_id,
+        "two_year_transaction_period": FEC_CYCLE,
+        "is_individual": "false",
+        "sort": "-contribution_receipt_amount",
+        "per_page": 100,
+    }
+    seen: set = set()
+
+    for page in range(COMMITTEE_PAGE_BUDGET):
+        try:
+            payload = _get("/schedules/schedule_a/", params)
+        except SourceError as exc:
+            warnings.append(f"committee donors page {page + 1} unavailable ({exc})")
+            break
+
+        rows = payload.get("results") or []
+        fresh = 0
+        for row in rows:
+            identity = row.get("sub_id") or (
+                row.get("contributor_name"),
+                row.get("contribution_receipt_date"),
+                row.get("contribution_receipt_amount"),
+            )
+            if identity in seen:
+                continue
+            seen.add(identity)
+            fresh += 1
+
+            if _is_memo(row):
+                continue
+            kind = COMMITTEE_LINES.get(str(row.get("line_number") or "").strip().upper())
+            if kind is None:
+                continue
+            name = " ".join((row.get("contributor_name") or "").split()).upper()
+            if not name or _is_non_answer(name):
+                continue
+
+            key = (name, row.get("contributor_id"))
+            entry = totals.setdefault(
+                key,
+                {
+                    "name": (row.get("contributor_name") or "").strip(),
+                    "committee_id": row.get("contributor_id"),
+                    "kind": kind,
+                    "amount": 0.0,
+                    "gifts": 0,
+                },
+            )
+            entry["amount"] += _as_float(row.get("contribution_receipt_amount"))
+            entry["gifts"] += 1
+
+        if not rows or fresh == 0:
+            break
+
+        last = (payload.get("pagination") or {}).get("last_indexes")
+        params = {**params, **last} if isinstance(last, dict) and last else {
+            **params,
+            "page": page + 2,
+        }
+
+    ranked = sorted(
+        (e for e in totals.values() if e["amount"] > 0),
+        key=lambda e: e["amount"],
+        reverse=True,
+    )
+    return [
+        CommitteeDonor(
+            name=entry["name"],
+            committee_id=entry["committee_id"],
+            amount=round(entry["amount"], 2),
+            gifts=entry["gifts"],
+            kind=entry["kind"],
+        )
+        for entry in ranked[:MAX_COMMITTEE_DONORS]
+    ]
+
+
+def _affiliated_committees(
+    candidate_fec_id: str, principal_id: str | None, warnings: list[str]
+) -> list[AffiliatedCommittee]:
+    """Committees the candidate controls other than the campaign itself.
+
+    Marshall has a leadership PAC that raises and spends money none of his
+    campaign totals include; Hamilton, holding no office, has only the campaign.
+    Reporting the campaign alone would understate the incumbent's operation, and
+    the asymmetry is a fact about incumbency rather than a gap in the data.
+    """
+    try:
+        payload = _get(f"/candidate/{candidate_fec_id}/committees/", {"cycle": FEC_CYCLE})
+    except SourceError as exc:
+        warnings.append(f"affiliated committees unavailable ({exc})")
+        return []
+
+    found: list[AffiliatedCommittee] = []
+    for row in payload.get("results", []):
+        committee_id = row.get("committee_id")
+        if not committee_id or committee_id == principal_id:
+            continue
+        record = AffiliatedCommittee(
+            committee_id=committee_id,
+            name=(row.get("name") or committee_id).strip(),
+            designation=row.get("designation"),
+            designation_full=row.get("designation_full"),
+            committee_type=row.get("committee_type"),
+        )
+        try:
+            totals = (
+                _get(f"/committee/{committee_id}/totals/", {"cycle": FEC_CYCLE}).get("results")
+                or [{}]
+            )[0]
+            record.receipts = _as_float(totals.get("receipts")) or None
+            record.disbursements = _as_float(totals.get("disbursements")) or None
+            record.cash_on_hand = _as_float(totals.get("last_cash_on_hand_end_period")) or None
+        except SourceError as exc:
+            warnings.append(f"{record.name}: totals unavailable ({exc})")
+        found.append(record)
+    return found
+
+
 def _donor_groups(path: str, committee_id: str, label_keys: tuple[str, ...],
                   warnings: list[str], what: str) -> list[DonorGroup]:
     """One of the FEC's server-side groupings of itemized individual money."""
@@ -520,6 +663,7 @@ def _donor_detail(
         ),
         top_cities=_donor_cities(donors),
         size_buckets=buckets,
+        committee_donors=_committee_donors(committee_id, warnings),
         itemized_total=round(itemized, 2) if itemized else None,
         unitemized_total=round(unitemized, 2) if unitemized else None,
     )
@@ -646,12 +790,25 @@ def candidate_finance(candidate_id: str, name: str, hint: str | None, warnings: 
         totals.get("individual_unitemized_contributions")
     )
     record.pac_contributions = _as_float(totals.get("other_political_committee_contributions"))
+    record.party_contributions = _as_float(
+        totals.get("political_party_committee_contributions")
+    )
+    # Marshall moved $638,753 in from an earlier committee of his own. Counted as
+    # receipts by the FEC and by us, but it is not money anyone donated this cycle,
+    # so it is reported under its own name rather than folded into a total.
+    record.transfers_in = _as_float(totals.get("transfers_from_other_authorized_committee"))
+    record.other_receipts = _as_float(totals.get("other_receipts"))
     record.burn_rate_monthly = _burn_rate(totals, record.coverage_end_date)
 
     try:
         record.committee_id, record.committee_name = _principal_committee(fec_id)
     except SourceError as exc:
         warnings.append(f"{name}: committee lookup failed ({exc})")
+
+    if not USING_DEMO_KEY:
+        record.affiliated_committees = _affiliated_committees(
+            fec_id, record.committee_id, warnings
+        )
 
     if record.committee_id:
         try:

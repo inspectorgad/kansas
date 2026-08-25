@@ -1204,3 +1204,148 @@ class TestMemoEntriesAreNotSummed:
             monkeypatch, [self._row("ANY, ONE", 5000.0, "1")], []
         )
         assert "Memo entries are excluded" in coverage
+
+
+class TestCommitteeDonors:
+    """Organizations giving directly to a campaign.
+
+    Classified by FEC line number rather than by the contributor's entity type.
+    The live probe showed why: ActBlue is filed as a PAC on line 11AI, which is
+    accurate and misleading — it is a conduit forwarding earmarked individual
+    gifts, and four of its rows sat at the top of Hamilton's non-individual query.
+    Ranking by entity type would have put a payment processor among his largest
+    donors.
+    """
+
+    COMMITTEE = "C00576173"
+
+    def _row(self, name, amount, line, sub_id, cid=None, memo=None):
+        row = {
+            "contributor_name": name,
+            "contribution_receipt_amount": amount,
+            "line_number": line,
+            "sub_id": sub_id,
+            "contributor_id": cid,
+        }
+        if memo:
+            row["memo_code"] = memo
+        return row
+
+    def _run(self, monkeypatch, rows):
+        from sources import finance
+
+        monkeypatch.setattr(
+            finance, "_get", lambda path, params=None: {"results": rows, "pagination": {}}
+        )
+        return finance._committee_donors(self.COMMITTEE, [])
+
+    def test_a_conduit_is_not_a_donor(self, monkeypatch):
+        donors = self._run(
+            monkeypatch,
+            [
+                self._row("ACTBLUE", 3500.0, "11AI", "1", "C00401224"),
+                self._row("COMMON GROUND PAC", 5000.0, "11C", "2", "C00538835"),
+            ],
+        )
+        assert [d.name for d in donors] == ["COMMON GROUND PAC"]
+
+    def test_party_and_transfer_lines_are_labelled_not_dropped(self, monkeypatch):
+        donors = self._run(
+            monkeypatch,
+            [
+                self._row("NRSC", 62000.0, "11B", "1", "C00027466"),
+                self._row("TEAM MARSHALL II", 92553.35, "12", "2", "C00755074"),
+                self._row("AIPAC PAC", 5000.0, "11C", "3", "C00797670"),
+            ],
+        )
+        assert [(d.name, d.kind) for d in donors] == [
+            ("TEAM MARSHALL II", "transfer"),
+            ("NRSC", "party"),
+            ("AIPAC PAC", "pac"),
+        ]
+
+    def test_a_candidate_loan_is_not_a_donation(self, monkeypatch):
+        # Line 13A is the candidate lending their own campaign money.
+        donors = self._run(monkeypatch, [self._row("HAMILTON, ADAM", 50000.0, "13A", "1")])
+        assert donors == []
+
+    def test_an_offset_is_not_a_donation(self, monkeypatch):
+        # Line 15 is an offset to operating expenditures, e.g. a refunded deposit.
+        donors = self._run(monkeypatch, [self._row("FARMERS BANK & TRUST", 38474.18, "15", "1")])
+        assert donors == []
+
+    def test_gifts_from_one_committee_are_summed(self, monkeypatch):
+        donors = self._run(
+            monkeypatch,
+            [
+                self._row("TEAM MARSHALL II", 92553.35, "12", "1", "C00755074"),
+                self._row("TEAM MARSHALL II", 44860.38, "12", "2", "C00755074"),
+            ],
+        )
+        assert [(d.amount, d.gifts) for d in donors] == [(137413.73, 2)]
+
+    def test_memo_rows_are_skipped_here_too(self, monkeypatch):
+        donors = self._run(
+            monkeypatch,
+            [
+                self._row("SOME PAC", 5000.0, "11C", "1", "C1"),
+                self._row("SOME PAC", 5000.0, "11C", "2", "C1", memo="X"),
+            ],
+        )
+        assert [d.amount for d in donors] == [5000.0]
+
+
+class TestAffiliatedCommittees:
+    """Committees the candidate controls beyond the campaign.
+
+    Marshall has a leadership PAC whose money appears in none of his campaign
+    totals; Hamilton, holding no office, has only the campaign.
+    """
+
+    def _run(self, monkeypatch, committees, totals=None):
+        from sources import finance
+
+        def fake_get(path, params=None):
+            if path.endswith("/committees/"):
+                return {"results": committees}
+            return {"results": [totals or {}]}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        return finance._affiliated_committees("S0KS00315", "C00576173", [])
+
+    def test_the_principal_committee_is_not_listed_again(self, monkeypatch):
+        found = self._run(
+            monkeypatch,
+            [
+                {"committee_id": "C00576173", "name": "KANSANS FOR MARSHALL", "designation": "P"},
+                {
+                    "committee_id": "C00632323",
+                    "name": "DEFEND OUR CONSERVATIVE SENATE PAC",
+                    "designation": "D",
+                    "designation_full": "Leadership PAC",
+                    "committee_type": "Q",
+                },
+            ],
+        )
+        assert [c.committee_id for c in found] == ["C00632323"]
+        assert found[0].designation_full == "Leadership PAC"
+        assert found[0].committee_type == "Q"
+
+    def test_totals_are_attached(self, monkeypatch):
+        found = self._run(
+            monkeypatch,
+            [{"committee_id": "C00632323", "name": "DOC'S PAC", "designation": "D"}],
+            totals={
+                "receipts": 250000.0,
+                "disbursements": 100000.0,
+                "last_cash_on_hand_end_period": 150000.0,
+            },
+        )
+        assert (found[0].receipts, found[0].cash_on_hand) == (250000.0, 150000.0)
+
+    def test_a_candidate_with_only_a_campaign_gets_an_empty_list(self, monkeypatch):
+        found = self._run(
+            monkeypatch,
+            [{"committee_id": "C00576173", "name": "KANSANS FOR MARSHALL", "designation": "P"}],
+        )
+        assert found == []

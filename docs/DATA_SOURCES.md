@@ -111,10 +111,48 @@ below, so every donor list here shows a campaign's larger givers and not its
 typical one. Employer and occupation are self-reported and frequently junk;
 `"NONE"` and `"NULL"` are stripped rather than ranked as findings.
 
-Committee money is the larger gap. `_large_donors` filters to individuals, so
-Marshall's $1.49M from PACs and committees — 37% of his receipts, against
-Hamilton's 0.4% — reaches the app only as an unnamed total. `--probe-donors`
-reports which Schedule A filter actually selects those rows before any is adopted.
+Committee money is reported separately, because the split is the story: 37% of
+Marshall's receipts against under 1% of Hamilton's. Organizations are classified
+by the **FEC line number** the money was filed on, never by the contributor's
+entity type — ActBlue is filed as a PAC on line 11AI and is a conduit forwarding
+earmarked individual gifts, so ranking by entity type would put a payment
+processor among Hamilton's largest donors. Line 11C is another committee, 11B a
+party committee, and 12 a transfer from a committee the candidate controls; 13A
+(a candidate's own loan) and 15 (an offset) are not donations and are excluded.
+
+A transfer is labelled as such in the app. Marshall moved $638,753 in from an
+earlier committee of his own, which the FEC counts as receipts and which is not
+anybody's donation.
+
+**Memo entries are never summed.** A memo row itemizes money already reported on a
+parent transaction, and adding it to its parent published Marshall's top three
+donors at $21,000 each when the parent transaction says $14,000. They are skipped
+in the contributions scan and the refunds scan alike: applying the negative memo
+rows while dropping the positive ones they pair with produces a different wrong
+answer rather than a partial fix.
+
+**Itemized and unitemized totals come from the FEC's own fields**, not from the
+size buckets. The `Under $200` bucket is not unitemized money — it holds $896,843
+for Hamilton against a true unitemized figure of $767,189, the difference being
+itemized receipts that happened to be small, and the FEC gives `count: null` for
+that row because half its population cannot be counted.
+
+Receipts reconcile exactly once the right fields are used:
+
+```
+Marshall   1,719,571.25  individual
+           1,493,250.00  other political committees
+              62,000.00  party committees
+             638,753.40  transfer from another authorized committee
+              95,500.08  other receipts and offsets
+           ────────────
+           4,009,074.73  = receipts, to the cent
+```
+
+Committees other than the campaign are listed too. Marshall has a leadership PAC,
+Defend Our Conservative Senate PAC, whose money appears in none of his campaign
+totals; Hamilton holds no office and has only the campaign. Reporting the campaign
+alone would show the incumbent's operation as smaller than it is.
 
 | Source | Provides | Access | Status |
 |---|---|---|---|
