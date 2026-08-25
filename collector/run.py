@@ -235,10 +235,26 @@ def collect_finance(report: RunReport) -> FinancePayload:
     )
 
 
-def collect_news(report: RunReport) -> NewsPayload:
+def collect_news(report: RunReport, data_dir: str) -> NewsPayload:
+    from schemas.common import Attribution
+    from schemas.news import NewsItem
     from sources.news import collect
 
-    result = collect()
+    # Carry the previous file forward. news.json is an archive: feeds are short
+    # windows, and a feed that fails must not take its stories out of the app. One
+    # 503 from Google News took the published file from 78 items to 10.
+    previous: list[NewsItem] = []
+    credits: list[Attribution] = []
+    existing = Path(data_dir) / "news.json"
+    if existing.exists():
+        try:
+            prior = json.loads(existing.read_text())
+            previous = [NewsItem.model_validate(item) for item in prior.get("items", [])]
+            credits = [Attribution.model_validate(c) for c in prior.get("attribution", [])]
+        except (json.JSONDecodeError, ValueError) as exc:
+            report.warnings.append(f"could not read prior news.json: {exc}")
+
+    result = collect(previous, credits)
     report.warnings.extend(result.warnings)
     return NewsPayload(
         generated_at=publish.now(),
@@ -248,7 +264,7 @@ def collect_news(report: RunReport) -> NewsPayload:
 
 
 # Collectors that need to read their own prior output to stay idempotent.
-NEEDS_DATA_DIR = {"race", "polls", "markets"}
+NEEDS_DATA_DIR = {"race", "polls", "markets", "news"}
 
 def collect_ads(report: RunReport) -> AdsPayload:
     from sources.ads import collect

@@ -86,19 +86,22 @@ def _retry_delay(error: Exception, attempt: int) -> float:
     asking. See config.THROTTLE_BACKOFF_BASE for what the plain schedule got wrong.
     """
     response = getattr(error, "response", None)
-    if response is None or response.status_code != 429:
+    if response is None:
         return float(2**attempt)
 
     asked = 0.0
-    header = response.headers.get("Retry-After", "")
     try:
         # Retry-After may also be an HTTP date, which we do not honour: a
         # server that wants us back at a wall-clock time gets our own backoff
         # instead, which is never shorter than the base.
-        asked = float(header)
+        asked = float(response.headers.get("Retry-After", ""))
     except ValueError:
         asked = 0.0
-    return min(max(asked, THROTTLE_BACKOFF_BASE * 2**attempt), THROTTLE_BACKOFF_CAP)
+
+    # A server that asks for longer gets it whatever the status; only a 429 also
+    # raises our own floor, because only a 429 says the wait itself is the point.
+    floor = THROTTLE_BACKOFF_BASE if response.status_code == 429 else 1.0
+    return min(max(asked, floor * 2**attempt), THROTTLE_BACKOFF_CAP)
 
 
 def get_text(url: str, params: dict[str, Any] | None = None) -> str:

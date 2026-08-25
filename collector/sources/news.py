@@ -190,10 +190,14 @@ def from_feeds(warnings: list[str]) -> tuple[list[NewsItem], list[Attribution]]:
                 continue
             summary = re.sub(r"<[^>]+>", " ", entry.get("summary") or "")[:400]
             if not is_relevant(title, summary):
-                # A headline that names a candidate and still gets dropped is the
-                # one rejection worth seeing without running a probe: it is the
-                # signature of a filter that has drifted from the coverage.
-                if _reject_reason(title, summary) != "no candidate named":
+                # A headline that names a candidate in full and still gets dropped
+                # is worth seeing without running a probe: it is the signature of a
+                # filter that has drifted from the coverage. A bare surname is not
+                # — Marshall County and Hamilton County are both in Kansas, so that
+                # branch fires on county-fair and salmonella stories forever, which
+                # is the filter working rather than drifting. It did exactly that
+                # on its first live run.
+                if (_reject_reason(title, summary) or "").startswith("full name"):
                     near += 1
                     near_misses.append(f"{feed.name}: {title[:100]}")
                 continue
@@ -302,7 +306,24 @@ def from_gdelt(warnings: list[str]) -> list[NewsItem]:
     return list(items.values())
 
 
-def collect() -> NewsResult:
+def collect(
+    previous: list[NewsItem] | None = None,
+    previous_attribution: list[Attribution] | None = None,
+) -> NewsResult:
+    """Collect headlines, keeping what earlier runs already found.
+
+    The published file is an archive, not a mirror of whatever the feeds happen to
+    be serving this minute. Two things make that necessary. A feed is a window —
+    Kansas Reflector's holds about three weeks — so a story ages out of the feed
+    long before it stops being part of this race. And a feed can simply fail: on
+    2026-08-24 Google News answered 503 to one run, and because that run published
+    only what it had just fetched, news.json went from 78 items to 10. A transient
+    upstream hiccup must not empty the news tab.
+
+    Carried items are re-checked against the current filter, so tightening the
+    rules still takes effect retroactively rather than leaving old mistakes in
+    place forever.
+    """
     warnings: list[str] = []
     feed_items, attribution = from_feeds(warnings)
     gdelt_items = from_gdelt(warnings) if GDELT_ENABLED else []
@@ -320,6 +341,23 @@ def collect() -> NewsResult:
             )
         )
 
+    carried, stale = _carry_forward(previous or [], merged)
+    if stale:
+        warnings.append(
+            f"dropped {stale} carried item(s) that no longer pass the relevance filter"
+        )
+    if carried:
+        warnings.append(
+            f"carried {carried} item(s) forward from the previous file — a feed that "
+            "fails this run keeps the stories it found on earlier ones"
+        )
+        # Those items came from somewhere, and the file still owes that credit even
+        # on a run where the feed did not answer.
+        named = {credit.name for credit in attribution}
+        attribution.extend(
+            credit for credit in (previous_attribution or []) if credit.name not in named
+        )
+
     items = sorted(
         merged.values(),
         key=lambda i: i.published_at or datetime.min.replace(tzinfo=UTC),
@@ -330,6 +368,27 @@ def collect() -> NewsResult:
         warnings.append("no matching news items found across any feed")
 
     return NewsResult(items=items, attribution=attribution, warnings=warnings)
+
+
+def _carry_forward(previous: list[NewsItem], merged: dict[str, NewsItem]) -> tuple[int, int]:
+    """Add previously published items that this run did not re-find.
+
+    Mutates `merged` and returns (carried, dropped-by-filter). Anything this run
+    fetched wins: it has the fresher timestamp and, for a syndicated story, may
+    have resolved to the publisher's own link since.
+    """
+    seen_titles = {_title_key(item.title) for item in merged.values()}
+    carried = stale = 0
+    for item in previous:
+        if item.id in merged or _title_key(item.title) in seen_titles:
+            continue
+        if not is_relevant(item.title, item.summary or ""):
+            stale += 1
+            continue
+        merged[item.id] = item
+        seen_titles.add(_title_key(item.title))
+        carried += 1
+    return carried, stale
 
 
 def _reject_reason(title: str, summary: str = "") -> str | None:

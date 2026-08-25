@@ -76,3 +76,14 @@ class TestCandidateFeeds:
         from config import CANDIDATE_NEWS_FEEDS
 
         assert all(getattr(feed, attr).strip() for feed in CANDIDATE_NEWS_FEEDS)
+
+
+class TestServerRequestedDelay:
+    def test_a_5xx_can_also_ask_for_longer(self):
+        assert _retry_delay(_error(503, "12"), 0) == 12.0
+
+    def test_a_5xx_without_the_header_keeps_the_short_schedule(self):
+        assert _retry_delay(_error(503), 2) == 4.0
+
+    def test_a_5xx_cannot_ask_for_shorter_than_the_schedule(self):
+        assert _retry_delay(_error(503, "1"), 2) == 4.0

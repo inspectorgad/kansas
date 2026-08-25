@@ -6,8 +6,12 @@ name, and Adam Hamilton was a nationally known pastor long before he ran for
 office — so a bare name match would fill the feed with noise.
 """
 
+from datetime import UTC, datetime
+
 import pytest
 
+from fetch import SourceError
+from schemas import Attribution
 from sources.news import (
     _is_syndicated,
     _outlet,
@@ -302,3 +306,83 @@ class TestCrossFeedDedup:
         # The item itself carries the publisher, not the aggregator.
         assert items[0].source == "Wichita Eagle"
         assert items[0].title == "Marshall leads Hamilton in new Senate poll"
+
+
+def _item(title, url, source="Kansas Reflector", summary=None):
+    from schemas.news import NewsItem
+    from sources.news import item_id, mentions
+
+    return NewsItem(
+        id=item_id(url),
+        title=title,
+        source=source,
+        url=url,
+        published_at=datetime(2026, 8, 20, tzinfo=UTC),
+        summary=summary,
+        mentions=mentions(title),
+    )
+
+
+class TestCarryForward:
+    """A feed that fails must not take its stories out of the app.
+
+    On 2026-08-24 Google News answered 503 to one run. That run published only what
+    it had just fetched, so news.json went from 78 items to 10 — a transient
+    upstream hiccup emptying most of the news tab.
+    """
+
+    def _collect(self, monkeypatch, feed_body, previous, credits=None):
+        import config
+        from sources import news
+
+        feed = config.Feed("Google News", "https://news.google.com/rss/search?q=x")
+        monkeypatch.setattr(news, "NEWS_FEEDS", [feed])
+
+        def fake_get_text(url, params=None):
+            if feed_body is None:
+                raise SourceError("HTTP 503")
+            return feed_body
+
+        monkeypatch.setattr(news, "get_text", fake_get_text)
+        return news.collect(previous, credits or [])
+
+    def test_a_failing_feed_keeps_what_earlier_runs_found(self, monkeypatch):
+        previous = [
+            _item("Marshall and Hamilton spar over Senate debate", "https://ex.test/a"),
+            _item("Roger Marshall sells Florida house", "https://ex.test/b"),
+        ]
+        result = self._collect(monkeypatch, None, previous)
+        assert len(result.items) == 2
+        assert any("carried 2 item(s) forward" in w for w in result.warnings)
+
+    def test_the_outlets_behind_carried_items_stay_credited(self, monkeypatch):
+        previous = [_item("Roger Marshall sells Florida house", "https://ex.test/b")]
+        credits = [Attribution(name="Google News", url="https://news.google.com/rss/search?q=x")]
+        result = self._collect(monkeypatch, None, previous, credits)
+        assert [c.name for c in result.attribution] == ["Google News"]
+
+    def test_a_freshly_fetched_story_wins_over_the_carried_copy(self, monkeypatch):
+        headline = "Marshall and Hamilton spar over Senate debate"
+        body = (
+            '<?xml version="1.0"?><rss version="2.0"><channel>'
+            f"<item><title>{headline} - Kansas Reflector</title>"
+            "<link>https://news.google.com/rss/articles/CB</link></item>"
+            "</channel></rss>"
+        )
+        previous = [_item(headline, "https://ex.test/old")]
+        result = self._collect(monkeypatch, body, previous)
+        assert len(result.items) == 1
+        assert result.items[0].url == "https://news.google.com/rss/articles/CB"
+
+    def test_a_carried_item_is_re_checked_against_the_current_filter(self, monkeypatch):
+        # Tightening the rules has to apply retroactively, or a story kept by a bug
+        # stays in the file forever.
+        previous = [_item("Hamilton honored for connectional leadership", "https://ex.test/c")]
+        result = self._collect(monkeypatch, None, previous)
+        assert result.items == []
+        assert any("no longer pass the relevance filter" in w for w in result.warnings)
+
+    def test_nothing_previous_is_still_fine(self, monkeypatch):
+        result = self._collect(monkeypatch, None, [])
+        assert result.items == []
+        assert not any("carried" in w for w in result.warnings)

@@ -33,6 +33,15 @@ collector was written in.
 | **County election offices** — Johnson, Sedgwick, Shawnee, Wyandotte, Douglas | Advance ballots sent, returned, in-person | Public dashboards | Collecting. **Partial coverage by design.** Kansas publishes no statewide daily feed. These five counties hold roughly half the state's registered voters and lean urban; the payload says so and the app labels it. A dashboard that cannot be read is reported as *uncovered*, never as zero. |
 | **Kansas SoS election night reporting** (`ent.sos.ks.gov`) | Live returns, statewide and by county | Goes live 5pm CT, Nov 3 | Handles a JSON feed, embedded JSON, or an HTML table. Collection switches on automatically three days out. **Probe it against the August 2026 primary archive before election day** — see [ELECTION_NIGHT.md](ELECTION_NIGHT.md). Paid AP Elections API is the named fallback. |
 
+`news.json` is an **archive, not a mirror**. Items already published are carried
+forward and re-checked against the current filter, rather than the file being
+rebuilt from whatever the feeds happen to serve this minute. Both halves matter:
+a feed is a short window (Kansas Reflector's holds about three weeks) so stories
+age out of feeds long before they stop being part of this race, and a feed can
+fail outright — Google News answered one 503 and the run that followed published
+78 items down to 10. Re-checking on the way in means tightening the filter still
+takes effect retroactively.
+
 ### What the news probe found on 2026-08-24
 
 Worth recording, because the symptom pointed at the wrong culprit. `news.json` was
