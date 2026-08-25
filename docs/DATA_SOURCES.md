@@ -133,6 +133,17 @@ per-election limit, so a combined top twenty held thirteen PACs worth $147,000
 against the $1,493,250 the FEC reports. Hamilton has no transfers and reconciled to
 the cent, so his data could never have exposed it.
 
+**A ranked donor's total covers every itemized gift they made**, not only the
+large ones. The $1,000 floor finds large donors; it used to filter the summing
+too, so their smaller gifts vanished from their own figure — Gail Weinberg's five
+rows come to $13,097 and $12,597 was published, because one gift was $500. Each
+ranked donor now gets one lookup with no amount bound, which also yields their
+first and last gift dates. The cost is bounded by the length of the list rather
+than by the size of the campaign: lowering the floor and paging everything would
+work today and grow all autumn. A donor whose lookup fails keeps the lower-bound
+figure, because replacing a slightly-low number with nothing is worse, and the
+coverage note says how many were confirmed.
+
 **Memo entries are never summed.** A memo row itemizes money already reported on a
 parent transaction, and adding it to its parent published Marshall's top three
 donors at $21,000 each when the parent transaction says $14,000. They are skipped

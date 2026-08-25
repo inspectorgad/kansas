@@ -19,6 +19,7 @@ import org.ksrace.senate2026.data.model.CandidateFinance
 import org.ksrace.senate2026.data.model.CandidateIds
 import org.ksrace.senate2026.data.model.DonorDetail
 import org.ksrace.senate2026.data.model.DonorGroup
+import org.ksrace.senate2026.format.formatDateRange
 import org.ksrace.senate2026.format.formatDollars
 import org.ksrace.senate2026.format.formatIsoDate
 import org.ksrace.senate2026.format.formatShare
@@ -390,6 +391,16 @@ private fun LargestDonors(name: String, donors: DonorDetail) {
                     if (detail.isNotEmpty()) {
                         Text(
                             text = detail,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    // When they gave. Early money and late money are different
+                    // things, and the same helper already renders a poll's field
+                    // window, so the two read alike.
+                    formatDateRange(donor.firstGift, donor.lastGift)?.let { window ->
+                        Text(
+                            text = window,
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )

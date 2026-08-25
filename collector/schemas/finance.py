@@ -55,7 +55,9 @@ class LargeDonor(Strict):
     employer: str | None = None
     occupation: str | None = None
     amount: float
-    gifts: int = Field(default=1, description="Contributions of $1,000 or more.")
+    gifts: int = Field(default=1, description="Every itemized contribution, not only large ones.")
+    first_gift: date | None = None
+    last_gift: date | None = None
 
 
 class StateTotal(Strict):

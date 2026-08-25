@@ -639,13 +639,18 @@ class TestDonorDetail:
             monkeypatch, rows=[self._gift("A, A", 9999.0, sub_id="1")], count=50000
         )
         coverage = finance._donor_detail(self.COMMITTEE, []).large_donor_coverage
-        assert "smaller gifts" in coverage
+        assert "Ranked on gifts of $1,000 or more" in coverage
 
-    def test_a_complete_scan_still_states_the_limit(self, monkeypatch):
-        """Even complete, the ranking misses donors who accumulated in small gifts."""
+    def test_a_complete_scan_still_states_how_it_ranked(self, monkeypatch):
+        """Ranking is on large gifts even though the totals now cover every gift.
+
+        Someone who accumulated a large total in small gifts is still not found, so
+        the note has to say what the ranking was done on.
+        """
         finance, _ = self._patched(monkeypatch, rows=[self._gift("A, A", 1000.0, sub_id="1")])
         coverage = finance._donor_detail(self.COMMITTEE, []).large_donor_coverage
-        assert "smaller gifts" in coverage
+        assert "Ranked on gifts of $1,000 or more" in coverage
+        assert "every itemized gift" in coverage
 
     def test_a_failed_lookup_degrades_rather_than_raising(self, monkeypatch):
         import sources.finance as finance
@@ -818,6 +823,16 @@ class TestRefundsAndReattributions:
                 return {"results": []}
             if params.get("max_amount") is not None:
                 return {"results": list(refunds), "pagination": {"count": len(refunds)}}
+            if params.get("contributor_name"):
+                # One endpoint, one filter set: a name lookup with no amount bound
+                # returns that donor's contributions and their refunds together.
+                wanted = params["contributor_name"].upper()
+                matched = [
+                    row
+                    for row in (*rows, *refunds)
+                    if " ".join((row.get("contributor_name") or "").split()).upper() == wanted
+                ]
+                return {"results": matched, "pagination": {"count": len(matched)}}
             return {"results": list(rows), "pagination": {"count": len(rows)}}
 
         monkeypatch.setattr(finance, "_get", fake_get)
@@ -840,8 +855,11 @@ class TestRefundsAndReattributions:
             [self._row("VANDERGRIEND, DAVID J.", -7000.0, "2")],
         )
         assert [d.amount for d in donors] == [7000.0]
-        assert "net of refunds" in coverage
-        assert "1 correction(s)" in coverage
+        assert "Net of refunds" in coverage
+        # The correction count used to be reported here. It described the discovery
+        # pass, whose totals are now replaced by a per-donor lookup that includes
+        # refunds by construction, so quoting it would describe a discarded step.
+        assert "1 of 1 confirmed" in coverage
 
     def test_a_fully_refunded_donor_drops_off_the_list(self, monkeypatch):
         """Below the threshold once netted, so not a large donor at all."""
@@ -866,7 +884,7 @@ class TestRefundsAndReattributions:
             monkeypatch, [self._row("CLEAN, DONOR", 7000.0, "1")], []
         )
         assert [d.amount for d in donors] == [7000.0]
-        assert "net of refunds." in coverage
+        assert "Net of refunds." in coverage
 
     def test_the_positive_rows_are_not_counted_twice(self, monkeypatch):
         """The refunds query must not be served the contributions."""
@@ -1159,6 +1177,14 @@ class TestMemoEntriesAreNotSummed:
             params = params or {}
             if "max_amount" in params:
                 return {"results": negatives, "pagination": {}}
+            if params.get("contributor_name"):
+                wanted = params["contributor_name"].upper()
+                matched = [
+                    row
+                    for row in (*positives, *negatives)
+                    if " ".join((row.get("contributor_name") or "").split()).upper() == wanted
+                ]
+                return {"results": matched, "pagination": {"count": len(matched)}}
             return {"results": positives, "pagination": {"count": len(positives)}}
 
         monkeypatch.setattr(finance, "_get", fake_get)
@@ -1487,3 +1513,122 @@ class TestCommitteeDonorsAreRankedWithinKind:
             ],
         )
         assert [d.amount for d in donors] == [372711.11, 62000.0, 10000.0]
+
+
+class TestExactDonorTotals:
+    """A ranked donor's published total must be their real total.
+
+    min_amount=1000 was filtering the summing as well as the finding, so a donor's
+    smaller gifts vanished from their own figure. Gail Weinberg's five rows come to
+    $13,097 and $12,597 was published, because one gift was $500.
+    """
+
+    COMMITTEE = "C00948901"
+
+    def _row(self, name, amount, sub_id, when="2026-06-05", city="OVERLAND PARK"):
+        return {
+            "contributor_name": name,
+            "contribution_receipt_amount": amount,
+            "contributor_city": city,
+            "contributor_state": "KS",
+            "contribution_receipt_date": when,
+            "sub_id": sub_id,
+        }
+
+    def _run(self, monkeypatch, all_rows):
+        """all_rows is what the endpoint holds; the scan sees only the large ones."""
+        from sources import finance
+
+        def fake_get(path, params=None):
+            params = params or {}
+            if path != "/schedules/schedule_a/":
+                return {"results": []}
+            if params.get("max_amount") is not None:
+                return {"results": [], "pagination": {}}
+            if params.get("contributor_name"):
+                wanted = params["contributor_name"].upper()
+                matched = [
+                    r
+                    for r in all_rows
+                    if " ".join((r.get("contributor_name") or "").split()).upper() == wanted
+                ]
+                return {"results": matched, "pagination": {"count": len(matched)}}
+            large = [r for r in all_rows if r["contribution_receipt_amount"] >= 1000.0]
+            return {"results": large, "pagination": {"count": len(large)}}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        return finance._large_donors(self.COMMITTEE, [])
+
+    def test_gifts_below_the_threshold_are_counted_in_the_total(self, monkeypatch):
+        donors, _ = self._run(
+            monkeypatch,
+            [
+                self._row("WEINBERG, GAIL", 2097.0, "1"),
+                self._row("WEINBERG, GAIL", 3500.0, "2"),
+                self._row("WEINBERG, GAIL", 500.0, "3"),
+                self._row("WEINBERG, GAIL", 3500.0, "4"),
+                self._row("WEINBERG, GAIL", 3500.0, "5"),
+            ],
+        )
+        assert [(d.amount, d.gifts) for d in donors] == [(13097.0, 5)]
+
+    def test_the_giving_window_is_reported(self, monkeypatch):
+        from datetime import date
+
+        donors, _ = self._run(
+            monkeypatch,
+            [
+                self._row("EARLY, BIRD", 5000.0, "1", when="2025-03-14"),
+                self._row("EARLY, BIRD", 900.0, "2", when="2026-07-01"),
+            ],
+        )
+        assert donors[0].first_gift == date(2025, 3, 14)
+        assert donors[0].last_gift == date(2026, 7, 1)
+
+    def test_another_persons_rows_are_not_absorbed(self, monkeypatch):
+        # The name search is full text and over-matches, so rows are kept only when
+        # the normalised name matches. Substring matching has already turned Kansas
+        # into Arkansas once in this project.
+        donors, _ = self._run(
+            monkeypatch,
+            [
+                self._row("SMITH, JOHN", 4000.0, "1"),
+                self._row("SMITHSON, JOHN", 9000.0, "2"),
+            ],
+        )
+        assert sorted((d.name, d.amount) for d in donors) == [
+            ("SMITH, JOHN", 4000.0),
+            ("SMITHSON, JOHN", 9000.0),
+        ]
+
+    def test_a_namesake_in_another_city_is_kept_apart(self, monkeypatch):
+        donors, _ = self._run(
+            monkeypatch,
+            [
+                self._row("JONES, PAT", 3000.0, "1", city="WICHITA"),
+                self._row("JONES, PAT", 8000.0, "2", city="TOPEKA"),
+            ],
+        )
+        assert sorted(d.amount for d in donors) == [3000.0, 8000.0]
+
+    def test_a_failed_lookup_keeps_the_lower_bound(self, monkeypatch):
+        from sources import finance
+
+        def fake_get(path, params=None):
+            params = params or {}
+            if params.get("contributor_name"):
+                raise SourceError("429 rate limited")
+            if params.get("max_amount") is not None:
+                return {"results": [], "pagination": {}}
+            return {
+                "results": [self._row("STILL, THERE", 6000.0, "1")],
+                "pagination": {"count": 1},
+            }
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        warnings: list[str] = []
+        donors, coverage = finance._large_donors(self.COMMITTEE, warnings)
+        # Replacing a slightly-low number with nothing would be the worse outcome.
+        assert [d.amount for d in donors] == [6000.0]
+        assert "0 of 1 confirmed" in coverage
+        assert any("exact total" in w for w in warnings)

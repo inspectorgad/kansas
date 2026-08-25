@@ -219,6 +219,8 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
                 key,
                 {
                     "name": (row.get("contributor_name") or "").strip(),
+                    "key_name": name,
+                    "city_key": key[1],
                     "city": row.get("contributor_city"),
                     "state": row.get("contributor_state"),
                     "employer": row.get("contributor_employer"),
@@ -249,18 +251,36 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
         key=lambda e: e["amount"],
         reverse=True,
     )
-    donors = [
-        LargeDonor(
-            name=entry["name"],
-            city=entry["city"],
-            state=entry["state"],
-            employer=entry["employer"],
-            occupation=entry["occupation"],
-            amount=round(entry["amount"], 2),
-            gifts=entry["gifts"],
+    # The scan above filtered at the threshold, so each of these amounts is a
+    # lower bound on what the person actually gave. One lookup per donor replaces
+    # it with the real figure and picks up the dates while it is there. Bounded by
+    # MAX_LARGE_DONORS rather than by the size of the campaign, which is why this
+    # is done per donor instead of by lowering the threshold and paging
+    # everything: the second cost grows all autumn, this one does not.
+    donors: list[LargeDonor] = []
+    exact = 0
+    for entry in ranked[:MAX_LARGE_DONORS]:
+        amount = round(entry["amount"], 2)
+        gifts = entry["gifts"]
+        first = last = None
+        precise = _exact_donor_total(committee_id, entry["key_name"], entry["city_key"], warnings)
+        if precise is not None:
+            amount, gifts, first, last = precise
+            exact += 1
+        donors.append(
+            LargeDonor(
+                name=entry["name"],
+                city=entry["city"],
+                state=entry["state"],
+                employer=entry["employer"],
+                occupation=entry["occupation"],
+                amount=amount,
+                gifts=gifts,
+                first_gift=first,
+                last_gift=last,
+            )
         )
-        for entry in ranked[:MAX_LARGE_DONORS]
-    ]
+    donors.sort(key=lambda donor: donor.amount, reverse=True)
 
     coverage = (
         f"Read the {len(seen)} largest of {reported} contributions at or above "
@@ -269,17 +289,95 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
         else f"Every contribution at or above ${LARGE_DONOR_THRESHOLD:,.0f}."
     )
     coverage += (
-        " Totals are net of refunds"
-        + (
-            f" ({corrections} correction(s), ${correction_sum:,.2f})."
-            if corrections
-            else "."
-        )
-        + " Memo entries are excluded, so a contribution later reattributed"
-        " between household members is shown against whoever originally gave it."
-        " A donor who reached a large total through smaller gifts is not ranked."
+        f" Ranked on gifts of ${LARGE_DONOR_THRESHOLD:,.0f} or more, then each"
+        f" total recomputed over every itemized gift"
+        + (f" ({exact} of {len(donors)} confirmed)." if donors else ".")
+        + " Net of refunds. Memo entries are excluded, so a contribution later"
+        " reattributed between household members is shown against whoever"
+        " originally gave it."
     )
     return donors, coverage
+
+
+# Two pages of 100 is 200 rows for one person, far more than any individual files
+# in a cycle. The budget exists so a pagination change cannot spin.
+EXACT_TOTAL_PAGE_BUDGET = 2
+
+
+def _exact_donor_total(
+    committee_id: str, name: str, city: str | None, warnings: list[str]
+) -> tuple[float, int, date | None, date | None] | None:
+    """One donor's real total, over every itemized gift rather than the large ones.
+
+    The discovery scan filters at $1,000, and that filter was being applied to the
+    summing as well as the finding — so a ranked donor's published total omitted
+    their smaller gifts. Gail Weinberg's five rows come to $13,097 and $12,597 was
+    published, because one gift was $500.
+
+    Returns None when the lookup fails, so the caller keeps the lower-bound figure
+    rather than replacing a slightly-low number with nothing.
+
+    The name search is full text, so it over-matches: rows are kept only when the
+    normalised name and city match the donor being asked about. Substring name
+    matching has already produced Arkansas for Kansas once in this project.
+    """
+    params: dict = {
+        "committee_id": committee_id,
+        "two_year_transaction_period": FEC_CYCLE,
+        "contributor_name": name,
+        "per_page": 100,
+    }
+    total = 0.0
+    gifts = 0
+    dates: list[date] = []
+    seen: set = set()
+
+    for page in range(EXACT_TOTAL_PAGE_BUDGET):
+        try:
+            payload = _get("/schedules/schedule_a/", params)
+        except SourceError as exc:
+            warnings.append(f"exact total for {name} unavailable ({exc})")
+            return None
+
+        rows = payload.get("results") or []
+        fresh = 0
+        for row in rows:
+            identity = row.get("sub_id") or (
+                row.get("contribution_receipt_date"),
+                row.get("contribution_receipt_amount"),
+            )
+            if identity in seen:
+                continue
+            seen.add(identity)
+            fresh += 1
+
+            if _is_memo(row):
+                continue
+            if _individual_name(row) != name:
+                continue
+            row_city = (row.get("contributor_city") or "").upper() or None
+            if row_city != city:
+                continue
+
+            amount = _as_float(row.get("contribution_receipt_amount"))
+            total += amount
+            if amount > 0:
+                gifts += 1
+                when = _as_date(row.get("contribution_receipt_date"))
+                if when:
+                    dates.append(when)
+
+        if not rows or fresh == 0:
+            break
+        last = (payload.get("pagination") or {}).get("last_indexes")
+        params = {**params, **last} if isinstance(last, dict) and last else {
+            **params,
+            "page": page + 2,
+        }
+
+    if gifts == 0:
+        return None
+    return round(total, 2), gifts, min(dates) if dates else None, max(dates) if dates else None
 
 
 def _apply_corrections(

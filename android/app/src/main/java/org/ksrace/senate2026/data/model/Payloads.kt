@@ -316,6 +316,8 @@ data class LargeDonor(
     val occupation: String? = null,
     val amount: Double,
     val gifts: Int = 1,
+    @SerialName("first_gift") val firstGift: String? = null,
+    @SerialName("last_gift") val lastGift: String? = null,
 ) {
     /** "Wichita, KS" — or whichever half of it disclosure actually carried. */
     val place: String?
