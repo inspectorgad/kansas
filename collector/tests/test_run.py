@@ -572,20 +572,43 @@ class TestDonorDetail:
         assert detail.top_occupations[0].label == "ATTORNEY"
         assert "/schedules/schedule_a/by_employer/" in calls
 
-    def test_size_buckets_separate_itemized_from_unitemized(self, monkeypatch):
+    def test_itemized_totals_come_from_the_fec_not_from_the_buckets(self, monkeypatch):
+        """The size buckets are a distribution, not a source for these two totals.
+
+        This test used to assert the opposite, and the assertion was wrong rather
+        than the code: the live probe showed the "Under $200" bucket holding
+        $896,843 for Hamilton against a true unitemized figure of $767,189, the
+        difference being itemized receipts that happened to be small. Summing the
+        buckets above it therefore understated itemized money by the same amount.
+        For Marshall the derived figure was $2.63M against the $1.72M the FEC
+        reports. The FEC publishes both numbers directly; they are read, not
+        rebuilt.
+        """
         finance, _ = self._patched(
             monkeypatch,
             sizes=[
-                {"size": 0, "total": 900000.0, "count": 41000},
+                {"size": 0, "total": 900000.0, "count": None},
                 {"size": 200, "total": 300000.0, "count": 900},
                 {"size": 2000, "total": 700000.0, "count": 350},
             ],
         )
-        detail = finance._donor_detail(self.COMMITTEE, [])
+        detail = finance._donor_detail(
+            self.COMMITTEE, [], itemized=1030000.0, unitemized=870000.0
+        )
 
-        assert detail.unitemized_total == 900000.0
-        assert detail.itemized_total == 1000000.0
+        assert detail.itemized_total == 1030000.0
+        assert detail.unitemized_total == 870000.0
+        # The buckets still describe the shape of the giving.
         assert {b.label for b in detail.size_buckets} >= {"Under $200", "$200 to $499"}
+
+    def test_the_totals_are_absent_rather_than_guessed(self, monkeypatch):
+        """A caller that cannot supply the FEC figures gets nothing, not a guess."""
+        finance, _ = self._patched(
+            monkeypatch, sizes=[{"size": 0, "total": 900000.0, "count": None}]
+        )
+        detail = finance._donor_detail(self.COMMITTEE, [])
+        assert detail.itemized_total is None
+        assert detail.unitemized_total is None
 
     def test_cities_are_labelled_as_large_money_only(self, monkeypatch):
         """openFEC groups geography by state and ZIP, never by city."""
@@ -843,7 +866,7 @@ class TestRefundsAndReattributions:
             monkeypatch, [self._row("CLEAN, DONOR", 7000.0, "1")], []
         )
         assert [d.amount for d in donors] == [7000.0]
-        assert "net of refunds and reattributions." in coverage
+        assert "net of refunds." in coverage
 
     def test_the_positive_rows_are_not_counted_twice(self, monkeypatch):
         """The refunds query must not be served the contributions."""
@@ -1104,3 +1127,80 @@ class TestManualRatings:
         assert sabato.as_of.isoformat() == "2026-08-19"
         # Both dated and both recent, so nothing should be flagged.
         assert notes == [], notes
+
+
+class TestMemoEntriesAreNotSummed:
+    """A memo row itemizes money already reported on a parent transaction.
+
+    The live file published Marshall's top three donors at $21,000 each, from five
+    rows apiece: an un-memoed $14,000, a memo-coded $14,000 repeating it, and memo
+    rows moving money between the primary and general and reattributing half to a
+    spouse. Adding the memo copy to its parent is what produced the extra $7,000.
+    """
+
+    COMMITTEE = "C00576173"
+
+    def _row(self, name, amount, sub_id, memo=None, city="WICHITA"):
+        row = {
+            "contributor_name": name,
+            "contribution_receipt_amount": amount,
+            "sub_id": sub_id,
+            "contributor_city": city,
+            "contributor_state": "KS",
+        }
+        if memo:
+            row["memo_code"] = memo
+        return row
+
+    def _run(self, monkeypatch, positives, negatives):
+        from sources import finance
+
+        def fake_get(path, params=None):
+            params = params or {}
+            if "max_amount" in params:
+                return {"results": negatives, "pagination": {}}
+            return {"results": positives, "pagination": {"count": len(positives)}}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        return finance._large_donors(self.COMMITTEE, [])
+
+    def test_a_memo_copy_is_not_added_to_its_parent(self, monkeypatch):
+        donors, _ = self._run(
+            monkeypatch,
+            [
+                self._row("MARSHALL, TIFFANY", 14000.0, "1"),
+                self._row("MARSHALL, TIFFANY", 14000.0, "2", memo="X"),
+                self._row("MARSHALL, TIFFANY", 3500.0, "3", memo="X"),
+            ],
+            [
+                self._row("MARSHALL, TIFFANY", -7000.0, "4", memo="X"),
+                self._row("MARSHALL, TIFFANY", -3500.0, "5", memo="X"),
+            ],
+        )
+        assert [(d.name, d.amount) for d in donors] == [("MARSHALL, TIFFANY", 14000.0)]
+
+    def test_a_genuine_refund_still_lands(self, monkeypatch):
+        # Only memo rows are skipped. An un-memoed negative is a real refund and
+        # must still come off the total.
+        donors, _ = self._run(
+            monkeypatch,
+            [self._row("GIVER, GREG", 10000.0, "1")],
+            [self._row("GIVER, GREG", -2500.0, "2")],
+        )
+        assert [d.amount for d in donors] == [7500.0]
+
+    def test_the_negative_memo_rows_are_skipped_too(self, monkeypatch):
+        # Applying the negative memo rows while dropping the positive ones they
+        # pair with is a different wrong answer, not a partial fix.
+        donors, _ = self._run(
+            monkeypatch,
+            [self._row("SPLIT, SAM", 14000.0, "1")],
+            [self._row("SPLIT, SAM", -3500.0, "2", memo="X")],
+        )
+        assert [d.amount for d in donors] == [14000.0]
+
+    def test_the_coverage_note_says_memos_are_excluded(self, monkeypatch):
+        _, coverage = self._run(
+            monkeypatch, [self._row("ANY, ONE", 5000.0, "1")], []
+        )
+        assert "Memo entries are excluded" in coverage

@@ -139,6 +139,22 @@ def _is_non_answer(label: str) -> bool:
     return cleaned in NON_ANSWERS or not cleaned
 
 
+def _is_memo(row: dict) -> bool:
+    """A memo entry itemizes money already reported on a parent transaction.
+
+    Counting one alongside its parent double counts it, and the live file shows
+    exactly that: Marshall's top three donors were each published at $21,000 from
+    five rows — an un-memoed $14,000, a memo-coded $14,000 repeating it, and three
+    memo-coded rows moving money between the primary and general and reattributing
+    half of it to a spouse. The real figure on the parent transaction is $14,000.
+
+    Excluded from the corrections scan as well, and for the same reason. Applying
+    the negative memo rows while dropping the positive ones they pair with would
+    turn one donor's $14,000 into $3,500 — a different wrong answer.
+    """
+    return bool(row.get("memo_code"))
+
+
 def _individual_name(row: dict) -> str | None:
     """A contributor's name, normalised enough to group their gifts together.
 
@@ -190,6 +206,8 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
             seen.add(identity)
             fresh += 1
 
+            if _is_memo(row):
+                continue
             name = _individual_name(row)
             if name is None:
                 continue
@@ -248,13 +266,15 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
         else f"Every contribution at or above ${LARGE_DONOR_THRESHOLD:,.0f}."
     )
     coverage += (
-        " Totals are net of refunds and reattributions"
+        " Totals are net of refunds"
         + (
             f" ({corrections} correction(s), ${correction_sum:,.2f})."
             if corrections
             else "."
         )
-        + " A donor who reached a large total through smaller gifts is not ranked."
+        + " Memo entries are excluded, so a contribution later reattributed"
+        " between household members is shown against whoever originally gave it."
+        " A donor who reached a large total through smaller gifts is not ranked."
     )
     return donors, coverage
 
@@ -307,6 +327,8 @@ def _apply_corrections(
             seen.add(identity)
             fresh += 1
 
+            if _is_memo(row):
+                continue
             name = _individual_name(row)
             if name is None:
                 continue
@@ -368,6 +390,11 @@ def _size_buckets(committee_id: str, warnings: list[str]) -> list[SizeBucket]:
         return []
 
     labels = {
+        # Not "unitemized": this bucket mixes money below the $200 disclosure floor
+        # with itemized receipts that happened to be small, and the FEC's own row
+        # gives count=None for it because half of that population cannot be
+        # counted. For Hamilton it is $896,843 against a true unitemized figure of
+        # $767,189 — the $129,655 difference being small itemized gifts.
         0: "Under $200",
         200: "$200 to $499",
         500: "$500 to $999",
@@ -456,13 +483,23 @@ def _identical_amount_audit(
     )
 
 
-def _donor_detail(committee_id: str, warnings: list[str]) -> DonorDetail:
-    """Everything disclosure allows about who funds one campaign."""
+def _donor_detail(
+    committee_id: str,
+    warnings: list[str],
+    itemized: float | None = None,
+    unitemized: float | None = None,
+) -> DonorDetail:
+    """Everything disclosure allows about who funds one campaign.
+
+    The itemized and unitemized figures are passed in from the FEC's own totals
+    rather than derived from the size buckets. Deriving them was wrong twice over:
+    the "Under $200" bucket is not unitemized money, and summing the buckets above
+    it misses the itemized receipts that sit inside it. For Marshall that produced
+    $2.63M of individual money against the $1.72M the FEC reports.
+    """
     donors, coverage = _large_donors(committee_id, warnings)
     _identical_amount_audit(committee_id, donors, warnings)
     buckets = _size_buckets(committee_id, warnings)
-    under_200 = next((b.amount for b in buckets if b.label == "Under $200"), None)
-    itemized = sum(b.amount for b in buckets if b.label != "Under $200") or None
 
     return DonorDetail(
         large_donors=donors,
@@ -484,7 +521,7 @@ def _donor_detail(committee_id: str, warnings: list[str]) -> DonorDetail:
         top_cities=_donor_cities(donors),
         size_buckets=buckets,
         itemized_total=round(itemized, 2) if itemized else None,
-        unitemized_total=under_200,
+        unitemized_total=round(unitemized, 2) if unitemized else None,
     )
 
 
@@ -627,7 +664,12 @@ def candidate_finance(candidate_id: str, name: str, hint: str | None, warnings: 
         # schedule E and filings sweeps are — the shared key 429s long before it
         # finishes, and a partial donor list is worse than none.
         if not USING_DEMO_KEY:
-            record.donors = _donor_detail(record.committee_id, warnings)
+            record.donors = _donor_detail(
+                record.committee_id,
+                warnings,
+                itemized=_as_float(totals.get("individual_itemized_contributions")) or None,
+                unitemized=_as_float(totals.get("individual_unitemized_contributions")) or None,
+            )
 
     return record
 
