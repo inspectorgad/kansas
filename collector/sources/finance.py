@@ -942,6 +942,144 @@ PROBE_FIELDS = (
 )
 
 
+def _money_fields(record: dict) -> list[tuple[str, float]]:
+    """Every non-zero number in an FEC totals record, by name.
+
+    Printed rather than selected. The reconciliation problem is that we picked
+    some of these fields and not others, so a probe that picks again would just
+    reproduce the choice under investigation.
+    """
+    found = []
+    for key, value in sorted(record.items()):
+        if isinstance(value, bool) or not isinstance(value, int | float):
+            continue
+        if value:
+            found.append((key, float(value)))
+    return found
+
+
+def _reconcile(fec_id: str, committee_id: str, lines: list[str]) -> None:
+    """Why don't the individual-contribution numbers agree?
+
+    The published file says Marshall raised $2.63M from individuals when the
+    Schedule A size buckets are summed, and $1.72M when the candidate totals
+    endpoint is asked — a $0.9M disagreement between two numbers in one file about
+    one thing. Separately, `unitemized_total` is set from the size endpoint's
+    "Under $200" bucket while being labelled as money below the itemization floor,
+    and those are not obviously the same quantity: Schedule A contains itemized
+    receipts, so a sub-$200 row on it is a small gift from someone who crossed the
+    threshold in aggregate, not an unitemized donation. Both questions are
+    answered by printing what each endpoint actually returns.
+    """
+    lines.append("\n  --- reconciliation ---")
+
+    for label, path in (
+        ("candidate totals", f"/candidate/{fec_id}/totals/"),
+        ("committee totals", f"/committee/{committee_id}/totals/"),
+    ):
+        try:
+            payload = _get(path, {"cycle": FEC_CYCLE})
+        except SourceError as exc:
+            lines.append(f"  {label}: FAILED {exc}")
+            continue
+        record = (payload.get("results") or [{}])[0]
+        lines.append(f"  {label} ({path}):")
+        for key, value in _money_fields(record):
+            lines.append(f"     {key:52} {value:>16,.2f}")
+        for key in ("coverage_start_date", "coverage_end_date", "last_report_type_full"):
+            if record.get(key):
+                lines.append(f"     {key:52} {record[key]}")
+
+    try:
+        payload = _get(
+            "/schedules/schedule_a/by_size/",
+            {"committee_id": committee_id, "cycle": FEC_CYCLE},
+        )
+        lines.append("\n  by_size rows, verbatim:")
+        for row in payload.get("results", []):
+            lines.append(f"     {row}")
+    except SourceError as exc:
+        lines.append(f"  by_size: FAILED {exc}")
+
+    # Same question asked with the transaction-period filter the donor scan uses,
+    # because `cycle` and `two_year_transaction_period` are not the same window and
+    # that alone could account for the gap.
+    for param in ("cycle", "two_year_transaction_period"):
+        try:
+            payload = _get(
+                "/schedules/schedule_a/by_size/",
+                {"committee_id": committee_id, param: FEC_CYCLE},
+            )
+            total = sum(_as_float(r.get("total")) for r in payload.get("results", []))
+            lines.append(f"  by_size summed with {param}={FEC_CYCLE}: ${total:,.2f}")
+        except SourceError as exc:
+            lines.append(f"  by_size with {param}: FAILED {exc}")
+
+
+def _committee_money(fec_id: str, committee_id: str, lines: list[str]) -> None:
+    """Who are the organizations giving directly to this campaign?
+
+    `_large_donors` passes is_individual=true, so committee money never reaches the
+    app: $1.49M of Marshall's receipts, 37% of everything he has raised, sits in
+    the file as an unnamed aggregate. Which filter actually selects those rows is
+    the open question — is_individual=false may mean "no restriction" rather than
+    "only committees" — so all three candidate approaches are tried and counted
+    side by side rather than one being assumed.
+    """
+    lines.append("\n  --- committee money ---")
+
+    base = {
+        "committee_id": committee_id,
+        "two_year_transaction_period": FEC_CYCLE,
+        "sort": "-contribution_receipt_amount",
+        "per_page": 20,
+    }
+    attempts = (
+        ("is_individual=false", {**base, "is_individual": "false"}),
+        ("contributor_type=committee", {**base, "contributor_type": "committee"}),
+        ("unfiltered", dict(base)),
+    )
+    for label, params in attempts:
+        try:
+            payload = _get("/schedules/schedule_a/", params)
+        except SourceError as exc:
+            lines.append(f"  {label}: FAILED {exc}")
+            continue
+        rows = payload.get("results") or []
+        count = (payload.get("pagination") or {}).get("count")
+        kinds: dict[str, int] = {}
+        for row in rows:
+            kinds[str(row.get("entity_type"))] = kinds.get(str(row.get("entity_type")), 0) + 1
+        lines.append(f"  {label}: api count={count}, entity_type on page 1 = {kinds}")
+        if label != "unfiltered":
+            for row in rows[:8]:
+                lines.append(
+                    f"     {_as_float(row.get('contribution_receipt_amount')):>12,.2f}  "
+                    f"{row.get('entity_type')}  {row.get('contributor_name')}  "
+                    f"[{row.get('contributor_id')}] line {row.get('line_number')}"
+                )
+
+    lines.append("\n  --- affiliated committees ---")
+    # Two documented shapes; whichever answers is the one we adopt.
+    for path, params in (
+        (f"/candidate/{fec_id}/committees/", {"cycle": FEC_CYCLE}),
+        ("/committees/", {"candidate_id": fec_id, "cycle": FEC_CYCLE}),
+    ):
+        try:
+            payload = _get(path, params)
+        except SourceError as exc:
+            lines.append(f"  {path}: FAILED {exc}")
+            continue
+        rows = payload.get("results") or []
+        lines.append(f"  {path}: {len(rows)} committee(s)")
+        for row in rows:
+            lines.append(
+                f"     {row.get('committee_id')}  desig={row.get('designation')}"
+                f"({row.get('designation_full')})  type={row.get('committee_type')}  "
+                f"{row.get('name')}"
+            )
+
+
 def diagnose() -> str:
     """Dump the raw rows behind the largest donors, for a total that looks wrong.
 
@@ -970,8 +1108,11 @@ def diagnose() -> str:
         if not committee_id:
             continue
 
+        _reconcile(fec_id, committee_id, lines)
+        _committee_money(fec_id, committee_id, lines)
+
         donors, coverage = _large_donors(committee_id, warnings)
-        lines.append(f"  coverage: {coverage}")
+        lines.append(f"\n  coverage: {coverage}")
         if not donors:
             lines.append("  no donors at or above the threshold")
             continue
