@@ -144,12 +144,25 @@ work today and grow all autumn. A donor whose lookup fails keeps the lower-bound
 figure, because replacing a slightly-low number with nothing is worse, and the
 coverage note says how many were confirmed.
 
-**Memo entries are never summed.** A memo row itemizes money already reported on a
-parent transaction, and adding it to its parent published Marshall's top three
-donors at $21,000 each when the parent transaction says $14,000. They are skipped
-in the contributions scan and the refunds scan alike: applying the negative memo
-rows while dropping the positive ones they pair with produces a different wrong
-answer rather than a partial fix.
+**Memo rows are netted, not summed and not dropped.** They do two unrelated jobs.
+Some restate a parent transaction so the filing itemizes it; adding those to the
+parent published Marshall's top donors at $21,000. Others record an adjustment —
+$7,000 reattributed to a spouse, $3,500 redesignated from the primary to the
+general — and dropping those published the same donors at $14,000, which is twice
+what one person may lawfully give across both elections and so read as either an
+error or an allegation.
+
+A restatement is recognised by matching a non-memo row on the same date for the
+same amount, and each parent absorbs one. What remains is an adjustment and is
+applied. That resolves a $14,000 joint cheque to the $7,000 the named filer
+actually gave, with the spouse's half recorded against the spouse — which is why
+the ranked lists cluster at exactly $7,000, the per-person ceiling.
+
+That ceiling is now a tripwire: any donor published above $7,000 raises a warning
+naming them, because one person cannot lawfully exceed it, so the figure is a
+fault in our arithmetic rather than a finding about the donor. Both earlier rules
+broke it and neither objected. The figure is still published — hiding it would
+remove the evidence.
 
 **Itemized and unitemized totals come from the FEC's own fields**, not from the
 size buckets. The `Under $200` bucket is not unitemized money — it holds $896,843

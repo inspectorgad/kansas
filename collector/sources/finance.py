@@ -99,6 +99,13 @@ def _as_date(value) -> date | None:
 # ranking is worth two more requests. What no budget can fix is a donor who
 # arrived at a large total through several smaller gifts, and the payload says so.
 LARGE_DONOR_THRESHOLD = 1000.0
+
+# $3,500 per election in the 2026 cycle, primary and general, so one person cannot
+# lawfully give a candidate committee more than this. A published figure above it
+# is a fault in our netting rather than a finding about the donor — it was $21,000
+# when memo restatements were summed and $14,000 when memo adjustments were
+# dropped — so the run log says so instead of leaving it to be noticed on screen.
+INDIVIDUAL_CYCLE_LIMIT = 7000.0
 LARGE_DONOR_PAGE_BUDGET = 16
 MAX_LARGE_DONORS = 25
 MAX_DONOR_GROUPS = 10
@@ -282,6 +289,15 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
         )
     donors.sort(key=lambda donor: donor.amount, reverse=True)
 
+    over = [d for d in donors if d.amount > INDIVIDUAL_CYCLE_LIMIT]
+    if over:
+        warnings.append(
+            f"{len(over)} donor(s) published above the ${INDIVIDUAL_CYCLE_LIMIT:,.0f} "
+            "per-person cycle limit, which one person cannot lawfully exceed — "
+            "the netting of memo rows is suspect: "
+            + ", ".join(f"{d.name} ${d.amount:,.2f}" for d in over[:5])
+        )
+
     coverage = (
         f"Read the {len(seen)} largest of {reported} contributions at or above "
         f"${LARGE_DONOR_THRESHOLD:,.0f}."
@@ -302,6 +318,53 @@ def _large_donors(committee_id: str, warnings: list[str]) -> tuple[list[LargeDon
 # Two pages of 100 is 200 rows for one person, far more than any individual files
 # in a cycle. The budget exists so a pagination change cannot spin.
 EXACT_TOTAL_PAGE_BUDGET = 2
+
+
+def _net_donor_rows(rows: list[dict]) -> tuple[float, int, list[date]]:
+    """Net one donor's rows, separating memo duplicates from memo adjustments.
+
+    Memo entries do two unrelated jobs and treating them alike is wrong either
+    way. Some restate a parent transaction so the filing itemizes it; adding those
+    to the parent double counts, which published Marshall's top donors at $21,000.
+    Others record an adjustment — money reattributed to a spouse or redesignated
+    from the primary to the general — and dropping those overstated the same
+    donors at $14,000, which is twice what one person may legally give across both
+    elections.
+
+    A duplicate is recognised by matching a non-memo row on the same date for the
+    same amount, and each parent absorbs one duplicate. What is left is an
+    adjustment and is applied. On the live rows this resolves a $14,000 joint
+    cheque to the $7,000 the named filer actually gave, with the spouse's half
+    recorded against the spouse.
+    """
+    plain = [r for r in rows if not _is_memo(r)]
+    memos = [r for r in rows if _is_memo(r)]
+
+    unclaimed: dict[tuple, int] = {}
+    for row in plain:
+        key = (row.get("contribution_receipt_date"), _as_float(row.get("contribution_receipt_amount")))
+        unclaimed[key] = unclaimed.get(key, 0) + 1
+
+    total = 0.0
+    gifts = 0
+    dates: list[date] = []
+    for row in plain:
+        amount = _as_float(row.get("contribution_receipt_amount"))
+        total += amount
+        if amount > 0:
+            gifts += 1
+            when = _as_date(row.get("contribution_receipt_date"))
+            if when:
+                dates.append(when)
+
+    for row in memos:
+        key = (row.get("contribution_receipt_date"), _as_float(row.get("contribution_receipt_amount")))
+        if unclaimed.get(key):
+            unclaimed[key] -= 1  # a restatement of that parent, already counted
+            continue
+        total += _as_float(row.get("contribution_receipt_amount"))
+
+    return round(total, 2), gifts, dates
 
 
 def _exact_donor_total(
@@ -327,9 +390,7 @@ def _exact_donor_total(
         "contributor_name": name,
         "per_page": 100,
     }
-    total = 0.0
-    gifts = 0
-    dates: list[date] = []
+    mine: list[dict] = []
     seen: set = set()
 
     for page in range(EXACT_TOTAL_PAGE_BUDGET):
@@ -351,21 +412,12 @@ def _exact_donor_total(
             seen.add(identity)
             fresh += 1
 
-            if _is_memo(row):
-                continue
             if _individual_name(row) != name:
                 continue
             row_city = (row.get("contributor_city") or "").upper() or None
             if row_city != city:
                 continue
-
-            amount = _as_float(row.get("contribution_receipt_amount"))
-            total += amount
-            if amount > 0:
-                gifts += 1
-                when = _as_date(row.get("contribution_receipt_date"))
-                if when:
-                    dates.append(when)
+            mine.append(row)
 
         if not rows or fresh == 0:
             break
@@ -375,9 +427,10 @@ def _exact_donor_total(
             "page": page + 2,
         }
 
+    total, gifts, dates = _net_donor_rows(mine)
     if gifts == 0:
         return None
-    return round(total, 2), gifts, min(dates) if dates else None, max(dates) if dates else None
+    return total, gifts, min(dates) if dates else None, max(dates) if dates else None
 
 
 def _apply_corrections(
@@ -1486,6 +1539,11 @@ def diagnose() -> str:
 
             memo = [r for r in rows if r.get("memo_code")]
             plain = [r for r in rows if not r.get("memo_code")]
+            netted, net_gifts, _ = _net_donor_rows(rows)
+            lines.append(
+                f"     netted total: ${netted:,.2f} over {net_gifts} gift(s)"
+                f"{'  <-- ABOVE THE PER-PERSON LIMIT' if netted > INDIVIDUAL_CYCLE_LIMIT else ''}"
+            )
             lines.append(
                 f"     memo-coded: {len(memo)} totalling "
                 f"${sum(_as_float(r.get('contribution_receipt_amount')) for r in memo):,.2f}"

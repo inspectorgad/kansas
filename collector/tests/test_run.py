@@ -1147,13 +1147,18 @@ class TestManualRatings:
         assert notes == [], notes
 
 
-class TestMemoEntriesAreNotSummed:
-    """A memo row itemizes money already reported on a parent transaction.
+class TestMemoEntriesAreNetted:
+    """Memo rows do two unrelated jobs, and treating them alike is wrong twice.
 
-    The live file published Marshall's top three donors at $21,000 each, from five
-    rows apiece: an un-memoed $14,000, a memo-coded $14,000 repeating it, and memo
-    rows moving money between the primary and general and reattributing half to a
-    spouse. Adding the memo copy to its parent is what produced the extra $7,000.
+    Marshall's top donors have five rows apiece: an un-memoed $14,000, a
+    memo-coded $14,000 restating it, and memo rows moving $3,500 between the
+    primary and general and reattributing $7,000 to a spouse.
+
+    Summing everything published $21,000. Dropping every memo row published
+    $14,000 — twice what one person may legally give across both elections, so it
+    read as either an error or an allegation. The restatement has to go and the
+    adjustments have to stay, which leaves the $7,000 the named filer actually
+    gave.
     """
 
     COMMITTEE = "C00576173"
@@ -1190,7 +1195,15 @@ class TestMemoEntriesAreNotSummed:
         monkeypatch.setattr(finance, "_get", fake_get)
         return finance._large_donors(self.COMMITTEE, [])
 
-    def test_a_memo_copy_is_not_added_to_its_parent(self, monkeypatch):
+    def test_a_joint_cheque_resolves_to_what_one_person_gave(self, monkeypatch):
+        """The live rows for three of Marshall's donors, and the answer is $7,000.
+
+        $14,000 arrives as one cheque, is restated by a memo row, $3,500 is
+        redesignated from the primary to the general, and $7,000 is reattributed to
+        a spouse. The restatement is dropped, the redesignation nets to zero, and
+        the reattribution comes off — leaving the per-person maximum, which is what
+        a maxed-out couple looks like.
+        """
         donors, _ = self._run(
             monkeypatch,
             [
@@ -1203,7 +1216,20 @@ class TestMemoEntriesAreNotSummed:
                 self._row("MARSHALL, TIFFANY", -3500.0, "5", memo="X"),
             ],
         )
-        assert [(d.name, d.amount) for d in donors] == [("MARSHALL, TIFFANY", 14000.0)]
+        assert [(d.name, d.amount) for d in donors] == [("MARSHALL, TIFFANY", 7000.0)]
+
+    def test_no_donor_is_published_above_the_legal_maximum(self, monkeypatch):
+        # $3,500 per election, primary and general, so $7,000 is the ceiling for one
+        # person. A figure above it is a data fault presented as a finding.
+        donors, _ = self._run(
+            monkeypatch,
+            [
+                self._row("MAXED, OUT", 14000.0, "1"),
+                self._row("MAXED, OUT", 14000.0, "2", memo="X"),
+            ],
+            [self._row("MAXED, OUT", -7000.0, "3", memo="X")],
+        )
+        assert all(d.amount <= 7000.0 for d in donors)
 
     def test_a_genuine_refund_still_lands(self, monkeypatch):
         # Only memo rows are skipped. An un-memoed negative is a real refund and
@@ -1215,15 +1241,29 @@ class TestMemoEntriesAreNotSummed:
         )
         assert [d.amount for d in donors] == [7500.0]
 
-    def test_the_negative_memo_rows_are_skipped_too(self, monkeypatch):
-        # Applying the negative memo rows while dropping the positive ones they
-        # pair with is a different wrong answer, not a partial fix.
+    def test_a_memo_adjustment_with_no_parent_to_restate_is_applied(self, monkeypatch):
+        # Nothing in the plain rows matches -$3,500, so this is an adjustment
+        # rather than a restatement, and it comes off the total.
         donors, _ = self._run(
             monkeypatch,
             [self._row("SPLIT, SAM", 14000.0, "1")],
             [self._row("SPLIT, SAM", -3500.0, "2", memo="X")],
         )
-        assert [d.amount for d in donors] == [14000.0]
+        assert [d.amount for d in donors] == [10500.0]
+
+    def test_one_parent_absorbs_only_one_restatement(self, monkeypatch):
+        # Two memo rows matching a single parent: one is its restatement, the
+        # second has no parent left and is an adjustment.
+        donors, _ = self._run(
+            monkeypatch,
+            [
+                self._row("TWICE, OVER", 5000.0, "1"),
+                self._row("TWICE, OVER", 5000.0, "2", memo="X"),
+                self._row("TWICE, OVER", 5000.0, "3", memo="X"),
+            ],
+            [],
+        )
+        assert [d.amount for d in donors] == [10000.0]
 
     def test_the_coverage_note_says_memos_are_excluded(self, monkeypatch):
         _, coverage = self._run(
@@ -1632,3 +1672,54 @@ class TestExactDonorTotals:
         assert [d.amount for d in donors] == [6000.0]
         assert "0 of 1 confirmed" in coverage
         assert any("exact total" in w for w in warnings)
+
+
+class TestTheLegalCeilingIsATripwire:
+    """A donor above the per-person limit means our arithmetic is wrong.
+
+    Both earlier rules broke this: $21,000 when memo restatements were summed,
+    $14,000 when memo adjustments were dropped. Neither is a lawful figure for one
+    person, and both reached the published file without anything objecting.
+    """
+
+    def _run(self, monkeypatch, rows):
+        from sources import finance
+
+        def fake_get(path, params=None):
+            params = params or {}
+            if params.get("max_amount") is not None:
+                return {"results": [], "pagination": {}}
+            if params.get("contributor_name"):
+                return {"results": rows, "pagination": {"count": len(rows)}}
+            return {"results": rows, "pagination": {"count": len(rows)}}
+
+        monkeypatch.setattr(finance, "_get", fake_get)
+        warnings: list[str] = []
+        donors, _ = finance._large_donors("C00576173", warnings)
+        return donors, warnings
+
+    def _row(self, amount, sub_id, memo=None):
+        row = {
+            "contributor_name": "OVER, LIMIT",
+            "contribution_receipt_amount": amount,
+            "contributor_city": "WICHITA",
+            "contribution_receipt_date": "2026-05-01",
+            "sub_id": sub_id,
+        }
+        if memo:
+            row["memo_code"] = memo
+        return row
+
+    def test_an_impossible_total_is_flagged(self, monkeypatch):
+        donors, warnings = self._run(monkeypatch, [self._row(9000.0, "1")])
+        assert [d.amount for d in donors] == [9000.0]
+        assert any("per-person cycle limit" in w for w in warnings)
+
+    def test_the_figure_is_still_published(self, monkeypatch):
+        # Hiding it would remove the evidence. The log objects; the file reports.
+        donors, _ = self._run(monkeypatch, [self._row(9000.0, "1")])
+        assert donors and donors[0].amount == 9000.0
+
+    def test_a_lawful_total_is_silent(self, monkeypatch):
+        _, warnings = self._run(monkeypatch, [self._row(7000.0, "1")])
+        assert not any("per-person cycle limit" in w for w in warnings)
