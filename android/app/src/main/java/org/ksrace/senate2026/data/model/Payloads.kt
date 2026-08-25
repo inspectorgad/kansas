@@ -291,10 +291,7 @@ data class CommitteeDonor(
     val gifts: Int = 1,
     /** "pac", "party", or "transfer" — the FEC line the money was filed on. */
     val kind: String,
-) {
-    /** Not a donation: money the candidate moved in from a committee of their own. */
-    val isTransfer: Boolean get() = kind == "transfer"
-}
+)
 
 @Serializable
 data class DonorGroup(

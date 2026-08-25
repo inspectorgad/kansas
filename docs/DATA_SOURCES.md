@@ -120,9 +120,18 @@ processor among Hamilton's largest donors. Line 11C is another committee, 11B a
 party committee, and 12 a transfer from a committee the candidate controls; 13A
 (a candidate's own loan) and 15 (an offset) are not donations and are excluded.
 
-A transfer is labelled as such in the app. Marshall moved $638,753 in from an
-earlier committee of his own, which the FEC counts as receipts and which is not
-anybody's donation.
+Transfers are shown as their own category. Marshall took $638,753 on line 12,
+almost all of it from joint fundraising committees — Team Marshall II, One Team
+Senate Majority, the Senators Classic Committees — which the FEC counts as receipts
+and which nobody donated to him.
+
+Each category is ranked **within itself**, not against the others, and carries the
+FEC's total for the whole category. One global cap of twenty was tried and
+misreported the incumbent tenfold: his six transfers run from $29k to $373k while
+his PAC money arrives from roughly two hundred committees at the $5,000
+per-election limit, so a combined top twenty held thirteen PACs worth $147,000
+against the $1,493,250 the FEC reports. Hamilton has no transfers and reconciled to
+the cent, so his data could never have exposed it.
 
 **Memo entries are never summed.** A memo row itemizes money already reported on a
 parent transaction, and adding it to its parent published Marshall's top three

@@ -442,58 +442,67 @@ private fun CommitteeDonors(name: String, finance: CandidateFinance, donors: Don
     } else {
         0.0
     }
+    // Grouped, and each group carries what the FEC says the whole category came
+    // to. Ranking across all of them put six large transfers at the top and left
+    // thirteen PACs standing in for two hundred.
+    val groups = listOf(
+        Triple("Political action committees", "pac", finance.pacContributions),
+        Triple("Committee transfers", "transfer", finance.transfersIn),
+        Triple("Party committees", "party", finance.partyContributions),
+    )
+
     SectionCard(
         title = "$name's organizational donors",
         subtitle = "${formatDollars(organizational)} from committees and parties, " +
             "${formatShare(share)}% of everything raised",
     ) {
-        donors.committeeDonors.forEachIndexed { index, donor ->
-            if (index > 0) {
-                Spacer(Modifier.height(8.dp))
-                ThinDivider()
-                Spacer(Modifier.height(8.dp))
-            }
-            Row(
-                Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-            ) {
-                Column(Modifier.weight(1f)) {
+        groups.forEach { (heading, kind, reported) ->
+            val rows = donors.committeeDonors.filter { it.kind == kind }
+            if (rows.isEmpty()) return@forEach
+
+            Spacer(Modifier.height(4.dp))
+            Text(
+                text = heading,
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+            Text(
+                // Capped lists say so. An uncapped one is everything there is, and
+                // claiming "12 largest of X" when 3 exist would invent a remainder.
+                text = if (rows.size >= 12) {
+                    "${rows.size} largest · ${formatDollars(rows.sumOf { it.amount })} " +
+                        "of ${formatDollars(reported)} reported"
+                } else {
+                    formatDollars(rows.sumOf { it.amount })
+                },
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Spacer(Modifier.height(6.dp))
+
+            rows.forEach { donor ->
+                Row(
+                    Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                ) {
                     Text(
                         text = donor.name,
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.weight(1f),
                     )
-                    val label = when (donor.kind) {
-                        "party" -> "Party committee"
-                        "transfer" -> "Transfer from the candidate's own committee"
-                        else -> "Political action committee"
-                    }
-                    Text(
-                        text = label,
-                        style = MaterialTheme.typography.labelSmall,
-                        color = if (donor.isTransfer) {
-                            MaterialTheme.colorScheme.tertiary
-                        } else {
-                            MaterialTheme.colorScheme.onSurfaceVariant
-                        },
-                    )
-                }
-                Column {
                     Text(
                         text = formatDollars(donor.amount),
                         style = TabularNumberStyle,
                         color = MaterialTheme.colorScheme.onSurface,
                     )
-                    if (donor.gifts > 1) {
-                        Text(
-                            text = "${donor.gifts} gifts",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                    }
                 }
+                Spacer(Modifier.height(4.dp))
             }
+            Spacer(Modifier.height(4.dp))
+            ThinDivider()
         }
+
         Spacer(Modifier.height(12.dp))
         Text(
             text = donors.committeeDonorNote,

@@ -365,7 +365,15 @@ COMMITTEE_LINES = {
     "12": "transfer",   # transfer from a committee the candidate controls
 }
 COMMITTEE_PAGE_BUDGET = 8
-MAX_COMMITTEE_DONORS = 20
+
+# Ranked within each kind, not across all of them. A single global cap was tried
+# and it misreported the incumbent badly: Marshall's six transfers are $29k to
+# $373k apiece while his PAC money arrives from roughly two hundred committees at
+# the $5,000-per-election limit, so a top-20 list held 13 PACs worth $147,000
+# against the $1,493,250 the FEC reports — a tenth of it, in a card that looked
+# complete. Hamilton, with no transfers at all, reconciled to the cent and so
+# would never have shown the fault.
+MAX_PER_KIND = 12
 
 
 def _committee_donors(committee_id: str, warnings: list[str]) -> list[CommitteeDonor]:
@@ -439,21 +447,25 @@ def _committee_donors(committee_id: str, warnings: list[str]) -> list[CommitteeD
             "page": page + 2,
         }
 
-    ranked = sorted(
-        (e for e in totals.values() if e["amount"] > 0),
-        key=lambda e: e["amount"],
-        reverse=True,
-    )
-    return [
-        CommitteeDonor(
-            name=entry["name"],
-            committee_id=entry["committee_id"],
-            amount=round(entry["amount"], 2),
-            gifts=entry["gifts"],
-            kind=entry["kind"],
+    kept: list[CommitteeDonor] = []
+    for kind in ("pac", "party", "transfer"):
+        ranked = sorted(
+            (e for e in totals.values() if e["kind"] == kind and e["amount"] > 0),
+            key=lambda e: e["amount"],
+            reverse=True,
         )
-        for entry in ranked[:MAX_COMMITTEE_DONORS]
-    ]
+        kept.extend(
+            CommitteeDonor(
+                name=entry["name"],
+                committee_id=entry["committee_id"],
+                amount=round(entry["amount"], 2),
+                gifts=entry["gifts"],
+                kind=entry["kind"],
+            )
+            for entry in ranked[:MAX_PER_KIND]
+        )
+    kept.sort(key=lambda donor: donor.amount, reverse=True)
+    return kept
 
 
 def _affiliated_committees(

@@ -1400,3 +1400,90 @@ class TestDonorGeography:
 
     def test_a_zero_total_does_not_divide(self, monkeypatch):
         assert self._run(monkeypatch, [{"state": "KS", "total": 0.0}]) == ([], None, None)
+
+
+class TestCommitteeDonorsAreRankedWithinKind:
+    """A single global cap misreported the incumbent by a factor of ten.
+
+    Marshall's six transfers run from $29k to $373k while his PAC money arrives
+    from roughly two hundred committees at the $5,000-per-election limit. Ranked
+    together and cut at twenty, the published list held thirteen PACs worth
+    $147,000 against the $1,493,250 the FEC reports. Hamilton has no transfers at
+    all and reconciled to the cent, so his data could never have shown the fault.
+    """
+
+    def _run(self, monkeypatch, rows):
+        from sources import finance
+
+        monkeypatch.setattr(
+            finance, "_get", lambda path, params=None: {"results": rows, "pagination": {}}
+        )
+        return finance._committee_donors("C00576173", [])
+
+    def test_large_transfers_do_not_crowd_out_small_pacs(self, monkeypatch):
+        rows = [
+            {
+                "contributor_name": f"BIG TRANSFER {i}",
+                "contribution_receipt_amount": 300000.0 - i,
+                "line_number": "12",
+                "sub_id": f"t{i}",
+                "contributor_id": f"T{i}",
+            }
+            for i in range(20)
+        ] + [
+            {
+                "contributor_name": f"SMALL PAC {i}",
+                "contribution_receipt_amount": 5000.0,
+                "line_number": "11C",
+                "sub_id": f"p{i}",
+                "contributor_id": f"P{i}",
+            }
+            for i in range(30)
+        ]
+        donors = self._run(monkeypatch, rows)
+
+        pacs = [d for d in donors if d.kind == "pac"]
+        transfers = [d for d in donors if d.kind == "transfer"]
+        assert len(pacs) == 12, "PACs must get their own allowance"
+        assert len(transfers) == 12
+
+    def test_a_category_smaller_than_the_cap_is_complete(self, monkeypatch):
+        donors = self._run(
+            monkeypatch,
+            [
+                {
+                    "contributor_name": "COMMON GROUND PAC",
+                    "contribution_receipt_amount": 10000.0,
+                    "line_number": "11C",
+                    "sub_id": "1",
+                    "contributor_id": "C1",
+                }
+            ],
+        )
+        assert [(d.name, d.kind) for d in donors] == [("COMMON GROUND PAC", "pac")]
+
+    def test_the_published_list_is_still_ordered_by_amount(self, monkeypatch):
+        donors = self._run(
+            monkeypatch,
+            [
+                {
+                    "contributor_name": "NRSC",
+                    "contribution_receipt_amount": 62000.0,
+                    "line_number": "11B",
+                    "sub_id": "1",
+                },
+                {
+                    "contributor_name": "TEAM MARSHALL II",
+                    "contribution_receipt_amount": 372711.11,
+                    "line_number": "12",
+                    "sub_id": "2",
+                },
+                {
+                    "contributor_name": "SOME PAC",
+                    "contribution_receipt_amount": 10000.0,
+                    "line_number": "11C",
+                    "sub_id": "3",
+                },
+            ],
+        )
+        assert [d.amount for d in donors] == [372711.11, 62000.0, 10000.0]

@@ -149,7 +149,9 @@ class DonorDetail(Strict):
         default=(
             "Organizations giving directly to the campaign. Money routed through "
             "a conduit such as ActBlue or WinRed is individual money and is "
-            "counted with individuals, not here."
+            "counted with individuals, not here. A committee transfer is money "
+            "moved from a joint fundraising or affiliated committee rather than a "
+            "donation from an outside group."
         ),
         description="Shown on screen wherever committee donors appear.",
     )
