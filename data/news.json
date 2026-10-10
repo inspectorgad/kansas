@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-10T19:24:48.683556Z",
+  "generated_at": "2026-10-10T22:59:12.647282Z",
   "items": [
     {
       "id": "21987ef5d17a",
@@ -66,18 +66,6 @@
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPLWkySFB4UTZoUnFCMEJ2UHJVS2FWSlYzaWs5aDhlb2JDY2pqYUVxdF93TFQ1RkpOV3NqVzB1Nmp0SWVpRlJHN05WVVQzeTdwWjBBU1ZZWEl1RmpSZ1pGREs2ek13aEJHOVFTdnB4cEw3UnNzbUotMHI5b1d5UlJrTVpFNjlENlN4bzZzanFhallrbmRKS1hRWQ"
     },
     {
-      "id": "c7476a88cecb",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-10T01:51:56Z",
-      "source": "Jezebel",
-      "summary": "Sen. Roger Marshall, Who Sued Pregnant Women for $100, Is Accused of Stiffing a Bakery Out of Hundreds &nbsp;&nbsp; Jezebel",
-      "title": "Sen. Roger Marshall, Who Sued Pregnant Women for $100, Is Accused of Stiffing a Bakery Out of Hundreds",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSDNXMkhFbUI1bzU5M0MyQTV3Zm1VY1M4MGxfZzBDT3V5UlVKVl9RN1ZmOG1iaHJON3dwR0t6c01HRDhrZUxudXBTWEFxTmdreUpuZjNKdlpkRlhtWmlBanZxcGxXY2dPZHMtVUVoYVVWYnpuMnpCVHJOYjVwMThQNXJINW56TEpEcG94RXd5QWpSY3NISk83ZnNlX01DckM2VXFaZ294d2o0eWdmbm9mcUJjNTM3SWNweFYyUkJR"
-    },
-    {
       "id": "320c24d8dff0",
       "kind": "news",
       "mentions": [
@@ -88,6 +76,18 @@
       "summary": "House Majority Whip Tom Emmer & Kansas Democratic Senate Candidate Adam Hamilton, Sunday on \u201cThis Week\u201d with Co-anchor Jonathan Karl &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
       "title": "House Majority Whip Tom Emmer & Kansas Democratic Senate Candidate Adam Hamilton, Sunday on \u201cThis Week\u201d with Co-anchor Jonathan Karl",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxON3dTUV9qa0NNZF9sU25NcDJjS2RkSDlMTlB4aGZqTmRYT20zdjVKQU94NzdYajlOLWlRSk9xU2l2d0Z0ck1ObTVvN0QzeG1FNmxud0tKUnNqc1Y4cExrYjRfeEZoclhaMGNPY05IdlZNWVNZcURKcGhUY3NjUlZCb1BUTG42ZGdyNlIxQ2NTQWljQUNOWHZxam83Mkx2MlFLMXQ4UtIBqgFBVV95cUxPMEpGdE00cnZqaUJmT0xrcmJVOWdnMVVxWTQ0Tkt5WWZJVVBZYnozckRILTJ5Uks3OWJseDBWMm9HeXRDM2JFVHp2RDZMUmVOYVJ3VVpLQ0dMWVZvUXJyVldPVk9waC05WF9SS192TjlCSXVTOENodHREMkZmNEtRQ3A0b3FuTXN0NDhXWlh5Z0FVcVViUkxIc2NTMkQtMGI5VTgtZ3JrNEZjUQ"
+    },
+    {
+      "id": "c7476a88cecb",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-09T18:44:09Z",
+      "source": "Jezebel",
+      "summary": "Sen. Roger Marshall, Who Sued Pregnant Women for $100, Is Accused of Stiffing a Bakery Out of Hundreds &nbsp;&nbsp; Jezebel",
+      "title": "Sen. Roger Marshall, Who Sued Pregnant Women for $100, Is Accused of Stiffing a Bakery Out of Hundreds",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSDNXMkhFbUI1bzU5M0MyQTV3Zm1VY1M4MGxfZzBDT3V5UlVKVl9RN1ZmOG1iaHJON3dwR0t6c01HRDhrZUxudXBTWEFxTmdreUpuZjNKdlpkRlhtWmlBanZxcGxXY2dPZHMtVUVoYVVWYnpuMnpCVHJOYjVwMThQNXJINW56TEpEcG94RXd5QWpSY3NISk83ZnNlX01DckM2VXFaZ294d2o0eWdmbm9mcUJjNTM3SWNweFYyUkJR"
     },
     {
       "id": "1e0e38c0dc51",
@@ -637,18 +637,6 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQTM0d0htNENINlB1ME1mMlRKeWo5WFJxSTZQdXNURE9yRVpVc2RldHdJN0djZDF4Rmw3TUZYV1VpYXhvMTRGZUhpNm5VUngxaENtTE0xNXBaYW0wVFFjREpoaG9OOHZkV2dEWjM0SzBlVk9QQ3d6VnU0UTdUTVgxODNJaWNzTTg0dThydlJaRGtfZHFiTXRWcU5YVHVRV0xQRFlyaVprd1o0XzlMT0FtUlBpQ2Z2YUpncjdRN0p4YklGVkR2d1HSAcsBQVVfeXFMT1RSVE8xQ3c0Umh3OXdYQVJmaWdLSjhIYnczMEdIdjJYSXVrNE5QRndMWVBTaE41YnBNcjhQNzdDRzV6d0ZSSzdEWmRORVlGSU41T3FQUkJmNWpuUkd1bVdPZ2t2elQ4bkNfOG9wUWkwbUtKUlRsbEl6Y2dlejAydGhGaE94UDRxc2ZXSnZVb2F3VktCNkQwN2UxdzZfWHlGSnU2bzM4b0NrSHhUbGpVT3F4eVJQa1dVNlhVRmtSaTQ1ODFWVVU2NkhnODA"
     },
     {
-      "id": "d6271d6f67f0",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-02T15:19:56Z",
-      "source": "New York Post",
-      "summary": "Exclusive | Kansas Senate Dem nominee Adam Hamilton accused of shielding 'child predator' who volunteered for his church in mid-2000s &nbsp;&nbsp; New York Post",
-      "title": "Exclusive | Kansas Senate Dem nominee Adam Hamilton accused of shielding 'child predator' who volunteered for his church in mid-2000s",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNMmJmbEJhbk5nSmRfZHlPT3NWX0I4R1NwM0VhMHhJRkUwX05aZlJOTjhwS0dVMGduZE1XdEdiU0FSRk8tbkM2MGpOVkNsUmxyTy1mY09UX0JMS3MyTVE3S2JVT3JsemhaeElBbXhzREJSUnl3bUQ5a3B0a212Sllod3dZSmFKenhEeFJhZ3FzczlUZXRQMU0wUnVwVEZTYXdpU1FCVmdYSXE3QThVMldxSmFBV3prT0VyeHZwNnJzZkRJcTVsOEZiQWxjMDlDV2JOT0FIWGRQZXF3Nkxxd2pwTmlHcEptZTFm"
-    },
-    {
       "id": "32045918b652",
       "kind": "news",
       "mentions": [
@@ -660,6 +648,18 @@
       "summary": "Adam Hamilton talks about Roger Marshall ad that made him mad &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Adam Hamilton talks about Roger Marshall ad that made him mad",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbTg5RVNsVDA4UFNtN0p5WDdZejBoY2g1RUJFd2pCc2p5N2lBWXJQRVZ5Rkt5U1I0UXNGMWdIbzRZZjI0bXl2ZEhyS3NCYThERTJUbk9CUXZlZGpUaEFOTEJiYmZFSVJLeFA4MWk3NVBJbDVHTUllUTRmdW5MaHhjNFVFMVVDOFlBNlE2UzNNN09nQUdpS0NXdlB2cFlLdWRfR202b2k2aFhlc1MxWW9xZlhqQkZ6Y2s3YU5ZZlMwcHpzRU1CeG02SWJUeVNqVEJ4bVZ4TDFHVXE"
+    },
+    {
+      "id": "d6271d6f67f0",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-02T07:00:00Z",
+      "source": "New York Post",
+      "summary": "Exclusive | Kansas Senate Dem nominee Adam Hamilton accused of shielding 'child predator' who volunteered for his church in mid-2000s &nbsp;&nbsp; New York Post",
+      "title": "Exclusive | Kansas Senate Dem nominee Adam Hamilton accused of shielding 'child predator' who volunteered for his church in mid-2000s",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNMmJmbEJhbk5nSmRfZHlPT3NWX0I4R1NwM0VhMHhJRkUwX05aZlJOTjhwS0dVMGduZE1XdEdiU0FSRk8tbkM2MGpOVkNsUmxyTy1mY09UX0JMS3MyTVE3S2JVT3JsemhaeElBbXhzREJSUnl3bUQ5a3B0a212Sllod3dZSmFKenhEeFJhZ3FzczlUZXRQMU0wUnVwVEZTYXdpU1FCVmdYSXE3QThVMldxSmFBV3prT0VyeHZwNnJzZkRJcTVsOEZiQWxjMDlDV2JOT0FIWGRQZXF3Nkxxd2pwTmlHcEptZTFm"
     },
     {
       "id": "9523abc1efd2",
