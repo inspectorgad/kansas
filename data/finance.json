@@ -2055,13 +2055,49 @@
       "url": "https://docquery.fec.gov/pdf/787/202607179890878787/202607179890878787.pdf"
     }
   ],
-  "generated_at": "2026-10-11T07:53:09.960505Z",
+  "generated_at": "2026-10-11T14:48:00.760149Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 6592905.81,
-      "marshall": 12458277.63
+      "hamilton": 7152116.82,
+      "marshall": 15077793.63
     },
     "recent": [
+      {
+        "amount": 350000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00957928",
+        "committee_name": "MAIN STREET FUND",
+        "date": "2026-10-09",
+        "purpose": "PLACED MEDIA: TV AND CONNECTED TV",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 8000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "date": "2026-10-08",
+        "purpose": "DOOR HANGERS",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 4166.67,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-08",
+        "purpose": "PHONE BANKS (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 138211.01,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-08",
+        "purpose": "POSTAGE / PRINTING / PRODUCTION",
+        "support_oppose": "O"
+      },
       {
         "amount": 28998.0,
         "candidate_id": "marshall",
@@ -2069,6 +2105,15 @@
         "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
         "date": "2026-10-07",
         "purpose": "PRODUCTION FOR TELEVISION ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 63000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "date": "2026-10-07",
+        "purpose": "GRASSROOTS CANVASSING",
         "support_oppose": "O"
       },
       {
@@ -2376,55 +2421,10 @@
         "date": "2026-10-05",
         "purpose": "YARD SIGNS, SHIPPING (ESTIMATE)",
         "support_oppose": "S"
-      },
-      {
-        "amount": 6162.5,
-        "candidate_id": "marshall",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-03",
-        "purpose": "PROGRAM MANAGEMENT (ESTIMATE)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 8500.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-03",
-        "purpose": "AIRPLANE BANNER (ESTIMATE)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 16150.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-03",
-        "purpose": "MEDIA PRODUCTION",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 6162.5,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-03",
-        "purpose": "PROGRAM MANAGEMENT (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 100000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-02",
-        "purpose": "MEDIA PLACEMENT",
-        "support_oppose": "O"
       }
     ],
     "supporting": {
-      "hamilton": 1270854.49,
+      "hamilton": 1275021.16,
       "marshall": 1556735.06
     },
     "top_spenders": [
@@ -2435,19 +2435,19 @@
         "opposes": "marshall"
       },
       {
-        "amount": 3975245.0,
+        "amount": 6594761.0,
         "committee_id": "C00953299",
         "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
         "opposes": "marshall"
       },
       {
-        "amount": 2603123.0,
+        "amount": 2953123.0,
         "committee_id": "C00957928",
         "committee_name": "MAIN STREET FUND",
         "opposes": "hamilton"
       },
       {
-        "amount": 2432314.56,
+        "amount": 2570525.57,
         "committee_id": "C00571703",
         "committee_name": "SLF PAC",
         "opposes": "hamilton"
@@ -2467,7 +2467,7 @@
         "supports": "marshall"
       },
       {
-        "amount": 651240.37,
+        "amount": 655407.04,
         "committee_id": "C00960385",
         "committee_name": "UNITED FUTURES PAC",
         "opposes": "marshall",
@@ -2498,6 +2498,12 @@
         "supports": "marshall"
       },
       {
+        "amount": 71000.0,
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "opposes": "hamilton"
+      },
+      {
         "amount": 25000.0,
         "committee_id": "C00899096",
         "committee_name": "UNITED FUTURES",
@@ -2516,7 +2522,7 @@
         "supports": "hamilton"
       }
     ],
-    "total": 21878772.99
+    "total": 25061666.67
   },
   "schema_version": 1
 }

@@ -26,8 +26,21 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-11T07:53:13.957487Z",
+  "generated_at": "2026-10-11T14:48:05.513767Z",
   "items": [
+    {
+      "id": "8a6f46932ab1",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-11T08:33:05Z",
+      "source": "Kansas Reflector",
+      "summary": "In 1932, Kansas voters elected Democrat George McGill to the U.S Senate. In the 32 senate elections since then, voters have consistently elected Republicans to represent them. This historic streak makes Democrat Adam Hamilton\u2019s bid to prevail in his challenge to the reelection of U.S. Senator Roger Marshall an uphill climb. However, Marshall\u2019s embrace of [&#8230;]",
+      "title": "Kansas may surprise the nation and elect a Democrat to the US Senate. MAGA politics reshaped state.",
+      "url": "https://kansasreflector.com/2026/10/11/kansas-may-surprise-the-nation-and-elect-a-democrat-to-the-us-senate"
+    },
     {
       "id": "320c24d8dff0",
       "kind": "news",
@@ -574,19 +587,6 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCVUJkUXR3Qmc5XzRLYXc0b19FVkhkMmU5bHlTZnRINHhTaklSdUZjUHBDY3pILUJhVm45REhRS2RIMEZnTzIyTVktRzBEeHhJa0lRbzVRTDBwb0hzeGhHTHR5Snd5azDSAWdBVV95cUxPYWdRTEstaWZ2M3o0M19iTWd4MVNYMnBUQ3pOMEx2RHNidVFFNjFVal80b2pYNi00M0pwdUZPR1drN0RsVWQzaFV2RFRDS0hfYWMycllsRFhHZFc4dko4V3FOUTF6Mjdn"
     },
     {
-      "id": "2d97efbc13cc",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-03T09:04:00Z",
-      "source": "The Hutchinson News",
-      "summary": "Roger Marshall faces challenge from Adam Hamilton in Kansas | Opinion &nbsp;&nbsp; The Hutchinson News",
-      "title": "Roger Marshall faces challenge from Adam Hamilton in Kansas | Opinion",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNVExoZ0pNcDVHZ1l4aHQwcXZhbGgxUmx6eG9nN2RHdVpnWlNiU2pBX3pCTUNTakdqT29YQjlXZFZSc0pwMGk0ZDZiZDdNNVFBVmkzYzBIeGNuXzBLYmhrVWw4V3IyQzhjMkJkdjVZSGRka0RVMXFVbFlfeG5jbFZDLU4zZW9BczY2VGozQUloRVVoTmFWZ2ducXZTMzFFX2JLelBqdWpUZktXWGJmOUpRQnl5OGtHMHBFTHkwUVhtYmxMSGFhOWpjSGhwbWRxOFVNNXFGN1BR"
-    },
-    {
       "id": "889020a38d38",
       "kind": "news",
       "mentions": [
@@ -597,6 +597,19 @@
       "summary": "National Republicans are racing to the rescue of U.S. Sen. Roger Marshall, diverting millions of dollars in advertising from North Carolina to Kansas. At least, that\u2019s what the Friday reports from Semafor, The Associated Press and Politico indicate. The Senate Leadership Fund political action committee has reserved more than $8 million in ad spending right [&#8230;]",
       "title": "GOP pumps $8 million into Kansas to prop up flailing Roger Marshall. We have a race on our hands.",
       "url": "https://kansasreflector.com/2026/10/03/gop-pumps-8-million-into-kansas-to-prop-up-flailing-roger-marshall-we-have-a-race-on-our-hands"
+    },
+    {
+      "id": "2d97efbc13cc",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-03T07:00:00Z",
+      "source": "The Hutchinson News",
+      "summary": "Roger Marshall faces challenge from Adam Hamilton in Kansas | Opinion &nbsp;&nbsp; The Hutchinson News",
+      "title": "Roger Marshall faces challenge from Adam Hamilton in Kansas | Opinion",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNVExoZ0pNcDVHZ1l4aHQwcXZhbGgxUmx6eG9nN2RHdVpnWlNiU2pBX3pCTUNTakdqT29YQjlXZFZSc0pwMGk0ZDZiZDdNNVFBVmkzYzBIeGNuXzBLYmhrVWw4V3IyQzhjMkJkdjVZSGRka0RVMXFVbFlfeG5jbFZDLU4zZW9BczY2VGozQUloRVVoTmFWZ2ducXZTMzFFX2JLelBqdWpUZktXWGJmOUpRQnl5OGtHMHBFTHkwUVhtYmxMSGFhOWpjSGhwbWRxOFVNNXFGN1BR"
     },
     {
       "id": "c33a73b14b68",
@@ -1267,18 +1280,6 @@
       "url": "https://kansasreflector.com/2026/09/23/overheated-kansas-democrats-need-to-take-an-ice-bath-hamilton-marshall-race-has-weeks-to-go"
     },
     {
-      "id": "4ad5f31008d9",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-09-23T07:00:00Z",
-      "source": "Religion News Service",
-      "summary": "How megapastor Adam Hamilton could break the GOP's hold on Kansas &nbsp;&nbsp; Religion News Service",
-      "title": "How megapastor Adam Hamilton could break the GOP's hold on Kansas",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQkhVWnhxTmFJVmUtMDd0RGx3b0U1UDVOTG5Yczlab2JhbWlhN3hrVXlRbU5MQWtnVS1TMzljN0VCM2M1ZTVtMncxT0RTNVA0YjBNMGF4YXdlOXZ1cnpwd0ZkaTJJWnpSb09PYkFMVXhsYlJOZGlBR0FiM0gwNGxnbFNtRmhSRlBtV05HVVhBUzVWNlVGdjdKVDBOZ1h3cjNVS2hfRlpOUFFMV2V2"
-    },
-    {
       "id": "9bb515189643",
       "kind": "news",
       "mentions": [
@@ -1289,6 +1290,18 @@
       "summary": "Former Kansas GOP governor explains why he's backing Democrat Adam Hamilton for Senate &nbsp;&nbsp; PBS",
       "title": "Former Kansas GOP governor explains why he's backing Democrat Adam Hamilton for Senate",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNb292QWZxbzZ5YXlTNVhpa3dRRnZVUjFPRUtuRUx0cUJlYTVtYWppeVRrakhrY3NUMUJCMU1QSkRSYjdyU29PNUZiZzNsZy1ZZkFZa04tOXUxLU53aVNoWTZ1OEsyYkV2Mzk0aV8zb3BZZ19qa1V4czZWSFJRUFNnQVdnLW15VXY4a29VTktwQ3B1STYtTHdhVGU1c2FBRWQ1anZ4c1R3ZHBYbzBPbVJOdnBKT3R5R0dTdnhv"
+    },
+    {
+      "id": "4ad5f31008d9",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-09-23T07:00:00Z",
+      "source": "Religion News Service",
+      "summary": "How megapastor Adam Hamilton could break the GOP's hold on Kansas &nbsp;&nbsp; Religion News Service",
+      "title": "How megapastor Adam Hamilton could break the GOP's hold on Kansas",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQkhVWnhxTmFJVmUtMDd0RGx3b0U1UDVOTG5Yczlab2JhbWlhN3hrVXlRbU5MQWtnVS1TMzljN0VCM2M1ZTVtMncxT0RTNVA0YjBNMGF4YXdlOXZ1cnpwd0ZkaTJJWnpSb09PYkFMVXhsYlJOZGlBR0FiM0gwNGxnbFNtRmhSRlBtV05HVVhBUzVWNlVGdjdKVDBOZ1h3cjNVS2hfRlpOUFFMV2V2"
     },
     {
       "id": "2f62ec0700dd",
@@ -1501,18 +1514,6 @@
       "summary": "Kansas Senate shocker? New poll shows Marshall, Hamilton in dead heat &nbsp;&nbsp; Newstalk KZRG",
       "title": "Kansas Senate shocker? New poll shows Marshall, Hamilton in dead heat",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSU1VNWtoOGs5WkZncFUtNVBxVTlpNkZjbjFfWWROY29aZ3AxODY0SXV1RlRlMlBuZUtuV2ZkcU5LV3h6YTZNS3VXQW1OcVVwTkF2WDMxN01qNHdLb0VXMzRuVG00c29Ec2lnRkZmYnZ2NHd1eHBvbmZiLWkwc0lUSXFfcHhiWTRNSzdGUWMtelRra19fd3N4ZHM0aEVjcTBtd0xwb3lhcS1rb0Ez"
-    },
-    {
-      "id": "4125fd9b75d2",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-09-18T14:16:15Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Roger Marshall talks about Democratic opposition to farm bill &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Roger Marshall talks about Democratic opposition to farm bill",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPd2dWYy1WYk1QQmI1VGo4aFZybU55ZHhJa1BLTGVQV1Q2cHBZOFFqQ2l1TFJjNUpVckxGb2Y2WmlHUmZMSmU2aTFYYkNHOXVyVW50cGt4aFFZZ2hUX0NXX2RmMV9XTy1VbmEzWDhmNkVfZm9ySG11LVdRakdIeWkyeXllU1BieWdFQnNGdUswbTV6aTdYdnRldVBMb2RLRE1VTlROLU9VQ28tZXo3QUpHZkN2OUYxRkZidTl5SXdheXRESEZJUHFZNjl6SFE5b1lwM1RucU5qQktYUQ"
     }
   ],
   "schema_version": 1
