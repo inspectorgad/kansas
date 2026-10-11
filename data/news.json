@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-10T22:59:12.647282Z",
+  "generated_at": "2026-10-11T01:42:27.244000Z",
   "items": [
+    {
+      "id": "320c24d8dff0",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-10T22:12:59Z",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "summary": "Ukrainian President Volodymyr Zelenskyy, House Majority Whip Tom Emmer & Kansas Democratic Senate Candidate Adam Hamilton, Sunday on \u201cThis Week\u201d with Co-anchor Jonathan Karl &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
+      "title": "Ukrainian President Volodymyr Zelenskyy, House Majority Whip Tom Emmer & Kansas Democratic Senate Candidate Adam Hamilton, Sunday on \u201cThis Week\u201d with Co-anchor Jonathan Karl",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxON3dTUV9qa0NNZF9sU25NcDJjS2RkSDlMTlB4aGZqTmRYT20zdjVKQU94NzdYajlOLWlRSk9xU2l2d0Z0ck1ObTVvN0QzeG1FNmxud0tKUnNqc1Y4cExrYjRfeEZoclhaMGNPY05IdlZNWVNZcURKcGhUY3NjUlZCb1BUTG42ZGdyNlIxQ2NTQWljQUNOWHZxam83Mkx2MlFLMXQ4UtIBqgFBVV95cUxPMEpGdE00cnZqaUJmT0xrcmJVOWdnMVVxWTQ0Tkt5WWZJVVBZYnozckRILTJ5Uks3OWJseDBWMm9HeXRDM2JFVHp2RDZMUmVOYVJ3VVpLQ0dMWVZvUXJyVldPVk9waC05WF9SS192TjlCSXVTOENodHREMkZmNEtRQ3A0b3FuTXN0NDhXWlh5Z0FVcVViUkxIc2NTMkQtMGI5VTgtZ3JrNEZjUQ"
+    },
     {
       "id": "21987ef5d17a",
       "kind": "news",
@@ -64,18 +76,6 @@
       "summary": "Pastors urge Adam Hamilton to drop out of Senate race, 'repent' of teachings on homosexuality, abortion &nbsp;&nbsp; Christian Post",
       "title": "Pastors urge Adam Hamilton to drop out of Senate race, 'repent' of teachings on homosexuality, abortion",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPLWkySFB4UTZoUnFCMEJ2UHJVS2FWSlYzaWs5aDhlb2JDY2pqYUVxdF93TFQ1RkpOV3NqVzB1Nmp0SWVpRlJHN05WVVQzeTdwWjBBU1ZZWEl1RmpSZ1pGREs2ek13aEJHOVFTdnB4cEw3UnNzbUotMHI5b1d5UlJrTVpFNjlENlN4bzZzanFhallrbmRKS1hRWQ"
-    },
-    {
-      "id": "320c24d8dff0",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-09T19:47:34Z",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "summary": "House Majority Whip Tom Emmer & Kansas Democratic Senate Candidate Adam Hamilton, Sunday on \u201cThis Week\u201d with Co-anchor Jonathan Karl &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
-      "title": "House Majority Whip Tom Emmer & Kansas Democratic Senate Candidate Adam Hamilton, Sunday on \u201cThis Week\u201d with Co-anchor Jonathan Karl",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxON3dTUV9qa0NNZF9sU25NcDJjS2RkSDlMTlB4aGZqTmRYT20zdjVKQU94NzdYajlOLWlRSk9xU2l2d0Z0ck1ObTVvN0QzeG1FNmxud0tKUnNqc1Y4cExrYjRfeEZoclhaMGNPY05IdlZNWVNZcURKcGhUY3NjUlZCb1BUTG42ZGdyNlIxQ2NTQWljQUNOWHZxam83Mkx2MlFLMXQ4UtIBqgFBVV95cUxPMEpGdE00cnZqaUJmT0xrcmJVOWdnMVVxWTQ0Tkt5WWZJVVBZYnozckRILTJ5Uks3OWJseDBWMm9HeXRDM2JFVHp2RDZMUmVOYVJ3VVpLQ0dMWVZvUXJyVldPVk9waC05WF9SS192TjlCSXVTOENodHREMkZmNEtRQ3A0b3FuTXN0NDhXWlh5Z0FVcVViUkxIc2NTMkQtMGI5VTgtZ3JrNEZjUQ"
     },
     {
       "id": "c7476a88cecb",
@@ -612,19 +612,6 @@
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOdlo5cldtSEo0SFhnOEhNLXppcGFNRTh1am1KR0Z2MzA5T2dFeHYzMi1mNWdlX3NtYlVyOV9lQmxoSEsxMWhZaE15MExSVUVKakYyeTBaNTgzT0xZemZFRWdkcVVTNlVqckItWVh6bmRxZTU3MGRWcWVlU0swbDBKeVdVelp6UGR4WG1ramNYVUlNZ0dRZW9LLTAtRXVIUVdTSVFZQ2liaUNFN2tTejlGeHY5M3ZBcnpVcmh4XzBRSjlNLVVDMjd2cG93"
     },
     {
-      "id": "ae1c4e63732c",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-02T17:52:00Z",
-      "source": "The Hill",
-      "summary": "Another former GOP governor backs Hamilton over Marshall for Kansas Senate &nbsp;&nbsp; The Hill",
-      "title": "Another former GOP governor backs Hamilton over Marshall for Kansas Senate",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNXzhURmxJbWxjelg3UU1aRVJoaFh0OE1yODVnY0hDeTdEcEQ4S3R0VnQ3LU5lMDFVald2Njdkc3hXWUVOeTJicDZCRWNDYkFJb0FTX1QwME5aMnJSS0E4UG5sVGc0Q0JkT2U0SDhTY2dWLTJPRmZiMnNnSDJqblN5OEdOZmVWRHFUVVpWN2pB0gGTAUFVX3lxTFB2Mk44TFgtSmNnUVFQSTd6NnhlbmExazVHcm5FYVZZVDl6NTFPTWFfQ2ZXWkt3VWx2Q1dsbGptNTJIazJDSFplTHIxVXZobUlYZnBhcjdVemZOcGRvTVdPR1lONHN3YnJnX0lkNWQyQWZZLUVkUnVVaWpiLU13aVhNd0dXakxidjVhamtSWXZUOVpYWQ"
-    },
-    {
       "id": "304e36ac7fc1",
       "kind": "news",
       "mentions": [
@@ -660,6 +647,19 @@
       "summary": "Exclusive | Kansas Senate Dem nominee Adam Hamilton accused of shielding 'child predator' who volunteered for his church in mid-2000s &nbsp;&nbsp; New York Post",
       "title": "Exclusive | Kansas Senate Dem nominee Adam Hamilton accused of shielding 'child predator' who volunteered for his church in mid-2000s",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNMmJmbEJhbk5nSmRfZHlPT3NWX0I4R1NwM0VhMHhJRkUwX05aZlJOTjhwS0dVMGduZE1XdEdiU0FSRk8tbkM2MGpOVkNsUmxyTy1mY09UX0JMS3MyTVE3S2JVT3JsemhaeElBbXhzREJSUnl3bUQ5a3B0a212Sllod3dZSmFKenhEeFJhZ3FzczlUZXRQMU0wUnVwVEZTYXdpU1FCVmdYSXE3QThVMldxSmFBV3prT0VyeHZwNnJzZkRJcTVsOEZiQWxjMDlDV2JOT0FIWGRQZXF3Nkxxd2pwTmlHcEptZTFm"
+    },
+    {
+      "id": "ae1c4e63732c",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-02T07:00:00Z",
+      "source": "The Hill",
+      "summary": "Another former GOP governor backs Hamilton over Marshall for Kansas Senate &nbsp;&nbsp; The Hill",
+      "title": "Another former GOP governor backs Hamilton over Marshall for Kansas Senate",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNXzhURmxJbWxjelg3UU1aRVJoaFh0OE1yODVnY0hDeTdEcEQ4S3R0VnQ3LU5lMDFVald2Njdkc3hXWUVOeTJicDZCRWNDYkFJb0FTX1QwME5aMnJSS0E4UG5sVGc0Q0JkT2U0SDhTY2dWLTJPRmZiMnNnSDJqblN5OEdOZmVWRHFUVVpWN2pB0gGTAUFVX3lxTFB2Mk44TFgtSmNnUVFQSTd6NnhlbmExazVHcm5FYVZZVDl6NTFPTWFfQ2ZXWkt3VWx2Q1dsbGptNTJIazJDSFplTHIxVXZobUlYZnBhcjdVemZOcGRvTVdPR1lONHN3YnJnX0lkNWQyQWZZLUVkUnVVaWpiLU13aVhNd0dXakxidjVhamtSWXZUOVpYWQ"
     },
     {
       "id": "9523abc1efd2",
