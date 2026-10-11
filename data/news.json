@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-11T01:42:27.244000Z",
+  "generated_at": "2026-10-11T07:53:13.957487Z",
   "items": [
     {
       "id": "320c24d8dff0",
@@ -39,6 +39,18 @@
       "summary": "Ukrainian President Volodymyr Zelenskyy, House Majority Whip Tom Emmer & Kansas Democratic Senate Candidate Adam Hamilton, Sunday on \u201cThis Week\u201d with Co-anchor Jonathan Karl &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
       "title": "Ukrainian President Volodymyr Zelenskyy, House Majority Whip Tom Emmer & Kansas Democratic Senate Candidate Adam Hamilton, Sunday on \u201cThis Week\u201d with Co-anchor Jonathan Karl",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxON3dTUV9qa0NNZF9sU25NcDJjS2RkSDlMTlB4aGZqTmRYT20zdjVKQU94NzdYajlOLWlRSk9xU2l2d0Z0ck1ObTVvN0QzeG1FNmxud0tKUnNqc1Y4cExrYjRfeEZoclhaMGNPY05IdlZNWVNZcURKcGhUY3NjUlZCb1BUTG42ZGdyNlIxQ2NTQWljQUNOWHZxam83Mkx2MlFLMXQ4UtIBqgFBVV95cUxPMEpGdE00cnZqaUJmT0xrcmJVOWdnMVVxWTQ0Tkt5WWZJVVBZYnozckRILTJ5Uks3OWJseDBWMm9HeXRDM2JFVHp2RDZMUmVOYVJ3VVpLQ0dMWVZvUXJyVldPVk9waC05WF9SS192TjlCSXVTOENodHREMkZmNEtRQ3A0b3FuTXN0NDhXWlh5Z0FVcVViUkxIc2NTMkQtMGI5VTgtZ3JrNEZjUQ"
+    },
+    {
+      "id": "37f7c61a6d92",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-10T21:26:00Z",
+      "source": "KAKE",
+      "summary": "Roger Marshall pays double for overdue cookie bill after 6 years &nbsp;&nbsp; KAKE",
+      "title": "Roger Marshall pays double for overdue cookie bill after 6 years",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNZ2o0QWRWNkNfeW93LTdtcnVHV1R0T3dhSWlFUlloLVFIb2NOQnkzMVVYOHVQS05od0R4Rk5zbHdmUzUtZEg0TnY5MlNWZDEzRHhTbnAwcFY5dE1pQnBnYmlITV83NGlQTFhLYWdBcHh4Nm5LTC1XUnhWSWlqbHFsZjJfSFJaWmNsNHB1LURMRTlDbk9Fbzg4SnRSaXQwQXdmYjZfOTFpZ0pKQk5kVjFOcEU4ajZnS1NDMjg2a3QxNkhpcmtxek84T29fX09zRzlqdUpiRUJGcw"
     },
     {
       "id": "21987ef5d17a",
@@ -738,18 +750,6 @@
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBsaWs0Q3VWUUhMTmZRVW1UZm5lS1lwcWVoYTFWVlhMbkQ4OGc1dklZRW5pMjhUdjVsMUREXzVNY1B3aEFLU01LY3AzMmJpMzJjd0hncGNoYTlRZjVEZDFnVExJa09FOXVTMXgyLXN5UENjcU42Tm1QNVNmbU5lUdIBfkFVX3lxTE9TdEt3eG1fSjB0S3Z4cl9iektPcUtZYlc0TGtCMGtUandlRzFzNUljZlR4WWVyc1BMX0NyZjE5TV9qQWV6dnpxNXpDWUdtMzg3MkwyUERPNWJ4bXRpNkRQck0yNXI3YTM2MDV0cUYwSmtyYVdCMkhzeGh5TGd0Zw"
     },
     {
-      "id": "bf5d9bd177b8",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-09-30T07:00:00Z",
-      "source": "The Christian Century",
-      "summary": "How megapastor Adam Hamilton could break the GOP's hold on Kansas &nbsp;&nbsp; The Christian Century",
-      "title": "How megapastor Adam Hamilton could break the GOP's hold on Kansas",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVVRXUmU0VV9UM3pVZUw0Y3hSaURxRnZJdkd5RHdHVW1yb3NjU1FrdFNrNjVLb3U5OEFaV3J2YWoteWphRU9YSUMtd2ZDWkJiZjdENkpnQUYxQWNPSkQybVBjLVRvUk4yS2l6bnYwY0ltQUhnY0hweDQzU0dwMWhyX0R1dGZ5QTJDTHFkM01ueGwtX092VXB5V1JUQ0c"
-    },
-    {
       "id": "f161d4aa0bbd",
       "kind": "news",
       "mentions": [
@@ -774,19 +774,6 @@
       "summary": "The ad features a woman who says she was arrested over not making a $50 medical debt payment to Roger Marshall.",
       "title": "Marshall sends cease and desist letter over Hamilton campaign ad",
       "url": "https://www.kwch.com/2026/09/30/marshall-sends-cease-desist-letter-over-hamilton-campaign-ad"
-    },
-    {
-      "id": "913fa4adcf64",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-09-30T03:00:00Z",
-      "source": "The Hill",
-      "summary": "Marshall sends cease-and-desist letter to Hamilton over \u2018defamatory\u2019 medical debt ad &nbsp;&nbsp; The Hill",
-      "title": "Marshall sends cease-and-desist letter to Hamilton over \u2018defamatory\u2019 medical debt ad",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQU04WVFaMUdWUnlGdEQ0Z0dBakp1X2hPR1JITDkyN2wwRzdUNF90WHY3RWVFSnR1MUo4bXZpYktaWE1ydWhXMmpPY1daczFxckhYTnhBYWhKWjFaWVJEcGRBaXZZQ045SFFERW9pVFFCanFnR3RRLVR4WTRTaGtJRnlRM2s5TGPSAYwBQVVfeXFMUHEtTEdwZ2JBT2RNd0pNQ0poZHVHYWh2dUVhMWExUGpjSG1nNnk1d0hVa2k2MFBpanc4RE9yTE1VVGNoM0hJX0pxbzZsbFRhNzFrdHhhbldSZVdJQmRlTXVDaVl3RG9TVGI5TUZwS2JxTzVheVJ0Mk1PR1UyQmJodkVMekRiSFNwRndrVm4"
     },
     {
       "id": "814f9931cf15",
@@ -885,6 +872,19 @@
       "summary": "Opinion | Kansas Hasn\u2019t Elected a Democrat to the Senate Since 1932. Adam Hamilton Could Change That. &nbsp;&nbsp; The New York Times",
       "title": "Opinion | Kansas Hasn\u2019t Elected a Democrat to the Senate Since 1932. Adam Hamilton Could Change That.",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPb2FSR1g2VldtakY4YlRxRWc0SFBSNGt4QWlsZ2dQYVFtcU9rQXFHU1JGVjlUb0hTOXc2bklDOVd0UWZFTW5NYm5QVFB0a3R3N2tBRWV4d1A5eWVqUUIwUVBCYU9uRGpzZU1WOGtqeGJMbWR6WV9DZ1U5TXlXaHZzTg"
+    },
+    {
+      "id": "913fa4adcf64",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-09-29T07:00:00Z",
+      "source": "The Hill",
+      "summary": "Marshall sends cease-and-desist letter to Hamilton over \u2018defamatory\u2019 medical debt ad &nbsp;&nbsp; The Hill",
+      "title": "Marshall sends cease-and-desist letter to Hamilton over \u2018defamatory\u2019 medical debt ad",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQU04WVFaMUdWUnlGdEQ0Z0dBakp1X2hPR1JITDkyN2wwRzdUNF90WHY3RWVFSnR1MUo4bXZpYktaWE1ydWhXMmpPY1daczFxckhYTnhBYWhKWjFaWVJEcGRBaXZZQ045SFFERW9pVFFCanFnR3RRLVR4WTRTaGtJRnlRM2s5TGPSAYwBQVVfeXFMUHEtTEdwZ2JBT2RNd0pNQ0poZHVHYWh2dUVhMWExUGpjSG1nNnk1d0hVa2k2MFBpanc4RE9yTE1VVGNoM0hJX0pxbzZsbFRhNzFrdHhhbldSZVdJQmRlTXVDaVl3RG9TVGI5TUZwS2JxTzVheVJ0Mk1PR1UyQmJodkVMekRiSFNwRndrVm4"
     },
     {
       "id": "11602d4f2e89",
@@ -1134,18 +1134,6 @@
       "url": "https://kansasreflector.com/2026/09/24/politicians-caution-federal-immigration-agents-in-southwest-kansas"
     },
     {
-      "id": "d21a0828bc55",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-09-24T17:15:00Z",
-      "source": "kansan.com",
-      "summary": "Sen. Marshall\u2019s medical practice sued over 700 patients for unpaid medical bills &nbsp;&nbsp; kansan.com",
-      "title": "Sen. Marshall\u2019s medical practice sued over 700 patients for unpaid medical bills",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNX1UwckFwQWhqbld0VnhUV28xLTRDcFlnOHV2eHNoV1RQRHJvV2pXTnZtU0pXTDBIRUlYLUpyaUpzSnNCUW1uQmdCbkhEeUpQNUFCNEt6cXBsLTFWMGotQjl4RC1KZkZSdDRVT2lnRDNkWGNIZjQ5em1qUENBb1dDb3ZBNldhRjNBYlRwd2VQeDdNNFJBeWxKWHRfWVRraFhfUFFMekpnSnUxQlNaV2FFdkszaVZZQnlrV1V5cnc2bDR1VmpHbk9PS2Y0c1N5R3dld0d3WkYyUDZwaEV6X09lMm84aGZZSjJkOWhHV2RB"
-    },
-    {
       "id": "24ba42e227c1",
       "kind": "news",
       "mentions": [
@@ -1230,6 +1218,18 @@
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1fZlZmc3RmQzNyeE9sR3NrbW5yTDRVZzZWaU5jVlBmTEdtTFhWbEtmRzdQTkRGeENSSndmcXItdFdVV2M3ajBRa3hlU3N2dFZ5NTlyTk1qRVNsY1hEaHZaNjBSVDVmb0dhY3lMT2ZLSUtjZkhONG05MjExb3R3Z9IBfkFVX3lxTE1CWUYyb1lQVWM2RHluWTVrYzJnQVRscHBCTC1EcHJUZXVXQkVMeEd3V3lsMkQ4eU94Mkc5S2hBSUd0MHdVa0VkcDV3RW9LLTFrdF9oUFNBaGZkZzI3NENnUTkwMkw0UGpJbTdGVGZ4MldrcGNuOFNRYTNHbE8yQQ"
     },
     {
+      "id": "d21a0828bc55",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-09-24T07:00:00Z",
+      "source": "The University Daily Kansan",
+      "summary": "Sen. Marshall\u2019s medical practice sued over 700 patients for unpaid medical bills &nbsp;&nbsp; The University Daily Kansan",
+      "title": "Sen. Marshall\u2019s medical practice sued over 700 patients for unpaid medical bills",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNX1UwckFwQWhqbld0VnhUV28xLTRDcFlnOHV2eHNoV1RQRHJvV2pXTnZtU0pXTDBIRUlYLUpyaUpzSnNCUW1uQmdCbkhEeUpQNUFCNEt6cXBsLTFWMGotQjl4RC1KZkZSdDRVT2lnRDNkWGNIZjQ5em1qUENBb1dDb3ZBNldhRjNBYlRwd2VQeDdNNFJBeWxKWHRfWVRraFhfUFFMekpnSnUxQlNaV2FFdkszaVZZQnlrV1V5cnc2bDR1VmpHbk9PS2Y0c1N5R3dld0d3WkYyUDZwaEV6X09lMm84aGZZSjJkOWhHV2RB"
+    },
+    {
       "id": "f4b6f0ce1a8b",
       "kind": "news",
       "mentions": [
@@ -1265,6 +1265,18 @@
       "summary": "Let\u2019s dump a big bucket of ice water over the heads of Kansas Democrats and national news media. Yes, I understand that everyone wants to jump on the story of Democrat Adam Hamilton giving U.S. Sen. Roger Marshall, R-Sarasota, a run for his money in this fall&#8217;s election. Don&#8217;t get me wrong. It\u2019s a great [&#8230;]",
       "title": "Overheated Kansas Democrats need to take an ice bath. Hamilton-Marshall race has weeks to go.",
       "url": "https://kansasreflector.com/2026/09/23/overheated-kansas-democrats-need-to-take-an-ice-bath-hamilton-marshall-race-has-weeks-to-go"
+    },
+    {
+      "id": "4ad5f31008d9",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-09-23T07:00:00Z",
+      "source": "Religion News Service",
+      "summary": "How megapastor Adam Hamilton could break the GOP's hold on Kansas &nbsp;&nbsp; Religion News Service",
+      "title": "How megapastor Adam Hamilton could break the GOP's hold on Kansas",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQkhVWnhxTmFJVmUtMDd0RGx3b0U1UDVOTG5Yczlab2JhbWlhN3hrVXlRbU5MQWtnVS1TMzljN0VCM2M1ZTVtMncxT0RTNVA0YjBNMGF4YXdlOXZ1cnpwd0ZkaTJJWnpSb09PYkFMVXhsYlJOZGlBR0FiM0gwNGxnbFNtRmhSRlBtV05HVVhBUzVWNlVGdjdKVDBOZ1h3cjNVS2hfRlpOUFFMV2V2"
     },
     {
       "id": "9bb515189643",
@@ -1501,18 +1513,6 @@
       "summary": "Roger Marshall talks about Democratic opposition to farm bill &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Roger Marshall talks about Democratic opposition to farm bill",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPd2dWYy1WYk1QQmI1VGo4aFZybU55ZHhJa1BLTGVQV1Q2cHBZOFFqQ2l1TFJjNUpVckxGb2Y2WmlHUmZMSmU2aTFYYkNHOXVyVW50cGt4aFFZZ2hUX0NXX2RmMV9XTy1VbmEzWDhmNkVfZm9ySG11LVdRakdIeWkyeXllU1BieWdFQnNGdUswbTV6aTdYdnRldVBMb2RLRE1VTlROLU9VQ28tZXo3QUpHZkN2OUYxRkZidTl5SXdheXRESEZJUHFZNjl6SFE5b1lwM1RucU5qQktYUQ"
-    },
-    {
-      "id": "5f1c42392741",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-09-18T14:02:00Z",
-      "source": "washingtonexaminer.com",
-      "summary": "Poll puts Democrat Adam Hamilton ahead in typically red Kansas &nbsp;&nbsp; washingtonexaminer.com",
-      "title": "Poll puts Democrat Adam Hamilton ahead in typically red Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNbjZLZlJmYm0zUEluOVFaaXNaTnRVUkppYkNtb2xsaGpLR3NxbXA5SHB0MjdCdXRZYnI3eEZJUkhzOGcwV3ZXdUlZY0NLNHZjdmE4Qjc0N2JmYmJxdEVmNzl4VFl4NHBKUmlHVC1aUUQ2YnhXM0pWMFkwZ2lxV3NjUFAyY3p6c2ZCVEdTN3VtTk40LXBsdHVIRUhaXzh5cEc0N050cjhKSWoxVzRPWi1xNnh2ZWRNZkU4aW9Wdy1tSTBJVkk"
     }
   ],
   "schema_version": 1
