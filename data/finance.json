@@ -1850,6 +1850,13 @@
   "cycle": 2026,
   "filings": [
     {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-11",
+      "form_type": "F1",
+      "url": "https://docquery.fec.gov/pdf/659/202610119908612659/202610119908612659.pdf"
+    },
+    {
       "committee_id": "C00576173",
       "committee_name": "KANSANS FOR MARSHALL",
       "coverage_end_date": "2025-12-31",
@@ -1983,20 +1990,20 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-23",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-07-15",
       "date": "2026-07-23",
       "form_type": "F3",
       "report_type": "PRE-PRIMARY",
       "total_receipts": 490367.65,
       "url": "https://docquery.fec.gov/pdf/738/202607239894459738/202607239894459738.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-23",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2045,17 +2052,9 @@
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
       "url": "https://docquery.fec.gov/pdf/185/202607189890889185/202607189890889185.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-17",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/787/202607179890878787/202607179890878787.pdf"
     }
   ],
-  "generated_at": "2026-10-12T09:48:32.632695Z",
+  "generated_at": "2026-10-12T19:44:36.033647Z",
   "outside_spending": {
     "opposing": {
       "hamilton": 7152116.82,
