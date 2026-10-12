@@ -7,17 +7,12 @@
     }
   ],
   "consensus": {
-    "as_of": "2026-10-12T02:29:18.197054Z",
-    "change_1h": -0.0064,
-    "change_24h": 0.0063,
-    "change_7d": 0.0063,
+    "as_of": "2026-10-12T09:44:15.141629Z",
+    "change_1h": 0.0,
+    "change_24h": -0.0105,
+    "change_7d": -0.0364,
     "hamilton": 0.4162,
     "history": [
-      {
-        "hamilton": 0.2282,
-        "marshall": 0.7718,
-        "t": "2026-09-09T21:46:40.167462Z"
-      },
       {
         "hamilton": 0.2244,
         "marshall": 0.7756,
@@ -917,6 +912,11 @@
         "hamilton": 0.4162,
         "marshall": 0.5838,
         "t": "2026-10-12T02:29:18.197054Z"
+      },
+      {
+        "hamilton": 0.4162,
+        "marshall": 0.5838,
+        "t": "2026-10-12T09:44:15.141629Z"
       }
     ],
     "marshall": 0.5838,
@@ -925,7 +925,7 @@
     ]
   },
   "disclaimer": "Prediction-market prices are an implied probability of winning, not a projected vote share.",
-  "generated_at": "2026-10-12T02:29:18.202452Z",
+  "generated_at": "2026-10-12T09:44:15.146912Z",
   "margin": {
     "buckets": [
       {
@@ -945,21 +945,21 @@
         "high": 3.0,
         "label": "Marshall by 1\u20133",
         "low": 1.0,
-        "probability": 0.115
+        "probability": 0.12
       },
       {
         "candidate_id": "marshall",
         "high": 5.0,
         "label": "Marshall by 3\u20135",
         "low": 3.0,
-        "probability": 0.17
+        "probability": 0.16
       },
       {
         "candidate_id": "marshall",
         "high": 7.0,
         "label": "Marshall by 5\u20137",
         "low": 5.0,
-        "probability": 0.085
+        "probability": 0.09
       },
       {
         "candidate_id": "marshall",
@@ -980,28 +980,28 @@
         "high": 13.0,
         "label": "Marshall by 11\u201313",
         "low": 11.0,
-        "probability": 0.038
+        "probability": 0.0375
       },
       {
         "candidate_id": "marshall",
         "high": 15.0,
         "label": "Marshall by 13\u201315",
         "low": 13.0,
-        "probability": 0.012
+        "probability": 0.0125
       },
       {
         "candidate_id": "marshall",
         "high": 17.0,
         "label": "Marshall by 15\u201317",
         "low": 15.0,
-        "probability": 0.015
+        "probability": 0.0105
       },
       {
         "candidate_id": "marshall",
         "high": 19.0,
         "label": "Marshall by 17\u201319",
         "low": 17.0,
-        "probability": 0.0105
+        "probability": 0.015
       },
       {
         "candidate_id": "marshall",
@@ -1026,13 +1026,13 @@
     ],
     "detailed_side": "marshall",
     "leader": "marshall",
-    "median_margin": 2.0,
+    "median_margin": 1.9,
     "note": "Bands come from market prices for 'will the margin be at least N points'. The exchange lists those rungs for one candidate only, so the other side appears as a single band.",
     "rungs": 12
   },
   "markets": [
     {
-      "fetched_at": "2026-10-12T02:29:12.607839Z",
+      "fetched_at": "2026-10-12T09:44:09.600900Z",
       "hamilton": 0.4162,
       "market_id": "KXKSSENGOVCOMBO-derived",
       "marshall": 0.5838,
