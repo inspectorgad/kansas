@@ -26,8 +26,21 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-11T23:12:13.563873Z",
+  "generated_at": "2026-10-12T02:32:17.287256Z",
   "items": [
+    {
+      "id": "6a274a2a1cef",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-11T23:54:25Z",
+      "source": "The Daily News | Texas' Oldest Newspaper",
+      "summary": "Rev. Adam Hamilton, left, shakes hands with Republican incumbent Sen. Roger Marshall during a debate Sept. 12, 2026, at the Kansas State Fair in Hutchinson, Kansas. &nbsp;&nbsp; The Daily News | Texas' Oldest Newspaper",
+      "title": "Rev. Adam Hamilton, left, shakes hands with Republican incumbent Sen. Roger Marshall during a debate Sept. 12, 2026, at the Kansas State Fair in Hutchinson, Kansas.",
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOc20xOXI4YjNURHpTcjYwcGhZRGtHQzRRMHgwSHAzX3lvSDdmR0FuVHN1WDlLMzRDMWNsTlpvTnRpMmlmZkpES1FiMW9XZHRGQzFGb0NVcFA2dWZCSHVTdzFfSGdFd2RycEkwOXEzaUlVWThZNlduQVg0aFBWRGdrRkZSNzV0YUVrOVZjYzJlUTZBdW5tc2Jxb2VrSWVXLVRfYVgzZDdhVnEtaDdmbFFoUm45QVBjaVNOVTBMOVg5eC1fREwzSDFfb3RVSVpsVm9nZHdQZlM4ZnJkQWZIcG1yUmdBUXJIOGM1ZG5PcjdldmZjQmp5eTNLRXM0NWdxNDlvNmdLcnNEeWc5V19FdDlKZGMxbXAxLVQy"
+    },
     {
       "id": "a3af8b1feca8",
       "kind": "news",
@@ -396,19 +409,6 @@
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTE5NNFdVRTJLTzVHb0pSXzBXTldtb3hpZ0RpTGtPaG1lbHZraGt0Ri1LZ1dhS2ZZdld2U08ycTZZNjVVcHBVeU90ZDBlMExDN29XOG5lMDBLcm5mM1M0eGxucWJoQ3MwNzJlclVoU3BqZEVKQnNzTDNYNy0xTFRKeWpZTGZHOXAwV2dhLVpUd2hBNU0tMzBqUHRjYVlpamdKRlRxaUt0WDJubEZKa0ZOM0t4OWI1OEJJbXJ1MmdXV3dmRWhjRS1sc3RB"
     },
     {
-      "id": "6a274a2a1cef",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-07T13:32:39Z",
-      "source": "The Daily News | Texas' Oldest Newspaper",
-      "summary": "Rev. Adam Hamilton, left, shakes hands with Republican incumbent Sen. Roger Marshall during a debate Sept. 12, 2026, at the Kansas State Fair in Hutchinson, Kansas. &nbsp;&nbsp; The Daily News | Texas' Oldest Newspaper",
-      "title": "Rev. Adam Hamilton, left, shakes hands with Republican incumbent Sen. Roger Marshall during a debate Sept. 12, 2026, at the Kansas State Fair in Hutchinson, Kansas.",
-      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOc20xOXI4YjNURHpTcjYwcGhZRGtHQzRRMHgwSHAzX3lvSDdmR0FuVHN1WDlLMzRDMWNsTlpvTnRpMmlmZkpES1FiMW9XZHRGQzFGb0NVcFA2dWZCSHVTdzFfSGdFd2RycEkwOXEzaUlVWThZNlduQVg0aFBWRGdrRkZSNzV0YUVrOVZjYzJlUTZBdW5tc2Jxb2VrSWVXLVRfYVgzZDdhVnEtaDdmbFFoUm45QVBjaVNOVTBMOVg5eC1fREwzSDFfb3RVSVpsVm9nZHdQZlM4ZnJkQWZIcG1yUmdBUXJIOGM1ZG5PcjdldmZjQmp5eTNLRXM0NWdxNDlvNmdLcnNEeWc5V19FdDlKZGMxbXAxLVQy"
-    },
-    {
       "id": "766ab74b1713",
       "kind": "news",
       "mentions": [
@@ -770,18 +770,6 @@
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNMmJmbEJhbk5nSmRfZHlPT3NWX0I4R1NwM0VhMHhJRkUwX05aZlJOTjhwS0dVMGduZE1XdEdiU0FSRk8tbkM2MGpOVkNsUmxyTy1mY09UX0JMS3MyTVE3S2JVT3JsemhaeElBbXhzREJSUnl3bUQ5a3B0a212Sllod3dZSmFKenhEeFJhZ3FzczlUZXRQMU0wUnVwVEZTYXdpU1FCVmdYSXE3QThVMldxSmFBV3prT0VyeHZwNnJzZkRJcTVsOEZiQWxjMDlDV2JOT0FIWGRQZXF3Nkxxd2pwTmlHcEptZTFm"
     },
     {
-      "id": "f3bb8015baa9",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-02T07:00:00Z",
-      "source": "Wichita Eagle",
-      "summary": "2nd Republican former Kansas gov. backs Democrat Hamilton for Senate | Opinion &nbsp;&nbsp; Wichita Eagle",
-      "title": "2nd Republican former Kansas gov. backs Democrat Hamilton for Senate | Opinion",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1idGx3SGxZMkFXSjExeVFwXzl1MW8zV041d2cwWXVTRGRXMTl0c1Q5VHRGMENYMjBwTEF4YklwUkxvY3lncHFHblFaeVZwbGdtZjNCZzJScUlEaGdRM0xOUXRZTG55aV9WWkc4ZnV6cGpDQ2l1aHFYcNIBeEFVX3lxTE13SVVyQXo0b3IwZnhhWEdHcl8ybkg3Nkxidm5GYkQ1bmRHSzQ1THl3clpINV9HMndjRW9VNndlOTZvQldFLXdabWNEMjRUdUZJYjU1eTJmRm5RUWlRcVdNcjdVZWZhdURyaS1JUnNSbTZmazBNajktQg"
-    },
-    {
       "id": "ae1c4e63732c",
       "kind": "news",
       "mentions": [
@@ -793,6 +781,18 @@
       "summary": "Another former GOP governor backs Hamilton over Marshall for Kansas Senate &nbsp;&nbsp; The Hill",
       "title": "Another former GOP governor backs Hamilton over Marshall for Kansas Senate",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNXzhURmxJbWxjelg3UU1aRVJoaFh0OE1yODVnY0hDeTdEcEQ4S3R0VnQ3LU5lMDFVald2Njdkc3hXWUVOeTJicDZCRWNDYkFJb0FTX1QwME5aMnJSS0E4UG5sVGc0Q0JkT2U0SDhTY2dWLTJPRmZiMnNnSDJqblN5OEdOZmVWRHFUVVpWN2pB0gGTAUFVX3lxTFB2Mk44TFgtSmNnUVFQSTd6NnhlbmExazVHcm5FYVZZVDl6NTFPTWFfQ2ZXWkt3VWx2Q1dsbGptNTJIazJDSFplTHIxVXZobUlYZnBhcjdVemZOcGRvTVdPR1lONHN3YnJnX0lkNWQyQWZZLUVkUnVVaWpiLU13aVhNd0dXakxidjVhamtSWXZUOVpYWQ"
+    },
+    {
+      "id": "f3bb8015baa9",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-02T07:00:00Z",
+      "source": "Wichita Eagle",
+      "summary": "2nd Republican former Kansas gov. backs Democrat Hamilton for Senate | Opinion &nbsp;&nbsp; Wichita Eagle",
+      "title": "2nd Republican former Kansas gov. backs Democrat Hamilton for Senate | Opinion",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1idGx3SGxZMkFXSjExeVFwXzl1MW8zV041d2cwWXVTRGRXMTl0c1Q5VHRGMENYMjBwTEF4YklwUkxvY3lncHFHblFaeVZwbGdtZjNCZzJScUlEaGdRM0xOUXRZTG55aV9WWkc4ZnV6cGpDQ2l1aHFYcNIBeEFVX3lxTE13SVVyQXo0b3IwZnhhWEdHcl8ybkg3Nkxidm5GYkQ1bmRHSzQ1THl3clpINV9HMndjRW9VNndlOTZvQldFLXdabWNEMjRUdUZJYjU1eTJmRm5RUWlRcVdNcjdVZWZhdURyaS1JUnNSbTZmazBNajktQg"
     },
     {
       "id": "9523abc1efd2",
