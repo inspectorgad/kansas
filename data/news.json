@@ -26,8 +26,81 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-13T09:08:13.289847Z",
+  "generated_at": "2026-10-13T17:04:14.769198Z",
   "items": [
+    {
+      "id": "6488e9a5ee68",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T15:43:18Z",
+      "source": "https://foxkansas.com/",
+      "summary": "Kansas Senate race shifts to toss-up as Trump teases rally for Marshall &nbsp;&nbsp; https://foxkansas.com/",
+      "title": "Kansas Senate race shifts to toss-up as Trump teases rally for Marshall",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWF9kLWFuX1BfdE52UTM4TzJ0R2I1RElJanhPd2pNcE05Y3FKRTNuQ3ZrTFkxODg2emFqX24zWi0xTDRuWXpuVEt2Sm5uTHdfWHBlSktTdTVWamNUUklDQkowaDVRZkd0cllQWkNKSV9UQjQzNHloYnZVSzdPRUJGeElLWF85OExFTVlSbTB6ZFJGd19LQzFCTHdVYkV6aXhLRV9XbEJidw"
+    },
+    {
+      "id": "61b504aafccf",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-13T14:50:40Z",
+      "source": "Kansas Reflector",
+      "summary": "Former Gov. and U.S. Sen. Sam Brownback endorsed GOP Sen. Roger Marshall's reelection campaign. Democratic nominee Adam Hamilton pounced.",
+      "title": "Former Kansas Gov. Sam Brownback steps into US Senate campaign to endorse Roger Marshall",
+      "url": "https://kansasreflector.com/2026/10/13/former-gov-sam-brownback-steps-into-us-senate-campaign-to-endorse-roger-marshall"
+    },
+    {
+      "id": "0efee03d0265",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-13T14:32:05Z",
+      "source": "The Bulwark",
+      "summary": "Why Adam Hamilton Could Win in Kansas, as Explained by Trump Voters &nbsp;&nbsp; The Bulwark",
+      "title": "Why Adam Hamilton Could Win in Kansas, as Explained by Trump Voters",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMG5mSWwzYWhPaUVGSjYxaFMyN3FPMzdvQ21pb3pIbWhDM1hicWJCVHMtV3RNSmRmT2J3clR2cE0ydWtVTzVqMFBjOTdHRHFkcHItYXhma0oxV01xOWFmb0Y5cjdlMTI5ZjdHXzhoRUVDcjBWN3JkVllhekRYSnN0YTlZcF9uWE5BVmRWNkNXMHRvZw"
+    },
+    {
+      "id": "45c613e30aed",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T10:23:00Z",
+      "source": "Kansas City Star",
+      "summary": "Roger Marshall joins a long KS/MO political tradition of getting ads wrong | Opinion &nbsp;&nbsp; Kansas City Star",
+      "title": "Roger Marshall joins a long KS/MO political tradition of getting ads wrong | Opinion",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4UF9iVXFZZlFmY1BpeXFTZFVkaC0zWURvM2JhSHJaX3lRcWtma29GeDBwd0FyMnNTU3l1SzBMZWJaUUhYbGVkWTE4ZzlkYmV0a3VTcVl1bXZUQjNZLTFQeXdhZGd2MlHSAWdBVV95cUxNM21oQmJEcjJkMFJfN2VHbl9vS1VYaTFZaDRwRGZoWjlkMDV0NnotcElFQnFMam5pWTJqR1FzeG1YQ3lkUEt3MENkWGZ3SXh6SmVyMGRJWDFFTWI0alpWajRyZXJWSUc0"
+    },
+    {
+      "id": "4c9a216e8e0b",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T09:10:23Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Roger Marshall gives comments on medical interest rate in campaign ads &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Roger Marshall gives comments on medical interest rate in campaign ads",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOUzlzWDN6UjBIS3RLY19Ob0FOdzdyaEZpaVBWdURBU1BoWUpZMkROa1FZSDl6aUpYSFRDRXB5RUZ2NWlXSV9SUlBrWUVaQzcxb0puWTlxTzlVQ3BYc1FYd092TnA4QlBiaGdmRFZiTHo5WmRnX0lOdnBXWlZtVjJ2Q2JqcEF3YnBjWFRGemxRbDZ1QnB1WWppM1hLbE5vRnlLZGVZX2toT09HYnlhNlloeUpCNmNXcDlleHlpVmdYMDgxUHVOLU14QlJWbFluUHZfN2pmRDFxMlZERFF4ZmVLZFhja2gxQQ"
+    },
+    {
+      "id": "b05b1bd50942",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T09:04:00Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Roger Marshall denies setting interest rate on medical debt lawsuits &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Roger Marshall denies setting interest rate on medical debt lawsuits",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQN0Z6NTFzTEtMTVl2UzdaWm9WV0xQc2pEMktnQVNaN3BVbmFzRXRMTDh4MDJXWDBZakd0WWRuc2JnbDROOVJ3YU9uNU1IcV9ZQ3Z4S2tPb1J0a0NzQnVkb2NlSElieWpRVnF2NkNrb2xRdy16VVZaZ01JSG9Ga0g0RDNld094cHVVejI0eXN0bF9GcjVtWlNlZGVrYkprOWQ4VE1pWHMtdHZnTFRfSzAyQ09XN3dZNWVVejl3Y3BLbGwxVG9pNG1Hc3pNa0prbWNMX0tnNE5OLTZDa182cmZDMFFn"
+    },
     {
       "id": "1ea62ae66ae7",
       "kind": "news",
@@ -322,6 +395,18 @@
       "summary": "Roger Marshall pays cookie bill from Hutchinson bakery 6 years later &nbsp;&nbsp; Kansas City Star",
       "title": "Roger Marshall pays cookie bill from Hutchinson bakery 6 years later",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBLSmEzV0R5QzNyd1RWVGUzQWxLRWdLQlIyZUQ3d0k5Q1hOX3QyRWw3bldvSWdOS0xQUU81Mi1oeDFWVUZjYmhoaTEtT2FZVFNfUFZDSTBURDRELWhRT1d4cjlqcw"
+    },
+    {
+      "id": "f9ac593d1a80",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-12T13:29:05Z",
+      "source": "NewsNation",
+      "summary": "Sen. Roger Marshall pays bakery bill after complaint goes viral &nbsp;&nbsp; NewsNation",
+      "title": "Sen. Roger Marshall pays bakery bill after complaint goes viral",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVnc2ZnFhUjZPNXE4ZnllUUNfaDhYbWZpbHdBOG0yeUxwaWZVR2IzMWlDYnhzanNnUkEta2pvNFduZGdyWHUxalFzeGljM2gxR2tNZnF4N0l5SUwzbDN3aGdzdlJPN09PcUJleGVWdHZ6VHZBWEdrWmVQU05nX09FRzM3Ni15Q2Z50gGOAUFVX3lxTFAyeF9QNUFpTGozcW02VDZyUG9IWXFtdWRJRWg4WXBQckdobkFDMmpRXzZyVjBuc1FpMmtRVElBT3B6UUtYVkh0a1E0VFhrMlR6X3d2NTJZMU9Qd1UwY1ZScFFmSFQzOWVnMVlENGhJM2xNdnB3WGVwVHRDbFNmY0gzUFNDei01Ty1zcWJId2c"
     },
     {
       "id": "85aa1e73c813",
@@ -1423,91 +1508,6 @@
       "summary": "Johnson County changes 2 church polling locations where Adam Hamilton ministers &nbsp;&nbsp; KCTV",
       "title": "Johnson County changes 2 church polling locations where Adam Hamilton ministers",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPY1FhREtEb3FfOUFOZnViR0l6QVVSRWxGckJWSTFuMXpXVE52aENwbkU4ZVFxLXhIV21OV3BmRGJOQUd3Z2NuOHdLdmZtSFNYZTliM19NUmptS0FDVG5XRGQxVmt6cTU5QmtvN1JpRHVJQzFEWlN6cVBNOHB6dWxYNnhRTU90R3ZZc21wREtSMV9hb0xjYXRDSVJuZVVRMjNONHRPZlZrTW9OSzBVZV85LVZGMW3SAcgBQVVfeXFMUEJ2MS1pMDlBekpTc21BeXR0X0xJdVpHN3BXQXpqM19tc1FOdzc0SkpXSXQzWnNPY1g1ejl3MjhSYllNYVVsVU1sY0NsS3N4bXFJaWoxN3RDZGMxbDdxV1JBdWd4QklIUW9wNEUwVzNXY2xGV1BWTWMtbXFMLU1IM3JLRFZMWC11OUdFeGtNQUZvSVptTnJTQnhfVEl0TVJXWFZpNFFJVXFVOTZIRjRIYWFDd2llbGVOUTR6Zk9oR3B6Q1h2ZjdPa1U"
-    },
-    {
-      "id": "dbd1d0b08159",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-09-28T07:00:00Z",
-      "source": "The Times",
-      "summary": "Adam Hamilton, the \u2018woke\u2019 pastor who could turn Kansas Democrat &nbsp;&nbsp; The Times",
-      "title": "Adam Hamilton, the \u2018woke\u2019 pastor who could turn Kansas Democrat",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVnpHMXJmaVZfb1ktNFdTNTgtQnQxbmVCeEpkSk9ETUFzRTFQY3ZSNlJIeURQdzREdGlBVTFVd3ozMjlXNnE2THNOTy1HUFFHSlY3WjBIQVRNNngxcFNtcmNzSE93RE14dWFOOGtUelhVamlwWDB2dHJWRXNuX2I3X204ejJNQVhRZm5WWllnd080YVB4aU1hUUw5NzE0cVRheVhKcUd0eFhseHVHNmc"
-    },
-    {
-      "id": "58bc41f1d91f",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-09-28T07:00:00Z",
-      "source": "KCTV",
-      "summary": "Johnson County changes 2 church polling locations where Adam Hamilton ministered &nbsp;&nbsp; KCTV",
-      "title": "Johnson County changes 2 church polling locations where Adam Hamilton ministered",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUUZVRnoxN2ZmTTJkU3d1aDRGWW9RRGRVRjQ2NXg4QU1qa1RIcU1lZTlrZ3FjYXl5MGRrMERBSUFJc1o0dDNSU2gzck9KazZ1b3BmVWxZYjlOaGs3YTNBdnUzQ05jTExveUdyclZ6RDRybjJLOUwwSUNnS095bzBxdF9tSjAtSXY2UTIxbHB5MzZCY2R6MVV2MDZEbHd4c3VXbm5XZHd4MVp6dzFpNWVqZ3pvZTlzamVXS1ZkYg"
-    },
-    {
-      "id": "7401e00df6e6",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-09-27T18:45:50Z",
-      "source": "Washington Reporter",
-      "summary": "SCOOP: Sen. Roger Marshall\u2019s campaign responds to viral Democratic ad in Kansas race &nbsp;&nbsp; Washington Reporter",
-      "title": "SCOOP: Sen. Roger Marshall\u2019s campaign responds to viral Democratic ad in Kansas race",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZDZiNzJ5dXRyYVVEZGJWY0lPNElyZzBjOU5jb0swcXAycXc1ZGFnMzJvbjhOZTkxOGthTTRxODBKT3F0bFNuVUtZQXF6UjNLdjllVkkyaTk2YzNmTzk4VldKejV1YlZEWmVHWk5fMHVMeUNOb3BnS3FVemZxQjF4TUY5WFRHOXFDN3h1dFhyRGdGUEZSTzBJ"
-    },
-    {
-      "id": "54a265d1aa99",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-09-26T08:11:31Z",
-      "source": "Hindustan Times",
-      "summary": "Adam Hamilton slams ICE operations in Kansas amid US Senate midterms race: \u2018Chaos for families, communities, businesses\u2019 | Hindustan Times &nbsp;&nbsp; Hindustan Times",
-      "title": "Adam Hamilton slams ICE operations in Kansas amid US Senate midterms race: \u2018Chaos for families, communities, businesses\u2019 | Hindustan Times",
-      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPYmV4bVJadXhXY2I0d2oyNEhDTEtOZWlDWWVUYnlCSXpjekxzaG92YS1YUjVieVhmZHFQeWdTcFdhQ2xiV0Q5dUEzVTJkaE16RXF0TExwWVFKZWFpTkx2bURWVkJVSGVuMERGYjJSOVVBRUZHMmp3X0RnUjlzZ2FPOHZSeElWcTBFNDdJN3d5MjJOaTgtSTFOMXpKWHV1SDRiUFJQZjZWUE12WldQa2JDSUxCVVBvM0dSbFZrM3M0OVF2eDJGZW9WZ2ZRcE1oTERYV0E0TWxMSUFlOTIweTFBdDd1eFpGcl9FaTFxQm9GLTRTb3pBaU5sNllNTmdDLWoySFhGa1ZRam9pN05fYk5WWlJiUXjSAZoCQVVfeXFMTy1PWnRKRGZsX1FDcGNzSXZ4bmxBaEU1cGhIOU9udi1HWDhGZjZtU2FJMnBNckYxTmlTS2NUdU9EYkNqeWZIWkZOQ2pONWRmcVZSaVR0Nmx0SU1wSTF4U0F5Y041X0VUREdEUExUQzhkZV8zQ0pfTGtTM3pnNndkUHZraTFVWnRIY0NJMnZ4SlhIbUtsSmhsTWNRWHhWVDdGNTkyMVp6QkpDUmdpNkxTMVFRQnlBZEpOVnBSZmVHZ3ZCeC0xOUljRHAwMjVscnIwMWN0empuZG40d2pTTG42VE5NM2NqR1JuZkV0T24zemF1VS1iSDlpOVhxcWUzZDB0d1pGQlBwMkdPWks3eW1wc0ZjcENrVi1zWmxB"
-    },
-    {
-      "id": "af23325721e7",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-09-25T23:33:25Z",
-      "source": "KSNT politics",
-      "summary": "TOPEKA (KSNT) \u2014 After the U.S. Senate fell one vote short of passing a resolution to end the U.S.-Iran conflict, Kansas Republicans are continuing to show their support of the ongoing struggle. The U.S. Senate voted on a war powers resolution on Thursday, Sep. 24, that would've forced President Donald Trump to cease military operations [...]",
-      "title": "Marshall and Moran vote to continue U.S.-Iran conflict as war powers resolution fails in the Senate",
-      "url": "https://www.ksnt.com/capitol-bureau/marshall-and-moran-vote-to-continue-u-s-iran-conflict-as-war-powers-resolution-fails-in-the-senate"
-    },
-    {
-      "id": "970538ed9109",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-09-25T22:56:35Z",
-      "source": "NBC News",
-      "summary": "Kansas Senate Primary Election 2026 Live Results: Marshall, Naramore, Hamilton and More &nbsp;&nbsp; NBC News",
-      "title": "Kansas Senate Primary Election 2026 Live Results: Marshall, Naramore, Hamilton and More",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRFdVdzNWTXVGWWVhNmFnbjJCRTVQTkQ4cnJ6R0NQYVdmcWRNdkw1OHhJcjJmV3R4Rl9UQTI4NFdldkF6QTByaFlaTllyXzg1Rl81c29aM3hray03QjhlY1hJU1g4ZS1VUkMtWXBJQk44a1ZPZDhCYURXSjFiWWxmU3pJSQ"
-    },
-    {
-      "id": "e72dab9c26d2",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-09-25T22:02:00Z",
-      "source": "Washington Examiner",
-      "summary": "Roger Marshall faces more heat over medical debt collection tactics in new ad from Democratic challenger &nbsp;&nbsp; Washington Examiner",
-      "title": "Roger Marshall faces more heat over medical debt collection tactics in new ad from Democratic challenger",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYTBERkVoYVE3LWZXRlJvY0hzRFVDU2NHZ3NoTHEzRlNzZHo1Q2ZlQVdyanFIUWpRYVlKZUpiME5PUnpEM0g5dkhhU3hqNjU5aUs2a0dCN2YxZVVxU1F3NTIzTWVfNGg3bk5JbFgwekY3Z0NoMkpSX2lxUVhMWmluX0d0SUtmYlVwMHdnbTBRUWV3R0FBRUxVbzBmV3RtWlRHQUdobTItQmYyeVdzWDRaTmFJZlM"
     }
   ],
   "schema_version": 1

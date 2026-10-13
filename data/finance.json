@@ -388,7 +388,7 @@
           }
         ],
         "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
-        "itemized_total": 3330639.95,
+        "itemized_total": 3331837.67,
         "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (25 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
         "large_donors": [
           {
@@ -689,7 +689,7 @@
             "label": "$500 to $999"
           },
           {
-            "amount": 896843.41,
+            "amount": 895645.69,
             "count": 0,
             "label": "Under $200"
           }
@@ -749,14 +749,9 @@
         ],
         "top_employers": [
           {
-            "amount": 14000.0,
-            "donors": 4,
-            "label": "EURONET"
-          },
-          {
             "amount": 7000.0,
             "donors": 2,
-            "label": "BETTER LIVING LLC"
+            "label": "EDELMAN AND THOMPSON"
           },
           {
             "amount": 7000.0,
@@ -766,74 +761,69 @@
           {
             "amount": 7000.0,
             "donors": 2,
-            "label": "ASOLO AFFILIATES, LLC"
+            "label": "BUCHANAN INGERSOLL & ROONEY"
           },
           {
             "amount": 7000.0,
             "donors": 2,
-            "label": "MOMENTUM ADVISORY PARTNERS"
+            "label": "EXEMPLAR HOLDINGS"
           },
           {
             "amount": 7000.0,
             "donors": 2,
-            "label": "WARD FAMILY HEART CENTER"
+            "label": "TOF, LLC"
           },
           {
             "amount": 7000.0,
             "donors": 2,
-            "label": "LONE PINE CAPITAL"
+            "label": "HOVEY WILLIAMS"
           },
           {
-            "amount": 5250.0,
-            "donors": 3,
-            "label": "COMMERCE BANK"
-          },
-          {
-            "amount": 5075.3,
-            "donors": 4,
-            "label": "CLINKSCALES ELDER LAW PRACTICE PA"
-          },
-          {
-            "amount": 5000.0,
+            "amount": 7000.0,
             "donors": 2,
-            "label": "NERMAN INVESTMENTS"
+            "label": "MIDWEST TRUST"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "SIMCAH"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "BROKEN ARROW ELECTRIC SUPPLY"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "PLATTE CO. HEALTH DEPT."
           }
         ],
         "top_occupations": [
           {
-            "amount": 216014.82,
-            "donors": 238,
-            "label": "ATTORNEY"
+            "amount": 22000.0,
+            "donors": 7,
+            "label": "INVESTOR"
           },
           {
-            "amount": 59461.97,
-            "donors": 33,
-            "label": "CEO"
+            "amount": 12019.05,
+            "donors": 7,
+            "label": "MANAGER"
           },
           {
-            "amount": 14456.55,
-            "donors": 15,
-            "label": "BANKER"
+            "amount": 12000.0,
+            "donors": 6,
+            "label": "PARTNER"
           },
           {
-            "amount": 12225.0,
-            "donors": 11,
-            "label": "REAL ESTATE"
+            "amount": 9750.0,
+            "donors": 7,
+            "label": "EXECUTIVE"
           },
           {
-            "amount": 11521.55,
-            "donors": 16,
-            "label": "CFO"
-          },
-          {
-            "amount": 10517.87,
-            "donors": 21,
-            "label": "REALTOR"
-          },
-          {
-            "amount": 9381.25,
-            "donors": 17,
-            "label": "FINANCIAL ADVISOR"
+            "amount": 8129.29,
+            "donors": 4,
+            "label": "MANAGEMENT CONSULTANT"
           },
           {
             "amount": 7901.8,
@@ -841,17 +831,27 @@
             "label": "INSURANCE"
           },
           {
-            "amount": 7500.0,
-            "donors": 3,
-            "label": "REAL ESTATE DEVELOPER"
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "LANDSCAPE ARCHITECT"
           },
           {
             "amount": 7000.0,
             "donors": 2,
-            "label": "SENIOR MANAGER OF PRODUCT"
+            "label": "AUTO DEALER"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "PHILANTHROPY"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "HOMEMAKER"
           }
         ],
-        "unitemized_total": 767188.6
+        "unitemized_total": 765990.88
       },
       "fec_candidate_id": "S6KS00312",
       "in_state_amount": 2335485.75,
@@ -860,7 +860,7 @@
       "other_receipts": 3038.54,
       "pac_contributions": 17500.0,
       "party_contributions": 0.0,
-      "small_dollar_contributions": 767188.6,
+      "small_dollar_contributions": 765990.88,
       "total_disbursements": 2438456.9,
       "total_receipts": 4169077.81,
       "transfers_in": 0.0
@@ -1852,6 +1852,16 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
+      "coverage_end_date": "2026-06-30",
+      "date": "2026-10-12",
+      "form_type": "F3",
+      "report_type": "JULY QUARTERLY",
+      "total_receipts": 3678710.16,
+      "url": "https://docquery.fec.gov/pdf/428/202610129908666428/202610129908666428.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-11",
       "form_type": "F1",
       "url": "https://docquery.fec.gov/pdf/659/202610119908612659/202610119908612659.pdf"
@@ -1990,20 +2000,20 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-23",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-07-15",
       "date": "2026-07-23",
       "form_type": "F3",
       "report_type": "PRE-PRIMARY",
       "total_receipts": 490367.65,
       "url": "https://docquery.fec.gov/pdf/738/202607239894459738/202607239894459738.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-23",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2044,23 +2054,96 @@
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
       "url": "https://docquery.fec.gov/pdf/688/202607199890895688/202607199890895688.pdf"
-    },
-    {
-      "committee_id": "C00576173",
-      "committee_name": "KANSANS FOR MARSHALL",
-      "date": "2026-07-18",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/185/202607189890889185/202607189890889185.pdf"
     }
   ],
-  "generated_at": "2026-10-13T09:08:09.762268Z",
+  "generated_at": "2026-10-13T17:04:09.773520Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 7152116.82,
-      "marshall": 15077793.63
+      "hamilton": 8418598.84,
+      "marshall": 17124936.7
     },
     "recent": [
+      {
+        "amount": 11843.27,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-10",
+        "purpose": "MEDIA PRODUCTION - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 24698.32,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-10",
+        "purpose": "MEDIA PRODUCTION - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 200000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-10",
+        "purpose": "DIGITAL MEDIA BUY - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1801316.33,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-10",
+        "purpose": "MEDIA BUY - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 3844.14,
+        "candidate_id": "marshall",
+        "committee_id": "C00053553",
+        "committee_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+        "date": "2026-10-10",
+        "purpose": "PRINTING / POSTAGE",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 84.31,
+        "candidate_id": "marshall",
+        "committee_id": "C00053553",
+        "committee_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+        "date": "2026-10-10",
+        "purpose": "PAPER",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 9285.15,
+        "candidate_id": "marshall",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-10",
+        "purpose": "AIRPLANE BANNER (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 80.32,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-10",
+        "purpose": "TV ADVERTISING (FROM ADVANCE LINE 21)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1266401.7,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-09",
+        "purpose": "TV AD PLACEMENT",
+        "support_oppose": "O"
+      },
       {
         "amount": 350000.0,
         "candidate_id": "hamilton",
@@ -2339,92 +2422,11 @@
         "date": "2026-10-06",
         "purpose": "MEDIA PLACEMENT",
         "support_oppose": "O"
-      },
-      {
-        "amount": 800000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00687103",
-        "committee_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-        "date": "2026-10-06",
-        "purpose": "MEDIA PLACEMENT",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 500000.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00953299",
-        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
-        "date": "2026-10-05",
-        "purpose": "TELEVISION ADVERTISING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 208.34,
-        "candidate_id": "marshall",
-        "committee_id": "C00448696",
-        "committee_name": "SENATE CONSERVATIVES FUND",
-        "date": "2026-10-05",
-        "purpose": "IE-MARSHALL-DIGITAL MARKETING",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 39550.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-05",
-        "purpose": "DIGITAL BILLBOARDS (ESTIMATE)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 487.5,
-        "candidate_id": "marshall",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-05",
-        "purpose": "DIGITAL BILLBOARDS, GRAPHIC DESIGN (ESTIMATE)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 191091.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00492140",
-        "committee_name": "AB PAC",
-        "date": "2026-10-05",
-        "purpose": "BILLBOARD ADVERTISING- ESTIMATED COST",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 379.75,
-        "candidate_id": "hamilton",
-        "committee_id": "C00492140",
-        "committee_name": "AB PAC",
-        "date": "2026-10-05",
-        "purpose": "PRODUCTION- ESTIMATED COST",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 222661.19,
-        "candidate_id": "hamilton",
-        "committee_id": "C00492140",
-        "committee_name": "AB PAC",
-        "date": "2026-10-05",
-        "purpose": "BILLBOARD ADVERTISING- ESTIMATED COST",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 3626.99,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-05",
-        "purpose": "YARD SIGNS, SHIPPING (ESTIMATE)",
-        "support_oppose": "S"
       }
     ],
     "supporting": {
       "hamilton": 1275021.16,
-      "marshall": 1556735.06
+      "marshall": 1560663.51
     },
     "top_spenders": [
       {
@@ -2459,6 +2461,12 @@
         "supports": "hamilton"
       },
       {
+        "amount": 2037857.92,
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "opposes": "marshall"
+      },
+      {
         "amount": 2032590.0,
         "committee_id": "C00687103",
         "committee_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -2466,7 +2474,13 @@
         "supports": "marshall"
       },
       {
-        "amount": 655407.04,
+        "amount": 1287704.42,
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "opposes": "hamilton"
+      },
+      {
+        "amount": 664692.19,
         "committee_id": "C00960385",
         "committee_name": "UNITED FUTURES PAC",
         "opposes": "marshall",
@@ -2507,21 +2521,9 @@
         "committee_id": "C00899096",
         "committee_name": "UNITED FUTURES",
         "opposes": "marshall"
-      },
-      {
-        "amount": 21222.4,
-        "committee_id": "C00487470",
-        "committee_name": "CLUB FOR GROWTH ACTION",
-        "opposes": "hamilton"
-      },
-      {
-        "amount": 3240.89,
-        "committee_id": "C00909994",
-        "committee_name": "FIELD TEAM 6, INC.",
-        "supports": "hamilton"
       }
     ],
-    "total": 25061666.67
+    "total": 28379220.21
   },
   "schema_version": 1
 }
