@@ -26,8 +26,32 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-14T01:00:26.333780Z",
+  "generated_at": "2026-10-14T06:01:40.061855Z",
   "items": [
+    {
+      "id": "05103ddeb24b",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-14T03:47:00Z",
+      "source": "KWCH",
+      "summary": "President coming to Wichita to rally for Sen. Roger Marshall &nbsp;&nbsp; KWCH",
+      "title": "President coming to Wichita to rally for Sen. Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNbkx4Unc5enVSaDNEUnV0S05JUXRoUUtVVE14MGNkUnFxTDJhYlR6TU5PSjRXS3RSODhFZ1ZXWXF2NUctMUhQRlVhMS1Ia2RkX3FQT2lqbXpabDZvdm5pejc0YU9vODhZV2NJLXpDcm9jYlJqY3hMeHdrWkc5YnNBT1l3R2lwSmtlamNtRERHdXNuUQ"
+    },
+    {
+      "id": "d237de181d29",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-14T02:44:00Z",
+      "source": "Lawrence Journal-World",
+      "summary": "U.S. Sen. Roger Marshall faces Democratic, Libertarian challengers in general election &nbsp;&nbsp; Lawrence Journal-World",
+      "title": "U.S. Sen. Roger Marshall faces Democratic, Libertarian challengers in general election",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNLWVGMWxGdU4ta3o3VWZzMWt0YTVsc2dQdGhiOWhHNk44TUpVaEZmeUpQblRwQ2VlX09mQTJZS214WE5JbE0xZlNZT19NR25wYXRQY2ZwSVZRSlBrZUMyYUlFQWRuYnJIR0tmc0s4alBrbUQ3cmJKcHFoTlVaQ3pwSXpkaWtNUTJRR3BiV016RHdSSGp1UHBtWndfYmlOS1JDeF9WZXBQVGNYUTRyRkxkTUotMnVjY2NrWnRYYnZ2T1NrY3JBeC1YWldrTEVOb2gtR1RJV05n"
+    },
     {
       "id": "d63261f92f87",
       "kind": "news",
@@ -259,18 +283,6 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNM3FVTzZWZk9qTWhBVGFKT0hsenpEVlUwOTBRQktJaFFZOWlWaWVYUmN3NnNtQVZZNkk3MWt3d1BUM25ERDNmMGswcVByanYxWUVxU2VMN3FrSWM1MDdLcG9YN1E2ZFUwdUhyZ2NoSDhlVjVLQ1BmTTVfR0l1VFhIdWJrcnNFa2xVUFVPNDZRNmt2eEkwOEhhTkFjX2JwU0x6X3FlNXNMUGg2dTUxd0E"
     },
     {
-      "id": "e5fa70e466ec",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T02:29:00Z",
-      "source": "KMBC",
-      "summary": "Kansas Senate race: Trump says 'Kansas Style Rally' coming for U.S. Sen. Roger Marshall &nbsp;&nbsp; KMBC",
-      "title": "Kansas Senate race: Trump says 'Kansas Style Rally' coming for U.S. Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUmhmSU9uUm9DOGVDbE5oT1hnWGgyV0U1SGlaUUstT0lyVkFpaXJha25GV1FJUjFyNHZpQmdRSWpOenQxX1NmSVZMTDJENUpjSzRGWi1KalVjZ0thOW9FU2hLWHRjSm03M3pYSmxVd0t2S2NfblhBejAxcEMyOXJVRkhyem9vLWp6X1BDUFBWUEM1aTRwa0F6aFEzbHdHZw"
-    },
-    {
       "id": "703e5a449430",
       "kind": "news",
       "mentions": [
@@ -278,8 +290,8 @@
         "marshall"
       ],
       "published_at": "2026-10-13T01:31:01Z",
-      "source": "KSN-TV",
-      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN.com",
       "title": "Marshall, Hamilton stump in Kansas as midterm election nears",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdnEzUXdIT0RSb3dzN1lSRGRxTTFYd2ttY3l4Vi04b3FBak5OcjV0c3Q0ak5fUFdjZjZwb3ZNOG1nRldXWkVQeXNhQzdqb2JITTV3eWFUVDNaeUNmYkJqWUE0Vm1US0VYbTZKcllYdzBWRHJhYU01VHBTRUg5TmFNQnoxcHZVOFd5VWI5UEs1bkI4bFVRWFk1UndNYlZua3RrdV9TcUFVYzZfOGFm0gGyAUFVX3lxTE9UVGN6OHl1UmliaVRpcl90YXF3YlV2WWdmNEUxR3lMellPVm1UNjBOWUdpUGJzRGtxRWZSOG4yWG1JUFZraVVrS0FmQ0NfRnlwSnJrT1JubDRyVFFoVjMxcDlXb2dFaEFOdWZ4bFJEWjlwT1VPZGRlQ0xVcUxOcGRHTWNROWtjODVmM2oyUXNSbTg3RzNWM0ZzT3pJMGFlUE5jLW8yVHJXSW5BZTMwNUFmYmc"
     },
@@ -384,6 +396,18 @@
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNbGppUEZrRmh0MFF0UjJkQjFzWmtFSVlRZ296MGMtNnBJWGpKd1ZLY3VNNXRQWXpqSnEzd0xQbURyTzBONExqcVNSNTBrQ0UwanQ2VGQ5NmdIcGxmOGVmYXNEd3NjeU5wR2t2czdId3l1UjVkZW1zUGtNaGRJUE1ud2FDVDB6bERlUTdpb0w5dTdNRC1yS0tsR2JmMHM1YXN5NGw1MnJEUDViU0R6UGRVQUZZejV4LVJLaHFWdTVWd3lKMF9YaHpkTUs3T0szRWp6U1RUTHJrLW1pWExo"
     },
     {
+      "id": "e5fa70e466ec",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-12T21:21:53Z",
+      "source": "KMBC",
+      "summary": "Kansas Senate race: Trump says 'Kansas Style Rally' coming for U.S. Sen. Roger Marshall &nbsp;&nbsp; KMBC",
+      "title": "Kansas Senate race: Trump says 'Kansas Style Rally' coming for U.S. Sen. Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUmhmSU9uUm9DOGVDbE5oT1hnWGgyV0U1SGlaUUstT0lyVkFpaXJha25GV1FJUjFyNHZpQmdRSWpOenQxX1NmSVZMTDJENUpjSzRGWi1KalVjZ0thOW9FU2hLWHRjSm03M3pYSmxVd0t2S2NfblhBejAxcEMyOXJVRkhyem9vLWp6X1BDUFBWUEM1aTRwa0F6aFEzbHdHZw"
+    },
+    {
       "id": "30510c45dc39",
       "kind": "news",
       "mentions": [
@@ -396,18 +420,6 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNXA4aUhVZ3FLelYwVzlyOFE4ODJlQTNua2J4WTNkcnJieXJLLUZiMzlJZFM1Ui1XdTJtSmRwSnBXX0RUWVNNb1RuTnppT0cyT1VEcnFnQlU4b0xMX0w5ZUdDd3doZmRFRUpoMjc3dExwOG5ENHBFYzJGa0RrbU96dE51Rjd2bzVwVFEtddIBoAFBVV95cUxQdkRzV1RCX19qeWlCTURaNDZhV2Zra29qaHFVMXZobm1zZ1Zfa0g0Z3BxNUs3bDEtVk1uQTczQjNjelZNNmFrYlVmVVhJRWZaUV80bUc5Sml3d2o1ZzhuYXVRaGg3dDZmN2lnczZITkRRSE5kU0MwaTE5Q3JKaHJpWUVST3Q2Zm9iamNxY1E3RzE2Q29td3g1aGxHbG9xRWlU"
     },
     {
-      "id": "59b513410783",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-12T20:54:00Z",
-      "source": "KAKE",
-      "summary": "Trump to hold 'Kansas Style Rally' for Sen. Roger Marshall ahead of election &nbsp;&nbsp; KAKE",
-      "title": "Trump to hold 'Kansas Style Rally' for Sen. Roger Marshall ahead of election",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUnBVckF0cTE2bWtHNkRyVEg1cEQ0Z1VHaXUzcUVQUFYtNUVidkZVSkRYem9IYVYtZ3VGbWlrUkhVY1E3M1VOMTlXamFsN1drQ3Zqd09UMy13R2tVbHhkVl9CT2k1MG9pN2xYZzlJbFFVbEdSR3I4Y1BNNGpKVnFnWHpOTHJ3N2Z6THRucFBtdEpMNTJxaFFBT21ENVZIbVRES2ZsRW10bGxjRFV0blhtTDd5MlNxU3ptaFJsdy1fRlhRS3M5VDk3Q2FBSzhGVVhlcVM5SjBvNnMzQ1dUbmRUNmZXZw"
-    },
-    {
       "id": "ed812176b9c2",
       "kind": "news",
       "mentions": [
@@ -418,6 +430,18 @@
       "summary": "Trump to hold rally in Wichita for Sen. Roger Marshall ahead of election &nbsp;&nbsp; KAKE",
       "title": "Trump to hold rally in Wichita for Sen. Roger Marshall ahead of election",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMV9kbHpSM08wSFFvTHpuN3BCX2Q2a1JtMFFvSFZNcGlYRTdQVVQ5S0o3UkNNNndYWFBwUUtudHZnQkFIODU3MWduUWd3NkRrYTViZjg1LWxkdU5aaVU1aTNaOHdoZDVoUUtZbHhKVEdQNDZNTkpzY1ludnZBbWJxdlF2T0VoZm13SzlacklKZGV1US03Z2x4Q1MzZGI3S1l0RFBTbnhRdVVBT1lZSDBXcXJYMHFJYmRabHVrNTNkNHlGWlBSY2dxUVdpY0lJbWYxYnpkSTc2bXRRUzNtWnBhSQ"
+    },
+    {
+      "id": "59b513410783",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-12T20:54:00Z",
+      "source": "KAKE",
+      "summary": "Trump to hold 'Kansas Style Rally' for Sen. Roger Marshall ahead of election &nbsp;&nbsp; KAKE",
+      "title": "Trump to hold 'Kansas Style Rally' for Sen. Roger Marshall ahead of election",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUnBVckF0cTE2bWtHNkRyVEg1cEQ0Z1VHaXUzcUVQUFYtNUVidkZVSkRYem9IYVYtZ3VGbWlrUkhVY1E3M1VOMTlXamFsN1drQ3Zqd09UMy13R2tVbHhkVl9CT2k1MG9pN2xYZzlJbFFVbEdSR3I4Y1BNNGpKVnFnWHpOTHJ3N2Z6THRucFBtdEpMNTJxaFFBT21ENVZIbVRES2ZsRW10bGxjRFV0blhtTDd5MlNxU3ptaFJsdy1fRlhRS3M5VDk3Q2FBSzhGVVhlcVM5SjBvNnMzQ1dUbmRUNmZXZw"
     },
     {
       "id": "4ccdc1b84e10",
@@ -650,16 +674,16 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNU1ZuYVBGLXhCa1luS2I5T3diSzJHT3ZRY0oxd2NIYzN6RE1BSzN6aVR0SzIzUkZITnpUSWFVdXdEVnlBMDNiUUhHREUxUmVlZEtWN21CZjFsbmEySVFWWHg5UHRDMDA2UHpEWkQ1dF9pM1AzQ216VlNoNGM1aUdHYklyNTZTWDJpNmdhVEE2RmpDQQ"
     },
     {
-      "id": "ec0681c8fb4e",
+      "id": "7efc94ca3464",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-10-11T17:27:47Z",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "summary": "Kansas Democratic Senate nominee Adam Hamilton on the direction of the party &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
+      "published_at": "2026-10-11T17:27:34Z",
+      "source": "Central Oregon Daily",
+      "summary": "Kansas Democratic Senate nominee Adam Hamilton on the direction of the party &nbsp;&nbsp; Central Oregon Daily",
       "title": "Kansas Democratic Senate nominee Adam Hamilton on the direction of the party",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZk9rSXpSa0VZeWxKQ0ZTRGZMYmdCbGFUTnJMNHVsM2ZhMmhqS3dfWmgxOHR4YWozWXJ6ZVpLejgtOFptcXBGcGwtS1E5YVR5RVVLR0lnYmR3V0Q0emdXSEJGM1hzbXdEOHZ2bGx5aDg5YjNvN01aS3ZsT09FQ2FjTEVEMXlsbWtTN2t3YWxYSFJkNkhsRTExS1hLbjZmUlNXX1g4"
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOanRnbTVGOVpNbWFLZElBSTlmdjFPZXlmN1VqdXZqeG9id29DUnk2QThuQ3pjd3p4eE5uYm1IVW45MmM0WHhxclFTYThJNzQ3NU1vNTU3R1dQSFpEOTZnZkw5SU1ZWDZOMFZ1YTdoU0l1bDdvRmROaW84eVdfTmYtb01ST3pIVnhSTzNtT2paWUFWMUxRQ2cydU9iRlJaY0lhQzA2dUdsOV9nVTV6M0hXVmJhUlBLaUp3cXNuUnZmY2psYUdtbU9KNDFZRm9aVHVXelBSWEk0dlVnSXF0T0kyMTNIQUQ0VFVYVnlnZnBRQTZvQWNHWVVFeDQzZVN5Y0p1di03VHdqY2I"
     },
     {
       "id": "65ee2d61554f",
@@ -871,19 +895,6 @@
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNanlvSHBXSFY0TEM1OG1PdGJxNWEwNER0ZEVFUmZlN0F6TkJoNXhDMzJCd1FhTkh4Ung5STdsTTI5V1JwWkdhQTVVUkYtVC1zb19Vazd3TW5ad1RJQ2x5NzVNMlJhT2Q0bE5PSVVwSUttLXNwdFp1RjhicVY3ZFY3cGtYQ212VjFCT2laTkdHRTByWmsxWjFlZlhRY2hiaERPMnNSc2lDM0RRUURwb0tZREZOSEJOcm1MLW9ZamlZMjdIUQ"
     },
     {
-      "id": "a767fd787949",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-09T07:00:00Z",
-      "source": "FOX4KC.com",
-      "summary": "Kansas Senate race heats up as Marshall, Hamilton clash in increasingly competitive contest &nbsp;&nbsp; FOX4KC.com",
-      "title": "Kansas Senate race heats up as Marshall, Hamilton clash in increasingly competitive contest",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSnlhUW1jZkFtckduNUxtbjd6MHNVTl83V1A5SVVKVl90dVJHY2FIVFZmcGo1OTJ0VGloajJLOFNIZy1fcEFoMkhfZk5XWTlzSmwwOERmNVd0dWlnWDlpeXdTTGV6V3pyMVNFVFpwNHlPVW9HM21EQzFBUzJKQWd1ZWYtdDlZcWJuQ3hLQkJTUGh2M0NaVjZhVHpSemJhd1o2TnlJOTVFeElBNC05c1lBRXVrVnRCek8tLWtUX1p3ZzNTclk"
-    },
-    {
       "id": "1b0593698630",
       "kind": "news",
       "mentions": [
@@ -967,6 +978,19 @@
       "summary": "Kansas Senate race: U.S. Sen. Roger Marshall expects a closer election as polls show a tight contest &nbsp;&nbsp; KMBC",
       "title": "Kansas Senate race: U.S. Sen. Roger Marshall expects a closer election as polls show a tight contest",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQRm1BUHg5U0pHaEs5TWtkU1Q3Ri1paGdPNngwdEE4Q1VoRFdaeVFqaXkwTzJoMXJ1T2FnRmNkNE1hOVJVOS1feXg2NU9FeUZ4aVpsdkk3eS1sN0J5N0lPREItSmU3X0pYeFBXa2pXcDNXaVdFQ1lxU0Rmb2hXT3h2ZWN2RDdxWTZma2daOFc5OUItUjFYZ2xrb1VYTy1iV05ZU1E"
+    },
+    {
+      "id": "881ea4e8566f",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-08T00:12:03Z",
+      "source": "FOX4KC.com",
+      "summary": "Kansas Senate race heats up as Marshall, Hamilton clash in increasingly competitive contest &nbsp;&nbsp; FOX4KC.com",
+      "title": "Kansas Senate race heats up as Marshall, Hamilton clash in increasingly competitive contest",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNM09zbVBDUmdGaHNmR2pyX295b0tlTUhMYk5sZk1Gd3g4elcza09CdGdzNHRsUE0yUE5SQTdPWVBaY2NoRzBiU2xHeVRuaGdzS1RFTEkwcEpfRjIxNHBSTEl3NGlka2RGVndGalhRNXZiRHBwZ3VmUE1YRktCSFhiS3B1QkdSV25GbUVSYVExRDhpRmNweV9RMDZZREtabElNSjhQY0ZjRkpYREVrUnh2Q2RmeFNBUdIBuwFBVV95cUxPN0U4cTFHXy1IX3lNbzR3Uzd2RnJIaXAyYi0wOGlsZ002ai1iUEdHeTF6dndVXzR0TkhIQ2pUak1Oc2ZpV1NjX3Q0S2xvcmxtWmxFZTlpUkhmYlhNNkNUd0puQ1g4UzdsQ2YzLTFNLV9DVGVIalp2M3YwZHdjVWxBZ1VkTV9nMkpBN1N2Q0dBX3pOYzJTTTBkX09talM2WVA1R0VyUUlZUUdqYlBfdmtrV3JpOW15enVQZE5v"
     },
     {
       "id": "cc210d6c34b3",
@@ -1479,31 +1503,6 @@
       "summary": "County moves voting sites at Adam Hamilton's Resurrection Church &nbsp;&nbsp; Johnson County Post",
       "title": "County moves voting sites at Adam Hamilton's Resurrection Church",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPd1BhRlU2cnhjX01oeDhuQ3loLUVWaHhHVmlQSUdtQV8wV3cxN0VXTXIxTFNhZXg5RlB5YzBoVHBEQkFJYTlTVXk4SkJrTE5uLTZVazV5dndEYjdFS1doenl2RFRFMnJ1T2NFOG9YbkNrcXRhTXgzaC1raGJFQXp4TGVUVXMyWm10aXc2dXVtUU9oRm8"
-    },
-    {
-      "id": "b0fa74fe9228",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-09-29T17:52:17Z",
-      "source": "Beliefnet",
-      "summary": "Senate Candidate Adam Hamilton\u2019s Sermon on Beef, Climate Change Sparks New Controversy &nbsp;&nbsp; Beliefnet",
-      "title": "Senate Candidate Adam Hamilton\u2019s Sermon on Beef, Climate Change Sparks New Controversy",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOTUM3aVNiVWRhMDRwU0xnZW9wNjFuQXhSa2hEcG5HNkpFVTk2Y2xVbHpTam40VnBvRE9PenhhbjRWcjNablpfQ0FHMzVhZWQ3M0pDRnN4dzAyb25UTFRYYUVmSVNyMndmNTJXdUE1X1pCTTlvN2pNX0FzN0ZSVHRZTDl2TExkYmg1ZllPNmE2ZEZ0Rm1VR0pOc1NTMXI5MTRkQmVuSmJaNldWRm5yTzdKZV9NSkRtbGJwdmFSbUIxQUgyRmtYYXgwRU4tOTBkTk0"
-    },
-    {
-      "id": "9547021dbbb2",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-09-29T17:33:58Z",
-      "source": "KCUR",
-      "summary": "An ad for Democratic U.S. Senate candidate Rev. Adam Hamilton begins with a patient who said she was arrested while eight months pregnant for missing a $50 payment to Marshall. She was one of more than 700 patients whom the Republican senator sued while a practicing physician.",
-      "title": "Sen. Roger Marshall alleges defamation by ad about former Kansas patient arrested in debt",
-      "url": "https://www.kcur.org/politics-elections-and-government/2026-09-29/roger-marshall-defamation-patient-arrested-adam-hamilton"
     }
   ],
   "schema_version": 1
