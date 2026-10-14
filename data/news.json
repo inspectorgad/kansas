@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-14T16:01:07.556366Z",
+  "generated_at": "2026-10-14T20:12:39.650629Z",
   "items": [
+    {
+      "id": "69efaf21d6c9",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-14T16:27:06Z",
+      "source": "Kansas City Star",
+      "summary": "Did Sen. Roger Marshall break Kansas law by charging 18% interest on bills? &nbsp;&nbsp; Kansas City Star",
+      "title": "Did Sen. Roger Marshall break Kansas law by charging 18% interest on bills?",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9hNTJWMFdPTHU2aXByRm01eEdEV0huQUdQTVk0TDBFY2ptZ19HSGtrXzdlaTBVR3lPeG5WRXIzVXo4M2pXa25WcjVQa1VZUlEtcEw0S3RhTVh0N1dpMDBXbHVoYjZGUnhScWxrdklrVHN5YW80SjZ1NENXM0tFd9IBfkFVX3lxTFB1UkRSSEc2Y3p3VnF5N1Zud3lJSEFPcFh0SDFGWTNkTVE1QjJncXJKRVB0QTdHVGJkRVhPR19wTmNFbUllalQzTDA0QmYwU3d0enV1Um1TdzBfUkpJOGNmcUdJaVdvYTdpc1Y0WFFmOURlUWhjYkZHay1Yd3FvZw"
+    },
     {
       "id": "a7a15c12e269",
       "kind": "news",
@@ -39,18 +51,6 @@
       "summary": "Marshall enlists veteran GOP strategist as Democrat keeps Kansas Senate race close &nbsp;&nbsp; Kansas City Star",
       "title": "Marshall enlists veteran GOP strategist as Democrat keeps Kansas Senate race close",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5rMi1tdFFGcWlieTlQLW9Bc01zZHN3OG9EN2ZsQ09QWng3b3BEekZSVjNjZjJOR29qWjU3Uksxakx2S1g0QlM5bVFoMTBCQlVjMS1kSEt4anJhdS1yTjdSMHB5VTdPLWxYSXR5TF9ndnBmMlpFMjVYR21pNllWd9IBfkFVX3lxTE9uc2RYWWRKY2MtWGltVVYwd0h3SzMwcmJ4bVVBUE5TYlR5bWRhVlFGZ2ZFb1NxYl9mRmlwNmRZOEZXV2hQZmNCRUN6Q2h5V21VN0xyYktNX0xEUXhremhTOFNsZ0NGSmM4SlpXM2QtTTZObHpkMGhqcnYyQUZBUQ"
-    },
-    {
-      "id": "ed812176b9c2",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-14T13:59:30Z",
-      "source": "KAKE",
-      "summary": "Trump to hold rally in Wichita for Sen. Roger Marshall ahead of election &nbsp;&nbsp; KAKE",
-      "title": "Trump to hold rally in Wichita for Sen. Roger Marshall ahead of election",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMV9kbHpSM08wSFFvTHpuN3BCX2Q2a1JtMFFvSFZNcGlYRTdQVVQ5S0o3UkNNNndYWFBwUUtudHZnQkFIODU3MWduUWd3NkRrYTViZjg1LWxkdU5aaVU1aTNaOHdoZDVoUUtZbHhKVEdQNDZNTkpzY1ludnZBbWJxdlF2T0VoZm13SzlacklKZGV1US03Z2x4Q1MzZGI3S1l0RFBTbnhRdVVBT1lZSDBXcXJYMHFJYmRabHVrNTNkNHlGWlBSY2dxUVdpY0lJbWYxYnpkSTc2bXRRUzNtWnBhSQ"
     },
     {
       "id": "3c1173a95322",
@@ -72,8 +72,8 @@
         "hamilton"
       ],
       "published_at": "2026-10-14T08:32:00Z",
-      "source": "KSN-TV",
-      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN.com",
       "title": "Adam Hamilton \u2013 Democrat for US Senate",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQTIxOU5KTnMtWlVOejliN0EyT0hsc3FQcDc5OXR0TkVPSVQ4Tjl1Z1RqUF9PekE1T0tUN3liUnc4QmVfYUx6VGUtMlFzcXEzX2xoTkQ0RkpYMXFTdkk5YllvVGh1YnJpYkY3ank1eEprZXljOFhiQ1ZNYnhsa2gxRUNmN3pHZzRKVjZfZDdKRFZnb3JENlJsVlFSUXnSAaIBQVVfeXFMTjIyRkRwTjBSY1ZIYVcyRjQ1RHNxTGRrWVdLeDF6ZmtFaTZBTUliX0dWNldIMWVWSUthQzhUWkN3YmlQOGJUYlRwc1BheHVmQnpiRzREM2phV1dkN2oweXU4a1FhNDFpdmJoSC1JLTcwcWNlOVZjYTNXVUoxVkJhVmJld013Q3d4Q09sNEN5ZUdxbUNjbmFMYzBOcS01M0haYkhB"
     },
@@ -150,16 +150,16 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMGIwZGNnOWNCclpGUDdPZHVwbG4teWh6eEFWbmVzUlJwZ2R4Rkt6WENSWVhudFZBYVNESEpILXlRc0tNYXVGM3VaWUdvOUs5c2NacFNXeHUxOEZMZVE3dHJOaU0xbm5tQ181QjJvRlhUa3dsRkN1UloxUEJiUEVDbHpOZkVVSWhuZFp5bGZNQzBoNm1hWGF6WnJUSHhlaEdCVGMtejdqTDFheklV0gGyAUFVX3lxTFBYdkRaaTk2R1l4X1VsLUZFOTlaYm5LSnA2OXFtaWstOEtJejdEUVRHQ0FqZzNYUGVFRGtHV3djS3dpYlFULUdmMWxVSzN5V013VnFoeWprTWdvSl9ZajRLQnI0NUlsNnRIUTk0MXljeVdEMlptQlBTa2did29NQkYyb1JvQUtTZVVRTF8yVFJQbXl4bnpkaFNOMk1ENklwakhmUmpFRTNwSlR1LWRwN3c1QUE"
     },
     {
-      "id": "ad34f1d148ab",
+      "id": "7bdbcb3a68ff",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-13T22:03:12Z",
-      "source": "JC Post",
-      "summary": "New details on Trump's rally in Kansas for Senator Marshall &nbsp;&nbsp; JC Post",
+      "published_at": "2026-10-13T22:02:43Z",
+      "source": "Hays Post",
+      "summary": "New details on Trump's rally in Kansas for Senator Marshall &nbsp;&nbsp; Hays Post",
       "title": "New details on Trump's rally in Kansas for Senator Marshall",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8xYV95bWxoUXdLZHR6YzFrVEVRck5NRWRCMFZpeEItZUtidWxVQlBuZ1lnN3U1T0tXSTB2UFdyVjRFUXE0amx4ZlNfc3k3djB4cW1DM3NkYXlYb2RsdHJjMHZTaXZVWXdRdUh1bGtR"
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1yYmtyaVItcE5uYTRaT0dKNlFKeXdoVFFiaDVLZFBSeVlSUV94cXZuRUg5TTJkbDBlb2JWamtmRDB1T0dhUHZYZlB2RFZ4QzNJR1huMzFMbjM2NmJJTFloazVJS2pjTFBwekh5NVlUNzU"
     },
     {
       "id": "1debf3b405bb",
@@ -187,6 +187,18 @@
       "url": "https://www.kcur.org/2026-10-13/trump-scheduled-to-visit-wichita-on-monday-for-campaign-rally"
     },
     {
+      "id": "cbd734fd3229",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-13T19:59:09Z",
+      "source": "Politico",
+      "summary": "Hamilton reports $10.6M Q3 haul for Kansas Senate race &nbsp;&nbsp; Politico",
+      "title": "Hamilton reports $10.6M Q3 haul for Kansas Senate race",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbDNOVnZ4OF9vVXMySFcwSnlhTVZ5Tjcyb0JvSWJQNWRqcUh1YngtVjByYS1KcHhhaDNtNWw2dWY0S1ZGUU14Z0wwNFhWeWIxbXN0bDVRYkFod1FiVkREQUlKSWFueGNXZF9ieXZxU2c5LUtxR01mTWFReWZMeW00elZCYXk1YTdhTVYxekowVGxpblNNdm9Saw"
+    },
+    {
       "id": "aa9b0a244e4e",
       "kind": "news",
       "mentions": [
@@ -209,6 +221,18 @@
       "summary": "Roger Marshall\u2019s cookie-bill controversy could jeopardize Kansas for the GOP &nbsp;&nbsp; Yahoo",
       "title": "Roger Marshall\u2019s cookie-bill controversy could jeopardize Kansas for the GOP",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVEVJcGd6UUlvU2NrVlNtSmtwa2R3MnBLQkNtWXpSc1NDS3pHT0x0RFhnaThJSFN2VzF5Q1J0Ri1STFhqeGlCTHRtWWRveGdfUmNSdmdzRHdCNVpHYklFV1A3SUg3X1hTcjRHMjVaRG5QcDg1OHM0X1BOX1E0NkdIM1VWV0IwbVgzaTM4aDlTbVl6THNFbUxQV0M2TWVpMGM"
+    },
+    {
+      "id": "ed812176b9c2",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T19:16:23Z",
+      "source": "KAKE",
+      "summary": "Trump to hold rally in Wichita for Sen. Roger Marshall ahead of election &nbsp;&nbsp; KAKE",
+      "title": "Trump to hold rally in Wichita for Sen. Roger Marshall ahead of election",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMV9kbHpSM08wSFFvTHpuN3BCX2Q2a1JtMFFvSFZNcGlYRTdQVVQ5S0o3UkNNNndYWFBwUUtudHZnQkFIODU3MWduUWd3NkRrYTViZjg1LWxkdU5aaVU1aTNaOHdoZDVoUUtZbHhKVEdQNDZNTkpzY1ludnZBbWJxdlF2T0VoZm13SzlacklKZGV1US03Z2x4Q1MzZGI3S1l0RFBTbnhRdVVBT1lZSDBXcXJYMHFJYmRabHVrNTNkNHlGWlBSY2dxUVdpY0lJbWYxYnpkSTc2bXRRUzNtWnBhSQ"
     },
     {
       "id": "43377c09c0cc",
@@ -351,8 +375,8 @@
         "marshall"
       ],
       "published_at": "2026-10-13T01:31:01Z",
-      "source": "KSN-TV",
-      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN.com",
       "title": "Marshall, Hamilton stump in Kansas as midterm election nears",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdnEzUXdIT0RSb3dzN1lSRGRxTTFYd2ttY3l4Vi04b3FBak5OcjV0c3Q0ak5fUFdjZjZwb3ZNOG1nRldXWkVQeXNhQzdqb2JITTV3eWFUVDNaeUNmYkJqWUE0Vm1US0VYbTZKcllYdzBWRHJhYU01VHBTRUg5TmFNQnoxcHZVOFd5VWI5UEs1bkI4bFVRWFk1UndNYlZua3RrdV9TcUFVYzZfOGFm0gGyAUFVX3lxTE9UVGN6OHl1UmliaVRpcl90YXF3YlV2WWdmNEUxR3lMellPVm1UNjBOWUdpUGJzRGtxRWZSOG4yWG1JUFZraVVrS0FmQ0NfRnlwSnJrT1JubDRyVFFoVjMxcDlXb2dFaEFOdWZ4bFJEWjlwT1VPZGRlQ0xVcUxOcGRHTWNROWtjODVmM2oyUXNSbTg3RzNWM0ZzT3pJMGFlUE5jLW8yVHJXSW5BZTMwNUFmYmc"
     },
@@ -1130,18 +1154,6 @@
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdlZiVlF4OW5hNmJpTjVqcmNyTDJrU1piUzdwM0RkcTJNblAwLWZVRHhBcUlYLUNiRTJHaV94QjVmNlNDT3U1eWtvZV8xVko2eUhnOGViQUZXdU5DckRIdG9EYWRDOG0zc2tBdTJxN21SYzJJR0Zfajl2Y2pBZ002ejRBTlNHU0JFc1liWDFXWGV6NGl6X2V4SlpIeDVLd0M40gGmAUFVX3lxTFA4N0ZVMHgyYmgwc3hvVEFPQlk3QmtwN29CVGlIa2IyQ2RfRGZQTEthTWw5VGQ3WlRxTjJYZEhSNUhtNTdOWkxPYW5Dd2dDMGtsQjJqWS13dFd0VDNQQ1J2NkVSRldvenJZS19HczlPSVJtWkdkZWNiMHphX01iUzRSUllDZEI3dEtXelItbk5WS1MxU3ZhX1dObzV6QVAtcnk1N3hfcmc"
     },
     {
-      "id": "bd9e6270594e",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-06T16:33:00Z",
-      "source": "KCUR",
-      "summary": "Two Kansas businesses now say Sen. Roger Marshall misused their images in an attack ad &nbsp;&nbsp; KCUR",
-      "title": "Two Kansas businesses now say Sen. Roger Marshall misused their images in an attack ad",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNDZSdGxDSnQ3U1RSTGFYeVN3Mk5Ncm9WN2pGTndXbGF0QnJPVDFtN05jNm1DZ3NNZ00temdweUFsNHp1VXdfRG82VUJ0TC1Fc0JIZ0dxczRITHJ1VVJ3eWZKRndGTlQ5Z3VUY05FS0pIaWxsZXlBZXhGNFljYXBGV0wzcUo3MUlKNGRFeC1oYXBrOVpIU2RQcDY5cFNCNWxEYng0NXdISjJJc01WWC1wYk1TR3NkaWZiQ3hfTlFjazY2SWdLdURzaUhhSHpxaV9lTjZzUUU5OGV1VUx4bjJVTlV4T0VmZw"
-    },
-    {
       "id": "b96024d3091e",
       "kind": "news",
       "mentions": [
@@ -1202,6 +1214,18 @@
       "summary": "Adam Hamilton stands behind ad on Roger Marshall's debt collection &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Adam Hamilton stands behind ad on Roger Marshall's debt collection",
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNblltbWF2Mmp4Y0kyWVRnU2ctNlNOaE5selNoWXR1R2VvdG9FUzljNVU2LTlPT2tKbzMyN210Vlp5SnNVLVpaQU85Y3REYTZNTmlnSDRCR0xLWXM0N1lxQU5BUEVROWdwLTNCdzdfR2RIVlZ0QXNYTXU2bWxhM0VZSkV3ZVZJamFIanI0U25ENm5GZ1N5dFZTRjNwTVdhTFZ5U0c5RDg0VzFGbDdsbG0tRnE1bDY1WVNTNVlxQnI2clVPTzlSa0t3RjhBWmZRMkxLbmRvQXRqSDJ0OFg2"
+    },
+    {
+      "id": "bd9e6270594e",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-06T07:00:00Z",
+      "source": "KCUR",
+      "summary": "Two Kansas businesses now say Sen. Roger Marshall misused their images in an attack ad &nbsp;&nbsp; KCUR",
+      "title": "Two Kansas businesses now say Sen. Roger Marshall misused their images in an attack ad",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNDZSdGxDSnQ3U1RSTGFYeVN3Mk5Ncm9WN2pGTndXbGF0QnJPVDFtN05jNm1DZ3NNZ00temdweUFsNHp1VXdfRG82VUJ0TC1Fc0JIZ0dxczRITHJ1VVJ3eWZKRndGTlQ5Z3VUY05FS0pIaWxsZXlBZXhGNFljYXBGV0wzcUo3MUlKNGRFeC1oYXBrOVpIU2RQcDY5cFNCNWxEYng0NXdISjJJc01WWC1wYk1TR3NkaWZiQ3hfTlFjazY2SWdLdURzaUhhSHpxaV9lTjZzUUU5OGV1VUx4bjJVTlV4T0VmZw"
     },
     {
       "id": "e850c680fd10",
@@ -1476,32 +1500,6 @@
       "summary": "Marshall to appear at Topeka event amid high-profile Senate race. Tickets cost $95 &nbsp;&nbsp; Kansas City Star",
       "title": "Marshall to appear at Topeka event amid high-profile Senate race. Tickets cost $95",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBBbGp5QzZiMmZmMGE1UFJ0V1BYVlBlelNhRnFGd0F1Q2IwLWJoeXYtNDNzZzNTRF8yamQ5OUVIcGFkaFN3aEhPMnJyc2hDcmFKS0lxTXdyUFVXbG8tS0IxNVVLY1JvTVlzbzZiVnNxTjBqWTcw0gF0QVVfeXFMTmpFMlJuRnF3Y0dMNzNiWmthX2oxMFUtandFcXhJU2otNHpXTWJkajRPQ3otV0NiQ3phLTBrYXJpR2Nlckllc1ROVVF5b3BjWWs3RUx0SHY0T0tTQXV0UXRnaGFOMk44Z0JnQVZ4WkpXaUN6ZmU"
-    },
-    {
-      "id": "a0a70fbdd083",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-09-30T13:23:06Z",
-      "source": "WAVY.com",
-      "summary": "Marshall sends cease-and-desist to Hamilton over \u2018defamatory\u2019 medical debt ad &nbsp;&nbsp; WAVY.com",
-      "title": "Marshall sends cease-and-desist to Hamilton over \u2018defamatory\u2019 medical debt ad",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWlF5T21WUVZVenp0U3RmMnM4VXZJQk1SNmdobUlrXzN6ZjdqdmdGcTNVN3BreGF5bU8wT2JuTTlISmRpdG9CUHBIdW1Pajg1MXVPZzlKdzJHX211alB2a04tRXQ3VGlURjExdTByUmEzYjBuVFpncWNNeWRBSDZrZ3pxM1o5SEx1cEE1Tkp4dFQ5ZzJEZGdGZEZMeHN4dnRVRlhfYjloZWNFQUJ1c1ZDadIBtgFBVV95cUxOVmJjY0xUeXNtNGhCZWc0S3ZEdDYya2NPbkhFUmZXQjRDNG9sdzRLZlV2eTVxcE90ZnlXd3A0Y2pjYktaSWRPYTdwU3hVZ0hLMU90N3E1eGw3ejJHM1ZzWnN4dEp4SEVHcWRVM0hmZHYxQXNtcDVKeUlMTzZHejg5V2VqOXU4TG9Rd3RRSndlWFRvQlpMUWFXaHVzZGNWYm01bHFkM2RSQ3I4dFFZeGhPcEI4ekE2UQ"
-    },
-    {
-      "id": "0ea90fa41e18",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-09-30T10:00:00Z",
-      "source": "Kansas City Star",
-      "summary": "Marshall wants Hamilton to take down medical debt ad, apologize in Senate race &nbsp;&nbsp; Kansas City Star",
-      "title": "Marshall wants Hamilton to take down medical debt ad, apologize in Senate race",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBsaWs0Q3VWUUhMTmZRVW1UZm5lS1lwcWVoYTFWVlhMbkQ4OGc1dklZRW5pMjhUdjVsMUREXzVNY1B3aEFLU01LY3AzMmJpMzJjd0hncGNoYTlRZjVEZDFnVExJa09FOXVTMXgyLXN5UENjcU42Tm1QNVNmbU5lUdIBfkFVX3lxTE9TdEt3eG1fSjB0S3Z4cl9iektPcUtZYlc0TGtCMGtUandlRzFzNUljZlR4WWVyc1BMX0NyZjE5TV9qQWV6dnpxNXpDWUdtMzg3MkwyUERPNWJ4bXRpNkRQck0yNXI3YTM2MDV0cUYwSmtyYVdCMkhzeGh5TGd0Zw"
     }
   ],
   "schema_version": 1
