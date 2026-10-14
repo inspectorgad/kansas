@@ -26,8 +26,33 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-14T06:01:40.061855Z",
+  "generated_at": "2026-10-14T11:43:27.431329Z",
   "items": [
+    {
+      "id": "3c1173a95322",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-14T10:08:00Z",
+      "source": "Kansas City Star",
+      "summary": "Fact check: Marshall TV ad accusing Hamilton of protecting child sexual predator &nbsp;&nbsp; Kansas City Star",
+      "title": "Fact check: Marshall TV ad accusing Hamilton of protecting child sexual predator",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE05VkdLQjRQUTNPQTN2M1dKeUNMT1FjZmkxZm1rb0J5clB6SzZoVnA2VVloTnRxTmJBdzRaamc5NERYekhDMzFTTkNJenRxZTI3YkppbVVHZW5pOXhCM2dSeVdYLVp0M2_SAWdBVV95cUxNcHB1bEVJVlR2X0dXdFNabDROYm84LVJqd2hEWWdNZzFuT3hkdUpqLXdfZVZ3VjBEc0o1a1JsbmQzRGx5bU9SVkVCVzdkTG1aTHZqb1FWZnZYaV95c3FtSlBsX0dJSno0"
+    },
+    {
+      "id": "ea233a5a5271",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-14T08:32:00Z",
+      "source": "KSN-TV",
+      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN-TV",
+      "title": "Adam Hamilton \u2013 Democrat for US Senate",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQTIxOU5KTnMtWlVOejliN0EyT0hsc3FQcDc5OXR0TkVPSVQ4Tjl1Z1RqUF9PekE1T0tUN3liUnc4QmVfYUx6VGUtMlFzcXEzX2xoTkQ0RkpYMXFTdkk5YllvVGh1YnJpYkY3ank1eEprZXljOFhiQ1ZNYnhsa2gxRUNmN3pHZzRKVjZfZDdKRFZnb3JENlJsVlFSUXnSAaIBQVVfeXFMTjIyRkRwTjBSY1ZIYVcyRjQ1RHNxTGRrWVdLeDF6ZmtFaTZBTUliX0dWNldIMWVWSUthQzhUWkN3YmlQOGJUYlRwc1BheHVmQnpiRzREM2phV1dkN2oweXU4a1FhNDFpdmJoSC1JLTcwcWNlOVZjYTNXVUoxVkJhVmJld013Q3d4Q09sNEN5ZUdxbUNjbmFMYzBOcS01M0haYkhB"
+    },
     {
       "id": "05103ddeb24b",
       "kind": "news",
@@ -517,16 +542,16 @@
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNWEN6OV9wUktoWnlmSzUzUUtBeUZzZS1YTmVqX3NVYks2MGpaQ0Q3cTBGMEkzYWh3azRKMFd1OGVjYkxyUURJNmNxYzl1SGIydnFLdHZPa1JTMWVFQzJWNl9CUTlaU0FScGdXUTdNcW5NenRGS01ZR3dMTFA0NzgtTnltM0ZJdVczSV9pUXluZGl5MmoyeU05Qk1hUDBpNmREWWRwb3lUaS1LRmVQUVpWMzhBWWsxM0Flc19mWVhTLXVPWGt1dnZhaGRTR3QxVXd3RnN3YWgtbUhfbjEySGQ3Y0sxcHg"
     },
     {
-      "id": "ea0073501494",
+      "id": "fd4a510929a0",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-12T16:56:42Z",
-      "source": "News-Press NOW",
-      "summary": "Senator Roger Marshall Visits Cal-Maine Foods Facility to Highlight Biosecurity and U.S. Egg Supply Resilience &nbsp;&nbsp; News-Press NOW",
+      "published_at": "2026-10-12T16:55:00Z",
+      "source": "Yahoo Finance",
+      "summary": "Senator Roger Marshall Visits Cal-Maine Foods Facility to Highlight Biosecurity and U.S. Egg Supply Resilience &nbsp;&nbsp; Yahoo Finance",
       "title": "Senator Roger Marshall Visits Cal-Maine Foods Facility to Highlight Biosecurity and U.S. Egg Supply Resilience",
-      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxQLXVNSU42S3MxTUNNNng4cGFJbkVGZDgtME92a0tCQ0RZYllPZUZnMjllOWxsYVU0b3llcmVpQWF4dktDOC1vNEl3MjQzekZkb0hHTER6TGt2azNmU2dVUEgtYUJ0eE83VFB3YWFiRTJRcm1wYzlwYlU1WUNHTzVuRldSX0xObk1Cb25wVFhMUEoxemxUalp0Mm40UXp0azdYV3NCelZkZUhCOFUxaGo3dVRKNmFIUXhYRnlHTlZxRWhPVW1odUNka3Bxckw1MUp3LXA5MG8yS2tYRjhzRnRCSDBicDZNaWk2X2psRGdvM3NheV8zQ3pWeF8yM0NWekFwOVVJVVc0UXQ4Q3hibU1WYXY2UzZuVk93aE1pRkR2c3JnZw"
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSjh5U3I4a0VkME9RbzZFNjlyVmtuejRYRUIzX0IwdTA2RlJjUkxBbjZRMnpEbGNHZ1VZWE1ONDMzQjg2RDVQa2xGcWlMSzlYeTh1bE1RSF83d2V4cEMtZy03Z0h4ME9qV3pCMnFzWW9PLWY5RExRR3FWV3lZZzBqWVV4alBTeUlQQWhkLVZCVGxqbnRkSGxGUUpn"
     },
     {
       "id": "7b737aa41084",
@@ -650,6 +675,18 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZHdoMEpUcGFWUWp3XzNEdlVnZkdrVHB6WFBRRUhHUm9SM3Y4Y2R4TENLMm9IcF9PM1NIMXpGWldiMktRS1hHLU05TnFlUUQyc1l4M3JmcFVKOGRzMGxhQlpTVkszZHNNeWswYnFWbko3a1Vuc0tPWEtuQTdfai1rcUd1UXROY2Y5RjdXTnpRSmNfUGMwRDVOX1h2X2ZmTm1RNjM1YVNMam1adGV5T0FwcFhOTEhEOF9vMzRSVWRJanp0WG8"
     },
     {
+      "id": "4bd3274bbd5d",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-11T18:34:41Z",
+      "source": "Modern Ghana",
+      "summary": "Kansas Senate nominee Adam Hamilton on bipartisanship &nbsp;&nbsp; Modern Ghana",
+      "title": "Kansas Senate nominee Adam Hamilton on bipartisanship",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4tcjBpRm9SMGVseG1vM3hKdllLTGlmVkJpUWtkQ1BIOXQyNkZvdTdPQ0k3MEZtSkFqZEZQaTNvYVZFQy1rRFFHSktBRHFnN2FRZlpxVXJ4V0I4bFR3SHZn0gFcQVVfeXFMTTdndExVYk1jNEkxU0pQSWEyWXM0OWZjQzViUjRtaTFBY1huTl9BR2trNWg1WklNMDlVX1ZrNUJKSFRjYW5lOG96UVYzUHUtRG1haGx2cmdlbmdEa2E"
+    },
+    {
       "id": "0eb778323692",
       "kind": "news",
       "mentions": [
@@ -684,18 +721,6 @@
       "summary": "Kansas Democratic Senate nominee Adam Hamilton on the direction of the party &nbsp;&nbsp; Central Oregon Daily",
       "title": "Kansas Democratic Senate nominee Adam Hamilton on the direction of the party",
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOanRnbTVGOVpNbWFLZElBSTlmdjFPZXlmN1VqdXZqeG9id29DUnk2QThuQ3pjd3p4eE5uYm1IVW45MmM0WHhxclFTYThJNzQ3NU1vNTU3R1dQSFpEOTZnZkw5SU1ZWDZOMFZ1YTdoU0l1bDdvRmROaW84eVdfTmYtb01ST3pIVnhSTzNtT2paWUFWMUxRQ2cydU9iRlJaY0lhQzA2dUdsOV9nVTV6M0hXVmJhUlBLaUp3cXNuUnZmY2psYUdtbU9KNDFZRm9aVHVXelBSWEk0dlVnSXF0T0kyMTNIQUQ0VFVYVnlnZnBRQTZvQWNHWVVFeDQzZVN5Y0p1di03VHdqY2I"
-    },
-    {
-      "id": "65ee2d61554f",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-11T17:27:32Z",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "summary": "Kansas Senate nominee Adam Hamilton on bipartisanship &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
-      "title": "Kansas Senate nominee Adam Hamilton on bipartisanship",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORVQ2WlZfckYyM0tmMGVrMnVkQWRXT3ZwUFc2TWQ3Z2dCY2J1TmdLSjVYM2tVOFBkUVZmeDl6djhrd1h4SEgySENCS01OZDhMemNUQlB1NjZydUxfUzZnUkoyU2VIR3o3ZnpUVjREQldPWGdmakk1TkhHMXdCZzdrZnlDcDYwNzVSTzd0NHpTeVdVMVk"
     },
     {
       "id": "71b5eb0f0191",
@@ -1193,19 +1218,6 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUmQweWVHMTQ1UC1jOEN3MGJNTTBMb3VXS042TDc0LW1wZURhRGY4azBBVHJSa1JMSS1kQkgxd0llWDI3Nk9jQ2YtelBybEl4Tmxma2lxUlIzSWhIcjQ1cjN2WUE2N1FZZFZkaDBXNlREdlgyUldIV280NmROaHBhNzVMb2h4RF9pYndySWNBTTVpeENWNUd5NFEzZw"
     },
     {
-      "id": "0b7d7e2d4b5b",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-05T22:21:54Z",
-      "source": "DSCC",
-      "summary": "QUICK CLIP: Roger Marshall Facing a \u201cMathematical Perfect Storm\u201d in Kansas as \u201cHistorically Popular\u201d Adam Hamilton Surges in New Poll &nbsp;&nbsp; DSCC",
-      "title": "QUICK CLIP: Roger Marshall Facing a \u201cMathematical Perfect Storm\u201d in Kansas as \u201cHistorically Popular\u201d Adam Hamilton Surges in New Poll",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOTlBQOXJqaERaU0FCZmVBdzVIRmdnZmQ0cGNBRmZzYlY5OGRJdlBmTDdOMjNseFdyR0xxRXlyQzIwY21yWnBabXc3MTVKOWhCZnVhck9wcHBVeldLeG9aMmZQS2pTU25KRnRwamJZZmwwd3VhZ1RwSUw3XzhvbGJ2R1NrVEQ0VXlZVUU4NW5SVlVKXzBwOVYwbVpPbDVlV19HVU9JeVd3OVNpNzhRbFM4VFlkZnIzY2h5TERteENxdzFkSDJROHVidGdTcXR2LXpLRkpuUThGbFVtcFZFcXVLcnlSZTRHRlRkbkVQeWVZcw"
-    },
-    {
       "id": "382d4c9f3180",
       "kind": "news",
       "mentions": [
@@ -1240,6 +1252,19 @@
       "summary": "Senate Leadership Fund commits $14M to support Sen. Roger Marshall in Kansas race &nbsp;&nbsp; Crypto Briefing",
       "title": "Senate Leadership Fund commits $14M to support Sen. Roger Marshall in Kansas race",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNFpTbVl5MWtnR1V5QWd0XzByZi1CTlRBR21XRDVzZDRCTTJYQ1pnMTN0SXpZV3FaRTBPcjd1QTZzWWE2cHdzVkFPcEZoQnJ3SXEyTlhDdWZqSjk1M2MyUl9oS05XQ3ppUkxDd3VmU1EzWWx4eXVpcnFPUkJaeExTTWVjOGhxTTNjSW1jT2R6bWJtN1VEVUpoY1NULVJVbjRqc0x3Mlg0YV9zYXM"
+    },
+    {
+      "id": "0b7d7e2d4b5b",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-05T07:00:00Z",
+      "source": "DSCC",
+      "summary": "QUICK CLIP: Roger Marshall Facing a \u201cMathematical Perfect Storm\u201d in Kansas as \u201cHistorically Popular\u201d Adam Hamilton Surges in New Poll &nbsp;&nbsp; DSCC",
+      "title": "QUICK CLIP: Roger Marshall Facing a \u201cMathematical Perfect Storm\u201d in Kansas as \u201cHistorically Popular\u201d Adam Hamilton Surges in New Poll",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOTlBQOXJqaERaU0FCZmVBdzVIRmdnZmQ0cGNBRmZzYlY5OGRJdlBmTDdOMjNseFdyR0xxRXlyQzIwY21yWnBabXc3MTVKOWhCZnVhck9wcHBVeldLeG9aMmZQS2pTU25KRnRwamJZZmwwd3VhZ1RwSUw3XzhvbGJ2R1NrVEQ0VXlZVUU4NW5SVlVKXzBwOVYwbVpPbDVlV19HVU9JeVd3OVNpNzhRbFM4VFlkZnIzY2h5TERteENxdzFkSDJROHVidGdTcXR2LXpLRkpuUThGbFVtcFZFcXVLcnlSZTRHRlRkbkVQeWVZcw"
     },
     {
       "id": "fab202e45165",
@@ -1478,31 +1503,6 @@
       "summary": "The ad features a woman who says she was arrested over not making a $50 medical debt payment to Roger Marshall.",
       "title": "Marshall sends cease-and-desist letter in response to Hamilton campaign ad over former patients\u2019 medical debt",
       "url": "https://www.kwch.com/2026/09/30/marshall-sends-cease-and-desist-letter-response-hamilton-campaign-ad-over-former-patients-medical-debt"
-    },
-    {
-      "id": "14dfe155f1b2",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-09-30T03:55:56Z",
-      "source": "KWCH",
-      "summary": "The ad features a woman who says she was arrested over not making a $50 medical debt payment to Roger Marshall.",
-      "title": "Marshall sends cease and desist letter over Hamilton campaign ad",
-      "url": "https://www.kwch.com/2026/09/30/marshall-sends-cease-desist-letter-over-hamilton-campaign-ad"
-    },
-    {
-      "id": "814f9931cf15",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-09-29T18:46:03Z",
-      "source": "Johnson County Post",
-      "summary": "County moves voting sites at Adam Hamilton's Resurrection Church &nbsp;&nbsp; Johnson County Post",
-      "title": "County moves voting sites at Adam Hamilton's Resurrection Church",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPd1BhRlU2cnhjX01oeDhuQ3loLUVWaHhHVmlQSUdtQV8wV3cxN0VXTXIxTFNhZXg5RlB5YzBoVHBEQkFJYTlTVXk4SkJrTE5uLTZVazV5dndEYjdFS1doenl2RFRFMnJ1T2NFOG9YbkNrcXRhTXgzaC1raGJFQXp4TGVUVXMyWm10aXc2dXVtUU9oRm8"
     }
   ],
   "schema_version": 1
