@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-15T01:38:35.133565Z",
+  "generated_at": "2026-10-15T06:29:39.712051Z",
   "items": [
+    {
+      "id": "4164f1443dd7",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-15T02:58:00Z",
+      "source": "Lawrence Journal-World",
+      "summary": "Trump coming to Wichita for Roger Marshall campaign rally &nbsp;&nbsp; Lawrence Journal-World",
+      "title": "Trump coming to Wichita for Roger Marshall campaign rally",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNYkpMZVB3OFlaOTNGbFIwbFN6SF9BOGlLUkF1eWl0cF9oLWdTN1JvZnpfLW9qcmFYNWg0dGhGWGQ3MTRnS0JhYmVjaGNEM1p4QW1mdWNQUWMtcmkzUUxnZkRsN3dCRmNpaHVRdGs0TW9rTVRmX1pIOTl4WF9Cc2ZTRm9BUlZuQld6NzN3QUNFOFM1Y1ZiQzNLNFJ0SjlvN2syQ2tBd09CdElhdlRIY3dPWUpzZw"
+    },
     {
       "id": "6f19e27de8bd",
       "kind": "news",
@@ -591,6 +603,18 @@
       "url": "https://www.kcur.org/politics-elections-and-government/2026-10-12/roger-marshall-campaign-kansas-bakery-bill"
     },
     {
+      "id": "473c6b08f537",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-12T17:31:42Z",
+      "source": "DSCC",
+      "summary": "PRAIRIE PROBLEMS: Roger Marshall\u2019s Campaign Flounders as Reports Find He Abused Taxpayer Dollars and Stiffed a Kansas Business &nbsp;&nbsp; DSCC",
+      "title": "PRAIRIE PROBLEMS: Roger Marshall\u2019s Campaign Flounders as Reports Find He Abused Taxpayer Dollars and Stiffed a Kansas Business",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNVWpvakVEcndsRHNacWh6RFd6NjIzU2ttX1AxcG5NWUNsc29ieURqQkt5clBYb2JpM3p5dXlSRW9vYWpZdVZtSTFyWE9qcW9jdERBaXh4ZXZTMDhqVnNVNVM5cEJZMFR0YldkaFJtZU5zdW5XUWVVdmNjM3FLUzY2cmpSdWZ4Ymhmb01zZTRlVFk1OWFFNVFreC02emZIaGJ2T3dxbnd5RmJZZF9oUEtDMmd1OWpUaU0zQklGZ1BEa0o4bGgyQnJTdi0wRUhGc3RlcmNjSG5pNS1HWEFjSDhsYzRVLXFjclFPc3c"
+    },
+    {
       "id": "563f2afc29df",
       "kind": "news",
       "mentions": [
@@ -603,16 +627,28 @@
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNWEN6OV9wUktoWnlmSzUzUUtBeUZzZS1YTmVqX3NVYks2MGpaQ0Q3cTBGMEkzYWh3azRKMFd1OGVjYkxyUURJNmNxYzl1SGIydnFLdHZPa1JTMWVFQzJWNl9CUTlaU0FScGdXUTdNcW5NenRGS01ZR3dMTFA0NzgtTnltM0ZJdVczSV9pUXluZGl5MmoyeU05Qk1hUDBpNmREWWRwb3lUaS1LRmVQUVpWMzhBWWsxM0Flc19mWVhTLXVPWGt1dnZhaGRTR3QxVXd3RnN3YWgtbUhfbjEySGQ3Y0sxcHg"
     },
     {
-      "id": "fd4a510929a0",
+      "id": "ffcd8ca95b59",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-12T16:55:00Z",
-      "source": "Yahoo Finance",
-      "summary": "Senator Roger Marshall Visits Cal-Maine Foods Facility to Highlight Biosecurity and U.S. Egg Supply Resilience &nbsp;&nbsp; Yahoo Finance",
+      "published_at": "2026-10-12T16:56:12Z",
+      "source": "Newswire.com",
+      "summary": "Senator Roger Marshall Visits Cal-Maine Foods Facility to Highlight Biosecurity and U.S. Egg Supply Resilience &nbsp;&nbsp; Newswire.com",
       "title": "Senator Roger Marshall Visits Cal-Maine Foods Facility to Highlight Biosecurity and U.S. Egg Supply Resilience",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSjh5U3I4a0VkME9RbzZFNjlyVmtuejRYRUIzX0IwdTA2RlJjUkxBbjZRMnpEbGNHZ1VZWE1ONDMzQjg2RDVQa2xGcWlMSzlYeTh1bE1RSF83d2V4cEMtZy03Z0h4ME9qV3pCMnFzWW9PLWY5RExRR3FWV3lZZzBqWVV4alBTeUlQQWhkLVZCVGxqbnRkSGxGUUpn"
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWWE3MHdzZ1RRd19sa1UxYllGenplek1Zb2ZvYW4wdWRIa0QydXQzeUstTEpwTjNfaHgzVG9wSHlraHpyQlYzY3UxWVdrMlpUWDQxUXA2aFF6czlCVzJiRTVZZklVVFNXV19qMlFPekRfcFh5Y0JqUEY3d2Zrd1FZNlBIcVU3WXU3cVdMMTlhSUdveko0ZHdCc1VPdGI2UHUybEJTVTZPQ0psRC01WVE"
+    },
+    {
+      "id": "ca68abf044e2",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-12T16:43:06Z",
+      "source": "Kansas City Star",
+      "summary": "Roger Marshall pays cookie bill from Hutchinson bakery 6 years later &nbsp;&nbsp; Kansas City Star",
+      "title": "Roger Marshall pays cookie bill from Hutchinson bakery 6 years later",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBLSmEzV0R5QzNyd1RWVGUzQWxLRWdLQlIyZUQ3d0k5Q1hOX3QyRWw3bldvSWdOS0xQUU81Mi1oeDFWVUZjYmhoaTEtT2FZVFNfUFZDSTBURDRELWhRT1d4cjlqcw"
     },
     {
       "id": "7b737aa41084",
@@ -637,18 +673,6 @@
       "summary": "How does Roger Marshall feel about social media landscape? &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "How does Roger Marshall feel about social media landscape?",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOVnpObHB4Mk1RMlR2cnVVcEF2M3RCT1h0SWxIbVZHMmZoQkFvZlBZUmZkcmQ5V3lEQ1ltOHVjTEtvYVNzQ0htTVBkTUpURXB1SENkWGNqQ1FkOGpfYWQxZGo1YVpuTXc0ckE5SDFZSHBHajBtY1lSUkVyQjBlV0FRbWpfdmcwVXdlWXpTdnY4LUltNHNOTUo5ZUxUeGhmOUNISlVXRGNfdm9LLUstRGVJYmJVT1N2bFFtMWdkc2ZlQVBnNnFCVE1GdWt6a19HWHo4VXlVWQ"
-    },
-    {
-      "id": "ca68abf044e2",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-12T16:20:00Z",
-      "source": "Kansas City Star",
-      "summary": "Roger Marshall pays cookie bill from Hutchinson bakery 6 years later &nbsp;&nbsp; Kansas City Star",
-      "title": "Roger Marshall pays cookie bill from Hutchinson bakery 6 years later",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBLSmEzV0R5QzNyd1RWVGUzQWxLRWdLQlIyZUQ3d0k5Q1hOX3QyRWw3bldvSWdOS0xQUU81Mi1oeDFWVUZjYmhoaTEtT2FZVFNfUFZDSTBURDRELWhRT1d4cjlqcw"
     },
     {
       "id": "f9ac593d1a80",
@@ -1475,31 +1499,6 @@
       "summary": "Another former GOP governor backs Hamilton over Marshall for Kansas Senate &nbsp;&nbsp; The Hill",
       "title": "Another former GOP governor backs Hamilton over Marshall for Kansas Senate",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNXzhURmxJbWxjelg3UU1aRVJoaFh0OE1yODVnY0hDeTdEcEQ4S3R0VnQ3LU5lMDFVald2Njdkc3hXWUVOeTJicDZCRWNDYkFJb0FTX1QwME5aMnJSS0E4UG5sVGc0Q0JkT2U0SDhTY2dWLTJPRmZiMnNnSDJqblN5OEdOZmVWRHFUVVpWN2pB0gGTAUFVX3lxTFB2Mk44TFgtSmNnUVFQSTd6NnhlbmExazVHcm5FYVZZVDl6NTFPTWFfQ2ZXWkt3VWx2Q1dsbGptNTJIazJDSFplTHIxVXZobUlYZnBhcjdVemZOcGRvTVdPR1lONHN3YnJnX0lkNWQyQWZZLUVkUnVVaWpiLU13aVhNd0dXakxidjVhamtSWXZUOVpYWQ"
-    },
-    {
-      "id": "f3bb8015baa9",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-02T07:00:00Z",
-      "source": "Wichita Eagle",
-      "summary": "2nd Republican former Kansas gov. backs Democrat Hamilton for Senate | Opinion &nbsp;&nbsp; Wichita Eagle",
-      "title": "2nd Republican former Kansas gov. backs Democrat Hamilton for Senate | Opinion",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1idGx3SGxZMkFXSjExeVFwXzl1MW8zV041d2cwWXVTRGRXMTl0c1Q5VHRGMENYMjBwTEF4YklwUkxvY3lncHFHblFaeVZwbGdtZjNCZzJScUlEaGdRM0xOUXRZTG55aV9WWkc4ZnV6cGpDQ2l1aHFYcNIBeEFVX3lxTE13SVVyQXo0b3IwZnhhWEdHcl8ybkg3Nkxidm5GYkQ1bmRHSzQ1THl3clpINV9HMndjRW9VNndlOTZvQldFLXdabWNEMjRUdUZJYjU1eTJmRm5RUWlRcVdNcjdVZWZhdURyaS1JUnNSbTZmazBNajktQg"
-    },
-    {
-      "id": "9523abc1efd2",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-02T07:00:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "This is the Roger Marshall attack ad that 'ticked off' Adam Hamilton &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "This is the Roger Marshall attack ad that 'ticked off' Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPV3dFVmtKaFBwenNfdWJ6M0dyNGJaVy0xbUgzdnlzbHZOUGZlNGhzVXNlOGtQVGlndTB6amlDVXlfaHhSYlBmQzNaWlowYm9Sem03THlwNkdwelV4QmNJMFc3YzhONDJGeGZDV3ZRaFF3VEF5dkdPZWF2R1o3ckEwRHN5cm5naHV4bUdlckJnV1FfOHpVMklCV2UtejBJUXM0V01lcndXOFhnQnVqZHJvSnRHOUhIdFQ1M1RCYUl5c2hGY29xaTBWN0FoMEVIT214ZUVWXzY0M0huV25xekNiV3NhS255RTdBU0JZR2lR"
     }
   ],
   "schema_version": 1
