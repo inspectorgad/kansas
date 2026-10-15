@@ -26,15 +26,28 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-15T20:29:27.012159Z",
+  "generated_at": "2026-10-15T23:20:59.858839Z",
   "items": [
+    {
+      "id": "3c7aa15bdc2e",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-15T22:02:29Z",
+      "source": "AOL.com",
+      "summary": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton &nbsp;&nbsp; AOL.com",
+      "title": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAyMmdNcnV1cDFrQjJvZWw1UGFDV0s3MFk1bUJzNzhtd3pkaDBTb3Y4SVoxYmNYalpoa0JQc21NeUxKdmVpM0RKSUl3YTAyN0ExUXVWbUFTeHFMcEp1SS11Z1dXVlBsYW83MGhKS0JBUV9YQkgxTEFqRzYyeXc"
+    },
     {
       "id": "36a9c57732b4",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-10-15T17:33:37Z",
+      "published_at": "2026-10-15T17:36:18Z",
       "source": "ABC News - Breaking News, Latest News and Videos",
       "summary": "Democratic Senate candidate Adam Hamilton says he's fighting for the 'rights of all people' &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
       "title": "Democratic Senate candidate Adam Hamilton says he's fighting for the 'rights of all people'",
@@ -156,16 +169,16 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUTJXUWxES2o2ekg1RzljdlRIUG41R0VyajlrQTVScEl6NDZJcDEtTXdOQjFhR3c3dkw3aTBneHhSYngwWTI1YzU4TmFnRE50cm90VXh1ZFkxMVI1dE0ydFM3akRMNlcwR21mN0dFN014QWRCZmduX1dydm9XbnR0Y3Ria1otSi1wMkdvVVg0N1lCQVBNSThRb0pTUXN3UUxBS09hOC1n"
     },
     {
-      "id": "b2ed4afc69e2",
+      "id": "69efaf21d6c9",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
       "published_at": "2026-10-14T16:27:06Z",
-      "source": "Yahoo",
-      "summary": "Did Sen. Roger Marshall break Kansas law by charging 18% interest on bills? &nbsp;&nbsp; Yahoo",
+      "source": "Kansas City Star",
+      "summary": "Did Sen. Roger Marshall break Kansas law by charging 18% interest on bills? &nbsp;&nbsp; Kansas City Star",
       "title": "Did Sen. Roger Marshall break Kansas law by charging 18% interest on bills?",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV2hENFF1eVp4S3ppb3ZOS3EyZVpBS1FQa0d4ekRoM3lPUWFleVBTUmRCRnFLaXpRMUF1ZExlV0lUdUpYemVVWFh0bXJqOEZIT0FoTnREdTRfZlBmTXdzelRXRUJrRzI1aGZRZ3dvdFIyeXVJSXZEQUI0bkxsTW9IQkI0dmtjbE1jcWdpR21rbm03UQ"
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9hNTJWMFdPTHU2aXByRm01eEdEV0huQUdQTVk0TDBFY2ptZ19HSGtrXzdlaTBVR3lPeG5WRXIzVXo4M2pXa25WcjVQa1VZUlEtcEw0S3RhTVh0N1dpMDBXbHVoYjZGUnhScWxrdklrVHN5YW80SjZ1NENXM0tFd9IBfkFVX3lxTFB1UkRSSEc2Y3p3VnF5N1Zud3lJSEFPcFh0SDFGWTNkTVE1QjJncXJKRVB0QTdHVGJkRVhPR19wTmNFbUllalQzTDA0QmYwU3d0enV1Um1TdzBfUkpJOGNmcUdJaVdvYTdpc1Y0WFFmOURlUWhjYkZHay1Yd3FvZw"
     },
     {
       "id": "a7a15c12e269",
@@ -514,8 +527,8 @@
         "marshall"
       ],
       "published_at": "2026-10-13T01:31:01Z",
-      "source": "KSN-TV",
-      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN.com",
       "title": "Marshall, Hamilton stump in Kansas as midterm election nears",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdnEzUXdIT0RSb3dzN1lSRGRxTTFYd2ttY3l4Vi04b3FBak5OcjV0c3Q0ak5fUFdjZjZwb3ZNOG1nRldXWkVQeXNhQzdqb2JITTV3eWFUVDNaeUNmYkJqWUE0Vm1US0VYbTZKcllYdzBWRHJhYU01VHBTRUg5TmFNQnoxcHZVOFd5VWI5UEs1bkI4bFVRWFk1UndNYlZua3RrdV9TcUFVYzZfOGFm0gGyAUFVX3lxTE9UVGN6OHl1UmliaVRpcl90YXF3YlV2WWdmNEUxR3lMellPVm1UNjBOWUdpUGJzRGtxRWZSOG4yWG1JUFZraVVrS0FmQ0NfRnlwSnJrT1JubDRyVFFoVjMxcDlXb2dFaEFOdWZ4bFJEWjlwT1VPZGRlQ0xVcUxOcGRHTWNROWtjODVmM2oyUXNSbTg3RzNWM0ZzT3pJMGFlUE5jLW8yVHJXSW5BZTMwNUFmYmc"
     },
@@ -1489,18 +1502,6 @@
       "summary": "Candidate Conversations with Adam Hamilton, Emanuel Cleaver II &nbsp;&nbsp; FOX4KC.com",
       "title": "Candidate Conversations with Adam Hamilton, Emanuel Cleaver II",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMjZhaWJMVVJ2eTAxX3NVdnFSblRveWV0U0t4RllWRzJVMno4QTBfdmZzM2VJbWVWRmxPRVlFOGE4T3BWT0E0Sm84MVFWREZSaE5QaFdTLWlfTVBsd0dVcVlzZU5odDNuWkRYa24weGd6bzNHdzAtNlF4aWNjeFVEWWtZNko4UlBOQkJ6eWd5dkxPMHNJcnRIQUNndmxROGtrckxpT1lB0gGrAUFVX3lxTE5qNHQ2YS1rSDVJZzVTdWFYLWJXbmZUdW1BT1lWR0hBRkQtRWlwdHZHMGlSb1JRM3ZMVmNHTG9fQTljR0lFbzJSaHZ2czZpWUFTMmpQNDF4OThpVHc4UDk4TWJiREZ1blZVWDdDYy1rLThYZnRDenZjdm9rUktjSXpsRndtVXI2TVZ4NTRjbXpqUzNieDZid0YzcGN2ZzlLWFpDRE5kMGF5NjBMOA"
-    },
-    {
-      "id": "cfca03b18e54",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-03T11:10:00Z",
-      "source": "Wichita Eagle",
-      "summary": "Sen. Roger Marshall has an ex-governors problem in reelection campaign | Opinion &nbsp;&nbsp; Wichita Eagle",
-      "title": "Sen. Roger Marshall has an ex-governors problem in reelection campaign | Opinion",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBCVUJkUXR3Qmc5XzRLYXc0b19FVkhkMmU5bHlTZnRINHhTaklSdUZjUHBDY3pILUJhVm45REhRS2RIMEZnTzIyTVktRzBEeHhJa0lRbzVRTDBwb0hzeGhHTHR5Snd5azDSAWdBVV95cUxPYWdRTEstaWZ2M3o0M19iTWd4MVNYMnBUQ3pOMEx2RHNidVFFNjFVal80b2pYNi00M0pwdUZPR1drN0RsVWQzaFV2RFRDS0hfYWMycllsRFhHZFc4dko4V3FOUTF6Mjdn"
     }
   ],
   "schema_version": 1
