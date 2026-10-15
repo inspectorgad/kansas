@@ -2010,20 +2010,20 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-23",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-07-15",
       "date": "2026-07-23",
       "form_type": "F3",
       "report_type": "PRE-PRIMARY",
       "total_receipts": 490367.65,
       "url": "https://docquery.fec.gov/pdf/738/202607239894459738/202607239894459738.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-23",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2058,13 +2058,49 @@
       "url": "https://docquery.fec.gov/pdf/244/202607199890895244/202607199890895244.pdf"
     }
   ],
-  "generated_at": "2026-10-15T06:29:36.094418Z",
+  "generated_at": "2026-10-15T12:09:37.794937Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 8524198.84,
+      "hamilton": 8643175.05,
       "marshall": 17130561.7
     },
     "recent": [
+      {
+        "amount": 6216.21,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-13",
+        "purpose": "TEXT MESSAGING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 33333.33,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-12",
+        "purpose": "TEXT MESSAGING (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 938.83,
+        "candidate_id": "hamilton",
+        "committee_id": "C00724203",
+        "committee_name": "SOMOS PAC",
+        "date": "2026-10-12",
+        "purpose": "PRINTING - ESTIMATE",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 132193.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00724203",
+        "committee_name": "SOMOS PAC",
+        "date": "2026-10-12",
+        "purpose": "CANVASSING - ESTIMATE",
+        "support_oppose": "S"
+      },
       {
         "amount": 3150.0,
         "candidate_id": "marshall",
@@ -2183,6 +2219,15 @@
         "support_oppose": "O"
       },
       {
+        "amount": 112760.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "date": "2026-10-09",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
         "amount": 1266401.7,
         "candidate_id": "hamilton",
         "committee_id": "C00487470",
@@ -2199,6 +2244,15 @@
         "date": "2026-10-09",
         "purpose": "PLACED MEDIA: TV AND CONNECTED TV",
         "support_oppose": "O"
+      },
+      {
+        "amount": 200000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00657866",
+        "committee_name": "PROTECT FREEDOM POLITICAL ACTION COMMITTEE",
+        "date": "2026-10-08",
+        "purpose": "DIGITAL MEDIA",
+        "support_oppose": "S"
       },
       {
         "amount": 8000.0,
@@ -2370,65 +2424,11 @@
         "date": "2026-10-06",
         "purpose": "MEDIA PLACEMENT",
         "support_oppose": "S"
-      },
-      {
-        "amount": 5000.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00448696",
-        "committee_name": "SENATE CONSERVATIVES FUND",
-        "date": "2026-10-06",
-        "purpose": "IE-MARSHALL-DIGITAL ADVERTISING",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 5576.37,
-        "candidate_id": "marshall",
-        "committee_id": "C00448696",
-        "committee_name": "SENATE CONSERVATIVES FUND",
-        "date": "2026-10-06",
-        "purpose": "IE-MARSHALL-DIRECT MAIL PRODUCTION",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 434.95,
-        "candidate_id": "marshall",
-        "committee_id": "C00448696",
-        "committee_name": "SENATE CONSERVATIVES FUND",
-        "date": "2026-10-06",
-        "purpose": "IE- MARSHALL - DONATION PROCESSING",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 1286538.88,
-        "candidate_id": "hamilton",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-06",
-        "purpose": "MEDIA PLACEMENT",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 950.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00844613",
-        "committee_name": "WIN IT BACK PAC",
-        "date": "2026-10-06",
-        "purpose": "TV AD PRODUCTION",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 518772.5,
-        "candidate_id": "hamilton",
-        "committee_id": "C00844613",
-        "committee_name": "WIN IT BACK PAC",
-        "date": "2026-10-06",
-        "purpose": "TV AD PLACEMENT",
-        "support_oppose": "O"
       }
     ],
     "supporting": {
-      "hamilton": 1280646.16,
-      "marshall": 1560663.51
+      "hamilton": 1447111.32,
+      "marshall": 1760663.51
     },
     "top_spenders": [
       {
@@ -2450,7 +2450,7 @@
         "opposes": "hamilton"
       },
       {
-        "amount": 2676125.57,
+        "amount": 2682341.78,
         "committee_id": "C00571703",
         "committee_name": "SLF PAC",
         "opposes": "hamilton"
@@ -2482,7 +2482,7 @@
         "opposes": "hamilton"
       },
       {
-        "amount": 675942.19,
+        "amount": 709275.52,
         "committee_id": "C00960385",
         "committee_name": "UNITED FUTURES PAC",
         "opposes": "marshall",
@@ -2507,25 +2507,25 @@
         "supports": "hamilton"
       },
       {
-        "amount": 91794.98,
-        "committee_id": "C00524181",
-        "committee_name": "SENATE CONSERVATIVES ACTION",
+        "amount": 200000.0,
+        "committee_id": "C00657866",
+        "committee_name": "PROTECT FREEDOM POLITICAL ACTION COMMITTEE",
         "supports": "marshall"
       },
       {
-        "amount": 71000.0,
+        "amount": 183760.0,
         "committee_id": "C00637041",
         "committee_name": "FUND FOR A WORKING CONGRESS",
         "opposes": "hamilton"
       },
       {
-        "amount": 25000.0,
-        "committee_id": "C00899096",
-        "committee_name": "UNITED FUTURES",
-        "opposes": "marshall"
+        "amount": 133131.83,
+        "committee_id": "C00724203",
+        "committee_name": "SOMOS PAC",
+        "supports": "hamilton"
       }
     ],
-    "total": 28496070.21
+    "total": 28981511.58
   },
   "schema_version": 1
 }
