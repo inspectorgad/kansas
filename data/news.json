@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-16T01:33:54.980331Z",
+  "generated_at": "2026-10-16T06:25:04.647772Z",
   "items": [
+    {
+      "id": "39093e645fce",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-16T02:22:08Z",
+      "source": "notus.org",
+      "summary": "Who\u2019s Running Roger Marshall\u2019s Campaign? His Campaign Filings Don\u2019t Say. &nbsp;&nbsp; notus.org",
+      "title": "Who\u2019s Running Roger Marshall\u2019s Campaign? His Campaign Filings Don\u2019t Say.",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE41Q2pBVThjTmNIZEZxMzVfVldiTU41cHJSMk1rUFI4a1llRVd4WHRCa0FqSW5GUFpsVk51YmNFRnpteWk4RVRBQlBkcHpTSTVhZTlBYXdEaDh5S1JrRnZWaFd5d0JWZ3ptOU5UWEdR"
+    },
     {
       "id": "36a9c57732b4",
       "kind": "news",
@@ -144,6 +156,18 @@
       "url": "https://kansasreflector.com/2026/10/15/forget-the-dadgum-cookies-in-race-between-roger-marshall-and-adam-hamilton-follow-the-money"
     },
     {
+      "id": "516d9d65b637",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-15T07:19:14Z",
+      "source": "seMissourian",
+      "summary": "Sen. Roger Marshall sought funding to address a water shorta... &nbsp;&nbsp; seMissourian",
+      "title": "Sen. Roger Marshall sought funding to address a water shorta...",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNSUdXSFlSQ3h1RmRmb09GXzI4MzlnZ2hDd0JOLUc5LTBWeHRvSHhMY05LUWxjb3cyTDFUeTI3NkZycFNobHZNZjlhckEzMXFvWVZweXphTzdMVUpiekRNWGRfVGZuMTQ4b3ZWa3N5RmJHSlpESlU3blRSRFpFMmdKRXZlbWhEWkRlenpOR21nNzI1d3F5VVdaNC1Rc084LS13R0NnRHRvN2FoQ0pQdnlQTjcySUFDMFVTT1ZQSzVMS25qMWYwRVlCVjhmZlgtVkRCeUtmWDZIMUxvdw"
+    },
+    {
       "id": "4164f1443dd7",
       "kind": "news",
       "mentions": [
@@ -224,8 +248,8 @@
         "marshall"
       ],
       "published_at": "2026-10-14T08:31:00Z",
-      "source": "KSN.com",
-      "summary": "Roger Marshall \u2013 Republican for US Senate &nbsp;&nbsp; KSN.com",
+      "source": "KSN-TV",
+      "summary": "Roger Marshall \u2013 Republican for US Senate &nbsp;&nbsp; KSN-TV",
       "title": "Roger Marshall \u2013 Republican for US Senate",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQeWhvTDF2ckNEVGkwal9kMjlXYjU2b001YzF5RU9ZcEctUEg4dXhNRE9hSTl3N3RZTlBFVE1OWDNELXgzRWhCMnRBMjBKY0xEYTcxTWlOZW1kQVhjSFZyNHJ3YkdUdFRxai1vd2pDUVlXWFEwWmIzTVlTdGdmbzd0MEdzczl0M1FWTXpJR252X1d2dlRSNnFmTTU1b203Y1NE0gGmAUFVX3lxTE5wbXFiMksySGJnQUNJR3BoVDh4NzRqdXBfT1ZoLWxvc3ZGQWhTVHRvOXZnczlwYXdhRTJheWxUZGhvQ3VJM2ZCcC1YVzFMNWZaYjFURW9xQU4ybjZFcS1uWFBSWi15TThqc0hmRFVOYk52QnBXN2lkeXBCUEUtd1pSWUp1c0J6SnR2MEVDOXlOc3hkVnZlbm52dWs1ZTVYclc2VDNPbEE"
     },
@@ -645,16 +669,16 @@
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNbGppUEZrRmh0MFF0UjJkQjFzWmtFSVlRZ296MGMtNnBJWGpKd1ZLY3VNNXRQWXpqSnEzd0xQbURyTzBONExqcVNSNTBrQ0UwanQ2VGQ5NmdIcGxmOGVmYXNEd3NjeU5wR2t2czdId3l1UjVkZW1zUGtNaGRJUE1ud2FDVDB6bERlUTdpb0w5dTdNRC1yS0tsR2JmMHM1YXN5NGw1MnJEUDViU0R6UGRVQUZZejV4LVJLaHFWdTVWd3lKMF9YaHpkTUs3T0szRWp6U1RUTHJrLW1pWExo"
     },
     {
-      "id": "30510c45dc39",
+      "id": "1fd5eb1b23f1",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
       "published_at": "2026-10-12T21:03:00Z",
-      "source": "WIBW",
-      "summary": "Trump touts \u2018Kansas Style Rally\u2019 in support of Sen. Roger Marshall &nbsp;&nbsp; WIBW",
+      "source": "KWCH",
+      "summary": "Trump touts \u2018Kansas Style Rally\u2019 in support of Sen. Roger Marshall &nbsp;&nbsp; KWCH",
       "title": "Trump touts \u2018Kansas Style Rally\u2019 in support of Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNXA4aUhVZ3FLelYwVzlyOFE4ODJlQTNua2J4WTNkcnJieXJLLUZiMzlJZFM1Ui1XdTJtSmRwSnBXX0RUWVNNb1RuTnppT0cyT1VEcnFnQlU4b0xMX0w5ZUdDd3doZmRFRUpoMjc3dExwOG5ENHBFYzJGa0RrbU96dE51Rjd2bzVwVFEtddIBoAFBVV95cUxQdkRzV1RCX19qeWlCTURaNDZhV2Zra29qaHFVMXZobm1zZ1Zfa0g0Z3BxNUs3bDEtVk1uQTczQjNjelZNNmFrYlVmVVhJRWZaUV80bUc5Sml3d2o1ZzhuYXVRaGg3dDZmN2lnczZITkRRSE5kU0MwaTE5Q3JKaHJpWUVST3Q2Zm9iamNxY1E3RzE2Q29td3g1aGxHbG9xRWlU"
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTjRnRGdBc3JkRlI4MzJkMDRxaWxQeG5aWEswazVHaVFaN2hxNURmSU9Bb3ppQktjVkU1Wk1vd2R0OEktakpmcjZ2N0J1UlZ4bmN6dHpFZGVEcy03ZllCcDVlTUJIQkR1WjVDXzk0SEZlSUkzclYtUWtWa0VrV2xIOXpjdy1pU0xFTWtVQdIBoAFBVV95cUxPUV9vVjJsa1hMMXNSYXdTWnFXaVhCSk9pZ05vdm5CTUM4NjV4ZGZtdHF1QmE5ZEZEbmdqMjhBUW53TjBMZHZvUVdhcDNzcG1DN3pBM1FLRkpXSmRaMVgwclB6TVVRYjFKODBIMWJHdU9xM1Z3QzR6TjdfZjZjTFllbHhaR1FpZXpid2x4Q0txNEJIX2dhc3I4SlRWS1Z0clp5"
     },
     {
       "id": "59b513410783",
@@ -1477,31 +1501,6 @@
       "summary": "QUICK CLIP: Roger Marshall Facing a \u201cMathematical Perfect Storm\u201d in Kansas as \u201cHistorically Popular\u201d Adam Hamilton Surges in New Poll &nbsp;&nbsp; DSCC",
       "title": "QUICK CLIP: Roger Marshall Facing a \u201cMathematical Perfect Storm\u201d in Kansas as \u201cHistorically Popular\u201d Adam Hamilton Surges in New Poll",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOTlBQOXJqaERaU0FCZmVBdzVIRmdnZmQ0cGNBRmZzYlY5OGRJdlBmTDdOMjNseFdyR0xxRXlyQzIwY21yWnBabXc3MTVKOWhCZnVhck9wcHBVeldLeG9aMmZQS2pTU25KRnRwamJZZmwwd3VhZ1RwSUw3XzhvbGJ2R1NrVEQ0VXlZVUU4NW5SVlVKXzBwOVYwbVpPbDVlV19HVU9JeVd3OVNpNzhRbFM4VFlkZnIzY2h5TERteENxdzFkSDJROHVidGdTcXR2LXpLRkpuUThGbFVtcFZFcXVLcnlSZTRHRlRkbkVQeWVZcw"
-    },
-    {
-      "id": "fab202e45165",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-04T16:00:00Z",
-      "source": "KSNT politics",
-      "summary": "TOPEKA (KSNT) \u2013 On this episode of Inside Kansas Politics, a former patient, a medical debt, and now a cease-and-desist. Senator Roger Marshall says it's a lie, but Democratic challenger Adam Hamilton says he's not backing down. Inside Kansas Politics host Rebekah Chung sat down with political analyst Bob Beatty to break down why a political ad [...]",
-      "title": "New political ad prompting legal threat in race for Kansas seat in the U.S. Senate, political analysts break it down",
-      "url": "https://www.ksnt.com/inside-kansas-politics/new-political-ad-prompting-legal-threat-in-race-for-kansas-seat-in-the-u-s-senate-political-analysts-break-it-down"
-    },
-    {
-      "id": "48d127ef82a4",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-04T10:00:00Z",
-      "source": "FOX4KC.com",
-      "summary": "Candidate Conversations with Adam Hamilton, Emanuel Cleaver II &nbsp;&nbsp; FOX4KC.com",
-      "title": "Candidate Conversations with Adam Hamilton, Emanuel Cleaver II",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMjZhaWJMVVJ2eTAxX3NVdnFSblRveWV0U0t4RllWRzJVMno4QTBfdmZzM2VJbWVWRmxPRVlFOGE4T3BWT0E0Sm84MVFWREZSaE5QaFdTLWlfTVBsd0dVcVlzZU5odDNuWkRYa24weGd6bzNHdzAtNlF4aWNjeFVEWWtZNko4UlBOQkJ6eWd5dkxPMHNJcnRIQUNndmxROGtrckxpT1lB0gGrAUFVX3lxTE5qNHQ2YS1rSDVJZzVTdWFYLWJXbmZUdW1BT1lWR0hBRkQtRWlwdHZHMGlSb1JRM3ZMVmNHTG9fQTljR0lFbzJSaHZ2czZpWUFTMmpQNDF4OThpVHc4UDk4TWJiREZ1blZVWDdDYy1rLThYZnRDenZjdm9rUktjSXpsRndtVXI2TVZ4NTRjbXpqUzNieDZid0YzcGN2ZzlLWFpDRE5kMGF5NjBMOA"
     }
   ],
   "schema_version": 1
