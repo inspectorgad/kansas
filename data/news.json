@@ -26,8 +26,46 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-16T06:25:04.647772Z",
+  "generated_at": "2026-10-16T11:57:03.558164Z",
   "items": [
+    {
+      "id": "fe9871efdfa5",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-16T10:00:00Z",
+      "source": "Kansas City Star",
+      "summary": "Sen. Roger Marshall set to speak at breakfast event in Topeka Friday morning &nbsp;&nbsp; Kansas City Star",
+      "title": "Sen. Roger Marshall set to speak at breakfast event in Topeka Friday morning",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE94aXZjbWVhOVRWQ01MTkU3bWQ2VFBodEludm04NFdxcl9HanhidlhFRnFjR2lFZnFfY1pwQzZWdkVUNE1Ea0FNQklJY1VEb080SHE0LVZxeVF1Y2RaVDNWWGF5ZVIwR21VOV91T09lVXppZi1WVTN4MV90cFV2QdIBfkFVX3lxTFB1MGlwSlotUVlieGpQRDFybnRCR0VQQkQ3cTBHY1Y5RUlXMG9JUjA3YmctOVM3ZFBOSmVjNXNGWjBtbFl5ZW42Q3RiSHgxbWh2VV9xZ09rU081LUpyTjZ6UWRwQ1hRVkF3TTRWMUtZLVE0UENmY0FNaVc5VFFXdw"
+    },
+    {
+      "id": "c9ee3436f9b5",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-16T09:10:00Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Ad spending aplenty for Marshall and Hamilton in US Senate race &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Ad spending aplenty for Marshall and Hamilton in US Senate race",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQ19KVzdENkFzX2pNbmJPOTZXVEJSZzFNN2ZQSXFLbGFFWUhmQ3RQT21xWGlodS1rRll4LVVBOVhXM0NTUkRCcjBmOEF6R2lBTmdwOVJRU0s3UERHZWtOX01adGlPMVBXUTRYYmR3bTRZNFlDRzZDbEtMb0REYW5nS3pqWHpSNUs3MlZUV1VzVEd3bnhFQVhrcGlvLU9iYk5UNWptdnB1a0pOV0RLV1lVWUlEaTVPYWotVHh3ZWkybkVjTWxNRXpmLVdkdGRrRnNscGNwUTRSbFJQa1ZsVnc"
+    },
+    {
+      "id": "c9bced9555bb",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-16T08:00:00Z",
+      "source": "KCUR",
+      "summary": "Republican Sen. Roger Marshall and Democrat Adam Hamilton\u2019s approaches to affordability, health care, statewide and national issues.",
+      "title": "In a tight Kansas race, where do the U.S. Senate candidates stand on issues voters care about?",
+      "url": "https://www.kcur.org/politics-elections-and-government/2026-10-16/marshall-hamilton-everyday-issues"
+    },
     {
       "id": "39093e645fce",
       "kind": "news",
@@ -1464,43 +1502,6 @@
       "summary": "Sen. Roger Marshall, R-Kansas, arrives at Stormont Vail Health on Aug. 28, 2026. &nbsp;&nbsp; The Daily News | Texas' Oldest Newspaper",
       "title": "Sen. Roger Marshall, R-Kansas, arrives at Stormont Vail Health on Aug. 28, 2026.",
       "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQMmhGaWQ5em9KM1ltTlpKUUtIR1FUS0tRbjZ0YTZZVF9wd3lhLTRSSWUwclBPbEgwMDk2Ui1HaGVNR3VFV2oxN2xlTmtNbmYwTEpYQXkta0c0TGpINjdXWkVuRm1MWjJ2ZVZRN1NtQWowUGMtQmVfaVk0ZkU0c3Q0ejZDQllQYUVUOEc4aUpMaDRfVS1zb3Fma1JnRWlkWmh1RVBiX3ZQWm9DWlpySU1wX2tabDdfMl84akotaGgwT0t3enpaZ0VlUVoxVDZLb1ZyeEkxblI1U1UzQUhGQlhmZS1jVHpvYi1QZ2RHWUl1V1NlcGNNS2NUa2praw"
-    },
-    {
-      "id": "b6584127ef4d",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-05T12:10:00Z",
-      "source": "Washington Examiner",
-      "summary": "Roger Marshall slams megachurch challenger for living in a 'bubble' &nbsp;&nbsp; Washington Examiner",
-      "title": "Roger Marshall slams megachurch challenger for living in a 'bubble'",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUzFSc2tJbEN3YXd2NGExU3VYaG9Qd0pZRGxOQm1jaGV0Q2s3TWJZd0VFdWlRQmpZYUZYZ1FBWGdnSmxoWTh5UWVQTGZwa3JpejF2NHJWcHdjMzhSck0zS1lWWnhMRGRjd3hfLVB0TE1BcHhMN19aanViNmVueVhoNC1oSVVic01DODM2cWpyVmJxeUNIaEdlRDF0RmNfbUlxM1Z1X0hIV3lEVEFYUXVhU0pJN0lrc0hub0l6MnViUGxqVEhJUmIwWWtqVndzcVRv"
-    },
-    {
-      "id": "0394747a4859",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-05T11:43:20Z",
-      "source": "Crypto Briefing",
-      "summary": "Senate Leadership Fund commits $14M to support Sen. Roger Marshall in Kansas race &nbsp;&nbsp; Crypto Briefing",
-      "title": "Senate Leadership Fund commits $14M to support Sen. Roger Marshall in Kansas race",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNFpTbVl5MWtnR1V5QWd0XzByZi1CTlRBR21XRDVzZDRCTTJYQ1pnMTN0SXpZV3FaRTBPcjd1QTZzWWE2cHdzVkFPcEZoQnJ3SXEyTlhDdWZqSjk1M2MyUl9oS05XQ3ppUkxDd3VmU1EzWWx4eXVpcnFPUkJaeExTTWVjOGhxTTNjSW1jT2R6bWJtN1VEVUpoY1NULVJVbjRqc0x3Mlg0YV9zYXM"
-    },
-    {
-      "id": "0b7d7e2d4b5b",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-05T07:00:00Z",
-      "source": "DSCC",
-      "summary": "QUICK CLIP: Roger Marshall Facing a \u201cMathematical Perfect Storm\u201d in Kansas as \u201cHistorically Popular\u201d Adam Hamilton Surges in New Poll &nbsp;&nbsp; DSCC",
-      "title": "QUICK CLIP: Roger Marshall Facing a \u201cMathematical Perfect Storm\u201d in Kansas as \u201cHistorically Popular\u201d Adam Hamilton Surges in New Poll",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOTlBQOXJqaERaU0FCZmVBdzVIRmdnZmQ0cGNBRmZzYlY5OGRJdlBmTDdOMjNseFdyR0xxRXlyQzIwY21yWnBabXc3MTVKOWhCZnVhck9wcHBVeldLeG9aMmZQS2pTU25KRnRwamJZZmwwd3VhZ1RwSUw3XzhvbGJ2R1NrVEQ0VXlZVUU4NW5SVlVKXzBwOVYwbVpPbDVlV19HVU9JeVd3OVNpNzhRbFM4VFlkZnIzY2h5TERteENxdzFkSDJROHVidGdTcXR2LXpLRkpuUThGbFVtcFZFcXVLcnlSZTRHRlRkbkVQeWVZcw"
     }
   ],
   "schema_version": 1
