@@ -26,8 +26,33 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-16T16:21:25.171126Z",
+  "generated_at": "2026-10-16T19:39:31.766014Z",
   "items": [
+    {
+      "id": "6465ff2fa573",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-16T17:43:56Z",
+      "source": "Kansas City Star",
+      "summary": "Online chatter about Trump\u2019s Kansas visit is as much about Trump as Roger Marshall &nbsp;&nbsp; Kansas City Star",
+      "title": "Online chatter about Trump\u2019s Kansas visit is as much about Trump as Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5idi1nOHJ6RHNRbmxpYWhVQ1pTVzlITUpKUTJQeXRlVUFMd3V1UjBJVUJ4SXQ3QnBqZkJ2Q0hMZjU4MmItX3dFeW9hTkdVWl80YmJzMHVqcTJvNF9wUmt0VEs4MTEta0hZTUJjVtIBbEFVX3lxTE5YVzZqd2RHYVRDR3ZUSG5mdUlrVFZEZDVPSVBjTVV0Y1ZWNlN1Zk5RS3hLdTktV05Wam45eFJDaE5DMDBLQjhhTlJIMEZkbmJmcFdsNHNVaHA5RlhGVkR0djNDR0JjUHBpRFozVQ"
+    },
+    {
+      "id": "f5315b6157fb",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-16T17:20:14Z",
+      "source": "Kansas Reflector",
+      "summary": "U.S. Sen. Roger Marshall, locked in tight campaign with Democrat Adam Hamilton, throws full support behind President Donald Trump's tariff war.",
+      "title": "Roger Marshall praises Trump\u2019s tariff policies after Kansas executive says they hurt his business",
+      "url": "https://kansasreflector.com/2026/10/16/roger-marshall-praises-trumps-tariff-policies-after-kansas-executive-says-they-hurt-his-business"
+    },
     {
       "id": "0a3588253319",
       "kind": "news",
@@ -67,16 +92,16 @@
       "url": "https://www.ksnt.com/elections/how-to-watch-the-kansas-u-s-senate-debate-between-sen-marshall-adam-hamilton"
     },
     {
-      "id": "fe9871efdfa5",
+      "id": "8d2e57f4e014",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
       "published_at": "2026-10-16T10:00:00Z",
-      "source": "Kansas City Star",
-      "summary": "Sen. Roger Marshall set to speak at breakfast event in Topeka Friday morning &nbsp;&nbsp; Kansas City Star",
+      "source": "Yahoo",
+      "summary": "Sen. Roger Marshall set to speak at breakfast event in Topeka Friday morning &nbsp;&nbsp; Yahoo",
       "title": "Sen. Roger Marshall set to speak at breakfast event in Topeka Friday morning",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE94aXZjbWVhOVRWQ01MTkU3bWQ2VFBodEludm04NFdxcl9HanhidlhFRnFjR2lFZnFfY1pwQzZWdkVUNE1Ea0FNQklJY1VEb080SHE0LVZxeVF1Y2RaVDNWWGF5ZVIwR21VOV91T09lVXppZi1WVTN4MV90cFV2QdIBfkFVX3lxTFB1MGlwSlotUVlieGpQRDFybnRCR0VQQkQ3cTBHY1Y5RUlXMG9JUjA3YmctOVM3ZFBOSmVjNXNGWjBtbFl5ZW42Q3RiSHgxbWh2VV9xZ09rU081LUpyTjZ6UWRwQ1hRVkF3TTRWMUtZLVE0UENmY0FNaVc5VFFXdw"
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZThLUTJQbGU3OEhXbXNYZFN2M1BHaGpYX2RFaEdtT3d0UmxwbTdUQjJBWEdhaEI3d0ZmaEhQUWE3TDV5NW5oSTZEa0EzUXdUNGgwX2phOGdNdjBiVUZNMFoySGxScFRWS1hBcExCeDNCVGNjQXpBbEIwUXBHb0pLQzhKVl84aXlKMmpZanpCbDlEdw"
     },
     {
       "id": "c9ee3436f9b5",
@@ -311,8 +336,8 @@
         "marshall"
       ],
       "published_at": "2026-10-14T08:31:00Z",
-      "source": "KSN-TV",
-      "summary": "Roger Marshall \u2013 Republican for US Senate &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Roger Marshall \u2013 Republican for US Senate &nbsp;&nbsp; KSN.com",
       "title": "Roger Marshall \u2013 Republican for US Senate",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQeWhvTDF2ckNEVGkwal9kMjlXYjU2b001YzF5RU9ZcEctUEg4dXhNRE9hSTl3N3RZTlBFVE1OWDNELXgzRWhCMnRBMjBKY0xEYTcxTWlOZW1kQVhjSFZyNHJ3YkdUdFRxai1vd2pDUVlXWFEwWmIzTVlTdGdmbzd0MEdzczl0M1FWTXpJR252X1d2dlRSNnFmTTU1b203Y1NE0gGmAUFVX3lxTE5wbXFiMksySGJnQUNJR3BoVDh4NzRqdXBfT1ZoLWxvc3ZGQWhTVHRvOXZnczlwYXdhRTJheWxUZGhvQ3VJM2ZCcC1YVzFMNWZaYjFURW9xQU4ybjZFcS1uWFBSWi15TThqc0hmRFVOYk52QnBXN2lkeXBCUEUtd1pSWUp1c0J6SnR2MEVDOXlOc3hkVnZlbm52dWs1ZTVYclc2VDNPbEE"
     },
@@ -474,18 +499,6 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMV9kbHpSM08wSFFvTHpuN3BCX2Q2a1JtMFFvSFZNcGlYRTdQVVQ5S0o3UkNNNndYWFBwUUtudHZnQkFIODU3MWduUWd3NkRrYTViZjg1LWxkdU5aaVU1aTNaOHdoZDVoUUtZbHhKVEdQNDZNTkpzY1ludnZBbWJxdlF2T0VoZm13SzlacklKZGV1US03Z2x4Q1MzZGI3S1l0RFBTbnhRdVVBT1lZSDBXcXJYMHFJYmRabHVrNTNkNHlGWlBSY2dxUVdpY0lJbWYxYnpkSTc2bXRRUzNtWnBhSQ"
     },
     {
-      "id": "4a26f244a62d",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T18:37:00Z",
-      "source": "KWCH",
-      "summary": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall &nbsp;&nbsp; KWCH",
-      "title": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcElNcE9DVy1aRFVxLXVYOGFMc2h5U2h0SmJsVXI1UGQxQ0pCcDg0N3ZNeGNXeFcyUXZUOVZGQThpSXpXYlJJc3dMU0ZLdWxHOEVxY2lDXzg0Skh2YmNER3JrTjdyZ3JHbF9xSE1RWmU5TWw2SUs2cFdMd1V6T1FCRW43NDBwR2RXb2xwMHc4eHJNZW9k"
-    },
-    {
       "id": "72b303ec2c4c",
       "kind": "news",
       "mentions": [
@@ -496,6 +509,18 @@
       "summary": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena &nbsp;&nbsp; KWCH",
       "title": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMkQ0WHF3SUE1QVZ1TU1xRlozN2E1ZXJ5YTZ5Y0NscHNiQmlLeFVKYUx2VXhaNG56WjFaQXhLYlZ3NWtjYnRrRjJsNlJYVndpNXZfWTVORWRLNEpHWmRDMTN3NzYwbUtKQXk0Q2RnNWlXNU5fTi0tU0dhSVR0cGoxaW9Ca2VqNnp0Y2xRMTQ3MzRLVV9xcjJDNGhrM0ZJS1ROYXRyMWlSOA"
+    },
+    {
+      "id": "4a26f244a62d",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T18:37:00Z",
+      "source": "KWCH",
+      "summary": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall &nbsp;&nbsp; KWCH",
+      "title": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcElNcE9DVy1aRFVxLXVYOGFMc2h5U2h0SmJsVXI1UGQxQ0pCcDg0N3ZNeGNXeFcyUXZUOVZGQThpSXpXYlJJc3dMU0ZLdWxHOEVxY2lDXzg0Skh2YmNER3JrTjdyZ3JHbF9xSE1RWmU5TWw2SUs2cFdMd1V6T1FCRW43NDBwR2RXb2xwMHc4eHJNZW9k"
     },
     {
       "id": "5d2f2c6a8a36",
@@ -1476,31 +1501,6 @@
       "summary": "Roger Marshall wants you to know he\u2019s a real Kansan: Fishing, back roads, and a cabin called home &nbsp;&nbsp; Washington Examiner",
       "title": "Roger Marshall wants you to know he\u2019s a real Kansan: Fishing, back roads, and a cabin called home",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRkNEblJ4MzBuMGFXb3MyS09Xay1PeTJneHhLQ1RKVjBjVXQyalBwdnBSY3dfWGR0akhEeEJ1Y09TYXdUdW9DamhQdktrT2FueVFoNWlzS1c1VmtBTG8zUEt0TERlMTF3MVM5VDE0QUZnaW9CY0trR0l0TllFdGh0bHhZQmJHRDI2MXc2SzIxVnlzWjNaWU81OEMweEVpSm9UbmFXak5FbmhqVmMtaWJ3X2UtRmZQLTdUMUE4b1JmUWp1T1FnaV8xUmFoWQ"
-    },
-    {
-      "id": "e0404976ae69",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-06T09:04:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Adam Hamilton stands behind ad on Roger Marshall's debt collection &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Adam Hamilton stands behind ad on Roger Marshall's debt collection",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNblltbWF2Mmp4Y0kyWVRnU2ctNlNOaE5selNoWXR1R2VvdG9FUzljNVU2LTlPT2tKbzMyN210Vlp5SnNVLVpaQU85Y3REYTZNTmlnSDRCR0xLWXM0N1lxQU5BUEVROWdwLTNCdzdfR2RIVlZ0QXNYTXU2bWxhM0VZSkV3ZVZJamFIanI0U25ENm5GZ1N5dFZTRjNwTVdhTFZ5U0c5RDg0VzFGbDdsbG0tRnE1bDY1WVNTNVlxQnI2clVPTzlSa0t3RjhBWmZRMkxLbmRvQXRqSDJ0OFg2"
-    },
-    {
-      "id": "bd9e6270594e",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-06T07:00:00Z",
-      "source": "KCUR",
-      "summary": "Two Kansas businesses now say Sen. Roger Marshall misused their images in an attack ad &nbsp;&nbsp; KCUR",
-      "title": "Two Kansas businesses now say Sen. Roger Marshall misused their images in an attack ad",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNDZSdGxDSnQ3U1RSTGFYeVN3Mk5Ncm9WN2pGTndXbGF0QnJPVDFtN05jNm1DZ3NNZ00temdweUFsNHp1VXdfRG82VUJ0TC1Fc0JIZ0dxczRITHJ1VVJ3eWZKRndGTlQ5Z3VUY05FS0pIaWxsZXlBZXhGNFljYXBGV0wzcUo3MUlKNGRFeC1oYXBrOVpIU2RQcDY5cFNCNWxEYng0NXdISjJJc01WWC1wYk1TR3NkaWZiQ3hfTlFjazY2SWdLdURzaUhhSHpxaV9lTjZzUUU5OGV1VUx4bjJVTlV4T0VmZw"
     }
   ],
   "schema_version": 1
