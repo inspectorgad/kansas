@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-16T19:39:31.766014Z",
+  "generated_at": "2026-10-16T22:16:09.457290Z",
   "items": [
     {
       "id": "6465ff2fa573",
@@ -52,6 +52,19 @@
       "summary": "U.S. Sen. Roger Marshall, locked in tight campaign with Democrat Adam Hamilton, throws full support behind President Donald Trump's tariff war.",
       "title": "Roger Marshall praises Trump\u2019s tariff policies after Kansas executive says they hurt his business",
       "url": "https://kansasreflector.com/2026/10/16/roger-marshall-praises-trumps-tariff-policies-after-kansas-executive-says-they-hurt-his-business"
+    },
+    {
+      "id": "3631f9b8a5bf",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-16T16:15:32Z",
+      "source": "Johnson County Post",
+      "summary": "In tight Kansas U.S. Senate race, where do Roger Marshall and Adam Hamilton stand on the issues? &nbsp;&nbsp; Johnson County Post",
+      "title": "In tight Kansas U.S. Senate race, where do Roger Marshall and Adam Hamilton stand on the issues?",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMDdFc3BQMWo1WWRCV0FobEs4UTZwV3lYay11N3Q0THpRVTZUY1BxajJlclg4ZjFkS05HMGRSRWVwM243NGJLNF9mcUFuN0VSSWN2Y3BxblVRdWQxb2U1QU9VbXY3c3dvM3pFY1pDdlpLOEtTTXp4ZzNKdDFXNk8yblQzQjBuT1NISE9LVQ"
     },
     {
       "id": "0a3588253319",
@@ -128,6 +141,18 @@
       "summary": "Kansas' U.S. Senate race has attracted national headlines and money. But what about the topics voters care about? Here's what Republican Sen. Roger Marshall and Democratic challenger Adam Hamilton say about affordability, healthcare, statewide and national issues.",
       "title": "In a tight Kansas U.S. Senate race, where do Marshall and Hamilton stand on the real issues?",
       "url": "https://www.kcur.org/politics-elections-and-government/2026-10-16/marshall-hamilton-everyday-issues"
+    },
+    {
+      "id": "f1473d446120",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-16T06:02:28Z",
+      "source": "FOX4KC.com",
+      "summary": "Q&amp;A: Democrat Adam Hamilton running for US Senate &nbsp;&nbsp; FOX4KC.com",
+      "title": "Q&A: Democrat Adam Hamilton running for US Senate",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQSm9PQ2dReXo5MEFuSm1VYjhrdHJ3alNBRGN3dGd6TGVrUzNoOGdXODF6SWRqS2s5My1UbW1vWmFpdUNXTlQ1QmJHYWp5eHQ0M1hNYzY0U1gyTHE3ZDhoUElSUHVsdFpVZ3BCTGRZdDVSclRqejN3Rk9QaUZIRFhiX1ZB0gGCAUFVX3lxTFBKb09DZ1F5ejkwQW5KbVViOGt0cndqU0FEY3d0Z3pMZWtTM2g4Z1c4MXpJZGpLazkzLVRtbW9aYWl1Q1dOVDVCYkdhanl4dDQzWE1jNjRTWDJMcTdkOGhQSVJQdWx0WlVncEJMZFl0NVJyVGp6M3dGT1BpRkhEWGJfVkE"
     },
     {
       "id": "39093e645fce",
@@ -414,6 +439,18 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMGIwZGNnOWNCclpGUDdPZHVwbG4teWh6eEFWbmVzUlJwZ2R4Rkt6WENSWVhudFZBYVNESEpILXlRc0tNYXVGM3VaWUdvOUs5c2NacFNXeHUxOEZMZVE3dHJOaU0xbm5tQ181QjJvRlhUa3dsRkN1UloxUEJiUEVDbHpOZkVVSWhuZFp5bGZNQzBoNm1hWGF6WnJUSHhlaEdCVGMtejdqTDFheklV0gGyAUFVX3lxTFBYdkRaaTk2R1l4X1VsLUZFOTlaYm5LSnA2OXFtaWstOEtJejdEUVRHQ0FqZzNYUGVFRGtHV3djS3dpYlFULUdmMWxVSzN5V013VnFoeWprTWdvSl9ZajRLQnI0NUlsNnRIUTk0MXljeVdEMlptQlBTa2did29NQkYyb1JvQUtTZVVRTF8yVFJQbXl4bnpkaFNOMk1ENklwakhmUmpFRTNwSlR1LWRwN3c1QUE"
     },
     {
+      "id": "cbd734fd3229",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-13T22:32:44Z",
+      "source": "Politico",
+      "summary": "Hamilton reports $10.6M Q3 haul for Kansas Senate race - Live Updates &nbsp;&nbsp; Politico",
+      "title": "Hamilton reports $10.6M Q3 haul for Kansas Senate race - Live Updates",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbDNOVnZ4OF9vVXMySFcwSnlhTVZ5Tjcyb0JvSWJQNWRqcUh1YngtVjByYS1KcHhhaDNtNWw2dWY0S1ZGUU14Z0wwNFhWeWIxbXN0bDVRYkFod1FiVkREQUlKSWFueGNXZF9ieXZxU2c5LUtxR01mTWFReWZMeW00elZCYXk1YTdhTVYxekowVGxpblNNdm9Saw"
+    },
+    {
       "id": "7bdbcb3a68ff",
       "kind": "news",
       "mentions": [
@@ -449,18 +486,6 @@
       "summary": "The president has been on a midterm-election campaign blitz across the country, visiting several red-leaning states in support of Republican candidates. A rally in support of Sen. Roger Marshall, who's in a tough fight against Democrat Adam Hamilton, will begin at 4:30 p.m. on Monday.",
       "title": "President Trump coming to Wichita for Roger Marshall campaign rally next week",
       "url": "https://www.kcur.org/2026-10-13/trump-scheduled-to-visit-wichita-on-monday-for-campaign-rally"
-    },
-    {
-      "id": "cbd734fd3229",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-13T19:59:09Z",
-      "source": "Politico",
-      "summary": "Hamilton reports $10.6M Q3 haul for Kansas Senate race - Live Updates &nbsp;&nbsp; Politico",
-      "title": "Hamilton reports $10.6M Q3 haul for Kansas Senate race - Live Updates",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbDNOVnZ4OF9vVXMySFcwSnlhTVZ5Tjcyb0JvSWJQNWRqcUh1YngtVjByYS1KcHhhaDNtNWw2dWY0S1ZGUU14Z0wwNFhWeWIxbXN0bDVRYkFod1FiVkREQUlKSWFueGNXZF9ieXZxU2c5LUtxR01mTWFReWZMeW00elZCYXk1YTdhTVYxekowVGxpblNNdm9Saw"
     },
     {
       "id": "aa9b0a244e4e",
@@ -1306,18 +1331,6 @@
       "url": "https://www.kcur.org/politics-elections-and-government/2026-10-08/us-senate-pac-kansas-marshall-hamilton"
     },
     {
-      "id": "d99e769b9cff",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-08T08:37:34Z",
-      "source": "Kansas Reflector",
-      "summary": "Opinion: Roger Marshall keeps punching himself in the face. Kansans raise a bemused eyebrow. &nbsp;&nbsp; Kansas Reflector",
-      "title": "Opinion: Roger Marshall keeps punching himself in the face. Kansans raise a bemused eyebrow.",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNR2xCWnMtaDRwS0lSYTFOOUdjN3Z2TmVMZnlXLVFPZ2dLaE5XcTJaZU5JYVFkUXE4M0dlUGU2TzJhcDF4c3hiREJ5ZjZ0c3lyOXZaVFNJdTlJbVlYU0N3OVEzWjBfU0FpREZ2T2lxT0lQc1BYM3I0Q2NSU1BsYVZuME0zZHdfT2Iydk9KWGsxSTB4VE43LU9HRzhfZ3ZYRkNNODVJOEo2ZnBJVTkwaDY2UEFmLXNjOTd3dlV6bzd3"
-    },
-    {
       "id": "fa38a654d84f",
       "kind": "news",
       "mentions": [
@@ -1328,6 +1341,18 @@
       "summary": "Visualize a clenched fist, fingers tight and knuckles braced, pulled back to strike. Visualize that fist taking an unexpected turn, avoiding an opponent and instead circling back to slam into its owner\u2019s face. I won\u2019t describe the sights and sounds that follow, just know that the fighter for some unholy reason keeps clenching that fist [&#8230;]",
       "title": "Roger Marshall keeps punching himself in the face. Kansans raise a bemused eyebrow.",
       "url": "https://kansasreflector.com/2026/10/08/roger-marshall-keeps-punching-himself-in-the-face-kansans-raise-a-bemused-eyebrow"
+    },
+    {
+      "id": "d99e769b9cff",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-08T07:00:00Z",
+      "source": "Kansas Reflector",
+      "summary": "Opinion: Roger Marshall keeps punching himself in the face. Kansans raise a bemused eyebrow. &nbsp;&nbsp; Kansas Reflector",
+      "title": "Opinion: Roger Marshall keeps punching himself in the face. Kansans raise a bemused eyebrow.",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNR2xCWnMtaDRwS0lSYTFOOUdjN3Z2TmVMZnlXLVFPZ2dLaE5XcTJaZU5JYVFkUXE4M0dlUGU2TzJhcDF4c3hiREJ5ZjZ0c3lyOXZaVFNJdTlJbVlYU0N3OVEzWjBfU0FpREZ2T2lxT0lQc1BYM3I0Q2NSU1BsYVZuME0zZHdfT2Iydk9KWGsxSTB4VE43LU9HRzhfZ3ZYRkNNODVJOEo2ZnBJVTkwaDY2UEFmLXNjOTd3dlV6bzd3"
     },
     {
       "id": "42b6083b8dfe",
@@ -1476,31 +1501,6 @@
       "summary": "Kansas Senate race heats up as GOP spends $8M to defend Marshall &nbsp;&nbsp; Crypto Briefing",
       "title": "Kansas Senate race heats up as GOP spends $8M to defend Marshall",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNUdGaDZ0dDRfbnR0c2t2MVY2VlgxQXR2aXlPQU1OcTRZR2dHT2t1YzBPUjlyRVpYNjdNcmRPLW1KdFU0bGQ3Nm1kMjhidXZiR0hjREpLNU52REJSVmhmazBhWnl2WGpWOHJwS3pZcnc5a195Tm1zNVpjQVpYaWRvNDRWaDQyLTFPT0xMeHNfNmxsZkFnU0E"
-    },
-    {
-      "id": "209eaa064d75",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-06T10:00:00Z",
-      "source": "Kansas City Star",
-      "summary": "Republicans pivot to Kansas amid tight Marshall-Hamilton Senate race. \u2018It\u2019s real now\u2019 &nbsp;&nbsp; Kansas City Star",
-      "title": "Republicans pivot to Kansas amid tight Marshall-Hamilton Senate race. \u2018It\u2019s real now\u2019",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBmNERLR290SWRiaE9JZ0tWenp6Z0kzQjVIS29Tc0ZlMzN1eHNFdTdLZkhEN1RuWkZsLUVVUGRQazVjOFd0ZTlXQkJEZXFWR3o4NFZ2UDVCNXBtVFpCWmZGZXIxR200Ul9BRVpfZlpoX3V5Y1hyX3VXYVdIMkZJUdIBfkFVX3lxTFBqWjJGd3FnanhGMnF2MTFqWlF6c2tHQmN2RFVTVHJCUWtOSzBkRnhISi1DMjNBRk5OV25QRnFMYXdkOGJUdkdlTmlvNEg0YTlJLU1mYWl1VTNnWXJjSTdCdGhOWG56SkNkVnd0YjVMaHVNYWpBcXVKQl9aOEhOQQ"
-    },
-    {
-      "id": "a4049670185b",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-06T10:00:00Z",
-      "source": "Washington Examiner",
-      "summary": "Roger Marshall wants you to know he\u2019s a real Kansan: Fishing, back roads, and a cabin called home &nbsp;&nbsp; Washington Examiner",
-      "title": "Roger Marshall wants you to know he\u2019s a real Kansan: Fishing, back roads, and a cabin called home",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRkNEblJ4MzBuMGFXb3MyS09Xay1PeTJneHhLQ1RKVjBjVXQyalBwdnBSY3dfWGR0akhEeEJ1Y09TYXdUdW9DamhQdktrT2FueVFoNWlzS1c1VmtBTG8zUEt0TERlMTF3MVM5VDE0QUZnaW9CY0trR0l0TllFdGh0bHhZQmJHRDI2MXc2SzIxVnlzWjNaWU81OEMweEVpSm9UbmFXak5FbmhqVmMtaWJ3X2UtRmZQLTdUMUE4b1JmUWp1T1FnaV8xUmFoWQ"
     }
   ],
   "schema_version": 1
