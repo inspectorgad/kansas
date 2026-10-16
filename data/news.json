@@ -26,8 +26,46 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-16T11:57:03.558164Z",
+  "generated_at": "2026-10-16T16:21:25.171126Z",
   "items": [
+    {
+      "id": "0a3588253319",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-16T14:50:11Z",
+      "source": "KCUR",
+      "summary": "President Donald Trump will visit Wichita on Monday to campaign for Republican Sen. Roger Marshall, who's in a tough reelection race.",
+      "title": "Trump's Kansas rally will be at Heartland Credit Union Arena in Park City",
+      "url": "https://www.kcur.org/2026-10-16/trump-rally-will-be-at-heartland-credit-union-arena-in-park-city"
+    },
+    {
+      "id": "9551d8054682",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-16T14:28:02Z",
+      "source": "KSNT politics",
+      "summary": "The race between Republican U.S. Sen. Roger Marshall and Democratic challenger Adam Hamilton is entering its final stretch, with President Donald Trump preparing to visit Wichita and a FOX4 debate between the candidates just one week away.",
+      "title": "Johnson County vs. western Kansas: Where the Kansas Senate race could be won",
+      "url": "https://www.ksnt.com/elections/johnson-county-vs-western-kansas-where-the-kansas-senate-race-could-be-won"
+    },
+    {
+      "id": "f0bb3835e94c",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-16T13:00:00Z",
+      "source": "KSNT politics",
+      "summary": "As the race for Kansas U.S. Senate continues to tighten, incumbent Sen. Roger Marshall (R) and challenger Adam Hamilton (D) will face off in a debate televised and livestreamed across the Sunflower State.",
+      "title": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton",
+      "url": "https://www.ksnt.com/elections/how-to-watch-the-kansas-u-s-senate-debate-between-sen-marshall-adam-hamilton"
+    },
     {
       "id": "fe9871efdfa5",
       "kind": "news",
@@ -62,8 +100,8 @@
       ],
       "published_at": "2026-10-16T08:00:00Z",
       "source": "KCUR",
-      "summary": "Republican Sen. Roger Marshall and Democrat Adam Hamilton\u2019s approaches to affordability, health care, statewide and national issues.",
-      "title": "In a tight Kansas race, where do the U.S. Senate candidates stand on issues voters care about?",
+      "summary": "Kansas' U.S. Senate race has attracted national headlines and money. But what about the topics voters care about? Here's what Republican Sen. Roger Marshall and Democratic challenger Adam Hamilton say about affordability, healthcare, statewide and national issues.",
+      "title": "In a tight Kansas U.S. Senate race, where do Marshall and Hamilton stand on the real issues?",
       "url": "https://www.kcur.org/politics-elections-and-government/2026-10-16/marshall-hamilton-everyday-issues"
     },
     {
@@ -89,31 +127,6 @@
       "summary": "Democratic Senate candidate Adam Hamilton says he's fighting for the 'rights of all people' &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
       "title": "Democratic Senate candidate Adam Hamilton says he's fighting for the 'rights of all people'",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVm1HSTcxeW9sLVFFQVE5cHJUalJBb3BQYTNHM3NWa1dhZnU0OHIteHV0bFMwd3RxNlJBclUwU054N2c0bGp3S1ZPMzUtaExsa29NbHc1OVFoYjZKbUNpaGdFQlNoVDI2cDVGdkp6ZlUtZXAyTC1UVWNFTVdicGhmc2U5Y0s5VmRzQmVsb3Z1RTBaVlNzZHlFTzVEb0V2OF9IS1JqMXY4NzR1bFdodDdGNFlR0gG3AUFVX3lxTE1RaXJpdHNmNDllWUs2aTE0RnFlS2VQUFBybUhBNVRwSHdqbWg4QUo2ZXBnWHVwMDJYMUU5RGVnR2EtNjg4NEJNQXFzSU1RdnRicHlpYXg3cnJlS19nT0hxWkx5SThyaXY0T0VBdUJUZ05PRnhwSlNrQmR0MXBqS3g5T2lock5FVk43SVUtTHJUeTFzYXFWYzdKdm1IYmR0bWhfZGNPRzVyd2tLQjVYTTJLOGY2eTVnTQ"
-    },
-    {
-      "id": "ef0b144dcbfa",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-15T17:02:27Z",
-      "source": "FOX4KC.com",
-      "summary": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton &nbsp;&nbsp; FOX4KC.com",
-      "title": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPT3g4YnI5ZF9DX0NsVms1TUZRMDg5S3BaQlZ4N3VJLVNGem1TVHRjUmJZcUMzLU1nTUZBQ0FqM2huSVhYaHE5Z2dJakVuMlp5bG9xeURlQU5SdkJnd2F6NC03U1NWX3lURTBDZWJ0VzFIbnFSdjUtV1lLeVlKaS1FOTRrQmVWQS1fOHBmTXp1Y2cySnJxNVBuMmx6RGgwNXVRZzQ1ZEdJMUtRQ1l6RFdIa2hvb0pjdzFfSXpsdlVieXRYVDBWclNSWFpGQ1NUTzN2cHBUdk5lNVdBd9IB2gFBVV95cUxPT3g4YnI5ZF9DX0NsVms1TUZRMDg5S3BaQlZ4N3VJLVNGem1TVHRjUmJZcUMzLU1nTUZBQ0FqM2huSVhYaHE5Z2dJakVuMlp5bG9xeURlQU5SdkJnd2F6NC03U1NWX3lURTBDZWJ0VzFIbnFSdjUtV1lLeVlKaS1FOTRrQmVWQS1fOHBmTXp1Y2cySnJxNVBuMmx6RGgwNXVRZzQ1ZEdJMUtRQ1l6RFdIa2hvb0pjdzFfSXpsdlVieXRYVDBWclNSWFpGQ1NUTzN2cHBUdk5lNVdBdw"
-    },
-    {
-      "id": "e21fb212d749",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-15T16:03:48Z",
-      "source": "The Standard-Speaker",
-      "summary": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch &nbsp;&nbsp; The Standard-Speaker",
-      "title": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRUlTMV9oWlBOaWQwSHA2dS11LVVWQURCM09mVWtrY0VPU0dJNkN6QkRWYlZtejNXOEMtcUhpaU1lWVRXVWo2R0tRM01JaXg2anV1TDl6Uk54WEhFZHNteVVUV0VZTmJ1c1dRRmVCMDJYakkxMEZza05PWGVuTEdnYW93bzEzaFU2allHMVAtOA"
     },
     {
       "id": "1f85e41ebcf5",
@@ -204,6 +217,18 @@
       "summary": "Sen. Roger Marshall sought funding to address a water shorta... &nbsp;&nbsp; seMissourian",
       "title": "Sen. Roger Marshall sought funding to address a water shorta...",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNSUdXSFlSQ3h1RmRmb09GXzI4MzlnZ2hDd0JOLUc5LTBWeHRvSHhMY05LUWxjb3cyTDFUeTI3NkZycFNobHZNZjlhckEzMXFvWVZweXphTzdMVUpiekRNWGRfVGZuMTQ4b3ZWa3N5RmJHSlpESlU3blRSRFpFMmdKRXZlbWhEWkRlenpOR21nNzI1d3F5VVdaNC1Rc084LS13R0NnRHRvN2FoQ0pQdnlQTjcySUFDMFVTT1ZQSzVMS25qMWYwRVlCVjhmZlgtVkRCeUtmWDZIMUxvdw"
+    },
+    {
+      "id": "a77b0b1d6c46",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-15T07:10:00Z",
+      "source": "AP News",
+      "summary": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch &nbsp;&nbsp; AP News",
+      "title": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWHpqN1dWZlpzbUVqM2R4dU5Tc0lHTExQZGlwQzZYTm41d0hfOHIyQktoX1lOZXV6MjBZRnYtZmNFVEkxZ28tejU3WDB6c0tzZXM5Nmg4eGpnMWxQUFh2Y0V3cGYwYXRJYWllY3BVSm5TbHk0RVI5aWhqS0dNUWRMeGthdmIwMTQ4UGZlWTFZQmlqVnBZM25nNmtPR3ZUTjRraDROWU5ISmR1bk9kWDJvXw"
     },
     {
       "id": "4164f1443dd7",
@@ -449,16 +474,28 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMV9kbHpSM08wSFFvTHpuN3BCX2Q2a1JtMFFvSFZNcGlYRTdQVVQ5S0o3UkNNNndYWFBwUUtudHZnQkFIODU3MWduUWd3NkRrYTViZjg1LWxkdU5aaVU1aTNaOHdoZDVoUUtZbHhKVEdQNDZNTkpzY1ludnZBbWJxdlF2T0VoZm13SzlacklKZGV1US03Z2x4Q1MzZGI3S1l0RFBTbnhRdVVBT1lZSDBXcXJYMHFJYmRabHVrNTNkNHlGWlBSY2dxUVdpY0lJbWYxYnpkSTc2bXRRUzNtWnBhSQ"
     },
     {
-      "id": "ea27d25b63f2",
+      "id": "4a26f244a62d",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
       "published_at": "2026-10-13T18:37:00Z",
-      "source": "WIBW",
-      "summary": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall &nbsp;&nbsp; WIBW",
+      "source": "KWCH",
+      "summary": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall &nbsp;&nbsp; KWCH",
       "title": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbEg5aTVZU21KQlMtQ1hTRkdxM2RiU0Q5TkNwM2pnYlh6U090anRtOWJTR0cwSTlYRThvU2RXNG54RmZldEhOTFozemlNZGlyeHZ2a1VhOV84cUk2MHhfNncwb1RlSEN1QlQ4RnRidGVZRVJleDVPY0ZfRXpEWXA0dnF2RnpVNDNJZjl2X1lhYlVtQ1RF0gGoAUFVX3lxTFBHYzFtVzlxeFl3TkRuM2ZSVDVkMi1xOG1OMGxtOXk3Z3lISTE1d2h3VXI4T2hYWmxOeUYySVhGV0JTOTBtZG1VWmg5VkJ0SFlFXzRfeHpsOVgzY1piMW03TVpEa2VkYmp1MlpFb0JtWHpGM1pUYkNKNXlTWnBhQkkyTWIydGRMelZzQkJQZlhTWjRDX2lTMmlyWm41dm5oeUNlak81S09jaQ"
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcElNcE9DVy1aRFVxLXVYOGFMc2h5U2h0SmJsVXI1UGQxQ0pCcDg0N3ZNeGNXeFcyUXZUOVZGQThpSXpXYlJJc3dMU0ZLdWxHOEVxY2lDXzg0Skh2YmNER3JrTjdyZ3JHbF9xSE1RWmU5TWw2SUs2cFdMd1V6T1FCRW43NDBwR2RXb2xwMHc4eHJNZW9k"
+    },
+    {
+      "id": "72b303ec2c4c",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T18:37:00Z",
+      "source": "KWCH",
+      "summary": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena &nbsp;&nbsp; KWCH",
+      "title": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMkQ0WHF3SUE1QVZ1TU1xRlozN2E1ZXJ5YTZ5Y0NscHNiQmlLeFVKYUx2VXhaNG56WjFaQXhLYlZ3NWtjYnRrRjJsNlJYVndpNXZfWTVORWRLNEpHWmRDMTN3NzYwbUtKQXk0Q2RnNWlXNU5fTi0tU0dhSVR0cGoxaW9Ca2VqNnp0Y2xRMTQ3MzRLVV9xcjJDNGhrM0ZJS1ROYXRyMWlSOA"
     },
     {
       "id": "5d2f2c6a8a36",
@@ -1464,44 +1501,6 @@
       "summary": "Two Kansas businesses now say Sen. Roger Marshall misused their images in an attack ad &nbsp;&nbsp; KCUR",
       "title": "Two Kansas businesses now say Sen. Roger Marshall misused their images in an attack ad",
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNDZSdGxDSnQ3U1RSTGFYeVN3Mk5Ncm9WN2pGTndXbGF0QnJPVDFtN05jNm1DZ3NNZ00temdweUFsNHp1VXdfRG82VUJ0TC1Fc0JIZ0dxczRITHJ1VVJ3eWZKRndGTlQ5Z3VUY05FS0pIaWxsZXlBZXhGNFljYXBGV0wzcUo3MUlKNGRFeC1oYXBrOVpIU2RQcDY5cFNCNWxEYng0NXdISjJJc01WWC1wYk1TR3NkaWZiQ3hfTlFjazY2SWdLdURzaUhhSHpxaV9lTjZzUUU5OGV1VUx4bjJVTlV4T0VmZw"
-    },
-    {
-      "id": "e850c680fd10",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-06T01:07:47Z",
-      "source": "Kansas Reflector",
-      "summary": "U.S. Sen. Roger Marshall's commercial critical of Democrat Adam Hamilton features unauthorized use of a picture taken of youth sitting in a Kansas chapel.",
-      "title": "Roger Marshall\u2019s attack ad against Adam Hamilton contains unauthorized image of children",
-      "url": "https://kansasreflector.com/2026/10/05/roger-marshalls-attack-ad-against-adam-hamilton-contains-unauthorized-image-of-children"
-    },
-    {
-      "id": "0f8493b8ea78",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-05T23:34:00Z",
-      "source": "KMBC",
-      "summary": "New poll shows Kansas U.S. Senate race tied between Roger Marshall, Adam Hamilton &nbsp;&nbsp; KMBC",
-      "title": "New poll shows Kansas U.S. Senate race tied between Roger Marshall, Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUmQweWVHMTQ1UC1jOEN3MGJNTTBMb3VXS042TDc0LW1wZURhRGY4azBBVHJSa1JMSS1kQkgxd0llWDI3Nk9jQ2YtelBybEl4Tmxma2lxUlIzSWhIcjQ1cjN2WUE2N1FZZFZkaDBXNlREdlgyUldIV280NmROaHBhNzVMb2h4RF9pYndySWNBTTVpeENWNUd5NFEzZw"
-    },
-    {
-      "id": "382d4c9f3180",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-05T15:22:20Z",
-      "source": "The Daily News | Texas' Oldest Newspaper",
-      "summary": "Sen. Roger Marshall, R-Kansas, arrives at Stormont Vail Health on Aug. 28, 2026. &nbsp;&nbsp; The Daily News | Texas' Oldest Newspaper",
-      "title": "Sen. Roger Marshall, R-Kansas, arrives at Stormont Vail Health on Aug. 28, 2026.",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQMmhGaWQ5em9KM1ltTlpKUUtIR1FUS0tRbjZ0YTZZVF9wd3lhLTRSSWUwclBPbEgwMDk2Ui1HaGVNR3VFV2oxN2xlTmtNbmYwTEpYQXkta0c0TGpINjdXWkVuRm1MWjJ2ZVZRN1NtQWowUGMtQmVfaVk0ZkU0c3Q0ejZDQllQYUVUOEc4aUpMaDRfVS1zb3Fma1JnRWlkWmh1RVBiX3ZQWm9DWlpySU1wX2tabDdfMl84akotaGgwT0t3enpaZ0VlUVoxVDZLb1ZyeEkxblI1U1UzQUhGQlhmZS1jVHpvYi1QZ2RHWUl1V1NlcGNNS2NUa2praw"
     }
   ],
   "schema_version": 1

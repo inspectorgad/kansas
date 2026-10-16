@@ -867,7 +867,7 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-16T11:53:21.767239Z",
+  "generated_at": "2026-10-16T16:16:16.198200Z",
   "polls": [
     {
       "added_at": "2026-10-16T01:29:49.365050Z",
@@ -882,7 +882,8 @@
       },
       "sample_size": 1200,
       "sponsor": "R",
-      "start_date": "2026-10-13"
+      "start_date": "2026-10-13",
+      "undecided": 2.0
     },
     {
       "added_at": "2026-10-16T06:20:35.124648Z",
