@@ -26,21 +26,8 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-15T23:20:59.858839Z",
+  "generated_at": "2026-10-16T01:33:54.980331Z",
   "items": [
-    {
-      "id": "3c7aa15bdc2e",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-15T22:02:29Z",
-      "source": "AOL.com",
-      "summary": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton &nbsp;&nbsp; AOL.com",
-      "title": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAyMmdNcnV1cDFrQjJvZWw1UGFDV0s3MFk1bUJzNzhtd3pkaDBTb3Y4SVoxYmNYalpoa0JQc21NeUxKdmVpM0RKSUl3YTAyN0ExUXVWbUFTeHFMcEp1SS11Z1dXVlBsYW83MGhKS0JBUV9YQkgxTEFqRzYyeXc"
-    },
     {
       "id": "36a9c57732b4",
       "kind": "news",
@@ -54,16 +41,29 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVm1HSTcxeW9sLVFFQVE5cHJUalJBb3BQYTNHM3NWa1dhZnU0OHIteHV0bFMwd3RxNlJBclUwU054N2c0bGp3S1ZPMzUtaExsa29NbHc1OVFoYjZKbUNpaGdFQlNoVDI2cDVGdkp6ZlUtZXAyTC1UVWNFTVdicGhmc2U5Y0s5VmRzQmVsb3Z1RTBaVlNzZHlFTzVEb0V2OF9IS1JqMXY4NzR1bFdodDdGNFlR0gG3AUFVX3lxTE1RaXJpdHNmNDllWUs2aTE0RnFlS2VQUFBybUhBNVRwSHdqbWg4QUo2ZXBnWHVwMDJYMUU5RGVnR2EtNjg4NEJNQXFzSU1RdnRicHlpYXg3cnJlS19nT0hxWkx5SThyaXY0T0VBdUJUZ05PRnhwSlNrQmR0MXBqS3g5T2lock5FVk43SVUtTHJUeTFzYXFWYzdKdm1IYmR0bWhfZGNPRzVyd2tLQjVYTTJLOGY2eTVnTQ"
     },
     {
-      "id": "bab44b0fe3a1",
+      "id": "ef0b144dcbfa",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-15T17:02:27Z",
+      "source": "FOX4KC.com",
+      "summary": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton &nbsp;&nbsp; FOX4KC.com",
+      "title": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPT3g4YnI5ZF9DX0NsVms1TUZRMDg5S3BaQlZ4N3VJLVNGem1TVHRjUmJZcUMzLU1nTUZBQ0FqM2huSVhYaHE5Z2dJakVuMlp5bG9xeURlQU5SdkJnd2F6NC03U1NWX3lURTBDZWJ0VzFIbnFSdjUtV1lLeVlKaS1FOTRrQmVWQS1fOHBmTXp1Y2cySnJxNVBuMmx6RGgwNXVRZzQ1ZEdJMUtRQ1l6RFdIa2hvb0pjdzFfSXpsdlVieXRYVDBWclNSWFpGQ1NUTzN2cHBUdk5lNVdBd9IB2gFBVV95cUxPT3g4YnI5ZF9DX0NsVms1TUZRMDg5S3BaQlZ4N3VJLVNGem1TVHRjUmJZcUMzLU1nTUZBQ0FqM2huSVhYaHE5Z2dJakVuMlp5bG9xeURlQU5SdkJnd2F6NC03U1NWX3lURTBDZWJ0VzFIbnFSdjUtV1lLeVlKaS1FOTRrQmVWQS1fOHBmTXp1Y2cySnJxNVBuMmx6RGgwNXVRZzQ1ZEdJMUtRQ1l6RFdIa2hvb0pjdzFfSXpsdlVieXRYVDBWclNSWFpGQ1NUTzN2cHBUdk5lNVdBdw"
+    },
+    {
+      "id": "e21fb212d749",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-15T14:58:47Z",
-      "source": "The Press Democrat",
-      "summary": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch &nbsp;&nbsp; The Press Democrat",
+      "published_at": "2026-10-15T16:03:48Z",
+      "source": "The Standard-Speaker",
+      "summary": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch &nbsp;&nbsp; The Standard-Speaker",
       "title": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOEhFX0R5V1VDbDRWR0JzYy1ZdTMyRktEZ0E4OUJmS0w0Q3pYYjBGQnM5eWpiRWNTVVMyNm9xdnRfNG9wWkZBUUdqbWxKTDZlWHdjZ1JsUjRzVHFiX2tfYVZLX2dwOXBWU05pUmd6VjJNRmx5SGNoRGM1VUJHeG1fV296YUZfTGkyM3p6Qg"
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRUlTMV9oWlBOaWQwSHA2dS11LVVWQURCM09mVWtrY0VPU0dJNkN6QkRWYlZtejNXOEMtcUhpaU1lWVRXVWo2R0tRM01JaXg2anV1TDl6Uk54WEhFZHNteVVUV0VZTmJ1c1dRRmVCMDJYakkxMEZza05PWGVuTEdnYW93bzEzaFU2allHMVAtOA"
     },
     {
       "id": "1f85e41ebcf5",
