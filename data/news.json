@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-17T09:19:47.460161Z",
+  "generated_at": "2026-10-17T13:06:00.559160Z",
   "items": [
+    {
+      "id": "73531edfac87",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-17T11:00:00Z",
+      "source": "Politico",
+      "summary": "Kansas Republicans fear Roger Marshall may be running out of time &nbsp;&nbsp; Politico",
+      "title": "Kansas Republicans fear Roger Marshall may be running out of time",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdnhiNi1NZnBPQWxZcXZaUmRjaU9MYmpZdHBmbU5wY3c5d2tpT0FNZU05Y1BxYVJ3N1dfVGsxTjFsaXkzamxoUXpTR2R2dUNMNUtvRlhlajBDaUo4RkpVVDN6RXZoc0pmckgxQW94elY1NV91MDFvOGdINXhhR1B3Zi1LQkZCRFYwUTdNTU1PbndOdw"
+    },
     {
       "id": "2e9dad041f9d",
       "kind": "news",
@@ -1487,19 +1499,6 @@
       "summary": "Roger Marshall's photo flub is part of a rich tradition in KS/MO politics | Hudnall &nbsp;&nbsp; Kansas City Star",
       "title": "Roger Marshall's photo flub is part of a rich tradition in KS/MO politics | Hudnall",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBHdnBYVURqYzY1LTh0Q2tnMUV1LXdrSUMwcmU2UnJFY1RhWWNkVDl6S1dOOGRxWmJGTXdpRlE0dTJjY2VnMDNwcWVGNnNESzRwQjdOdlc4ZjhxYkJTbUpJdWVBOVdCZknSAWdBVV95cUxOcWxfRzcwQmJROVpLNm52YWVZSkowOUF4VVhtZmpldDc2T3lRRUpVUlJHUnZoVG91Y0pTbFB5YTFDOXNTUEFpSV9vNm03S3RPZldiMWlfTlJkMXBJSV9qM2dQSmIwZ2Jz"
-    },
-    {
-      "id": "fd4f76b7f305",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-07T11:00:00Z",
-      "source": "Daily Kos",
-      "summary": "The Pushback Chronicles: Hamilton vs. Marshall for KS Senator &nbsp;&nbsp; Daily Kos",
-      "title": "The Pushback Chronicles: Hamilton vs. Marshall for KS Senator",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1OOUliUUxPNGNLQUVuTy1Ycm1OUUxMV3dSRnkyRmtDVVFub0JYLVVZaXRPa3gzaVhiZUFTSFZBcUVaM3VTNHhXWS12UEF0SjBwTGxNT1V5ZTRxYjNVdGp3blpCSWZBQUE4Z3RPWUxSWjRyS3l6dWc"
     }
   ],
   "schema_version": 1

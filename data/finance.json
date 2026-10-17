@@ -9,12 +9,12 @@
   "candidates": {
     "hamilton": {
       "affiliated_committees": [],
-      "burn_rate_monthly": 80158.35,
+      "burn_rate_monthly": 314121.11,
       "candidate_id": "hamilton",
-      "cash_on_hand": 1730620.91,
+      "cash_on_hand": 3183399.76,
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
-      "coverage_end_date": "2026-07-15",
+      "coverage_end_date": "2026-09-30",
       "coverage_start_date": "2026-02-26",
       "debts_owed": 50000.0,
       "donor_states": [
@@ -388,8 +388,8 @@
           }
         ],
         "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
-        "itemized_total": 3331937.67,
-        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (24 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
+        "itemized_total": 9241437.43,
+        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (25 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
         "large_donors": [
           {
             "amount": 13097.0,
@@ -593,7 +593,9 @@
             "amount": 7000.0,
             "city": "WASHINGTON",
             "employer": "BUCHANAN INGERSOLL & ROONEY",
+            "first_gift": "2026-07-15",
             "gifts": 2,
+            "last_gift": "2026-07-15",
             "name": "ABRAMSON, RONALD",
             "occupation": "ATTORNEY",
             "state": "DC"
@@ -687,7 +689,7 @@
             "label": "$500 to $999"
           },
           {
-            "amount": 895545.69,
+            "amount": 3119891.86,
             "count": 0,
             "label": "Under $200"
           }
@@ -849,19 +851,19 @@
             "label": "CARDIOLOGIST"
           }
         ],
-        "unitemized_total": 765890.88
+        "unitemized_total": 2990237.05
       },
       "fec_candidate_id": "S6KS00312",
       "in_state_amount": 2335485.75,
       "in_state_pct": 70.0,
-      "individual_contributions": 4097828.55,
-      "other_receipts": 3038.54,
-      "pac_contributions": 17500.0,
-      "party_contributions": 0.0,
-      "small_dollar_contributions": 765890.88,
-      "total_disbursements": 2438456.9,
-      "total_receipts": 4169077.81,
-      "transfers_in": 0.0
+      "individual_contributions": 12231674.48,
+      "other_receipts": 13376.97,
+      "pac_contributions": 195000.0,
+      "party_contributions": 600.0,
+      "small_dollar_contributions": 2990237.05,
+      "total_disbursements": 10350311.17,
+      "total_receipts": 13533710.93,
+      "transfers_in": 1016500.0
     },
     "marshall": {
       "affiliated_committees": [
@@ -1368,7 +1370,7 @@
         ],
         "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
         "itemized_total": 1904438.09,
-        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (24 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
+        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (25 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
         "large_donors": [
           {
             "amount": 12000.0,
@@ -1561,7 +1563,9 @@
             "amount": 7000.0,
             "city": "HOUSTON",
             "employer": "SELF",
+            "first_gift": "2025-11-12",
             "gifts": 1,
+            "last_gift": "2025-11-12",
             "name": "WEEKLEY, RICHARD",
             "occupation": "REAL ESTATE DEVELOPER",
             "state": "TX"
@@ -1858,6 +1862,16 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
+      "coverage_end_date": "2026-09-30",
+      "date": "2026-10-15",
+      "form_type": "F3",
+      "report_type": "OCTOBER QUARTERLY",
+      "total_receipts": 9364633.12,
+      "url": "https://docquery.fec.gov/pdf/696/202610159915640696/202610159915640696.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-07-15",
       "date": "2026-10-13",
       "form_type": "F3",
@@ -2046,23 +2060,33 @@
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
       "url": "https://docquery.fec.gov/pdf/005/202607219894400005/202607219894400005.pdf"
-    },
-    {
-      "committee_id": "C00576173",
-      "committee_name": "KANSANS FOR MARSHALL",
-      "date": "2026-07-20",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/970/202607209890965970/202607209890965970.pdf"
     }
   ],
-  "generated_at": "2026-10-17T09:19:43.553143Z",
+  "generated_at": "2026-10-17T13:05:54.080922Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 9660026.56,
-      "marshall": 18467290.7
+      "hamilton": 13644135.83,
+      "marshall": 20532607.86
     },
     "recent": [
+      {
+        "amount": 20470.29,
+        "candidate_id": "marshall",
+        "committee_id": "C00962696",
+        "committee_name": "NEW DEAL FOR ALL, INC.",
+        "date": "2026-10-16",
+        "purpose": "VIDEO PRODUCTION",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 61410.88,
+        "candidate_id": "marshall",
+        "committee_id": "C00962696",
+        "committee_name": "NEW DEAL FOR ALL, INC.",
+        "date": "2026-10-16",
+        "purpose": "VIDEO PRODUCTION",
+        "support_oppose": "O"
+      },
       {
         "amount": 101121.82,
         "candidate_id": "marshall",
@@ -2082,12 +2106,84 @@
         "support_oppose": "S"
       },
       {
+        "amount": 138211.01,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-15",
+        "purpose": "POSTAGE / PRINTING / PRODUCTION",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 16250.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-15",
+        "purpose": "MEDIA PRODUCTION",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 495000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00951723",
+        "committee_name": "THE EDGE ACTION FUND",
+        "date": "2026-10-15",
+        "purpose": "MEDIA PRODUCTION AND AD BUY (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 370574.02,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-15",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 492000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-15",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1249.85,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-15",
+        "purpose": "DIGITAL ADVERTISING (FROM ADVANCE LINE 21)",
+        "support_oppose": "O"
+      },
+      {
         "amount": 826729.0,
         "candidate_id": "marshall",
         "committee_id": "C00962696",
         "committee_name": "NEW DEAL FOR ALL, INC.",
         "date": "2026-10-14",
         "purpose": "ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 5631.78,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-14",
+        "purpose": "TEXT MESSAGING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 600000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-14",
+        "purpose": "MEDIA PLACEMENT",
         "support_oppose": "O"
       },
       {
@@ -2100,6 +2196,78 @@
         "support_oppose": "O"
       },
       {
+        "amount": 91067.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-13",
+        "purpose": "POSTAGE / PRINTING / PRODUCTION",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 7953.37,
+        "candidate_id": "marshall",
+        "committee_id": "C00657866",
+        "committee_name": "PROTECT FREEDOM POLITICAL ACTION COMMITTEE",
+        "date": "2026-10-13",
+        "purpose": "TEXT MESSAGES",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 200000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00945733",
+        "committee_name": "THE 1861 INITIATIVE",
+        "date": "2026-10-13",
+        "purpose": "ADDITIONAL AD BUY - ESTIMATE - ORIGINALLY REPORTED 9/17/26",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 374504.66,
+        "candidate_id": "marshall",
+        "committee_id": "C00961276",
+        "committee_name": "LOWER COSTS NOW",
+        "date": "2026-10-13",
+        "purpose": "MEDIA BUY (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 36863.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00961276",
+        "committee_name": "LOWER COSTS NOW",
+        "date": "2026-10-13",
+        "purpose": "AD PRODUCTION (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 64304.33,
+        "candidate_id": "marshall",
+        "committee_id": "C00961276",
+        "committee_name": "LOWER COSTS NOW",
+        "date": "2026-10-13",
+        "purpose": "AD PRODUCTION (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 7764.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-13",
+        "purpose": "MEDIA PRODUCTION - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1300000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-13",
+        "purpose": "DIGITAL MEDIA BUY - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
         "amount": 510000.0,
         "candidate_id": "marshall",
         "committee_id": "C00953299",
@@ -2107,6 +2275,33 @@
         "date": "2026-10-13",
         "purpose": "TELEVISION ADVERTISING",
         "support_oppose": "O"
+      },
+      {
+        "amount": 2218981.6,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-13",
+        "purpose": "MEDIA PLACEMENT",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 180682.57,
+        "candidate_id": "hamilton",
+        "committee_id": "C00961276",
+        "committee_name": "LOWER COSTS NOW",
+        "date": "2026-10-13",
+        "purpose": "MEDIA BUY (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 67555.52,
+        "candidate_id": "hamilton",
+        "committee_id": "C00961276",
+        "committee_name": "LOWER COSTS NOW",
+        "date": "2026-10-13",
+        "purpose": "AD PRODUCTION (ESTIMATE)",
+        "support_oppose": "S"
       },
       {
         "amount": 6216.21,
@@ -2233,200 +2428,11 @@
         "date": "2026-10-10",
         "purpose": "PRINTING / POSTAGE",
         "support_oppose": "S"
-      },
-      {
-        "amount": 84.31,
-        "candidate_id": "marshall",
-        "committee_id": "C00053553",
-        "committee_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
-        "date": "2026-10-10",
-        "purpose": "PAPER",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 9285.15,
-        "candidate_id": "marshall",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-10",
-        "purpose": "AIRPLANE BANNER (ESTIMATE)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 105600.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-10",
-        "purpose": "MEDIA PLACEMENT",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 80.32,
-        "candidate_id": "hamilton",
-        "committee_id": "C00487470",
-        "committee_name": "CLUB FOR GROWTH ACTION",
-        "date": "2026-10-10",
-        "purpose": "TV ADVERTISING (FROM ADVANCE LINE 21)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 112760.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00637041",
-        "committee_name": "FUND FOR A WORKING CONGRESS",
-        "date": "2026-10-09",
-        "purpose": "DIGITAL ADVERTISING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 1266401.7,
-        "candidate_id": "hamilton",
-        "committee_id": "C00487470",
-        "committee_name": "CLUB FOR GROWTH ACTION",
-        "date": "2026-10-09",
-        "purpose": "TV AD PLACEMENT",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 350000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00957928",
-        "committee_name": "MAIN STREET FUND",
-        "date": "2026-10-09",
-        "purpose": "PLACED MEDIA: TV AND CONNECTED TV",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 200000.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00657866",
-        "committee_name": "PROTECT FREEDOM POLITICAL ACTION COMMITTEE",
-        "date": "2026-10-08",
-        "purpose": "DIGITAL MEDIA",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 8000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00637041",
-        "committee_name": "FUND FOR A WORKING CONGRESS",
-        "date": "2026-10-08",
-        "purpose": "DOOR HANGERS",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 4166.67,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-08",
-        "purpose": "PHONE BANKS (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 138211.01,
-        "candidate_id": "hamilton",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-08",
-        "purpose": "POSTAGE / PRINTING / PRODUCTION",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 28998.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00953299",
-        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
-        "date": "2026-10-07",
-        "purpose": "PRODUCTION FOR TELEVISION ADVERTISING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 63000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00637041",
-        "committee_name": "FUND FOR A WORKING CONGRESS",
-        "date": "2026-10-07",
-        "purpose": "GRASSROOTS CANVASSING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 600000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-07",
-        "purpose": "MEDIA PLACEMENT",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 228.35,
-        "candidate_id": "hamilton",
-        "committee_id": "C00844613",
-        "committee_name": "WIN IT BACK PAC",
-        "date": "2026-10-07",
-        "purpose": "TV AD PRODUCTION (FROM ADVANCE LINE 21)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 110000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-07",
-        "purpose": "BARN SIGNS, PRINTING (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 500.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-07",
-        "purpose": "BARN SIGNS, GRAPHIC DESIGN (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 10000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00487470",
-        "committee_name": "CLUB FOR GROWTH ACTION",
-        "date": "2026-10-07",
-        "purpose": "DIGITAL ADVERTISING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 10107.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00487470",
-        "committee_name": "CLUB FOR GROWTH ACTION",
-        "date": "2026-10-07",
-        "purpose": "DIGITAL ADVERTISING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 1115.4,
-        "candidate_id": "hamilton",
-        "committee_id": "C00487470",
-        "committee_name": "CLUB FOR GROWTH ACTION",
-        "date": "2026-10-07",
-        "purpose": "DIGITAL ADVERTISING (FROM ADVANCE LINE 21)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 353051.79,
-        "candidate_id": "marshall",
-        "committee_id": "C00961276",
-        "committee_name": "LOWER COSTS NOW",
-        "date": "2026-10-06",
-        "purpose": "MEDIA BUY (ESTIMATE)",
-        "support_oppose": "O"
       }
     ],
     "supporting": {
-      "hamilton": 1447111.32,
-      "marshall": 1871872.83
+      "hamilton": 2190349.41,
+      "marshall": 1970893.2
     },
     "top_spenders": [
       {
@@ -2436,9 +2442,22 @@
         "opposes": "marshall"
       },
       {
-        "amount": 6600000.0,
+        "amount": 6800000.0,
         "committee_id": "C00945733",
         "committee_name": "THE 1861 INITIATIVE",
+        "opposes": "marshall"
+      },
+      {
+        "amount": 5893694.18,
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "opposes": "hamilton",
+        "supports": "marshall"
+      },
+      {
+        "amount": 3345621.92,
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
         "opposes": "marshall"
       },
       {
@@ -2448,23 +2467,17 @@
         "opposes": "hamilton"
       },
       {
-        "amount": 2682341.78,
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "opposes": "hamilton"
-      },
-      {
-        "amount": 2060273.92,
+        "amount": 2784184.0,
         "committee_id": "C00961276",
         "committee_name": "LOWER COSTS NOW",
         "opposes": "marshall",
         "supports": "hamilton"
       },
       {
-        "amount": 2037857.92,
-        "committee_id": "C00865444",
-        "committee_name": "WINSENATE",
-        "opposes": "marshall"
+        "amount": 2151528.29,
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "opposes": "hamilton"
       },
       {
         "amount": 2032590.0,
@@ -2480,13 +2493,7 @@
         "opposes": "hamilton"
       },
       {
-        "amount": 1287704.42,
-        "committee_id": "C00487470",
-        "committee_name": "CLUB FOR GROWTH ACTION",
-        "opposes": "hamilton"
-      },
-      {
-        "amount": 826729.0,
+        "amount": 908610.17,
         "committee_id": "C00962696",
         "committee_name": "NEW DEAL FOR ALL, INC.",
         "opposes": "marshall"
@@ -2496,6 +2503,12 @@
         "committee_id": "C00960385",
         "committee_name": "UNITED FUTURES PAC",
         "opposes": "marshall",
+        "supports": "hamilton"
+      },
+      {
+        "amount": 495000.0,
+        "committee_id": "C00951723",
+        "committee_name": "THE EDGE ACTION FUND",
         "supports": "hamilton"
       },
       {
@@ -2511,19 +2524,13 @@
         "supports": "hamilton"
       },
       {
-        "amount": 200000.0,
+        "amount": 207953.37,
         "committee_id": "C00657866",
         "committee_name": "PROTECT FREEDOM POLITICAL ACTION COMMITTEE",
         "supports": "marshall"
-      },
-      {
-        "amount": 183760.0,
-        "committee_id": "C00637041",
-        "committee_name": "FUND FOR A WORKING CONGRESS",
-        "opposes": "hamilton"
       }
     ],
-    "total": 31446301.41
+    "total": 38337986.3
   },
   "schema_version": 1
 }
