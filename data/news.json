@@ -26,8 +26,33 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-17T00:38:53.562052Z",
+  "generated_at": "2026-10-17T05:02:07.230674Z",
   "items": [
+    {
+      "id": "2e9dad041f9d",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-17T01:04:33Z",
+      "source": "Kansas City Star",
+      "summary": "What to know about the U.S. Senate race in Kansas between Roger Marshall and Adam Hamilton &nbsp;&nbsp; Kansas City Star",
+      "title": "What to know about the U.S. Senate race in Kansas between Roger Marshall and Adam Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOaksxQTY2WVBLRURFYkhaWEtQNGt0WDZ0YkY4dEJtb1RhaTFIV3NYLTlmX2pmRHZxdDhuRUt0UkVfa1Z6MzE2OEwzQzB4WDFNV1dhaEdtbWFYQjdTWU95bjBialJEei1DaWl0X3dBMG9lVFhWSW4xVWhlNXRLeXE1cVZaZlJVd1JHQlE"
+    },
+    {
+      "id": "b5658e1571dd",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-16T23:51:00Z",
+      "source": "WIBW",
+      "summary": "Election 2026: Roger Marshall, (R) U.S. Senate Incumbent &nbsp;&nbsp; WIBW",
+      "title": "Election 2026: Roger Marshall, (R) U.S. Senate Incumbent",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOR1VSRnBHOFE1S2g4dGZBMk1BWEhSMjdYVDVlTGNWYTFDYWJzbm1xemZWVVRLQkUxTWxsY3dBeWt3cUFxSTdKaTdJUExyZFZ6dmhzTW9jUUoxSGFrMEtoVTJrZEEwTjlwV0laSVN6LVVOSW5NWXhocGtRTjhpS25ZUG1fMkVNV1RPWmlV0gGfAUFVX3lxTE85UWpKT2JzWFFBTDRDcl9PY3owb251eEpuOG1seE82MjBySkFsM1BMRVhEQWxCVTd4bVgwcnBOWFJxdlNVN3RGRmFEd1lLN1pST21QcmxqMFY2S211WmVhV1psQWRGMjVFU3BmYWV2ZkR6RThZNU5XU255WXlhLUJhT2RMcnpxVktNSWV0X3VhOEpwSjNrQkRWN0VCX2dHVQ"
+    },
     {
       "id": "fc3065db7666",
       "kind": "news",
@@ -128,6 +153,18 @@
       "summary": "As the race for Kansas U.S. Senate continues to tighten, incumbent Sen. Roger Marshall (R) and challenger Adam Hamilton (D) will face off in a debate televised and livestreamed across the Sunflower State.",
       "title": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton",
       "url": "https://www.ksnt.com/elections/how-to-watch-the-kansas-u-s-senate-debate-between-sen-marshall-adam-hamilton"
+    },
+    {
+      "id": "fe9871efdfa5",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-16T10:00:00Z",
+      "source": "Kansas City Star",
+      "summary": "Sen. Roger Marshall touts his record, defends Trump policies in Topeka appearance &nbsp;&nbsp; Kansas City Star",
+      "title": "Sen. Roger Marshall touts his record, defends Trump policies in Topeka appearance",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE94aXZjbWVhOVRWQ01MTkU3bWQ2VFBodEludm04NFdxcl9HanhidlhFRnFjR2lFZnFfY1pwQzZWdkVUNE1Ea0FNQklJY1VEb080SHE0LVZxeVF1Y2RaVDNWWGF5ZVIwR21VOV91T09lVXppZi1WVTN4MV90cFV2QdIBfkFVX3lxTFB1MGlwSlotUVlieGpQRDFybnRCR0VQQkQ3cTBHY1Y5RUlXMG9JUjA3YmctOVM3ZFBOSmVjNXNGWjBtbFl5ZW42Q3RiSHgxbWh2VV9xZ09rU081LUpyTjZ6UWRwQ1hRVkF3TTRWMUtZLVE0UENmY0FNaVc5VFFXdw"
     },
     {
       "id": "8d2e57f4e014",
@@ -254,6 +291,18 @@
       "summary": "LAWRENCE \u2014 Democrat Adam Hamilton says reporting by Kansas Reflector and MS NOW warrants an ethics investigation into whether his opponent, U.S. Sen. Roger Marshall, misused government resources to support his campaign. The reporting looked at audio recordings, photos, videos, screenshots of text messages and calendar items from 2020 \u2014 when Marshall first ran for [&#8230;]",
       "title": "Adam Hamilton says reporting on Roger Marshall\u2019s use of taxpayer dollars warrants ethics inquiry",
       "url": "https://kansasreflector.com/2026/10/15/adam-hamilton-says-reporting-on-roger-marshalls-use-of-taxpayer-dollars-warrants-ethics-inquiry"
+    },
+    {
+      "id": "496f1f62d4d8",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-15T10:00:00Z",
+      "source": "Kansas City Star",
+      "summary": "Trump\u2019s visit to Kansas could help Sen. Marshall overcome tight polls. Or it could sink him &nbsp;&nbsp; Kansas City Star",
+      "title": "Trump\u2019s visit to Kansas could help Sen. Marshall overcome tight polls. Or it could sink him",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9pdHVIVTIxQVFEelU5a0FCMDVzUU4wSDRvcHRaN2t1dzRIOUl3dnpsRmhiN2ZxRW5oLU1EYWttMnJzRWpDd3BZal9IYkoyQW1oc3lCaWR5YmpubURsTlJaS3ltWUZwWmJkRDcwT0NUamU4ZWNvVWNsZnVvSGt4QdIBfkFVX3lxTE5ORXE4UXhQaVE1R05FVGh0aUI5eFlyd2FKeVRnM2pmMkFreW16MHUyRHVGa01sSjNRQ3ppY3dvZktoUC1OMDhIcU52bUdOYTZGU1dvbVd4RDd1eDZSSVYxYXp1VVgyUkx4M3Jub3JmVzFubXRvSE45cnBsS3NZZw"
     },
     {
       "id": "5833af415f1b",
@@ -386,8 +435,8 @@
         "marshall"
       ],
       "published_at": "2026-10-14T08:31:00Z",
-      "source": "KSN.com",
-      "summary": "Roger Marshall \u2013 Republican for US Senate &nbsp;&nbsp; KSN.com",
+      "source": "KSN-TV",
+      "summary": "Roger Marshall \u2013 Republican for US Senate &nbsp;&nbsp; KSN-TV",
       "title": "Roger Marshall \u2013 Republican for US Senate",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQeWhvTDF2ckNEVGkwal9kMjlXYjU2b001YzF5RU9ZcEctUEg4dXhNRE9hSTl3N3RZTlBFVE1OWDNELXgzRWhCMnRBMjBKY0xEYTcxTWlOZW1kQVhjSFZyNHJ3YkdUdFRxai1vd2pDUVlXWFEwWmIzTVlTdGdmbzd0MEdzczl0M1FWTXpJR252X1d2dlRSNnFmTTU1b203Y1NE0gGmAUFVX3lxTE5wbXFiMksySGJnQUNJR3BoVDh4NzRqdXBfT1ZoLWxvc3ZGQWhTVHRvOXZnczlwYXdhRTJheWxUZGhvQ3VJM2ZCcC1YVzFMNWZaYjFURW9xQU4ybjZFcS1uWFBSWi15TThqc0hmRFVOYk52QnBXN2lkeXBCUEUtd1pSWUp1c0J6SnR2MEVDOXlOc3hkVnZlbm52dWs1ZTVYclc2VDNPbEE"
     },
@@ -1451,57 +1500,6 @@
       "summary": "Roger Marshall is running an all time terrible campaign &nbsp;&nbsp; Public Notice | Aaron Rupar",
       "title": "Roger Marshall is running an all time terrible campaign",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9TSkU1b1FFZ2x0c2VBa0p4ZW16QjY0R2YxQ0VXRDlMWTVVNUpIemRtNVZNbDFoRUFCaVI3RGhMR0lidVF3Z2xMY1FqX3U1TlV4SkFxYXBTOWg3SWExc1pQXzZhaw"
-    },
-    {
-      "id": "ad09aa1e4f8c",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-07T07:00:00Z",
-      "source": "KMBC",
-      "summary": "Kansas Senate race: U.S. Sen. Roger Marshall expects a closer election as polls show a tight contest &nbsp;&nbsp; KMBC",
-      "title": "Kansas Senate race: U.S. Sen. Roger Marshall expects a closer election as polls show a tight contest",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQRm1BUHg5U0pHaEs5TWtkU1Q3Ri1paGdPNngwdEE4Q1VoRFdaeVFqaXkwTzJoMXJ1T2FnRmNkNE1hOVJVOS1feXg2NU9FeUZ4aVpsdkk3eS1sN0J5N0lPREItSmU3X0pYeFBXa2pXcDNXaVdFQ1lxU0Rmb2hXT3h2ZWN2RDdxWTZma2daOFc5OUItUjFYZ2xrb1VYTy1iV05ZU1E"
-    },
-    {
-      "id": "f96bf7d2aace",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-06T23:27:00Z",
-      "source": "KMBC",
-      "summary": "Cook Political Report: Kansas Senate race between Roger Marshall, Adam Hamilton a 'toss up' &nbsp;&nbsp; KMBC",
-      "title": "Cook Political Report: Kansas Senate race between Roger Marshall, Adam Hamilton a 'toss up'",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQc3lmYTFhRlZEXzZKT2szY3F0VzNvVGM4X2NvZng0cjJvY3dQMmxiUjZ0bDVGN3VQS010QXQ2WnMzQnhRT19wMWdJUk9RV0Zja25INGNYaUhrMV81OEZBNEdHRDJsTVM2WTNmTHI4elpvMnJwYTM2Vm84MlMzOFcyTVJINGN5M2xOUkFraTVqUjI0c0FMQWN3"
-    },
-    {
-      "id": "897998785404",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-06T21:06:00Z",
-      "source": "CBS News",
-      "summary": "Kansas could send first Democrat to Senate since 1932 as polls shows close Hamilton-Marshall race &nbsp;&nbsp; CBS News",
-      "title": "Kansas could send first Democrat to Senate since 1932 as polls shows close Hamilton-Marshall race",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPX21GOUxsMnpOUzRlRHJlUThZRUlheHg3LUpZQ0NOZVBERUhYaU44UzBrb1I2Z00xWHhMSFk4WVdIa0w0Nm91b24zMzB4RmJwbGtmZXpORE9Ra28xeWlDZHJMZDFiWUg4RG1KMW9uRjFtV1M3bGd2OFdzOEsxSk1xQXg4a2trT1BhQWZzM2dSMUIyX3Z1Nm1wbl9SZk1qamM"
-    },
-    {
-      "id": "e549f9308f5a",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-06T20:36:58Z",
-      "source": "FourStatesHomepage.com",
-      "summary": "Roger Marshall and Adam Hamilton set for live debate &nbsp;&nbsp; FourStatesHomepage.com",
-      "title": "Roger Marshall and Adam Hamilton set for live debate",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdlZiVlF4OW5hNmJpTjVqcmNyTDJrU1piUzdwM0RkcTJNblAwLWZVRHhBcUlYLUNiRTJHaV94QjVmNlNDT3U1eWtvZV8xVko2eUhnOGViQUZXdU5DckRIdG9EYWRDOG0zc2tBdTJxN21SYzJJR0Zfajl2Y2pBZ002ejRBTlNHU0JFc1liWDFXWGV6NGl6X2V4SlpIeDVLd0M40gGmAUFVX3lxTFA4N0ZVMHgyYmgwc3hvVEFPQlk3QmtwN29CVGlIa2IyQ2RfRGZQTEthTWw5VGQ3WlRxTjJYZEhSNUhtNTdOWkxPYW5Dd2dDMGtsQjJqWS13dFd0VDNQQ1J2NkVSRldvenJZS19HczlPSVJtWkdkZWNiMHphX01iUzRSUllDZEI3dEtXelItbk5WS1MxU3ZhX1dObzV6QVAtcnk1N3hfcmc"
     }
   ],
   "schema_version": 1

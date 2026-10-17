@@ -7,17 +7,12 @@
     }
   ],
   "consensus": {
-    "as_of": "2026-10-17T00:34:39.961201Z",
+    "as_of": "2026-10-17T04:58:00.293416Z",
     "change_1h": 0.0,
     "change_24h": 0.008,
-    "change_7d": -0.0105,
+    "change_7d": -0.0071,
     "hamilton": 0.402,
     "history": [
-      {
-        "hamilton": 0.2402,
-        "marshall": 0.7598,
-        "t": "2026-09-13T12:05:51.255431Z"
-      },
       {
         "hamilton": 0.24,
         "marshall": 0.76,
@@ -917,6 +912,11 @@
         "hamilton": 0.402,
         "marshall": 0.598,
         "t": "2026-10-17T00:34:39.961201Z"
+      },
+      {
+        "hamilton": 0.402,
+        "marshall": 0.598,
+        "t": "2026-10-17T04:58:00.293416Z"
       }
     ],
     "marshall": 0.598,
@@ -925,7 +925,7 @@
     ]
   },
   "disclaimer": "Prediction-market prices are an implied probability of winning, not a projected vote share.",
-  "generated_at": "2026-10-17T00:34:39.966051Z",
+  "generated_at": "2026-10-17T04:58:00.297807Z",
   "margin": {
     "buckets": [
       {
@@ -959,14 +959,14 @@
         "high": 7.0,
         "label": "Marshall by 5\u20137",
         "low": 5.0,
-        "probability": 0.095
+        "probability": 0.09
       },
       {
         "candidate_id": "marshall",
         "high": 9.0,
         "label": "Marshall by 7\u20139",
         "low": 7.0,
-        "probability": 0.0895
+        "probability": 0.0945
       },
       {
         "candidate_id": "marshall",
@@ -987,14 +987,14 @@
         "high": 15.0,
         "label": "Marshall by 13\u201315",
         "low": 13.0,
-        "probability": 0.004
+        "probability": 0.0035
       },
       {
         "candidate_id": "marshall",
         "high": 17.0,
         "label": "Marshall by 15\u201317",
         "low": 15.0,
-        "probability": 0.001
+        "probability": 0.0015
       },
       {
         "candidate_id": "marshall",
@@ -1032,7 +1032,7 @@
   },
   "markets": [
     {
-      "fetched_at": "2026-10-17T00:34:34.413667Z",
+      "fetched_at": "2026-10-17T04:57:54.751177Z",
       "hamilton": 0.402,
       "market_id": "KXKSSENGOVCOMBO-derived",
       "marshall": 0.598,
