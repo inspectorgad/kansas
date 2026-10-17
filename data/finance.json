@@ -389,7 +389,7 @@
         ],
         "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
         "itemized_total": 3331937.67,
-        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (25 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
+        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (24 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
         "large_donors": [
           {
             "amount": 13097.0,
@@ -593,9 +593,7 @@
             "amount": 7000.0,
             "city": "WASHINGTON",
             "employer": "BUCHANAN INGERSOLL & ROONEY",
-            "first_gift": "2026-07-15",
             "gifts": 2,
-            "last_gift": "2026-07-15",
             "name": "ABRAMSON, RONALD",
             "occupation": "ATTORNEY",
             "state": "DC"
@@ -1370,7 +1368,7 @@
         ],
         "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
         "itemized_total": 1904438.09,
-        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (25 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
+        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (24 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
         "large_donors": [
           {
             "amount": 12000.0,
@@ -1563,9 +1561,7 @@
             "amount": 7000.0,
             "city": "HOUSTON",
             "employer": "SELF",
-            "first_gift": "2025-11-12",
             "gifts": 1,
-            "last_gift": "2025-11-12",
             "name": "WEEKLEY, RICHARD",
             "occupation": "REAL ESTATE DEVELOPER",
             "state": "TX"
@@ -2060,7 +2056,7 @@
       "url": "https://docquery.fec.gov/pdf/970/202607209890965970/202607209890965970.pdf"
     }
   ],
-  "generated_at": "2026-10-17T05:02:04.227368Z",
+  "generated_at": "2026-10-17T09:19:43.553143Z",
   "outside_spending": {
     "opposing": {
       "hamilton": 9660026.56,

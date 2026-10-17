@@ -1,0 +1,2529 @@
+{
+  "attribution": [
+    {
+      "license": "U.S. Government work, public domain",
+      "name": "Federal Election Commission (openFEC)",
+      "url": "https://api.open.fec.gov/developers/"
+    }
+  ],
+  "candidates": {
+    "hamilton": {
+      "affiliated_committees": [],
+      "burn_rate_monthly": 80158.35,
+      "candidate_id": "hamilton",
+      "cash_on_hand": 1730620.91,
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "coverage_end_date": "2026-07-15",
+      "coverage_start_date": "2026-02-26",
+      "debts_owed": 50000.0,
+      "donor_states": [
+        {
+          "amount": 2335485.75,
+          "donors": 3180,
+          "name": "Kansas",
+          "pct": 70.0,
+          "state": "KS"
+        },
+        {
+          "amount": 343043.87,
+          "donors": 375,
+          "name": "Missouri",
+          "pct": 10.3,
+          "state": "MO"
+        },
+        {
+          "amount": 91464.14,
+          "donors": 150,
+          "name": "Texas",
+          "pct": 2.7,
+          "state": "TX"
+        },
+        {
+          "amount": 63768.75,
+          "donors": 37,
+          "name": "District Of Columbia",
+          "pct": 1.9,
+          "state": "DC"
+        },
+        {
+          "amount": 46326.59,
+          "donors": 80,
+          "name": "Florida",
+          "pct": 1.4,
+          "state": "FL"
+        },
+        {
+          "amount": 45883.06,
+          "donors": 77,
+          "name": "California",
+          "pct": 1.4,
+          "state": "CA"
+        },
+        {
+          "amount": 42492.98,
+          "donors": 64,
+          "name": "Arkansas",
+          "pct": 1.3,
+          "state": "AR"
+        },
+        {
+          "amount": 40300.4,
+          "donors": 21,
+          "name": "Arizona",
+          "pct": 1.2,
+          "state": "AZ"
+        },
+        {
+          "amount": 38525.31,
+          "donors": 53,
+          "name": "Virginia",
+          "pct": 1.2,
+          "state": "VA"
+        },
+        {
+          "amount": 25520.6,
+          "donors": 29,
+          "name": "New York",
+          "pct": 0.8,
+          "state": "NY"
+        },
+        {
+          "amount": 24844.66,
+          "donors": 27,
+          "name": "Maryland",
+          "pct": 0.7,
+          "state": "MD"
+        },
+        {
+          "amount": 24348.52,
+          "donors": 29,
+          "name": "Colorado",
+          "pct": 0.7,
+          "state": "CO"
+        },
+        {
+          "amount": 23894.05,
+          "donors": 42,
+          "name": "North Carolina",
+          "pct": 0.7,
+          "state": "NC"
+        },
+        {
+          "amount": 21904.93,
+          "donors": 21,
+          "name": "Ohio",
+          "pct": 0.7,
+          "state": "OH"
+        },
+        {
+          "amount": 19351.0,
+          "donors": 33,
+          "name": "Illinois",
+          "pct": 0.6,
+          "state": "IL"
+        },
+        {
+          "amount": 18950.0,
+          "donors": 14,
+          "name": "Washington",
+          "pct": 0.6,
+          "state": "WA"
+        },
+        {
+          "amount": 17072.1,
+          "donors": 30,
+          "name": "Tennessee",
+          "pct": 0.5,
+          "state": "TN"
+        },
+        {
+          "amount": 14631.55,
+          "donors": 10,
+          "name": "Massachusetts",
+          "pct": 0.4,
+          "state": "MA"
+        },
+        {
+          "amount": 14500.0,
+          "donors": 5,
+          "name": "Connecticut",
+          "pct": 0.4,
+          "state": "CT"
+        },
+        {
+          "amount": 12799.22,
+          "donors": 27,
+          "name": "South Carolina",
+          "pct": 0.4,
+          "state": "SC"
+        },
+        {
+          "amount": 8757.5,
+          "donors": 24,
+          "name": "Minnesota",
+          "pct": 0.3,
+          "state": "MN"
+        },
+        {
+          "amount": 7422.8,
+          "donors": 20,
+          "name": "Georgia",
+          "pct": 0.2,
+          "state": "GA"
+        },
+        {
+          "amount": 7000.0,
+          "donors": 2,
+          "name": "Montana",
+          "pct": 0.2,
+          "state": "MT"
+        },
+        {
+          "amount": 6442.5,
+          "donors": 23,
+          "name": "Indiana",
+          "pct": 0.2,
+          "state": "IN"
+        },
+        {
+          "amount": 5750.0,
+          "donors": 6,
+          "name": "Idaho",
+          "pct": 0.2,
+          "state": "ID"
+        },
+        {
+          "amount": 4387.8,
+          "donors": 4,
+          "name": "New Hampshire",
+          "pct": 0.1,
+          "state": "NH"
+        },
+        {
+          "amount": 4190.63,
+          "donors": 6,
+          "name": "Nevada",
+          "pct": 0.1,
+          "state": "NV"
+        },
+        {
+          "amount": 3225.0,
+          "donors": 9,
+          "name": "Pennsylvania",
+          "pct": 0.1,
+          "state": "PA"
+        },
+        {
+          "amount": 3026.85,
+          "donors": 13,
+          "name": "Oklahoma",
+          "pct": 0.1,
+          "state": "OK"
+        },
+        {
+          "amount": 2975.0,
+          "donors": 8,
+          "name": "Michigan",
+          "pct": 0.1,
+          "state": "MI"
+        },
+        {
+          "amount": 2703.06,
+          "donors": 17,
+          "name": "Alabama",
+          "pct": 0.1,
+          "state": "AL"
+        },
+        {
+          "amount": 2525.0,
+          "donors": 4,
+          "name": "Nebraska",
+          "pct": 0.1,
+          "state": "NE"
+        },
+        {
+          "amount": 2500.0,
+          "donors": 9,
+          "name": "Wisconsin",
+          "pct": 0.1,
+          "state": "WI"
+        },
+        {
+          "amount": 2019.68,
+          "donors": 13,
+          "name": "Louisiana",
+          "pct": 0.1,
+          "state": "LA"
+        },
+        {
+          "amount": 1939.05,
+          "donors": 14,
+          "name": "Oregon",
+          "pct": 0.1,
+          "state": "OR"
+        },
+        {
+          "amount": 1500.0,
+          "donors": 1,
+          "name": "Alaska",
+          "pct": 0.0,
+          "state": "AK"
+        },
+        {
+          "amount": 1500.0,
+          "donors": 2,
+          "name": "Mississippi",
+          "pct": 0.0,
+          "state": "MS"
+        },
+        {
+          "amount": 1038.1,
+          "donors": 2,
+          "name": "New Jersey",
+          "pct": 0.0,
+          "state": "NJ"
+        },
+        {
+          "amount": 1000.0,
+          "donors": 1,
+          "name": "Wyoming",
+          "pct": 0.0,
+          "state": "WY"
+        },
+        {
+          "amount": 500.0,
+          "donors": 2,
+          "name": "New Mexico",
+          "pct": 0.0,
+          "state": "NM"
+        },
+        {
+          "amount": 500.0,
+          "donors": 5,
+          "name": "Utah",
+          "pct": 0.0,
+          "state": "UT"
+        },
+        {
+          "amount": 470.0,
+          "donors": 5,
+          "name": "South Dakota",
+          "pct": 0.0,
+          "state": "SD"
+        },
+        {
+          "amount": 400.0,
+          "donors": 2,
+          "name": "Delaware",
+          "pct": 0.0,
+          "state": "DE"
+        },
+        {
+          "amount": 252.0,
+          "donors": 2,
+          "name": "West Virginia",
+          "pct": 0.0,
+          "state": "WV"
+        },
+        {
+          "amount": 250.0,
+          "donors": 1,
+          "name": "Iowa",
+          "pct": 0.0,
+          "state": "IA"
+        },
+        {
+          "amount": 250.0,
+          "donors": 1,
+          "name": "Kentucky",
+          "pct": 0.0,
+          "state": "KY"
+        },
+        {
+          "amount": 250.0,
+          "donors": 1,
+          "name": "Vermont",
+          "pct": 0.0,
+          "state": "VT"
+        },
+        {
+          "amount": 207.5,
+          "donors": 2,
+          "name": "Hawaii",
+          "pct": 0.0,
+          "state": "HI"
+        },
+        {
+          "amount": 50.0,
+          "donors": 1,
+          "name": "Rhode Island",
+          "pct": 0.0,
+          "state": "RI"
+        }
+      ],
+      "donors": {
+        "committee_donor_note": "Organizations giving directly to the campaign. Money routed through a conduit such as ActBlue or WinRed is individual money and is counted with individuals, not here. A committee transfer is money moved from a joint fundraising or affiliated committee rather than a donation from an outside group.",
+        "committee_donors": [
+          {
+            "amount": 10000.0,
+            "committee_id": "C00538835",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "COMMON GROUND PAC"
+          },
+          {
+            "amount": 5000.0,
+            "committee_id": "C00493700",
+            "gifts": 1,
+            "kind": "pac",
+            "name": "BLUE HEN FEDERAL PAC"
+          },
+          {
+            "amount": 2500.0,
+            "committee_id": "C00412304",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "MONTANANS FOR TESTER"
+          }
+        ],
+        "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
+        "itemized_total": 3331937.67,
+        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (24 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
+        "large_donors": [
+          {
+            "amount": 13097.0,
+            "city": "OLATHE",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-06-05",
+            "gifts": 5,
+            "last_gift": "2026-06-30",
+            "name": "WEINBERG, GAIL",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 10680.6,
+            "city": "LEAWOOD",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-03-02",
+            "gifts": 3,
+            "last_gift": "2026-04-30",
+            "name": "KASTNER, RICK",
+            "occupation": "RETIRED",
+            "state": "KS"
+          },
+          {
+            "amount": 10375.0,
+            "city": "OVERLAND PARK",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-04-29",
+            "gifts": 4,
+            "last_gift": "2026-04-30",
+            "name": "TORLINE, JAYNE",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 10187.5,
+            "city": "STILWELL",
+            "employer": "SELF EMPLOYED",
+            "first_gift": "2026-03-02",
+            "gifts": 4,
+            "last_gift": "2026-04-30",
+            "name": "FAIN, DOUGLAS",
+            "occupation": "ORAL SURGEON",
+            "state": "KS"
+          },
+          {
+            "amount": 8735.0,
+            "city": "MISSION HILLS",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-05-06",
+            "gifts": 4,
+            "last_gift": "2026-06-05",
+            "name": "SLEGMAN ISENBERG, ANN",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 7500.0,
+            "city": "LEAWOOD",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-06-25",
+            "gifts": 2,
+            "last_gift": "2026-06-25",
+            "name": "GOLDSTEIN, EDWARD",
+            "occupation": "RETIRED",
+            "state": "KS"
+          },
+          {
+            "amount": 7500.0,
+            "city": "OLATHE",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-04-30",
+            "gifts": 3,
+            "last_gift": "2026-05-27",
+            "name": "VERMEIRE, DEAN",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 7311.85,
+            "city": "LEAWOOD",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-04-02",
+            "gifts": 3,
+            "last_gift": "2026-06-13",
+            "name": "PETERSEN, JOHN",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "LEAWOOD",
+            "employer": "COLORECTAL SURGICAL ASSOCIATES",
+            "first_gift": "2026-05-06",
+            "gifts": 4,
+            "last_gift": "2026-05-06",
+            "name": "O'BRIEN, LINA",
+            "occupation": "PHYSICIAN",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "OVERLAND PARK",
+            "employer": "UNITED METHODIST CHURCH",
+            "first_gift": "2026-03-04",
+            "gifts": 3,
+            "last_gift": "2026-05-01",
+            "name": "SHOUP, GLEN",
+            "occupation": "MINISTER",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "OVERLAND PARK",
+            "employer": "SELF EMPLOYED",
+            "first_gift": "2026-07-06",
+            "gifts": 2,
+            "last_gift": "2026-07-06",
+            "name": "PHILLIPS, MIKE",
+            "occupation": "CONSULTANT",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "KANSAS CITY",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-07-15",
+            "gifts": 2,
+            "last_gift": "2026-07-15",
+            "name": "O'NEILL, CARLA",
+            "occupation": "NOT EMPLOYED",
+            "state": "MO"
+          },
+          {
+            "amount": 7000.0,
+            "city": "GREENWICH",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-07-14",
+            "gifts": 2,
+            "last_gift": "2026-07-14",
+            "name": "MANDEL, SUE",
+            "occupation": "NOT EMPLOYED",
+            "state": "CT"
+          },
+          {
+            "amount": 7000.0,
+            "city": "GREENWICH",
+            "employer": "LONE PINE CAPITAL",
+            "first_gift": "2026-07-15",
+            "gifts": 2,
+            "last_gift": "2026-07-15",
+            "name": "MANDEL, STEVE",
+            "occupation": "FOUNDER",
+            "state": "CT"
+          },
+          {
+            "amount": 7000.0,
+            "city": "KNOXVILLE",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-05-23",
+            "gifts": 2,
+            "last_gift": "2026-07-10",
+            "name": "LAWSON, JANET",
+            "occupation": "NOT EMPLOYED",
+            "state": "TN"
+          },
+          {
+            "amount": 7000.0,
+            "city": "ATHERTON",
+            "employer": "MEDLEY PARTNERS LLC",
+            "first_gift": "2026-07-13",
+            "gifts": 2,
+            "last_gift": "2026-07-13",
+            "name": "HEISING, MARK",
+            "occupation": "MANAGING DIRECTOR",
+            "state": "CA"
+          },
+          {
+            "amount": 7000.0,
+            "city": "NEW YORK",
+            "employer": "JAMES AND JUDITH K. DIMON FOUNDATION",
+            "first_gift": "2026-07-09",
+            "gifts": 2,
+            "last_gift": "2026-07-09",
+            "name": "DIMON, JUDITH",
+            "occupation": "CO-MANAGER",
+            "state": "NY"
+          },
+          {
+            "amount": 7000.0,
+            "city": "GREAT BEND",
+            "employer": "BAUER PIKE BAUER WARY & CARROLL LLC",
+            "first_gift": "2026-04-30",
+            "gifts": 3,
+            "last_gift": "2026-07-12",
+            "name": "BAUER, ROBERT",
+            "occupation": "ATTORNEY",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "WASHINGTON",
+            "employer": "BUCHANAN INGERSOLL & ROONEY",
+            "gifts": 2,
+            "name": "ABRAMSON, RONALD",
+            "occupation": "ATTORNEY",
+            "state": "DC"
+          },
+          {
+            "amount": 7000.0,
+            "city": "WASHINGTON",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-07-15",
+            "gifts": 2,
+            "last_gift": "2026-07-15",
+            "name": "ABRAMSON, ANNE",
+            "occupation": "NOT EMPLOYED",
+            "state": "DC"
+          },
+          {
+            "amount": 7000.0,
+            "city": "OVERLAND PARK",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-05-01",
+            "gifts": 2,
+            "last_gift": "2026-05-01",
+            "name": "WOOD, BRENDA",
+            "occupation": "RETIRED",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "OVERLAND PARK",
+            "employer": "ST LUKES",
+            "first_gift": "2026-05-01",
+            "gifts": 2,
+            "last_gift": "2026-05-01",
+            "name": "WOOD, BARRY",
+            "occupation": "PRIVATE CONSULTING NEPHROLOGIST",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "OLATHE",
+            "employer": "SELF EMPLOYED",
+            "first_gift": "2026-05-06",
+            "gifts": 2,
+            "last_gift": "2026-05-06",
+            "name": "WARREN, ROGER",
+            "occupation": "FARMER",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "LEAWOOD",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-04-29",
+            "gifts": 2,
+            "last_gift": "2026-04-29",
+            "name": "WALSWORTH, SHEA",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "LEAWOOD",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-06-13",
+            "gifts": 2,
+            "last_gift": "2026-06-24",
+            "name": "TOUGHEY, KAREN",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          }
+        ],
+        "size_buckets": [
+          {
+            "amount": 631244.69,
+            "count": 583,
+            "label": "$1,000 to $1,999"
+          },
+          {
+            "amount": 2060346.4,
+            "count": 638,
+            "label": "$2,000 and above"
+          },
+          {
+            "amount": 221493.42,
+            "count": 865,
+            "label": "$200 to $499"
+          },
+          {
+            "amount": 295400.63,
+            "count": 577,
+            "label": "$500 to $999"
+          },
+          {
+            "amount": 895545.69,
+            "count": 0,
+            "label": "Under $200"
+          }
+        ],
+        "threshold": 1000.0,
+        "top_cities": [
+          {
+            "amount": 46492.45,
+            "donors": 6,
+            "label": "Leawood, KS"
+          },
+          {
+            "amount": 38375.0,
+            "donors": 5,
+            "label": "Overland Park, KS"
+          },
+          {
+            "amount": 27597.0,
+            "donors": 3,
+            "label": "Olathe, KS"
+          },
+          {
+            "amount": 14000.0,
+            "donors": 2,
+            "label": "Greenwich, CT"
+          },
+          {
+            "amount": 14000.0,
+            "donors": 2,
+            "label": "Washington, DC"
+          },
+          {
+            "amount": 10187.5,
+            "donors": 1,
+            "label": "Stilwell, KS"
+          },
+          {
+            "amount": 8735.0,
+            "donors": 1,
+            "label": "Mission Hills, KS"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Kansas City, MO"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Knoxville, TN"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Atherton, CA"
+          }
+        ],
+        "top_employers": [
+          {
+            "amount": 14000.0,
+            "donors": 4,
+            "label": "REECE NICHOLS"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "SOUTHLAW, P.C."
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "STRICKLAND CONSTRUCTION COMPANY"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "BUCHANAN INGERSOLL & ROONEY"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "PLATTE CO. HEALTH DEPT."
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "CBKC"
+          },
+          {
+            "amount": 3800.0,
+            "donors": 9,
+            "label": "CHILDREN'S MERCY"
+          },
+          {
+            "amount": 3500.0,
+            "donors": 1,
+            "label": "WILKINSON STEKLOFF LLP"
+          },
+          {
+            "amount": 3500.0,
+            "donors": 2,
+            "label": "SHAMBERG JOHNSON BERGMAN"
+          },
+          {
+            "amount": 3500.0,
+            "donors": 2,
+            "label": "SWS"
+          }
+        ],
+        "top_occupations": [
+          {
+            "amount": 90797.62,
+            "donors": 95,
+            "label": "PHYSICIAN"
+          },
+          {
+            "amount": 68444.87,
+            "donors": 54,
+            "label": "OWNER"
+          },
+          {
+            "amount": 19545.43,
+            "donors": 14,
+            "label": "ARCHITECT"
+          },
+          {
+            "amount": 14456.55,
+            "donors": 15,
+            "label": "BANKER"
+          },
+          {
+            "amount": 14250.0,
+            "donors": 5,
+            "label": "REAL ESTATE AGENT"
+          },
+          {
+            "amount": 10187.5,
+            "donors": 4,
+            "label": "ORAL SURGEON"
+          },
+          {
+            "amount": 9750.0,
+            "donors": 7,
+            "label": "EXECUTIVE"
+          },
+          {
+            "amount": 9519.05,
+            "donors": 4,
+            "label": "PEDIATRICIAN"
+          },
+          {
+            "amount": 8528.13,
+            "donors": 6,
+            "label": "EXECUTIVE DIRECTOR"
+          },
+          {
+            "amount": 8000.0,
+            "donors": 3,
+            "label": "CARDIOLOGIST"
+          }
+        ],
+        "unitemized_total": 765890.88
+      },
+      "fec_candidate_id": "S6KS00312",
+      "in_state_amount": 2335485.75,
+      "in_state_pct": 70.0,
+      "individual_contributions": 4097828.55,
+      "other_receipts": 3038.54,
+      "pac_contributions": 17500.0,
+      "party_contributions": 0.0,
+      "small_dollar_contributions": 765890.88,
+      "total_disbursements": 2438456.9,
+      "total_receipts": 4169077.81,
+      "transfers_in": 0.0
+    },
+    "marshall": {
+      "affiliated_committees": [
+        {
+          "cash_on_hand": 282617.73,
+          "committee_id": "C00632323",
+          "committee_type": "Q",
+          "designation": "D",
+          "designation_full": "Leadership PAC",
+          "disbursements": 648563.11,
+          "name": "DEFEND OUR CONSERVATIVE SENATE PAC (DOC'S PAC)",
+          "receipts": 784867.4
+        }
+      ],
+      "burn_rate_monthly": 169730.25,
+      "candidate_id": "marshall",
+      "cash_on_hand": 922088.02,
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "coverage_end_date": "2026-09-30",
+      "coverage_start_date": "2025-01-01",
+      "debts_owed": 0.0,
+      "donor_states": [
+        {
+          "amount": 444498.42,
+          "donors": 605,
+          "name": "Kansas",
+          "pct": 18.0,
+          "state": "KS"
+        },
+        {
+          "amount": 233288.34,
+          "donors": 369,
+          "name": "Florida",
+          "pct": 9.4,
+          "state": "FL"
+        },
+        {
+          "amount": 210459.41,
+          "donors": 210,
+          "name": "Texas",
+          "pct": 8.5,
+          "state": "TX"
+        },
+        {
+          "amount": 185087.63,
+          "donors": 84,
+          "name": "New York",
+          "pct": 7.5,
+          "state": "NY"
+        },
+        {
+          "amount": 150827.35,
+          "donors": 250,
+          "name": "California",
+          "pct": 6.1,
+          "state": "CA"
+        },
+        {
+          "amount": 127095.13,
+          "donors": 121,
+          "name": "Illinois",
+          "pct": 5.1,
+          "state": "IL"
+        },
+        {
+          "amount": 123649.34,
+          "donors": 174,
+          "name": "Virginia",
+          "pct": 5.0,
+          "state": "VA"
+        },
+        {
+          "amount": 90889.47,
+          "donors": 106,
+          "name": "New Jersey",
+          "pct": 3.7,
+          "state": "NJ"
+        },
+        {
+          "amount": 85485.53,
+          "donors": 68,
+          "name": "Missouri",
+          "pct": 3.5,
+          "state": "MO"
+        },
+        {
+          "amount": 71083.33,
+          "donors": 67,
+          "name": "District Of Columbia",
+          "pct": 2.9,
+          "state": "DC"
+        },
+        {
+          "amount": 69866.19,
+          "donors": 72,
+          "name": "Massachusetts",
+          "pct": 2.8,
+          "state": "MA"
+        },
+        {
+          "amount": 67578.52,
+          "donors": 163,
+          "name": "Georgia",
+          "pct": 2.7,
+          "state": "GA"
+        },
+        {
+          "amount": 51813.58,
+          "donors": 69,
+          "name": "North Carolina",
+          "pct": 2.1,
+          "state": "NC"
+        },
+        {
+          "amount": 49800.0,
+          "donors": 26,
+          "name": "Oklahoma",
+          "pct": 2.0,
+          "state": "OK"
+        },
+        {
+          "amount": 44500.0,
+          "donors": 14,
+          "name": "Oregon",
+          "pct": 1.8,
+          "state": "OR"
+        },
+        {
+          "amount": 37569.0,
+          "donors": 60,
+          "name": "Tennessee",
+          "pct": 1.5,
+          "state": "TN"
+        },
+        {
+          "amount": 37259.77,
+          "donors": 67,
+          "name": "Ohio",
+          "pct": 1.5,
+          "state": "OH"
+        },
+        {
+          "amount": 37150.0,
+          "donors": 14,
+          "name": "Connecticut",
+          "pct": 1.5,
+          "state": "CT"
+        },
+        {
+          "amount": 33111.24,
+          "donors": 27,
+          "name": "Maryland",
+          "pct": 1.3,
+          "state": "MD"
+        },
+        {
+          "amount": 32856.31,
+          "donors": 118,
+          "name": "Louisiana",
+          "pct": 1.3,
+          "state": "LA"
+        },
+        {
+          "amount": 31042.0,
+          "donors": 43,
+          "name": "Pennsylvania",
+          "pct": 1.3,
+          "state": "PA"
+        },
+        {
+          "amount": 29500.0,
+          "donors": 9,
+          "name": "Puerto Rico",
+          "pct": 1.2,
+          "state": "PR"
+        },
+        {
+          "amount": 25119.82,
+          "donors": 120,
+          "name": "Alabama",
+          "pct": 1.0,
+          "state": "AL"
+        },
+        {
+          "amount": 22142.25,
+          "donors": 121,
+          "name": "Colorado",
+          "pct": 0.9,
+          "state": "CO"
+        },
+        {
+          "amount": 19081.18,
+          "donors": 21,
+          "name": "Idaho",
+          "pct": 0.8,
+          "state": "ID"
+        },
+        {
+          "amount": 19073.85,
+          "donors": 77,
+          "name": "South Carolina",
+          "pct": 0.8,
+          "state": "SC"
+        },
+        {
+          "amount": 18972.48,
+          "donors": 203,
+          "name": "Arizona",
+          "pct": 0.8,
+          "state": "AZ"
+        },
+        {
+          "amount": 16800.0,
+          "donors": 13,
+          "name": "Nevada",
+          "pct": 0.7,
+          "state": "NV"
+        },
+        {
+          "amount": 15970.51,
+          "donors": 13,
+          "name": "Utah",
+          "pct": 0.6,
+          "state": "UT"
+        },
+        {
+          "amount": 15250.0,
+          "donors": 9,
+          "name": "South Dakota",
+          "pct": 0.6,
+          "state": "SD"
+        },
+        {
+          "amount": 11550.0,
+          "donors": 30,
+          "name": "Wisconsin",
+          "pct": 0.5,
+          "state": "WI"
+        },
+        {
+          "amount": 10406.66,
+          "donors": 18,
+          "name": "Mississippi",
+          "pct": 0.4,
+          "state": "MS"
+        },
+        {
+          "amount": 9754.5,
+          "donors": 25,
+          "name": "Minnesota",
+          "pct": 0.4,
+          "state": "MN"
+        },
+        {
+          "amount": 9250.0,
+          "donors": 7,
+          "name": "Arkansas",
+          "pct": 0.4,
+          "state": "AR"
+        },
+        {
+          "amount": 7852.54,
+          "donors": 9,
+          "name": "Indiana",
+          "pct": 0.3,
+          "state": "IN"
+        },
+        {
+          "amount": 7252.52,
+          "donors": 11,
+          "name": "Michigan",
+          "pct": 0.3,
+          "state": "MI"
+        },
+        {
+          "amount": 7250.0,
+          "donors": 5,
+          "name": "Iowa",
+          "pct": 0.3,
+          "state": "IA"
+        },
+        {
+          "amount": 3500.0,
+          "donors": 3,
+          "name": "Alaska",
+          "pct": 0.1,
+          "state": "AK"
+        },
+        {
+          "amount": 2000.0,
+          "donors": 1,
+          "name": "Vermont",
+          "pct": 0.1,
+          "state": "VT"
+        },
+        {
+          "amount": 2000.0,
+          "donors": 1,
+          "name": "New Hampshire",
+          "pct": 0.1,
+          "state": "NH"
+        },
+        {
+          "amount": 2000.0,
+          "donors": 1,
+          "name": "North Dakota",
+          "pct": 0.1,
+          "state": "ND"
+        },
+        {
+          "amount": 1600.0,
+          "donors": 3,
+          "name": "Montana",
+          "pct": 0.1,
+          "state": "MT"
+        },
+        {
+          "amount": 1000.0,
+          "donors": 1,
+          "name": "Rhode Island",
+          "pct": 0.0,
+          "state": "RI"
+        },
+        {
+          "amount": 525.0,
+          "donors": 2,
+          "name": "Hawaii",
+          "pct": 0.0,
+          "state": "HI"
+        },
+        {
+          "amount": 500.0,
+          "donors": 1,
+          "name": "Kentucky",
+          "pct": 0.0,
+          "state": "KY"
+        },
+        {
+          "amount": 250.0,
+          "donors": 1,
+          "name": "Wyoming",
+          "pct": 0.0,
+          "state": "WY"
+        },
+        {
+          "amount": 247.97,
+          "donors": 47,
+          "name": "New Mexico",
+          "pct": 0.0,
+          "state": "NM"
+        },
+        {
+          "amount": 177.0,
+          "donors": 11,
+          "name": "Nebraska",
+          "pct": 0.0,
+          "state": "NE"
+        },
+        {
+          "amount": 25.0,
+          "donors": 1,
+          "name": "Maine",
+          "pct": 0.0,
+          "state": "ME"
+        },
+        {
+          "amount": 23.0,
+          "donors": 4,
+          "name": "Washington",
+          "pct": 0.0,
+          "state": "WA"
+        }
+      ],
+      "donors": {
+        "committee_donor_note": "Organizations giving directly to the campaign. Money routed through a conduit such as ActBlue or WinRed is individual money and is counted with individuals, not here. A committee transfer is money moved from a joint fundraising or affiliated committee rather than a donation from an outside group.",
+        "committee_donors": [
+          {
+            "amount": 372711.11,
+            "committee_id": "C00755074",
+            "gifts": 13,
+            "kind": "transfer",
+            "name": "TEAM MARSHALL II"
+          },
+          {
+            "amount": 95036.83,
+            "committee_id": "C00897918",
+            "gifts": 11,
+            "kind": "transfer",
+            "name": "ONE TEAM SENATE MAJORITY"
+          },
+          {
+            "amount": 90293.18,
+            "committee_id": "C00835751",
+            "gifts": 7,
+            "kind": "transfer",
+            "name": "FRIENDS OF KENNEDY"
+          },
+          {
+            "amount": 62000.0,
+            "committee_id": "C00027466",
+            "gifts": 1,
+            "kind": "party",
+            "name": "NRSC"
+          },
+          {
+            "amount": 52144.38,
+            "committee_id": "C00901322",
+            "gifts": 3,
+            "kind": "transfer",
+            "name": "2025 SENATORS CLASSIC COMMITTEE"
+          },
+          {
+            "amount": 29000.0,
+            "committee_id": "C00946053",
+            "gifts": 2,
+            "kind": "transfer",
+            "name": "2026 SENATORS CLASSIC COMMITTEE"
+          },
+          {
+            "amount": 15000.0,
+            "committee_id": "C00340943",
+            "gifts": 3,
+            "kind": "pac",
+            "name": "DAVITA INC. POLITICAL ACTION COMMITTEE (DAPAC)"
+          },
+          {
+            "amount": 12000.0,
+            "committee_id": "C00350744",
+            "gifts": 5,
+            "kind": "pac",
+            "name": "THE GOLDMAN SACHS GROUP INC. POLITICAL ACTION COMMITTEE"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00730903",
+            "gifts": 1,
+            "kind": "pac",
+            "name": "MISSISSIPPI FARM BUREAU FEDERATION FURTHERING AGRICULTURE FO"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00385039",
+            "gifts": 1,
+            "kind": "pac",
+            "name": "NUTRIEN AG SOLUTIONS EMPLOYEE CITIZENSHIP FUND POLITICAL ACT"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00246736",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "SEABOARD CORPORATION PAC"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00110338",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "AMERICAN CRYSTAL SUGAR COMPANY POLITICAL ACTION COMMITTEE"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00379479",
+            "gifts": 3,
+            "kind": "pac",
+            "name": "THE HAWKEYE PAC"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00540054",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "NEBRASKA SANDHILLS PAC"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00144766",
+            "gifts": 3,
+            "kind": "pac",
+            "name": "NATIONAL BEER WHOLESALERS ASSOCIATION POLITICAL ACTION COMMI"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00097485",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "MERCK & CO. INC. EMPLOYEES POLITICAL ACTION COMMITTEE (MER"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00484162",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "MEDICAL DEVICE MANUFACTURERS ASSOCIATION PAC"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00896688",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "JOBS OPPORTUNITY NOW POLITICAL ACTION COMMITTEE"
+          }
+        ],
+        "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
+        "itemized_total": 1904438.09,
+        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (24 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
+        "large_donors": [
+          {
+            "amount": 12000.0,
+            "city": "LARCHMONT",
+            "employer": "STONEHILL CAPITAL",
+            "first_gift": "2026-06-18",
+            "gifts": 1,
+            "last_gift": "2026-06-18",
+            "name": "STERN, MICHAEL",
+            "occupation": "INVESTOR",
+            "state": "NY"
+          },
+          {
+            "amount": 10300.0,
+            "city": "SOUTH DARTMOUTH",
+            "employer": "TONIX PHARMACEUTICALS",
+            "first_gift": "2025-02-17",
+            "gifts": 3,
+            "last_gift": "2026-02-10",
+            "name": "LEDERMAN, SETH",
+            "occupation": "CEO",
+            "state": "MA"
+          },
+          {
+            "amount": 9500.0,
+            "city": "INWOOD",
+            "employer": "MBLA INTERNATIONAL LLC",
+            "first_gift": "2025-04-03",
+            "gifts": 2,
+            "last_gift": "2025-10-27",
+            "name": "MOSKOWITZ, YEHUDAH",
+            "occupation": "PARTNER",
+            "state": "NY"
+          },
+          {
+            "amount": 9500.0,
+            "city": "INWOOD",
+            "employer": "MBLA INTERNATIONAL LLC",
+            "first_gift": "2025-04-03",
+            "gifts": 2,
+            "last_gift": "2025-10-27",
+            "name": "MOSKOWITZ, YECHEZKEL",
+            "occupation": "PARTNER",
+            "state": "NY"
+          },
+          {
+            "amount": 7143.56,
+            "city": "PLANO",
+            "employer": "FASTSIGNS INTERNATIONAL",
+            "first_gift": "2025-08-22",
+            "gifts": 2,
+            "last_gift": "2026-02-27",
+            "name": "MONSON, CATHERINE E.",
+            "occupation": "EXECUTIVE",
+            "state": "TX"
+          },
+          {
+            "amount": 7000.0,
+            "city": "EDMOND",
+            "employer": "SPRINKLER WORKS",
+            "first_gift": "2025-12-31",
+            "gifts": 1,
+            "last_gift": "2025-12-31",
+            "name": "MARSHALL, TIFFANY",
+            "occupation": "OFFICE ADMINISTRATOR",
+            "state": "OK"
+          },
+          {
+            "amount": 7000.0,
+            "city": "WAKE FOREST",
+            "employer": "SQUARESPACE",
+            "first_gift": "2025-12-31",
+            "gifts": 1,
+            "last_gift": "2025-12-31",
+            "name": "GOODEN, NATHAN",
+            "occupation": "CFO",
+            "state": "NC"
+          },
+          {
+            "amount": 7000.0,
+            "city": "WICHITA",
+            "employer": "MID-KANSAS WOUND SPECIALIST",
+            "first_gift": "2025-11-26",
+            "gifts": 1,
+            "last_gift": "2025-11-26",
+            "name": "GOODEN, JUSTIN DR.",
+            "occupation": "PHYSICIAN",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "EUGENE",
+            "employer": "JRC",
+            "first_gift": "2025-11-26",
+            "gifts": 1,
+            "last_gift": "2025-11-26",
+            "name": "CHRISTIAN, JIM",
+            "occupation": "SALES",
+            "state": "OR"
+          },
+          {
+            "amount": 7000.0,
+            "city": "WICHITA",
+            "employer": "ICM INC.",
+            "first_gift": "2025-09-03",
+            "gifts": 1,
+            "last_gift": "2025-09-03",
+            "name": "VANDERGRIEND, DAVID J.",
+            "occupation": "CEO",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "CHATTANOOGA",
+            "employer": "M&M INDUSTRIES INCL",
+            "first_gift": "2025-08-28",
+            "gifts": 1,
+            "last_gift": "2025-08-28",
+            "name": "MORRIS, GLENN",
+            "occupation": "CEO",
+            "state": "TN"
+          },
+          {
+            "amount": 7000.0,
+            "city": "SIOUX FALLS",
+            "employer": "POET",
+            "first_gift": "2025-09-15",
+            "gifts": 1,
+            "last_gift": "2025-09-15",
+            "name": "BROIN, JEFF",
+            "occupation": "CHAIRMAN & CEO",
+            "state": "SD"
+          },
+          {
+            "amount": 7000.0,
+            "city": "DORADO",
+            "employer": "SELF",
+            "first_gift": "2026-03-09",
+            "gifts": 2,
+            "last_gift": "2026-03-09",
+            "name": "KEYS, ANDREW",
+            "occupation": "OWNER",
+            "state": "PR"
+          },
+          {
+            "amount": 7000.0,
+            "city": "GREENWICH",
+            "employer": "FORTRESS INVESTMENT GROUP",
+            "first_gift": "2026-03-20",
+            "gifts": 1,
+            "last_gift": "2026-03-20",
+            "name": "NEUMARK, JACK",
+            "occupation": "CO-CEO",
+            "state": "CT"
+          },
+          {
+            "amount": 7000.0,
+            "city": "ARLINGTON",
+            "employer": "MCKENNA & ASSOCIATES",
+            "first_gift": "2026-03-24",
+            "gifts": 1,
+            "last_gift": "2026-03-24",
+            "name": "MCKENNA, ANDREW",
+            "occupation": "CEO",
+            "state": "VA"
+          },
+          {
+            "amount": 7000.0,
+            "city": "WICHITA",
+            "employer": "SELF",
+            "first_gift": "2025-09-15",
+            "gifts": 1,
+            "last_gift": "2025-09-15",
+            "name": "DOWNING, BARRY L.",
+            "occupation": "ENTREPRENEUR",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "PALM BEACH",
+            "employer": "SELF",
+            "first_gift": "2025-12-19",
+            "gifts": 1,
+            "last_gift": "2025-12-19",
+            "name": "LEACH, HOWARD H. AMBASSADOR",
+            "occupation": "PRIVATE INVESTOR",
+            "state": "FL"
+          },
+          {
+            "amount": 7000.0,
+            "city": "HOUSTON",
+            "employer": "SELF",
+            "gifts": 1,
+            "name": "WEEKLEY, RICHARD",
+            "occupation": "REAL ESTATE DEVELOPER",
+            "state": "TX"
+          },
+          {
+            "amount": 7000.0,
+            "city": "HIGHLAND PARK",
+            "employer": "LAVIN & GEDVILLE PC",
+            "first_gift": "2025-10-16",
+            "gifts": 1,
+            "last_gift": "2025-10-16",
+            "name": "LAVIN, STEVEN",
+            "occupation": "PRESIDENT",
+            "state": "IL"
+          },
+          {
+            "amount": 7000.0,
+            "city": "HIGHLAND PARK",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2025-10-16",
+            "gifts": 1,
+            "last_gift": "2025-10-16",
+            "name": "LAVIN, DAWN",
+            "occupation": "NOT EMPLOYED",
+            "state": "IL"
+          },
+          {
+            "amount": 7000.0,
+            "city": "CARROLLTON",
+            "employer": "MUREX LLC",
+            "first_gift": "2025-10-20",
+            "gifts": 1,
+            "last_gift": "2025-10-20",
+            "name": "WYATT, VANESSA",
+            "occupation": "ACCOUNTANT",
+            "state": "TX"
+          },
+          {
+            "amount": 6500.0,
+            "city": "BIRMINGHAM",
+            "employer": "MOBLEY HOLDINGS",
+            "first_gift": "2025-03-17",
+            "gifts": 1,
+            "last_gift": "2025-03-17",
+            "name": "MOBLEY, CLAYTON",
+            "occupation": "OWNER",
+            "state": "AL"
+          },
+          {
+            "amount": 4800.0,
+            "city": "LIBERAL",
+            "employer": "SELF",
+            "first_gift": "2025-01-20",
+            "gifts": 2,
+            "last_gift": "2025-10-15",
+            "name": "HATCHER, NICK",
+            "occupation": "FARMER",
+            "state": "KS"
+          },
+          {
+            "amount": 4000.0,
+            "city": "CHARLOTTE",
+            "employer": "VENTURE GOVERNMENT STRATEGIES LLC",
+            "first_gift": "2025-02-28",
+            "gifts": 3,
+            "last_gift": "2026-02-12",
+            "name": "HALLAWAY, RASHID",
+            "occupation": "PARTNER",
+            "state": "NC"
+          },
+          {
+            "amount": 400.0,
+            "city": "GLENCOE",
+            "employer": "SELF EMPLOYED",
+            "first_gift": "2025-10-15",
+            "gifts": 1,
+            "last_gift": "2025-10-15",
+            "name": "JONAS, JONATHAN",
+            "occupation": "INVESTMENTS",
+            "state": "IL"
+          }
+        ],
+        "size_buckets": [
+          {
+            "amount": 424947.9,
+            "count": 461,
+            "label": "$1,000 to $1,999"
+          },
+          {
+            "amount": 1876732.44,
+            "count": 682,
+            "label": "$2,000 and above"
+          },
+          {
+            "amount": 25108.24,
+            "count": 105,
+            "label": "$200 to $499"
+          },
+          {
+            "amount": 113582.93,
+            "count": 260,
+            "label": "$500 to $999"
+          },
+          {
+            "amount": 225807.93,
+            "count": 0,
+            "label": "Under $200"
+          }
+        ],
+        "threshold": 1000.0,
+        "top_cities": [
+          {
+            "amount": 21000.0,
+            "donors": 3,
+            "label": "Wichita, KS"
+          },
+          {
+            "amount": 19000.0,
+            "donors": 2,
+            "label": "Inwood, NY"
+          },
+          {
+            "amount": 14000.0,
+            "donors": 2,
+            "label": "Highland Park, IL"
+          },
+          {
+            "amount": 12000.0,
+            "donors": 1,
+            "label": "Larchmont, NY"
+          },
+          {
+            "amount": 10300.0,
+            "donors": 1,
+            "label": "South Dartmouth, MA"
+          },
+          {
+            "amount": 7143.56,
+            "donors": 1,
+            "label": "Plano, TX"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Edmond, OK"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Wake Forest, NC"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Eugene, OR"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Chattanooga, TN"
+          }
+        ],
+        "top_employers": [
+          {
+            "amount": 61103.57,
+            "donors": 28,
+            "label": "HOMEMAKER"
+          },
+          {
+            "amount": 53377.29,
+            "donors": 165,
+            "label": "SELF EMPLOYED"
+          },
+          {
+            "amount": 25300.0,
+            "donors": 11,
+            "label": "SELF-EMPLOYED"
+          },
+          {
+            "amount": 21000.0,
+            "donors": 5,
+            "label": "SPRINKLER WORKS"
+          },
+          {
+            "amount": 21000.0,
+            "donors": 5,
+            "label": "M&M INDUSTRIES INCL"
+          },
+          {
+            "amount": 14000.0,
+            "donors": 6,
+            "label": "WINKLEVOSS CAPITAL MANAGEMENT"
+          },
+          {
+            "amount": 8000.0,
+            "donors": 4,
+            "label": "ALLEN CONTROL SYSTEMS"
+          },
+          {
+            "amount": 7246.12,
+            "donors": 7,
+            "label": "WICHITA UROLOGY"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "TULL CO LLC"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "PRESCOTT"
+          }
+        ],
+        "top_occupations": [
+          {
+            "amount": 276834.83,
+            "donors": 178,
+            "label": "CEO"
+          },
+          {
+            "amount": 116730.7,
+            "donors": 94,
+            "label": "PHYSICIAN"
+          },
+          {
+            "amount": 91933.33,
+            "donors": 55,
+            "label": "ATTORNEY"
+          },
+          {
+            "amount": 73738.1,
+            "donors": 60,
+            "label": "CONSULTANT"
+          },
+          {
+            "amount": 54885.84,
+            "donors": 49,
+            "label": "INVESTOR"
+          },
+          {
+            "amount": 21200.0,
+            "donors": 10,
+            "label": "ENTREPRENEUR"
+          },
+          {
+            "amount": 21000.0,
+            "donors": 5,
+            "label": "OFFICE ADMINISTRATOR"
+          },
+          {
+            "amount": 19600.0,
+            "donors": 17,
+            "label": "GOVERNMENT RELATIONS"
+          },
+          {
+            "amount": 16000.0,
+            "donors": 11,
+            "label": "REAL ESTATE"
+          },
+          {
+            "amount": 15400.0,
+            "donors": 16,
+            "label": "LOBBYIST"
+          }
+        ],
+        "unitemized_total": 192194.6
+      },
+      "fec_candidate_id": "S0KS00315",
+      "in_state_amount": 444498.42,
+      "in_state_pct": 18.0,
+      "individual_contributions": 2096632.69,
+      "other_receipts": 106566.23,
+      "pac_contributions": 1772925.0,
+      "party_contributions": 62000.0,
+      "small_dollar_contributions": 192194.6,
+      "total_disbursements": 5592622.87,
+      "total_receipts": 4809692.25,
+      "transfers_in": 771560.73
+    }
+  },
+  "cycle": 2026,
+  "filings": [
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "coverage_end_date": "2026-09-30",
+      "date": "2026-10-15",
+      "form_type": "F3",
+      "report_type": "OCTOBER QUARTERLY",
+      "total_receipts": 800617.52,
+      "url": "https://docquery.fec.gov/pdf/145/202610159914696145/202610159914696145.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "coverage_end_date": "2026-07-15",
+      "date": "2026-10-13",
+      "form_type": "F3",
+      "report_type": "PRE-PRIMARY",
+      "total_receipts": 490367.65,
+      "url": "https://docquery.fec.gov/pdf/667/202610139908689667/202610139908689667.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "coverage_end_date": "2026-06-30",
+      "date": "2026-10-12",
+      "form_type": "F3",
+      "report_type": "JULY QUARTERLY",
+      "total_receipts": 3678710.16,
+      "url": "https://docquery.fec.gov/pdf/428/202610129908666428/202610129908666428.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-11",
+      "form_type": "F1",
+      "url": "https://docquery.fec.gov/pdf/659/202610119908612659/202610119908612659.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "coverage_end_date": "2025-12-31",
+      "date": "2026-09-29",
+      "form_type": "F3",
+      "report_type": "YEAR-END",
+      "total_receipts": 745277.27,
+      "url": "https://docquery.fec.gov/pdf/699/202609299908490699/202609299908490699.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-09-02",
+      "form_type": "F1",
+      "url": "https://docquery.fec.gov/pdf/064/202609029904074064/202609029904074064.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-08-25",
+      "form_type": "F99",
+      "url": "https://docquery.fec.gov/pdf/227/202608259903394227/202608259903394227.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "coverage_end_date": "2026-07-15",
+      "date": "2026-08-13",
+      "form_type": "FRQ",
+      "report_type": "PRE-PRIMARY",
+      "url": "https://docquery.fec.gov/pdf/739/202608130300358739/202608130300358739.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-08-02",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/106/202608029899313106/202608029899313106.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-08-01",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/673/202608019899298673/202608019899298673.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-31",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/277/202607319899298277/202607319899298277.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-07-30",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/728/202607309899242728/202607309899242728.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-30",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/580/202607309899241580/202607309899241580.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-07-28",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/365/202607289894482365/202607289894482365.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-28",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/371/202607289894482371/202607289894482371.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-07-26",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/828/202607269894474828/202607269894474828.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-26",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/826/202607269894474826/202607269894474826.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-07-24",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/589/202607249894463589/202607249894463589.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-24",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/459/202607249894463459/202607249894463459.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "coverage_end_date": "2026-07-15",
+      "date": "2026-07-23",
+      "form_type": "F3",
+      "report_type": "PRE-PRIMARY",
+      "total_receipts": 65663.37,
+      "url": "https://docquery.fec.gov/pdf/435/202607239894459435/202607239894459435.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-23",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "coverage_end_date": "2026-07-15",
+      "date": "2026-07-23",
+      "form_type": "F3",
+      "report_type": "PRE-PRIMARY",
+      "total_receipts": 490367.65,
+      "url": "https://docquery.fec.gov/pdf/738/202607239894459738/202607239894459738.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-07-22",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/450/202607229894418450/202607229894418450.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-21",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/005/202607219894400005/202607219894400005.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-07-20",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/970/202607209890965970/202607209890965970.pdf"
+    }
+  ],
+  "generated_at": "2026-10-17T09:19:43.553143Z",
+  "outside_spending": {
+    "opposing": {
+      "hamilton": 9660026.56,
+      "marshall": 18467290.7
+    },
+    "recent": [
+      {
+        "amount": 101121.82,
+        "candidate_id": "marshall",
+        "committee_id": "C00634774",
+        "committee_name": "COMMON SENSE FOR AMERICA PAC",
+        "date": "2026-10-15",
+        "purpose": "INDEPENDENT EXPENDITURE: DIRECT MAIL COSTS",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 5000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00524181",
+        "committee_name": "SENATE CONSERVATIVES ACTION",
+        "date": "2026-10-15",
+        "purpose": "IE-MARSHALL-DIGITAL ADVERTISING",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 826729.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00962696",
+        "committee_name": "NEW DEAL FOR ALL, INC.",
+        "date": "2026-10-14",
+        "purpose": "ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 96.51,
+        "candidate_id": "hamilton",
+        "committee_id": "C00844613",
+        "committee_name": "WIN IT BACK PAC",
+        "date": "2026-10-14",
+        "purpose": "TV ADVERTISING (FROM ADVANCE LINE 21)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 510000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00953299",
+        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
+        "date": "2026-10-13",
+        "purpose": "TELEVISION ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 6216.21,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-13",
+        "purpose": "TEXT MESSAGING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1016755.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00844613",
+        "committee_name": "WIN IT BACK PAC",
+        "date": "2026-10-12",
+        "purpose": "TV AD PLACEMENT",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 33333.33,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-12",
+        "purpose": "TEXT MESSAGING (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 938.83,
+        "candidate_id": "hamilton",
+        "committee_id": "C00724203",
+        "committee_name": "SOMOS PAC",
+        "date": "2026-10-12",
+        "purpose": "PRINTING - ESTIMATE",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 132193.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00724203",
+        "committee_name": "SOMOS PAC",
+        "date": "2026-10-12",
+        "purpose": "CANVASSING - ESTIMATE",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 3150.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-11",
+        "purpose": "CANVASSING (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 2475.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-11",
+        "purpose": "CANVASSING (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 3150.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-11",
+        "purpose": "CANVASSING (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 2475.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-11",
+        "purpose": "CANVASSING (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 11843.27,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-10",
+        "purpose": "MEDIA PRODUCTION - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 24698.32,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-10",
+        "purpose": "MEDIA PRODUCTION - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 200000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-10",
+        "purpose": "DIGITAL MEDIA BUY - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1801316.33,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-10",
+        "purpose": "MEDIA BUY - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 3844.14,
+        "candidate_id": "marshall",
+        "committee_id": "C00053553",
+        "committee_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+        "date": "2026-10-10",
+        "purpose": "PRINTING / POSTAGE",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 84.31,
+        "candidate_id": "marshall",
+        "committee_id": "C00053553",
+        "committee_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
+        "date": "2026-10-10",
+        "purpose": "PAPER",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 9285.15,
+        "candidate_id": "marshall",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-10",
+        "purpose": "AIRPLANE BANNER (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 105600.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-10",
+        "purpose": "MEDIA PLACEMENT",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 80.32,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-10",
+        "purpose": "TV ADVERTISING (FROM ADVANCE LINE 21)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 112760.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "date": "2026-10-09",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1266401.7,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-09",
+        "purpose": "TV AD PLACEMENT",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 350000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00957928",
+        "committee_name": "MAIN STREET FUND",
+        "date": "2026-10-09",
+        "purpose": "PLACED MEDIA: TV AND CONNECTED TV",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 200000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00657866",
+        "committee_name": "PROTECT FREEDOM POLITICAL ACTION COMMITTEE",
+        "date": "2026-10-08",
+        "purpose": "DIGITAL MEDIA",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 8000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "date": "2026-10-08",
+        "purpose": "DOOR HANGERS",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 4166.67,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-08",
+        "purpose": "PHONE BANKS (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 138211.01,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-08",
+        "purpose": "POSTAGE / PRINTING / PRODUCTION",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 28998.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00953299",
+        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
+        "date": "2026-10-07",
+        "purpose": "PRODUCTION FOR TELEVISION ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 63000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "date": "2026-10-07",
+        "purpose": "GRASSROOTS CANVASSING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 600000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-07",
+        "purpose": "MEDIA PLACEMENT",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 228.35,
+        "candidate_id": "hamilton",
+        "committee_id": "C00844613",
+        "committee_name": "WIN IT BACK PAC",
+        "date": "2026-10-07",
+        "purpose": "TV AD PRODUCTION (FROM ADVANCE LINE 21)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 110000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-07",
+        "purpose": "BARN SIGNS, PRINTING (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 500.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-07",
+        "purpose": "BARN SIGNS, GRAPHIC DESIGN (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 10000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-07",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 10107.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-07",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1115.4,
+        "candidate_id": "hamilton",
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "date": "2026-10-07",
+        "purpose": "DIGITAL ADVERTISING (FROM ADVANCE LINE 21)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 353051.79,
+        "candidate_id": "marshall",
+        "committee_id": "C00961276",
+        "committee_name": "LOWER COSTS NOW",
+        "date": "2026-10-06",
+        "purpose": "MEDIA BUY (ESTIMATE)",
+        "support_oppose": "O"
+      }
+    ],
+    "supporting": {
+      "hamilton": 1447111.32,
+      "marshall": 1871872.83
+    },
+    "top_spenders": [
+      {
+        "amount": 7104761.0,
+        "committee_id": "C00953299",
+        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
+        "opposes": "marshall"
+      },
+      {
+        "amount": 6600000.0,
+        "committee_id": "C00945733",
+        "committee_name": "THE 1861 INITIATIVE",
+        "opposes": "marshall"
+      },
+      {
+        "amount": 2953123.0,
+        "committee_id": "C00957928",
+        "committee_name": "MAIN STREET FUND",
+        "opposes": "hamilton"
+      },
+      {
+        "amount": 2682341.78,
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "opposes": "hamilton"
+      },
+      {
+        "amount": 2060273.92,
+        "committee_id": "C00961276",
+        "committee_name": "LOWER COSTS NOW",
+        "opposes": "marshall",
+        "supports": "hamilton"
+      },
+      {
+        "amount": 2037857.92,
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "opposes": "marshall"
+      },
+      {
+        "amount": 2032590.0,
+        "committee_id": "C00687103",
+        "committee_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+        "opposes": "hamilton",
+        "supports": "marshall"
+      },
+      {
+        "amount": 1536802.36,
+        "committee_id": "C00844613",
+        "committee_name": "WIN IT BACK PAC",
+        "opposes": "hamilton"
+      },
+      {
+        "amount": 1287704.42,
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "opposes": "hamilton"
+      },
+      {
+        "amount": 826729.0,
+        "committee_id": "C00962696",
+        "committee_name": "NEW DEAL FOR ALL, INC.",
+        "opposes": "marshall"
+      },
+      {
+        "amount": 709275.52,
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "opposes": "marshall",
+        "supports": "hamilton"
+      },
+      {
+        "amount": 448645.08,
+        "committee_id": "C00448696",
+        "committee_name": "SENATE CONSERVATIVES FUND",
+        "supports": "marshall"
+      },
+      {
+        "amount": 414131.94,
+        "committee_id": "C00492140",
+        "committee_name": "AB PAC",
+        "supports": "hamilton"
+      },
+      {
+        "amount": 200000.0,
+        "committee_id": "C00657866",
+        "committee_name": "PROTECT FREEDOM POLITICAL ACTION COMMITTEE",
+        "supports": "marshall"
+      },
+      {
+        "amount": 183760.0,
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "opposes": "hamilton"
+      }
+    ],
+    "total": 31446301.41
+  },
+  "schema_version": 1
+}
