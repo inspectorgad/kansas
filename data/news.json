@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-17T18:52:09.915045Z",
+  "generated_at": "2026-10-17T21:23:29.326350Z",
   "items": [
     {
       "id": "73531edfac87",
@@ -622,18 +622,6 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMV9kbHpSM08wSFFvTHpuN3BCX2Q2a1JtMFFvSFZNcGlYRTdQVVQ5S0o3UkNNNndYWFBwUUtudHZnQkFIODU3MWduUWd3NkRrYTViZjg1LWxkdU5aaVU1aTNaOHdoZDVoUUtZbHhKVEdQNDZNTkpzY1ludnZBbWJxdlF2T0VoZm13SzlacklKZGV1US03Z2x4Q1MzZGI3S1l0RFBTbnhRdVVBT1lZSDBXcXJYMHFJYmRabHVrNTNkNHlGWlBSY2dxUVdpY0lJbWYxYnpkSTc2bXRRUzNtWnBhSQ"
     },
     {
-      "id": "72b303ec2c4c",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T18:37:00Z",
-      "source": "KWCH",
-      "summary": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena &nbsp;&nbsp; KWCH",
-      "title": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMkQ0WHF3SUE1QVZ1TU1xRlozN2E1ZXJ5YTZ5Y0NscHNiQmlLeFVKYUx2VXhaNG56WjFaQXhLYlZ3NWtjYnRrRjJsNlJYVndpNXZfWTVORWRLNEpHWmRDMTN3NzYwbUtKQXk0Q2RnNWlXNU5fTi0tU0dhSVR0cGoxaW9Ca2VqNnp0Y2xRMTQ3MzRLVV9xcjJDNGhrM0ZJS1ROYXRyMWlSOA"
-    },
-    {
       "id": "4a26f244a62d",
       "kind": "news",
       "mentions": [
@@ -644,6 +632,18 @@
       "summary": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall &nbsp;&nbsp; KWCH",
       "title": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcElNcE9DVy1aRFVxLXVYOGFMc2h5U2h0SmJsVXI1UGQxQ0pCcDg0N3ZNeGNXeFcyUXZUOVZGQThpSXpXYlJJc3dMU0ZLdWxHOEVxY2lDXzg0Skh2YmNER3JrTjdyZ3JHbF9xSE1RWmU5TWw2SUs2cFdMd1V6T1FCRW43NDBwR2RXb2xwMHc4eHJNZW9k"
+    },
+    {
+      "id": "72b303ec2c4c",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T18:37:00Z",
+      "source": "KWCH",
+      "summary": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena &nbsp;&nbsp; KWCH",
+      "title": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMkQ0WHF3SUE1QVZ1TU1xRlozN2E1ZXJ5YTZ5Y0NscHNiQmlLeFVKYUx2VXhaNG56WjFaQXhLYlZ3NWtjYnRrRjJsNlJYVndpNXZfWTVORWRLNEpHWmRDMTN3NzYwbUtKQXk0Q2RnNWlXNU5fTi0tU0dhSVR0cGoxaW9Ca2VqNnp0Y2xRMTQ3MzRLVV9xcjJDNGhrM0ZJS1ROYXRyMWlSOA"
     },
     {
       "id": "5d2f2c6a8a36",
