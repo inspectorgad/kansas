@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-17T13:06:00.559160Z",
+  "generated_at": "2026-10-17T16:34:41.930180Z",
   "items": [
     {
       "id": "73531edfac87",
@@ -78,17 +78,17 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNTVibGdYTnA4cDRvZEJrdnRHR1JmMmp5b1IzeDNrdENveHliTm5DVHhuRW9rOWxyMmtsZWR0amYybE1vUUdNdFc3VkFTekRjRExka01tdVlwMk1qd2VmaTE4RVlXUWVSNGpPMmhjOTJjeHJVTUZsblpXeER6UjdEcUpVMXdwMVZuY1HSAZ4BQVVfeXFMUE9jWDAzbUdrcHdqU2VlTGdkNTg5dGRIa0hmOU1CbmpMemRKMkxlaVNSeXZ2cXVMMDVxYnhYVmxsSkxBWHI5UVRmckJPdnFWUmZ0ZzFHODc0WC1haVEwckJ0aDNUUmMwTGZIbWpnUktfMjhkVGtTVzh1TksyRWhPTk5XWmN1Q3ltaEhQOGFKbVZSVzZudTlKWmx3UVdPS3c"
     },
     {
-      "id": "fc3065db7666",
+      "id": "63a1577443a4",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-10-16T23:29:00Z",
+      "published_at": "2026-10-16T23:28:00Z",
       "source": "WIBW",
       "summary": "Marshall, Hamilton campaign in Topeka ahead of November election &nbsp;&nbsp; WIBW",
       "title": "Marshall, Hamilton campaign in Topeka ahead of November election",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNldhR3B1QUdfX2psU0RwRkdaVDJhWk00MjFqSmh5SFFMSHJrRHlGQ3UwQVhDbVVCOUt6NUdJM3lUZnJ2TWR1bTk1X3gzaGtKWFNPYjVjMEg0QzdwRHlOZENONnBUUEJXSE5UcDBoM1pXUzgzVWJCUTFWbUR2QlM3aUJ2aWpYU1hlbDJYUzctRXc3VjE30gGoAUFVX3lxTE43NFNkenhKbEpYVUtGRDF0VFgzWV9wRTFVaXJJMlkxTUN5Qno2a2dIUkJVS253UFhEbURuaG5OanNnYjl2Y1ZDZEhVRG5XUXBuMTVaallqU2RpaTA5RHRmM0VpckgtRjlIS0pVZlVWb2xHTUVvblVza0YtVkVCYmJSaUdkU0luZDBYTGNBVnZPS2tIdUFBYkQzeFkxckVTZXFBNEFVQjdsaQ"
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOazROR2NwTElIMldMaDU1UnZkNVRkQnJ2Y3VNT3BmRUZZOEh4ZE9vOXFSZkVVYUpQdzcwOGFBbXVONVFueWxmUDhObUhwUjJJQV9LUFVDdW41VDdsaVhjOE9lRExuQ19QNmpQVl9KVW5RUDYzV1RsZlM0N3F0eTJ6WWRmTDRHM0RUT093d24zdG1RX1hoUWhaRUxRVy0"
     },
     {
       "id": "60ddd58693fa",
@@ -409,7 +409,7 @@
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-14T16:27:06Z",
+      "published_at": "2026-10-14T16:27:00Z",
       "source": "Kansas City Star",
       "summary": "Did Sen. Roger Marshall break Kansas law by charging 18% interest on bills? &nbsp;&nbsp; Kansas City Star",
       "title": "Did Sen. Roger Marshall break Kansas law by charging 18% interest on bills?",
@@ -622,18 +622,6 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMV9kbHpSM08wSFFvTHpuN3BCX2Q2a1JtMFFvSFZNcGlYRTdQVVQ5S0o3UkNNNndYWFBwUUtudHZnQkFIODU3MWduUWd3NkRrYTViZjg1LWxkdU5aaVU1aTNaOHdoZDVoUUtZbHhKVEdQNDZNTkpzY1ludnZBbWJxdlF2T0VoZm13SzlacklKZGV1US03Z2x4Q1MzZGI3S1l0RFBTbnhRdVVBT1lZSDBXcXJYMHFJYmRabHVrNTNkNHlGWlBSY2dxUVdpY0lJbWYxYnpkSTc2bXRRUzNtWnBhSQ"
     },
     {
-      "id": "72b303ec2c4c",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T18:37:00Z",
-      "source": "KWCH",
-      "summary": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena &nbsp;&nbsp; KWCH",
-      "title": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMkQ0WHF3SUE1QVZ1TU1xRlozN2E1ZXJ5YTZ5Y0NscHNiQmlLeFVKYUx2VXhaNG56WjFaQXhLYlZ3NWtjYnRrRjJsNlJYVndpNXZfWTVORWRLNEpHWmRDMTN3NzYwbUtKQXk0Q2RnNWlXNU5fTi0tU0dhSVR0cGoxaW9Ca2VqNnp0Y2xRMTQ3MzRLVV9xcjJDNGhrM0ZJS1ROYXRyMWlSOA"
-    },
-    {
       "id": "4a26f244a62d",
       "kind": "news",
       "mentions": [
@@ -644,6 +632,18 @@
       "summary": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall &nbsp;&nbsp; KWCH",
       "title": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcElNcE9DVy1aRFVxLXVYOGFMc2h5U2h0SmJsVXI1UGQxQ0pCcDg0N3ZNeGNXeFcyUXZUOVZGQThpSXpXYlJJc3dMU0ZLdWxHOEVxY2lDXzg0Skh2YmNER3JrTjdyZ3JHbF9xSE1RWmU5TWw2SUs2cFdMd1V6T1FCRW43NDBwR2RXb2xwMHc4eHJNZW9k"
+    },
+    {
+      "id": "72b303ec2c4c",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T18:37:00Z",
+      "source": "KWCH",
+      "summary": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena &nbsp;&nbsp; KWCH",
+      "title": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMkQ0WHF3SUE1QVZ1TU1xRlozN2E1ZXJ5YTZ5Y0NscHNiQmlLeFVKYUx2VXhaNG56WjFaQXhLYlZ3NWtjYnRrRjJsNlJYVndpNXZfWTVORWRLNEpHWmRDMTN3NzYwbUtKQXk0Q2RnNWlXNU5fTi0tU0dhSVR0cGoxaW9Ca2VqNnp0Y2xRMTQ3MzRLVV9xcjJDNGhrM0ZJS1ROYXRyMWlSOA"
     },
     {
       "id": "5d2f2c6a8a36",
