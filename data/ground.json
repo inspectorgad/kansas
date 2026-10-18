@@ -2,7 +2,7 @@
   "advance_ballots": {
     "counties": [
       {
-        "as_of": "2026-10-18T17:56:44.110741Z",
+        "as_of": "2026-10-18T20:19:54.376127Z",
         "county": "Shawnee",
         "mail_ballots_sent": 400,
         "source_url": "https://www.snco.gov/election/"
@@ -19,7 +19,7 @@
       "url": "https://www.snco.gov/election/"
     }
   ],
-  "generated_at": "2026-10-18T17:56:46.050118Z",
+  "generated_at": "2026-10-18T20:19:56.760382Z",
   "registration": {
     "by_county": []
   },
