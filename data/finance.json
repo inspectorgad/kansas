@@ -1852,6 +1852,22 @@
     {
       "committee_id": "C00576173",
       "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-17",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/388/202610179916173388/202610179916173388.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-16",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/605/202610169916160605/202610169916160605.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
       "coverage_end_date": "2026-09-30",
       "date": "2026-10-15",
       "form_type": "F3",
@@ -2044,31 +2060,42 @@
       "report_type": "PRE-PRIMARY",
       "total_receipts": 490367.65,
       "url": "https://docquery.fec.gov/pdf/738/202607239894459738/202607239894459738.pdf"
-    },
-    {
-      "committee_id": "C00576173",
-      "committee_name": "KANSANS FOR MARSHALL",
-      "date": "2026-07-22",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/450/202607229894418450/202607229894418450.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-21",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/005/202607219894400005/202607219894400005.pdf"
     }
   ],
-  "generated_at": "2026-10-18T06:07:16.371264Z",
+  "generated_at": "2026-10-18T11:25:16.018848Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 13644135.83,
-      "marshall": 20532607.86
+      "hamilton": 13649522.79,
+      "marshall": 21432607.86
     },
     "recent": [
+      {
+        "amount": 50000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00953299",
+        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
+        "date": "2026-10-16",
+        "purpose": "PRODUCTION FOR DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 500000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00953299",
+        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
+        "date": "2026-10-16",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 350000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00953299",
+        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
+        "date": "2026-10-16",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
       {
         "amount": 20470.29,
         "candidate_id": "marshall",
@@ -2085,6 +2112,15 @@
         "committee_name": "NEW DEAL FOR ALL, INC.",
         "date": "2026-10-16",
         "purpose": "VIDEO PRODUCTION",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 5386.96,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-16",
+        "purpose": "TEXT MESSAGING",
         "support_oppose": "O"
       },
       {
@@ -2392,42 +2428,6 @@
         "date": "2026-10-10",
         "purpose": "MEDIA PRODUCTION - ESTIMATE",
         "support_oppose": "O"
-      },
-      {
-        "amount": 24698.32,
-        "candidate_id": "marshall",
-        "committee_id": "C00865444",
-        "committee_name": "WINSENATE",
-        "date": "2026-10-10",
-        "purpose": "MEDIA PRODUCTION - ESTIMATE",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 200000.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00865444",
-        "committee_name": "WINSENATE",
-        "date": "2026-10-10",
-        "purpose": "DIGITAL MEDIA BUY - ESTIMATE",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 1801316.33,
-        "candidate_id": "marshall",
-        "committee_id": "C00865444",
-        "committee_name": "WINSENATE",
-        "date": "2026-10-10",
-        "purpose": "MEDIA BUY - ESTIMATE",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 3844.14,
-        "candidate_id": "marshall",
-        "committee_id": "C00053553",
-        "committee_name": "NATIONAL RIFLE ASSOCIATION OF AMERICA POLITICAL VICTORY FUND",
-        "date": "2026-10-10",
-        "purpose": "PRINTING / POSTAGE",
-        "support_oppose": "S"
       }
     ],
     "supporting": {
@@ -2436,7 +2436,7 @@
     },
     "top_spenders": [
       {
-        "amount": 7104761.0,
+        "amount": 8004761.0,
         "committee_id": "C00953299",
         "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
         "opposes": "marshall"
@@ -2448,7 +2448,7 @@
         "opposes": "marshall"
       },
       {
-        "amount": 5893694.18,
+        "amount": 5899081.14,
         "committee_id": "C00571703",
         "committee_name": "SLF PAC",
         "opposes": "hamilton",
@@ -2530,7 +2530,7 @@
         "supports": "marshall"
       }
     ],
-    "total": 38337986.3
+    "total": 39243373.26
   },
   "schema_version": 1
 }

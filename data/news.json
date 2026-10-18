@@ -26,8 +26,32 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-18T06:07:19.940274Z",
+  "generated_at": "2026-10-18T11:25:18.933101Z",
   "items": [
+    {
+      "id": "88be19a46e93",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-18T09:11:43Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "What Sam Brownback says of Roger Marshall's Senate race in Kansas &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "What Sam Brownback says of Roger Marshall's Senate race in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxObXQyQVZuVDZpZ2drbkFzOEUwRUJ2b3E3ZVprNVpER1paN1FEV3BHODdwaVk3NXpnSjFNVUVBaGszLWYxNmNURXRMUndPTGpIQnZhRWs4SHFtZ05kQVVJLWNUUUJMMGNtM3BZVkFqYmViMEg2LW5XakJ0ekJFUHhqN0ZMNER3RFJRY2dVUktNZkpOWUlQU1BzY3ZLZjVYaHRmdlZLLVdmNGRkZXFsbnV5bGNwRTNyUHNDT2p4VVFZNnptNDZwdXpOQXBxSkV1QVp6dmJadXVWdUcxUWtD"
+    },
+    {
+      "id": "4f7ce3432b30",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-18T09:04:00Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Why former Sen. Sam Brownback is backing Roger Marshall | Exclusive &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Why former Sen. Sam Brownback is backing Roger Marshall | Exclusive",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPNVlhZllnVE05ZVlJV2tlN1JUWm1MalBwZGV5aDhIQUNKUkltdHVMVVFQNFNpeXBPenpybWFJMjhaeDQ5YmllOGFCS3V5cG05eWdZYVhLa05CS3Rmekh1aDBKdTJkSFZCVnpIMXUwT09FSktFaDVzQWdsS3VCVGlDRno4ek9sMndLVEtSWWtVX1N3T1E4aHQ4TmowcjZKdE9XTExreXE0b1I4b2Y5MGt6UGtDMjR3VTdyNGItYktFdTY1cEwtY3NLQ29OVFF2YUJqQklSbnRVSTcxbEFJVEE"
+    },
     {
       "id": "73531edfac87",
       "kind": "news",
@@ -1475,30 +1499,6 @@
       "summary": "Sen. Roger Marshall responds to claims about him living in Florida: 'All lies' &nbsp;&nbsp; KAKE",
       "title": "Sen. Roger Marshall responds to claims about him living in Florida: 'All lies'",
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQZUxDbjFtWVAxeHdJMXBzbWw2UlJwQ3F1blRLeWxHbktLbXNDZ3ktYy1RUUxUZHRSa0tPTnJMLWxxWHpTSXpadHNlOEFRdXBncDAxVjd1VDRhTlAxUzIxdktaTExRcGVKMW5TVUhDaFdkejc2Vjl2WE03Rm1ySGR0S2lQbFN2LUoxLXJwck5oeUUtRS04SGNhSHozOUtEaGt3QVNLVEt0N3ktQzF4UzlNZHFlSDJhOGhBLTd1QlUtMjUzYVZJYndSMllZN0hoeE54QWZORnpEWWpXOXpmbnVEUGJvUE4"
-    },
-    {
-      "id": "8ea004a4450b",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-07T22:21:56Z",
-      "source": "KAKE",
-      "summary": "Youth drug prevention program with Roger Marshall &nbsp;&nbsp; KAKE",
-      "title": "Youth drug prevention program with Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTE5NNFdVRTJLTzVHb0pSXzBXTldtb3hpZ0RpTGtPaG1lbHZraGt0Ri1LZ1dhS2ZZdld2U08ycTZZNjVVcHBVeU90ZDBlMExDN29XOG5lMDBLcm5mM1M0eGxucWJoQ3MwNzJlclVoU3BqZEVKQnNzTDNYNy0xTFRKeWpZTGZHOXAwV2dhLVpUd2hBNU0tMzBqUHRjYVlpamdKRlRxaUt0WDJubEZKa0ZOM0t4OWI1OEJJbXJ1MmdXV3dmRWhjRS1sc3RB"
-    },
-    {
-      "id": "766ab74b1713",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-07T13:03:41Z",
-      "source": "Kansas City Star",
-      "summary": "Roger Marshall's photo flub is part of a rich tradition in KS/MO politics | Hudnall &nbsp;&nbsp; Kansas City Star",
-      "title": "Roger Marshall's photo flub is part of a rich tradition in KS/MO politics | Hudnall",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBHdnBYVURqYzY1LTh0Q2tnMUV1LXdrSUMwcmU2UnJFY1RhWWNkVDl6S1dOOGRxWmJGTXdpRlE0dTJjY2VnMDNwcWVGNnNESzRwQjdOdlc4ZjhxYkJTbUpJdWVBOVdCZknSAWdBVV95cUxOcWxfRzcwQmJROVpLNm52YWVZSkowOUF4VVhtZmpldDc2T3lRRUpVUlJHUnZoVG91Y0pTbFB5YTFDOXNTUEFpSV9vNm03S3RPZldiMWlfTlJkMXBJSV9qM2dQSmIwZ2Jz"
     }
   ],
   "schema_version": 1
