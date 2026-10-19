@@ -26,8 +26,58 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-19T05:22:11.150916Z",
+  "generated_at": "2026-10-19T11:01:11.964717Z",
   "items": [
+    {
+      "id": "e70c77522f35",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-19T09:11:20Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Roger Marshall talks about campaigning in Kansas Senate race &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Roger Marshall talks about campaigning in Kansas Senate race",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNMUVOOEhpbUR4NWdSY2Y4YUYzbHdwQVlldFdpUXlRUk1mX054MlAwQXlSSm5Mbm1QWHRPdlRrRFAtNlFyVkt4NkJMdml2cklNMlpyUW41dVgzazBFLXlDem53MTlEVmlWd1RSLW85T2JQMjFYWFZ3bzFRcVctV0FCX3BsLWtPcndBYmJERXg2cHJEdXJBVWhCX21oWFUzZ2kxTDdrNTh2aGFqZDREUTJJc0ZZNDIzS2Y3MEtIVndjc3NnVmgzM194YmROUk1uTGlQS1lXcDhrOA"
+    },
+    {
+      "id": "50fddd5db6ff",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-19T09:07:00Z",
+      "source": "Kansas City Star",
+      "summary": "Adam Hamilton outraises Roger Marshall in Senate race in Kansas &nbsp;&nbsp; Kansas City Star",
+      "title": "Adam Hamilton outraises Roger Marshall in Senate race in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9MYlFVZS1EbFZ6ZmoxeVREZDhkOUZQOTBsS2VFX3IzY2dNaEVMOTh2dWI2U0NMa3BsRElrTnRFSVZHRzBZbFVUTjFxYmJjODZUcnNoUnRQODJFM1U0MmpyNE9vcw"
+    },
+    {
+      "id": "3d9d739081d3",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-19T09:06:00Z",
+      "source": "Kansas City Star",
+      "summary": "Beyond TV ads, what are Roger Marshall and Adam Hamilton running on? &nbsp;&nbsp; Kansas City Star",
+      "title": "Beyond TV ads, what are Roger Marshall and Adam Hamilton running on?",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAtRnVVSEhHVEpPb3JyQXNKWDl2M0VRZFEzck1TalMwVG1iak9hRE9uZ3A4YUJTbkhrMjdRQm1NVTk2OVpFdGg2cHhwNnE3amRKSGpRcFdxLTF6YmZ5YmpiLXZkRQ"
+    },
+    {
+      "id": "6ae04882cd99",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-19T09:00:00Z",
+      "source": "KCUR",
+      "summary": "U.S. Sen. Roger Marshall's close ties to Donald Trump may hurt his chances with Kansas farmers &nbsp;&nbsp; KCUR",
+      "title": "U.S. Sen. Roger Marshall's close ties to Donald Trump may hurt his chances with Kansas farmers",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOckFYWmZNUFYyUVZkSFBuSjJJR2NNNVRnNTlBTXV1YlRsUEVUT3RnUGdSTUFHbmtMY3BKMlFCMjBtTWZiWXlHejVQSDdvR0RNby01OVVxNmVJOE5famx0SHp6aVR4OU1mV3hEZ3BVelFIN0w2bkZQVlI2MWhzaVFoU0xXTUZjTGJ2ajd5VVpKWU1yaUZuSk45LWU0ZGQ"
+    },
     {
       "id": "88be19a46e93",
       "kind": "news",
@@ -78,18 +128,6 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOaksxQTY2WVBLRURFYkhaWEtQNGt0WDZ0YkY4dEJtb1RhaTFIV3NYLTlmX2pmRHZxdDhuRUt0UkVfa1Z6MzE2OEwzQzB4WDFNV1dhaEdtbWFYQjdTWU95bjBialJEei1DaWl0X3dBMG9lVFhWSW4xVWhlNXRLeXE1cVZaZlJVd1JHQlE"
     },
     {
-      "id": "b5658e1571dd",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-16T23:51:00Z",
-      "source": "WIBW",
-      "summary": "Election 2026: Roger Marshall, (R) U.S. Senate Incumbent &nbsp;&nbsp; WIBW",
-      "title": "Election 2026: Roger Marshall, (R) U.S. Senate Incumbent",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOR1VSRnBHOFE1S2g4dGZBMk1BWEhSMjdYVDVlTGNWYTFDYWJzbm1xemZWVVRLQkUxTWxsY3dBeWt3cUFxSTdKaTdJUExyZFZ6dmhzTW9jUUoxSGFrMEtoVTJrZEEwTjlwV0laSVN6LVVOSW5NWXhocGtRTjhpS25ZUG1fMkVNV1RPWmlV0gGfAUFVX3lxTE85UWpKT2JzWFFBTDRDcl9PY3owb251eEpuOG1seE82MjBySkFsM1BMRVhEQWxCVTd4bVgwcnBOWFJxdlNVN3RGRmFEd1lLN1pST21QcmxqMFY2S211WmVhV1psQWRGMjVFU3BmYWV2ZkR6RThZNU5XU255WXlhLUJhT2RMcnpxVktNSWV0X3VhOEpwSjNrQkRWN0VCX2dHVQ"
-    },
-    {
       "id": "88c6d02d4d64",
       "kind": "news",
       "mentions": [
@@ -100,6 +138,18 @@
       "summary": "Election 2026: Adam Hamilton, (D) U.S. Senate Candidate &nbsp;&nbsp; WIBW",
       "title": "Election 2026: Adam Hamilton, (D) U.S. Senate Candidate",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNTVibGdYTnA4cDRvZEJrdnRHR1JmMmp5b1IzeDNrdENveHliTm5DVHhuRW9rOWxyMmtsZWR0amYybE1vUUdNdFc3VkFTekRjRExka01tdVlwMk1qd2VmaTE4RVlXUWVSNGpPMmhjOTJjeHJVTUZsblpXeER6UjdEcUpVMXdwMVZuY1HSAZ4BQVVfeXFMUE9jWDAzbUdrcHdqU2VlTGdkNTg5dGRIa0hmOU1CbmpMemRKMkxlaVNSeXZ2cXVMMDVxYnhYVmxsSkxBWHI5UVRmckJPdnFWUmZ0ZzFHODc0WC1haVEwckJ0aDNUUmMwTGZIbWpnUktfMjhkVGtTVzh1TksyRWhPTk5XWmN1Q3ltaEhQOGFKbVZSVzZudTlKWmx3UVdPS3c"
+    },
+    {
+      "id": "b5658e1571dd",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-16T23:51:00Z",
+      "source": "WIBW",
+      "summary": "Election 2026: Roger Marshall, (R) U.S. Senate Incumbent &nbsp;&nbsp; WIBW",
+      "title": "Election 2026: Roger Marshall, (R) U.S. Senate Incumbent",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOR1VSRnBHOFE1S2g4dGZBMk1BWEhSMjdYVDVlTGNWYTFDYWJzbm1xemZWVVRLQkUxTWxsY3dBeWt3cUFxSTdKaTdJUExyZFZ6dmhzTW9jUUoxSGFrMEtoVTJrZEEwTjlwV0laSVN6LVVOSW5NWXhocGtRTjhpS25ZUG1fMkVNV1RPWmlV0gGfAUFVX3lxTE85UWpKT2JzWFFBTDRDcl9PY3owb251eEpuOG1seE82MjBySkFsM1BMRVhEQWxCVTd4bVgwcnBOWFJxdlNVN3RGRmFEd1lLN1pST21QcmxqMFY2S211WmVhV1psQWRGMjVFU3BmYWV2ZkR6RThZNU5XU255WXlhLUJhT2RMcnpxVktNSWV0X3VhOEpwSjNrQkRWN0VCX2dHVQ"
     },
     {
       "id": "fc3065db7666",
@@ -580,8 +630,8 @@
       ],
       "published_at": "2026-10-13T22:32:44Z",
       "source": "Politico",
-      "summary": "Hamilton reports $10.6M Q3 haul for Kansas Senate race - Live Updates &nbsp;&nbsp; Politico",
-      "title": "Hamilton reports $10.6M Q3 haul for Kansas Senate race - Live Updates",
+      "summary": "Hamilton reports $10.6M Q3 haul for Kansas Senate race &nbsp;&nbsp; Politico",
+      "title": "Hamilton reports $10.6M Q3 haul for Kansas Senate race",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbDNOVnZ4OF9vVXMySFcwSnlhTVZ5Tjcyb0JvSWJQNWRqcUh1YngtVjByYS1KcHhhaDNtNWw2dWY0S1ZGUU14Z0wwNFhWeWIxbXN0bDVRYkFod1FiVkREQUlKSWFueGNXZF9ieXZxU2c5LUtxR01mTWFReWZMeW00elZCYXk1YTdhTVYxekowVGxpblNNdm9Saw"
     },
     {
@@ -1450,55 +1500,6 @@
       "summary": "Who Is Adam Hamilton? Pastor Could Be Kansas\u2019 First Democratic Senator Since 1932 &nbsp;&nbsp; Forbes",
       "title": "Who Is Adam Hamilton? Pastor Could Be Kansas\u2019 First Democratic Senator Since 1932",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPeERtaFV4aGlWOXFCRmI4WGpud1p3cVpRRndRZnk4Qjh0ZXNYUzRJZFpWN2Z2NUczQTVFaEhDb21EVWxSeHN4bEU0WWgxNWlINU94WGJZYVVnZGRLSXFweFR6clluMlU4UnBrTnMteWtVd2RHWENlNHExSmRiRk5xM3dDUklnTnJ0M19RbHNyQU9PNkhKWGhFYzZseDl1bW54elBySnhaMUI5OVZTQ2p5Z0hzWHE0ZFIxNUNvSzNxZm1FbUJGQkJobmd3SlNjSUY0aXNXSEUtamRDRjdtU1IxSWdhRGJnOXlu"
-    },
-    {
-      "id": "457f5a072a6a",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-08T09:00:00Z",
-      "source": "KCUR",
-      "summary": "Incumbent U.S. Sen. Roger Marshall, a Republican, and Democratic challenger Adam Hamilton are vying to represent Kansas in the U.S. Senate on the Nov. 3 ballot.",
-      "title": "Top Democratic U.S. Senate PAC is watching Kansas race 'really closely' as it disburses funding",
-      "url": "https://www.kcur.org/politics-elections-and-government/2026-10-08/us-senate-pac-kansas-marshall-hamilton"
-    },
-    {
-      "id": "fa38a654d84f",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-08T08:33:08Z",
-      "source": "Kansas Reflector",
-      "summary": "Visualize a clenched fist, fingers tight and knuckles braced, pulled back to strike. Visualize that fist taking an unexpected turn, avoiding an opponent and instead circling back to slam into its owner\u2019s face. I won\u2019t describe the sights and sounds that follow, just know that the fighter for some unholy reason keeps clenching that fist [&#8230;]",
-      "title": "Roger Marshall keeps punching himself in the face. Kansans raise a bemused eyebrow.",
-      "url": "https://kansasreflector.com/2026/10/08/roger-marshall-keeps-punching-himself-in-the-face-kansans-raise-a-bemused-eyebrow"
-    },
-    {
-      "id": "d99e769b9cff",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-08T07:00:00Z",
-      "source": "Kansas Reflector",
-      "summary": "Opinion: Roger Marshall keeps punching himself in the face. Kansans raise a bemused eyebrow. &nbsp;&nbsp; Kansas Reflector",
-      "title": "Opinion: Roger Marshall keeps punching himself in the face. Kansans raise a bemused eyebrow.",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNR2xCWnMtaDRwS0lSYTFOOUdjN3Z2TmVMZnlXLVFPZ2dLaE5XcTJaZU5JYVFkUXE4M0dlUGU2TzJhcDF4c3hiREJ5ZjZ0c3lyOXZaVFNJdTlJbVlYU0N3OVEzWjBfU0FpREZ2T2lxT0lQc1BYM3I0Q2NSU1BsYVZuME0zZHdfT2Iydk9KWGsxSTB4VE43LU9HRzhfZ3ZYRkNNODVJOEo2ZnBJVTkwaDY2UEFmLXNjOTd3dlV6bzd3"
-    },
-    {
-      "id": "42b6083b8dfe",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-08T03:45:19Z",
-      "source": "MS NOW",
-      "summary": "\u2018People in Kansas are suffering,\u2019 says Democratic Senate candidate Adam Hamilton &nbsp;&nbsp; MS NOW",
-      "title": "\u2018People in Kansas are suffering,\u2019 says Democratic Senate candidate Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPR0R2MVZwMzhuMGxnRXk4blAxdHJiQTZYUjZKVkVpRTlpTVVaUFlsdWgtcGxLa0xqcXhnOEdxWjR6cDE4aEw5NExYaExTMXZXajMtWWdEd3loNjJqTl9OLW1NbTFUb1prSEtyYmw3VFhlbUdvNTNfR083S0toU1FxamtSLU16LW95akFYd3lDN3VjYVJZYzg1MTFvd0VKb1M5eTQzemtuNUNmbWlicWItX3ZyRGdkQVUzczBkOXp5QVN1c2ZXVVFHeHNR"
     }
   ],
   "schema_version": 1

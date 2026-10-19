@@ -2046,29 +2046,74 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-23",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-07-15",
       "date": "2026-07-23",
       "form_type": "F3",
       "report_type": "PRE-PRIMARY",
       "total_receipts": 490367.65,
       "url": "https://docquery.fec.gov/pdf/738/202607239894459738/202607239894459738.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-07-23",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
     }
   ],
-  "generated_at": "2026-10-19T05:22:07.601118Z",
+  "generated_at": "2026-10-19T11:01:08.777939Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 13649522.79,
-      "marshall": 21432607.86
+      "hamilton": 13799522.79,
+      "marshall": 21562925.94
     },
     "recent": [
+      {
+        "amount": 3398.82,
+        "candidate_id": "marshall",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-17",
+        "purpose": "TEXT MESSAGING",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 6318.08,
+        "candidate_id": "marshall",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-17",
+        "purpose": "YARD SIGNS, PRINTING (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 24000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00915595",
+        "committee_name": "GOVERNMENT THAT WORKS PAC",
+        "date": "2026-10-17",
+        "purpose": "AD PRODUCTION (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 100000.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00915595",
+        "committee_name": "GOVERNMENT THAT WORKS PAC",
+        "date": "2026-10-17",
+        "purpose": "DIGITAL AD BUY (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 1434.31,
+        "candidate_id": "hamilton",
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "date": "2026-10-17",
+        "purpose": "YARD SIGNS, PRINTING (ESTIMATE)",
+        "support_oppose": "S"
+      },
       {
         "amount": 50000.0,
         "candidate_id": "marshall",
@@ -2112,6 +2157,15 @@
         "committee_name": "NEW DEAL FOR ALL, INC.",
         "date": "2026-10-16",
         "purpose": "VIDEO PRODUCTION",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 150000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-10-16",
+        "purpose": "MEDIA PLACEMENT",
         "support_oppose": "O"
       },
       {
@@ -2374,65 +2428,11 @@
         "date": "2026-10-12",
         "purpose": "PRINTING - ESTIMATE",
         "support_oppose": "S"
-      },
-      {
-        "amount": 132193.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00724203",
-        "committee_name": "SOMOS PAC",
-        "date": "2026-10-12",
-        "purpose": "CANVASSING - ESTIMATE",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 3150.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-11",
-        "purpose": "CANVASSING (ESTIMATE)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 2475.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-11",
-        "purpose": "CANVASSING (ESTIMATE)",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 3150.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-11",
-        "purpose": "CANVASSING (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 2475.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-11",
-        "purpose": "CANVASSING (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 11843.27,
-        "candidate_id": "marshall",
-        "committee_id": "C00865444",
-        "committee_name": "WINSENATE",
-        "date": "2026-10-10",
-        "purpose": "MEDIA PRODUCTION - ESTIMATE",
-        "support_oppose": "O"
       }
     ],
     "supporting": {
-      "hamilton": 2190349.41,
-      "marshall": 1970893.2
+      "hamilton": 2191783.72,
+      "marshall": 1974292.02
     },
     "top_spenders": [
       {
@@ -2448,7 +2448,7 @@
         "opposes": "marshall"
       },
       {
-        "amount": 5899081.14,
+        "amount": 6052479.96,
         "committee_id": "C00571703",
         "committee_name": "SLF PAC",
         "opposes": "hamilton",
@@ -2499,7 +2499,7 @@
         "opposes": "marshall"
       },
       {
-        "amount": 709275.52,
+        "amount": 717027.91,
         "committee_id": "C00960385",
         "committee_name": "UNITED FUTURES PAC",
         "opposes": "marshall",
@@ -2530,7 +2530,7 @@
         "supports": "marshall"
       }
     ],
-    "total": 39243373.26
+    "total": 39528524.47
   },
   "schema_version": 1
 }
