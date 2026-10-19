@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-18T22:31:43.702719Z",
+  "generated_at": "2026-10-19T00:31:48.546603Z",
   "items": [
     {
       "id": "88be19a46e93",
@@ -289,16 +289,16 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVm1HSTcxeW9sLVFFQVE5cHJUalJBb3BQYTNHM3NWa1dhZnU0OHIteHV0bFMwd3RxNlJBclUwU054N2c0bGp3S1ZPMzUtaExsa29NbHc1OVFoYjZKbUNpaGdFQlNoVDI2cDVGdkp6ZlUtZXAyTC1UVWNFTVdicGhmc2U5Y0s5VmRzQmVsb3Z1RTBaVlNzZHlFTzVEb0V2OF9IS1JqMXY4NzR1bFdodDdGNFlR0gG3AUFVX3lxTE1RaXJpdHNmNDllWUs2aTE0RnFlS2VQUFBybUhBNVRwSHdqbWg4QUo2ZXBnWHVwMDJYMUU5RGVnR2EtNjg4NEJNQXFzSU1RdnRicHlpYXg3cnJlS19nT0hxWkx5SThyaXY0T0VBdUJUZ05PRnhwSlNrQmR0MXBqS3g5T2lock5FVk43SVUtTHJUeTFzYXFWYzdKdm1IYmR0bWhfZGNPRzVyd2tLQjVYTTJLOGY2eTVnTQ"
     },
     {
-      "id": "c3627d5ff6c6",
+      "id": "bab44b0fe3a1",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-15T14:49:44Z",
-      "source": "Los Angeles Daily News",
-      "summary": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch &nbsp;&nbsp; Los Angeles Daily News",
+      "published_at": "2026-10-15T14:58:47Z",
+      "source": "The Press Democrat",
+      "summary": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch &nbsp;&nbsp; The Press Democrat",
       "title": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaWI0bVVYSHoxbk1QdEx5VXM1TzVEZDNXQW9KbGVOVm5sWW1CRTF2N0dleUwwaUFtMktUWDlGQVdDQzJLN2hYUjUtSHJWcXhnSEZ6VF9JcThkdlQtV1hMblBkYVBHdmlqSGNMT1daS19hX3Z4NG1td3VIbGxTX2tzMDF2UEk2UUU"
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOEhFX0R5V1VDbDRWR0JzYy1ZdTMyRktEZ0E4OUJmS0w0Q3pYYjBGQnM5eWpiRWNTVVMyNm9xdnRfNG9wWkZBUUdqbWxKTDZlWHdjZ1JsUjRzVHFiX2tfYVZLX2dwOXBWU05pUmd6VjJNRmx5SGNoRGM1VUJHeG1fV296YUZfTGkyM3p6Qg"
     },
     {
       "id": "1f85e41ebcf5",
@@ -658,6 +658,18 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMV9kbHpSM08wSFFvTHpuN3BCX2Q2a1JtMFFvSFZNcGlYRTdQVVQ5S0o3UkNNNndYWFBwUUtudHZnQkFIODU3MWduUWd3NkRrYTViZjg1LWxkdU5aaVU1aTNaOHdoZDVoUUtZbHhKVEdQNDZNTkpzY1ludnZBbWJxdlF2T0VoZm13SzlacklKZGV1US03Z2x4Q1MzZGI3S1l0RFBTbnhRdVVBT1lZSDBXcXJYMHFJYmRabHVrNTNkNHlGWlBSY2dxUVdpY0lJbWYxYnpkSTc2bXRRUzNtWnBhSQ"
     },
     {
+      "id": "8ade9074dce7",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-13T18:37:00Z",
+      "source": "WIBW",
+      "summary": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena &nbsp;&nbsp; WIBW",
+      "title": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbEg5aTVZU21KQlMtQ1hTRkdxM2RiU0Q5TkNwM2pnYlh6U090anRtOWJTR0cwSTlYRThvU2RXNG54RmZldEhOTFozemlNZGlyeHZ2a1VhOV84cUk2MHhfNncwb1RlSEN1QlQ4RnRidGVZRVJleDVPY0ZfRXpEWXA0dnF2RnpVNDNJZjl2X1lhYlVtQ1RF"
+    },
+    {
       "id": "4a26f244a62d",
       "kind": "news",
       "mentions": [
@@ -668,18 +680,6 @@
       "summary": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall &nbsp;&nbsp; KWCH",
       "title": "POTUS to Wichita: Trump flying in next week to rally for Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcElNcE9DVy1aRFVxLXVYOGFMc2h5U2h0SmJsVXI1UGQxQ0pCcDg0N3ZNeGNXeFcyUXZUOVZGQThpSXpXYlJJc3dMU0ZLdWxHOEVxY2lDXzg0Skh2YmNER3JrTjdyZ3JHbF9xSE1RWmU5TWw2SUs2cFdMd1V6T1FCRW43NDBwR2RXb2xwMHc4eHJNZW9k"
-    },
-    {
-      "id": "72b303ec2c4c",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T18:37:00Z",
-      "source": "KWCH",
-      "summary": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena &nbsp;&nbsp; KWCH",
-      "title": "POTUS to Park City: Trump to rally for Roger Marshall at Heartland Credit Union Arena",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMkQ0WHF3SUE1QVZ1TU1xRlozN2E1ZXJ5YTZ5Y0NscHNiQmlLeFVKYUx2VXhaNG56WjFaQXhLYlZ3NWtjYnRrRjJsNlJYVndpNXZfWTVORWRLNEpHWmRDMTN3NzYwbUtKQXk0Q2RnNWlXNU5fTi0tU0dhSVR0cGoxaW9Ca2VqNnp0Y2xRMTQ3MzRLVV9xcjJDNGhrM0ZJS1ROYXRyMWlSOA"
     },
     {
       "id": "5d2f2c6a8a36",
@@ -810,8 +810,8 @@
         "marshall"
       ],
       "published_at": "2026-10-13T01:31:01Z",
-      "source": "KSN.com",
-      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN.com",
+      "source": "KSN-TV",
+      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN-TV",
       "title": "Marshall, Hamilton stump in Kansas as midterm election nears",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdnEzUXdIT0RSb3dzN1lSRGRxTTFYd2ttY3l4Vi04b3FBak5OcjV0c3Q0ak5fUFdjZjZwb3ZNOG1nRldXWkVQeXNhQzdqb2JITTV3eWFUVDNaeUNmYkJqWUE0Vm1US0VYbTZKcllYdzBWRHJhYU01VHBTRUg5TmFNQnoxcHZVOFd5VWI5UEs1bkI4bFVRWFk1UndNYlZua3RrdV9TcUFVYzZfOGFm0gGyAUFVX3lxTE9UVGN6OHl1UmliaVRpcl90YXF3YlV2WWdmNEUxR3lMellPVm1UNjBOWUdpUGJzRGtxRWZSOG4yWG1JUFZraVVrS0FmQ0NfRnlwSnJrT1JubDRyVFFoVjMxcDlXb2dFaEFOdWZ4bFJEWjlwT1VPZGRlQ0xVcUxOcGRHTWNROWtjODVmM2oyUXNSbTg3RzNWM0ZzT3pJMGFlUE5jLW8yVHJXSW5BZTMwNUFmYmc"
     },

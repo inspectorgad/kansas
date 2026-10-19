@@ -1,0 +1,43 @@
+{
+  "candidates": [
+    {
+      "fec_candidate_id": "S0KS00315",
+      "id": "marshall",
+      "incumbent": true,
+      "name": "Roger Marshall",
+      "party": "R"
+    },
+    {
+      "fec_candidate_id": "S6KS00312",
+      "id": "hamilton",
+      "incumbent": false,
+      "name": "Adam Hamilton",
+      "party": "D"
+    }
+  ],
+  "days_until_election": 15,
+  "election_date": "2026-11-03",
+  "generated_at": "2026-10-19T00:28:01.218976Z",
+  "office": "U.S. Senate",
+  "ratings": [
+    {
+      "as_of": "2026-08-05",
+      "entered_by_hand": true,
+      "lean": "R",
+      "previous": "Solid R",
+      "rating": "Likely R",
+      "source": "Cook Political Report",
+      "url": "https://www.cookpolitical.com/senate/race/488581"
+    },
+    {
+      "as_of": "2026-08-19",
+      "entered_by_hand": true,
+      "lean": "R",
+      "rating": "Likely R",
+      "source": "Sabato's Crystal Ball",
+      "url": "https://centerforpolitics.org/crystalball/2026-senate/"
+    }
+  ],
+  "schema_version": 1,
+  "state": "KS"
+}
