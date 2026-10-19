@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-19T00:31:48.546603Z",
+  "generated_at": "2026-10-19T05:22:11.150916Z",
   "items": [
     {
       "id": "88be19a46e93",
@@ -289,18 +289,6 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVm1HSTcxeW9sLVFFQVE5cHJUalJBb3BQYTNHM3NWa1dhZnU0OHIteHV0bFMwd3RxNlJBclUwU054N2c0bGp3S1ZPMzUtaExsa29NbHc1OVFoYjZKbUNpaGdFQlNoVDI2cDVGdkp6ZlUtZXAyTC1UVWNFTVdicGhmc2U5Y0s5VmRzQmVsb3Z1RTBaVlNzZHlFTzVEb0V2OF9IS1JqMXY4NzR1bFdodDdGNFlR0gG3AUFVX3lxTE1RaXJpdHNmNDllWUs2aTE0RnFlS2VQUFBybUhBNVRwSHdqbWg4QUo2ZXBnWHVwMDJYMUU5RGVnR2EtNjg4NEJNQXFzSU1RdnRicHlpYXg3cnJlS19nT0hxWkx5SThyaXY0T0VBdUJUZ05PRnhwSlNrQmR0MXBqS3g5T2lock5FVk43SVUtTHJUeTFzYXFWYzdKdm1IYmR0bWhfZGNPRzVyd2tLQjVYTTJLOGY2eTVnTQ"
     },
     {
-      "id": "bab44b0fe3a1",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-15T14:58:47Z",
-      "source": "The Press Democrat",
-      "summary": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch &nbsp;&nbsp; The Press Democrat",
-      "title": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOEhFX0R5V1VDbDRWR0JzYy1ZdTMyRktEZ0E4OUJmS0w0Q3pYYjBGQnM5eWpiRWNTVVMyNm9xdnRfNG9wWkZBUUdqbWxKTDZlWHdjZ1JsUjRzVHFiX2tfYVZLX2dwOXBWU05pUmd6VjJNRmx5SGNoRGM1VUJHeG1fV296YUZfTGkyM3p6Qg"
-    },
-    {
       "id": "1f85e41ebcf5",
       "kind": "news",
       "mentions": [
@@ -413,6 +401,18 @@
       "summary": "Sen. Roger Marshall sought funding to address a water shorta... &nbsp;&nbsp; seMissourian",
       "title": "Sen. Roger Marshall sought funding to address a water shorta...",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNSUdXSFlSQ3h1RmRmb09GXzI4MzlnZ2hDd0JOLUc5LTBWeHRvSHhMY05LUWxjb3cyTDFUeTI3NkZycFNobHZNZjlhckEzMXFvWVZweXphTzdMVUpiekRNWGRfVGZuMTQ4b3ZWa3N5RmJHSlpESlU3blRSRFpFMmdKRXZlbWhEWkRlenpOR21nNzI1d3F5VVdaNC1Rc084LS13R0NnRHRvN2FoQ0pQdnlQTjcySUFDMFVTT1ZQSzVMS25qMWYwRVlCVjhmZlgtVkRCeUtmWDZIMUxvdw"
+    },
+    {
+      "id": "a77b0b1d6c46",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-15T07:10:00Z",
+      "source": "AP News",
+      "summary": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch &nbsp;&nbsp; AP News",
+      "title": "Sen. Roger Marshall sought funding to address a water shortage. The project could benefit his ranch",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWHpqN1dWZlpzbUVqM2R4dU5Tc0lHTExQZGlwQzZYTm41d0hfOHIyQktoX1lOZXV6MjBZRnYtZmNFVEkxZ28tejU3WDB6c0tzZXM5Nmg4eGpnMWxQUFh2Y0V3cGYwYXRJYWllY3BVSm5TbHk0RVI5aWhqS0dNUWRMeGthdmIwMTQ4UGZlWTFZQmlqVnBZM25nNmtPR3ZUTjRraDROWU5ISmR1bk9kWDJvXw"
     },
     {
       "id": "4164f1443dd7",
