@@ -7,17 +7,12 @@
     }
   ],
   "consensus": {
-    "as_of": "2026-10-20T00:56:49.495085Z",
-    "change_1h": -0.003,
-    "change_24h": -0.0043,
-    "change_7d": 0.0,
-    "hamilton": 0.4227,
+    "as_of": "2026-10-20T05:48:10.224819Z",
+    "change_1h": 0.003,
+    "change_24h": -0.0013,
+    "change_7d": 0.0008,
+    "hamilton": 0.4197,
     "history": [
-      {
-        "hamilton": 0.2353,
-        "marshall": 0.7647,
-        "t": "2026-09-16T19:04:32.895375Z"
-      },
       {
         "hamilton": 0.2366,
         "marshall": 0.7634,
@@ -917,91 +912,96 @@
         "hamilton": 0.4227,
         "marshall": 0.5773,
         "t": "2026-10-20T00:56:49.495085Z"
+      },
+      {
+        "hamilton": 0.4197,
+        "marshall": 0.5803,
+        "t": "2026-10-20T05:48:10.224819Z"
       }
     ],
-    "marshall": 0.5773,
+    "marshall": 0.5803,
     "platforms": [
       "kalshi"
     ]
   },
   "disclaimer": "Prediction-market prices are an implied probability of winning, not a projected vote share.",
-  "generated_at": "2026-10-20T00:56:49.499730Z",
+  "generated_at": "2026-10-20T05:48:10.229797Z",
   "margin": {
     "buckets": [
       {
         "candidate_id": "hamilton",
         "label": "Hamilton wins",
-        "probability": 0.4227
+        "probability": 0.4197
       },
       {
         "candidate_id": "marshall",
         "high": 1.0,
         "label": "Marshall by under 1",
         "low": 0.0,
-        "probability": 0.0173
+        "probability": 0.0353
       },
       {
         "candidate_id": "marshall",
         "high": 3.0,
         "label": "Marshall by 1\u20133",
         "low": 1.0,
-        "probability": 0.18
+        "probability": 0.2
       },
       {
         "candidate_id": "marshall",
         "high": 5.0,
         "label": "Marshall by 3\u20135",
         "low": 3.0,
-        "probability": 0.09
+        "probability": 0.07
       },
       {
         "candidate_id": "marshall",
         "high": 7.0,
         "label": "Marshall by 5\u20137",
         "low": 5.0,
-        "probability": 0.1
+        "probability": 0.095
       },
       {
         "candidate_id": "marshall",
         "high": 9.0,
         "label": "Marshall by 7\u20139",
         "low": 7.0,
-        "probability": 0.0945
+        "probability": 0.0845
       },
       {
         "candidate_id": "marshall",
         "high": 11.0,
         "label": "Marshall by 9\u201311",
         "low": 9.0,
-        "probability": 0.041
+        "probability": 0.04
       },
       {
         "candidate_id": "marshall",
         "high": 13.0,
         "label": "Marshall by 11\u201313",
         "low": 11.0,
-        "probability": 0.015
+        "probability": 0.011
       },
       {
         "candidate_id": "marshall",
         "high": 15.0,
         "label": "Marshall by 13\u201315",
         "low": 13.0,
-        "probability": 0.0005
+        "probability": 0.008
       },
       {
         "candidate_id": "marshall",
         "high": 17.0,
         "label": "Marshall by 15\u201317",
         "low": 15.0,
-        "probability": 0.009
+        "probability": 0.007
       },
       {
         "candidate_id": "marshall",
         "high": 19.0,
         "label": "Marshall by 17\u201319",
         "low": 17.0,
-        "probability": 0.0
+        "probability": 0.002
       },
       {
         "candidate_id": "marshall",
@@ -1015,7 +1015,7 @@
         "high": 23.0,
         "label": "Marshall by 21\u201323",
         "low": 21.0,
-        "probability": 0.0095
+        "probability": 0.007
       },
       {
         "candidate_id": "marshall",
@@ -1026,16 +1026,16 @@
     ],
     "detailed_side": "marshall",
     "leader": "marshall",
-    "median_margin": 1.7,
+    "median_margin": 1.5,
     "note": "Bands come from market prices for 'will the margin be at least N points'. The exchange lists those rungs for one candidate only, so the other side appears as a single band.",
     "rungs": 12
   },
   "markets": [
     {
-      "fetched_at": "2026-10-20T00:56:43.936777Z",
-      "hamilton": 0.4227,
+      "fetched_at": "2026-10-20T05:48:04.462801Z",
+      "hamilton": 0.4197,
       "market_id": "KXKSSENGOVCOMBO-derived",
-      "marshall": 0.5773,
+      "marshall": 0.5803,
       "platform": "kalshi",
       "title": "Kansas Senate 2026 (derived from governor/Senate combinations)"
     }
