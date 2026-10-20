@@ -1,8 +1,8 @@
 {
   "aggregate": {
     "as_of": "2026-10-20T00:00:00Z",
-    "band": 2.07,
-    "hamilton": 46.85,
+    "band": 2.1,
+    "hamilton": 46.69,
     "history": [
       {
         "date": "2026-06-22",
@@ -664,200 +664,200 @@
       },
       {
         "date": "2026-09-24",
-        "hamilton": 47.35,
-        "margin": -1.12,
-        "marshall": 46.24,
-        "n_polls": 5
+        "hamilton": 45.65,
+        "margin": -0.48,
+        "marshall": 45.17,
+        "n_polls": 4
       },
       {
         "date": "2026-09-25",
-        "hamilton": 47.35,
-        "margin": -1.12,
-        "marshall": 46.24,
-        "n_polls": 5
+        "hamilton": 45.65,
+        "margin": -0.48,
+        "marshall": 45.17,
+        "n_polls": 4
       },
       {
         "date": "2026-09-26",
-        "hamilton": 47.35,
-        "margin": -1.12,
-        "marshall": 46.24,
-        "n_polls": 5
+        "hamilton": 45.65,
+        "margin": -0.48,
+        "marshall": 45.17,
+        "n_polls": 4
       },
       {
         "date": "2026-09-27",
-        "hamilton": 47.35,
-        "margin": -1.12,
-        "marshall": 46.24,
-        "n_polls": 5
+        "hamilton": 45.65,
+        "margin": -0.48,
+        "marshall": 45.17,
+        "n_polls": 4
       },
       {
         "date": "2026-09-28",
-        "hamilton": 47.35,
-        "margin": -1.12,
-        "marshall": 46.24,
-        "n_polls": 5
+        "hamilton": 45.65,
+        "margin": -0.48,
+        "marshall": 45.17,
+        "n_polls": 4
       },
       {
         "date": "2026-09-29",
-        "hamilton": 47.35,
-        "margin": -1.12,
-        "marshall": 46.24,
-        "n_polls": 5
+        "hamilton": 45.65,
+        "margin": -0.48,
+        "marshall": 45.17,
+        "n_polls": 4
       },
       {
         "date": "2026-09-30",
-        "hamilton": 46.49,
-        "margin": -0.69,
-        "marshall": 45.8,
-        "n_polls": 6
+        "hamilton": 45.33,
+        "margin": -0.23,
+        "marshall": 45.1,
+        "n_polls": 5
       },
       {
         "date": "2026-10-01",
-        "hamilton": 45.7,
-        "margin": -0.37,
-        "marshall": 45.33,
-        "n_polls": 7
+        "hamilton": 45.01,
+        "margin": -0.11,
+        "marshall": 44.9,
+        "n_polls": 6
       },
       {
         "date": "2026-10-02",
-        "hamilton": 45.7,
-        "margin": -0.37,
-        "marshall": 45.33,
-        "n_polls": 7
+        "hamilton": 45.01,
+        "margin": -0.11,
+        "marshall": 44.9,
+        "n_polls": 6
       },
       {
         "date": "2026-10-03",
-        "hamilton": 45.7,
-        "margin": -0.37,
-        "marshall": 45.33,
-        "n_polls": 7
+        "hamilton": 45.01,
+        "margin": -0.11,
+        "marshall": 44.9,
+        "n_polls": 6
       },
       {
         "date": "2026-10-04",
-        "hamilton": 46.3,
-        "margin": -1.38,
-        "marshall": 44.92,
-        "n_polls": 9
+        "hamilton": 45.92,
+        "margin": -1.31,
+        "marshall": 44.61,
+        "n_polls": 8
       },
       {
         "date": "2026-10-05",
-        "hamilton": 46.3,
-        "margin": -1.38,
-        "marshall": 44.92,
-        "n_polls": 9
+        "hamilton": 45.92,
+        "margin": -1.31,
+        "marshall": 44.61,
+        "n_polls": 8
       },
       {
         "date": "2026-10-06",
-        "hamilton": 46.3,
-        "margin": -1.38,
-        "marshall": 44.92,
-        "n_polls": 9
+        "hamilton": 45.92,
+        "margin": -1.31,
+        "marshall": 44.61,
+        "n_polls": 8
       },
       {
         "date": "2026-10-07",
-        "hamilton": 46.3,
-        "margin": -1.38,
-        "marshall": 44.92,
-        "n_polls": 9
+        "hamilton": 45.92,
+        "margin": -1.31,
+        "marshall": 44.61,
+        "n_polls": 8
       },
       {
         "date": "2026-10-08",
-        "hamilton": 46.3,
-        "margin": -1.38,
-        "marshall": 44.92,
-        "n_polls": 9
+        "hamilton": 45.92,
+        "margin": -1.31,
+        "marshall": 44.61,
+        "n_polls": 8
       },
       {
         "date": "2026-10-09",
-        "hamilton": 46.3,
-        "margin": -1.38,
-        "marshall": 44.92,
-        "n_polls": 9
+        "hamilton": 45.92,
+        "margin": -1.31,
+        "marshall": 44.61,
+        "n_polls": 8
       },
       {
         "date": "2026-10-10",
-        "hamilton": 46.71,
-        "margin": -1.29,
-        "marshall": 45.42,
-        "n_polls": 10
+        "hamilton": 46.46,
+        "margin": -1.23,
+        "marshall": 45.23,
+        "n_polls": 9
       },
       {
         "date": "2026-10-11",
-        "hamilton": 46.71,
-        "margin": -1.29,
-        "marshall": 45.42,
-        "n_polls": 10
+        "hamilton": 46.46,
+        "margin": -1.23,
+        "marshall": 45.23,
+        "n_polls": 9
       },
       {
         "date": "2026-10-12",
-        "hamilton": 46.71,
-        "margin": -1.29,
-        "marshall": 45.42,
-        "n_polls": 10
+        "hamilton": 46.46,
+        "margin": -1.23,
+        "marshall": 45.23,
+        "n_polls": 9
       },
       {
         "date": "2026-10-13",
-        "hamilton": 46.71,
-        "margin": -1.29,
-        "marshall": 45.42,
-        "n_polls": 10
+        "hamilton": 46.46,
+        "margin": -1.23,
+        "marshall": 45.23,
+        "n_polls": 9
       },
       {
         "date": "2026-10-14",
-        "hamilton": 46.85,
-        "margin": -0.98,
-        "marshall": 45.88,
-        "n_polls": 12
+        "hamilton": 46.69,
+        "margin": -0.91,
+        "marshall": 45.78,
+        "n_polls": 11
       },
       {
         "date": "2026-10-15",
-        "hamilton": 46.85,
-        "margin": -0.98,
-        "marshall": 45.88,
-        "n_polls": 12
+        "hamilton": 46.69,
+        "margin": -0.91,
+        "marshall": 45.78,
+        "n_polls": 11
       },
       {
         "date": "2026-10-16",
-        "hamilton": 46.85,
-        "margin": -0.98,
-        "marshall": 45.88,
-        "n_polls": 12
+        "hamilton": 46.69,
+        "margin": -0.91,
+        "marshall": 45.78,
+        "n_polls": 11
       },
       {
         "date": "2026-10-17",
-        "hamilton": 46.85,
-        "margin": -0.98,
-        "marshall": 45.88,
-        "n_polls": 12
+        "hamilton": 46.69,
+        "margin": -0.91,
+        "marshall": 45.78,
+        "n_polls": 11
       },
       {
         "date": "2026-10-18",
-        "hamilton": 46.85,
-        "margin": -0.98,
-        "marshall": 45.88,
-        "n_polls": 12
+        "hamilton": 46.69,
+        "margin": -0.91,
+        "marshall": 45.78,
+        "n_polls": 11
       },
       {
         "date": "2026-10-19",
-        "hamilton": 46.85,
-        "margin": -0.98,
-        "marshall": 45.88,
-        "n_polls": 12
+        "hamilton": 46.69,
+        "margin": -0.91,
+        "marshall": 45.78,
+        "n_polls": 11
       },
       {
         "date": "2026-10-20",
-        "hamilton": 46.85,
-        "margin": -0.98,
-        "marshall": 45.88,
-        "n_polls": 12
+        "hamilton": 46.69,
+        "margin": -0.91,
+        "marshall": 45.78,
+        "n_polls": 11
       }
     ],
     "leader": "hamilton",
-    "margin": -0.98,
-    "marshall": 45.88,
+    "margin": -0.91,
+    "marshall": 45.78,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
-    "n_polls_used": 12,
-    "trend_7d": 0.31
+    "n_polls_used": 11,
+    "trend_7d": 0.32
   },
   "attribution": [
     {
@@ -867,7 +867,7 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-20T19:53:10.716484Z",
+  "generated_at": "2026-10-20T22:58:50.966064Z",
   "polls": [
     {
       "added_at": "2026-10-16T01:29:49.365050Z",
@@ -988,20 +988,6 @@
       "sample_size": 605,
       "start_date": "2026-09-22",
       "undecided": 6.0
-    },
-    {
-      "added_at": "2026-09-24T23:47:33.818563Z",
-      "end_date": "2026-09-24",
-      "id": "abbe44437113",
-      "margin_of_error": 4.4,
-      "pollster": "Wedgewood Polls",
-      "population": "LV",
-      "results": {
-        "hamilton": 50.0,
-        "marshall": 48.0
-      },
-      "sample_size": 500,
-      "start_date": "2026-09-22"
     },
     {
       "added_at": "2026-10-02T13:56:40.487336Z",

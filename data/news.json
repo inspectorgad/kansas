@@ -26,8 +26,82 @@
       "url": "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"
     }
   ],
-  "generated_at": "2026-10-20T19:58:02.655876Z",
+  "generated_at": "2026-10-20T23:02:56.528463Z",
   "items": [
+    {
+      "id": "58e48809726f",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-20T22:43:40Z",
+      "source": "KSNT politics",
+      "summary": "There's a lot at stake for both candidates because, according to three polling aggregators, the race is statistically tied.",
+      "title": "What polls say about Kansas Senate race before Marshall vs. Hamilton debate",
+      "url": "https://www.ksnt.com/elections/what-polls-say-about-kansas-senate-race-before-marshall-vs-hamilton-debate"
+    },
+    {
+      "id": "63d9f2a1c071",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-20T22:13:47Z",
+      "source": "KCUR",
+      "summary": "President Trump used the term while campaigning in Kansas for Sen. Roger Marshall. Previously, he said he didn't know it was offensive to Jews.",
+      "title": "Trump used antisemitic slur in Kansas while defending Marshall's lawsuits against patients",
+      "url": "https://www.kcur.org/politics-elections-and-government/2026-10-20/trump-used-antisemitic-slur-in-kansas-while-defending-marshalls-lawsuits-against-patients"
+    },
+    {
+      "id": "0d6116429c2b",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-20T21:51:23Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "Political expert talks pros, cons for Sen. Roger Marshall after President Trump's visit to Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "Political expert talks pros, cons for Sen. Roger Marshall after President Trump's visit to Kansas",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdmhiUV9tUFMxV0hiTlYzdlpFTFI2ZzRDSk0yNTRBV2hHeVI3UXZ2M3Vob19zTFlzdnpKcDV2QkZqd3IzRG4tb2U5SFhPVmltYlgwLU85XzY4RUUyZm1Pa1BuOEFCcXhacGg2OWstbzlOSzVCekpVTHhnTFVuaW5EMV9zTXpIbjFZWXlwZTlGc09pcmNEeEIyU1FBcjdBaUI5MTZNOWxDS2J3QktPVlJkdUNJZmM0V00xOFhxY1dfd2hBamlHa0daTmJrbw"
+    },
+    {
+      "id": "ba81211e503f",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-20T20:39:11Z",
+      "source": "www.dscc.org",
+      "summary": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d &nbsp;&nbsp; www.dscc.org",
+      "title": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOczhpVHQtSnU3dlZJSnZQaHFINUNIOFRMWkUwMTVNVkdBYzk4ZlV2T2VjaWd2WTlxd2tUdlJqSXlCSVZLZXRPdklBU0dQb05jM0I0M19SRWNOZHFQT2tpaTRIZjdRcXZmZEc2Z3NUZnlDb01Qcm91MUNTUXJ3RVVBZnYxZ0pBZm0yMjc3N2FNSzJjdkxBakxFUVBpZk9PSVlPZHBkOHl3R0pnaDV3X3hoUXduNUh3Mko2MkJhc3hQMUo0czZVZ3N6bEZtV0pKd2gxSXRQa2tB"
+    },
+    {
+      "id": "caa9c8f94b2b",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-20T20:30:57Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOdEkzb01VcXJ4NGFoNWhOX0I1TVVqbmVycTcwQkRVMVNyenpHSTJaRUZGYmJVZ054WDRyaWlKSlpQbGh0Y1JDY2pPcDRYNEtaUHVUZFdtRTZZejFlb3dMTnlmTVBlUXUzX0lWR1V5eWIzVC1uV3ZuWGlMOWMxZVJRMzlseVZxajViRndLclFmem4zVXBxZkVVcXFTWXhpN1A2M3lrdGFSN0FtSEg1OUMzZTJqRTZXYm1nU1N3TEpoUGVvNjBadW9kS1VwZ3I0c0dKMHJhS3Y4d2ItWGh0TEd2V0hvaENndw"
+    },
+    {
+      "id": "56112bc2f56c",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-20T20:20:44Z",
+      "source": "The National News Desk",
+      "summary": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican &nbsp;&nbsp; The National News Desk",
+      "title": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican",
+      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQblppaVNpak5tV2QybU1DckpaQzNCakxXdzVDOVQ5TW1fTDZLZWJzeVhlZFFMSFk5UGJ3Q215X2UtUk9NRW84UGJ3ZFo0ODF0b3EyOWdwLU9UZURHdVhrckM0a0JCaTd5NFRsX085dTNaamlsOEVNdmZlSkdyRlZkejNMQjVzNkM0SzdTd3hHMnBtQ21kdUZLT1RiREhwM2xCWl9KRV9YWFNWNFpQV0d4OVJZN0VrV0dZX1VNVEhiWmd2UENRT3N6bTlzZDc5R1lrNFBKWXZOQlFnRHNhaGpKV3BnNnRhZ3NGa3ZndERjTVVmNEN5UWRfLU1kU3dkem1mZm9ZWGhQSjFUdjVjOEE0dTk4Ni1Tdw"
+    },
     {
       "id": "eae79dd6baaf",
       "kind": "news",
@@ -76,19 +150,6 @@
       "summary": "President Trump used an antisemitic slur at a rally in Kansas Monday while defending Sen. Roger Marshall (R-Kan.) over revelations he sued his patients for unpaid medical bills.",
       "title": "Trump uses antisemitic slur in Kansas rally",
       "url": "https://www.ksnt.com/news/national/trump-uses-antisemitic-slur-in-kansas-rally"
-    },
-    {
-      "id": "caa9c8f94b2b",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-20T14:52:15Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOdEkzb01VcXJ4NGFoNWhOX0I1TVVqbmVycTcwQkRVMVNyenpHSTJaRUZGYmJVZ054WDRyaWlKSlpQbGh0Y1JDY2pPcDRYNEtaUHVUZFdtRTZZejFlb3dMTnlmTVBlUXUzX0lWR1V5eWIzVC1uV3ZuWGlMOWMxZVJRMzlseVZxajViRndLclFmem4zVXBxZkVVcXFTWXhpN1A2M3lrdGFSN0FtSEg1OUMzZTJqRTZXYm1nU1N3TEpoUGVvNjBadW9kS1VwZ3I0c0dKMHJhS3Y4d2ItWGh0TEd2V0hvaENndw"
     },
     {
       "id": "861795e39a27",
@@ -1439,69 +1500,6 @@
       "summary": "U.S. Senate General Election Candidate Interview With Sen. Roger Marshall &nbsp;&nbsp; KWCH",
       "title": "U.S. Senate General Election Candidate Interview With Sen. Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNM3FVTzZWZk9qTWhBVGFKT0hsenpEVlUwOTBRQktJaFFZOWlWaWVYUmN3NnNtQVZZNkk3MWt3d1BUM25ERDNmMGswcVByanYxWUVxU2VMN3FrSWM1MDdLcG9YN1E2ZFUwdUhyZ2NoSDhlVjVLQ1BmTTVfR0l1VFhIdWJrcnNFa2xVUFVPNDZRNmt2eEkwOEhhTkFjX2JwU0x6X3FlNXNMUGg2dTUxd0E"
-    },
-    {
-      "id": "e5fa70e466ec",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T02:29:00Z",
-      "source": "KMBC",
-      "summary": "Kansas Senate race: Trump says 'Kansas Style Rally' coming for U.S. Sen. Roger Marshall &nbsp;&nbsp; KMBC",
-      "title": "Kansas Senate race: Trump says 'Kansas Style Rally' coming for U.S. Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUmhmSU9uUm9DOGVDbE5oT1hnWGgyV0U1SGlaUUstT0lyVkFpaXJha25GV1FJUjFyNHZpQmdRSWpOenQxX1NmSVZMTDJENUpjSzRGWi1KalVjZ0thOW9FU2hLWHRjSm03M3pYSmxVd0t2S2NfblhBejAxcEMyOXJVRkhyem9vLWp6X1BDUFBWUEM1aTRwa0F6aFEzbHdHZw"
-    },
-    {
-      "id": "703e5a449430",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-13T01:31:01Z",
-      "source": "KSN-TV",
-      "summary": "Marshall, Hamilton stump in Kansas as midterm election nears &nbsp;&nbsp; KSN-TV",
-      "title": "Marshall, Hamilton stump in Kansas as midterm election nears",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdnEzUXdIT0RSb3dzN1lSRGRxTTFYd2ttY3l4Vi04b3FBak5OcjV0c3Q0ak5fUFdjZjZwb3ZNOG1nRldXWkVQeXNhQzdqb2JITTV3eWFUVDNaeUNmYkJqWUE0Vm1US0VYbTZKcllYdzBWRHJhYU01VHBTRUg5TmFNQnoxcHZVOFd5VWI5UEs1bkI4bFVRWFk1UndNYlZua3RrdV9TcUFVYzZfOGFm0gGyAUFVX3lxTE9UVGN6OHl1UmliaVRpcl90YXF3YlV2WWdmNEUxR3lMellPVm1UNjBOWUdpUGJzRGtxRWZSOG4yWG1JUFZraVVrS0FmQ0NfRnlwSnJrT1JubDRyVFFoVjMxcDlXb2dFaEFOdWZ4bFJEWjlwT1VPZGRlQ0xVcUxOcGRHTWNROWtjODVmM2oyUXNSbTg3RzNWM0ZzT3pJMGFlUE5jLW8yVHJXSW5BZTMwNUFmYmc"
-    },
-    {
-      "id": "927abf6b801e",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-13T01:08:00Z",
-      "source": "Yahoo",
-      "summary": "Sen. Marshall to Newsmax: Adam Hamilton Is a Transgender Apologist &nbsp;&nbsp; Yahoo",
-      "title": "Sen. Marshall to Newsmax: Adam Hamilton Is a Transgender Apologist",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPTjJwU04xTmw2U3pERDRUWnFtRTNGMUkzeFJMWTJIbld5bUhkVjEyQlBYazRpWjA1M0ZvajFqa0ctaVp6bVlJa1BVbDNTeFlCalg1RXpodFNnUmNRMGo3NmJoSTdza01JQXM1c2hIVExFMmlkSDBSZ3VlV2xlbElrS2t1Ujh6czR0NFZtNG5Ydzl5UHF5VW9vLWdn"
-    },
-    {
-      "id": "3217f608f9d1",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T01:07:12Z",
-      "source": "Newstalk KZRG",
-      "summary": "Kansas Senate hopeful challenges Trump on faith as president promises rally for Marshall &nbsp;&nbsp; Newstalk KZRG",
-      "title": "Kansas Senate hopeful challenges Trump on faith as president promises rally for Marshall",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOM05qbllHRHdMUWhKNHRreTU5dGFYc1BLUFpSdkl3S19FSnJMN1ZvaWR5ajVINjhMUG1FeVI0eDNRX2NxN3RJanN0YUFMY0o3VTNmV2s0UUlzLUE4VzNFakw0MTloNlhxS3hRQ0J1OTktRlZ5dmxwM2xneFNuemY0OXBSenREb2hOVzhkV2dzQU5QZ1U0aVZFVW14Y291ZkFGcHFiUTJoallzNG4tRTYxbEFHamhBc3FVTkFZRThuS2doczd1X2dUVQ"
-    },
-    {
-      "id": "ad2b6386ed2e",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-13T00:54:13Z",
-      "source": "FOX4KC.com",
-      "summary": "Donald Trump calls out Adam Hamilton; hints at \u2018Kansas Style Rally\u2019 for Roger Marshall &nbsp;&nbsp; FOX4KC.com",
-      "title": "Donald Trump calls out Adam Hamilton; hints at \u2018Kansas Style Rally\u2019 for Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVDNZbEJ1djEzYk93ZjlrNEJQLTBFOXpiakdVbTNKVUdRQ3h6RHVESTRTM0xvWUt0eUo2d2w4TDhmdGw3S0s2d3QwbjhXYjk2bjhpckxUNDRZbUxHdVZMNWdRcm1GclVzMmJ6YXE0S0RNUm1FMFRSVEJialI1VzVlTnVfM2pCTkJVRTA1X3ZqMkpoVnlnMmhHeE9VeG8tTTZleFQwVm82NFpIdU00NFV3aThEcGlUdXdVbF9hetIBwgFBVV95cUxNeVZzZXAwU2ctV09xaVpGcVBmVndILVBuQmpxcmM4TU1RUnloUUtyc3Z1NjZvdm50RnppZk5iQ2tJdUtmamxzM1V3Y0lkMG9Ia1l1UzZnTGFhVHFhamRzeTZZeG1QRXpzTFdPUW5UR3JON1JkR1JVMFRwTUx6OXc3OFNVNVhXN3RTN2lMTW5FZHJyOUVTWHVpMHhGdHp5R0JDeE9KYWtqUFNJQl96RC10b3hlS2RHNExwVzVqcXNWcGM3dw"
     }
   ],
   "schema_version": 1
