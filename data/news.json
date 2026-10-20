@@ -26,8 +26,32 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-20T05:52:02.346399Z",
+  "generated_at": "2026-10-20T11:08:49.378128Z",
   "items": [
+    {
+      "id": "6bf836a145a7",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-20T09:58:00Z",
+      "source": "The Daily Beast",
+      "summary": "Trump Drops Vile Slur to Defend Floundering MAGA Senator Roger Marshall &nbsp;&nbsp; The Daily Beast",
+      "title": "Trump Drops Vile Slur to Defend Floundering MAGA Senator Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxONXZTSTB3XzI3bXZlT2RNSVF3dGRtQ1FHM29GRUUtWENIaVBxeEJxM21WNE1nTGZHNXpDaXZVTlpidngzOHdCQ0QwT2xNUlBqTG5rUFUzQ3kxSWZLbU1qbmd4eTFxMjNzUGoyajktcERNZUtTVHZHY1NhN3d3TjRrbjJmSmZTX1dPejVzblEydTBMZ1BOeHFTdGh1Q0VOWnYyOVJn"
+    },
+    {
+      "id": "cdacfd089e71",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-20T09:00:00Z",
+      "source": "KCUR",
+      "summary": "U.S. Sen. Roger Marshall sought a $4.2 million earmark to resolve a water rights dispute in Kansas in 2024. The plan aims to boost water flow to the Quivira National Wildlife Refuge, benefiting both the refuge and local farmers, but it could also help preserve the value of Marshall\u2019s nearby Rattlesnake Ranch.",
+      "title": "Sen. Roger Marshall sought funds to address Kansas water shortage. His own ranch would benefit",
+      "url": "https://www.kcur.org/politics-elections-and-government/2026-10-20/roger-marshall-rattlesnake-ranch-quivira-water-shortage"
+    },
     {
       "id": "4b78038a1932",
       "kind": "news",
@@ -163,6 +187,18 @@
       "summary": "Trump uses antisemitic slur in defending Sen. Roger Marshall at rally in Kansas &nbsp;&nbsp; NBC News",
       "title": "Trump uses antisemitic slur in defending Sen. Roger Marshall at rally in Kansas",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZmpMZWJFcXE5Zy1YY3VqX0QzR2dRbGxxckhSYUFqU1JpYVlSSklkV1VZa2lHME41MUxjcTNwUDNOSjZrXzRWVUhJc0V5Vi1zQkFEWmZfdmNmRVhCQ1pvNnNBU3ZrWW5uOVQ3ak13RTIyRUJqcG1TOGpHWUdRb3hXRDhMaEdnM004T2hNaloyTzJfSnpQYnRhU1hjNGx3NlRIM1ozdmlfQ2JwY1oxcjZMMU5VdW9ZblE2VDM1Y0FvNzRhVkY2"
+    },
+    {
+      "id": "45f7398e6a53",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-20T01:55:44Z",
+      "source": "Forth.News",
+      "summary": "Trump Warns Kansas Voters of \u2018France\u2011Style\u2019 Unrest as He Campaigns for Senator Marshall &nbsp;&nbsp; Forth.News",
+      "title": "Trump Warns Kansas Voters of \u2018France\u2011Style\u2019 Unrest as He Campaigns for Senator Marshall",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xY1VBczg5QjFpT1NVbEx3ZWw2RkdGTXB1RUpKMjFRd25nV3pJWVNiVUFqa2ZJcG9rU2JDX1pDSVdOMk9yYWQyXzFLaGQtR0NranZSczJfR1Vlb21oMUZJZWRR"
     },
     {
       "id": "97990942d1ef",
@@ -311,16 +347,16 @@
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1kSEg4d1pNc1FEMVFiR3JXdV94c21QY3JIRU9CdE44b182QXd6Q29Xb05IaUJOTUVSVDNwWWxxb3V2bmZBRTVqaUVxajZiekRvQ1NVemhLUXlGOGg1NkR6cXlYRkJZdjB3aUFHUHNBdHFwWVotajYxVkVUNmFFZw"
     },
     {
-      "id": "35084beb94ef",
+      "id": "ff4857df7e44",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-19T21:16:49Z",
+      "published_at": "2026-10-19T21:16:00Z",
       "source": "Kansas City Star",
       "summary": "Trump supporter Ted Nugent set to appear at rally for Roger Marshall near Wichita &nbsp;&nbsp; Kansas City Star",
       "title": "Trump supporter Ted Nugent set to appear at rally for Roger Marshall near Wichita",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMS16amdCRnlBcG5qT0syME5Ydml6OTdTR0ZRX01URnZrZU5GaDdWMFhTSEhYWlRzLVZGT3RycmlJcWhkbmJOdkp5aTlFa1FaMV9SSkxUbDdleW9IM2lHNFI5THlsemdaTTBVV1NONVRyVkxoTXFqdmYtMUZuc3pZNnoxVklyQkRaMEHSAYoBQVVfeXFMUDEtempnQkZ5QXBuak9LMjBOWHZpejk3U0dGUV9NVEZ2a2VORmg3VjBYU0hIWFpUcy1WRk90cnJpSXFoZG5iTnZKeWk5RWtRWjFfUkpMVGw3ZXlvSDNpRzRSOUx5bHpnWk0wVVdTTjVUclZMaE1xanZmLTFGbnN6WTZ6MVZJckJEWjBB"
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPYTZHeUptQmhBRDI0QUlfMzFlZmhyMzgxbTgzcFJiZkhHV3lZWVh3T3NWbXF3cFR1anM4ejh5eklzUzBueEJXc2kzUW5PUjNtbFk1VWRUeHU3RWpuNW9PcHZHYzlzR0p5dmF4clJJTGRZa0xQWmhkYUJCOUI2OWRfdWI3Ym5nV0RTbGfSAYoBQVVfeXFMUDEtempnQkZ5QXBuak9LMjBOWHZpejk3U0dGUV9NVEZ2a2VORmg3VjBYU0hIWFpUcy1WRk90cnJpSXFoZG5iTnZKeWk5RWtRWjFfUkpMVGw3ZXlvSDNpRzRSOUx5bHpnWk0wVVdTTjVUclZMaE1xanZmLTFGbnN6WTZ6MVZJckJEWjBB"
     },
     {
       "id": "a76fc4390d5e",
@@ -817,6 +853,19 @@
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE41Q2pBVThjTmNIZEZxMzVfVldiTU41cHJSMk1rUFI4a1llRVd4WHRCa0FqSW5GUFpsVk51YmNFRnpteWk4RVRBQlBkcHpTSTVhZTlBYXdEaDh5S1JrRnZWaFd5d0JWZ3ptOU5UWEdR"
     },
     {
+      "id": "4667037bc4d4",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-15T20:50:00Z",
+      "source": "HPPR",
+      "summary": "Adam Hamilton calls for ethics inquiry into Kansas Sen. Roger Marshall's use of taxpayer money &nbsp;&nbsp; HPPR",
+      "title": "Adam Hamilton calls for ethics inquiry into Kansas Sen. Roger Marshall's use of taxpayer money",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZTF1LVJ6NjZQSlNnRHVGMnlhWVV2a1FwNEtQakFFM2Z3SDhnOUMwMmxxMF9vdlRuUUlfQXFuekNxTFY3d2dCWDhtMldzdy14VVd1d0s5WW5NYWcyaVNOLTdheVhwcEpiVEdEckhMREpaRTFBWHZ2UWJMeFNaYWdlSGg0cjg4T2U2dGFheDB6eDFoaWJvQWgxRzd6eHFMZHdVekxTNjhNUENBX3N1XzdvMDFzUHRPSFYtMmxzX2Z3LWZEazRRb2JvUHJxRzVmeW8"
+    },
+    {
       "id": "36a9c57732b4",
       "kind": "news",
       "mentions": [
@@ -840,19 +889,6 @@
       "summary": "Kansas Republican Roger Marshall is at risk of losing his U.S. Senate seat as Democrats advance on GOP territory in congressional races across the country.",
       "title": "Election analyst: Candidate quality key to Roger Marshall\u2019s slide, Adam Hamilton\u2019s rise in Kansas",
       "url": "https://kansasreflector.com/2026/10/15/election-analyst-candidate-quality-key-to-roger-marshalls-slide-adam-hamiltons-rise-in-kansas"
-    },
-    {
-      "id": "8cd405b02caa",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-15T14:43:16Z",
-      "source": "KCUR",
-      "summary": "Reporting by the Kansas Reflector and MS Now found that when Marshall first ran for U.S. Senate, he and his top aide repeatedly using congressional staff and government resources in questionable ways \u2014 including using taxpayer funds during campaign trips.",
-      "title": "Adam Hamilton calls for ethics inquiry into Kansas Sen. Roger Marshall\u2019s use of taxpayer money",
-      "url": "https://www.kcur.org/politics-elections-and-government/2026-10-15/adam-hamilton-roger-marshall-taxpayer-money"
     },
     {
       "id": "26869f3496f2",
@@ -1466,43 +1502,6 @@
       "summary": "Trump touts \u2018Kansas Style Rally\u2019 in support of Sen. Roger Marshall &nbsp;&nbsp; KWCH",
       "title": "Trump touts \u2018Kansas Style Rally\u2019 in support of Sen. Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTjRnRGdBc3JkRlI4MzJkMDRxaWxQeG5aWEswazVHaVFaN2hxNURmSU9Bb3ppQktjVkU1Wk1vd2R0OEktakpmcjZ2N0J1UlZ4bmN6dHpFZGVEcy03ZllCcDVlTUJIQkR1WjVDXzk0SEZlSUkzclYtUWtWa0VrV2xIOXpjdy1pU0xFTWtVQdIBoAFBVV95cUxPUV9vVjJsa1hMMXNSYXdTWnFXaVhCSk9pZ05vdm5CTUM4NjV4ZGZtdHF1QmE5ZEZEbmdqMjhBUW53TjBMZHZvUVdhcDNzcG1DN3pBM1FLRkpXSmRaMVgwclB6TVVRYjFKODBIMWJHdU9xM1Z3QzR6TjdfZjZjTFllbHhaR1FpZXpid2x4Q0txNEJIX2dhc3I4SlRWS1Z0clp5"
-    },
-    {
-      "id": "59b513410783",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-12T20:54:00Z",
-      "source": "KAKE",
-      "summary": "Trump to hold 'Kansas Style Rally' for Sen. Roger Marshall ahead of election &nbsp;&nbsp; KAKE",
-      "title": "Trump to hold 'Kansas Style Rally' for Sen. Roger Marshall ahead of election",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUnBVckF0cTE2bWtHNkRyVEg1cEQ0Z1VHaXUzcUVQUFYtNUVidkZVSkRYem9IYVYtZ3VGbWlrUkhVY1E3M1VOMTlXamFsN1drQ3Zqd09UMy13R2tVbHhkVl9CT2k1MG9pN2xYZzlJbFFVbEdSR3I4Y1BNNGpKVnFnWHpOTHJ3N2Z6THRucFBtdEpMNTJxaFFBT21ENVZIbVRES2ZsRW10bGxjRFV0blhtTDd5MlNxU3ptaFJsdy1fRlhRS3M5VDk3Q2FBSzhGVVhlcVM5SjBvNnMzQ1dUbmRUNmZXZw"
-    },
-    {
-      "id": "4ccdc1b84e10",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-12T20:41:43Z",
-      "source": "Legis1",
-      "summary": "Sen. Marshall Faces Headwinds in Fight to Stay in Office &nbsp;&nbsp; Legis1",
-      "title": "Sen. Marshall Faces Headwinds in Fight to Stay in Office",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBiTklDRXhfNG9rZDNkNUZBS2RKMFBBeGVPRmtfdGc5SVVGRWZQTUNqWnJRWmFYa05uWW5jbEhUa2Vna0cyVUNIY0laR2RsY25uWFMydm04R2EyNWU3R0l6YlFvMmlNUlJDMGNfcTZ5SUFfZ3JUa1U3R3diMA"
-    },
-    {
-      "id": "ce86b95b4f37",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-12T20:36:00Z",
-      "source": "KAKE",
-      "summary": "Kansas Senate race: U.S. Sen. Roger Marshall, Adam Hamilton separated by less than 1 point in new poll &nbsp;&nbsp; KAKE",
-      "title": "Kansas Senate race: U.S. Sen. Roger Marshall, Adam Hamilton separated by less than 1 point in new poll",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQLUxvVXIzY1lXb09nOEpmcWRKczlyQVpLMldCSmp3MEd5aVNSVDl1akZKZDdnN2tRSEpYUV92SnlaSVBrTVVBSldDd2NfeThScXBhTFRoSkZaZXY0X2V0blhwT0FpLU5FZ1Rod2VlT1h0eTlCNlh1cGRoUklFa0EwWjZtTElKNFZSVEFRYWJDYkxlZTUwdUF2ZVJwZFNCLXI1cFlUbE1uX1RuMVNoVGw3a0t1WDdtZEZOcDlMNFYwQmpqWEVZN1UtOFEtWW5LbWJlX0tXY2Q4MG1EX1ZRRGZ2UERYNWRWZk5DbWExNQ"
     }
   ],
   "schema_version": 1
