@@ -26,8 +26,21 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-21T01:30:55.624891Z",
+  "generated_at": "2026-10-21T06:37:24.909884Z",
   "items": [
+    {
+      "id": "c53a4e8078ed",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-21T02:23:44Z",
+      "source": "KWCH",
+      "summary": "Hamilton\u2019s campaign said that the rally is a sign that Marshall is struggling in the polls, while Holscher said she's spoken with disappointed Republicans.",
+      "title": "Hamilton, Holscher respond after Trump calls Kansas Democrats \u2018radical lunatics\u2019 at Wichita rally",
+      "url": "https://www.kwch.com/2026/10/21/hamilton-holscher-respond-after-trump-calls-kansas-democrats-radical-lunatics-wichita-rally"
+    },
     {
       "id": "58e48809726f",
       "kind": "news",
@@ -42,6 +55,18 @@
       "url": "https://www.ksnt.com/elections/what-polls-say-about-kansas-senate-race-before-marshall-vs-hamilton-debate"
     },
     {
+      "id": "0367308af617",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-20T22:22:20Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "Political expert talks pros, cons for Sen. Roger Marshall after President Trump's visit to Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "Political expert talks pros, cons for Sen. Roger Marshall after President Trump's visit to Kansas",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRUNKVzd2RzlDV1ZUb1B0c3hTOWk1SHEydW5LeTZzcDEwTEFtcGFsMkpBV0FhU1ZaZG8yQ0I3OEhKQWxaWVN1UVFTVlRCcHZFTTk5Y1pSVEMzdHlaT0xjUG45UVROaEhIR2JvX0NzTnljYXV2SkNET2dLd0lkLXQwajcyMjJfTVMtZ2I0dWhfbDJiWHFidTRjMjRTeHVWVUZlaDdWMW5yRlFvT0FxMHZnYmFfM2JqbjFFMmw2Z0pKM3B5bGFBcnREa1dUbjZaSFFFRE9Vbg"
+    },
+    {
       "id": "63d9f2a1c071",
       "kind": "news",
       "mentions": [
@@ -54,16 +79,16 @@
       "url": "https://www.kcur.org/politics-elections-and-government/2026-10-20/trump-used-antisemitic-slur-in-kansas-while-defending-marshalls-lawsuits-against-patients"
     },
     {
-      "id": "0d6116429c2b",
+      "id": "073169481848",
       "kind": "news",
       "mentions": [
-        "marshall"
+        "hamilton"
       ],
-      "published_at": "2026-10-20T21:51:23Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "Political expert talks pros, cons for Sen. Roger Marshall after President Trump's visit to Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "Political expert talks pros, cons for Sen. Roger Marshall after President Trump's visit to Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdmhiUV9tUFMxV0hiTlYzdlpFTFI2ZzRDSk0yNTRBV2hHeVI3UXZ2M3Vob19zTFlzdnpKcDV2QkZqd3IzRG4tb2U5SFhPVmltYlgwLU85XzY4RUUyZm1Pa1BuOEFCcXhacGg2OWstbzlOSzVCekpVTHhnTFVuaW5EMV9zTXpIbjFZWXlwZTlGc09pcmNEeEIyU1FBcjdBaUI5MTZNOWxDS2J3QktPVlJkdUNJZmM0V00xOFhxY1dfd2hBamlHa0daTmJrbw"
+      "published_at": "2026-10-20T21:28:00Z",
+      "source": "JubileeCast",
+      "summary": "Adam Hamilton\u2019s Virgin Birth Comments Resurface\u2014What Did The Pastor And Senate Candidate Actually Say? &nbsp;&nbsp; JubileeCast",
+      "title": "Adam Hamilton\u2019s Virgin Birth Comments Resurface\u2014What Did The Pastor And Senate Candidate Actually Say?",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPU1pzSlBYNm8zQk9ibGtXVTBkWlc3YlI4UFd0Q0ZGSW1CdGZmUVpRTVJpeEJFWEhGV0FZNkVQcU5yWlY3NmpkdURRWGppemgwZFJLOFpaS0UyRE5Ra0R3Y3NQT1VnRC1TRGxFbWZ3ZjFwdVIyaU9YSVBGZVhZYnZyN0ZRaUhzYXU3NlIwRnhSaVlsZ2txN2FyVi12WGs5RlVTNGpmX3B4RVNtZm5NZ0lGV2ZndnJab0FlcENmdHRLME1pb2p1NGZsNWNYd2VkcjNaVExTcEJPMFlNRU9LSzlZR09FUGdPWWNka09NU1hwN08tNFIwLXZ0eA"
     },
     {
       "id": "ba81211e503f",
@@ -71,23 +96,23 @@
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-20T20:39:11Z",
-      "source": "www.dscc.org",
-      "summary": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d &nbsp;&nbsp; www.dscc.org",
+      "published_at": "2026-10-20T20:38:49Z",
+      "source": "DSCC",
+      "summary": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d &nbsp;&nbsp; DSCC",
       "title": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOczhpVHQtSnU3dlZJSnZQaHFINUNIOFRMWkUwMTVNVkdBYzk4ZlV2T2VjaWd2WTlxd2tUdlJqSXlCSVZLZXRPdklBU0dQb05jM0I0M19SRWNOZHFQT2tpaTRIZjdRcXZmZEc2Z3NUZnlDb01Qcm91MUNTUXJ3RVVBZnYxZ0pBZm0yMjc3N2FNSzJjdkxBakxFUVBpZk9PSVlPZHBkOHl3R0pnaDV3X3hoUXduNUh3Mko2MkJhc3hQMUo0czZVZ3N6bEZtV0pKd2gxSXRQa2tB"
     },
     {
-      "id": "56112bc2f56c",
+      "id": "02a13a0971bf",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-10-20T20:20:44Z",
-      "source": "The National News Desk",
-      "summary": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican &nbsp;&nbsp; The National News Desk",
+      "published_at": "2026-10-20T20:24:13Z",
+      "source": "KATV",
+      "summary": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican &nbsp;&nbsp; KATV",
       "title": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican",
-      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQblppaVNpak5tV2QybU1DckpaQzNCakxXdzVDOVQ5TW1fTDZLZWJzeVhlZFFMSFk5UGJ3Q215X2UtUk9NRW84UGJ3ZFo0ODF0b3EyOWdwLU9UZURHdVhrckM0a0JCaTd5NFRsX085dTNaamlsOEVNdmZlSkdyRlZkejNMQjVzNkM0SzdTd3hHMnBtQ21kdUZLT1RiREhwM2xCWl9KRV9YWFNWNFpQV0d4OVJZN0VrV0dZX1VNVEhiWmd2UENRT3N6bTlzZDc5R1lrNFBKWXZOQlFnRHNhaGpKV3BnNnRhZ3NGa3ZndERjTVVmNEN5UWRfLU1kU3dkem1mZm9ZWGhQSjFUdjVjOEE0dTk4Ni1Tdw"
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQQlNKMm5wR0pJOE9Ra2NvX1liVk5heTZRY1VKZ2J4cWtKcS1KRG5fencxWEJ2YjFxaHBiYmFCSXNZLUVTVjRCcE5tQU5UZVI4aFlXb0tjWGxCcmtvZTJCLTZLc0w3RlhfanVhSUJtS1g3czJmMU9aM19KbV9QQlpNT3I4d0pGS3I1WUtDY1BOOTVkTXN2NG9MOERyc2tIVVdlVlVuSERraGU1OHRVNHRDUWMzd1d1XzlrUmJUYWM3eVRCUHJBUnN3cWVFVGprSHBQd00tM0FYZXA4MktsbWJlYmpVQjhhaTFMQnFXZjh3d25UTDc4QlJvY2pHdnkxaG9E"
     },
     {
       "id": "eae79dd6baaf",
@@ -677,7 +702,7 @@
       "url": "https://www.kwch.com/2026/10/19/welcome-kansas-adam-hamilton-releases-statement-ahead-trump-visit-midterm-rally"
     },
     {
-      "id": "33ac437a01fe",
+      "id": "fb593c237480",
       "kind": "news",
       "mentions": [
         "hamilton",
@@ -687,7 +712,7 @@
       "source": "CNN",
       "summary": "Hamilton and Marshall locked in tight Kansas Senate race &nbsp;&nbsp; CNN",
       "title": "Hamilton and Marshall locked in tight Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQjNWZmJ0QlhtSkdaeXl4VVRYSTZzM1M1TExLd1ROWXBwYjVDZUJGRW16ZkpXSFdBekhFSE84N0tEUVNsUDBDeEphU2RBX196aFJYRG5EdTNVc3RWRDJEQldkUE1oUXBDRzhjV0Y5UGU0SU51a2pna0w5aXBYTkxadTNsaENJOTVK"
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWXpROWlUaDdtOVItQ0w2bnFVa2ZiOW02LTVPV2RIR2txVm5HMW95ajh0TUI0T3lqWmc0ZHBJSzJTVUNsaVFGTjV5ajNDR2xGV3o0YnlJaWVDbHBYdU05UHduZFZ3ajZ1VlhVakRNazZYQVFXdTRFekIyLUZ4T3l5azVqYw"
     },
     {
       "id": "e70c77522f35",
@@ -1476,30 +1501,6 @@
       "summary": "Roger Marshall denies setting interest rate on medical debt lawsuits &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Roger Marshall denies setting interest rate on medical debt lawsuits",
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQN0Z6NTFzTEtMTVl2UzdaWm9WV0xQc2pEMktnQVNaN3BVbmFzRXRMTDh4MDJXWDBZakd0WWRuc2JnbDROOVJ3YU9uNU1IcV9ZQ3Z4S2tPb1J0a0NzQnVkb2NlSElieWpRVnF2NkNrb2xRdy16VVZaZ01JSG9Ga0g0RDNld094cHVVejI0eXN0bF9GcjVtWlNlZGVrYkprOWQ4VE1pWHMtdHZnTFRfSzAyQ09XN3dZNWVVejl3Y3BLbGwxVG9pNG1Hc3pNa0prbWNMX0tnNE5OLTZDa182cmZDMFFn"
-    },
-    {
-      "id": "1ea62ae66ae7",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T02:58:00Z",
-      "source": "KWCH",
-      "summary": "Trump touts 'Kansas Style Rally' for Sen. Roger Marshall &nbsp;&nbsp; KWCH",
-      "title": "Trump touts 'Kansas Style Rally' for Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRGlIX3g0NHlOa0FRSTB6c200SkcwR05sZ3BacEFnRkVmbHZKd3lmaC1vc3B2UlFoRk5jU3VQaTI1S1JoYzVZUEhwRHo4MTdVRS0zRUxrak5QZHNDQmZZcDg5ckhPTWhZWlhiVGZBdDgxcGNSdk13QzdWbFVYWjdzTVMwb1hKdE1IQnpjcGNXQTlndw"
-    },
-    {
-      "id": "57781a6cec0a",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T02:51:00Z",
-      "source": "KWCH",
-      "summary": "U.S. Senate General Election Candidate Interview With Sen. Roger Marshall &nbsp;&nbsp; KWCH",
-      "title": "U.S. Senate General Election Candidate Interview With Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNM3FVTzZWZk9qTWhBVGFKT0hsenpEVlUwOTBRQktJaFFZOWlWaWVYUmN3NnNtQVZZNkk3MWt3d1BUM25ERDNmMGswcVByanYxWUVxU2VMN3FrSWM1MDdLcG9YN1E2ZFUwdUhyZ2NoSDhlVjVLQ1BmTTVfR0l1VFhIdWJrcnNFa2xVUFVPNDZRNmt2eEkwOEhhTkFjX2JwU0x6X3FlNXNMUGg2dTUxd0E"
     }
   ],
   "schema_version": 1
