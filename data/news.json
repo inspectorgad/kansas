@@ -13,10 +13,6 @@
       "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
     },
     {
-      "name": "KSNT",
-      "url": "https://www.ksnt.com/feed/"
-    },
-    {
       "name": "KSNT politics",
       "url": "https://www.ksnt.com/news/politics/feed/"
     },
@@ -24,9 +20,13 @@
       "name": "Google News",
       "note": "Search feed; each item is credited to the outlet that wrote it.",
       "url": "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "KSNT",
+      "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-20T23:02:56.528463Z",
+  "generated_at": "2026-10-21T01:30:55.624891Z",
   "items": [
     {
       "id": "58e48809726f",
@@ -76,19 +76,6 @@
       "summary": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d &nbsp;&nbsp; www.dscc.org",
       "title": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOczhpVHQtSnU3dlZJSnZQaHFINUNIOFRMWkUwMTVNVkdBYzk4ZlV2T2VjaWd2WTlxd2tUdlJqSXlCSVZLZXRPdklBU0dQb05jM0I0M19SRWNOZHFQT2tpaTRIZjdRcXZmZEc2Z3NUZnlDb01Qcm91MUNTUXJ3RVVBZnYxZ0pBZm0yMjc3N2FNSzJjdkxBakxFUVBpZk9PSVlPZHBkOHl3R0pnaDV3X3hoUXduNUh3Mko2MkJhc3hQMUo0czZVZ3N6bEZtV0pKd2gxSXRQa2tB"
-    },
-    {
-      "id": "caa9c8f94b2b",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-20T20:30:57Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOdEkzb01VcXJ4NGFoNWhOX0I1TVVqbmVycTcwQkRVMVNyenpHSTJaRUZGYmJVZ054WDRyaWlKSlpQbGh0Y1JDY2pPcDRYNEtaUHVUZFdtRTZZejFlb3dMTnlmTVBlUXUzX0lWR1V5eWIzVC1uV3ZuWGlMOWMxZVJRMzlseVZxajViRndLclFmem4zVXBxZkVVcXFTWXhpN1A2M3lrdGFSN0FtSEg1OUMzZTJqRTZXYm1nU1N3TEpoUGVvNjBadW9kS1VwZ3I0c0dKMHJhS3Y4d2ItWGh0TEd2V0hvaENndw"
     },
     {
       "id": "56112bc2f56c",
@@ -274,6 +261,19 @@
       "summary": "President Trump shows support for Sen. Roger Marshall with Kansas stop ahead of midterm &nbsp;&nbsp; WIBW",
       "title": "President Trump shows support for Sen. Roger Marshall with Kansas stop ahead of midterm",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNby1xSUZyeWZGSlJYYXZFLXNjV0xBMDBqSXVGUXRrM2hHdzhKbnlPZ0VtNnRvRXJTWjFxNGs5Y0RMS2lCMHlzWW5DajdwU29xNkliZjRmWHQ5dG1oN1k5NEo0RFkyNEZfOG1WeGhSNWxwaUZNQjVUM2tYcGJiLW1NTHI1X3FMdkpLVm1wWFdkV3hWUEdwenBRZTUxSm9lTEh4QVNtRTM4Z0tGcDFJY25uWWFR0gHGAUFVX3lxTE10dXVySldQeUJvNzJhZkJuWGtjNDlra3lvTmZBajFpemN4ODhHMFZWMThUTGpPcjRqVVZ2dnB6czctdUw1cC16a1FKVVoySWVYUGNVMklhZndFSUxkWHJWR2VjdUFXZ21xNm1qQ0tyV2VzNVk1RVJjRzVjbzFmRU1yNUU5V3NGT212ZmNQZVBiWm9DQ2toc1dUNk5vdkpHNkNzMkNUUTBiekJmYW5pYTBYcTF3TDg3QTZLTDhmZmtKV3gwd2gtQQ"
+    },
+    {
+      "id": "caa9c8f94b2b",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-20T02:56:46Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOdEkzb01VcXJ4NGFoNWhOX0I1TVVqbmVycTcwQkRVMVNyenpHSTJaRUZGYmJVZ054WDRyaWlKSlpQbGh0Y1JDY2pPcDRYNEtaUHVUZFdtRTZZejFlb3dMTnlmTVBlUXUzX0lWR1V5eWIzVC1uV3ZuWGlMOWMxZVJRMzlseVZxajViRndLclFmem4zVXBxZkVVcXFTWXhpN1A2M3lrdGFSN0FtSEg1OUMzZTJqRTZXYm1nU1N3TEpoUGVvNjBadW9kS1VwZ3I0c0dKMHJhS3Y4d2ItWGh0TEd2V0hvaENndw"
     },
     {
       "id": "e0ed3a5c16ca",
@@ -640,7 +640,7 @@
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1tMVFSeWhPUC1uVkR0dy1nbTBGQlRQSmdLVWtPaXFiOWZGckVDUnBPcElGTEpsSTk4MnZVaC1DaGRGUjR1QkJYd3JMU282YWUwTF81TDF6dXp4S1J1b1hV0gFcQVVfeXFMTUZ4U29uUElQNldzNVZwMlc3cVFEWktQV1pzWU5QNzM0OUlCYklfUHktSXdubkh2WTBrLThFTUZCU1lKNENHbGJya3FueXZBZTB4OVMyMmdlQ0laN0Y"
     },
     {
-      "id": "670c6ba74b76",
+      "id": "6e679c5d5e1f",
       "kind": "news",
       "mentions": [
         "hamilton",
@@ -650,7 +650,7 @@
       "source": "KSN-TV",
       "summary": "Adam Hamilton issues message ahead of Trump rally for Sen. Roger Marshall &nbsp;&nbsp; KSN-TV",
       "title": "Adam Hamilton issues message ahead of Trump rally for Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbklmZzVwcXVERURJRzJIaXhRMXlZczcyRnlIYW1pQlNtWk0zRjFPT3VWU1g3QXBPNFlJZkEzQmVSWGhaZ3pneTRJdDhZMURBQTdKS05nbGs4aGk1SlpoT0R0cVVrMjdVRkJLcTlpQnF3SlFxQWNlaG9yOFdJc0M4U2trN3oyUzNCWmlQTm5NZDBEeGttd3VIQWpCNGtxTnRVRmNtaUpxU3ZEMXByamlROUtNUGJ1OERXV25Zb0J3"
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbklmZzVwcXVERURJRzJIaXhRMXlZczcyRnlIYW1pQlNtWk0zRjFPT3VWU1g3QXBPNFlJZkEzQmVSWGhaZ3pneTRJdDhZMURBQTdKS05nbGs4aGk1SlpoT0R0cVVrMjdVRkJLcTlpQnF3SlFxQWNlaG9yOFdJc0M4U2trN3oyUzNCWmlQTm5NZDBEeGttd3VIQWpCNGtxTnRVRmNtaUpxU3ZEMXByamlROUtNUGJ1OERXV25Zb0J30gHDAUFVX3lxTE0wWVg5bXdLMXc0dW1JeC14WmREdTBrdGd5dWJ5WjdzLTVOLVZNOG9TV000dTZCMTJ1ZWQxWnBfZDBWVzhVVGpXX01jVm5nVVQtbENCczlKRXNRVkJhUkx3YWJDMUNHcXJpdGxJNU53T214MS1MUGo3c0ZRbVE1N3FqaDRlbXczWHBGWENOc0hRVUYtbk5xQ09ueUF0THlReER2RGZidkxxTVJvSmROd2VKckMxTU1fVExUVXRwZW5pNVlSNA"
     },
     {
       "id": "27b97d0a6128",
@@ -677,7 +677,7 @@
       "url": "https://www.kwch.com/2026/10/19/welcome-kansas-adam-hamilton-releases-statement-ahead-trump-visit-midterm-rally"
     },
     {
-      "id": "fb593c237480",
+      "id": "33ac437a01fe",
       "kind": "news",
       "mentions": [
         "hamilton",
@@ -687,7 +687,7 @@
       "source": "CNN",
       "summary": "Hamilton and Marshall locked in tight Kansas Senate race &nbsp;&nbsp; CNN",
       "title": "Hamilton and Marshall locked in tight Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWXpROWlUaDdtOVItQ0w2bnFVa2ZiOW02LTVPV2RIR2txVm5HMW95ajh0TUI0T3lqWmc0ZHBJSzJTVUNsaVFGTjV5ajNDR2xGV3o0YnlJaWVDbHBYdU05UHduZFZ3ajZ1VlhVakRNazZYQVFXdTRFekIyLUZ4T3l5azVqYw"
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQjNWZmJ0QlhtSkdaeXl4VVRYSTZzM1M1TExLd1ROWXBwYjVDZUJGRW16ZkpXSFdBekhFSE84N0tEUVNsUDBDeEphU2RBX196aFJYRG5EdTNVc3RWRDJEQldkUE1oUXBDRzhjV0Y5UGU0SU51a2pna0w5aXBYTkxadTNsaENJOTVK"
     },
     {
       "id": "e70c77522f35",
@@ -777,16 +777,16 @@
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxObXQyQVZuVDZpZ2drbkFzOEUwRUJ2b3E3ZVprNVpER1paN1FEV3BHODdwaVk3NXpnSjFNVUVBaGszLWYxNmNURXRMUndPTGpIQnZhRWs4SHFtZ05kQVVJLWNUUUJMMGNtM3BZVkFqYmViMEg2LW5XakJ0ekJFUHhqN0ZMNER3RFJRY2dVUktNZkpOWUlQU1BzY3ZLZjVYaHRmdlZLLVdmNGRkZXFsbnV5bGNwRTNyUHNDT2p4VVFZNnptNDZwdXpOQXBxSkV1QVp6dmJadXVWdUcxUWtD"
     },
     {
-      "id": "4f7ce3432b30",
+      "id": "bc5d7ad9692e",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
       "published_at": "2026-10-18T09:04:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Why former Sen. Sam Brownback is backing Roger Marshall | Exclusive &nbsp;&nbsp; The Topeka Capital-Journal",
+      "source": "Kansas City Star",
+      "summary": "Why former Sen. Sam Brownback is backing Roger Marshall | Exclusive &nbsp;&nbsp; Kansas City Star",
       "title": "Why former Sen. Sam Brownback is backing Roger Marshall | Exclusive",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPNVlhZllnVE05ZVlJV2tlN1JUWm1MalBwZGV5aDhIQUNKUkltdHVMVVFQNFNpeXBPenpybWFJMjhaeDQ5YmllOGFCS3V5cG05eWdZYVhLa05CS3Rmekh1aDBKdTJkSFZCVnpIMXUwT09FSktFaDVzQWdsS3VCVGlDRno4ek9sMndLVEtSWWtVX1N3T1E4aHQ4TmowcjZKdE9XTExreXE0b1I4b2Y5MGt6UGtDMjR3VTdyNGItYktFdTY1cEwtY3NLQ29OVFF2YUJqQklSbnRVSTcxbEFJVEE"
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9oRDJfM2oxS2JvNW4ySGl2NG1XMjZ1ektwQkdQY3lMNnU5Q01kdlNJY2QwVWlsQng0RTBjd0dvdlJIcHNvbDJucEVydWJHUkxtYWJEVGlNV2RQTDFUOUVoLVFTaw"
     },
     {
       "id": "73531edfac87",
