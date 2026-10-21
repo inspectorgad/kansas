@@ -26,8 +26,84 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-21T17:42:20.241654Z",
+  "generated_at": "2026-10-21T20:57:20.696859Z",
   "items": [
+    {
+      "id": "4e41ba52ed63",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-21T20:31:04Z",
+      "source": "KSNT politics",
+      "summary": "In a race that's become increasingly competitive and contentious, incumbent Kansas U.S. Senator Roger Marshall (R) and challenger Adam Hamilton (D) take to the debate stage Wednesday night",
+      "title": "LIVE UPDATES: Sen. Roger Marshall debates Adam Hamilton in US Senate race",
+      "url": "https://www.ksnt.com/elections/live-updates-sen-roger-marshall-debates-adam-hamilton-in-us-senate-race"
+    },
+    {
+      "id": "1d994ae3ba02",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-21T20:30:47Z",
+      "source": "Kansas Reflector",
+      "summary": "TOPEKA \u2014 A national campaign finance watchdog group requested the U.S. Senate Ethics Committee investigate U.S. Sen. Roger Marshall of Kansas for using taxpayer funds to travel to political events and staff who work for both his office and campaign.\u00a0 End Citizens United, a PAC that supports campaign finance guardrails, compiled allegations from the past [&#8230;]",
+      "title": "Campaign finance group seeks investigation into Roger Marshall\u2019s alleged ethics violations",
+      "url": "https://kansasreflector.com/2026/10/21/campaign-finance-group-seeks-investigation-into-roger-marshalls-alleged-ethics-violations"
+    },
+    {
+      "id": "429921f7cd1b",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-21T20:22:31Z",
+      "source": "FOX4KC.com",
+      "summary": "Kansas Senate Debate live coverage with Roger Marshall, Adam Hamilton &nbsp;&nbsp; FOX4KC.com",
+      "title": "Kansas Senate Debate live coverage with Roger Marshall, Adam Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNa2xTSTJaRGhLS2Vpb3RJREVlbTU1TjlXb0l4MXFTdWpKY1JlRFh5ZVNGWEFoZFNOZ2M0REZCSlktOUdsRDdZZUJ4WVpTZTJ2eHVtV0JpempSalZOR1dVd3RMSTNlTDJPNllrNDlRejFnLV9KbThHOXhJQkZWWnluemU3RmMwSHVENk1qU2VCSkR4cnR0UmktSUJiVWU0TmpBdXZGdEsxanplX2E4eEZpTHVDc2pDalFZWGc0VGZzZTlQcDNaMTBhNm13RzhBd9IB0wFBVV95cUxNR1lNWWtzWE5zSUF4S0drdFFBcUVWZjViMVA1eWhZbG8wdV9Zeklsc3E0c29UVHJoQUdSVHo3Uy1fZW1NZjU2dGtoQjQ4bEtsOGFwTFB5NmpxalFleDd4VW1HWWVuVzdaUUtENXJZRVN5YzFXZF9fUFJIVTlhc0phZzM3N2lPMmt0V0pHNnIycUhsLWdtMTl4NHJ0bGphdml0UEl3SE53VVI4Mk1DZnpoS3hibnZpMkdZbnlvV2RySVJjLUtnVVV3bW9jcEluSnhYMVk0"
+    },
+    {
+      "id": "bb506367118c",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-21T18:40:31Z",
+      "source": "Yahoo",
+      "summary": "Marshall and Hamilton take debate stage in tight Kansas Senate race &nbsp;&nbsp; Yahoo",
+      "title": "Marshall and Hamilton take debate stage in tight Kansas Senate race",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSTNTaS1XT3RuNTA1Qk9JVWFtQ2taR3h6N0JmWG5FM19PekhNX2ZvWVBLTHhIUGVEMS1NZEtxanJKY293WU96NFhvclVRUndPMXIwX0I0LXNuRFRNMEhZckl6OTB2ckU5UDNPb3VWUTR6RkJ5UVZEdVJoSWZvYVU4R2VlYURaS0plQXRGbDZHR2pya3UzNGtmRFpQT2g"
+    },
+    {
+      "id": "9cde3c0e41dc",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-21T17:42:00Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Roger Marshall sells Florida vacation house before Kansas election &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Roger Marshall sells Florida vacation house before Kansas election",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWUx5OW1vVVdGZC1kc1I0dEU1ajF6R1BNQVEydGpYSG9RSHFCWmJFcE9DOWtMa1lTNmdkeFNRUWxCT25oTk9yUTA2SjV3Y0dGUEdYYkVtNmhBenpHbVlPcmdDLThFWlh2b21WQzlmQjVFN3VRNU44am9NLVVIZ2h2Z3NOYnhycnZaUHpLc3RUa2s2UGlIMk4yM3FIdzlZVjNpNUZtSkptLWIwX3poYjZhMTc1NExWVnRkcXBHRFJCNURDd3pZRXg5TmtRQzZ6c2xod2FNdTRnMjFjc0pnSHc"
+    },
+    {
+      "id": "c334c643d5fb",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-21T17:35:26Z",
+      "source": "NewsNation",
+      "summary": "Marshall, Hamilton take debate stage in tight Kansas Senate race &nbsp;&nbsp; NewsNation",
+      "title": "Marshall, Hamilton take debate stage in tight Kansas Senate race",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQ1FuMWxRdkRSWU1WOWdVY2x2czhIQTBUYUwwNzFVbXJpMGNFYmNvbXZHelNBdW40UnZidjltd0ZJeGU4REJYSVhNOHlVTnZ4dU9TYTI2Vk42QUdCUVh5MFE5TkRLM3dHbGRRNEEzVnAwbEZCYjgwRFdXNWJvSVdRU25VZHdkTzRzcmVqYzh3MFBKRW1tMEpqU0NlWDBaMzRnUGM0NzdxV3Atc3R3YjhfeGN3WnJwc2RINVMyUzRvWlotZDQ"
+    },
     {
       "id": "74ce67bcedc6",
       "kind": "news",
@@ -1432,78 +1508,6 @@
       "summary": "Trump to rally for Roger Marshall as Senate race heats up \u2013 FOX 4 Kansas City WDAF-TV | News, Weather, Sports &nbsp;&nbsp; FOX4KC.com",
       "title": "Trump to rally for Roger Marshall as Senate race heats up \u2013 FOX 4 Kansas City WDAF-TV | News, Weather, Sports",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPT245TDJyS2wzYXFpMEtvZTlySmY4Q1BtQlZ0dG1GRnlRWUlrakJ0azQxcFBZZzlPaHVlY1M3Qm8yV053NlJCcXB0bDRYZW9hUXljdkpWYmxGUF9palZQU0ljejEwa1VCSnhpMFJHUENjQl9MZ1M1R3VRYzVaS3pFYkw1ZmQ3SlIwSzY4Mm5mR1pYcU5vUjNN"
-    },
-    {
-      "id": "98c5f54715f8",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T22:54:26Z",
-      "source": "KSNT politics",
-      "summary": "President Trump will hit the campaign trail in Kansas next week, the Republican National Committee (RNC) announced on Tuesday, as the state\u2019s Senate race grows more competitive.",
-      "title": "Trump will campaign in Kansas to boost Marshall's Senate bid",
-      "url": "https://www.ksnt.com/news/trump-will-campaign-in-kansas-to-boost-marshalls-senate-bid"
-    },
-    {
-      "id": "0fad85829017",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T22:41:11Z",
-      "source": "The Daily Beast",
-      "summary": "Flailing MAGA Senator Roger Marshall Busted Faking Man-of-the-People Moment on Kansas GOP Bus Tour &nbsp;&nbsp; The Daily Beast",
-      "title": "Flailing MAGA Senator Roger Marshall Busted Faking Man-of-the-People Moment on Kansas GOP Bus Tour",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxON255M242MEQyUmE1TXNTcC15VzFKRnZfTWxRaGZCWEFaRXFFM010dDVJc3A1ZjV1blhRSmFWZFBqWDVMQ3JTb0hkeVlHcUpwbFJyQW42VzFzbTRycFBxZ2t6TjVySWl6Mk1vek5henQzcUFrRjdybExEdjNpR2xUazlwUWJpUjZGem5TS3lxSHc3YXpqbmVlWGlKUHdadmxURkpKbEtRUWt6a1Y1TFlEYlBlRHQzVXJVbEdaSkR1djJyRk9qVFMw"
-    },
-    {
-      "id": "00f4dff9d2cf",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T22:36:47Z",
-      "source": "FOX4KC.com",
-      "summary": "Trump to rally for Roger Marshall in Kansas as Senate race draws national attention &nbsp;&nbsp; FOX4KC.com",
-      "title": "Trump to rally for Roger Marshall in Kansas as Senate race draws national attention",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMGIwZGNnOWNCclpGUDdPZHVwbG4teWh6eEFWbmVzUlJwZ2R4Rkt6WENSWVhudFZBYVNESEpILXlRc0tNYXVGM3VaWUdvOUs5c2NacFNXeHUxOEZMZVE3dHJOaU0xbm5tQ181QjJvRlhUa3dsRkN1UloxUEJiUEVDbHpOZkVVSWhuZFp5bGZNQzBoNm1hWGF6WnJUSHhlaEdCVGMtejdqTDFheklV0gGyAUFVX3lxTFBYdkRaaTk2R1l4X1VsLUZFOTlaYm5LSnA2OXFtaWstOEtJejdEUVRHQ0FqZzNYUGVFRGtHV3djS3dpYlFULUdmMWxVSzN5V013VnFoeWprTWdvSl9ZajRLQnI0NUlsNnRIUTk0MXljeVdEMlptQlBTa2did29NQkYyb1JvQUtTZVVRTF8yVFJQbXl4bnpkaFNOMk1ENklwakhmUmpFRTNwSlR1LWRwN3c1QUE"
-    },
-    {
-      "id": "cbd734fd3229",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-13T22:32:44Z",
-      "source": "Politico",
-      "summary": "Hamilton reports $10.6M Q3 haul for Kansas Senate race &nbsp;&nbsp; Politico",
-      "title": "Hamilton reports $10.6M Q3 haul for Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbDNOVnZ4OF9vVXMySFcwSnlhTVZ5Tjcyb0JvSWJQNWRqcUh1YngtVjByYS1KcHhhaDNtNWw2dWY0S1ZGUU14Z0wwNFhWeWIxbXN0bDVRYkFod1FiVkREQUlKSWFueGNXZF9ieXZxU2c5LUtxR01mTWFReWZMeW00elZCYXk1YTdhTVYxekowVGxpblNNdm9Saw"
-    },
-    {
-      "id": "7bdbcb3a68ff",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T22:02:43Z",
-      "source": "Hays Post",
-      "summary": "New details on Trump's rally in Kansas for Senator Marshall &nbsp;&nbsp; Hays Post",
-      "title": "New details on Trump's rally in Kansas for Senator Marshall",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1yYmtyaVItcE5uYTRaT0dKNlFKeXdoVFFiaDVLZFBSeVlSUV94cXZuRUg5TTJkbDBlb2JWamtmRDB1T0dhUHZYZlB2RFZ4QzNJR1huMzFMbjM2NmJJTFloazVJS2pjTFBwekh5NVlUNzU"
-    },
-    {
-      "id": "1debf3b405bb",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-13T20:55:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Donald Trump will rally in Wichita as Roger Marshall faces reelection &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Donald Trump will rally in Wichita as Roger Marshall faces reelection",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNMmFsckFPYm9hc2p2X09nOGVMNHNnTmVvbFliYUNzeFRzNUlfUkhacWhSTmNSN0lxUG01NEp6Nm42SlZicXlDbHpKNTQxWnBMSjBVdHNJcWlsUVdKbHRkemhFUUhvSkFwMnRTcElBX3BiQXFmbWVHTG9hX3RqQjVncGl1NDRpN2pGd01iT1FraDIzSTF3OE5tbVhUZmo4OEpNaHVkVTBZMDdNSk9VOENtTHlXSmdtUzQyYVNiVzluOEtYT3ktMTFmNWFMcGlaX3NGbUxkYU13R0FIdw"
     }
   ],
   "schema_version": 1
