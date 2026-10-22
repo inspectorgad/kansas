@@ -26,8 +26,71 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-22T03:53:43.006232Z",
+  "generated_at": "2026-10-22T09:18:29.672895Z",
   "items": [
+    {
+      "id": "cf56fc0dc4dd",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-22T07:25:55Z",
+      "source": "The Washington Post",
+      "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; The Washington Post",
+      "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNdFljWnhqMVVlVjJ5VVo0cTBKbHFlbjNZZC1mR0dQNmlwTzZXMUVidFkxeV91MUswU2RSUndNb3lkdGg0UHAwa1pKeUJuSmROdjlvYllfdk1neXE0TlZUbnVLZWliMFNlVjRpVjJJVGp3ZjA4VFdRdnpITjJSOUVzZ1ZGb3lBUy1YN0FmcGh4Tk05UXRDYnZoQ1d3VWJJUjVYMlZiNWp0STY4dkhCdlNDTUhNdWxCSVYwU2dWSkR1Tk5UTWtnZWs1TkVrX2xWWFhKWDNEN3R5WG1XVVFDVmFEc3VvTjM"
+    },
+    {
+      "id": "4c7284d1f8a0",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T04:25:11Z",
+      "source": "KWCH",
+      "summary": "Hourlong Kansas City debate with no audience revisits high fuel prices, war in Iran less than two weeks before midterms",
+      "title": "Marshall, Hamilton clash on attack ads, split with own parties in final U.S. Senate debate",
+      "url": "https://www.kwch.com/2026/10/22/marshall-hamilton-clash-attack-ads-split-with-own-parties-final-us-senate-debate"
+    },
+    {
+      "id": "a94f49c9932e",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T04:05:18Z",
+      "source": "CBS News",
+      "summary": "As Kansas Senate race tightens, Marshall argues opponent is just another Democrat, while Hamilton says he's \"independent-minded\" &nbsp;&nbsp; CBS News",
+      "title": "As Kansas Senate race tightens, Marshall argues opponent is just another Democrat, while Hamilton says he's \"independent-minded\"",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNHBMVlhibGN2cVpCVVltMlpQMWxqd29sU3ZMNVF2RnBRVGY1Wlh5eU8zcTJ0dHk4SG5MV1BZWDliZVRCNW1sOXhnTUtCeTRERklEekZwZXB6elJ5emNxMUZmYkE1dmx6WmRFb2xTdUMzdEZSUkFneGpJNkRYWkxNTE5RTzFnN19kZURsUA"
+    },
+    {
+      "id": "d42f25226d97",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-22T03:56:00Z",
+      "source": "New York Post",
+      "summary": "Kansas Senate candidate Adam Hamilton admits 'mistakes were made' in church sexual abuse scandal &nbsp;&nbsp; New York Post",
+      "title": "Kansas Senate candidate Adam Hamilton admits 'mistakes were made' in church sexual abuse scandal",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOVHAxS0dhd2ZhWFVuNDdhT01IeV9UZUtiYzNTbzFZN3RGWjBOTlg5emtROHhISDFPdlJ5UDZiaU1iVXd6bVR3aGNtWEx3VE92XzlzYlJENng3Zjl2VUhvdm4wZUVaMVJHb3RkcWxfYlA4TFJRY0VVNHgyNDdwTlB2R3ZEX3JhQlZrRWRzRnVtTm8ycXJkdXJSallLMW42VnVSNmpxaW5udzFNNHJLcXQyY1lFZGRrbUNobGdV"
+    },
+    {
+      "id": "e1002377a324",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T03:51:00Z",
+      "source": "KMBC",
+      "summary": "Kansas Senate debate: Sen. Roger Marshall, Adam Hamilton debate Iran war, gas prices &nbsp;&nbsp; KMBC",
+      "title": "Kansas Senate debate: Sen. Roger Marshall, Adam Hamilton debate Iran war, gas prices",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcjF6SWtIQUVRVlE2YjBEbHJwZUZRZC1SY09IaEltSlBQeFBjUVE0S0NTMzhTYlhIMHkwbUV1Zlp5X1M2WTA4SlkwT0pFX3l5eUplQWNiZnRvWE4tNHJBeEhjdWNEd19nTHBjUVgtYWpxVUkwM1NyUW54WUtlLUt2dmMzeHpGa2VrZGE1dEVkT09lSTFJMGotbUVqWmdRQThWdExSd1J4bGdITHdwQlZZWjdYdw"
+    },
     {
       "id": "6ca7fd29c0e1",
       "kind": "news",
@@ -53,19 +116,6 @@
       "summary": "Kansas Senate Debate Live Updates: Marshall and Hamilton Face Off as Polls Show a Dead Heat &nbsp;&nbsp; The New York Times",
       "title": "Kansas Senate Debate Live Updates: Marshall and Hamilton Face Off as Polls Show a Dead Heat",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5vM2o4cHI1eUkwMFZXaUJ5akctSk0tVE5xVldSY1pqVUNLc3pMVUl0Ry1FaXBtZ01ORThoNm41UTFNLVZvV3BSWEt5ZmVmVlhZR21iWHZ3VjRMdkI5clpxLUdVaTRBU1l1MHVhajVxemhOQ2NyMUU0WU5JNWQ"
-    },
-    {
-      "id": "e1002377a324",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T02:48:00Z",
-      "source": "KMBC",
-      "summary": "Kansas Senate debate: Sen. Roger Marshall, Adam Hamilton debate Iran war, gas prices &nbsp;&nbsp; KMBC",
-      "title": "Kansas Senate debate: Sen. Roger Marshall, Adam Hamilton debate Iran war, gas prices",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcjF6SWtIQUVRVlE2YjBEbHJwZUZRZC1SY09IaEltSlBQeFBjUVE0S0NTMzhTYlhIMHkwbUV1Zlp5X1M2WTA4SlkwT0pFX3l5eUplQWNiZnRvWE4tNHJBeEhjdWNEd19nTHBjUVgtYWpxVUkwM1NyUW54WUtlLUt2dmMzeHpGa2VrZGE1dEVkT09lSTFJMGotbUVqWmdRQThWdExSd1J4bGdITHdwQlZZWjdYdw"
     },
     {
       "id": "af199102dacb",
@@ -94,16 +144,17 @@
       "url": "https://www.kcur.org/politics-elections-and-government/2026-10-21/control-of-the-senate-goes-through-kansas-marshall-and-hamilton-clash-at-last-debate"
     },
     {
-      "id": "5f69f8013994",
+      "id": "7d1309b0936f",
       "kind": "news",
       "mentions": [
+        "hamilton",
         "marshall"
       ],
-      "published_at": "2026-10-22T02:43:17Z",
-      "source": "WTOP News",
-      "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; WTOP News",
-      "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZ016OTJ6NlVPaUlENXZ2TV9IZ0JkWWh6M0FycDJ2OVM1OEVhWFNuVXAtR0g1VmhmbE5TeE1JbWFIT3JuT2FOQnZIQUFBX3p2WFV3MGNlb09aZ1dxaGFjVnpONDFTcmwtdG55OW85SGlmVm9oajc3d21fby1jeFdadXRzWHhSa0JUb1ItTE5kZ1Uwa0dOR0wtY1N3SG9yQVVrNGctNE9FOGE2MkRQQ28wazVKT2FSajNNRGsxN0txa0wzNnlqTVhJ"
+      "published_at": "2026-10-22T02:45:29Z",
+      "source": "Mezha.net",
+      "summary": "Roger Marshall and Adam Hamilton clash in final Kansas Senate debate &nbsp;&nbsp; Mezha.net",
+      "title": "Roger Marshall and Adam Hamilton clash in final Kansas Senate debate",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMnotSU4zVlRhZXMwRGVXRWlsUlVBQUhBb3BnM2Q3d2ZiRWl1U3N4MHRqaFNVSlh2SEFtX2xkMUVqMGdXS2Z2eHRGNlRCU05zZjVER1NfUXZQWmpBMmNyRVEyOEtqUmI4M1NkYmZKcFRHQXNzQ21BenFSUmh0bFdadmd4TQ"
     },
     {
       "id": "39099ef3a1fa",
@@ -196,17 +247,17 @@
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdmhOTktCaFMtQ3pSRm5QUXNjZkc1MzdwMC1YXzllSVpUUGlZc0tPVXhJSGwzSzZYUHJna1liNDh3c3A5Q0RHZHJGLWhvYW5yaExVcTVRS2pKSFpONkhtSW4ya2VIdGx3TW5qdEZHYzhLZE04RWpIcV92S0Ztd2FOUHFjS2h6VDdmRktPVWRtbWhzWEJxRXNKWVRjNGpBajBmVzBXdUpJQTVZWnhsV1RFUllnaTVWNUNOaVdmUUQxTkVsQQ"
     },
     {
-      "id": "51e8022cd6b6",
+      "id": "25fe66b87466",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-10-22T01:18:48Z",
-      "source": "Wichita Eagle",
-      "summary": "Senate candidates Marshall, Hamilton clash in live TV debate amid \u2018toss-up\u2019 race &nbsp;&nbsp; Wichita Eagle",
+      "published_at": "2026-10-22T01:11:00Z",
+      "source": "Kansas City Star",
+      "summary": "Senate candidates Marshall, Hamilton clash in live TV debate amid \u2018toss-up\u2019 race &nbsp;&nbsp; Kansas City Star",
       "title": "Senate candidates Marshall, Hamilton clash in live TV debate amid \u2018toss-up\u2019 race",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQVmlnV0w1RHVQTHk0UUNvd184bUtlelpDeHR1UTNKS3A5NDF3cDcxN0ZQVHl4QllMamdIVlJkUTVJOGVXOC1nWHdpenA1enpNV0lwc3J6NXhFak9qQzFlenZTdmhnVHl4TlVmVlJNNFJWU014RmtNVjJyVk00dUxmSE5XSDbSAYQBQVVfeXFMTXZ3Q0cwc1VNRkpUclRSZktObFVTMkdyX0JDYmRFYkZjRTFEUnNrQktPWHUtSVBvdjNkVlZ0TTBJODNlbnNCdXdFNUtDMGJDOWFKZkJEYWpfRGdVWmNyQVpUOGY3eEZtT3BhQmpzMlRmLTYyV050aGxJVFRESHNRZ2M3ZzhI"
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5rZmJERVNoVXI3cnRRNTI0QXZXeFM0QlRIeEtpakVyOFZWQzkwclh0NVNvQmNDZUJLTGVaU3dEbUZOSk54M3luZXNjajQ2a1lZblY5V09Oekhnd05iRS1OSGVrVXlfbUhGT3BhLWVpRDNDZkZoQXpfMWVHb2VXUdIBfkFVX3lxTFBsYXY2LU8zd0NZNUpyOTc2MzNGbWs2YThURm8yeHY1Wk1nWWtxT3hOOEx0ZHV3ZEQ3Y1pyczJob0dsZ2l0RWwzbDNOT3Nob2x6ZVV2WGNNOU5JWk9qYXFkaGxJNzdoam55Y2xiZTVXZ3A5ak5xSmZHcnNySThnQQ"
     },
     {
       "id": "afc666cdb616",
@@ -234,7 +285,7 @@
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBibE1ZcFUtOUg2N2xzU0piT0NVdzVrNWFpS2FjS0NWbUVDQlNHd3BwSjRIaTQydDJkN3hDRTVyb2NqT1pJSEgwcEswdTY0N0JjUmV3cngwMFRkUS1LWm4xYnhBa0pfQjEtN0FUelB6Xy1NNkoycVdfNVcxdw"
     },
     {
-      "id": "1746c0ae9368",
+      "id": "8721e2d3fb96",
       "kind": "news",
       "mentions": [
         "hamilton"
@@ -243,7 +294,7 @@
       "source": "The New York Times",
       "summary": "5 Things to Know About Adam Hamilton, the Pastor Running for Senate in Kansas &nbsp;&nbsp; The New York Times",
       "title": "5 Things to Know About Adam Hamilton, the Pastor Running for Senate in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9pdDZvaXVVUXozSVlOcWFtSTFJWGkwR1pxZGNvNWgwWjNPTkVKLXQ4NmZKamozRC1yWV85aElUSWpPS29oeU5LbGtFTDY0QnhmMUhxMzBocnYxb0dpa0Zha2JuOHhTdEFjcC1sY011aUlhdmJBc3lHX3JR"
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQV2JDc0Nwa0FHMGNQSzdDdE82bFJBWkdtS2dkbGVfYWlZTS1BYW0zeEVQb2tPeHVzTUFraFBmdktmRnUxaXBMMDVZMUNzSkcweXNBVXZRSFNUREpxSVdKOXRZU1NXVUttMW9mQlRZRWZQbndrNzF0SHdkTlNJX0V0NDhZUVQ"
     },
     {
       "id": "d6f00140e9da",
@@ -254,8 +305,8 @@
       ],
       "published_at": "2026-10-21T23:45:00Z",
       "source": "Kansas City Star",
-      "summary": "Live Fact Check: Marshall and Hamilton debate in race for Kansas seat in U.S. Senate &nbsp;&nbsp; Kansas City Star",
-      "title": "Live Fact Check: Marshall and Hamilton debate in race for Kansas seat in U.S. Senate",
+      "summary": "Fact Check: Marshall and Hamilton debate in race for Kansas seat in U.S. Senate &nbsp;&nbsp; Kansas City Star",
+      "title": "Fact Check: Marshall and Hamilton debate in race for Kansas seat in U.S. Senate",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPakxiWWluQWNwUnZrdnRYdlhoNF9sT2o0OFgwSWVlSWRiaDNnWjk5OGs2VHJGR2VtdU81eFNibGVIbmI2cjd2RXdkRFdvOEUtN0IxVC1TeDhhRzFORUZ6MzFDMlA1NXZLdkhVRUktOTJwM3VzTHo3YmtOLVVkQW1nYzhPWW5pOXNTdWfSAYoBQVVfeXFMUDMxR1o0SDk5NVVudlhNNHFlWEFkWkRZcm1fd2k2aUpCeG9vNWY1dTdGcUpoTkNRc0dmVlFxN2pLUkVTNEpQZ0hQRmlLV2luNk9JVEdnOHpzLXVMVnpfamJ0QUpvOU8zbUp1Vlhncnlscm1JLWMyaGp0aUhfaTNqUWFxcHE1dURHX2pR"
     },
     {
@@ -272,7 +323,7 @@
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8wcU8tWHphczJzVXd5MWI1blAxNkFpLWllU2xtV2RXcDNnRzJNdVU0dVNnZFdTZlJab2RRX25YVG1melBJcklXcEtDVVZuYndDU1NURU8yTkZiQVNxdWN2Y09RaXFTNXJ2NlFN0gFrQVVfeXFMT191aXB0NUI0MHVXUmVCdE0tM012VVloVjNHQmZOZ0ExcTZzdUJ3dE9vVWlYRWFnLXZ6X3J2azVteERNOFA5M29IbGZzaUhCOWpmb1pvZ2tUWERHSS0wRVFLRFllQk4zS2ltMlE"
     },
     {
-      "id": "592596e56123",
+      "id": "26a94158b7a8",
       "kind": "news",
       "mentions": [
         "hamilton",
@@ -282,7 +333,7 @@
       "source": "The Hill",
       "summary": "Watch live: Marshall, Hamilton face off in final Kansas Senate debate &nbsp;&nbsp; The Hill",
       "title": "Watch live: Marshall, Hamilton face off in final Kansas Senate debate",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUHRPOTF6TVplRWNNbzk4NDJST2JkTWQ1ZGNPYjYya2V4X2pRc3Jab1Z0Z241eUJMLTB3aF94Z3p5OGlVV1FsZ0xOQ1FPYkN6TW80UEx2OVFhV2o2VE0wSHNPbTRRUzNHNDJBR2Fnd1ZyZm1KSDlTSkhNRC00NThBSVIwTEozZF83aVFyR0Z0OTI4UkxsUU9WNm5kN29ZRmlzTjRTc1doWVLSAa4BQVVfeXFMT1BoZjZfNlE1NTZWZWZCdG5nUmprRVRnd1AwRXlVd0ZzZnJqMmN0S2N4S0tZWXhscDF5Y3NIUnlCWGhxQUdTUUNDcHM1WEZPRnZiRnEtMXNwV0E0VDEzdEdKS050UWhRb1JQOWc1VktZM3RKdUxlUjNxNHdTN0tTcTJSRjg2Sm81MWNERTlTU0RjT3E1QTNueXE1S21IdlhKVFVOVlhNM2k3NjB2c0tB"
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUGhmNl82UTU1NlZlZkJ0bmdSamtFVGd3UDBFeVV3RnNmcmoyY3RLY3hLS1lZeGxwMXljc0hSeUJYaHFBR1NRQ0NwczVYRk9GdmJGcS0xc3BXQTRUMTN0R0pLTnRRaFFvUlA5ZzVWS1kzdEp1TGVSM3E0d1M3S1NxMlJGODZKbzUxY0RFOVNTRGNPcTVBM255cTVLbUh2WEpUVU5WWE0zaTc2MHZzS0HSAa4BQVVfeXFMT1BoZjZfNlE1NTZWZWZCdG5nUmprRVRnd1AwRXlVd0ZzZnJqMmN0S2N4S0tZWXhscDF5Y3NIUnlCWGhxQUdTUUNDcHM1WEZPRnZiRnEtMXNwV0E0VDEzdEdKS050UWhRb1JQOWc1VktZM3RKdUxlUjNxNHdTN0tTcTJSRjg2Sm81MWNERTlTU0RjT3E1QTNueXE1S21IdlhKVFVOVlhNM2k3NjB2c0tB"
     },
     {
       "id": "12a9554596a3",
@@ -335,17 +386,17 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQcXpIMzNLREFXRWRuMXgyaWYteXIwUTdSY3h3WXJqMjhUdU9CQ09rdXZIWlVUeEcwbUUtcTc2S2p4WEhnMjIzcHZ1cE9YNW5CcGtoMWI1dnI3QVZGVW5qVzNKQjJiRTNpM3BXcDl0aXdMOGVEOGVBcVVBLXZEVkM5cjB0RUVxcE9PU294VnFHbUlVVkpGamRmOWdn"
     },
     {
-      "id": "78d39ce047fc",
+      "id": "aba1eb6f3846",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-10-21T20:22:31Z",
-      "source": "Yahoo",
-      "summary": "LIVE UPDATES: Sen. Roger Marshall debates Adam Hamilton in US Senate race &nbsp;&nbsp; Yahoo",
+      "published_at": "2026-10-21T20:26:02Z",
+      "source": "KSN-TV",
+      "summary": "LIVE UPDATES: Sen. Roger Marshall debates Adam Hamilton in US Senate race &nbsp;&nbsp; KSN-TV",
       "title": "LIVE UPDATES: Sen. Roger Marshall debates Adam Hamilton in US Senate race",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUE4wTld2YXpNdXpLWGFHeUtnSXJZbmljSnVjdE56dmJhMWRaQl9ha0J4eUFRbnZOenk3cDdrX2VXbmxzRWM2cjhja0pDMUZ2b0dKc185Q1ZNZ3dzUklfV3lmN3BzS0h1TE8wX0t3VVBsaE94YWpZNzhVZk1kVDFMdlVlcjN0Q0xTNVkwWmRyZmFyNWVTeGc"
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONk5WdGhhbWxyZHQ0YTF3blJkbW9MZGttdlR4RnNWMFRlWmx4RHA0SzRBV2FkNmVhaURiWmNRTWlySmNKeVNlaE9idzZFSFgwbWlMQUhna3ZnM19uY0FDbUJjT20yc3B6LXU3MElQQU1QRnF6aUEtU2VhS2h0ZTdiSmpYQXNkcHk0eUF0c2E4Y2pNWFdxOU9PeThxVkxHQdIBwgFBVV95cUxOTWR5TVR2TmpxNDlBcGRRdVVDSDlSeXEzVWFhejNUOTlSVTYyOGtRRU5IMUFGbldiWHVuWlBxM0l1WUJuSnF3TGpOLXdpZXh4NlVINUlaS1dQdjFWaGtQemh1ZTBpeWtnemRHbzhxWWQzdmwwUTZyeWp4d0RjdEZ6RXhhUGJLLXpRdU9vNUxDMW1QQ1Q0djI2U0tzdDNpMmZDa3F6clRhR29WX3JkZklFcUZSQll4d0FiOURWcmdhXzVWQQ"
     },
     {
       "id": "158a1d34bef0",
@@ -447,19 +498,6 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYmJ3WXAwZXRFV1JRdnJUX3FXTHdSY3VPbGZ6UGNDU3hSNWktUEpzRmsxTTdxMGVQUXZoY2ZRdnBxbjZ2ckF5RldRZ25XcHROTE1HSGhoZ3p1OXRtOUtiZGhMcHpZLUMyU1o4TlpzMnNRUGJuVnZjV1ZXX1BleENoR1o5NTVYbjJDbUN1TlE5dmp0UjVqSW04c1J3Q2staEU"
     },
     {
-      "id": "107846c8b0fd",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T15:23:11Z",
-      "source": "NewsNation",
-      "summary": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race &nbsp;&nbsp; NewsNation",
-      "title": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPeFp3MncwMnpQOE1YM1lIR21TNzFwZjRwUHJaTWFYMWgwZFpHbXZkeG90YTVsNmg0alI2VnlYUnZENU1tOEU2azZjVVVaYW1DOWNfQ2doZHZnd2VtcWZLSXluSjNEY21zS0Q2aXJNdWpINjN6dDRqbGtvOUMzcS0zQTAyYmF6c3JNWDFOeENpMzExUdIBlwFBVV95cUxNOW1GbGNTenJqVERQZTZWZUlSY20ySXA1WTZNQU8tdjh3amJYSnVkOWJ2TkRZQmhoNE5wVWpfeXRMRjVTWEx5eko3dmNKeU16cVVGV2wtRDV1dHp1S0k1TFZJS2swT1g4WUhKTHhKOXdrUFVtTnlJYzJOSGxzQUFKNHpfV2wzbUNwYS1JLXBCZUdsVGo0OWU4"
-    },
-    {
       "id": "f8dc3b5b0b15",
       "kind": "news",
       "mentions": [
@@ -534,12 +572,25 @@
       "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNbmwzOHlUY21KSEJ5Q1JhTmliMlN0ZjlObGI2Z2tMamg2MVR1QTJoVUdJWXBmQzY5bG1tY3Y2MDBadUwtMkhHd3N0MWxnNmJ4UDlKRmgtWnZCU3QxTUFZbWZCc0dqbVk2NWhULVh5dkpPMG1pQmlkM05OS0J6cDk0SUZTM2hhYzhqa1o1Q20wRlMtWl9OQ2ZYSERURmNJNEZYRktBaW5vZnJURHNlaW5JWGdWQmRySU1UMnVUcm1VUlhsX21JZWZMY1lCbkJqaUFQcU1BbXZocTVvTnlIUDN0VUNDcXN0SVJlZF9NUkxQOFhHUlN5Rm5JQVBxRjh2aUNYbkh2X3h5cEFNcGRsa0RJ"
     },
     {
+      "id": "20d112d4ed6f",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-21T10:00:00Z",
+      "source": "The Hill",
+      "summary": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race &nbsp;&nbsp; The Hill",
+      "title": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR1NyWGVmN3kyczF5ZzVzNWNQU1dSVVhWcUs2NHZzanhHVTZwT21VWW9ZbXdzOVRFaEpoQjlic0lHaHBlOTR1bzVqVzVPQ2lVYWFOTG0tZDVWV2xaV3FFOHFraWd3UmVlUi1XV2NkYXlXclVrVTE3emd1bG5kVnNqRXZueDBhNlY5LXBFZTJB0gGTAUFVX3lxTE0wM1U0WHl1UVFPOEFkLTBHUlp5cE1yZWxFcVhFUFhOdHdTWmpYSXVxa0hBNHg1ckNSaVo1X3NQVkhqV1ZxSHhZWjlOalo5R1dJcXhUdzJ2TV85V3pQSGFmTV9KYmN2MmNJeXpHY3hsWHRtTVBYYWZUSnlyNE05X2xNMDZaaHBaS2RMVlBQMkZNdW41RQ"
+    },
+    {
       "id": "a13fcf632b6b",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-21T09:00:00Z",
+      "published_at": "2026-10-21T09:00:50Z",
       "source": "MS NOW",
       "summary": "Weeks before Election Day, Sen. Roger Marshall\u2019s campaign still had no one on payroll &nbsp;&nbsp; MS NOW",
       "title": "Weeks before Election Day, Sen. Roger Marshall\u2019s campaign still had no one on payroll",
@@ -1245,17 +1296,17 @@
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNMUVOOEhpbUR4NWdSY2Y4YUYzbHdwQVlldFdpUXlRUk1mX054MlAwQXlSSm5Mbm1QWHRPdlRrRFAtNlFyVkt4NkJMdml2cklNMlpyUW41dVgzazBFLXlDem53MTlEVmlWd1RSLW85T2JQMjFYWFZ3bzFRcVctV0FCX3BsLWtPcndBYmJERXg2cHJEdXJBVWhCX21oWFUzZ2kxTDdrNTh2aGFqZDREUTJJc0ZZNDIzS2Y3MEtIVndjc3NnVmgzM194YmROUk1uTGlQS1lXcDhrOA"
     },
     {
-      "id": "350db25a8ef6",
+      "id": "50fddd5db6ff",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
       "published_at": "2026-10-19T09:07:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Adam Hamilton outraises Roger Marshall in Senate race in Kansas &nbsp;&nbsp; The Topeka Capital-Journal",
+      "source": "Kansas City Star",
+      "summary": "Adam Hamilton outraises Roger Marshall in Senate race in Kansas &nbsp;&nbsp; Kansas City Star",
       "title": "Adam Hamilton outraises Roger Marshall in Senate race in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQ1g0dHpoVkZSZXdhd1ZabzVqdWRXVFlaWXVSc3BSNHhPLUVnMEdIV1NzamYyQ29wcTRaOGJsWE90YS01SjFnTVQ3a24yMkdoenVtUlhDNzNZcXhkNHJWVS10blpZcmppcVo4YmhuaTZrR1dXbGN1RzNZaERfZGQ1Xy0zWHZ0MmMxakZvOHNJRmt2MGtGMFpCNmtTYlFpOUFYWWd0Wkx0RndqWTZwMFU3M3JIODFkS3I2MXF2UXlWYjlvMHJRaFRtUkdmdWhCWkxzMkRnSk9QVUNLZw"
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9MYlFVZS1EbFZ6ZmoxeVREZDhkOUZQOTBsS2VFX3IzY2dNaEVMOTh2dWI2U0NMa3BsRElrTnRFSVZHRzBZbFVUTjFxYmJjODZUcnNoUnRQODJFM1U0MmpyNE9vcw"
     },
     {
       "id": "8030d55c8795",
@@ -1467,56 +1518,6 @@
       "summary": "The race between Republican U.S. Sen. Roger Marshall and Democratic challenger Adam Hamilton is entering its final stretch, with President Donald Trump preparing to visit Wichita and a FOX4 debate between the candidates just one week away.",
       "title": "Johnson County vs. western Kansas: Where the Kansas Senate race could be won",
       "url": "https://www.ksnt.com/elections/johnson-county-vs-western-kansas-where-the-kansas-senate-race-could-be-won"
-    },
-    {
-      "id": "f0bb3835e94c",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-16T13:00:00Z",
-      "source": "KSNT politics",
-      "summary": "As the race for Kansas U.S. Senate continues to tighten, incumbent Sen. Roger Marshall (R) and challenger Adam Hamilton (D) will face off in a debate televised and livestreamed across the Sunflower State.",
-      "title": "How to watch the Kansas U.S. Senate debate between Sen. Marshall, Adam Hamilton",
-      "url": "https://www.ksnt.com/elections/how-to-watch-the-kansas-u-s-senate-debate-between-sen-marshall-adam-hamilton"
-    },
-    {
-      "id": "fe9871efdfa5",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-16T10:00:00Z",
-      "source": "Kansas City Star",
-      "summary": "Sen. Roger Marshall touts his record, defends Trump policies in Topeka appearance &nbsp;&nbsp; Kansas City Star",
-      "title": "Sen. Roger Marshall touts his record, defends Trump policies in Topeka appearance",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE94aXZjbWVhOVRWQ01MTkU3bWQ2VFBodEludm04NFdxcl9HanhidlhFRnFjR2lFZnFfY1pwQzZWdkVUNE1Ea0FNQklJY1VEb080SHE0LVZxeVF1Y2RaVDNWWGF5ZVIwR21VOV91T09lVXppZi1WVTN4MV90cFV2QdIBfkFVX3lxTFB1MGlwSlotUVlieGpQRDFybnRCR0VQQkQ3cTBHY1Y5RUlXMG9JUjA3YmctOVM3ZFBOSmVjNXNGWjBtbFl5ZW42Q3RiSHgxbWh2VV9xZ09rU081LUpyTjZ6UWRwQ1hRVkF3TTRWMUtZLVE0UENmY0FNaVc5VFFXdw"
-    },
-    {
-      "id": "8d2e57f4e014",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-16T10:00:00Z",
-      "source": "Yahoo",
-      "summary": "Sen. Roger Marshall set to speak at breakfast event in Topeka Friday morning &nbsp;&nbsp; Yahoo",
-      "title": "Sen. Roger Marshall set to speak at breakfast event in Topeka Friday morning",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZThLUTJQbGU3OEhXbXNYZFN2M1BHaGpYX2RFaEdtT3d0UmxwbTdUQjJBWEdhaEI3d0ZmaEhQUWE3TDV5NW5oSTZEa0EzUXdUNGgwX2phOGdNdjBiVUZNMFoySGxScFRWS1hBcExCeDNCVGNjQXpBbEIwUXBHb0pLQzhKVl84aXlKMmpZanpCbDlEdw"
-    },
-    {
-      "id": "c9ee3436f9b5",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-16T09:10:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Ad spending aplenty for Marshall and Hamilton in US Senate race &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Ad spending aplenty for Marshall and Hamilton in US Senate race",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQ19KVzdENkFzX2pNbmJPOTZXVEJSZzFNN2ZQSXFLbGFFWUhmQ3RQT21xWGlodS1rRll4LVVBOVhXM0NTUkRCcjBmOEF6R2lBTmdwOVJRU0s3UERHZWtOX01adGlPMVBXUTRYYmR3bTRZNFlDRzZDbEtMb0REYW5nS3pqWHpSNUs3MlZUV1VzVEd3bnhFQVhrcGlvLU9iYk5UNWptdnB1a0pOV0RLV1lVWUlEaTVPYWotVHh3ZWkybkVjTWxNRXpmLVdkdGRrRnNscGNwUTRSbFJQa1ZsVnc"
     }
   ],
   "schema_version": 1
