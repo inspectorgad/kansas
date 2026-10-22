@@ -7,17 +7,12 @@
     }
   ],
   "consensus": {
-    "as_of": "2026-10-22T14:33:43.640406Z",
-    "change_1h": 0.0116,
-    "change_24h": -0.0233,
-    "change_7d": 0.0213,
-    "hamilton": 0.3971,
+    "as_of": "2026-10-22T18:47:21.623787Z",
+    "change_1h": -0.0049,
+    "change_24h": -0.022,
+    "change_7d": 0.0121,
+    "hamilton": 0.402,
     "history": [
-      {
-        "hamilton": 0.278,
-        "marshall": 0.722,
-        "t": "2026-09-18T22:48:45.059472Z"
-      },
       {
         "hamilton": 0.2727,
         "marshall": 0.7273,
@@ -917,84 +912,89 @@
         "hamilton": 0.3971,
         "marshall": 0.6029,
         "t": "2026-10-22T14:33:43.640406Z"
+      },
+      {
+        "hamilton": 0.402,
+        "marshall": 0.598,
+        "t": "2026-10-22T18:47:21.623787Z"
       }
     ],
-    "marshall": 0.6029,
+    "marshall": 0.598,
     "platforms": [
       "kalshi"
     ]
   },
   "disclaimer": "Prediction-market prices are an implied probability of winning, not a projected vote share.",
-  "generated_at": "2026-10-22T14:33:43.645090Z",
+  "generated_at": "2026-10-22T18:47:21.629615Z",
   "margin": {
     "buckets": [
       {
         "candidate_id": "hamilton",
         "label": "Hamilton wins",
-        "probability": 0.3971
+        "probability": 0.402
       },
       {
         "candidate_id": "marshall",
         "high": 1.0,
         "label": "Marshall by under 1",
         "low": 0.0,
-        "probability": 0.0479
+        "probability": 0.038
       },
       {
         "candidate_id": "marshall",
         "high": 3.0,
         "label": "Marshall by 1\u20133",
         "low": 1.0,
-        "probability": 0.18
+        "probability": 0.14
       },
       {
         "candidate_id": "marshall",
         "high": 5.0,
         "label": "Marshall by 3\u20135",
         "low": 3.0,
-        "probability": 0.155
+        "probability": 0.17
       },
       {
         "candidate_id": "marshall",
         "high": 7.0,
         "label": "Marshall by 5\u20137",
         "low": 5.0,
-        "probability": 0.075
+        "probability": 0.08
       },
       {
         "candidate_id": "marshall",
         "high": 9.0,
         "label": "Marshall by 7\u20139",
         "low": 7.0,
-        "probability": 0.0585
+        "probability": 0.0745
       },
       {
         "candidate_id": "marshall",
         "high": 11.0,
         "label": "Marshall by 9\u201311",
         "low": 9.0,
-        "probability": 0.0355
+        "probability": 0.04
       },
       {
         "candidate_id": "marshall",
         "high": 13.0,
         "label": "Marshall by 11\u201313",
         "low": 11.0,
-        "probability": 0.008
+        "probability": 0.016
       },
       {
         "candidate_id": "marshall",
         "high": 15.0,
         "label": "Marshall by 13\u201315",
         "low": 13.0,
-        "probability": 0.0095
+        "probability": 0.006
       },
       {
         "candidate_id": "marshall",
         "high": 17.0,
         "label": "Marshall by 15\u201317",
         "low": 15.0,
-        "probability": 0.0035
+        "probability": 0.004
       },
       {
         "candidate_id": "marshall",
@@ -1008,7 +1008,7 @@
         "high": 21.0,
         "label": "Marshall by 19\u201321",
         "low": 19.0,
-        "probability": 0.005
+        "probability": 0.0045
       },
       {
         "candidate_id": "marshall",
@@ -1026,16 +1026,16 @@
     ],
     "detailed_side": "marshall",
     "leader": "marshall",
-    "median_margin": 1.6,
+    "median_margin": 1.9,
     "note": "Bands come from market prices for 'will the margin be at least N points'. The exchange lists those rungs for one candidate only, so the other side appears as a single band.",
     "rungs": 12
   },
   "markets": [
     {
-      "fetched_at": "2026-10-22T14:33:37.825688Z",
-      "hamilton": 0.3971,
+      "fetched_at": "2026-10-22T18:47:16.088474Z",
+      "hamilton": 0.402,
       "market_id": "KXKSSENGOVCOMBO-derived",
-      "marshall": 0.6029,
+      "marshall": 0.598,
       "platform": "kalshi",
       "title": "Kansas Senate 2026 (derived from governor/Senate combinations)"
     }
