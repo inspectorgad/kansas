@@ -26,8 +26,21 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-22T09:18:29.672895Z",
+  "generated_at": "2026-10-22T14:37:23.128192Z",
   "items": [
+    {
+      "id": "6af3e5681c2d",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T10:04:00Z",
+      "source": "Kansas City Star",
+      "summary": "Roger Marshall-Adam Hamilton debate: The view from Great Bend &nbsp;&nbsp; Kansas City Star",
+      "title": "Roger Marshall-Adam Hamilton debate: The view from Great Bend",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBEejdQbllZMGxlc0JBU2RxMnVsRTlpaGdaU01DMTUwX1NibnExdy1JRTVFRWt4RG1GY0FtVEg2QmcyYi1jdll5a0V3M0ZZbWF5ZmVCT1RjRmpiZzRzdklIUGVnaW5ZYUHSAWdBVV95cUxOM1pRVTVIZFNsOC1TQk00d2EwZkFoYmdqd2s2N0x6ME14bmpCWGN6NEhaWEdsNEhIRTMzeEhiRW5JbkI2aWZzVlVYRHQxTmg1VUxFcG9jMHZEVElNdTVLa3k2Z2NVdmhN"
+    },
     {
       "id": "cf56fc0dc4dd",
       "kind": "news",
@@ -39,6 +52,19 @@
       "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; The Washington Post",
       "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNdFljWnhqMVVlVjJ5VVo0cTBKbHFlbjNZZC1mR0dQNmlwTzZXMUVidFkxeV91MUswU2RSUndNb3lkdGg0UHAwa1pKeUJuSmROdjlvYllfdk1neXE0TlZUbnVLZWliMFNlVjRpVjJJVGp3ZjA4VFdRdnpITjJSOUVzZ1ZGb3lBUy1YN0FmcGh4Tk05UXRDYnZoQ1d3VWJJUjVYMlZiNWp0STY4dkhCdlNDTUhNdWxCSVYwU2dWSkR1Tk5UTWtnZWs1TkVrX2xWWFhKWDNEN3R5WG1XVVFDVmFEc3VvTjM"
+    },
+    {
+      "id": "47b3e10f7e05",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T05:59:00Z",
+      "source": "AP News",
+      "summary": "Marshall and Hamilton face off on fuel prices and AI during final Kansas Senate debate &nbsp;&nbsp; AP News",
+      "title": "Marshall and Hamilton face off on fuel prices and AI during final Kansas Senate debate",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPRTFaQXVJUDhrYjNwZWV1YmxwVDdqOVdnVmtmZDlqZTJPNW5RcllMRkkySDNYR2paTU1YN1BZeUY5OEx4a2dQM1FnVjZDaTlGV1ZjZThvWWtnRDcyVk1ucUY5RENNTTFWbURxYng0ZE1UemtGMDVoM2pyby1TRkdLZkVlTkEwbVVhN1ZUV01DX0ZyM2ItVks0c1pNUkFQWmVBZjRmRnVpODVhVGhrUVVCeFd2aC1kVTR0TVdWRlNNbUptcEJhaXlBQ3I5XzQ2bGxFajZQZ1U0R2w3SVFM"
     },
     {
       "id": "4c7284d1f8a0",
@@ -247,17 +273,17 @@
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdmhOTktCaFMtQ3pSRm5QUXNjZkc1MzdwMC1YXzllSVpUUGlZc0tPVXhJSGwzSzZYUHJna1liNDh3c3A5Q0RHZHJGLWhvYW5yaExVcTVRS2pKSFpONkhtSW4ya2VIdGx3TW5qdEZHYzhLZE04RWpIcV92S0Ztd2FOUHFjS2h6VDdmRktPVWRtbWhzWEJxRXNKWVRjNGpBajBmVzBXdUpJQTVZWnhsV1RFUllnaTVWNUNOaVdmUUQxTkVsQQ"
     },
     {
-      "id": "25fe66b87466",
+      "id": "b4d41025dbde",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-10-22T01:11:00Z",
-      "source": "Kansas City Star",
-      "summary": "Senate candidates Marshall, Hamilton clash in live TV debate amid \u2018toss-up\u2019 race &nbsp;&nbsp; Kansas City Star",
+      "published_at": "2026-10-22T01:18:48Z",
+      "source": "Wichita Eagle",
+      "summary": "Senate candidates Marshall, Hamilton clash in live TV debate amid \u2018toss-up\u2019 race &nbsp;&nbsp; Wichita Eagle",
       "title": "Senate candidates Marshall, Hamilton clash in live TV debate amid \u2018toss-up\u2019 race",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5rZmJERVNoVXI3cnRRNTI0QXZXeFM0QlRIeEtpakVyOFZWQzkwclh0NVNvQmNDZUJLTGVaU3dEbUZOSk54M3luZXNjajQ2a1lZblY5V09Oekhnd05iRS1OSGVrVXlfbUhGT3BhLWVpRDNDZkZoQXpfMWVHb2VXUdIBfkFVX3lxTFBsYXY2LU8zd0NZNUpyOTc2MzNGbWs2YThURm8yeHY1Wk1nWWtxT3hOOEx0ZHV3ZEQ3Y1pyczJob0dsZ2l0RWwzbDNOT3Nob2x6ZVV2WGNNOU5JWk9qYXFkaGxJNzdoam55Y2xiZTVXZ3A5ak5xSmZHcnNySThnQQ"
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNdndDRzBzVU1GSlRyVFJmS05sVVMyR3JfQkNiZEViRmNFMURSc2tCS09YdS1JUG92M2RWVnRNMEk4M2Vuc0J1d0U1S0MwYkM5YUpmQkRhal9EZ1VaY3JBWlQ4Zjd4Rm1PcGFCanMyVGYtNjJXTnRobElUVERIc1FnYzdnOEjSAYQBQVVfeXFMTXZ3Q0cwc1VNRkpUclRSZktObFVTMkdyX0JDYmRFYkZjRTFEUnNrQktPWHUtSVBvdjNkVlZ0TTBJODNlbnNCdXdFNUtDMGJDOWFKZkJEYWpfRGdVWmNyQVpUOGY3eEZtT3BhQmpzMlRmLTYyV050aGxJVFRESHNRZ2M3ZzhI"
     },
     {
       "id": "afc666cdb616",
@@ -266,7 +292,7 @@
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-10-22T00:52:37Z",
+      "published_at": "2026-10-22T00:59:07Z",
       "source": "NewsNation",
       "summary": "Marshall and Hamilton take debate stage in tight Kansas Senate race &nbsp;&nbsp; NewsNation",
       "title": "Marshall and Hamilton take debate stage in tight Kansas Senate race",
@@ -572,7 +598,7 @@
       "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNbmwzOHlUY21KSEJ5Q1JhTmliMlN0ZjlObGI2Z2tMamg2MVR1QTJoVUdJWXBmQzY5bG1tY3Y2MDBadUwtMkhHd3N0MWxnNmJ4UDlKRmgtWnZCU3QxTUFZbWZCc0dqbVk2NWhULVh5dkpPMG1pQmlkM05OS0J6cDk0SUZTM2hhYzhqa1o1Q20wRlMtWl9OQ2ZYSERURmNJNEZYRktBaW5vZnJURHNlaW5JWGdWQmRySU1UMnVUcm1VUlhsX21JZWZMY1lCbkJqaUFQcU1BbXZocTVvTnlIUDN0VUNDcXN0SVJlZF9NUkxQOFhHUlN5Rm5JQVBxRjh2aUNYbkh2X3h5cEFNcGRsa0RJ"
     },
     {
-      "id": "20d112d4ed6f",
+      "id": "107f1ab93cf3",
       "kind": "news",
       "mentions": [
         "hamilton",
@@ -582,7 +608,7 @@
       "source": "The Hill",
       "summary": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race &nbsp;&nbsp; The Hill",
       "title": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR1NyWGVmN3kyczF5ZzVzNWNQU1dSVVhWcUs2NHZzanhHVTZwT21VWW9ZbXdzOVRFaEpoQjlic0lHaHBlOTR1bzVqVzVPQ2lVYWFOTG0tZDVWV2xaV3FFOHFraWd3UmVlUi1XV2NkYXlXclVrVTE3emd1bG5kVnNqRXZueDBhNlY5LXBFZTJB0gGTAUFVX3lxTE0wM1U0WHl1UVFPOEFkLTBHUlp5cE1yZWxFcVhFUFhOdHdTWmpYSXVxa0hBNHg1ckNSaVo1X3NQVkhqV1ZxSHhZWjlOalo5R1dJcXhUdzJ2TV85V3pQSGFmTV9KYmN2MmNJeXpHY3hsWHRtTVBYYWZUSnlyNE05X2xNMDZaaHBaS2RMVlBQMkZNdW41RQ"
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNMDNVNFh5dVFRTzhBZC0wR1JaeXBNcmVsRXFYRVBYTnR3U1pqWEl1cWtIQTR4NXJDUmlaNV9zUFZIaldWcUh4WVo5TmpaOUdXSXF4VHcydk1fOVd6UEhhZk1fSmJjdjJjSXl6R2N4bFh0bU1QWGFmVEp5cjRNOV9sTTA2WmhwWktkTFZQUDJGTXVuNUXSAZMBQVVfeXFMTTAzVTRYeXVRUU84QWQtMEdSWnlwTXJlbEVxWEVQWE50d1NaalhJdXFrSEE0eDVyQ1JpWjVfc1BWSGpXVnFIeFlaOU5qWjlHV0lxeFR3MnZNXzlXelBIYWZNX0piY3YyY0l5ekdjeGxYdG1NUFhhZlRKeXI0TTlfbE0wNlpocFpLZExWUFAyRk11bjVF"
     },
     {
       "id": "a13fcf632b6b",
@@ -1493,31 +1519,6 @@
       "summary": "In tight Kansas U.S. Senate race, where do Roger Marshall and Adam Hamilton stand on the issues? &nbsp;&nbsp; Johnson County Post",
       "title": "In tight Kansas U.S. Senate race, where do Roger Marshall and Adam Hamilton stand on the issues?",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMDdFc3BQMWo1WWRCV0FobEs4UTZwV3lYay11N3Q0THpRVTZUY1BxajJlclg4ZjFkS05HMGRSRWVwM243NGJLNF9mcUFuN0VSSWN2Y3BxblVRdWQxb2U1QU9VbXY3c3dvM3pFY1pDdlpLOEtTTXp4ZzNKdDFXNk8yblQzQjBuT1NISE9LVQ"
-    },
-    {
-      "id": "0a3588253319",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-16T14:50:11Z",
-      "source": "KCUR",
-      "summary": "President Donald Trump will visit Wichita on Monday to campaign for Republican Sen. Roger Marshall, who's in a tough reelection race.",
-      "title": "Trump's Kansas rally will be at Heartland Credit Union Arena in Park City",
-      "url": "https://www.kcur.org/2026-10-16/trump-rally-will-be-at-heartland-credit-union-arena-in-park-city"
-    },
-    {
-      "id": "9551d8054682",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-16T14:28:02Z",
-      "source": "KSNT politics",
-      "summary": "The race between Republican U.S. Sen. Roger Marshall and Democratic challenger Adam Hamilton is entering its final stretch, with President Donald Trump preparing to visit Wichita and a FOX4 debate between the candidates just one week away.",
-      "title": "Johnson County vs. western Kansas: Where the Kansas Senate race could be won",
-      "url": "https://www.ksnt.com/elections/johnson-county-vs-western-kansas-where-the-kansas-senate-race-could-be-won"
     }
   ],
   "schema_version": 1

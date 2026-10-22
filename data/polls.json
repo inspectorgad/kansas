@@ -1,8 +1,8 @@
 {
   "aggregate": {
     "as_of": "2026-10-22T00:00:00Z",
-    "band": 2.07,
-    "hamilton": 46.66,
+    "band": 2.08,
+    "hamilton": 46.67,
     "history": [
       {
         "date": "2026-06-24",
@@ -790,63 +790,63 @@
       },
       {
         "date": "2026-10-14",
-        "hamilton": 46.75,
-        "margin": -0.99,
-        "marshall": 45.76,
-        "n_polls": 10
+        "hamilton": 46.67,
+        "margin": -1.0,
+        "marshall": 45.67,
+        "n_polls": 11
       },
       {
         "date": "2026-10-15",
-        "hamilton": 46.75,
-        "margin": -0.99,
-        "marshall": 45.76,
-        "n_polls": 10
+        "hamilton": 46.67,
+        "margin": -1.0,
+        "marshall": 45.67,
+        "n_polls": 11
       },
       {
         "date": "2026-10-16",
-        "hamilton": 46.66,
+        "hamilton": 46.67,
         "margin": -1.0,
         "marshall": 45.67,
         "n_polls": 11
       },
       {
         "date": "2026-10-17",
-        "hamilton": 46.66,
+        "hamilton": 46.67,
         "margin": -1.0,
         "marshall": 45.67,
         "n_polls": 11
       },
       {
         "date": "2026-10-18",
-        "hamilton": 46.66,
+        "hamilton": 46.67,
         "margin": -1.0,
         "marshall": 45.67,
         "n_polls": 11
       },
       {
         "date": "2026-10-19",
-        "hamilton": 46.66,
+        "hamilton": 46.67,
         "margin": -1.0,
         "marshall": 45.67,
         "n_polls": 11
       },
       {
         "date": "2026-10-20",
-        "hamilton": 46.66,
+        "hamilton": 46.67,
         "margin": -1.0,
         "marshall": 45.67,
         "n_polls": 11
       },
       {
         "date": "2026-10-21",
-        "hamilton": 46.66,
+        "hamilton": 46.67,
         "margin": -1.0,
         "marshall": 45.67,
         "n_polls": 11
       },
       {
         "date": "2026-10-22",
-        "hamilton": 46.66,
+        "hamilton": 46.67,
         "margin": -1.0,
         "marshall": 45.67,
         "n_polls": 11
@@ -867,21 +867,8 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-22T09:14:17.939294Z",
+  "generated_at": "2026-10-22T14:33:29.773132Z",
   "polls": [
-    {
-      "added_at": "2026-10-22T09:14:17.936113Z",
-      "end_date": "2026-10-16",
-      "id": "c559f128454b",
-      "other": 9.0,
-      "pollster": "270toWin",
-      "results": {
-        "hamilton": 46.0,
-        "marshall": 45.0
-      },
-      "start_date": "2026-09-08",
-      "undecided": 9.0
-    },
     {
       "added_at": "2026-10-16T01:29:49.365050Z",
       "end_date": "2026-10-14",
@@ -910,6 +897,19 @@
       },
       "start_date": "2026-10-14",
       "undecided": 7.7
+    },
+    {
+      "added_at": "2026-10-22T14:33:29.770014Z",
+      "end_date": "2026-10-14",
+      "id": "f36531dbaeb3",
+      "other": 9.0,
+      "pollster": "270toWin",
+      "results": {
+        "hamilton": 46.0,
+        "marshall": 45.0
+      },
+      "start_date": "2026-09-15",
+      "undecided": 9.0
     },
     {
       "added_at": "2026-10-11T23:08:17.142334Z",
