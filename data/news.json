@@ -9,10 +9,6 @@
       "url": "https://www.kcur.org/politics-elections-and-government.rss"
     },
     {
-      "name": "KWCH",
-      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
-    },
-    {
       "name": "KSNT politics",
       "url": "https://www.ksnt.com/news/politics/feed/"
     },
@@ -22,12 +18,41 @@
       "url": "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"
     },
     {
+      "name": "KWCH",
+      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
+    },
+    {
       "name": "KSNT",
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-23T15:50:24.833044Z",
+  "generated_at": "2026-10-23T19:55:08.439248Z",
   "items": [
+    {
+      "id": "b6ac51fbb676",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-23T19:00:00Z",
+      "source": "themercury.com",
+      "summary": "Roger Marshall &nbsp;&nbsp; themercury.com",
+      "title": "Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQRmFiTVR5Q1dsNEVHSmhCcDgwS2loTWNfUjlWTkJ5Z2FlR3lwU3FiQnBsTDVtSGxPd1B0QWdDMkpEdTFKY0ZVaUtUM2NJLXkwYmkwZ1F5N3hsbXljNW1Fd1h3N1NmOFJJanBpWndaU0hWa3BUcjJSWllpZk55VnJlZGh2SGNnTGM1bW5WdnJn"
+    },
+    {
+      "id": "69e1884729ca",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-23T16:03:24Z",
+      "source": "Kansas City Star",
+      "summary": "Fact Check: Hamilton TV ad says Sen. Marshall had patients arrested for medical debt &nbsp;&nbsp; Kansas City Star",
+      "title": "Fact Check: Hamilton TV ad says Sen. Marshall had patients arrested for medical debt",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbl9HN1kxR0JEZHZLYmlNS1RrdzFmQ0tPM2U0WTVDZDNSNm1fQmplWlE3cHc4VVhIVmpGay1OVDhpUHdWdWl4MXBEYTUzU0ZIZ3o2YzVTLVM2TDBGU2piSXJuRWkza3RMVW56MHhPbTlEWDdnNnZLRzliRldaTlp4V0djbGZ3a1l4WWfSAYoBQVVfeXFMTjlMUE41TTloTTZUeFFFQ0t4OGdxc0hYT3dmSUhEM2hYWjZ5cmpnVG9lSVVDelBzRmJfUTR3SVR3MGowYTk5Z3I5SFFsUVRSS2YxOHFZMFh5UGhobV9PM0ZQbHB4eGlOUWRYMTlxRXpjb2VPMWdvaEFiaUN1Sk8tU24wZmhRT2U5bXRR"
+    },
     {
       "id": "5757b0505370",
       "kind": "news",
@@ -1501,30 +1526,6 @@
       "summary": "Sen. Roger Marshall is at the Trump rally in Park City, Kansas (Video) &nbsp;&nbsp; Kansas City Star",
       "title": "Sen. Roger Marshall is at the Trump rally in Park City, Kansas (Video)",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1kSEg4d1pNc1FEMVFiR3JXdV94c21QY3JIRU9CdE44b182QXd6Q29Xb05IaUJOTUVSVDNwWWxxb3V2bmZBRTVqaUVxajZiekRvQ1NVemhLUXlGOGg1NkR6cXlYRkJZdjB3aUFHUHNBdHFwWVotajYxVkVUNmFFZw"
-    },
-    {
-      "id": "ff4857df7e44",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T21:16:00Z",
-      "source": "Kansas City Star",
-      "summary": "Trump supporter Ted Nugent set to appear at rally for Roger Marshall near Wichita &nbsp;&nbsp; Kansas City Star",
-      "title": "Trump supporter Ted Nugent set to appear at rally for Roger Marshall near Wichita",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPYTZHeUptQmhBRDI0QUlfMzFlZmhyMzgxbTgzcFJiZkhHV3lZWVh3T3NWbXF3cFR1anM4ejh5eklzUzBueEJXc2kzUW5PUjNtbFk1VWRUeHU3RWpuNW9PcHZHYzlzR0p5dmF4clJJTGRZa0xQWmhkYUJCOUI2OWRfdWI3Ym5nV0RTbGfSAYoBQVVfeXFMUDEtempnQkZ5QXBuak9LMjBOWHZpejk3U0dGUV9NVEZ2a2VORmg3VjBYU0hIWFpUcy1WRk90cnJpSXFoZG5iTnZKeWk5RWtRWjFfUkpMVGw3ZXlvSDNpRzRSOUx5bHpnWk0wVVdTTjVUclZMaE1xanZmLTFGbnN6WTZ6MVZJckJEWjBB"
-    },
-    {
-      "id": "a76fc4390d5e",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T21:02:00Z",
-      "source": "Spectrum News",
-      "summary": "Trump draws crowd to Kansas to rally for Sen. Marshall &nbsp;&nbsp; Spectrum News",
-      "title": "Trump draws crowd to Kansas to rally for Sen. Marshall",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdzc2aEM2a1NEV1FXRXJkRGZqN0hCdjFWSDBJRnNIemZ1YnhyNExjV3FLeXdxck9HdjF2NnhzWjRnS0tfcmJ0NldOWXliMEpuUC1UQkhZNXpBd1h2aUx2WkxnQTJhbUtzQlJKT0RQdlZiSFo0dEFndEYtR2ZkdklleHhZTWQydkVNVGlJRXdxaDRMbjZzQlE"
     }
   ],
   "schema_version": 1
