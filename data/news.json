@@ -26,31 +26,32 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-23T11:15:38.708728Z",
+  "generated_at": "2026-10-23T15:50:24.833044Z",
   "items": [
+    {
+      "id": "5757b0505370",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-23T15:37:00Z",
+      "source": "The Hill",
+      "summary": "Kansas Senate debate RECAP: Roger Marshall & Adam Hamilton battle over Trump, Iran, Chuck Schumer &nbsp;&nbsp; The Hill",
+      "title": "Kansas Senate debate RECAP: Roger Marshall & Adam Hamilton battle over Trump, Iran, Chuck Schumer",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRDFmbVNVaWU0dU5lRUxUQ1lBYXhrck9wcmFlc3ZYZTRHLV91T0E5ZlV6Ym5ES2ZYRUlOTHFzNm1PR2twMWNrTl9wMS1NdGExaE4yaUpCM0pPa253ME05ZDVwa3JRZ2MtODZ6a1V3cXQxSHQ5S0NyekZ0blJGX0Q2aG1DLWV5VmFfSDYxdEkxMkd2RHJxelFDU2VzV19wc3Q3TlZ6XzNud01NODYzLXdkWmZiWUN6cl9RbENPUTRyWjd0VnA0MzRJSjg4MktHd0J4eEHSAdcBQVVfeXFMT0NYMnlQdmpCZ2RSRXBQQ0dma2t3QkZRVy11OTFvZWs2TEJHWGo0WlJ6YUNPUTEyemZ3dE1ldWlwTkNrZE42UTF1b2djb1k3RDdlaVpZX3UzeEJsNC1FcDdYTDNvTTB0dDFEZVFocXN4WDNMQXZzd2NpYWp4dWV3NVZuaUdLc0NGME1IRGQtUTRIS1ktV05TRzkzTEh0MnQ3Z1htZlFNbXpMcmJLRmE1ZDE3NmhhSEdYeTNOaG43d21xcFJ5SnQza21vSlk3eVlVbHF5dlZiWFE"
+    },
     {
       "id": "5dcbe2fafc73",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-23T09:12:24Z",
+      "published_at": "2026-10-23T09:10:57Z",
       "source": "The Topeka Capital-Journal",
       "summary": "Small group protest Roger Marshall outside of Topeka campaign event &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Small group protest Roger Marshall outside of Topeka campaign event",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWnJnSWRBN2RIc2hiLWRBZHJzWDAxVUloVm1tTlB1VDRUalI3TklWbjNwSDFWTmVqVzZja3BuLTVxZ2xVY25JRXhMUzVDRTd5YmpyaG8ySmg4MjlNR254OFIxT2xlZHJkeDZDTjlSb2hDTnhYX1BVYWNsYkRqNUhGWlo2aFAyVzFtcDZTZXRIVFFsbEFtdFNfQ1NISThOQUxrMlhLSEtMaGJ4QzJXV2UzWTNVYmI2SnhyNkE"
-    },
-    {
-      "id": "104e49209444",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-23T09:11:18Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZ0h6LVBaLUw0dmdvaC1EUk85MXpBU0pjYUU0VjhuSUJHeUVFUU5FQWhPWnFGMWcyMEtoN1JwWDdONE4ydUk1VzRqd2c2R1NRV25lNmJyM0FnUndObG91YklKa3RzMmh2XzRENm9Vc21CT2gzaWwtZ0VKRlZDa3hoMFE4a1BSRzl4SmxrbHpETEx2aXNhQlJXNjM3TXQ4cVQyeTl0WFpqZXlxdVRpb1Uya0NtMEZrTUdLaWV4QUtuWUZUOGVLdHpFNnJrVVlGak9ma3pLZkI4N2h2TWFyMzZmNTNB"
     },
     {
       "id": "7f50d9d002cb",
@@ -60,22 +61,21 @@
       ],
       "published_at": "2026-10-23T09:10:19Z",
       "source": "The Topeka Capital-Journal",
-      "summary": "Meriden manufacturer questions Roger Marshall's stance on tariffs &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Meriden manufacturer questions Roger Marshall's stance on tariffs",
+      "summary": "Kansas manufacturer questions Roger Marshall's stance on tariffs &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Kansas manufacturer questions Roger Marshall's stance on tariffs",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTUxpZldxWWdZTUM3Sjc3TnZNOXI2czFSMGpFejdEX0gycVVmWTBIa0IzSnNIRTNQVHl5UnJNSXgzcDZJNk1sWmRqQlVhZThlM2c4WDlKN3dyLVVQRjhDMjhGSkVhYm1RVEVmMm5sczR4eUt0c2gyZUJRTENWak1UVjNTVWNaN1BlalpMVlY1NDQ5WlpBdDBnU0N6b3VtQTdBa0Z0NV9fZnJmNk5IX05hM3NVcXhoV043VDVHOUtEa1g0dw"
     },
     {
-      "id": "f3deec743347",
+      "id": "104e49209444",
       "kind": "news",
       "mentions": [
-        "hamilton",
-        "marshall"
+        "hamilton"
       ],
-      "published_at": "2026-10-23T09:03:00Z",
+      "published_at": "2026-10-23T09:10:19Z",
       "source": "The Topeka Capital-Journal",
-      "summary": "Sen. Roger Marshall and Adam Hamilton stop at Topeka candidate forums &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Sen. Roger Marshall and Adam Hamilton stop at Topeka candidate forums",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQkVMenJWTExfdEdmeUNyV215UWFjaWNic2ZaZEE0OWhRY0RFTV9qRGtMNEJGc01fRVk1MUNuRXh3T0pyLU94d1ZpVE9mX25HQWtXM3J1cmw4cDg5WDE1NHI4ZXNqek9ibG03cDZDYjdnQkFmTnRyZjZ5LWJ2a0hQeGRSWnlBZnJlc2xTcldTTjBRdzVjSUVWVnR3cEZsLTYzamNsbnNCSnpUUFJ2TE1aVTM3a29MbVdjb1pjb2lKakdndDJSSHVYbUtMaHc5Uk03T0hwbTlkUlQ1RkxRUHRoVTdSSjBfVjhRb1dkODhSVmswUnZyc3lj"
+      "summary": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZ0h6LVBaLUw0dmdvaC1EUk85MXpBU0pjYUU0VjhuSUJHeUVFUU5FQWhPWnFGMWcyMEtoN1JwWDdONE4ydUk1VzRqd2c2R1NRV25lNmJyM0FnUndObG91YklKa3RzMmh2XzRENm9Vc21CT2gzaWwtZ0VKRlZDa3hoMFE4a1BSRzl4SmxrbHpETEx2aXNhQlJXNjM3TXQ4cVQyeTl0WFpqZXlxdVRpb1Uya0NtMEZrTUdLaWV4QUtuWUZUOGVLdHpFNnJrVVlGak9ma3pLZkI4N2h2TWFyMzZmNTNB"
     },
     {
       "id": "44ed80300c92",
@@ -89,6 +89,19 @@
       "summary": "How Roger Marshall and Adam Hamilton answered Topeka business leaders &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "How Roger Marshall and Adam Hamilton answered Topeka business leaders",
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNa1BEaW51MDJjR2dZS0piLUwyc0g1T3hkcUN5RWpaNnhoSVdQN2VzcnQ2UGdyc090TUJQZkZvbGdYYWoxbmtjVVdQaFBobGRDb0N6N1BkTlcyenQ1U1YwQU4zTEltMWFnV3VzaUwyVkFOajVhb2JhSDlEZDRCSUFWdGhPMkRsMUQwX1Y4ZHJKT3l5RXNEV0lEVUd2TU5MMXNsZFdBNWtVeVBCX1pEMV9Fb05pUElDRl9EOXhGTUl4SVByVm5nbnQ1Q1diN1F2cl9HdTdpbGdTbDNNNjNfdXprSTlB"
+    },
+    {
+      "id": "f3deec743347",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-23T09:03:00Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Sen. Roger Marshall and Adam Hamilton stop at Topeka candidate forums &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Sen. Roger Marshall and Adam Hamilton stop at Topeka candidate forums",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQkVMenJWTExfdEdmeUNyV215UWFjaWNic2ZaZEE0OWhRY0RFTV9qRGtMNEJGc01fRVk1MUNuRXh3T0pyLU94d1ZpVE9mX25HQWtXM3J1cmw4cDg5WDE1NHI4ZXNqek9ibG03cDZDYjdnQkFmTnRyZjZ5LWJ2a0hQeGRSWnlBZnJlc2xTcldTTjBRdzVjSUVWVnR3cEZsLTYzamNsbnNCSnpUUFJ2TE1aVTM3a29MbVdjb1pjb2lKakdndDJSSHVYbUtMaHc5Uk03T0hwbTlkUlQ1RkxRUHRoVTdSSjBfVjhRb1dkODhSVmswUnZyc3lj"
     },
     {
       "id": "f2aa79ee18a7",
@@ -1512,18 +1525,6 @@
       "summary": "Trump draws crowd to Kansas to rally for Sen. Marshall &nbsp;&nbsp; Spectrum News",
       "title": "Trump draws crowd to Kansas to rally for Sen. Marshall",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdzc2aEM2a1NEV1FXRXJkRGZqN0hCdjFWSDBJRnNIemZ1YnhyNExjV3FLeXdxck9HdjF2NnhzWjRnS0tfcmJ0NldOWXliMEpuUC1UQkhZNXpBd1h2aUx2WkxnQTJhbUtzQlJKT0RQdlZiSFo0dEFndEYtR2ZkdklleHhZTWQydkVNVGlJRXdxaDRMbjZzQlE"
-    },
-    {
-      "id": "2307d7ff0ffa",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T21:00:00Z",
-      "source": "CBS News",
-      "summary": "Trump stumping for Sen. Roger Marshall in Kansas with midterms 15 days away &nbsp;&nbsp; CBS News",
-      "title": "Trump stumping for Sen. Roger Marshall in Kansas with midterms 15 days away",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPakFUTUUtWHJNYTdNTzMzQmpVSmZtaEJWbml3WjNsSUhnZkMzY1B2by1NUkhyd0pSUHVVbDFDa2wyVXBwLWY3Z2lXTFk5NnpHbFJWS1RtZWtNTlYtMGsxbHUyMlc4d2xkUDFFVVBEeDM4Y2g1Q1E1VVNic3c1REVkM0dQNUpYZVlvMXpWVjVNZzJBaVU"
     }
   ],
   "schema_version": 1
