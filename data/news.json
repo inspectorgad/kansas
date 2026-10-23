@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-23T19:55:08.439248Z",
+  "generated_at": "2026-10-23T23:00:49.907312Z",
   "items": [
+    {
+      "id": "74fa2bd43ebb",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-23T20:52:47Z",
+      "source": "The Iola Register",
+      "summary": "Adam Hamilton best-suited to serve Kansas in U.S. Senate &nbsp;&nbsp; The Iola Register",
+      "title": "Adam Hamilton best-suited to serve Kansas in U.S. Senate",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa1g2SGc4bkxBX1lZaWpxZzZzLWg3cy1aMW1HanFnbzh3eXFNbXJMdW5oaWF2blR2SzVFYmwzOC1wbUh2bnowM1UzcmRFYWc4YzBnNnQyc0cyVnVaZTNYZk03eU9vRVFTTF81M0RIaEZtcnhxM05mV04tUXFmSk9SdHhfc2lZV0RCaUszaGplZ05XbDZTTkg0ZGFHTlpmd2dZQWRENDlR"
+    },
     {
       "id": "b6ac51fbb676",
       "kind": "news",
@@ -39,6 +51,19 @@
       "summary": "Roger Marshall &nbsp;&nbsp; themercury.com",
       "title": "Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQRmFiTVR5Q1dsNEVHSmhCcDgwS2loTWNfUjlWTkJ5Z2FlR3lwU3FiQnBsTDVtSGxPd1B0QWdDMkpEdTFKY0ZVaUtUM2NJLXkwYmkwZ1F5N3hsbXljNW1Fd1h3N1NmOFJJanBpWndaU0hWa3BUcjJSWllpZk55VnJlZGh2SGNnTGM1bW5WdnJn"
+    },
+    {
+      "id": "592596e56123",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-23T16:49:05Z",
+      "source": "The Hill",
+      "summary": "Watch live: Marshall, Hamilton face off in final Kansas Senate debate &nbsp;&nbsp; The Hill",
+      "title": "Watch live: Marshall, Hamilton face off in final Kansas Senate debate",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUHRPOTF6TVplRWNNbzk4NDJST2JkTWQ1ZGNPYjYya2V4X2pRc3Jab1Z0Z241eUJMLTB3aF94Z3p5OGlVV1FsZ0xOQ1FPYkN6TW80UEx2OVFhV2o2VE0wSHNPbTRRUzNHNDJBR2Fnd1ZyZm1KSDlTSkhNRC00NThBSVIwTEozZF83aVFyR0Z0OTI4UkxsUU9WNm5kN29ZRmlzTjRTc1doWVLSAa4BQVVfeXFMT1BoZjZfNlE1NTZWZWZCdG5nUmprRVRnd1AwRXlVd0ZzZnJqMmN0S2N4S0tZWXhscDF5Y3NIUnlCWGhxQUdTUUNDcHM1WEZPRnZiRnEtMXNwV0E0VDEzdEdKS050UWhRb1JQOWc1VktZM3RKdUxlUjNxNHdTN0tTcTJSRjg2Sm81MWNERTlTU0RjT3E1QTNueXE1S21IdlhKVFVOVlhNM2k3NjB2c0tB"
     },
     {
       "id": "69e1884729ca",
@@ -79,18 +104,6 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWnJnSWRBN2RIc2hiLWRBZHJzWDAxVUloVm1tTlB1VDRUalI3TklWbjNwSDFWTmVqVzZja3BuLTVxZ2xVY25JRXhMUzVDRTd5YmpyaG8ySmg4MjlNR254OFIxT2xlZHJkeDZDTjlSb2hDTnhYX1BVYWNsYkRqNUhGWlo2aFAyVzFtcDZTZXRIVFFsbEFtdFNfQ1NISThOQUxrMlhLSEtMaGJ4QzJXV2UzWTNVYmI2SnhyNkE"
     },
     {
-      "id": "7f50d9d002cb",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-23T09:10:19Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Kansas manufacturer questions Roger Marshall's stance on tariffs &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Kansas manufacturer questions Roger Marshall's stance on tariffs",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTUxpZldxWWdZTUM3Sjc3TnZNOXI2czFSMGpFejdEX0gycVVmWTBIa0IzSnNIRTNQVHl5UnJNSXgzcDZJNk1sWmRqQlVhZThlM2c4WDlKN3dyLVVQRjhDMjhGSkVhYm1RVEVmMm5sczR4eUt0c2gyZUJRTENWak1UVjNTVWNaN1BlalpMVlY1NDQ5WlpBdDBnU0N6b3VtQTdBa0Z0NV9fZnJmNk5IX05hM3NVcXhoV043VDVHOUtEa1g0dw"
-    },
-    {
       "id": "104e49209444",
       "kind": "news",
       "mentions": [
@@ -101,6 +114,18 @@
       "summary": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas",
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZ0h6LVBaLUw0dmdvaC1EUk85MXpBU0pjYUU0VjhuSUJHeUVFUU5FQWhPWnFGMWcyMEtoN1JwWDdONE4ydUk1VzRqd2c2R1NRV25lNmJyM0FnUndObG91YklKa3RzMmh2XzRENm9Vc21CT2gzaWwtZ0VKRlZDa3hoMFE4a1BSRzl4SmxrbHpETEx2aXNhQlJXNjM3TXQ4cVQyeTl0WFpqZXlxdVRpb1Uya0NtMEZrTUdLaWV4QUtuWUZUOGVLdHpFNnJrVVlGak9ma3pLZkI4N2h2TWFyMzZmNTNB"
+    },
+    {
+      "id": "7f50d9d002cb",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-23T09:10:19Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Kansas manufacturer questions Roger Marshall's stance on tariffs &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Kansas manufacturer questions Roger Marshall's stance on tariffs",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTUxpZldxWWdZTUM3Sjc3TnZNOXI2czFSMGpFejdEX0gycVVmWTBIa0IzSnNIRTNQVHl5UnJNSXgzcDZJNk1sWmRqQlVhZThlM2c4WDlKN3dyLVVQRjhDMjhGSkVhYm1RVEVmMm5sczR4eUt0c2gyZUJRTENWak1UVjNTVWNaN1BlalpMVlY1NDQ5WlpBdDBnU0N6b3VtQTdBa0Z0NV9fZnJmNk5IX05hM3NVcXhoV043VDVHOUtEa1g0dw"
     },
     {
       "id": "44ed80300c92",
@@ -773,19 +798,6 @@
       "summary": "Who is Jon Holt, veteran KC TV anchor who will moderate Marshall-Hamilton debate? &nbsp;&nbsp; Kansas City Star",
       "title": "Who is Jon Holt, veteran KC TV anchor who will moderate Marshall-Hamilton debate?",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8wcU8tWHphczJzVXd5MWI1blAxNkFpLWllU2xtV2RXcDNnRzJNdVU0dVNnZFdTZlJab2RRX25YVG1melBJcklXcEtDVVZuYndDU1NURU8yTkZiQVNxdWN2Y09RaXFTNXJ2NlFN0gFrQVVfeXFMT191aXB0NUI0MHVXUmVCdE0tM012VVloVjNHQmZOZ0ExcTZzdUJ3dE9vVWlYRWFnLXZ6X3J2azVteERNOFA5M29IbGZzaUhCOWpmb1pvZ2tUWERHSS0wRVFLRFllQk4zS2ltMlE"
-    },
-    {
-      "id": "592596e56123",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T22:00:00Z",
-      "source": "The Hill",
-      "summary": "Watch live: Marshall, Hamilton face off in final Kansas Senate debate &nbsp;&nbsp; The Hill",
-      "title": "Watch live: Marshall, Hamilton face off in final Kansas Senate debate",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUHRPOTF6TVplRWNNbzk4NDJST2JkTWQ1ZGNPYjYya2V4X2pRc3Jab1Z0Z241eUJMLTB3aF94Z3p5OGlVV1FsZ0xOQ1FPYkN6TW80UEx2OVFhV2o2VE0wSHNPbTRRUzNHNDJBR2Fnd1ZyZm1KSDlTSkhNRC00NThBSVIwTEozZF83aVFyR0Z0OTI4UkxsUU9WNm5kN29ZRmlzTjRTc1doWVLSAa4BQVVfeXFMT1BoZjZfNlE1NTZWZWZCdG5nUmprRVRnd1AwRXlVd0ZzZnJqMmN0S2N4S0tZWXhscDF5Y3NIUnlCWGhxQUdTUUNDcHM1WEZPRnZiRnEtMXNwV0E0VDEzdEdKS050UWhRb1JQOWc1VktZM3RKdUxlUjNxNHdTN0tTcTJSRjg2Sm81MWNERTlTU0RjT3E1QTNueXE1S21IdlhKVFVOVlhNM2k3NjB2c0tB"
     },
     {
       "id": "12a9554596a3",
@@ -1514,18 +1526,6 @@
       "summary": "Kansas Senator Roger Marshall (R) is running for re-election this fall, but what are his goals and what is he hoping to accomplish if he wins in the general election.",
       "title": "Who is Kansas U.S. Senator Roger Marshall?",
       "url": "https://www.ksnt.com/elections/who-is-kansas-u-s-senator-roger-marshall"
-    },
-    {
-      "id": "27f8a3b0b537",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T21:38:53Z",
-      "source": "Kansas City Star",
-      "summary": "Sen. Roger Marshall is at the Trump rally in Park City, Kansas (Video) &nbsp;&nbsp; Kansas City Star",
-      "title": "Sen. Roger Marshall is at the Trump rally in Park City, Kansas (Video)",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1kSEg4d1pNc1FEMVFiR3JXdV94c21QY3JIRU9CdE44b182QXd6Q29Xb05IaUJOTUVSVDNwWWxxb3V2bmZBRTVqaUVxajZiekRvQ1NVemhLUXlGOGg1NkR6cXlYRkJZdjB3aUFHUHNBdHFwWVotajYxVkVUNmFFZw"
     }
   ],
   "schema_version": 1
