@@ -26,8 +26,21 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-22T22:14:25.266558Z",
+  "generated_at": "2026-10-23T00:47:34.182152Z",
   "items": [
+    {
+      "id": "9ca202816872",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T22:58:36Z",
+      "source": "KSNT politics",
+      "summary": "Kobach says a midterm election is all about driving your people out to the polls, and if Marshall or Hamilton are able to get their supporters out, that could impact down ballot races like the AG race.",
+      "title": "Kansas attorney general claims U.S. Senate race may impact AG race",
+      "url": "https://www.ksnt.com/elections/kansas-attorney-general-claims-u-s-senate-race-may-impact-ag-race"
+    },
     {
       "id": "7fe05fbc7d73",
       "kind": "news",
@@ -58,7 +71,7 @@
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-22T21:38:00Z",
+      "published_at": "2026-10-22T21:38:06Z",
       "source": "WSJ",
       "summary": "Opinion | Roger Marshall Backs a Giant Tax Increase &nbsp;&nbsp; WSJ",
       "title": "Opinion | Roger Marshall Backs a Giant Tax Increase",
@@ -88,19 +101,6 @@
       "summary": "Kansas Sen. Roger Marshall in debate blames Ukraine war, not Iran war, for high diesel prices &nbsp;&nbsp; PBS",
       "title": "Kansas Sen. Roger Marshall in debate blames Ukraine war, not Iran war, for high diesel prices",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNc21EbmNWWHhvc0JEWUhBRGczQzhCTGJTSlU4UlJOQmlRMC1uMUExNFJ5a3FkamJrMEVrWDk4WHBCYkI3RTJ1VkZpQno0SnRCTzJLVjRHVU53QnIyVzlGWUU0b0p2TzlTWG1ubWFraERzZTRoTTJiOHUxRnpMZ2JNWXRnbW1NOWdReEl0TE5ZWWF1TEMtYzAzS2lHd2h2M0JFem4tOEtyRlVIZEtmRGxtSkNhTUFQMEpJemViSGNpNTRwV0RPSUlZ0gHMAUFVX3lxTE9pYmhVNnhZUElaX0ZIem5JcnVrRUVMZkZNbkhHVHdFZU81TDhZRXEyVVVnY2JoMVFRTGNBZzJwMWpPR01KQUcwTnJrMEZmMHFwdUxqcWpMcWYzQUF4WUZJVXU5YWhlNHk5TGJmQl9kT2Q5M0NfVnJsVWtEZFBZUEZMN1BiWGtxREtqbHVmYWk5YmJRV3hJN0xERVRJeFg1OW5nUXVwZnBpcnh3MlJ5YldyX1ZPTkgwZFhJb3NxZjhXTFZITUpUNW5XZnNkaw"
-    },
-    {
-      "id": "6db79b9978a3",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T19:59:05Z",
-      "source": "The New York Times",
-      "summary": "Kansas Senate Debate Live Updates: Marshall and Hamilton Face Off as Polls Show a Dead Heat &nbsp;&nbsp; The New York Times",
-      "title": "Kansas Senate Debate Live Updates: Marshall and Hamilton Face Off as Polls Show a Dead Heat",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5vM2o4cHI1eUkwMFZXaUJ5akctSk0tVE5xVldSY1pqVUNLc3pMVUl0Ry1FaXBtZ01ORThoNm41UTFNLVZvV3BSWEt5ZmVmVlhZR21iWHZ3VjRMdkI5clpxLUdVaTRBU1l1MHVhajVxemhOQ2NyMUU0WU5JNWQ"
     },
     {
       "id": "f5c2ef1a121f",
@@ -331,6 +331,18 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBEejdQbllZMGxlc0JBU2RxMnVsRTlpaGdaU01DMTUwX1NibnExdy1JRTVFRWt4RG1GY0FtVEg2QmcyYi1jdll5a0V3M0ZZbWF5ZmVCT1RjRmpiZzRzdklIUGVnaW5ZYUHSAWdBVV95cUxOM1pRVTVIZFNsOC1TQk00d2EwZkFoYmdqd2s2N0x6ME14bmpCWGN6NEhaWEdsNEhIRTMzeEhiRW5JbkI2aWZzVlVYRHQxTmg1VUxFcG9jMHZEVElNdTVLa3k2Z2NVdmhN"
     },
     {
+      "id": "cf56fc0dc4dd",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-22T07:25:55Z",
+      "source": "The Washington Post",
+      "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; The Washington Post",
+      "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNdFljWnhqMVVlVjJ5VVo0cTBKbHFlbjNZZC1mR0dQNmlwTzZXMUVidFkxeV91MUswU2RSUndNb3lkdGg0UHAwa1pKeUJuSmROdjlvYllfdk1neXE0TlZUbnVLZWliMFNlVjRpVjJJVGp3ZjA4VFdRdnpITjJSOUVzZ1ZGb3lBUy1YN0FmcGh4Tk05UXRDYnZoQ1d3VWJJUjVYMlZiNWp0STY4dkhCdlNDTUhNdWxCSVYwU2dWSkR1Tk5UTWtnZWs1TkVrX2xWWFhKWDNEN3R5WG1XVVFDVmFEc3VvTjM"
+    },
+    {
       "id": "47b3e10f7e05",
       "kind": "news",
       "mentions": [
@@ -395,18 +407,6 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcjF6SWtIQUVRVlE2YjBEbHJwZUZRZC1SY09IaEltSlBQeFBjUVE0S0NTMzhTYlhIMHkwbUV1Zlp5X1M2WTA4SlkwT0pFX3l5eUplQWNiZnRvWE4tNHJBeEhjdWNEd19nTHBjUVgtYWpxVUkwM1NyUW54WUtlLUt2dmMzeHpGa2VrZGE1dEVkT09lSTFJMGotbUVqWmdRQThWdExSd1J4bGdITHdwQlZZWjdYdw"
     },
     {
-      "id": "2102e0cc2e7e",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T03:09:58Z",
-      "source": "NOTUS",
-      "summary": "Roger Marshall Warns That the Senate Majority Runs \u2018Through Kansas\u2019 &nbsp;&nbsp; NOTUS",
-      "title": "Roger Marshall Warns That the Senate Majority Runs \u2018Through Kansas\u2019",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWTdjalNCeU5JUVYxR1A5VDQ1dWJhblNoQmViYk9yR3lkalVUVENhVTYybXRZNjZBME9kb3pKbUUtOW5PVWstS3RibGdMY3RHdlBzLTdLVW5idkdFY09raWJGTjJETmZVTURRMUNKcHlsV181ODlyZTV5STNxVWFtdzhJYw"
-    },
-    {
       "id": "6ca7fd29c0e1",
       "kind": "news",
       "mentions": [
@@ -418,6 +418,19 @@
       "summary": "Fact-checking Roger Marshall, Adam Hamilton on diesel prices, SNAP in Kansas U.S. Senate debate &nbsp;&nbsp; PolitiFact",
       "title": "Fact-checking Roger Marshall, Adam Hamilton on diesel prices, SNAP in Kansas U.S. Senate debate",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPOU9XZ2FrV1NuYjkxRG03MjVFTENuWk5rQ1NRci15OW1iNVZxVXRyU3R0Ql9GZ3BHNFc4eVo3c0dscXVFRTJTNVp4djFwTlBodGpub19YeXFheUZnQkVSSkZUc3MtSWp5TTFDMWdjcmVZenNvdEd4SWZuVW9iMHI0QlNlM2hhTGFncU9hbEhxeUtsNnBxdGc"
+    },
+    {
+      "id": "6db79b9978a3",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T02:54:00Z",
+      "source": "The New York Times",
+      "summary": "Kansas Senate Debate Live Updates: Marshall and Hamilton Face Off as Polls Show a Dead Heat &nbsp;&nbsp; The New York Times",
+      "title": "Kansas Senate Debate Live Updates: Marshall and Hamilton Face Off as Polls Show a Dead Heat",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5vM2o4cHI1eUkwMFZXaUJ5akctSk0tVE5xVldSY1pqVUNLc3pMVUl0Ry1FaXBtZ01ORThoNm41UTFNLVZvV3BSWEt5ZmVmVlhZR21iWHZ3VjRMdkI5clpxLUdVaTRBU1l1MHVhajVxemhOQ2NyMUU0WU5JNWQ"
     },
     {
       "id": "af199102dacb",
@@ -472,16 +485,16 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQaEphQ2VrMW5fck5fdWI3QV9YX0s2RDFHcUlyejRQZUZycUJlUnp1Tkk3N0xlZDhaLVlfbU9NcjVJc0VleDdvMmRBNWgxRkY2OWlpUlhsTW8xTVhVSVlzVkljaUM4dUxTSWJDMy03UnRZaGpRaE5TaFhGQW9ydXBoN0RjUkhjb0ZLRVRHeGN4SXlpSHViQ2x6dFR2bGg5LVBuanRGYlY4aE9LYkd0RC1NLVFENNIBxwFBVV95cUxOeHpxZTRrZmZpTHBmLXNuRXNRMTdXSG9LUkpGN1NfU1RvZS1leEx1VTBoLU9BcU8zc1Bma1pRZkpFRG5QcU5iTWJWVzhtZWhfU0diMUFYSDJlclhNRjExVUQtZHJzSkZ5dHBCN1F1dXllUG1WZm5xNDM5TW9SWmk5ZDBNQ1NLbXdObjNhQlhuWVFoeFJoN0M2aGVONmY2NFJOWU45d0pQUzF4MW5XbTZjTTFrcnozdzdHYUUzVEZvb1p4dWw0b19J"
     },
     {
-      "id": "3dbeca451571",
+      "id": "247956e9a4b3",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-22T02:39:49Z",
-      "source": "Bozeman Daily Chronicle",
-      "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; Bozeman Daily Chronicle",
-      "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNRnIwYXo2Y09xZUxZQi04b1hFMEVHZFNfVS1oNVhEbHltLXlxVUN1WXJWS0JKTUJOdElRZFgxeWtyRVlHeC1FeWlMMTk1Y0dDbDl6X1JhNy1BX2NPa3NXTFhyWFBpN1dVS05hUEw0M21QNnVRaXhyMDBnbW01RnEwTS1wbHJLR0lYTVRIa2JhSGJIRm9RNlh1Qlc1WWI3ekhkMGNrWnlTTC16N1o0RmRhT2tMZjBJQkRLM2VGUG00NlQwUXFWb1djVXotTVB4VWc2WHVjc2VjS3NsWjY2ZjJNMVA0SThFODZTNHdhZjIzNklJbm54Y2x0NjlzaWNiNVh3MXNEYlROOTRoM2RrM0E"
+      "published_at": "2026-10-22T02:31:31Z",
+      "source": "notus.org",
+      "summary": "Roger Marshall Warns That the Senate Majority Runs \u2018Through Kansas\u2019 &nbsp;&nbsp; notus.org",
+      "title": "Roger Marshall Warns That the Senate Majority Runs \u2018Through Kansas\u2019",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1LcjgzaXZodXJlVGNlSWpWTHJadkVPNXE1VHF6WmRrdjdBTGtwckhhaW4xU1JFajhXLThZRGh6UE5NSzUxRXJ3dTBQY25VQ3dMUjNkU19qUnBhbnd3SGRKV2huN2VMZ2lrcWlldGZfMnVtWlVSV3hMYQ"
     },
     {
       "id": "e0d5282a7ab4",
@@ -650,6 +663,19 @@
       "url": "https://kansasreflector.com/2026/10/21/republicans-attempt-to-tie-kansas-democrats-to-extremism-with-spurious-claims-at-trump-rally"
     },
     {
+      "id": "a70c9181f85f",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-21T21:17:53Z",
+      "source": "FourStatesHomepage.com",
+      "summary": "LIVE UPDATES: Sen. Roger Marshall debates Adam Hamilton in US Senate race &nbsp;&nbsp; FourStatesHomepage.com",
+      "title": "LIVE UPDATES: Sen. Roger Marshall debates Adam Hamilton in US Senate race",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUmdmRExTZ3VyTFMzcm50WTNYVW5JMU9zN0V4bTVEVURDSy0zNjgxSU1vb1FlVFpGXzBXeW4wNjlRQ1FxMXFzT0YwUzRNejM0UkdHRWpYeWJycVUwenh4MjlmZ3ZnTEdPS3VJX3dCV2JSMUkxYjNvdnZTd3NueDJSNDJaN3hVcjdYSHJ3WU5rLU1LS2xZMmltaE1hODROQlRoNldkcVlzSmp5UmpzdEFvRDh4cTF3a2VzSlNQMjhGaHBUYWg2VFFjVldpejBCbGF0NFkxR2h6bnFVYjB5aGfSAeMBQVVfeXFMTm1XalI5OGRlMGZWdHdjcDlHVkpqWlJ2OUFTREd0WGlPWGRxMDJCYTJGTkZ6Y1J6cFRIODlFUGpjTHY1Wjk2YXlEdHo0YzZnT01mRXFDdW44VnNLZmFxbG1ad2RGUWJHUXozQzR5Vmtra0t0UldxRFVVQkZDTmdrRlMzNzJoMW9Fd3VoWmxCeDFZQWlmUzE5czZad3czUG5tbFpNeDdnSUhMbFc4S0R0ck9MdU5EaUJVSXF4eThlU0N1RHhmaVRyTVRDZXR2czBFal81d0UwTVpZMXFmbDg0TjZDWkE"
+    },
+    {
       "id": "4e41ba52ed63",
       "kind": "news",
       "mentions": [
@@ -686,19 +712,6 @@
       "summary": "Voters sound off before Kansas Senate debate between Roger Marshall and Adam Hamilton &nbsp;&nbsp; CBS News",
       "title": "Voters sound off before Kansas Senate debate between Roger Marshall and Adam Hamilton",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQcXpIMzNLREFXRWRuMXgyaWYteXIwUTdSY3h3WXJqMjhUdU9CQ09rdXZIWlVUeEcwbUUtcTc2S2p4WEhnMjIzcHZ1cE9YNW5CcGtoMWI1dnI3QVZGVW5qVzNKQjJiRTNpM3BXcDl0aXdMOGVEOGVBcVVBLXZEVkM5cjB0RUVxcE9PU294VnFHbUlVVkpGamRmOWdn"
-    },
-    {
-      "id": "aba1eb6f3846",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T20:26:02Z",
-      "source": "KSN-TV",
-      "summary": "LIVE UPDATES: Sen. Roger Marshall debates Adam Hamilton in US Senate race &nbsp;&nbsp; KSN-TV",
-      "title": "LIVE UPDATES: Sen. Roger Marshall debates Adam Hamilton in US Senate race",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONk5WdGhhbWxyZHQ0YTF3blJkbW9MZGttdlR4RnNWMFRlWmx4RHA0SzRBV2FkNmVhaURiWmNRTWlySmNKeVNlaE9idzZFSFgwbWlMQUhna3ZnM19uY0FDbUJjT20yc3B6LXU3MElQQU1QRnF6aUEtU2VhS2h0ZTdiSmpYQXNkcHk0eUF0c2E4Y2pNWFdxOU9PeThxVkxHQdIBwgFBVV95cUxOTWR5TVR2TmpxNDlBcGRRdVVDSDlSeXEzVWFhejNUOTlSVTYyOGtRRU5IMUFGbldiWHVuWlBxM0l1WUJuSnF3TGpOLXdpZXh4NlVINUlaS1dQdjFWaGtQemh1ZTBpeWtnemRHbzhxWWQzdmwwUTZyeWp4d0RjdEZ6RXhhUGJLLXpRdU9vNUxDMW1QQ1Q0djI2U0tzdDNpMmZDa3F6clRhR29WX3JkZklFcUZSQll4d0FiOURWcmdhXzVWQQ"
     },
     {
       "id": "158a1d34bef0",
@@ -984,6 +997,18 @@
       "summary": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d &nbsp;&nbsp; DSCC",
       "title": "QUICK CLIP: Roger Marshall Shrugs Off Spiking Gas Prices \u2013 \u201cThere Are Things More Important Than Money to Kansans\u201d",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOczhpVHQtSnU3dlZJSnZQaHFINUNIOFRMWkUwMTVNVkdBYzk4ZlV2T2VjaWd2WTlxd2tUdlJqSXlCSVZLZXRPdklBU0dQb05jM0I0M19SRWNOZHFQT2tpaTRIZjdRcXZmZEc2Z3NUZnlDb01Qcm91MUNTUXJ3RVVBZnYxZ0pBZm0yMjc3N2FNSzJjdkxBakxFUVBpZk9PSVlPZHBkOHl3R0pnaDV3X3hoUXduNUh3Mko2MkJhc3hQMUo0czZVZ3N6bEZtV0pKd2gxSXRQa2tB"
+    },
+    {
+      "id": "1395a8bf454e",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-20T19:58:44Z",
+      "source": "KSN.com",
+      "summary": "Who is Kansas US Sen. Roger Marshall? &nbsp;&nbsp; KSN.com",
+      "title": "Who is Kansas US Sen. Roger Marshall?",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPQTRIOHlJeGZ2VG1JbHdxSmFZZXMzZGRuT21RejE0SmsyT2FLQnhzYVRrZnRTRHlBV3g2aDhQOG8xeTVGX01aRUluVkNSMWp4d0c1M2RFRmJjZDZRdlhtX09DaGNFR3RfcFFGQldwQ29RejduMFZLTlFtWXFId3FkZjVXQy1reWUwVkhYRVZLQ0RBX2PSAZgBQVVfeXFMTU5RS3ozeHNnVlR5aThtNmM5OHFiT21JZXZ4Z1lOTEFpbHNpU1ZMbXdmSnhBZ1BMLW84RkZwQVZMY2o2bFN2MzVQbVdZQjlPZjRYU2tLYm5MYk9CVTBSN2RRTEphU1QxR3NFZnUzOFZBSlBuNXFxWldtYU8zU1NkVjMyMnhCaFp0bEZVZFZJalRmdHhON1haTUk"
     },
     {
       "id": "eae79dd6baaf",
@@ -1498,30 +1523,6 @@
       "summary": "Trump Campaigns in Kansas as Adam Hamilton Challenges Roger Marshall in Tight Senate Race &nbsp;&nbsp; NewsCord",
       "title": "Trump Campaigns in Kansas as Adam Hamilton Challenges Roger Marshall in Tight Senate Race",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxObm1NVkM4Yi1hRTFqQWFFOE9uOTdsYjdaMTZjcnpOZ2o3OENSOTJEdk5NYkJaQjFpZ3lIajE3ODRuVG15clljRWNTbXN3dUhQamdDY2t3enRpX0xKZnVWSDgxd0R5b2h3c0d6UldJb2k0M0xBcHZKc01pbnNYRmxfblJ2a0RRMFIwdGdUejhOSDlWT2hmdkowaTlhZF8zMDZFbzlyakZUUmx5N1ZUbjQ3d0U2cXZZZHI3YzFCWVJqR0JoQVgxX2Nsc0ZpalJOUGYyMHNnS1ZfU0ZPT0RUWjRMcXFlZFoyOGNIc0E"
-    },
-    {
-      "id": "13e73fa95cff",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T17:14:00Z",
-      "source": "Wichita Eagle",
-      "summary": "Live updates: President Trump holds rally in Wichita area to support Sen. Roger Marshall &nbsp;&nbsp; Wichita Eagle",
-      "title": "Live updates: President Trump holds rally in Wichita area to support Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZ1l3eUQ1Z1prWVZhME5ldkpnMU1KY3dZZ0MtRG1YckdSbzlDTFFueXpxSTFCSVl3Z2dYVEVOOVQ2ZGJramFTS3ZzN1E0RFB6cWtyUTFXMGNxT0tJc1B2UHZucDFZWVI3UVBOdkhyZjhKMElzbVlSUlUtR0dNRFlhaU9yZ2LSAYQBQVVfeXFMTnBFb3JFWWJ1UG9yREx1THdRNi1CSnlvQ2tieFRvMGVJZ3dEbFdORF9DaTZVYjhVZFFtSGQxSWdqRjI4anc3Q0pTRjM2QWRVS19LSEl1aW5oVEloOV96MV9xQnZQSzlmTVVIT3JONFlVZFppZlpBdkdfdl9lYjdwYlE2d3RP"
-    },
-    {
-      "id": "3919399f4fc3",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T16:24:45Z",
-      "source": "Modern Ghana",
-      "summary": "Trump hits campaign trail in Kansas for Roger Marshall &nbsp;&nbsp; Modern Ghana",
-      "title": "Trump hits campaign trail in Kansas for Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1tMVFSeWhPUC1uVkR0dy1nbTBGQlRQSmdLVWtPaXFiOWZGckVDUnBPcElGTEpsSTk4MnZVaC1DaGRGUjR1QkJYd3JMU282YWUwTF81TDF6dXp4S1J1b1hV0gFcQVVfeXFMTUZ4U29uUElQNldzNVZwMlc3cVFEWktQV1pzWU5QNzM0OUlCYklfUHktSXdubkh2WTBrLThFTUZCU1lKNENHbGJya3FueXZBZTB4OVMyMmdlQ0laN0Y"
     }
   ],
   "schema_version": 1
