@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-24T18:00:55.672501Z",
+  "generated_at": "2026-10-24T20:33:16.515547Z",
   "items": [
     {
       "id": "9b0d6353f498",
@@ -379,16 +379,16 @@
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yUENkcHZLZDBSeEpnVXhkaEh0TDJkYW9aN2VoWlZfTVpMVmF1SWlBcFRESFdvR01xZWRMVndLM1FmQ1VTMVNDNXM2eUJyOExwNWtyTXA5cGNDUU5WbnFYZnF4amZmMGZvYktKZnNmOXNOM3ExbTNKatIBeEFVX3lxTFBEQzctaG1JUnptSEFQOWJYVU1aZF9yNGt6aDdyWVlSSjUxRFRMV2xpWkppWDQtMlRRM24zdzBGWnFIaVh4MGl2ZFM2T1pNSHY2MlZJM3VpY1BLejFXY0hfVHFCTGtxODJQRnI3Uy1zR2RyTEhTN0JZRw"
     },
     {
-      "id": "ea0c4324fd10",
+      "id": "d90e237c0b57",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-10-22T16:20:00Z",
+      "published_at": "2026-10-22T16:19:00Z",
       "source": "KCTV",
       "summary": "1-on-1 with (D) Adam Hamilton, Kansas U.S. Senate candidate &nbsp;&nbsp; KCTV",
       "title": "1-on-1 with (D) Adam Hamilton, Kansas U.S. Senate candidate",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPcU1oNDA1S1pjcGh1a2hxdENfRHk0SVZCNHFIazI3ejhxbFFYcnFDaXNmeXF3YW9hVkF0SmhpazcteWQyVzdxUlRISTdVOHhsMXpPb0tOU1FtaWZGVW1pV0pqZ3k2d0VaTWI0ckRZV0xUMkIwV1ZVamVPNjVmLUktMUtIdXdlTjQwSUJDNTBOUTJXZ9IBpgFBVV95cUxPNTktcjlaZkRJUlpUWkEwQkdlQUVOWFhkb1dDWjRaUENTLWF4djBVeGZMMzkzM3JwUkJ5dDM3Tmc3MmpldVFJclN5bk5FZTcxRGw4UG0zZ25qcHIyZkJTLUdSazc4a2RJQkJOY1lPTlN4bHoyQ0RVdGNHWWxwQXdMZGJ0c1hJYzl0TDJBMW45OTRnRm1CeDBOZDAxTmNmYmkwVHdWVlBB"
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPWkNkV1BlX055RUdsY091cXlnTmdGWkE3WXMyVnFvUkdGZERDUXV3eHFsT3hBX3BpQ0ZlUURNM2V1bm1sTTNFOTItSG1yMUNNS3c4VFk0d2pLaEE5R2wyWUJld1FLLVlESDQ3ZUtHdXIwLWlMWWN5UC1xRy1LQURYWXRqMG5ObmluNWMwaUJJYXViUW5mTGY2NDhR"
     },
     {
       "id": "0ae9e616c37e",
@@ -503,18 +503,6 @@
       "summary": "Marshall, Hamilton clash in heated Kansas Senate debate &nbsp;&nbsp; CBS News",
       "title": "Marshall, Hamilton clash in heated Kansas Senate debate",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNLWVET2lDZktGZzVnRWtDRldCamt5UkRuaUZCYlNwczZlY01MREkzY3hxdUR6c0JGS0dEZ3haazZsaFd1Mm5xM2Q4dzRyMkYwRzlDTVdkdE9hYnFaOVhWbG1lZmhkalpsNEZ2TjN0dTluUEY2SE1HWloxUURwdzN0NTJUeEVqNW5SNlEwcjBR"
-    },
-    {
-      "id": "cf56fc0dc4dd",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T11:13:36Z",
-      "source": "The Washington Post",
-      "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; The Washington Post",
-      "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNdFljWnhqMVVlVjJ5VVo0cTBKbHFlbjNZZC1mR0dQNmlwTzZXMUVidFkxeV91MUswU2RSUndNb3lkdGg0UHAwa1pKeUJuSmROdjlvYllfdk1neXE0TlZUbnVLZWliMFNlVjRpVjJJVGp3ZjA4VFdRdnpITjJSOUVzZ1ZGb3lBUy1YN0FmcGh4Tk05UXRDYnZoQ1d3VWJJUjVYMlZiNWp0STY4dkhCdlNDTUhNdWxCSVYwU2dWSkR1Tk5UTWtnZWs1TkVrX2xWWFhKWDNEN3R5WG1XVVFDVmFEc3VvTjM"
     },
     {
       "id": "6af3e5681c2d",
@@ -672,6 +660,18 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQaEphQ2VrMW5fck5fdWI3QV9YX0s2RDFHcUlyejRQZUZycUJlUnp1Tkk3N0xlZDhaLVlfbU9NcjVJc0VleDdvMmRBNWgxRkY2OWlpUlhsTW8xTVhVSVlzVkljaUM4dUxTSWJDMy03UnRZaGpRaE5TaFhGQW9ydXBoN0RjUkhjb0ZLRVRHeGN4SXlpSHViQ2x6dFR2bGg5LVBuanRGYlY4aE9LYkd0RC1NLVFENNIBxwFBVV95cUxOeHpxZTRrZmZpTHBmLXNuRXNRMTdXSG9LUkpGN1NfU1RvZS1leEx1VTBoLU9BcU8zc1Bma1pRZkpFRG5QcU5iTWJWVzhtZWhfU0diMUFYSDJlclhNRjExVUQtZHJzSkZ5dHBCN1F1dXllUG1WZm5xNDM5TW9SWmk5ZDBNQ1NLbXdObjNhQlhuWVFoeFJoN0M2aGVONmY2NFJOWU45d0pQUzF4MW5XbTZjTTFrcnozdzdHYUUzVEZvb1p4dWw0b19J"
     },
     {
+      "id": "3dbeca451571",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-22T02:39:49Z",
+      "source": "Bozeman Daily Chronicle",
+      "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; Bozeman Daily Chronicle",
+      "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNRnIwYXo2Y09xZUxZQi04b1hFMEVHZFNfVS1oNVhEbHltLXlxVUN1WXJWS0JKTUJOdElRZFgxeWtyRVlHeC1FeWlMMTk1Y0dDbDl6X1JhNy1BX2NPa3NXTFhyWFBpN1dVS05hUEw0M21QNnVRaXhyMDBnbW01RnEwTS1wbHJLR0lYTVRIa2JhSGJIRm9RNlh1Qlc1WWI3ekhkMGNrWnlTTC16N1o0RmRhT2tMZjBJQkRLM2VGUG00NlQwUXFWb1djVXotTVB4VWc2WHVjc2VjS3NsWjY2ZjJNMVA0SThFODZTNHdhZjIzNklJbm54Y2x0NjlzaWNiNVh3MXNEYlROOTRoM2RrM0E"
+    },
+    {
       "id": "247956e9a4b3",
       "kind": "news",
       "mentions": [
@@ -787,7 +787,7 @@
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBibE1ZcFUtOUg2N2xzU0piT0NVdzVrNWFpS2FjS0NWbUVDQlNHd3BwSjRIaTQydDJkN3hDRTVyb2NqT1pJSEgwcEswdTY0N0JjUmV3cngwMFRkUS1LWm4xYnhBa0pfQjEtN0FUelB6Xy1NNkoycVdfNVcxdw"
     },
     {
-      "id": "8721e2d3fb96",
+      "id": "1746c0ae9368",
       "kind": "news",
       "mentions": [
         "hamilton"
@@ -796,7 +796,7 @@
       "source": "The New York Times",
       "summary": "5 Things to Know About Adam Hamilton, the Pastor Running for Senate in Kansas &nbsp;&nbsp; The New York Times",
       "title": "5 Things to Know About Adam Hamilton, the Pastor Running for Senate in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQV2JDc0Nwa0FHMGNQSzdDdE82bFJBWkdtS2dkbGVfYWlZTS1BYW0zeEVQb2tPeHVzTUFraFBmdktmRnUxaXBMMDVZMUNzSkcweXNBVXZRSFNUREpxSVdKOXRZU1NXVUttMW9mQlRZRWZQbndrNzF0SHdkTlNJX0V0NDhZUVQ"
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9pdDZvaXVVUXozSVlOcWFtSTFJWGkwR1pxZGNvNWgwWjNPTkVKLXQ4NmZKamozRC1yWV85aElUSWpPS29oeU5LbGtFTDY0QnhmMUhxMzBocnYxb0dpa0Zha2JuOHhTdEFjcC1sY011aUlhdmJBc3lHX3JR"
     },
     {
       "id": "d6f00140e9da",
@@ -810,19 +810,6 @@
       "summary": "Fact Check: Marshall and Hamilton debate in race for Kansas seat in U.S. Senate &nbsp;&nbsp; Kansas City Star",
       "title": "Fact Check: Marshall and Hamilton debate in race for Kansas seat in U.S. Senate",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPakxiWWluQWNwUnZrdnRYdlhoNF9sT2o0OFgwSWVlSWRiaDNnWjk5OGs2VHJGR2VtdU81eFNibGVIbmI2cjd2RXdkRFdvOEUtN0IxVC1TeDhhRzFORUZ6MzFDMlA1NXZLdkhVRUktOTJwM3VzTHo3YmtOLVVkQW1nYzhPWW5pOXNTdWfSAYoBQVVfeXFMUDMxR1o0SDk5NVVudlhNNHFlWEFkWkRZcm1fd2k2aUpCeG9vNWY1dTdGcUpoTkNRc0dmVlFxN2pLUkVTNEpQZ0hQRmlLV2luNk9JVEdnOHpzLXVMVnpfamJ0QUpvOU8zbUp1Vlhncnlscm1JLWMyaGp0aUhfaTNqUWFxcHE1dURHX2pR"
-    },
-    {
-      "id": "107846c8b0fd",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T23:39:17Z",
-      "source": "NewsNation",
-      "summary": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race &nbsp;&nbsp; NewsNation",
-      "title": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPeFp3MncwMnpQOE1YM1lIR21TNzFwZjRwUHJaTWFYMWgwZFpHbXZkeG90YTVsNmg0alI2VnlYUnZENU1tOEU2azZjVVVaYW1DOWNfQ2doZHZnd2VtcWZLSXluSjNEY21zS0Q2aXJNdWpINjN6dDRqbGtvOUMzcS0zQTAyYmF6c3JNWDFOeENpMzExUdIBlwFBVV95cUxNOW1GbGNTenJqVERQZTZWZUlSY20ySXA1WTZNQU8tdjh3amJYSnVkOWJ2TkRZQmhoNE5wVWpfeXRMRjVTWEx5eko3dmNKeU16cVVGV2wtRDV1dHp1S0k1TFZJS2swT1g4WUhKTHhKOXdrUFVtTnlJYzJOSGxzQUFKNHpfV2wzbUNwYS1JLXBCZUdsVGo0OWU4"
     },
     {
       "id": "0e347fdce983",
@@ -1072,6 +1059,19 @@
       "summary": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican &nbsp;&nbsp; Fox 28",
       "title": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican",
       "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNbmwzOHlUY21KSEJ5Q1JhTmliMlN0ZjlObGI2Z2tMamg2MVR1QTJoVUdJWXBmQzY5bG1tY3Y2MDBadUwtMkhHd3N0MWxnNmJ4UDlKRmgtWnZCU3QxTUFZbWZCc0dqbVk2NWhULVh5dkpPMG1pQmlkM05OS0J6cDk0SUZTM2hhYzhqa1o1Q20wRlMtWl9OQ2ZYSERURmNJNEZYRktBaW5vZnJURHNlaW5JWGdWQmRySU1UMnVUcm1VUlhsX21JZWZMY1lCbkJqaUFQcU1BbXZocTVvTnlIUDN0VUNDcXN0SVJlZF9NUkxQOFhHUlN5Rm5JQVBxRjh2aUNYbkh2X3h5cEFNcGRsa0RJ"
+    },
+    {
+      "id": "20d112d4ed6f",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-21T10:00:00Z",
+      "source": "The Hill",
+      "summary": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race &nbsp;&nbsp; The Hill",
+      "title": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR1NyWGVmN3kyczF5ZzVzNWNQU1dSVVhWcUs2NHZzanhHVTZwT21VWW9ZbXdzOVRFaEpoQjlic0lHaHBlOTR1bzVqVzVPQ2lVYWFOTG0tZDVWV2xaV3FFOHFraWd3UmVlUi1XV2NkYXlXclVrVTE3emd1bG5kVnNqRXZueDBhNlY5LXBFZTJB0gGTAUFVX3lxTE0wM1U0WHl1UVFPOEFkLTBHUlp5cE1yZWxFcVhFUFhOdHdTWmpYSXVxa0hBNHg1ckNSaVo1X3NQVkhqV1ZxSHhZWjlOalo5R1dJcXhUdzJ2TV85V3pQSGFmTV9KYmN2MmNJeXpHY3hsWHRtTVBYYWZUSnlyNE05X2xNMDZaaHBaS2RMVlBQMkZNdW41RQ"
     },
     {
       "id": "a13fcf632b6b",

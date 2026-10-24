@@ -7,17 +7,12 @@
     }
   ],
   "consensus": {
-    "as_of": "2026-10-24T17:56:11.205047Z",
-    "change_1h": -0.0041,
-    "change_24h": -0.0016,
+    "as_of": "2026-10-24T20:29:06.722847Z",
+    "change_1h": 0.0,
+    "change_24h": -0.0024,
     "change_7d": -0.0167,
     "hamilton": 0.4187,
     "history": [
-      {
-        "hamilton": 0.2121,
-        "marshall": 0.7879,
-        "t": "2026-09-20T19:34:26.810595Z"
-      },
       {
         "hamilton": 0.22,
         "marshall": 0.78,
@@ -917,6 +912,11 @@
         "hamilton": 0.4187,
         "marshall": 0.5813,
         "t": "2026-10-24T17:56:11.205047Z"
+      },
+      {
+        "hamilton": 0.4187,
+        "marshall": 0.5813,
+        "t": "2026-10-24T20:29:06.722847Z"
       }
     ],
     "marshall": 0.5813,
@@ -925,7 +925,7 @@
     ]
   },
   "disclaimer": "Prediction-market prices are an implied probability of winning, not a projected vote share.",
-  "generated_at": "2026-10-24T17:56:11.209544Z",
+  "generated_at": "2026-10-24T20:29:06.727101Z",
   "margin": {
     "buckets": [
       {
@@ -1032,7 +1032,7 @@
   },
   "markets": [
     {
-      "fetched_at": "2026-10-24T17:56:04.684558Z",
+      "fetched_at": "2026-10-24T20:29:01.015865Z",
       "hamilton": 0.4187,
       "market_id": "KXKSSENGOVCOMBO-derived",
       "marshall": 0.5813,
