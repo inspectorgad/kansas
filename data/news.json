@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-23T23:00:49.907312Z",
+  "generated_at": "2026-10-24T01:31:14.013219Z",
   "items": [
+    {
+      "id": "9b0d6353f498",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-23T22:46:56Z",
+      "source": "Kansas Reflector",
+      "summary": "TOPEKA \u2014 U.S. Labor Secretary Keith Sonderling lauded U.S. job growth and Kansas\u2019 manufacturing industry during a series of visits Friday, assuaging criticisms against the Trump administration for burdensome tariffs. He appeared Friday afternoon alongside U.S. Sen. Roger Marshall and U.S. Rep. Derek Schmidt at Haas Metal Engineering in Topeka. It was the secretary\u2019s last [&#8230;]",
+      "title": "U.S. labor secretary praises Kansas manufacturing industry in visit to Topeka business",
+      "url": "https://kansasreflector.com/2026/10/23/u-s-labor-secretary-praises-kansas-manufacturing-industry-in-visit-to-topeka-business"
+    },
     {
       "id": "74fa2bd43ebb",
       "kind": "news",
@@ -176,6 +188,19 @@
       "summary": "KANSAS CITY, Mo. \u2014 The two major party candidates for U.S. Senate diverged in a debate Wednesday night on whether tariffs were helping or hurting a Salina manufacturing business they both visited.\u00a0 A spokesperson for the business, however, denied U.S. Sen. Roger Marshall\u2019s claim that tariffs were contributing to its growth. Tim Henry, chief financial [&#8230;]",
       "title": "Kansas manufacturing business responds to candidates\u2019 conflicting accounts of tariff effects",
       "url": "https://kansasreflector.com/2026/10/23/kansas-manufacturing-business-responds-to-candidates-conflicting-accounts-of-tariff-effects"
+    },
+    {
+      "id": "a90e08dbd627",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T23:28:25Z",
+      "source": "The Lawrence Times",
+      "summary": "Roger Marshall, Adam Hamilton clash at last debate in U.S. Senate race &nbsp;&nbsp; The Lawrence Times",
+      "title": "Roger Marshall, Adam Hamilton clash at last debate in U.S. Senate race",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBwYlRVczhOQUkyeFVGYXI3VUUtblJIUnlsby0xd1RteERaUS0wQ1F5UGlrZ05NdUNkMk9SQU1Fa1JuUVlFRXBtZkI2enZrNkZ2akEyX0tmd1NxSE9EWC1vSDV0MW5BYm04Q056WWpGa0hpSmgwZzdKRTB3TQ"
     },
     {
       "id": "9ca202816872",
@@ -376,6 +401,19 @@
       "summary": "1-on-1 with (R) Roger Marshall, Kansas U.S. Senate candidate &nbsp;&nbsp; KCTV",
       "title": "1-on-1 with (R) Roger Marshall, Kansas U.S. Senate candidate",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUk9rSnlZMVY2cmJRYW5Nc21fNmVBOTduSnpySS1fYUxFTGFmcDhGd0l1TXJkdXRDMVd6c2w0YlhvdnAydExQY0xDSXFCLWxxc0prLUMtaWRPWEQtbXRxWGpVMkZRVWtySGNMYkRTMi1XZ2k4WUp0WTZ1NjFWbmIydmUwbWtNeVNqNDNwZ2JJTHJqTW_SAacBQVVfeXFMTm1PTFYxNmZ5S2ttQjZUUlROOE12VzZ3SkpWZjhpZHQyMVdYTHdqQUVEOHVLV0gxT2pNM2hYaUk5RE9KMGFFLXdfdXpieGk3eFZRSmEyRS1jdU5SWFp1ZnZ3TXd6djV6ZUhsSGpCRS1Eb25ncExxODdHZ3E2YTgxVVhvWjEtbEM5SldYM0V6blRncmNyRDE1bEJLRENZN1pCZWhCZjFtZUU"
+    },
+    {
+      "id": "e30ce05c09a3",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T16:11:24Z",
+      "source": "KSN-TV",
+      "summary": "Did Marshall and Hamilton achieve their debate goals? Analyst breaks it down &nbsp;&nbsp; KSN-TV",
+      "title": "Did Marshall and Hamilton achieve their debate goals? Analyst breaks it down",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYlp1SUptMU9KSnRqTWEyOERZMDhQNWtWeGpINzh1cG5vSFJCS0ZNWVlwSkxPdWJQT3pJNGxJSFVMZUNpeWN6Y0ltS1dER0tSaFpSa3Y2SThMYVJKNjBaMGx4by11Z2tkMkZZM0c4dm8zM2l4S3d6Q285TENGRlREdzVzb1JhM2c1dEtRdkJqMmU3V0NvbnlZUkNIWjUtMTdwUldTSGVGZlRlREJ1NmM1cV9Jc3hqY1B3Q2VYcjhMLV9LUdIBxwFBVV95cUxQdVQ1bndfUG90MWZfRktqVFhzYVk5RUpReldPMWNUblc3Y0RRbUJZdlhqWmVteks5ZHVMRWFlcjdaTHNhT0czLXNEY3VNMVJpOUVmX1FVYUF1ZjUzUzE2X25Md1o1Z084V1NiS2ZXMi1QcE50X2JBbUdWVTRiZGNKZi1OaG5pUkExdjJzYzhsUGwzS2JuMUlCTk1ObTQ4RFNkaWlqbGUzWFpaV1FRMi1wb1RFRUZvb2JiQTJtcjFpb2x4NTdlcFJn"
     },
     {
       "id": "5cecf3a5771f",
@@ -1490,42 +1528,6 @@
       "summary": "Kansas Senate Race: Tied Polls Still Point Toward Roger Marshall &nbsp;&nbsp; Action Network",
       "title": "Kansas Senate Race: Tied Polls Still Point Toward Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaXRNRUxzYzBxSzFRamRYTi1LaTczWHQ4eHpHTm9wVzlfazFfNzlOa0hvcFd6aHpuWGxsalQ5U2t3U1QxRGRpSXBlS3hOWDMwdzJzczUzdEgxRUFMbkRKaFZDTVN5eWVJbk10cHUwalpUM216czdEbGxYQ0lCcDluaA"
-    },
-    {
-      "id": "032c96c1e411",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T22:30:00Z",
-      "source": "Washington Examiner",
-      "summary": "WATCH LIVE: Trump rallies for Roger Marshall in Kansas &nbsp;&nbsp; Washington Examiner",
-      "title": "WATCH LIVE: Trump rallies for Roger Marshall in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdl9sY0RBRllCMnJrSzItTjZrY0FTRHZqbXRMbWZYZ2taUXhxV21pcFFRbk9PZTBrN2FmTG9ReTM4dUdxS0JlRzZNUkZYMi1mc1NmTnQ2MTRXZUlQSG9Id3N2WHRkNkVJWXF6bHF0SGlJejZ3T2ZTT1NXUTB2c3dGdkJEZ2VtVFFTeFNMS0hyWkJSSmhfTjR1eDF6Y21pV2JxNmxOVGRLTEtUZEhSenMwTFBNSndEUUEzLVlIUmhfQlZnTUNkY25Pdg"
-    },
-    {
-      "id": "8d3f92cdf51d",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-19T22:24:46Z",
-      "source": "KSNT politics",
-      "summary": "When was the last time a Democrat won the U.S. Senate seat in Kansas?",
-      "title": "Hamilton could be the first Democrat to win a US Senate seat in Kansas in 94 years",
-      "url": "https://www.ksnt.com/elections/hamilton-could-be-the-first-democrat-to-win-a-us-senate-seat-in-kansas-in-94-years"
-    },
-    {
-      "id": "04208a9bcc79",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T21:58:36Z",
-      "source": "KSNT politics",
-      "summary": "Kansas Senator Roger Marshall (R) is running for re-election this fall, but what are his goals and what is he hoping to accomplish if he wins in the general election.",
-      "title": "Who is Kansas U.S. Senator Roger Marshall?",
-      "url": "https://www.ksnt.com/elections/who-is-kansas-u-s-senator-roger-marshall"
     }
   ],
   "schema_version": 1
