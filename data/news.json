@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-25T11:01:18.051863Z",
+  "generated_at": "2026-10-25T14:59:10.160030Z",
   "items": [
+    {
+      "id": "d612c7b0a2a6",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-25T14:56:55Z",
+      "source": "Hays Post",
+      "summary": "KS Senate candidate Adam Hamilton hosts Meet and Greet in Hays today &nbsp;&nbsp; Hays Post",
+      "title": "KS Senate candidate Adam Hamilton hosts Meet and Greet in Hays today",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KSktvNHEzSk5EMWlZNS1YMHRZVEMyWFZnVTdyQ3NnVnVhVW5hU1VtVWxmY3I0VkRrR2J6ZVlrODFPUExGcW1lRVQ2Z0Z4cF9MbWJxUnJsVVB2WG5Id2VPT0hoYUVFcTRBQmFfQUIzNzU"
+    },
     {
       "id": "9b0d6353f498",
       "kind": "news",
@@ -723,17 +735,17 @@
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSlgyNVB2RE9ZeGlPeV9NemVXRDdCeUFfZmJjanVRWXVKUktGaFZzZkhWZUx1aHNxcTZ2QUZqRFZudEFVeDZwUVJLeXBZVURkakxNTEdIcm5sR2V0alZQeDF2bzR2azlNWkJnbdIBbEFVX3lxTE1QZEs2bHVJWEViWmwwOGM2WnJQd1p4MVc2ejYtNVEyeUl3WU81dGRnemtEbG1IZGM5SURvNjl2WmoyTTVUREphcVN1Z2VGT1VIaGRaRVExci1mak81NUJGWnBOaExXVU9NUmNTdw"
     },
     {
-      "id": "ba4564daed84",
+      "id": "24bc1b86f3f9",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
       "published_at": "2026-10-22T01:53:00Z",
-      "source": "NBC News",
-      "summary": "Roger Marshall and Adam Hamilton face off in fiery final Kansas Senate debate &nbsp;&nbsp; NBC News",
+      "source": "Yahoo",
+      "summary": "Roger Marshall and Adam Hamilton face off in fiery final Kansas Senate debate &nbsp;&nbsp; Yahoo",
       "title": "Roger Marshall and Adam Hamilton face off in fiery final Kansas Senate debate",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdmhOTktCaFMtQ3pSRm5QUXNjZkc1MzdwMC1YXzllSVpUUGlZc0tPVXhJSGwzSzZYUHJna1liNDh3c3A5Q0RHZHJGLWhvYW5yaExVcTVRS2pKSFpONkhtSW4ya2VIdGx3TW5qdEZHYzhLZE04RWpIcV92S0Ztd2FOUHFjS2h6VDdmRktPVWRtbWhzWEJxRXNKWVRjNGpBajBmVzBXdUpJQTVZWnhsV1RFUllnaTVWNUNOaVdmUUQxTkVsQQ"
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTG8zTjhRSzJLREFHRXJVLTZWdVZRY3dkMkN4UEpLWFctTkpkeHNobVFFaEJ0ZExwOGctM3ZhbE0tUTQ4RTdxWHFQMk9oaEZneFl3cHlzYUthM0taU01kWUJidE5LMFhoVEZuWlZpZlo2T1FkM1VnakU2RmtkYWJ1WkJJVHk0MmZSQnNwYy1OTFpuNHVaUlZMdg"
     },
     {
       "id": "b4d41025dbde",
@@ -1516,18 +1528,6 @@
       "summary": "Roger Marshall gets on the stage and starts SCREAMING ABOUT KANSAS! &nbsp;&nbsp; X",
       "title": "Roger Marshall gets on the stage and starts SCREAMING ABOUT KANSAS!",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5VRFAtOElNOVU4VTV0cThCODFSdUltdEpJN1NOOFZfM2k2eTMwQjlmWHBSV25MOG5CVUZab01xeHFiQnNQMFo0dG9ha1dTN05MRldGT1R0ZmN3N3B6alBzZjlyMmduV0U"
-    },
-    {
-      "id": "56d97f1e606e",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T23:17:00Z",
-      "source": "Action Network",
-      "summary": "Kansas Senate Race: Tied Polls Still Point Toward Roger Marshall &nbsp;&nbsp; Action Network",
-      "title": "Kansas Senate Race: Tied Polls Still Point Toward Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaXRNRUxzYzBxSzFRamRYTi1LaTczWHQ4eHpHTm9wVzlfazFfNzlOa0hvcFd6aHpuWGxsalQ5U2t3U1QxRGRpSXBlS3hOWDMwdzJzczUzdEgxRUFMbkRKaFZDTVN5eWVJbk10cHUwalpUM216czdEbGxYQ0lCcDluaA"
     }
   ],
   "schema_version": 1
