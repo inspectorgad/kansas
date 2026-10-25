@@ -7,17 +7,12 @@
     }
   ],
   "consensus": {
-    "as_of": "2026-10-25T18:14:03.614815Z",
+    "as_of": "2026-10-25T20:58:04.715101Z",
     "change_1h": 0.0,
     "change_24h": -0.0016,
     "change_7d": -0.0019,
     "hamilton": 0.4203,
     "history": [
-      {
-        "hamilton": 0.2256,
-        "marshall": 0.7744,
-        "t": "2026-09-21T23:36:20.442342Z"
-      },
       {
         "hamilton": 0.2245,
         "marshall": 0.7755,
@@ -917,6 +912,11 @@
         "hamilton": 0.4203,
         "marshall": 0.5797,
         "t": "2026-10-25T18:14:03.614815Z"
+      },
+      {
+        "hamilton": 0.4203,
+        "marshall": 0.5797,
+        "t": "2026-10-25T20:58:04.715101Z"
       }
     ],
     "marshall": 0.5797,
@@ -925,7 +925,7 @@
     ]
   },
   "disclaimer": "Prediction-market prices are an implied probability of winning, not a projected vote share.",
-  "generated_at": "2026-10-25T18:14:03.619560Z",
+  "generated_at": "2026-10-25T20:58:04.719630Z",
   "margin": {
     "buckets": [
       {
@@ -945,35 +945,35 @@
         "high": 3.0,
         "label": "Marshall by 1\u20133",
         "low": 1.0,
-        "probability": 0.145
+        "probability": 0.15
       },
       {
         "candidate_id": "marshall",
         "high": 5.0,
         "label": "Marshall by 3\u20135",
         "low": 3.0,
-        "probability": 0.13
+        "probability": 0.125
       },
       {
         "candidate_id": "marshall",
         "high": 7.0,
         "label": "Marshall by 5\u20137",
         "low": 5.0,
-        "probability": 0.134
+        "probability": 0.105
       },
       {
         "candidate_id": "marshall",
         "high": 9.0,
         "label": "Marshall by 7\u20139",
         "low": 7.0,
-        "probability": 0.036
+        "probability": 0.0595
       },
       {
         "candidate_id": "marshall",
         "high": 11.0,
         "label": "Marshall by 9\u201311",
         "low": 9.0,
-        "probability": 0.035
+        "probability": 0.0405
       },
       {
         "candidate_id": "marshall",
@@ -1032,7 +1032,7 @@
   },
   "markets": [
     {
-      "fetched_at": "2026-10-25T18:13:58.082443Z",
+      "fetched_at": "2026-10-25T20:57:58.675349Z",
       "hamilton": 0.4203,
       "market_id": "KXKSSENGOVCOMBO-derived",
       "marshall": 0.5797,

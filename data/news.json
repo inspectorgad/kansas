@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-25T18:17:10.623571Z",
+  "generated_at": "2026-10-25T21:02:11.453275Z",
   "items": [
+    {
+      "id": "01390a6f748e",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-25T18:52:45Z",
+      "source": "Fox News",
+      "summary": "Kansas Sen Roger Marshall urges supporters to cast their ballots &nbsp;&nbsp; Fox News",
+      "title": "Kansas Sen Roger Marshall urges supporters to cast their ballots",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB0RXZtMHh4d1oyckNwZUNoZVZqNnVJTXlDYnJIamp5NnlYYVRnRVNRaURCU01QTHpKMDNtZUtHWjI5YURxRnR1Qi1oWXp4OU9zd1d1bk1B"
+    },
     {
       "id": "294ce428dbd8",
       "kind": "news",
@@ -59,7 +71,7 @@
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-10-25T14:56:55Z",
+      "published_at": "2026-10-25T14:57:19Z",
       "source": "Hays Post",
       "summary": "KS Senate candidate Adam Hamilton hosts Meet and Greet in Hays today &nbsp;&nbsp; Hays Post",
       "title": "KS Senate candidate Adam Hamilton hosts Meet and Greet in Hays today",
@@ -1516,18 +1528,6 @@
       "summary": "Fact Check: Trump speaks at Kansas rally for Roger Marshall. Here\u2019s what he got wrong &nbsp;&nbsp; Kansas City Star",
       "title": "Fact Check: Trump speaks at Kansas rally for Roger Marshall. Here\u2019s what he got wrong",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9pUXVjUUtsVEZuajlxTlJlVGZQZ0VhbUJPSnV5bEJ4cXNtYWtCV2F5dVYwclFJMS05Unp1bmVucUt6Rk9zVTRfOVV2NTBfVjVNTzYyVGZVSG9RLTBmYUJraVJYZ1dFSVNqc3JMaUNFalZNVGZVWmVna0I0NGU1Z9IBfkFVX3lxTE9PWUdTMWJwZE9kVUVwbjl5Ry1BV2FxS3d5aFZteEprUzQ3T2hROUxhek5IUDRvUFA1NC1CWEhwSWxraUl0U3E1Y3VFRHh2VGEtLWc4c1JYeURQcVZvUU5aclBxYV9UeDROSXY5U2pQdXVKRXlDUXdsSUotYkVHQQ"
-    },
-    {
-      "id": "8e166a60e6bd",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-20T00:02:23Z",
-      "source": "Wichita Eagle",
-      "summary": "Sen. Roger Marshall speaks at Trump rally in Park City (Video) &nbsp;&nbsp; Wichita Eagle",
-      "title": "Sen. Roger Marshall speaks at Trump rally in Park City (Video)",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE96QW9jZjYzU0dOT1otMUtsdzF1MFJFdVN3VFgtb3l4TG1qV2Y5VDhDNi16Y0tDckJQcmVvRkRiQW5QS2VfWERWRWJmM3RCSlYyRHBxYlJRczB1LXRCRzRLTGxBYUNzbk84VW1lVjdWZnk4WUg5QXNsVw"
     }
   ],
   "schema_version": 1
