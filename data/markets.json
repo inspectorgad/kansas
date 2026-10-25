@@ -7,17 +7,12 @@
     }
   ],
   "consensus": {
-    "as_of": "2026-10-25T14:55:01.368707Z",
+    "as_of": "2026-10-25T18:14:03.614815Z",
     "change_1h": 0.0,
-    "change_24h": -0.0057,
-    "change_7d": -0.007,
+    "change_24h": -0.0016,
+    "change_7d": -0.0019,
     "hamilton": 0.4203,
     "history": [
-      {
-        "hamilton": 0.2228,
-        "marshall": 0.7772,
-        "t": "2026-09-21T20:34:43.680885Z"
-      },
       {
         "hamilton": 0.2256,
         "marshall": 0.7744,
@@ -917,6 +912,11 @@
         "hamilton": 0.4203,
         "marshall": 0.5797,
         "t": "2026-10-25T14:55:01.368707Z"
+      },
+      {
+        "hamilton": 0.4203,
+        "marshall": 0.5797,
+        "t": "2026-10-25T18:14:03.614815Z"
       }
     ],
     "marshall": 0.5797,
@@ -925,7 +925,7 @@
     ]
   },
   "disclaimer": "Prediction-market prices are an implied probability of winning, not a projected vote share.",
-  "generated_at": "2026-10-25T14:55:01.374121Z",
+  "generated_at": "2026-10-25T18:14:03.619560Z",
   "margin": {
     "buckets": [
       {
@@ -959,14 +959,14 @@
         "high": 7.0,
         "label": "Marshall by 5\u20137",
         "low": 5.0,
-        "probability": 0.1335
+        "probability": 0.134
       },
       {
         "candidate_id": "marshall",
         "high": 9.0,
         "label": "Marshall by 7\u20139",
         "low": 7.0,
-        "probability": 0.0365
+        "probability": 0.036
       },
       {
         "candidate_id": "marshall",
@@ -1032,7 +1032,7 @@
   },
   "markets": [
     {
-      "fetched_at": "2026-10-25T14:54:55.646391Z",
+      "fetched_at": "2026-10-25T18:13:58.082443Z",
       "hamilton": 0.4203,
       "market_id": "KXKSSENGOVCOMBO-derived",
       "marshall": 0.5797,

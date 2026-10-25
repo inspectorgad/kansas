@@ -26,8 +26,33 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-25T14:59:10.160030Z",
+  "generated_at": "2026-10-25T18:17:10.623571Z",
   "items": [
+    {
+      "id": "294ce428dbd8",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-25T16:00:00Z",
+      "source": "KSNT politics",
+      "summary": "TOPEKA (KSNT) \u2013 On this episode of Inside Kansas Politics,\u00a0it's the most closely watched race in Kansas. And candidates for the Kansas seat in the U.S. Senate left it all on the stage. Inside Kansas Politics host Rebekah Chung sat down with political analyst Bob Beatty to break down the highlights and the biggest challenges facing Roger [...]",
+      "title": "Left it all on the stage: Political analysts break down the U.S. Senate debate between Roger Marshall and Adam Hamilton",
+      "url": "https://www.ksnt.com/inside-kansas-politics/left-it-all-on-the-stage-political-analysts-break-down-the-u-s-senate-debate-between-roger-marshall-and-adam-hamilton"
+    },
+    {
+      "id": "23580334efee",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-25T15:35:02Z",
+      "source": "KMBC",
+      "summary": "One-on one with Democratic Kansas U.S. Senate candidate Adam Hamilton &nbsp;&nbsp; KMBC",
+      "title": "One-on one with Democratic Kansas U.S. Senate candidate Adam Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOY3E3QUxhQTdmdmN2czJnRFVaS0llRHI3Z0RKaUVIY0Zfak0yT3gxMllSdzR5LWE0M2ZreHlqSVdhOHRqNTNjQmFzY1JvUUpwSDNOTXN1dW9NVUlaUGY0Zkk1N0M1MDVyZldMcWNzZnc2VkkxY09Valh5MHFUem5yOWtXZ3hrVG9fZTliU0VvdnN1dmNncHNGZWxRUW9jRjAtaUhfV21hMVk"
+    },
     {
       "id": "d612c7b0a2a6",
       "kind": "news",
@@ -275,6 +300,18 @@
       "summary": "The vice president will come to Kansas to support Republican Sen. Roger Marshall in his tight race with Democrat Adam Hamilton. President Trump rallied for Marshall earlier this week.",
       "title": "JD Vance is coming to Kansas to support Roger Marshall for the second time in 2 months",
       "url": "https://www.kcur.org/politics-elections-and-government/2026-10-22/jd-vance-is-coming-to-kansas-to-support-senator-roger-marshall-second-time-2-months-adam-hamilton"
+    },
+    {
+      "id": "8ddad97a3b1b",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-22T20:38:00Z",
+      "source": "Spectrum News",
+      "summary": "VP Vance to hold midterm rally for Sen. Marshall in Topeka &nbsp;&nbsp; Spectrum News",
+      "title": "VP Vance to hold midterm rally for Sen. Marshall in Topeka",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUzhWLTdYRzI3NEY4T2lkYU1SYWptZXNCbWYtbWtuTTlVS2tyZV9QYjBjWDVMY0RZNUk4SlZqcG9qdW5oTmZEWEZ6TmU4S3dVRnQ3VHVUWlpDOEQ1MDIzQnJDd3hjVWpDM2JLUFZ1eHZtM01TUlc3ck52TDJXRnlyS2dmaGRXbjgtZUNlNVM0MjBPV2otS2gydXFvUnc0Wm94"
     },
     {
       "id": "f3fb7716c88e",
@@ -735,17 +772,17 @@
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSlgyNVB2RE9ZeGlPeV9NemVXRDdCeUFfZmJjanVRWXVKUktGaFZzZkhWZUx1aHNxcTZ2QUZqRFZudEFVeDZwUVJLeXBZVURkakxNTEdIcm5sR2V0alZQeDF2bzR2azlNWkJnbdIBbEFVX3lxTE1QZEs2bHVJWEViWmwwOGM2WnJQd1p4MVc2ejYtNVEyeUl3WU81dGRnemtEbG1IZGM5SURvNjl2WmoyTTVUREphcVN1Z2VGT1VIaGRaRVExci1mak81NUJGWnBOaExXVU9NUmNTdw"
     },
     {
-      "id": "24bc1b86f3f9",
+      "id": "ba4564daed84",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
       "published_at": "2026-10-22T01:53:00Z",
-      "source": "Yahoo",
-      "summary": "Roger Marshall and Adam Hamilton face off in fiery final Kansas Senate debate &nbsp;&nbsp; Yahoo",
+      "source": "NBC News",
+      "summary": "Roger Marshall and Adam Hamilton face off in fiery final Kansas Senate debate &nbsp;&nbsp; NBC News",
       "title": "Roger Marshall and Adam Hamilton face off in fiery final Kansas Senate debate",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTG8zTjhRSzJLREFHRXJVLTZWdVZRY3dkMkN4UEpLWFctTkpkeHNobVFFaEJ0ZExwOGctM3ZhbE0tUTQ4RTdxWHFQMk9oaEZneFl3cHlzYUthM0taU01kWUJidE5LMFhoVEZuWlZpZlo2T1FkM1VnakU2RmtkYWJ1WkJJVHk0MmZSQnNwYy1OTFpuNHVaUlZMdg"
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdmhOTktCaFMtQ3pSRm5QUXNjZkc1MzdwMC1YXzllSVpUUGlZc0tPVXhJSGwzSzZYUHJna1liNDh3c3A5Q0RHZHJGLWhvYW5yaExVcTVRS2pKSFpONkhtSW4ya2VIdGx3TW5qdEZHYzhLZE04RWpIcV92S0Ztd2FOUHFjS2h6VDdmRktPVWRtbWhzWEJxRXNKWVRjNGpBajBmVzBXdUpJQTVZWnhsV1RFUllnaTVWNUNOaVdmUUQxTkVsQQ"
     },
     {
       "id": "b4d41025dbde",
@@ -1491,43 +1528,6 @@
       "summary": "Sen. Roger Marshall speaks at Trump rally in Park City (Video) &nbsp;&nbsp; Wichita Eagle",
       "title": "Sen. Roger Marshall speaks at Trump rally in Park City (Video)",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE96QW9jZjYzU0dOT1otMUtsdzF1MFJFdVN3VFgtb3l4TG1qV2Y5VDhDNi16Y0tDckJQcmVvRkRiQW5QS2VfWERWRWJmM3RCSlYyRHBxYlJRczB1LXRCRzRLTGxBYUNzbk84VW1lVjdWZnk4WUg5QXNsVw"
-    },
-    {
-      "id": "559614797131",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T23:57:00Z",
-      "source": "KWCH",
-      "summary": "Sen. Roger Marshall speaks at President Trump's rally &nbsp;&nbsp; KWCH",
-      "title": "Sen. Roger Marshall speaks at President Trump's rally",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTWtkMlZyaGVWQXAxUWhqY09MOFAzOWxTdkRIZkM3RmVOU2dGM0I0QUZtdm12UzBsVGh5Rmw2cHJFVm9XTTY2eGxETVV4cmE4YnFjelpKM2taLUhHd09QMmI1b1pnNi1QUTA3UzRSdDRFcVJKT2tYRFRzRTY2Tkpyc3R2bGd0UzBneUtERWcySHk"
-    },
-    {
-      "id": "54732a72b29e",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-19T23:40:43Z",
-      "source": "X",
-      "summary": "\ud83c\uddfa\ud83c\uddf2 Kansas GOP Sen. Roger Marshall on his Dem. opponent Adam Hamilton, who is also a pastor\u2026 \"He supports drag shows. And gay pride marches. And he tells us to apologize for the color of our skin.\" Got it. Anything about food, gas, housing, or healthcar &nbsp;&nbsp; X",
-      "title": "\ud83c\uddfa\ud83c\uddf2 Kansas GOP Sen. Roger Marshall on his Dem. opponent Adam Hamilton, who is also a pastor\u2026 \"He supports drag shows. And gay pride marches. And he tells us to apologize for the color of our skin.\" Got it. Anything about food, gas, housing, or healthcar",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUX1JLR2ZkVGJlMW5ELTMxNW1IOFBuaG9HVm1zUmllbFNCSDVmd19rd1ViemlpX1ZOUWxISURFcVFGSWlreVZFajl1VkRMclhvdlJQdG9Ic0dTeXF2aUxkbHFtWDBIVm5naVhEZw"
-    },
-    {
-      "id": "2065aa38f3e2",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-19T23:20:15Z",
-      "source": "X",
-      "summary": "Roger Marshall gets on the stage and starts SCREAMING ABOUT KANSAS! &nbsp;&nbsp; X",
-      "title": "Roger Marshall gets on the stage and starts SCREAMING ABOUT KANSAS!",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5VRFAtOElNOVU4VTV0cThCODFSdUltdEpJN1NOOFZfM2k2eTMwQjlmWHBSV25MOG5CVUZab01xeHFiQnNQMFo0dG9ha1dTN05MRldGT1R0ZmN3N3B6alBzZjlyMmduV0U"
     }
   ],
   "schema_version": 1
