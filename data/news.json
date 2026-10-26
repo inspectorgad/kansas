@@ -9,6 +9,10 @@
       "url": "https://www.kcur.org/politics-elections-and-government.rss"
     },
     {
+      "name": "KWCH",
+      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
+    },
+    {
       "name": "KSNT politics",
       "url": "https://www.ksnt.com/news/politics/feed/"
     },
@@ -18,16 +22,49 @@
       "url": "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"
     },
     {
-      "name": "KWCH",
-      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
-    },
-    {
       "name": "KSNT",
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-26T13:36:21.651716Z",
+  "generated_at": "2026-10-26T19:36:48.402903Z",
   "items": [
+    {
+      "id": "135c529c6ea5",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-26T17:40:04Z",
+      "source": "KWCH",
+      "summary": "Vance speaks at HME Manufacturing just over a week before midterms",
+      "title": "Vice President JD Vance rallies for Sen. Roger Marshall in Topeka",
+      "url": "https://www.kwch.com/2026/10/26/vice-president-jd-vance-rallies-sen-roger-marshall-topeka"
+    },
+    {
+      "id": "8ecff2ff034c",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-26T16:36:00Z",
+      "source": "Action Network",
+      "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 26) &nbsp;&nbsp; Action Network",
+      "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 26)",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQT1kxaURMNi1QSmQwT25MRUFwRWNlY3hQSV9MVDg3eWtROEpsYVJlSzd0Q3BVX3QxN1ptdzZGazZjb0NxbmVfbmlkUk51VnNURGxUYU1JUmRsRXVJNWlNank5U3hiTlBCd0JFLTJfZ2Y0aUtZN24yd1FXX1FyUXZXUFdUN0xWTTFJTDJXUDZ3dUNFRDNJYWlzQ2Rxemc5X3Izc3d2OWEybHF0dGZWT1B5NDBtNXMzOUJwVXR1Z3Y1SERkQjlZWGZzdFBwMThTLS1sN0p5clEybEwxN3FhNDVXOQ"
+    },
+    {
+      "id": "e7fee582c734",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-26T12:00:00Z",
+      "source": "People For the American Way",
+      "summary": "Tony Perkins Asks God To Dispatch The Holy Spirit To Help Reelect Sen. Roger Marshall &nbsp;&nbsp; People For the American Way",
+      "title": "Tony Perkins Asks God To Dispatch The Holy Spirit To Help Reelect Sen. Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRGJUbkVrMHM0VVRVQm9SazVFVjcyRmxOVjhUcGtSLVFuVjg2ZnlZRlhsMEx5MVczcFR6NE1IX3dXTWtLYUlpbUN5cUxFTHVwajl0YVlndUxWby1xa216VVAzS3V0aWlQR0M2ek9ZWW5YQ29ZaHZqalI5dU1sb1VFdHFWVFNFaWhsWjhqNWFyeXNfbEllb0V3dlg5OHBqeXVxUExkdVFKYXdrYVY5SkJhaGtYQkxlZw"
+    },
     {
       "id": "a74fb3eb9a79",
       "kind": "news",
@@ -190,18 +227,6 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWnJnSWRBN2RIc2hiLWRBZHJzWDAxVUloVm1tTlB1VDRUalI3TklWbjNwSDFWTmVqVzZja3BuLTVxZ2xVY25JRXhMUzVDRTd5YmpyaG8ySmg4MjlNR254OFIxT2xlZHJkeDZDTjlSb2hDTnhYX1BVYWNsYkRqNUhGWlo2aFAyVzFtcDZTZXRIVFFsbEFtdFNfQ1NISThOQUxrMlhLSEtMaGJ4QzJXV2UzWTNVYmI2SnhyNkE"
     },
     {
-      "id": "104e49209444",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-23T09:10:19Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZ0h6LVBaLUw0dmdvaC1EUk85MXpBU0pjYUU0VjhuSUJHeUVFUU5FQWhPWnFGMWcyMEtoN1JwWDdONE4ydUk1VzRqd2c2R1NRV25lNmJyM0FnUndObG91YklKa3RzMmh2XzRENm9Vc21CT2gzaWwtZ0VKRlZDa3hoMFE4a1BSRzl4SmxrbHpETEx2aXNhQlJXNjM3TXQ4cVQyeTl0WFpqZXlxdVRpb1Uya0NtMEZrTUdLaWV4QUtuWUZUOGVLdHpFNnJrVVlGak9ma3pLZkI4N2h2TWFyMzZmNTNB"
-    },
-    {
       "id": "7f50d9d002cb",
       "kind": "news",
       "mentions": [
@@ -212,6 +237,18 @@
       "summary": "Kansas manufacturer questions Roger Marshall's stance on tariffs &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Kansas manufacturer questions Roger Marshall's stance on tariffs",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTUxpZldxWWdZTUM3Sjc3TnZNOXI2czFSMGpFejdEX0gycVVmWTBIa0IzSnNIRTNQVHl5UnJNSXgzcDZJNk1sWmRqQlVhZThlM2c4WDlKN3dyLVVQRjhDMjhGSkVhYm1RVEVmMm5sczR4eUt0c2gyZUJRTENWak1UVjNTVWNaN1BlalpMVlY1NDQ5WlpBdDBnU0N6b3VtQTdBa0Z0NV9fZnJmNk5IX05hM3NVcXhoV043VDVHOUtEa1g0dw"
+    },
+    {
+      "id": "104e49209444",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-23T09:03:28Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZ0h6LVBaLUw0dmdvaC1EUk85MXpBU0pjYUU0VjhuSUJHeUVFUU5FQWhPWnFGMWcyMEtoN1JwWDdONE4ydUk1VzRqd2c2R1NRV25lNmJyM0FnUndObG91YklKa3RzMmh2XzRENm9Vc21CT2gzaWwtZ0VKRlZDa3hoMFE4a1BSRzl4SmxrbHpETEx2aXNhQlJXNjM3TXQ4cVQyeTl0WFpqZXlxdVRpb1Uya0NtMEZrTUdLaWV4QUtuWUZUOGVLdHpFNnJrVVlGak9ma3pLZkI4N2h2TWFyMzZmNTNB"
     },
     {
       "id": "44ed80300c92",
@@ -319,7 +356,7 @@
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-22T21:38:00Z",
+      "published_at": "2026-10-22T21:38:06Z",
       "source": "WSJ",
       "summary": "Opinion | Roger Marshall Backs a Giant Tax Increase &nbsp;&nbsp; WSJ",
       "title": "Opinion | Roger Marshall Backs a Giant Tax Increase",
@@ -604,18 +641,6 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBEejdQbllZMGxlc0JBU2RxMnVsRTlpaGdaU01DMTUwX1NibnExdy1JRTVFRWt4RG1GY0FtVEg2QmcyYi1jdll5a0V3M0ZZbWF5ZmVCT1RjRmpiZzRzdklIUGVnaW5ZYUHSAWdBVV95cUxOM1pRVTVIZFNsOC1TQk00d2EwZkFoYmdqd2s2N0x6ME14bmpCWGN6NEhaWEdsNEhIRTMzeEhiRW5JbkI2aWZzVlVYRHQxTmg1VUxFcG9jMHZEVElNdTVLa3k2Z2NVdmhN"
     },
     {
-      "id": "cf56fc0dc4dd",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T11:13:36Z",
-      "source": "The Washington Post",
-      "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; The Washington Post",
-      "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNdFljWnhqMVVlVjJ5VVo0cTBKbHFlbjNZZC1mR0dQNmlwTzZXMUVidFkxeV91MUswU2RSUndNb3lkdGg0UHAwa1pKeUJuSmROdjlvYllfdk1neXE0TlZUbnVLZWliMFNlVjRpVjJJVGp3ZjA4VFdRdnpITjJSOUVzZ1ZGb3lBUy1YN0FmcGh4Tk05UXRDYnZoQ1d3VWJJUjVYMlZiNWp0STY4dkhCdlNDTUhNdWxCSVYwU2dWSkR1Tk5UTWtnZWs1TkVrX2xWWFhKWDNEN3R5WG1XVVFDVmFEc3VvTjM"
-    },
-    {
       "id": "98345240e11b",
       "kind": "news",
       "mentions": [
@@ -652,6 +677,18 @@
       "summary": "Marshall, Hamilton clash on attack ads, split with own parties in final U.S. Senate debate &nbsp;&nbsp; KWCH",
       "title": "Marshall, Hamilton clash on attack ads, split with own parties in final U.S. Senate debate",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMGdJWThPeHA4a2lIMUxuekpSenhpNG1IZ0RJRDkxeDFYVkFNMnhZV0s5Q01IY2VKVjkzSmpCWFl2WWFBcFFuSERPejdYeXBuaE1KWXRPajg1YThTcVVWMVBvbEJiVS0tbk85OVZkdzBKZ3h4dWFiWXFXTWxsR3B2RHQxbUQ1NkVlck0wWm1nTTRrMXlycDJQVkpWOC1GaXRSLWdYYWhLWHRzMVVucFl2UzliY9IBxwFBVV95cUxPcFh2VEl1SXZRVmtibExGM3Vpb19Ud21lbmd2REhUdHNDckllcExXOHBWbE9RODROelhQdWl1TFZjYy12R2tWaTQwZzlHZWRELXZGOXRGcDR5WkNsTnVUTU5FajNUcV9FQ21FYlNBQk0xMFI1T3dpLVlpbW9JZUVrUFZaNVJITU00QlNuWTlGbEZ1Q242dzFKY3FzZnk1R3YyMkFoWkQtOHNNSnY4Q0xfZlUzU0pPWnExeTJvLTNDNGg2b1UtcnZJ"
+    },
+    {
+      "id": "a6ad6ab5207f",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-22T04:13:00Z",
+      "source": "AP News",
+      "summary": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices &nbsp;&nbsp; AP News",
+      "title": "Kansas Sen. Roger Marshall says the Ukraine war, not the Iran war, has caused high diesel prices",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNFlwUEhrRzY3LVNyRkJaZkdfb04wYURuSFpOV21ZMXhnM2poTjI4T0dtdjJNdEE2cXZvRm02N01JS2x2RzFzMzUxc1JCc2E4V0FjcVR2TTU5WTREV1BGbndhMS12czc3ZkY1S2dyRUowZ18tUGtNXzdzZ3JEYTZlTkZ5eUgycHBIRTNwaVZSMlNFaDI2TUlIYWZtMGp3ZTFmN3lFeU9SNmFjMm54UmwzWA"
     },
     {
       "id": "a94f49c9932e",
@@ -1277,8 +1314,8 @@
         "marshall"
       ],
       "published_at": "2026-10-20T19:58:44Z",
-      "source": "KSN-TV",
-      "summary": "Who is Kansas US Sen. Roger Marshall? &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Who is Kansas US Sen. Roger Marshall? &nbsp;&nbsp; KSN.com",
       "title": "Who is Kansas US Sen. Roger Marshall?",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPQTRIOHlJeGZ2VG1JbHdxSmFZZXMzZGRuT21RejE0SmsyT2FLQnhzYVRrZnRTRHlBV3g2aDhQOG8xeTVGX01aRUluVkNSMWp4d0c1M2RFRmJjZDZRdlhtX09DaGNFR3RfcFFGQldwQ29RejduMFZLTlFtWXFId3FkZjVXQy1reWUwVkhYRVZLQ0RBX2PSAZgBQVVfeXFMTU5RS3ozeHNnVlR5aThtNmM5OHFiT21JZXZ4Z1lOTEFpbHNpU1ZMbXdmSnhBZ1BMLW84RkZwQVZMY2o2bFN2MzVQbVdZQjlPZjRYU2tLYm5MYk9CVTBSN2RRTEphU1QxR3NFZnUzOFZBSlBuNXFxWldtYU8zU1NkVjMyMnhCaFp0bEZVZFZJalRmdHhON1haTUk"
     },
@@ -1491,43 +1528,6 @@
       "summary": "PARK CITY \u2014 President Donald Trump on Monday defended U.S. Sen. Roger Marshall\u2019s record and blamed judges and state law for the senator\u2019s practice of suing patients with medical debt \u2014 leading to some of them being arrested \u2014 when he was a physician. The president campaigned for Marshall and other Republican candidates in a [&#8230;]",
       "title": "In Kansas rally, Trump defends Marshall\u2019s record and calls Hamilton a \u2018disgrace\u2019",
       "url": "https://kansasreflector.com/2026/10/19/in-kansas-rally-trump-defends-marshalls-record-and-calls-hamilton-a-disgrace"
-    },
-    {
-      "id": "9095d27d800c",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-20T02:08:00Z",
-      "source": "NBC News",
-      "summary": "Trump uses antisemitic slur in defending Sen. Roger Marshall at rally in Kansas &nbsp;&nbsp; NBC News",
-      "title": "Trump uses antisemitic slur in defending Sen. Roger Marshall at rally in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZmpMZWJFcXE5Zy1YY3VqX0QzR2dRbGxxckhSYUFqU1JpYVlSSklkV1VZa2lHME41MUxjcTNwUDNOSjZrXzRWVUhJc0V5Vi1zQkFEWmZfdmNmRVhCQ1pvNnNBU3ZrWW5uOVQ3ak13RTIyRUJqcG1TOGpHWUdRb3hXRDhMaEdnM004T2hNaloyTzJfSnpQYnRhU1hjNGx3NlRIM1ozdmlfQ2JwY1oxcjZMMU5VdW9ZblE2VDM1Y0FvNzRhVkY2"
-    },
-    {
-      "id": "45f7398e6a53",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-20T01:55:44Z",
-      "source": "Forth.News",
-      "summary": "Trump Warns Kansas Voters of \u2018France\u2011Style\u2019 Unrest as He Campaigns for Senator Marshall &nbsp;&nbsp; Forth.News",
-      "title": "Trump Warns Kansas Voters of \u2018France\u2011Style\u2019 Unrest as He Campaigns for Senator Marshall",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xY1VBczg5QjFpT1NVbEx3ZWw2RkdGTXB1RUpKMjFRd25nV3pJWVNiVUFqa2ZJcG9rU2JDX1pDSVdOMk9yYWQyXzFLaGQtR0NranZSczJfR1Vlb21oMUZJZWRR"
-    },
-    {
-      "id": "97990942d1ef",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-20T01:51:47Z",
-      "source": "KCUR",
-      "summary": "Trump spoke to the crowd near Wichita in a state he easily won by 16 points in 2024. He told the audience to \u201cpretend\u201d he\u2019s on the ballot as they head to the polls in a race that pits incumbent Republican Sen. Marshall against Democratic pastor Adam Hamilton.",
-      "title": "Trump rallies in Kansas to support Marshall in tight Senate race: 'They gave him a bum rap'",
-      "url": "https://www.kcur.org/2026-10-19/president-trump-rallies-in-kansas-to-support-marshall-in-tight-senate-race-with-hamilton"
     }
   ],
   "schema_version": 1

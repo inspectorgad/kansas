@@ -1,8 +1,8 @@
 {
   "aggregate": {
     "as_of": "2026-10-26T00:00:00Z",
-    "band": 2.05,
-    "hamilton": 46.72,
+    "band": 1.99,
+    "hamilton": 46.25,
     "history": [
       {
         "date": "2026-06-28",
@@ -825,39 +825,39 @@
       },
       {
         "date": "2026-10-23",
-        "hamilton": 46.67,
-        "margin": -1.0,
-        "marshall": 45.67,
-        "n_polls": 11
+        "hamilton": 46.23,
+        "margin": -0.44,
+        "marshall": 45.79,
+        "n_polls": 12
       },
       {
         "date": "2026-10-24",
-        "hamilton": 46.67,
-        "margin": -1.0,
-        "marshall": 45.67,
-        "n_polls": 11
+        "hamilton": 46.23,
+        "margin": -0.44,
+        "marshall": 45.79,
+        "n_polls": 12
       },
       {
         "date": "2026-10-25",
-        "hamilton": 46.67,
-        "margin": -1.0,
-        "marshall": 45.67,
-        "n_polls": 11
+        "hamilton": 46.23,
+        "margin": -0.44,
+        "marshall": 45.79,
+        "n_polls": 12
       },
       {
         "date": "2026-10-26",
-        "hamilton": 46.72,
-        "margin": -1.1,
-        "marshall": 45.61,
-        "n_polls": 10
+        "hamilton": 46.25,
+        "margin": -0.51,
+        "marshall": 45.75,
+        "n_polls": 11
       }
     ],
     "leader": "hamilton",
-    "margin": -1.1,
-    "marshall": 45.61,
+    "margin": -0.51,
+    "marshall": 45.75,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
-    "n_polls_used": 10,
-    "trend_7d": -0.11
+    "n_polls_used": 11,
+    "trend_7d": 0.49
   },
   "attribution": [
     {
@@ -867,8 +867,24 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-26T13:31:29.100902Z",
+  "generated_at": "2026-10-26T19:32:26.945562Z",
   "polls": [
+    {
+      "added_at": "2026-10-26T19:32:26.944542Z",
+      "end_date": "2026-10-23",
+      "id": "c62be8c8b6b7",
+      "margin_of_error": 3.2,
+      "other": 3.0,
+      "pollster": "RedBox Research",
+      "population": "LV",
+      "results": {
+        "hamilton": 45.0,
+        "marshall": 46.0
+      },
+      "sample_size": 1301,
+      "start_date": "2026-10-20",
+      "undecided": 4.0
+    },
     {
       "added_at": "2026-10-16T01:29:49.365050Z",
       "end_date": "2026-10-14",
@@ -932,6 +948,7 @@
       "end_date": "2026-10-04",
       "id": "3895cbd01bd3",
       "margin_of_error": 3.2,
+      "other": 2.0,
       "pollster": "YouGov",
       "population": "LV",
       "results": {
@@ -979,6 +996,7 @@
       "end_date": "2026-09-30",
       "id": "feb5e6acb4b8",
       "margin_of_error": 4.6,
+      "other": 0.0,
       "pollster": "New York Times/Siena University",
       "population": "LV",
       "results": {
