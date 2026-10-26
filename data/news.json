@@ -26,8 +26,21 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-26T06:31:54.883579Z",
+  "generated_at": "2026-10-26T13:36:21.651716Z",
   "items": [
+    {
+      "id": "a74fb3eb9a79",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-26T10:00:00Z",
+      "source": "Kansas City Star",
+      "summary": "JD Vance set to rally Kansas voters amid Marshall-Hamilton Senate race &nbsp;&nbsp; Kansas City Star",
+      "title": "JD Vance set to rally Kansas voters amid Marshall-Hamilton Senate race",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE16SGJSbHlNOEctX0drZjdtYk1yY204N21OYnVqd250a1lSTWhVd0lGUmFWTnczR1hudHllZVVUaWNWTWh5QlFRQ2xOeWctUmxRbndKeE44M1oweF93YUlwTHVxaDRLMlpXSjdaTHJGMTZFeTVnWGFkRjhHZU9yQdIBfkFVX3lxTE5IQ0IwZUJXQkJhdHFGSWlrTmlEXzRTdUZySDhVY3JZLXpiWjAzRjVNYTA4NGxpeXZFRGNsSFd3ZDh2aFpLWlh0eF92RUY0RHJDOUNNY0FTLU5rbXZTel9fQW5wbW5tYXNTWjFCeF9vbGpwdXVDd2NZOFhjekFBZw"
+    },
     {
       "id": "01390a6f748e",
       "kind": "news",
@@ -718,19 +731,6 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPejRPLWZTUHptU0w4ZGhzN3h2UmhHT0cwOWo2b3RlZmxrZ19faU5SZk9pdzE1VmEtMXNZZGd1Y3JRRGFKdlE2a2lmdC1GXzM3Ul9WR01FUGlzZzdMQ3Q0RHhIVWR1cEk3bDA5dDd4NUpMd25KcGlRUUFvMWJVUEw3aWVvWWpuUjZ6NWo3SU9QOE15UXRnMEh2WjJTSzhIRk82TlpvSjE3ZmE3RkJtS29iU2czd0N6c2JVckU40gHAAUFVX3lxTE9YZWZ0SjBBVThlZXIwai1fTkRpY3ZucXpZZGthUUlldW9vWVZJY2dBbzM0ZWVoRUUxdzdtU1hCYWwxZ1J4Qjg4U1dhVldKX2gxdS16dlNuaG5sZXJCUzUzTHZqQV9tYUpLSnduN2JQeGlmVS10NlRJb1VqSEVoYlZHRmZiNTFTVUxVSjFiVzQ0OTdWMmt1SVRaWDVuNjdfY2lNd29mSk5MTjNkNmpvMXE5aWw0SHU1QWN4VC0zeGV3WA"
     },
     {
-      "id": "5e25733e7fa9",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T02:45:43Z",
-      "source": "KCUR",
-      "summary": "Democrat Adam Hamilton sold a centrist message while Republican Sen. Roger Marshall urged Trump voters to show up to the polls to continue the president\u2019s agenda.",
-      "title": "\u2018Control of the Senate goes through Kansas\u2019: Marshall and Hamilton clash at last debate",
-      "url": "https://www.kcur.org/politics-elections-and-government/2026-10-21/control-of-the-senate-goes-through-kansas-marshall-and-hamilton-clash-at-last-debate"
-    },
-    {
       "id": "7d1309b0936f",
       "kind": "news",
       "mentions": [
@@ -742,6 +742,19 @@
       "summary": "Roger Marshall and Adam Hamilton clash in final Kansas Senate debate &nbsp;&nbsp; Mezha.net",
       "title": "Roger Marshall and Adam Hamilton clash in final Kansas Senate debate",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMnotSU4zVlRhZXMwRGVXRWlsUlVBQUhBb3BnM2Q3d2ZiRWl1U3N4MHRqaFNVSlh2SEFtX2xkMUVqMGdXS2Z2eHRGNlRCU05zZjVER1NfUXZQWmpBMmNyRVEyOEtqUmI4M1NkYmZKcFRHQXNzQ21BenFSUmh0bFdadmd4TQ"
+    },
+    {
+      "id": "5c5ac30de2cb",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-22T02:45:00Z",
+      "source": "KCUR",
+      "summary": "\u2018Control of the Senate goes through Kansas\u2019: Marshall and Hamilton clash at last debate &nbsp;&nbsp; KCUR",
+      "title": "\u2018Control of the Senate goes through Kansas\u2019: Marshall and Hamilton clash at last debate",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNeGVEcjRIbExrR0ZxWGVZeWVESkQtT3FiYjkzenFwVGU3cG9rZ0tTSGdVMHZKNU51c1dpQXBGSWUyanZDUTVTcVRCZlBZSGY2c2RUdEx1eC1pRTdoNFJlVEI0OVNxVEhGbW1yS01CalV2YmlIWWJiMU5Pd01nR0VsNmZ4RWlvOFhzMGNFTEZTZWh1TDRqbDJXdGhkdlhjdGtJNmEwV2NoNUFnTU9SOHdPeW1LeFRTWXdkNDZqVHpYM3A4TzRQUnVkVWs5SHRYdS14UjFKSUd0TFBmSDVPdDI1M2NVbmQ"
     },
     {
       "id": "39099ef3a1fa",
@@ -1515,18 +1528,6 @@
       "summary": "Trump spoke to the crowd near Wichita in a state he easily won by 16 points in 2024. He told the audience to \u201cpretend\u201d he\u2019s on the ballot as they head to the polls in a race that pits incumbent Republican Sen. Marshall against Democratic pastor Adam Hamilton.",
       "title": "Trump rallies in Kansas to support Marshall in tight Senate race: 'They gave him a bum rap'",
       "url": "https://www.kcur.org/2026-10-19/president-trump-rallies-in-kansas-to-support-marshall-in-tight-senate-race-with-hamilton"
-    },
-    {
-      "id": "d68f761c8fb1",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-20T01:33:00Z",
-      "source": "KMBC",
-      "summary": "U.S. Sen. Roger Marshall says Trump voters are key to his reelection bid in Kansas &nbsp;&nbsp; KMBC",
-      "title": "U.S. Sen. Roger Marshall says Trump voters are key to his reelection bid in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE02MnVVNmxuczJEd1pLQmFDOU8xQndBdzJlSklTMXRka0VwemlkTUtGSnRHLUVHNXZWTGJvc29qUHoxZUlPYmd4WWtEV3k0dm5EaUpoejZVNnc2alBYVmtlblZhWnhCZkRaWWc1ZjZkQTRIcVBIVUZ4bkJJU1lrdw"
     }
   ],
   "schema_version": 1
