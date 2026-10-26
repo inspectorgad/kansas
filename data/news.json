@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-26T01:23:15.639062Z",
+  "generated_at": "2026-10-26T06:31:54.883579Z",
   "items": [
     {
       "id": "01390a6f748e",
@@ -64,6 +64,18 @@
       "summary": "One-on one with Democratic Kansas U.S. Senate candidate Adam Hamilton &nbsp;&nbsp; KMBC",
       "title": "One-on one with Democratic Kansas U.S. Senate candidate Adam Hamilton",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOY3E3QUxhQTdmdmN2czJnRFVaS0llRHI3Z0RKaUVIY0Zfak0yT3gxMllSdzR5LWE0M2ZreHlqSVdhOHRqNTNjQmFzY1JvUUpwSDNOTXN1dW9NVUlaUGY0Zkk1N0M1MDVyZldMcWNzZnc2VkkxY09Valh5MHFUem5yOWtXZ3hrVG9fZTliU0VvdnN1dmNncHNGZWxRUW9jRjAtaUhfV21hMVk"
+    },
+    {
+      "id": "22a7a950293d",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-25T15:35:00Z",
+      "source": "KMBC",
+      "summary": "PROFILE: Sen. Roger Marshall hoping Trump support pays off &nbsp;&nbsp; KMBC",
+      "title": "PROFILE: Sen. Roger Marshall hoping Trump support pays off",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSEs0bW9EekcwVmh0bnlxOG52Wm8yUGJZWk9OTHJYZXhXSDZYU0tXNWVhaHFETTZGM21yTVJuOU5PZVFLNFRnUk1qc0dRVGhlTWpQVm1hZFp4X3VTMHNzSWljeENvYm1wY1FVNXZvV2RKd1RyOG9VTUhuWDgxQUx1MDNoaFlUZXNZYzZnbThGRzdNN1owZWxuMGZ3"
     },
     {
       "id": "d612c7b0a2a6",
@@ -1515,19 +1527,6 @@
       "summary": "U.S. Sen. Roger Marshall says Trump voters are key to his reelection bid in Kansas &nbsp;&nbsp; KMBC",
       "title": "U.S. Sen. Roger Marshall says Trump voters are key to his reelection bid in Kansas",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE02MnVVNmxuczJEd1pLQmFDOU8xQndBdzJlSklTMXRka0VwemlkTUtGSnRHLUVHNXZWTGJvc29qUHoxZUlPYmd4WWtEV3k0dm5EaUpoejZVNnc2alBYVmtlblZhWnhCZkRaWWc1ZjZkQTRIcVBIVUZ4bkJJU1lrdw"
-    },
-    {
-      "id": "caa9c8f94b2b",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-20T01:24:00Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "Adam Hamilton makes final push with JoCo rallies opposite President Trump, Sen. Marshall rally",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOdEkzb01VcXJ4NGFoNWhOX0I1TVVqbmVycTcwQkRVMVNyenpHSTJaRUZGYmJVZ054WDRyaWlKSlpQbGh0Y1JDY2pPcDRYNEtaUHVUZFdtRTZZejFlb3dMTnlmTVBlUXUzX0lWR1V5eWIzVC1uV3ZuWGlMOWMxZVJRMzlseVZxajViRndLclFmem4zVXBxZkVVcXFTWXhpN1A2M3lrdGFSN0FtSEg1OUMzZTJqRTZXYm1nU1N3TEpoUGVvNjBadW9kS1VwZ3I0c0dKMHJhS3Y4d2ItWGh0TEd2V0hvaENndw"
     }
   ],
   "schema_version": 1
