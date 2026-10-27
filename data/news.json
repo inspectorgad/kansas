@@ -26,8 +26,44 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-27T19:41:54.850773Z",
+  "generated_at": "2026-10-27T23:15:50.700308Z",
   "items": [
+    {
+      "id": "332350e80aad",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-27T22:44:47Z",
+      "source": "Fox News",
+      "summary": "WATCH LIVE: Sen. Roger Marshall campaigns in Kansas ahead of midterms &nbsp;&nbsp; Fox News",
+      "title": "WATCH LIVE: Sen. Roger Marshall campaigns in Kansas ahead of midterms",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1iYVc1RFVYZTNaUEpid2ljbloxektKZXNmYTAtcFQ1bjlKOU14OHYxOFZURHdwNEFQVkdhWnZ6N2QtbGZSNl8zZUNHcDhKRnhRTEt6c2Vn"
+    },
+    {
+      "id": "07f19d6d8d7f",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-27T20:34:00Z",
+      "source": "KSN-TV",
+      "summary": "WATCH: Sen. Roger Marshall speaks at Trump rally &nbsp;&nbsp; KSN-TV",
+      "title": "WATCH: Sen. Roger Marshall speaks at Trump rally",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPeUZBS3M3WmVjVmJXUTJubUd4RVg3RFJhaDdfckJMeUNuTXo0Y0w2eTN6Rld0S19JWFNCQ1ZjYXljeUR6cDVoYTNHX3F2M291c1pyb182WXdLYy1jaHNJLXdqVkJaMFlQV2FFUGNJZDFYdkVhLUVCLVRfTXFjZ3VST2pBSzJuZkhzS1E"
+    },
+    {
+      "id": "b85e22b9d075",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-27T19:51:43Z",
+      "source": "Fox News",
+      "summary": "WATCH LIVE: Dem Senate nominee Adam Hamilton holds campaign stop in Kansas City &nbsp;&nbsp; Fox News",
+      "title": "WATCH LIVE: Dem Senate nominee Adam Hamilton holds campaign stop in Kansas City",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8wVnRGMmdGdWJkRkJ0cThUcFJBLTE0anYyWkRhdmdIbzNPLXB5SHEwTTd2UnZycFd1SUFPOTlVMGhGNm05M21JZkxiMFFTeXZxaG1vSXp3"
+    },
     {
       "id": "a3dfadaa105e",
       "kind": "news",
@@ -54,6 +90,18 @@
       "url": "https://kansasreflector.com/2026/10/27/annual-kansas-speaks-survey-shows-distrust-in-politics-but-support-for-gov-laura-kelly-2"
     },
     {
+      "id": "3745f71e2ccf",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-27T18:37:24Z",
+      "source": "themercury.com",
+      "summary": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally &nbsp;&nbsp; themercury.com",
+      "title": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQY2I5X0RjUEZya21neGw3ZjN6UEZyS2QtOGFWSVAzOGtIc3k4T1BEVTBZNHIzU2xEdUplQ21HbERMem1GNDROYjl5UTNpcGR4RkJQckVuLU91b1RtUmg1NldqNGJTUU5DaS1uQUVKbDhBdjVoNVF5am82ZlFVSm91NUVqNHZKdFpyS25fY1VpY2kxbXRNT2lHbmV2WTJwUXdnNFRCMHlMOEc5SklrVG1GdW9qUUY5Y3Y2MU05MWxsLWJScnpYOGJ2SlRGbkpWWGFobTRmZFhNZm1pcGRZSXJBdHhUMkxFbF85aVJpbmlxYmFSQ2ZSVzNZYkZ1V1VES3BYQnc"
+    },
+    {
       "id": "2e6df2f61565",
       "kind": "news",
       "mentions": [
@@ -64,6 +112,19 @@
       "summary": "Roger Marshall \u2014 Topeka rally &nbsp;&nbsp; themercury.com",
       "title": "Roger Marshall \u2014 Topeka rally",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUGdDbkptUEZweExrN0kxVEhRWXR0ekRMam1JSlhiYmlYNlU3TVJQMnd5M0ZtTHEyd0NpN2drcmc0dTVZS2VaUVZGRFlZWEN6YWZEaHlja1ZnZHVLa2c1MVlZWjNpNzF5bDJ4UTJiUUpWNHJEc3gtNGlTVUdsbTFSOFg3V3BteHB6Mjh2T3AzSWN6a2Z5azBhRXBiYVFKZTg"
+    },
+    {
+      "id": "cf6f637243ee",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-27T15:53:18Z",
+      "source": "Punchbowl News",
+      "summary": "Roger Marshall, Adam Hamilton and AI money &nbsp;&nbsp; Punchbowl News",
+      "title": "Roger Marshall, Adam Hamilton and AI money",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE50NXNRb2UxRS1meUdRSTE0UHZvX2RwX09NTUR0TDNhWFZlRmJWZjd0bWxjZnRtMWhNR0w2OXV5Mm1hbUVNZE03UGpzZ3A5MXljdld6ekRHdGxxMTlOWXM3SU9QdHpzRzRRVzdqRDd4eHo"
     },
     {
       "id": "323de9cc2b67",
@@ -148,9 +209,22 @@
       ],
       "published_at": "2026-10-27T04:00:00Z",
       "source": "C-SPAN",
-      "summary": "US Senator & Candidate for Re-Election Roger Marshall (R-KS) Campaign event in Bonner Springs, KS &nbsp;&nbsp; C-SPAN",
-      "title": "US Senator & Candidate for Re-Election Roger Marshall (R-KS) Campaign event in Bonner Springs, KS",
+      "summary": "US Senator & Candidate for Re-Election Roger Marshall (R-KS) Campaign Event in Bonner Springs, KS &nbsp;&nbsp; C-SPAN",
+      "title": "US Senator & Candidate for Re-Election Roger Marshall (R-KS) Campaign Event in Bonner Springs, KS",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPWXRnRXQ3ckhLa0V3WC1UMXpCSEdXb0VxdzM4ZnV3a3R5WUE1dmxySjJqSmhObXRrczltbWpSS05MSkhoT3JyeFZXMkY3TUFfNnR0MmZpdTY2c3FJY284MWppMkE2UUI3dWM3MGlFWFpSbi1jX3ptY1VrYktOTDZwcE5URFRVMWhfWEpnMHBqdi16LW0wcExINjR5QzhWNVIyMjZYRkt6RVVtOUpyNnl3QWxSamxRXzQyR2ZXSHFQXzVNMVZlTEdyaFQxX2MxY0dtSTljdTBEejlodw"
+    },
+    {
+      "id": "d60e08cc0bb2",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-27T03:19:13Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "Vice President JD Vance stumps for Marshall in Topeka; Hamilton takes different approach in Kansas Senate race &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "Vice President JD Vance stumps for Marshall in Topeka; Hamilton takes different approach in Kansas Senate race",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOTlg1OWtQQTF3U0VxMmZTc2dRVjdfV1JCTlZOc2RMWFlhZFRVS3J6UWRKS3Y4a0d1VzJjOFdaQXNkWFloZ0M2eFhzRlcteldEYXI3OEl6YUIxcmF1bFJGTFB1SFNhSWJxSG5DcS1oRjhENXd3bDVTSWZVc21EU2VoSnJFZE84aGV4eHd2XzVUanE3S2tDQUFCTVhPRGFXU3QxcVBjd1ZCc1lwS0s4czV4ZG5CQXlKRUFlUU54NFE4MFI5eFdQa3FFWEd0QW9mX1cwclh4MEd6UUhDSmtGM2o5UW1IUmwxdlBmelFBaGJJa2tJcl9CSElONDBJQQ"
     },
     {
       "id": "6f437e5649e0",
@@ -175,19 +249,6 @@
       "summary": "See Roger Marshall and others at Topeka rally before JD Vance arrives &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "See Roger Marshall and others at Topeka rally before JD Vance arrives",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNTFR4TXZRQnMyMXl3Vy1ZUmlvNHJzeEs4dTFyVmJqTUEtOV80SEFqa2pWYUlKRVlDM2daWW1Cd0hvV1ZiRnhKSVdvYXZKeWxJdFg4NW13cmp2WU9hTEZrOXNRTTB4THVzMFlxSi02cUQ3TE1ydTdwa3JDZDJSTWxuczZydXRYbG9mMG5VTkF1UE55V1REcWZ0VVJXekJJZmJUd2Z1elpCeS1zaWdOd1ctX3Z1aDVUd3J3WlIxdHdUSTFfZTlGQUZqOWdPdzFDOGRLUDh3bUNWSEZkdWJ4Z1l5QUlWVTdNck1SN1RkbnI4Yw"
-    },
-    {
-      "id": "d60e08cc0bb2",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-27T01:29:00Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "Vice President JD Vance stumps for Marshall in Topeka; Hamilton takes different approach in Kansas Senate race &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "Vice President JD Vance stumps for Marshall in Topeka; Hamilton takes different approach in Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOTlg1OWtQQTF3U0VxMmZTc2dRVjdfV1JCTlZOc2RMWFlhZFRVS3J6UWRKS3Y4a0d1VzJjOFdaQXNkWFloZ0M2eFhzRlcteldEYXI3OEl6YUIxcmF1bFJGTFB1SFNhSWJxSG5DcS1oRjhENXd3bDVTSWZVc21EU2VoSnJFZE84aGV4eHd2XzVUanE3S2tDQUFCTVhPRGFXU3QxcVBjd1ZCc1lwS0s4czV4ZG5CQXlKRUFlUU54NFE4MFI5eFdQa3FFWEd0QW9mX1cwclh4MEd6UUhDSmtGM2o5UW1IUmwxdlBmelFBaGJJa2tJcl9CSElONDBJQQ"
     },
     {
       "id": "044444f4efac",
@@ -594,19 +655,6 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWnJnSWRBN2RIc2hiLWRBZHJzWDAxVUloVm1tTlB1VDRUalI3TklWbjNwSDFWTmVqVzZja3BuLTVxZ2xVY25JRXhMUzVDRTd5YmpyaG8ySmg4MjlNR254OFIxT2xlZHJkeDZDTjlSb2hDTnhYX1BVYWNsYkRqNUhGWlo2aFAyVzFtcDZTZXRIVFFsbEFtdFNfQ1NISThOQUxrMlhLSEtMaGJ4QzJXV2UzWTNVYmI2SnhyNkE"
     },
     {
-      "id": "44ed80300c92",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-23T09:03:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "How Roger Marshall and Adam Hamilton answered Topeka business leaders &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "How Roger Marshall and Adam Hamilton answered Topeka business leaders",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNa1BEaW51MDJjR2dZS0piLUwyc0g1T3hkcUN5RWpaNnhoSVdQN2VzcnQ2UGdyc090TUJQZkZvbGdYYWoxbmtjVVdQaFBobGRDb0N6N1BkTlcyenQ1U1YwQU4zTEltMWFnV3VzaUwyVkFOajVhb2JhSDlEZDRCSUFWdGhPMkRsMUQwX1Y4ZHJKT3l5RXNEV0lEVUd2TU5MMXNsZFdBNWtVeVBCX1pEMV9Fb05pUElDRl9EOXhGTUl4SVByVm5nbnQ1Q1diN1F2cl9HdTdpbGdTbDNNNjNfdXprSTlB"
-    },
-    {
       "id": "f3deec743347",
       "kind": "news",
       "mentions": [
@@ -618,6 +666,19 @@
       "summary": "Sen. Roger Marshall and Adam Hamilton stop at Topeka candidate forums &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Sen. Roger Marshall and Adam Hamilton stop at Topeka candidate forums",
       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQkVMenJWTExfdEdmeUNyV215UWFjaWNic2ZaZEE0OWhRY0RFTV9qRGtMNEJGc01fRVk1MUNuRXh3T0pyLU94d1ZpVE9mX25HQWtXM3J1cmw4cDg5WDE1NHI4ZXNqek9ibG03cDZDYjdnQkFmTnRyZjZ5LWJ2a0hQeGRSWnlBZnJlc2xTcldTTjBRdzVjSUVWVnR3cEZsLTYzamNsbnNCSnpUUFJ2TE1aVTM3a29MbVdjb1pjb2lKakdndDJSSHVYbUtMaHc5Uk03T0hwbTlkUlQ1RkxRUHRoVTdSSjBfVjhRb1dkODhSVmswUnZyc3lj"
+    },
+    {
+      "id": "44ed80300c92",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-23T09:03:00Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "How Roger Marshall and Adam Hamilton answered Topeka business leaders &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "How Roger Marshall and Adam Hamilton answered Topeka business leaders",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNa1BEaW51MDJjR2dZS0piLUwyc0g1T3hkcUN5RWpaNnhoSVdQN2VzcnQ2UGdyc090TUJQZkZvbGdYYWoxbmtjVVdQaFBobGRDb0N6N1BkTlcyenQ1U1YwQU4zTEltMWFnV3VzaUwyVkFOajVhb2JhSDlEZDRCSUFWdGhPMkRsMUQwX1Y4ZHJKT3l5RXNEV0lEVUd2TU5MMXNsZFdBNWtVeVBCX1pEMV9Fb05pUElDRl9EOXhGTUl4SVByVm5nbnQ1Q1diN1F2cl9HdTdpbGdTbDNNNjNfdXprSTlB"
     },
     {
       "id": "f2aa79ee18a7",
@@ -1463,68 +1524,6 @@
       "summary": "A Major Roger Marshall Donor Is a Hospital Bandit &nbsp;&nbsp; The American Prospect",
       "title": "A Major Roger Marshall Donor Is a Hospital Bandit",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNOHluMHRXU2ZZR1hTandSUkgyZFRqdFhYSlhmb1M4RFloamg3SHI3dzJIWm1fX2pyWG9jdU4xcmU4ZTNJX2VLNl9Ec0JPQ0lkQjB2bjVJYTNwWEp3LUpyVU5PMUZoSmZyVWdFbVhmQkFpc1BSSW9PQko0cENtZmpudHNaM1hBMHMyRkE"
-    },
-    {
-      "id": "ba436c4052d5",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T16:00:00Z",
-      "source": "The American Prospect",
-      "summary": "Roger Marshall Boosted Pesticide Products His Wife Is Invested In &nbsp;&nbsp; The American Prospect",
-      "title": "Roger Marshall Boosted Pesticide Products His Wife Is Invested In",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYmJ3WXAwZXRFV1JRdnJUX3FXTHdSY3VPbGZ6UGNDU3hSNWktUEpzRmsxTTdxMGVQUXZoY2ZRdnBxbjZ2ckF5RldRZ25XcHROTE1HSGhoZ3p1OXRtOUtiZGhMcHpZLUMyU1o4TlpzMnNRUGJuVnZjV1ZXX1BleENoR1o5NTVYbjJDbUN1TlE5dmp0UjVqSW04c1J3Q2staEU"
-    },
-    {
-      "id": "f8dc3b5b0b15",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T15:22:31Z",
-      "source": "FOX4KC.com",
-      "summary": "Kansas Senate Debate live coverage with Roger Marshall, Adam Hamilton &nbsp;&nbsp; FOX4KC.com",
-      "title": "Kansas Senate Debate live coverage with Roger Marshall, Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNR1lNWWtzWE5zSUF4S0drdFFBcUVWZjViMVA1eWhZbG8wdV9Zeklsc3E0c29UVHJoQUdSVHo3Uy1fZW1NZjU2dGtoQjQ4bEtsOGFwTFB5NmpxalFleDd4VW1HWWVuVzdaUUtENXJZRVN5YzFXZF9fUFJIVTlhc0phZzM3N2lPMmt0V0pHNnIycUhsLWdtMTl4NHJ0bGphdml0UEl3SE53VVI4Mk1DZnpoS3hibnZpMkdZbnlvV2RySVJjLUtnVVV3bW9jcEluSnhYMVk00gHTAUFVX3lxTE1HWU1Za3NYTnNJQXhLR2t0UUFxRVZmNWIxUDV5aFlsbzB1X1l6SWxzcTRzb1RUcmhBR1JUejdTLV9lbU1mNTZ0a2hCNDhsS2w4YXBMUHk2anFqUWV4N3hVbUdZZW5XN1pRS0Q1cllFU3ljMVdkX19QUkhVOWFzSmFnMzc3aU8ya3RXSkc2cjJxSGwtZ20xOXg0cnRsamF2aXRQSXdITndVUjgyTUNmemhLeGJudmkyR1lueW9XZHJJUmMtS2dVVXdtb2NwSW5KeFgxWTQ"
-    },
-    {
-      "id": "a97263fa79cf",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T14:08:42Z",
-      "source": "KSNT politics",
-      "summary": "Recent polls show that Hamilton and Marshall are neck-and-neck \u2014 something that has not been seen in a Kansas U.S. Senate election in decades.",
-      "title": "Marshall vs. Hamilton Senate race could be among closest in Kansas history",
-      "url": "https://www.ksnt.com/elections/marshall-vs-hamilton-senate-race-could-be-among-closest-in-kansas-history"
-    },
-    {
-      "id": "0d6116429c2b",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T13:37:31Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "Political expert talks pros, cons for Sen. Roger Marshall after President Trump's visit to Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "Political expert talks pros, cons for Sen. Roger Marshall after President Trump's visit to Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdmhiUV9tUFMxV0hiTlYzdlpFTFI2ZzRDSk0yNTRBV2hHeVI3UXZ2M3Vob19zTFlzdnpKcDV2QkZqd3IzRG4tb2U5SFhPVmltYlgwLU85XzY4RUUyZm1Pa1BuOEFCcXhacGg2OWstbzlOSzVCekpVTHhnTFVuaW5EMV9zTXpIbjFZWXlwZTlGc09pcmNEeEIyU1FBcjdBaUI5MTZNOWxDS2J3QktPVlJkdUNJZmM0V00xOFhxY1dfd2hBamlHa0daTmJrbw"
-    },
-    {
-      "id": "743f76b3b66e",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T12:00:00Z",
-      "source": "Yahoo Finance",
-      "summary": "Trump says permanent E-15 ethanol sales will only happen if Kansas reelects GOP Sen. Roger Marshall &nbsp;&nbsp; Yahoo Finance",
-      "title": "Trump says permanent E-15 ethanol sales will only happen if Kansas reelects GOP Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUWc1QVYtWlFIWml5bktfSko1UzRNM29tWTBnZVRqYVJJNGxFMFE0MUU1bkZXb2k0TlpqdFVUaWQzeV9zLXhWZVNCU0xEVlRPS0g3ZDJtNFpMNmp4dl84M2lGQ19pa1V5TGdBQWM0LXBCVWxCM3RQeVU2OFNuTVFYSS1JdkJYLVdpcVNiWHFLN1lOX1ZZ"
     }
   ],
   "schema_version": 1
