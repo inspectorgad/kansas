@@ -1836,6 +1836,21 @@
       "url": "https://docquery.fec.gov/pdf/295/202610259945202295/202610259945202295.pdf"
     },
     {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-25",
+      "form_type": "F1",
+      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-25",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
+    },
+    {
       "committee_id": "C00576173",
       "committee_name": "KANSANS FOR MARSHALL",
       "date": "2026-10-23",
@@ -2022,31 +2037,51 @@
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
       "url": "https://docquery.fec.gov/pdf/673/202608019899298673/202608019899298673.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-31",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/277/202607319899298277/202607319899298277.pdf"
-    },
-    {
-      "committee_id": "C00576173",
-      "committee_name": "KANSANS FOR MARSHALL",
-      "date": "2026-07-30",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/728/202607309899242728/202607309899242728.pdf"
     }
   ],
-  "generated_at": "2026-10-27T08:04:34.543754Z",
+  "generated_at": "2026-10-27T14:26:21.624775Z",
   "outside_spending": {
     "opposing": {
       "hamilton": 24001929.47,
-      "marshall": 35152736.56
+      "marshall": 35341806.25
     },
     "recent": [
+      {
+        "amount": 42296.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00634774",
+        "committee_name": "COMMON SENSE FOR AMERICA PAC",
+        "date": "2026-10-26",
+        "purpose": "INDEPENDENT EXPENDITURE: GOTV TEXTS",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 19787.55,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-10-24",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 38294.93,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-24",
+        "purpose": "MEDIA PRODUCTION - ESTIMATE",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 32388.5,
+        "candidate_id": "marshall",
+        "committee_id": "C00865444",
+        "committee_name": "WINSENATE",
+        "date": "2026-10-24",
+        "purpose": "MEDIA PRODUCTION - ESTIMATE",
+        "support_oppose": "O"
+      },
       {
         "amount": 566399.7,
         "candidate_id": "marshall",
@@ -2153,6 +2188,15 @@
         "committee_name": "GOVERNMENT THAT WORKS PAC",
         "date": "2026-10-24",
         "purpose": "TV AD BUY (ESTIMATE)",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 34682.86,
+        "candidate_id": "marshall",
+        "committee_id": "C00798009",
+        "committee_name": "HEALTHCARE FREEDOM SUPER PAC",
+        "date": "2026-10-23",
+        "purpose": "DIRECT MAIL",
         "support_oppose": "S"
       },
       {
@@ -2361,56 +2405,11 @@
         "date": "2026-10-23",
         "purpose": "YARD SIGNS, SHIPPING (ESTIMATE)",
         "support_oppose": "S"
-      },
-      {
-        "amount": 2125.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-23",
-        "purpose": "YARD SIGNS, PRINTING (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 76.32,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-23",
-        "purpose": "YARD SIGNS, SHIPPING (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 4600.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-23",
-        "purpose": "BUTTONS AND STICKERS, PRINTING (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 211.65,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "date": "2026-10-23",
-        "purpose": "BUTTONS AND STICKERS, SHIPPING (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 1477225.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00953299",
-        "committee_name": "PEOPLE OVER POLITICS ACTION FUND",
-        "date": "2026-10-22",
-        "purpose": "TELEVISION ADVERTISING",
-        "support_oppose": "O"
       }
     ],
     "supporting": {
       "hamilton": 8413730.64,
-      "marshall": 3099980.23
+      "marshall": 3176959.09
     },
     "top_spenders": [
       {
@@ -2434,7 +2433,7 @@
         "supports": "hamilton"
       },
       {
-        "amount": 8161232.24,
+        "amount": 8231915.67,
         "committee_id": "C00865444",
         "committee_name": "WINSENATE",
         "opposes": "marshall"
@@ -2509,7 +2508,7 @@
         "supports": "marshall"
       }
     ],
-    "total": 70668376.9
+    "total": 70934425.45
   },
   "schema_version": 1
 }
