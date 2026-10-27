@@ -26,15 +26,77 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-27T14:26:25.506339Z",
+  "generated_at": "2026-10-27T19:41:54.850773Z",
   "items": [
+    {
+      "id": "a3dfadaa105e",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-27T19:04:17Z",
+      "source": "Kansas City Star",
+      "summary": "What national media is saying about the Hamilton-Marshall race in Kansas &nbsp;&nbsp; Kansas City Star",
+      "title": "What national media is saying about the Hamilton-Marshall race in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8yT3pvWDdsQVJSYWJmLWdpb0Z0Ql85UmxqdmJzWGZIUjRGZ25MS0NmdGpOS3ZDNWVMck9nd2RqazF1YlVjc2pyc3NJUW1ORWtWSXJQVElia09udE95QVJnOWt1Y9IBY0FVX3lxTE5HMTMzdWZSYzZraTJQQjBkSkotd1VnQWIweFl6ckRUV3dneGhoTFVIbGtpMkIzUWJaZi1JTEQ2elpOUHJEejNFZ0tXdFFLQ0hMaVZnVnpiYXl3cnBxYmNXcXFqQQ"
+    },
+    {
+      "id": "c561af7f2ca6",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-27T19:01:35Z",
+      "source": "Kansas Reflector",
+      "summary": "Traducido por Claudia Amaro. TOPEKA \u2014 La gobernadora Laura Kelly sigue siendo la pol\u00edtica m\u00e1s querida de Kansas, mientras el apoyo p\u00fablico se desmorona para el senador estadounidense Roger Marshall, el presidente Donald Trump, los partidos Republicano y Dem\u00f3crata y la pol\u00edtica en general. El Instituto de Asuntos P\u00fablicos Docking de la Universidad Estatal de [&#8230;]",
+      "title": "Una encuesta anual muestra desconfianza en la pol\u00edtica pero apoyo a la gobernadora Laura Kelly",
+      "url": "https://kansasreflector.com/2026/10/27/annual-kansas-speaks-survey-shows-distrust-in-politics-but-support-for-gov-laura-kelly-2"
+    },
+    {
+      "id": "2e6df2f61565",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-27T17:29:00Z",
+      "source": "themercury.com",
+      "summary": "Roger Marshall \u2014 Topeka rally &nbsp;&nbsp; themercury.com",
+      "title": "Roger Marshall \u2014 Topeka rally",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUGdDbkptUEZweExrN0kxVEhRWXR0ekRMam1JSlhiYmlYNlU3TVJQMnd5M0ZtTHEyd0NpN2drcmc0dTVZS2VaUVZGRFlZWEN6YWZEaHlja1ZnZHVLa2c1MVlZWjNpNzF5bDJ4UTJiUUpWNHJEc3gtNGlTVUdsbTFSOFg3V3BteHB6Mjh2T3AzSWN6a2Z5azBhRXBiYVFKZTg"
+    },
+    {
+      "id": "323de9cc2b67",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-27T15:30:00Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "JD Vance rallies in Topeka for Roger Marshall, his second Kansas rally in a month &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "JD Vance rallies in Topeka for Roger Marshall, his second Kansas rally in a month",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUVQyY2lBbHc4OWYySUpUSV80b1lkQmVYUVBNX0ZLYkw2OHNka1JxU3R4WHZhdnluTVF5Zml2a0VYT0d0OFNtb0pXTXBQWmVZME9IWlJXcXBVaXBzaHFOOTNKZ1dBMi1HVWJ2UkJIb2cxb2FZMi1OS2tGV3psVzFubHU4bEdaY0RuOE93aTAtRms4bl9qSkNhcG5wWnlhcHBIS1JjN1lmUVl4RnZ0WDdVSkxTQm1XbG9qVWJSNEZXalFQZzRaSGx3NGVDY1VnRGc4d0kyZWNjUEVyOV83eWV6VkdB"
+    },
+    {
+      "id": "ec9e375f457c",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-27T15:16:17Z",
+      "source": "KSNT politics",
+      "summary": "Standing on a platform outside his bus, Hamilton took aim at the policies of President Donald Trump and criticized Marshall for supporting them.",
+      "title": "Adam Hamilton holds rally in Wichita, calls for 'decency' in Washington",
+      "url": "https://www.ksnt.com/news/politics/watch-live-adam-hamilton-holds-rally-in-wichita"
+    },
     {
       "id": "2d029e8df448",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-27T10:09:00Z",
+      "published_at": "2026-10-27T15:03:00Z",
       "source": "Kansas City Star",
       "summary": "In Sen. Roger Marshall\u2019s longtime home of Great Bend, public support is lukewarm &nbsp;&nbsp; Kansas City Star",
       "title": "In Sen. Roger Marshall\u2019s longtime home of Great Bend, public support is lukewarm",
@@ -198,8 +260,20 @@
       "published_at": "2026-10-26T22:58:57Z",
       "source": "KWCH",
       "summary": "Hamilton\u2019s Monday stump speech centered around the economy and the cost of living.",
-      "title": "Senate candidate Adam Hamilton visits Kansas, speaks on issues during statewide bus tour",
+      "title": "Senate candidate Adam Hamilton visits Kansans, speaks on issues during statewide bus tour",
       "url": "https://www.kwch.com/2026/10/26/senate-candidate-adam-hamilton-visits-kansas-speaks-issues-during-statewide-bus-tour"
+    },
+    {
+      "id": "ba3986b3db38",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-26T22:58:00Z",
+      "source": "KWCH",
+      "summary": "Senate candidate Adam Hamilton visits Kansas, speaks on issues during statewide bus tour &nbsp;&nbsp; KWCH",
+      "title": "Senate candidate Adam Hamilton visits Kansas, speaks on issues during statewide bus tour",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX2NNamVCbmdpc2ZabXZUT3lBdnpQNjl0bmk5c1cydDJsYk5kNlZsSXczRGtjMk1xV2otZjZPbXljQ3JoaWtGSmhLcE80VW8yTzdmRnJwQkRNVW00WlI3RzYzUVZwU3dfY2M5UnhMeThVVnctYUZmQm9vTVRVU3lqR0pLRGVSY2l5M3pkb3c5b0t4bTJlNUc4OVlncmFqUWtBU3VLd3JiQkY0NTM3c3VOckNpQzhTQ2Zy0gHMAUFVX3lxTFBqV05aQ2h3Q0o4TkNvZGlOd0t4V3NfTTRQaTJYbmdodHVyMXljLUJsUGlGdDdsV1JDWWU2eGVEVm5MbmU5X3BKM0E2bWd1X1oxd1A1SjZxZVU0UlpscGxPTFZpUG9ZMzlCdDY1MWV6V3RpaUlabnJHaHZJV0cwYzBSTndra1o1d2plRHBma20tTXp0RzItZ2dreUFfOU9jSThaOVpuM1l5TzVpRWxJb1ZfLTNFMVU4QUVSc3VuOHZuTlU0U0JEdVRZeHk2eg"
     },
     {
       "id": "eac5e470d803",
@@ -782,7 +856,7 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPcU1oNDA1S1pjcGh1a2hxdENfRHk0SVZCNHFIazI3ejhxbFFYcnFDaXNmeXF3YW9hVkF0SmhpazcteWQyVzdxUlRISTdVOHhsMXpPb0tOU1FtaWZGVW1pV0pqZ3k2d0VaTWI0ckRZV0xUMkIwV1ZVamVPNjVmLUktMUtIdXdlTjQwSUJDNTBOUTJXZ9IBpgFBVV95cUxPNTktcjlaZkRJUlpUWkEwQkdlQUVOWFhkb1dDWjRaUENTLWF4djBVeGZMMzkzM3JwUkJ5dDM3Tmc3MmpldVFJclN5bk5FZTcxRGw4UG0zZ25qcHIyZkJTLUdSazc4a2RJQkJOY1lPTlN4bHoyQ0RVdGNHWWxwQXdMZGJ0c1hJYzl0TDJBMW45OTRnRm1CeDBOZDAxTmNmYmkwVHdWVlBB"
     },
     {
-      "id": "0ae9e616c37e",
+      "id": "490c7edce3df",
       "kind": "news",
       "mentions": [
         "marshall"
@@ -791,7 +865,7 @@
       "source": "KCTV",
       "summary": "1-on-1 with (R) Roger Marshall, Kansas U.S. Senate candidate &nbsp;&nbsp; KCTV",
       "title": "1-on-1 with (R) Roger Marshall, Kansas U.S. Senate candidate",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNRW5JeHEyQUU2RmtFNWZ2SXZ6MURfOWFpdkV4UEU5emdaTkY4TVRiTlpOejFKNld2bEZHdTV1QzBxa3l1M3hRUUttMWFyRlQ5YUloSUtFX3FTNkY4Vzd6TG9Qa2NqcjhtM19xZzBzRXY3eUwtZ191c2hJUEVzUjYxRDFvY1JJLU1YSFJkdG9tOHR4eWFsbUhUa0FWUQ"
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUk9rSnlZMVY2cmJRYW5Nc21fNmVBOTduSnpySS1fYUxFTGFmcDhGd0l1TXJkdXRDMVd6c2w0YlhvdnAydExQY0xDSXFCLWxxc0prLUMtaWRPWEQtbXRxWGpVMkZRVWtySGNMYkRTMi1XZ2k4WUp0WTZ1NjFWbmIydmUwbWtNeVNqNDNwZ2JJTHJqTW_SAacBQVVfeXFMTm1PTFYxNmZ5S2ttQjZUUlROOE12VzZ3SkpWZjhpZHQyMVdYTHdqQUVEOHVLV0gxT2pNM2hYaUk5RE9KMGFFLXdfdXpieGk3eFZRSmEyRS1jdU5SWFp1ZnZ3TXd6djV6ZUhsSGpCRS1Eb25ncExxODdHZ3E2YTgxVVhvWjEtbEM5SldYM0V6blRncmNyRDE1bEJLRENZN1pCZWhCZjFtZUU"
     },
     {
       "id": "e30ce05c09a3",
@@ -1451,80 +1525,6 @@
       "summary": "Trump says permanent E-15 ethanol sales will only happen if Kansas reelects GOP Sen. Roger Marshall &nbsp;&nbsp; Yahoo Finance",
       "title": "Trump says permanent E-15 ethanol sales will only happen if Kansas reelects GOP Sen. Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUWc1QVYtWlFIWml5bktfSko1UzRNM29tWTBnZVRqYVJJNGxFMFE0MUU1bkZXb2k0TlpqdFVUaWQzeV9zLXhWZVNCU0xEVlRPS0g3ZDJtNFpMNmp4dl84M2lGQ19pa1V5TGdBQWM0LXBCVWxCM3RQeVU2OFNuTVFYSS1JdkJYLVdpcVNiWHFLN1lOX1ZZ"
-    },
-    {
-      "id": "76f9b97ecfe0",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T11:00:44Z",
-      "source": "CNN",
-      "summary": "Fact check: Contrary to Trump\u2019s claim, no law required Roger Marshall to sue his patients &nbsp;&nbsp; CNN",
-      "title": "Fact check: Contrary to Trump\u2019s claim, no law required Roger Marshall to sue his patients",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUHdsMXMwZGNJTUNnbktPdjl6dTFITXNUVmNvNjZ2QWpfNkI5ZmhnOGpLNzlNc1pseXFMUVktRWNKem5UaXpPV2xKZHhhVExEd1I0d3l4VS1SOGhsTVVzZWowdWNLWXZyMC05WlI1LThUM050dGpWTGUxVzJ4am1SY3B1Q0U"
-    },
-    {
-      "id": "5a9bbefab81f",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-21T10:39:02Z",
-      "source": "Fox 28",
-      "summary": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican &nbsp;&nbsp; Fox 28",
-      "title": "Democrat Hamilton welcomes Trump's Kansas rally for vulnerable Senate Republican",
-      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNbmwzOHlUY21KSEJ5Q1JhTmliMlN0ZjlObGI2Z2tMamg2MVR1QTJoVUdJWXBmQzY5bG1tY3Y2MDBadUwtMkhHd3N0MWxnNmJ4UDlKRmgtWnZCU3QxTUFZbWZCc0dqbVk2NWhULVh5dkpPMG1pQmlkM05OS0J6cDk0SUZTM2hhYzhqa1o1Q20wRlMtWl9OQ2ZYSERURmNJNEZYRktBaW5vZnJURHNlaW5JWGdWQmRySU1UMnVUcm1VUlhsX21JZWZMY1lCbkJqaUFQcU1BbXZocTVvTnlIUDN0VUNDcXN0SVJlZF9NUkxQOFhHUlN5Rm5JQVBxRjh2aUNYbkh2X3h5cEFNcGRsa0RJ"
-    },
-    {
-      "id": "a13fcf632b6b",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T09:00:00Z",
-      "source": "MS NOW",
-      "summary": "Weeks before Election Day, Sen. Roger Marshall\u2019s campaign still had no one on payroll &nbsp;&nbsp; MS NOW",
-      "title": "Weeks before Election Day, Sen. Roger Marshall\u2019s campaign still had no one on payroll",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBuR0d5WlRfMWVYaWJFTmhCRk5BWHhOd0g2dGlzVHB5SENBVndvZVNKTE45Z0w4Nlg1V0hCeGFhUDNyWHk5dlBOT0g3aHdFOHVkbEVDWTFFN0dJN1dldHNyeGhB"
-    },
-    {
-      "id": "271a3a73c42b",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T09:00:00Z",
-      "source": "Newsweek",
-      "summary": "Who Is Roger Marshall\u2019s Wife? Laina Marshall Has Four Children With Senator &nbsp;&nbsp; Newsweek",
-      "title": "Who Is Roger Marshall\u2019s Wife? Laina Marshall Has Four Children With Senator",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORmktZzV6eXpSZ1lsaUwwb3V3MnA5UGQ4ZTRWUENZVmJuRWt2RF93SWNRX2RLQXFVNjNaWExYYi1hd01tZ1RQX2Z0LXNwN09CbDZGSkVadFByZ1VzQnJxd2VnWFNwaWhmLWFKanREQTlSa1RUVWJHMnlxU0pHQ1UwSWlGbDZRb2NzLTI0ZnU4UXJMcXZpN2xxeUFOdzdFMlRlOWJUa19kQnBwRUk"
-    },
-    {
-      "id": "1d909e98f470",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T08:33:26Z",
-      "source": "Kansas Reflector",
-      "summary": "Kansas was honored with the presence of the president of the United States on Monday night. Donald Trump traveled to Park City, just outside Wichita, to voice his support for Republican incumbent Sen. Roger Marshall in his unexpectedly tight race against Democrat Adam Hamilton. I\u2019ve written about that contest at length. You\u2019ve heard my takes. [&#8230;]",
-      "title": "Opinion: Straight from Trump\u2019s lips: Support for Roger Marshall of Kansas and digressions aplenty",
-      "url": "https://kansasreflector.com/2026/10/21/straight-from-trumps-lips-support-for-roger-marshall-of-kansas-and-digressions-aplenty"
-    },
-    {
-      "id": "c53a4e8078ed",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T02:23:44Z",
-      "source": "KWCH",
-      "summary": "Hamilton\u2019s campaign said that the rally is a sign that Marshall is struggling in the polls, while Holscher said she's spoken with disappointed Republicans.",
-      "title": "Hamilton, Holscher respond after Trump calls Kansas Democrats \u2018radical lunatics\u2019 at Wichita rally",
-      "url": "https://www.kwch.com/2026/10/21/hamilton-holscher-respond-after-trump-calls-kansas-democrats-radical-lunatics-wichita-rally"
     }
   ],
   "schema_version": 1
