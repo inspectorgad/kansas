@@ -26,19 +26,95 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-27T23:15:50.700308Z",
+  "generated_at": "2026-10-28T02:26:28.175841Z",
   "items": [
     {
-      "id": "332350e80aad",
+      "id": "88ec3a93ed98",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-28T02:10:58Z",
+      "source": "Latin Times",
+      "summary": "Adam Hamilton Puts Kansas Senate Seat in Play as Polls Show Dead Heat With Roger Marshall &nbsp;&nbsp; Latin Times",
+      "title": "Adam Hamilton Puts Kansas Senate Seat in Play as Polls Show Dead Heat With Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOTFRqd0h1dE9mS2o3LV9sdFFFeldVNjAtSEZnbmd2Z0VpUXdUd0ZWRVlqRGtMYmF0ajRTUGZSM2RVYVhPd21HWnpfYkpEMzB6cms5NE5TNlp0UFRVTmxVeWE4dGl6dndkeVVDM2VXRmNaNzl5OGxydmZUaTVSWXBOcQ"
+    },
+    {
+      "id": "46fb761bafb9",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-28T01:43:20Z",
+      "source": "KSN-TV",
+      "summary": "Adam Hamilton, Sen. Roger Marshall stop in Wichita as election nears &nbsp;&nbsp; KSN-TV",
+      "title": "Adam Hamilton, Sen. Roger Marshall stop in Wichita as election nears",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMldfdlRxMFZrWkFRMXMxR1BpTmdiR3hrdkxsYlNzbGF5WDNVZWZjY1lzTjJoNEE5MWFHWXFfZThvakRDNFJUQmJMN2pmQWd6V0M4MVdocjBla3dxb1djaXYtU193WTRzem9hODZMbDRNdDEyWktNUjF0bGFKQVBZbWc1azBRdjJRZDlhcnpvTGI0NHprSDRzdzl0TUFKS3psb25yXw"
+    },
+    {
+      "id": "ccad274ba895",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-27T22:44:47Z",
-      "source": "Fox News",
-      "summary": "WATCH LIVE: Sen. Roger Marshall campaigns in Kansas ahead of midterms &nbsp;&nbsp; Fox News",
+      "published_at": "2026-10-28T01:42:00Z",
+      "source": "Yahoo",
+      "summary": "Senator Roger Marshall on Finnerty 10-27-26 &nbsp;&nbsp; Yahoo",
+      "title": "Senator Roger Marshall on Finnerty 10-27-26",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQjBoUlRxVjVVckxHOXg4Wmx3OURFWm9KY0dfOHJoTXoyUkEwbGxWTFZSSHNOdzA3SmdCUDAtWFJfNWF0akNlQ0VqcUQxQi1pdlJ3WWd0Tzlybm40NEVBZlJSdENHVmxIOGpHcEJPYVNjeFhYSUo2blpuYWg4cFVNTzZ4azlENEtoUi1J"
+    },
+    {
+      "id": "8e5f4216fa43",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-28T01:26:36Z",
+      "source": "X",
+      "summary": "Kansas Sen. Roger Marshall disses church-going voters in the Kansas City region who attend Adam Hamilton's church: \"They're out of touch ... they're gonna tell you what you should teach your kids at school\" &nbsp;&nbsp; X",
+      "title": "Kansas Sen. Roger Marshall disses church-going voters in the Kansas City region who attend Adam Hamilton's church: \"They're out of touch ... they're gonna tell you what you should teach your kids at school\"",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QNlgzeVdPOE0ybllaSlBWbDZuMkFkbmNRZGJBWTI3aU8yWkR4Q2FWaGdUOTU2am9VR1R6QlhfR1RWY3dwMTYtR184R1llR0hGRWttWjIyQ0daMHVZMFVvVlZFcjJHWUE"
+    },
+    {
+      "id": "ba7cbecebf3d",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-28T00:37:00Z",
+      "source": "KMBC",
+      "summary": "Sen. Roger Marshall hopes Trump's Salina rally will energize Kansas Republicans &nbsp;&nbsp; KMBC",
+      "title": "Sen. Roger Marshall hopes Trump's Salina rally will energize Kansas Republicans",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZ3NPYm94N1hqTjNLUEJZMl9uSWxQZFZTai1uYzVjUmpWYy1nSGIyb2V3MjBuU1BVN3dYZG9GX1U0RGNDcEoxX3k1REpfclpTNm1Tc0NyZGNoMDUtdTRMdE1RZ25MSEpjbFdyMnhRWFJKMDBNZ0lhMGxwZzdOSGZBWV83S2hrSl9zVk1qR00tM29vSGNzRElLczF3"
+    },
+    {
+      "id": "0e1c8b24159d",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-28T00:22:41Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "Former Kansas Senate candidate weighs in on what makes Marshall-Hamilton race so close &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "Former Kansas Senate candidate weighs in on what makes Marshall-Hamilton race so close",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWjRRcEV3eGZrNG0tQ2VmdGctZWlwdGlpMDZZWGhVaWFKRDZuQWNZLVVjX0dMZC1YMjNRdVhaVFpkang4dlpPV3ZpWGVTSzc3dVhCelI4ZkN6VmRKX0tWR3FQSnBNRmdFY0M5NVlwZWdGZHhZXzR1NV81S3FyOGpKS1dNbkUwdFhpdVAwQkY3ZUpxUXBiXzB0c01LbG5XQjdXQVRIX2p0dkJvbkdLU205WlhGY0hBU29ZZ2Vmc1N0Tm9VVDQ"
+    },
+    {
+      "id": "984c8c96de18",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-27T22:44:48Z",
+      "source": "Fox Business",
+      "summary": "WATCH LIVE: Sen. Roger Marshall campaigns in Kansas ahead of midterms &nbsp;&nbsp; Fox Business",
       "title": "WATCH LIVE: Sen. Roger Marshall campaigns in Kansas ahead of midterms",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1iYVc1RFVYZTNaUEpid2ljbloxektKZXNmYTAtcFQ1bjlKOU14OHYxOFZURHdwNEFQVkdhWnZ6N2QtbGZSNl8zZUNHcDhKRnhRTEt6c2Vn"
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1sN21fbGd3cnJDb21PUVhzeDZ6Y09Hb3c4ZTBTdG9NR19DOXRQbW5BdGxwZnFQZ2hjUDcxRDlUZ3J2LWhXdExOOXNVcnhVdFRQS2NKN0NBNm81OWM"
     },
     {
       "id": "07f19d6d8d7f",
@@ -95,7 +171,7 @@
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-27T18:37:24Z",
+      "published_at": "2026-10-27T18:50:17Z",
       "source": "themercury.com",
       "summary": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally &nbsp;&nbsp; themercury.com",
       "title": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally",
@@ -1449,81 +1525,6 @@
       "summary": "ECU Sen. Roger Marshall Complaint &nbsp;&nbsp; End Citizens United",
       "title": "ECU Sen. Roger Marshall Complaint",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9hZENBX0trMGVDV0tqR3lvbDFUODdZdTV5TzZ6SC1UZFowRjhjcjlnV0tlUFB1VlhTOVJDQkdJVlBETTIwMDI3bU5hRGphclRRV3k0aXZBZ2haalIxMk9sUllmakhZY3B3ZVVIMlRYN1Zqa3Zh"
-    },
-    {
-      "id": "9cde3c0e41dc",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T17:42:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Roger Marshall sells Florida vacation house before Kansas election &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Roger Marshall sells Florida vacation house before Kansas election",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWUx5OW1vVVdGZC1kc1I0dEU1ajF6R1BNQVEydGpYSG9RSHFCWmJFcE9DOWtMa1lTNmdkeFNRUWxCT25oTk9yUTA2SjV3Y0dGUEdYYkVtNmhBenpHbVlPcmdDLThFWlh2b21WQzlmQjVFN3VRNU44am9NLVVIZ2h2Z3NOYnhycnZaUHpLc3RUa2s2UGlIMk4yM3FIdzlZVjNpNUZtSkptLWIwX3poYjZhMTc1NExWVnRkcXBHRFJCNURDd3pZRXg5TmtRQzZ6c2xod2FNdTRnMjFjc0pnSHc"
-    },
-    {
-      "id": "c334c643d5fb",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T17:35:26Z",
-      "source": "NewsNation",
-      "summary": "Marshall, Hamilton take debate stage in tight Kansas Senate race &nbsp;&nbsp; NewsNation",
-      "title": "Marshall, Hamilton take debate stage in tight Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQ1FuMWxRdkRSWU1WOWdVY2x2czhIQTBUYUwwNzFVbXJpMGNFYmNvbXZHelNBdW40UnZidjltd0ZJeGU4REJYSVhNOHlVTnZ4dU9TYTI2Vk42QUdCUVh5MFE5TkRLM3dHbGRRNEEzVnAwbEZCYjgwRFdXNWJvSVdRU25VZHdkTzRzcmVqYzh3MFBKRW1tMEpqU0NlWDBaMzRnUGM0NzdxV3Atc3R3YjhfeGN3WnJwc2RINVMyUzRvWlotZDQ"
-    },
-    {
-      "id": "74ce67bcedc6",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T17:00:00Z",
-      "source": "Kansas City Star",
-      "summary": "Sen. Roger Marshall vs. Pastor Adam Hamilton: How to watch Kansas U.S. Senate debate &nbsp;&nbsp; Kansas City Star",
-      "title": "Sen. Roger Marshall vs. Pastor Adam Hamilton: How to watch Kansas U.S. Senate debate",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBiU0hQRmR1Z3VyQ1ZNS0hJMFN4bjdTVjNTQ2UtS21sNWFUdnM4NmtjUDZiV1ZnZ184V3F3dFVLejZnTy1NQTNEbk45aVZRb0hmMHZDNDg1U2NTS1BJbjl1OW5qaHlVNUw1bU1LNDFJN3dZa3hwdV8yTmFsUEhqQdIBfkFVX3lxTFBXWkxFejM5T3dfdW9Icl9PVVUtWTV5eDRPeUFHczBMTXFkZGp5aVlaYXYxVGZhdTZyU1FrV1owbHdmY0lWUWtKUndsUTRIS0Y2b2hjNFFHNS1TR01ZY21BYXE2UGJJZlRNRXg5OXp6Y2JKOXZYZmdqMl9FN09CQQ"
-    },
-    {
-      "id": "7661d51d5962",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T16:49:00Z",
-      "source": "Kansas City Star",
-      "summary": "Marshall and Hamilton will meet in televised debate Wednesday. Here are the details &nbsp;&nbsp; Kansas City Star",
-      "title": "Marshall and Hamilton will meet in televised debate Wednesday. Here are the details",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8yWUtsTHd2TW1ndDd0UU9JVUN1Tktna2ktMk5qMGl3VXVYbEJrQjlzbE5POUt4QjdOQ2NnZzMteEVSV3pTZTg5cTFlcXVVMFlYRHZNeVpvcWdreXg5TDRKSjN5ekRHM3pyVHNPQWZSdWxTVFE5YTJfRFpJcXNlZ9IBfkFVX3lxTE5DZzRGeFFSbHhKdVVuNm1zaHEwLURFMkgzdlVsMkgzcGRlYkUyaFF3Y1pRdXdOcndHSlpuUE5VZXh6ck11cWZwWUhlNUNYSDRxbGx4TXJ2QzRGNy1UV1Nyc2ZsMklHR3luOVNuRlZtSWtaYlRKc0Y4WXN1VjVrdw"
-    },
-    {
-      "id": "054822780950",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T16:45:00Z",
-      "source": "The Hill",
-      "summary": "Kansas Senator Roger Marshall faces final debate in fight for political life &nbsp;&nbsp; The Hill",
-      "title": "Kansas Senator Roger Marshall faces final debate in fight for political life",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOV2pBdUZ4MjdCZVNRNWlCbVhZcHVPX2VlV2liYjVCUkhFZVVwa3dGOTNBeGc5LVN3Um9pSkZlMVdUYjA3NldTdEtXdi1DQ05ucHBMYWJ5dFVCQXpKQ2p3TjNzS1dvS0p1WmJVVXFfQWJFZk8wbWN6TXB6YnhERnhvUTZBMk9tLVdiQnVFY09fTi14d2d1Mk9DT3dnc3BsejhobEYyWTBiRWRiWWZxSmUtRDd3"
-    },
-    {
-      "id": "1cc1430f1660",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T16:05:00Z",
-      "source": "The American Prospect",
-      "summary": "A Major Roger Marshall Donor Is a Hospital Bandit &nbsp;&nbsp; The American Prospect",
-      "title": "A Major Roger Marshall Donor Is a Hospital Bandit",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNOHluMHRXU2ZZR1hTandSUkgyZFRqdFhYSlhmb1M4RFloamg3SHI3dzJIWm1fX2pyWG9jdU4xcmU4ZTNJX2VLNl9Ec0JPQ0lkQjB2bjVJYTNwWEp3LUpyVU5PMUZoSmZyVWdFbVhmQkFpc1BSSW9PQko0cENtZmpudHNaM1hBMHMyRkE"
     }
   ],
   "schema_version": 1
