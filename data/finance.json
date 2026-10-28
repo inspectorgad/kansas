@@ -1839,16 +1839,16 @@
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
-      "form_type": "F1",
-      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
     },
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
+      "form_type": "F1",
+      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -1879,20 +1879,20 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-22",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-10-14",
       "date": "2026-10-22",
       "form_type": "F3",
       "report_type": "PRE-GENERAL",
       "total_receipts": 5641333.41,
       "url": "https://docquery.fec.gov/pdf/351/202610229945144351/202610229945144351.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-10-22",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2039,7 +2039,7 @@
       "url": "https://docquery.fec.gov/pdf/673/202608019899298673/202608019899298673.pdf"
     }
   ],
-  "generated_at": "2026-10-28T09:01:43.536335Z",
+  "generated_at": "2026-10-28T15:58:42.757029Z",
   "outside_spending": {
     "opposing": {
       "hamilton": 24001929.47,

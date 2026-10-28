@@ -26,8 +26,80 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-28T09:01:47.014823Z",
+  "generated_at": "2026-10-28T15:58:46.335959Z",
   "items": [
+    {
+      "id": "9b6ec7205ffc",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-28T15:23:24Z",
+      "source": "Kansas State Collegian",
+      "summary": "Sights of Roger Marshalls Topeka Rally &nbsp;&nbsp; Kansas State Collegian",
+      "title": "Sights of Roger Marshalls Topeka Rally",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxONFNWa0lEOWxGVGpMQXE5MlNxYXRuMW1FWmlEVW9kdjJENmFiTjdibHp6eTV5TkJjQjRGODlNaEQ5ZHlSVXNaU0JxcDBoc0JCeGtSUkFyZGJ6bklHc1k5aXNLQVY5bU1kakIzTEcyeC1TTnhiLVVIVGxuUlEyYlRRUnRoRUk"
+    },
+    {
+      "id": "bdc8ff1072d3",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-28T11:12:13Z",
+      "source": "PinkNews",
+      "summary": "Kansas Senate candidate Adam Hamilton slams 'bullying' of trans folk &nbsp;&nbsp; PinkNews",
+      "title": "Kansas Senate candidate Adam Hamilton slams 'bullying' of trans folk",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB4WExzck5WR3BINjkzUEhEV05QVGxPb2dSa1hZLUhfVDV1NXlSSlFaM1RtT242UWdkRFNhSjhWQlp0WThIbDNRTnhWWHRLa1FuZWUwaEI2VmluZlMzWTY5XzJJRHRkOElhOVltSnFJaExZVzZBbVFaSnVoUQ"
+    },
+    {
+      "id": "c0bc7e0e8407",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-28T11:11:29Z",
+      "source": "The Well News",
+      "summary": "Kansas Senate: Adam Hamilton (D) &nbsp;&nbsp; The Well News",
+      "title": "Kansas Senate: Adam Hamilton (D)",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBnY1dTdW5HdV9yeHF1Y1N1V0pYNGU4Skc0SjJ6N1pjSDAwbmJZUUV1cXVLQkdRZHZuU3gxcFdyZ1R2TElfYUdQY2Z0U21HR0k0RE55Q1NxSWRpWUYzSWZwekV3"
+    },
+    {
+      "id": "26b9a89724ee",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-28T11:11:07Z",
+      "source": "The Well News",
+      "summary": "Kansas Senate: Roger Marshall (R) &nbsp;&nbsp; The Well News",
+      "title": "Kansas Senate: Roger Marshall (R)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcWVJTWN1RndNMnpGWndCMnpYS05ZZWx6TFlSNUtFZlBZaVB6Mml3NFZIb05BMnJUME9UcVM5NlNBUEFWWGZicDZXSjBEUExfdlM5Ym1NRTh4T3Btcm9XZHgyQXN5UGF6b3FuVnUzS3RYb3dKLWNpUFdnOWZQejRfTHd4X0w1bWtEdmtpOHFmc0VhdFlIZVZhSFNJQm1QS00"
+    },
+    {
+      "id": "abb1f2f46ee3",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-28T10:12:00Z",
+      "source": "Wichita Eagle",
+      "summary": "KS Republicans falsely blame Adam Hamilton for Methodist Church split | Opinion &nbsp;&nbsp; Wichita Eagle",
+      "title": "KS Republicans falsely blame Adam Hamilton for Methodist Church split | Opinion",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbTRJX1FVeEktUkt3X1dacG5icVJRVk9OOE4zLTQ4QmJFdXhlWEhvemYwY09zSzNycnViTXJkTW5zbzZpY0tIYWJJczNsakI4eC1jN3JZNnlzTklMZzU2UnRiOXYwVGJyWEpjOURMWWRkQ3p0QS1lZ2FUN2c5b1BuUG9iUV9rZC1HNUHSAYoBQVVfeXFMT2U4WHh4S1pqT2ZpUEFzV2YtMUZ0dmJ3bEZJMjJUMldJcW5Zb3NWLXE0dVBmbkl0V2J2MEdpdEFxeng3N0ZXRmphQmJjcXNUZ2p3TzN3RWJBMkVqNTIyeHhnMS01R0lCSzJfV3lXellHTmtiUVktLVJ0dEs0ZFV3VEVtTU9kWUpVZ0h3"
+    },
+    {
+      "id": "8ed35ba4d480",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-28T09:10:28Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Roger Marshall says Kansas Democrats are 'very motivated' to vote &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Roger Marshall says Kansas Democrats are 'very motivated' to vote",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxORkczMWpVcWJfemwxTWF3RGZuNWs0c0M1NWstczhjaVNLeUNxYmQ3Qk5ReUNsSFBXQUFOTHJ4dzY4VF9GTllWcjJpSUR0SW9WY0Rad0cyQ2x5ZXEtSnJKbWJKWlNxM0NJSUJoMkw2cW12WDBiSUNPRV9hS0Jxdkd5TnVuODA1Wk53SGhVOVBONzdPVDg1UnhSSXA3Nm05RU5KSEY2Tld5LUw4WUxUZ0FaYVpXZ0U5SWhOa1RzZnd2elFseWdjTWRWLVZ5RFpGR1NaME1SZ3RNUjk5cmM"
+    },
     {
       "id": "136b78c1699c",
       "kind": "news",
@@ -201,18 +273,6 @@
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8wVnRGMmdGdWJkRkJ0cThUcFJBLTE0anYyWkRhdmdIbzNPLXB5SHEwTTd2UnZycFd1SUFPOTlVMGhGNm05M21JZkxiMFFTeXZxaG1vSXp3"
     },
     {
-      "id": "10efaf3bf00a",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-27T19:21:58Z",
-      "source": "News Radio KMAN",
-      "summary": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally &nbsp;&nbsp; News Radio KMAN",
-      "title": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNekNNX3dCdWZZQ0h2V2NEOS1nRVFiVkdjTGtGSk5OVjZBMHg5SGJjSjNIWmJPOVVwQVhzeEk1UGNCak5icFRKVEU3YldtVHZiTFhMR0JRYWVTeEVSZnpEWjJJUWdWb3ZZTWt0NTFlUDZoYTJha2hncjZVUjF6WUpzLWtneU1CZV9sOWxPc3JxaVNEanRyaDVxeWFlQmFRanhqc0djNlotcS1OTVlucHc3c1l6VzJTMkVZUHNJ"
-    },
-    {
       "id": "a3dfadaa105e",
       "kind": "news",
       "mentions": [
@@ -236,6 +296,18 @@
       "summary": "Traducido por Claudia Amaro. TOPEKA \u2014 La gobernadora Laura Kelly sigue siendo la pol\u00edtica m\u00e1s querida de Kansas, mientras el apoyo p\u00fablico se desmorona para el senador estadounidense Roger Marshall, el presidente Donald Trump, los partidos Republicano y Dem\u00f3crata y la pol\u00edtica en general. El Instituto de Asuntos P\u00fablicos Docking de la Universidad Estatal de [&#8230;]",
       "title": "Una encuesta anual muestra desconfianza en la pol\u00edtica pero apoyo a la gobernadora Laura Kelly",
       "url": "https://kansasreflector.com/2026/10/27/annual-kansas-speaks-survey-shows-distrust-in-politics-but-support-for-gov-laura-kelly-2"
+    },
+    {
+      "id": "3745f71e2ccf",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-27T18:50:17Z",
+      "source": "themercury.com",
+      "summary": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally &nbsp;&nbsp; themercury.com",
+      "title": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQY2I5X0RjUEZya21neGw3ZjN6UEZyS2QtOGFWSVAzOGtIc3k4T1BEVTBZNHIzU2xEdUplQ21HbERMem1GNDROYjl5UTNpcGR4RkJQckVuLU91b1RtUmg1NldqNGJTUU5DaS1uQUVKbDhBdjVoNVF5am82ZlFVSm91NUVqNHZKdFpyS25fY1VpY2kxbXRNT2lHbmV2WTJwUXdnNFRCMHlMOEc5SklrVG1GdW9qUUY5Y3Y2MU05MWxsLWJScnpYOGJ2SlRGbkpWWGFobTRmZFhNZm1pcGRZSXJBdHhUMkxFbF85aVJpbmlxYmFSQ2ZSVzNZYkZ1V1VES3BYQnc"
     },
     {
       "id": "2e6df2f61565",
@@ -448,18 +520,6 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeS1abEc2RHJ2LTJCZkhPTmZqN1RVUWtSc001Ni1BbHgtdUtjRTJ2Uk1IbUJZY3R3NjBrakh2QjZwVThlcm95ZlZhN1hodk01MGZJUFVtUU5tT18wWloxQzNkWV9Mc2gtY0txQzg1X0ZoeDNMM3JxTnpISUpMcm8zLWVzUVdUOVVqdERuRlJmMU5WQkh5akZJeUNHN2hadw"
     },
     {
-      "id": "eed5618f784a",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-26T22:58:57Z",
-      "source": "KWCH",
-      "summary": "Hamilton\u2019s Monday stump speech centered around the economy and the cost of living.",
-      "title": "Senate candidate Adam Hamilton visits Kansans, speaks on issues during statewide bus tour",
-      "url": "https://www.kwch.com/2026/10/26/senate-candidate-adam-hamilton-visits-kansas-speaks-issues-during-statewide-bus-tour"
-    },
-    {
       "id": "ba3986b3db38",
       "kind": "news",
       "mentions": [
@@ -467,8 +527,8 @@
       ],
       "published_at": "2026-10-26T22:58:00Z",
       "source": "KWCH",
-      "summary": "Senate candidate Adam Hamilton visits Kansas, speaks on issues during statewide bus tour &nbsp;&nbsp; KWCH",
-      "title": "Senate candidate Adam Hamilton visits Kansas, speaks on issues during statewide bus tour",
+      "summary": "Senate candidate Adam Hamilton visits Kansans, speaks on issues during statewide bus tour &nbsp;&nbsp; KWCH",
+      "title": "Senate candidate Adam Hamilton visits Kansans, speaks on issues during statewide bus tour",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX2NNamVCbmdpc2ZabXZUT3lBdnpQNjl0bmk5c1cydDJsYk5kNlZsSXczRGtjMk1xV2otZjZPbXljQ3JoaWtGSmhLcE80VW8yTzdmRnJwQkRNVW00WlI3RzYzUVZwU3dfY2M5UnhMeThVVnctYUZmQm9vTVRVU3lqR0pLRGVSY2l5M3pkb3c5b0t4bTJlNUc4OVlncmFqUWtBU3VLd3JiQkY0NTM3c3VOckNpQzhTQ2Zy0gHMAUFVX3lxTFBqV05aQ2h3Q0o4TkNvZGlOd0t4V3NfTTRQaTJYbmdodHVyMXljLUJsUGlGdDdsV1JDWWU2eGVEVm5MbmU5X3BKM0E2bWd1X1oxd1A1SjZxZVU0UlpscGxPTFZpUG9ZMzlCdDY1MWV6V3RpaUlabnJHaHZJV0cwYzBSTndra1o1d2plRHBma20tTXp0RzItZ2dreUFfOU9jSThaOVpuM1l5TzVpRWxJb1ZfLTNFMVU4QUVSc3VuOHZuTlU0U0JEdVRZeHk2eg"
     },
     {
@@ -1458,69 +1518,6 @@
       "summary": "5 Things to Know About Senator Roger Marshall of Kansas &nbsp;&nbsp; The New York Times",
       "title": "5 Things to Know About Senator Roger Marshall of Kansas",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBibE1ZcFUtOUg2N2xzU0piT0NVdzVrNWFpS2FjS0NWbUVDQlNHd3BwSjRIaTQydDJkN3hDRTVyb2NqT1pJSEgwcEswdTY0N0JjUmV3cngwMFRkUS1LWm4xYnhBa0pfQjEtN0FUelB6Xy1NNkoycVdfNVcxdw"
-    },
-    {
-      "id": "1746c0ae9368",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-21T23:49:38Z",
-      "source": "The New York Times",
-      "summary": "5 Things to Know About Adam Hamilton, the Pastor Running for Senate in Kansas &nbsp;&nbsp; The New York Times",
-      "title": "5 Things to Know About Adam Hamilton, the Pastor Running for Senate in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9pdDZvaXVVUXozSVlOcWFtSTFJWGkwR1pxZGNvNWgwWjNPTkVKLXQ4NmZKamozRC1yWV85aElUSWpPS29oeU5LbGtFTDY0QnhmMUhxMzBocnYxb0dpa0Zha2JuOHhTdEFjcC1sY011aUlhdmJBc3lHX3JR"
-    },
-    {
-      "id": "d6f00140e9da",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T23:45:00Z",
-      "source": "Kansas City Star",
-      "summary": "Fact Check: Marshall and Hamilton debate in race for Kansas seat in U.S. Senate &nbsp;&nbsp; Kansas City Star",
-      "title": "Fact Check: Marshall and Hamilton debate in race for Kansas seat in U.S. Senate",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPakxiWWluQWNwUnZrdnRYdlhoNF9sT2o0OFgwSWVlSWRiaDNnWjk5OGs2VHJGR2VtdU81eFNibGVIbmI2cjd2RXdkRFdvOEUtN0IxVC1TeDhhRzFORUZ6MzFDMlA1NXZLdkhVRUktOTJwM3VzTHo3YmtOLVVkQW1nYzhPWW5pOXNTdWfSAYoBQVVfeXFMUDMxR1o0SDk5NVVudlhNNHFlWEFkWkRZcm1fd2k2aUpCeG9vNWY1dTdGcUpoTkNRc0dmVlFxN2pLUkVTNEpQZ0hQRmlLV2luNk9JVEdnOHpzLXVMVnpfamJ0QUpvOU8zbUp1Vlhncnlscm1JLWMyaGp0aUhfaTNqUWFxcHE1dURHX2pR"
-    },
-    {
-      "id": "107846c8b0fd",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T23:39:17Z",
-      "source": "NewsNation",
-      "summary": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race &nbsp;&nbsp; NewsNation",
-      "title": "Marshall, Hamilton set to take debate stage in tight Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPeFp3MncwMnpQOE1YM1lIR21TNzFwZjRwUHJaTWFYMWgwZFpHbXZkeG90YTVsNmg0alI2VnlYUnZENU1tOEU2azZjVVVaYW1DOWNfQ2doZHZnd2VtcWZLSXluSjNEY21zS0Q2aXJNdWpINjN6dDRqbGtvOUMzcS0zQTAyYmF6c3JNWDFOeENpMzExUdIBlwFBVV95cUxNOW1GbGNTenJqVERQZTZWZUlSY20ySXA1WTZNQU8tdjh3amJYSnVkOWJ2TkRZQmhoNE5wVWpfeXRMRjVTWEx5eko3dmNKeU16cVVGV2wtRDV1dHp1S0k1TFZJS2swT1g4WUhKTHhKOXdrUFVtTnlJYzJOSGxzQUFKNHpfV2wzbUNwYS1JLXBCZUdsVGo0OWU4"
-    },
-    {
-      "id": "0e347fdce983",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-21T23:35:00Z",
-      "source": "Kansas City Star",
-      "summary": "Who is Jon Holt, veteran KC TV anchor who will moderate Marshall-Hamilton debate? &nbsp;&nbsp; Kansas City Star",
-      "title": "Who is Jon Holt, veteran KC TV anchor who will moderate Marshall-Hamilton debate?",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8wcU8tWHphczJzVXd5MWI1blAxNkFpLWllU2xtV2RXcDNnRzJNdVU0dVNnZFdTZlJab2RRX25YVG1melBJcklXcEtDVVZuYndDU1NURU8yTkZiQVNxdWN2Y09RaXFTNXJ2NlFN0gFrQVVfeXFMT191aXB0NUI0MHVXUmVCdE0tM012VVloVjNHQmZOZ0ExcTZzdUJ3dE9vVWlYRWFnLXZ6X3J2azVteERNOFA5M29IbGZzaUhCOWpmb1pvZ2tUWERHSS0wRVFLRFllQk4zS2ltMlE"
-    },
-    {
-      "id": "12a9554596a3",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T21:47:02Z",
-      "source": "Kansas Reflector",
-      "summary": "PARK CITY \u2014 President Donald Trump&#8217;s campaign rally Monday in Kansas provided a platform for his misleading and hyperbolic claims, including the disputed assertion that protesters were being paid to interrupt him. He also used an antisemitic slur to defend U.S. Sen. Roger Marshall. Some of the Kansas Republicans who took the stage before Trump [&#8230;]",
-      "title": "Republicans attempt to tie Kansas Democrats to extremism with spurious claims at Trump rally",
-      "url": "https://kansasreflector.com/2026/10/21/republicans-attempt-to-tie-kansas-democrats-to-extremism-with-spurious-claims-at-trump-rally"
     }
   ],
   "schema_version": 1
