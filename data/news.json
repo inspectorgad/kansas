@@ -26,8 +26,70 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-28T15:58:46.335959Z",
+  "generated_at": "2026-10-28T20:54:49.567664Z",
   "items": [
+    {
+      "id": "932464db6bda",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-28T20:40:00Z",
+      "source": "Modern Ghana",
+      "summary": "'I'm a different kind of candidate': Pastor Adam Hamilton on why he believes he can WIN red Kansas &nbsp;&nbsp; Modern Ghana",
+      "title": "'I'm a different kind of candidate': Pastor Adam Hamilton on why he believes he can WIN red Kansas",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0ya3Y3cDNyOC12b1hsZzBWYTQwcmNkYnJpek54QmJXdmxJMVliWkdXQmZKblpYd1RWc3pCSXFHbk5FaTFJTDRhNDluOEo5ZUNfVWtadEtoOHZUTmxmb0ZZ0gFcQVVfeXFMT0FkQk1rYk52SXhGOWRWV3ppR3ZnMEhTZUJxWmNiYktoQm9wOXIzNzJhVmpoQnVWcDk5d0pLNEJ0ZEZienpGdjBfeUJOdmd3LWpzcFN5a1pianR6ZG0"
+    },
+    {
+      "id": "d87ad6b1f1b7",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-28T17:23:53Z",
+      "source": "KSNT politics",
+      "summary": "Reverend Adam Hamilton (D) stopped in Topeka on Wednesday as part of a larger Kansas bus tour as he makes his bid for the U.S. Senate seat.",
+      "title": "Adam Hamilton bus tour stops in Topeka at Washburn University",
+      "url": "https://www.ksnt.com/capitol-bureau/adam-hamilton-bus-tour-stops-in-topeka-at-washburn-university"
+    },
+    {
+      "id": "7783e3133a35",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-28T17:11:47Z",
+      "source": "Kalshi News",
+      "summary": "Kansas Senate odds: Marshall still favored, but Hamilton closing gap as midterms approach &nbsp;&nbsp; Kalshi News",
+      "title": "Kansas Senate odds: Marshall still favored, but Hamilton closing gap as midterms approach",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcUhFVF9BVk1qQ2xmbFNibHdHVkpvTTVCamRGS3EyLWxhYVEwQy1QcmJWMkU3VWVGRGVFbmhuWV9saWg3UTFidWdfb0VySGRZNVBXemFOaHNoR3VVMTE2OFZzczlWNGlrcFJUei10R2NUSmZDRnR5MWxWQlp1eHdvT1FNX2dZQWZTWUxLX3BHcjI5cmdPWnpyQ2lDNEJjY3M"
+    },
+    {
+      "id": "e1188d72704b",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-28T16:34:00Z",
+      "source": "Action Network",
+      "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 28) &nbsp;&nbsp; Action Network",
+      "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 28)",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWTlMSkxHakR5UXdYZ3FybWQxaWZQUzNoeHVXVER4eWo1VEpDa1hxY1I3Q1VYRXZKaWprTXBmV0tCNFhYY0l0QVJwU2JuMkNsbjd0emZXWFBwb2ZrbVZ0NnhQREZxNGNVN1BUcFZFQlpDRzAxamYwVm9xODZoSElESV84NC1SY1FyLTlKbnNVM2ZOelJVOU81UWl3a3gwRW9IaUg0ODlHTXBwWnI3S0VaaDlIRzlSd3M2ZXFiakZsbm9VSHFEdl81Q29QWXdaenA2ZUZQeWRtVFVvTG5IekloUw"
+    },
+    {
+      "id": "008ab559f4d4",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-28T15:28:23Z",
+      "source": "C-SPAN",
+      "summary": "U.S. Sen. Candidate Adam Hamilton (D-KS) Casts Early Vote &nbsp;&nbsp; C-SPAN",
+      "title": "U.S. Sen. Candidate Adam Hamilton (D-KS) Casts Early Vote",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMDBUaGtLLThvZmRDYS15cGxJUTR1cVc4eVR1VFdHVjZjY2RuY1Yyb2NGYWkycG9ZUlotSVZ6Ym5TMlhUX3JSaWNGSWtYYnRyQS1zdHc3YmJyTE1MYmZWMjkwRDE1TDh3dDJXMXpLYnRsaUJSY21SOERqZ1VTc1NZOHQ3Y0xRb0VNeVNPN20yNE55eWhfTXdHSVNOeDFlQjBQTUNNbElZMA"
+    },
     {
       "id": "9b6ec7205ffc",
       "kind": "news",
@@ -1454,70 +1516,6 @@
       "summary": "In TV debate, Marshall and Hamilton respond to attacks on church abuse, medical bills &nbsp;&nbsp; Kansas City Star",
       "title": "In TV debate, Marshall and Hamilton respond to attacks on church abuse, medical bills",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBUSlgyNVB2RE9ZeGlPeV9NemVXRDdCeUFfZmJjanVRWXVKUktGaFZzZkhWZUx1aHNxcTZ2QUZqRFZudEFVeDZwUVJLeXBZVURkakxNTEdIcm5sR2V0alZQeDF2bzR2azlNWkJnbdIBbEFVX3lxTE1QZEs2bHVJWEViWmwwOGM2WnJQd1p4MVc2ejYtNVEyeUl3WU81dGRnemtEbG1IZGM5SURvNjl2WmoyTTVUREphcVN1Z2VGT1VIaGRaRVExci1mak81NUJGWnBOaExXVU9NUmNTdw"
-    },
-    {
-      "id": "ba4564daed84",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T01:53:00Z",
-      "source": "NBC News",
-      "summary": "Roger Marshall and Adam Hamilton face off in fiery final Kansas Senate debate &nbsp;&nbsp; NBC News",
-      "title": "Roger Marshall and Adam Hamilton face off in fiery final Kansas Senate debate",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdmhOTktCaFMtQ3pSRm5QUXNjZkc1MzdwMC1YXzllSVpUUGlZc0tPVXhJSGwzSzZYUHJna1liNDh3c3A5Q0RHZHJGLWhvYW5yaExVcTVRS2pKSFpONkhtSW4ya2VIdGx3TW5qdEZHYzhLZE04RWpIcV92S0Ztd2FOUHFjS2h6VDdmRktPVWRtbWhzWEJxRXNKWVRjNGpBajBmVzBXdUpJQTVZWnhsV1RFUllnaTVWNUNOaVdmUUQxTkVsQQ"
-    },
-    {
-      "id": "b4d41025dbde",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T01:18:48Z",
-      "source": "Wichita Eagle",
-      "summary": "Senate candidates Marshall, Hamilton clash in live TV debate amid \u2018toss-up\u2019 race &nbsp;&nbsp; Wichita Eagle",
-      "title": "Senate candidates Marshall, Hamilton clash in live TV debate amid \u2018toss-up\u2019 race",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNdndDRzBzVU1GSlRyVFJmS05sVVMyR3JfQkNiZEViRmNFMURSc2tCS09YdS1JUG92M2RWVnRNMEk4M2Vuc0J1d0U1S0MwYkM5YUpmQkRhal9EZ1VaY3JBWlQ4Zjd4Rm1PcGFCanMyVGYtNjJXTnRobElUVERIc1FnYzdnOEjSAYQBQVVfeXFMTXZ3Q0cwc1VNRkpUclRSZktObFVTMkdyX0JDYmRFYkZjRTFEUnNrQktPWHUtSVBvdjNkVlZ0TTBJODNlbnNCdXdFNUtDMGJDOWFKZkJEYWpfRGdVWmNyQVpUOGY3eEZtT3BhQmpzMlRmLTYyV050aGxJVFRESHNRZ2M3ZzhI"
-    },
-    {
-      "id": "51e8022cd6b6",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T01:18:00Z",
-      "source": "Wichita Eagle",
-      "summary": "Five moments that stood out in debate between Roger Marshall and Adam Hamilton &nbsp;&nbsp; Wichita Eagle",
-      "title": "Five moments that stood out in debate between Roger Marshall and Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQVmlnV0w1RHVQTHk0UUNvd184bUtlelpDeHR1UTNKS3A5NDF3cDcxN0ZQVHl4QllMamdIVlJkUTVJOGVXOC1nWHdpenA1enpNV0lwc3J6NXhFak9qQzFlenZTdmhnVHl4TlVmVlJNNFJWU014RmtNVjJyVk00dUxmSE5XSDbSAYQBQVVfeXFMTXZ3Q0cwc1VNRkpUclRSZktObFVTMkdyX0JDYmRFYkZjRTFEUnNrQktPWHUtSVBvdjNkVlZ0TTBJODNlbnNCdXdFNUtDMGJDOWFKZkJEYWpfRGdVWmNyQVpUOGY3eEZtT3BhQmpzMlRmLTYyV050aGxJVFRESHNRZ2M3ZzhI"
-    },
-    {
-      "id": "afc666cdb616",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T00:59:07Z",
-      "source": "NewsNation",
-      "summary": "Marshall and Hamilton take debate stage in tight Kansas Senate race &nbsp;&nbsp; NewsNation",
-      "title": "Marshall and Hamilton take debate stage in tight Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMFR1NHZhUlRTOUk2N2Z6dlZtUWtzeHhYLURkeVpINTVBZ3AwVkRjWmtqVXFSUFZXQ3B0WVktM2RoOG9jb19kakZhVTdWRG90cW1KdjRXY1JicjZ1WnpuQTdIY1BBX255cDJtaDhaSmV4eUQ3S0FyNjdDWDY0UnFmZFUyTXJCQWx3cmlvZnN1ZVk1M1BsQmRRaHRxYkF6Yl9Md2tBVUJNaUZ2XzYzV3lVd2ZR0gG3AUFVX3lxTE52Vm51UDZ3ZTRZV3ZHTDlldklHZlp0Y0JzdG5scVU0amVTRVU0Nk8xTF9KeVl0Vm02ZDdBb2h2S1EyT1pqc21lN1dYSC1jMHVjaHN1clFHRE9iV2ZtZnlTbThfTkRYX1FTdzBrS3FJOEswYjc2UXc1b1IydUVIcUg0RXRZWTRxcHRpSHRkLTBpRHpxUkdhYkxHUlRhYkdzYUVoc3JMSkttUjJaOEQ2UVBRSlZsamZnYw"
-    },
-    {
-      "id": "50c65f322aa2",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-21T23:50:17Z",
-      "source": "The New York Times",
-      "summary": "5 Things to Know About Senator Roger Marshall of Kansas &nbsp;&nbsp; The New York Times",
-      "title": "5 Things to Know About Senator Roger Marshall of Kansas",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBibE1ZcFUtOUg2N2xzU0piT0NVdzVrNWFpS2FjS0NWbUVDQlNHd3BwSjRIaTQydDJkN3hDRTVyb2NqT1pJSEgwcEswdTY0N0JjUmV3cngwMFRkUS1LWm4xYnhBa0pfQjEtN0FUelB6Xy1NNkoycVdfNVcxdw"
     }
   ],
   "schema_version": 1
