@@ -7,17 +7,12 @@
     }
   ],
   "consensus": {
-    "as_of": "2026-10-28T20:51:08.740616Z",
-    "change_1h": 0.007,
-    "change_24h": 0.0079,
-    "change_7d": -0.0259,
-    "hamilton": 0.4059,
+    "as_of": "2026-10-29T00:39:21.833709Z",
+    "change_1h": -0.003,
+    "change_24h": 0.0049,
+    "change_7d": -0.0216,
+    "hamilton": 0.4089,
     "history": [
-      {
-        "hamilton": 0.299,
-        "marshall": 0.701,
-        "t": "2026-09-24T17:32:28.030013Z"
-      },
       {
         "hamilton": 0.301,
         "marshall": 0.699,
@@ -917,21 +912,26 @@
         "hamilton": 0.4059,
         "marshall": 0.5941,
         "t": "2026-10-28T20:51:08.740616Z"
+      },
+      {
+        "hamilton": 0.4089,
+        "marshall": 0.5911,
+        "t": "2026-10-29T00:39:21.833709Z"
       }
     ],
-    "marshall": 0.5941,
+    "marshall": 0.5911,
     "platforms": [
       "kalshi"
     ]
   },
   "disclaimer": "Prediction-market prices are an implied probability of winning, not a projected vote share.",
-  "generated_at": "2026-10-28T20:51:08.745005Z",
+  "generated_at": "2026-10-29T00:39:21.838986Z",
   "markets": [
     {
-      "fetched_at": "2026-10-28T20:51:03.021211Z",
-      "hamilton": 0.4059,
+      "fetched_at": "2026-10-29T00:39:11.464815Z",
+      "hamilton": 0.4089,
       "market_id": "KXKSSENGOVCOMBO-derived",
-      "marshall": 0.5941,
+      "marshall": 0.5911,
       "platform": "kalshi",
       "title": "Kansas Senate 2026 (derived from governor/Senate combinations)"
     }
