@@ -5,6 +5,10 @@
       "url": "https://kansasreflector.com/feed/"
     },
     {
+      "name": "KWCH",
+      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
+    },
+    {
       "name": "KSNT politics",
       "url": "https://www.ksnt.com/news/politics/feed/"
     },
@@ -18,15 +22,11 @@
       "url": "https://www.kcur.org/politics-elections-and-government.rss"
     },
     {
-      "name": "KWCH",
-      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
-    },
-    {
       "name": "KSNT",
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-29T00:43:59.057974Z",
+  "generated_at": "2026-10-29T06:33:37.578016Z",
   "items": [
     {
       "id": "7b8d6a0fec4c",
@@ -156,7 +156,7 @@
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-10-28T16:34:00Z",
+      "published_at": "2026-10-28T16:36:00Z",
       "source": "Action Network",
       "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 28) &nbsp;&nbsp; Action Network",
       "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 28)",
@@ -173,18 +173,6 @@
       "summary": "Sights of Roger Marshalls Topeka Rally &nbsp;&nbsp; Kansas State Collegian",
       "title": "Sights of Roger Marshalls Topeka Rally",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxONFNWa0lEOWxGVGpMQXE5MlNxYXRuMW1FWmlEVW9kdjJENmFiTjdibHp6eTV5TkJjQjRGODlNaEQ5ZHlSVXNaU0JxcDBoc0JCeGtSUkFyZGJ6bklHc1k5aXNLQVY5bU1kakIzTEcyeC1TTnhiLVVIVGxuUlEyYlRRUnRoRUk"
-    },
-    {
-      "id": "008ab559f4d4",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-28T14:59:38Z",
-      "source": "C-SPAN",
-      "summary": "U.S. Sen. Candidate Adam Hamilton (D-KS) Casts Early Vote &nbsp;&nbsp; C-SPAN",
-      "title": "U.S. Sen. Candidate Adam Hamilton (D-KS) Casts Early Vote",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMDBUaGtLLThvZmRDYS15cGxJUTR1cVc4eVR1VFdHVjZjY2RuY1Yyb2NGYWkycG9ZUlotSVZ6Ym5TMlhUX3JSaWNGSWtYYnRyQS1zdHc3YmJyTE1MYmZWMjkwRDE1TDh3dDJXMXpLYnRsaUJSY21SOERqZ1VTc1NZOHQ3Y0xRb0VNeVNPN20yNE55eWhfTXdHSVNOeDFlQjBQTUNNbElZMA"
     },
     {
       "id": "bdc8ff1072d3",
@@ -257,6 +245,18 @@
       "summary": "US midterm elections 2026: Who is Pastor Adam Hamilton, and how much has he raised compared with Roger Mar &nbsp;&nbsp; The Economic Times",
       "title": "US midterm elections 2026: Who is Pastor Adam Hamilton, and how much has he raised compared with Roger Mar",
       "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxNU3ZVc25aek1nVkZRajRUaTRCRGxUVjhxMUswLVNIdENxWE00WW5kbGhGX2RLVXpHaHVlaG9RN1FBN2pNS1VpLTBmUk1OWVhId2ZiRVRoalJtdWVLamFjUnZVYU1xTThEVXBLejZMYmczM3NpeWZhVTE4UkNXeHFNT21CaHhDVS1ESGYxc1ZFeGZQSGFjNHhxZXp4eXJLbklGREEzWS16cVRWMUs5MGp5ZXRFdTh4SUp6NWlSN1oycHhtaF84SVZHcmZ1UGdnSlZ2cWl4OF85YjFCUndhTUE3TWZndmpZcjk4NVNVWThQY0Jrckl5Ti1RenVrNmhMUFRXNDMxUU9YdUJ3TENEa3VxYUctbWJuTkxDbXRxUFFpTkw1MEhvbXdIQjlTQXBTenZaRUdrSGs1Y3dmNUZ3RElV0gG4AkFVX3lxTFAtOVUtMV80ZTBSaTRDM21jVkpOR1pvQnhYWk5Wbzk3QjZuRzBGa1NTXzEzNjlxOHh0WWZSNXVGQUxvbmpuR2VDX2NCeDdtcU01UXhzRnpEeEtTdkdNRlZENGdteWRucmtmbUNoSk52V2RsTDhMdTFWQndDMk1FbHk3b0ZBNkFWZVZwSDQ5R1RCQ05WUkY3bm1mbjk3ZW5NZHFRQTc2ME5CcEgtSlBsZkdSNGdxSGhLVjhPWEZtYjlzSlgwYk5UdVo5MDZYeWtudGJLWFo1eFRhbG5BbVZYRE01SDJBclJpQkltbWV6SmFEYjFFSVNxY1V4QUljSnlQS05FMGYyY0o5cC03NVNXTERlYUNNaXNzME83TW9rR2dLSF8tck5LdlZjVnU4RTZhMHBfbTdhTTU5eA"
+    },
+    {
+      "id": "ee4149c1c893",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-28T04:00:00Z",
+      "source": "C-SPAN",
+      "summary": "U.S. Sen. Candidate Adam Hamilton (D-KS) Casts Early Vote &nbsp;&nbsp; C-SPAN",
+      "title": "U.S. Sen. Candidate Adam Hamilton (D-KS) Casts Early Vote",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOczRwTnNaOXdzY0RvRGtnaFBxcm5IRy1qdTJTbEpUX0NSRGdfN0pUNC1OWEZVOGtiMXdXVlV4cXc3S2l1MlRkXzFNb2ZrMFkzVFpMWnNzNEZQeldjZEM3cVRIRXdidlc5SkQ2ZS1WYjdhVlhPWWRGZlNtcWl6dUgxSC1zTjhpNzJNSXVaVUp0RzVJSFQ3d29Bb2NyOXc4LUF3MWdPcg"
     },
     {
       "id": "957443ab8c50",
