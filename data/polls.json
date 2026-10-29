@@ -1,8 +1,8 @@
 {
   "aggregate": {
     "as_of": "2026-10-29T00:00:00Z",
-    "band": 2.25,
-    "hamilton": 46.69,
+    "band": 2.19,
+    "hamilton": 46.9,
     "history": [
       {
         "date": "2026-07-01",
@@ -741,123 +741,123 @@
       },
       {
         "date": "2026-10-14",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-15",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-16",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-17",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-18",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-19",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-20",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-21",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-22",
-        "hamilton": 46.65,
-        "margin": -0.95,
-        "marshall": 45.7,
-        "n_polls": 10
+        "hamilton": 46.74,
+        "margin": -0.94,
+        "marshall": 45.8,
+        "n_polls": 9
       },
       {
         "date": "2026-10-23",
-        "hamilton": 46.17,
-        "margin": -0.35,
-        "marshall": 45.82,
-        "n_polls": 11
+        "hamilton": 46.18,
+        "margin": -0.28,
+        "marshall": 45.9,
+        "n_polls": 10
       },
       {
         "date": "2026-10-24",
-        "hamilton": 46.17,
-        "margin": -0.35,
-        "marshall": 45.82,
-        "n_polls": 11
+        "hamilton": 46.18,
+        "margin": -0.28,
+        "marshall": 45.9,
+        "n_polls": 10
       },
       {
         "date": "2026-10-25",
-        "hamilton": 46.17,
-        "margin": -0.35,
-        "marshall": 45.82,
-        "n_polls": 11
+        "hamilton": 46.18,
+        "margin": -0.28,
+        "marshall": 45.9,
+        "n_polls": 10
       },
       {
         "date": "2026-10-26",
-        "hamilton": 46.81,
-        "margin": -1.24,
+        "hamilton": 46.9,
+        "margin": -1.32,
         "marshall": 45.57,
-        "n_polls": 11
+        "n_polls": 12
       },
       {
         "date": "2026-10-27",
-        "hamilton": 46.81,
-        "margin": -1.24,
+        "hamilton": 46.9,
+        "margin": -1.32,
         "marshall": 45.57,
-        "n_polls": 11
+        "n_polls": 12
       },
       {
         "date": "2026-10-28",
-        "hamilton": 46.81,
-        "margin": -1.24,
+        "hamilton": 46.9,
+        "margin": -1.32,
         "marshall": 45.57,
-        "n_polls": 11
+        "n_polls": 12
       },
       {
         "date": "2026-10-29",
-        "hamilton": 46.69,
-        "margin": -1.09,
-        "marshall": 45.59,
+        "hamilton": 46.9,
+        "margin": -1.32,
+        "marshall": 45.57,
         "n_polls": 12
       }
     ],
     "leader": "hamilton",
-    "margin": -1.09,
-    "marshall": 45.59,
+    "margin": -1.32,
+    "marshall": 45.57,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
     "n_polls_used": 12,
-    "trend_7d": -0.14
+    "trend_7d": -0.38
   },
   "attribution": [
     {
@@ -867,21 +867,8 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-29T13:41:31.051742Z",
+  "generated_at": "2026-10-29T19:26:25.163035Z",
   "polls": [
-    {
-      "added_at": "2026-10-29T13:41:31.048705Z",
-      "end_date": "2026-10-29",
-      "id": "438a01b68da5",
-      "other": 8.4,
-      "pollster": "FiftyPlusOne",
-      "results": {
-        "hamilton": 45.9,
-        "marshall": 45.7
-      },
-      "start_date": "2026-10-29",
-      "undecided": 8.4
-    },
     {
       "added_at": "2026-10-29T13:41:31.049744Z",
       "end_date": "2026-10-26",
@@ -895,7 +882,34 @@
         "marshall": 45.0
       },
       "sample_size": 838,
-      "start_date": "2026-10-20"
+      "start_date": "2026-10-20",
+      "undecided": 0.0
+    },
+    {
+      "added_at": "2026-10-29T19:26:25.160017Z",
+      "end_date": "2026-10-26",
+      "id": "7f18fec37aab",
+      "other": 7.7,
+      "pollster": "FiftyPlusOne",
+      "results": {
+        "hamilton": 46.9,
+        "marshall": 45.4
+      },
+      "start_date": "2026-10-26",
+      "undecided": 7.7
+    },
+    {
+      "added_at": "2026-10-29T19:26:25.159581Z",
+      "end_date": "2026-10-26",
+      "id": "c037c5d4df74",
+      "other": 7.5,
+      "pollster": "270toWin",
+      "results": {
+        "hamilton": 47.0,
+        "marshall": 45.5
+      },
+      "start_date": "2026-09-29",
+      "undecided": 7.5
     },
     {
       "added_at": "2026-10-26T19:32:26.944542Z",
@@ -929,19 +943,6 @@
       "sponsor": "R",
       "start_date": "2026-10-13",
       "undecided": 2.0
-    },
-    {
-      "added_at": "2026-10-22T14:33:29.770014Z",
-      "end_date": "2026-10-14",
-      "id": "f36531dbaeb3",
-      "other": 9.0,
-      "pollster": "270toWin",
-      "results": {
-        "hamilton": 46.0,
-        "marshall": 45.0
-      },
-      "start_date": "2026-09-15",
-      "undecided": 9.0
     },
     {
       "added_at": "2026-10-11T23:08:17.142334Z",
