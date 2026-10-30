@@ -1,8 +1,8 @@
 {
   "aggregate": {
     "as_of": "2026-10-30T00:00:00Z",
-    "band": 3.05,
-    "hamilton": 48.21,
+    "band": 3.04,
+    "hamilton": 48.3,
     "history": [
       {
         "date": "2026-07-02",
@@ -818,46 +818,46 @@
       },
       {
         "date": "2026-10-26",
-        "hamilton": 47.87,
-        "margin": -2.8,
-        "marshall": 45.07,
-        "n_polls": 12
+        "hamilton": 47.85,
+        "margin": -2.77,
+        "marshall": 45.08,
+        "n_polls": 11
       },
       {
         "date": "2026-10-27",
-        "hamilton": 47.87,
-        "margin": -2.8,
-        "marshall": 45.07,
-        "n_polls": 12
+        "hamilton": 47.85,
+        "margin": -2.77,
+        "marshall": 45.08,
+        "n_polls": 11
       },
       {
         "date": "2026-10-28",
-        "hamilton": 48.21,
-        "margin": -2.89,
-        "marshall": 45.32,
+        "hamilton": 48.3,
+        "margin": -2.97,
+        "marshall": 45.33,
         "n_polls": 14
       },
       {
         "date": "2026-10-29",
-        "hamilton": 48.21,
-        "margin": -2.89,
-        "marshall": 45.32,
+        "hamilton": 48.3,
+        "margin": -2.97,
+        "marshall": 45.33,
         "n_polls": 14
       },
       {
         "date": "2026-10-30",
-        "hamilton": 48.21,
-        "margin": -2.89,
-        "marshall": 45.32,
+        "hamilton": 48.3,
+        "margin": -2.97,
+        "marshall": 45.33,
         "n_polls": 14
       }
     ],
     "leader": "hamilton",
-    "margin": -2.89,
-    "marshall": 45.32,
+    "margin": -2.97,
+    "marshall": 45.33,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
     "n_polls_used": 14,
-    "trend_7d": -2.61
+    "trend_7d": -2.69
   },
   "attribution": [
     {
@@ -867,7 +867,7 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-30T16:34:26.880033Z",
+  "generated_at": "2026-10-30T21:01:33.224246Z",
   "polls": [
     {
       "added_at": "2026-10-30T16:34:26.876877Z",
@@ -895,6 +895,19 @@
       },
       "sample_size": 800,
       "start_date": "2026-10-26"
+    },
+    {
+      "added_at": "2026-10-30T21:01:33.221313Z",
+      "end_date": "2026-10-28",
+      "id": "dfd150db7792",
+      "other": 5.8,
+      "pollster": "270toWin",
+      "results": {
+        "hamilton": 49.0,
+        "marshall": 45.2
+      },
+      "start_date": "2026-09-24",
+      "undecided": 5.8
     },
     {
       "added_at": "2026-10-30T16:34:26.878043Z",
@@ -925,19 +938,6 @@
       "sample_size": 838,
       "start_date": "2026-10-20",
       "undecided": 0.0
-    },
-    {
-      "added_at": "2026-10-30T16:34:26.876401Z",
-      "end_date": "2026-10-26",
-      "id": "be153cc330eb",
-      "other": 7.0,
-      "pollster": "270toWin",
-      "results": {
-        "hamilton": 48.0,
-        "marshall": 45.0
-      },
-      "start_date": "2026-09-24",
-      "undecided": 7.0
     },
     {
       "added_at": "2026-10-26T19:32:26.944542Z",

@@ -26,8 +26,69 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-30T16:38:01.062505Z",
+  "generated_at": "2026-10-30T21:06:28.873765Z",
   "items": [
+    {
+      "id": "2785e6c0b4fe",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T20:15:11Z",
+      "source": "www.washingtonsun.com",
+      "summary": "Roger Marshall Hit With Class-Action Lawsuit Over \u2018Aggressive\u2019 Medical Billing Practices &nbsp;&nbsp; www.washingtonsun.com",
+      "title": "Roger Marshall Hit With Class-Action Lawsuit Over \u2018Aggressive\u2019 Medical Billing Practices",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ3pLUzNQRGpCVDVtTGhiemxhM3YweGY4U0JDZlZMUWJocE53T2Y1cWQycmJIWlJuZmpWODVVVEtZZjdERndwY1JEMG0yeDZGZ1Y4d3RrQ002UjJfellvbW5oUFdNdEdad2JJWjdPbU9hT05ZTGJxTFZWSkpSazVCYnBGQlpvbjNVQ2ZuNWVVVDVaRzVrczgxMm1rWlNWMGI1ZXFVdzVkWXNaQQ"
+    },
+    {
+      "id": "c56d6e0fe714",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T19:03:42Z",
+      "source": "American Journal News",
+      "summary": "Roger Marshall took $38,500 from HSA industry &nbsp;&nbsp; American Journal News",
+      "title": "Roger Marshall took $38,500 from HSA industry",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRWo5QjNSLVVMY19WYWhwYmZPcG5OTmRmRmxkV1I5WVlvQkZvVXRSZVJLMnhpcXdqcWJFZjdfZ3NTenZfcnVQODZQY3Q5ZTdNYmNfUlZIUi11R09SczJPV3h4U2RhUV9MdTVTNFV5Ylp6SHl6U1VsSWp3S0lKc3dNTEln"
+    },
+    {
+      "id": "18052ec7de54",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-30T17:57:00Z",
+      "source": "Action Network",
+      "summary": "Kansas Senate Race Predictions: Adam Hamilton Snatches Lead &nbsp;&nbsp; Action Network",
+      "title": "Kansas Senate Race Predictions: Adam Hamilton Snatches Lead",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcTk4emxnT3h3dzhYRm9xZUk2OEtlc21iMkFyYzVDVkVQbmk5NjJIeEdRaHJKUGMxLTVCTnlmWkctakVNdTc2TC10MXlkaEhvZkVGOVhUWHV3TTBzaUZzVDBrZEFzc1NjNEZfSEZDTXFoTkdPYWRGR0RUQUV5NGk2aXRBUEV3UUtMMlQyaUNYbGNRLXdtbDVod3FWa3o1Zw"
+    },
+    {
+      "id": "b9d307bf18c8",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T16:54:02Z",
+      "source": "KCUR",
+      "summary": "Marshall sued 700 of his patients for unpaid medical bills when he was an OB-GYN. In 81 cases, patients were arrested for missing court dates. One of those arrested patients, Meischa Zimmerman, appeared in a TV ad for Adam Hamilton and now is the lead plaintiff in a class action lawsuit.",
+      "title": "Roger Marshall sued for charging 18% interest on medical debt in Kansas: 'Callous and predatory'",
+      "url": "https://www.kcur.org/politics-elections-and-government/2026-10-30/roger-marshall-sued-medical-debt-interest-rate-kansas-senate"
+    },
+    {
+      "id": "fb76f0502085",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T16:47:00Z",
+      "source": "Kansas City Star",
+      "summary": "Roger Marshall isn\u2019t paying campaign staff for his reelection bid. What\u2019s going on? &nbsp;&nbsp; Kansas City Star",
+      "title": "Roger Marshall isn\u2019t paying campaign staff for his reelection bid. What\u2019s going on?",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5PbEtsejcxUUlPbVZWMkw3RGNNRERYUVNUcU9YZ2FESXAxeThNdXV0UXVjak9sM2ZjOWNZMFZDUlVqb1NBY01iTUM0V0luRHQ1SHQ5SjJOX3hJaG9lUjdhSVBHUFMtSThSdktNbl81a0psTTJxTjlFaE90SVRPd9IBfkFVX3lxTE9LSk1ycmNuM1BqZmRJVzN5TjEtSGw5ekMzc012d2hIVVBkbXdrVFRDV1lNWTlrMC1LWC16MW9sdFBnMVlKZlNIN2YtQ2xuTE9uZERWa0tZaVRUS0d2alRydmJsLUZIc05RQWRXTTBicFhRdlF0NnhTQ3hmU1NuQQ"
+    },
     {
       "id": "b0bf3ccb8682",
       "kind": "news",
@@ -92,6 +153,19 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTUFJVVZyVzdNZnRLOEJTaHo3ZUxMZm9SUkI5VHJoVDJoZWUySFZ2bGdqM1RvV0lPOXhYOUdxNVgyX3JNR0RtOEh6TU5lNzUxYjRGbkhVT2Y0Z0hWVzJ6V1Z4TzQtR3kyVExheFF1UVJ1RlZSUmNtckoyT3UxU3JiOURRMVNRSmpzWjJB0gGQAUFVX3lxTFBWVEtmRWF2U1VqTnB2dkNvQmY3bGw3ZEd4M0wwallTMmR2d1htVEV1ZGUtUFkwTllsX01pSDVDRHBCNms3YV9VR2lLS1ZCZDVhNEthX2RJYjB0TVJQR3BFd21aaThDdy1XamdNWW9ZUVg4VmJqRGVELVB5TzVDTThicHVQTE5vSE5nVFl3MUxtbA"
     },
     {
+      "id": "fff9f25149b8",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T13:07:34Z",
+      "source": "- Emerson Polling",
+      "summary": "October 2026 Kansas Poll: Hamilton Maintains Edge over Marshall in Toss-up Election &nbsp;&nbsp; - Emerson Polling",
+      "title": "October 2026 Kansas Poll: Hamilton Maintains Edge over Marshall in Toss-up Election",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOTlBINU11RVpHR29ySHJlQkIzRkREalllTkFJUnprQTlnYTVhanZwUXVuNGpKY3djRi0xbmFBRmpIVklSTTdyblgtMDF4bU9WSDl4YWJ2Z25NbmtyT1gwWGhfR3F6dGV1Q1cwMkhVTF9Na1BoeGlLdU9KbUJ6XzF3b0ZkTFJFelpZb0hCUHg0ampTcWdYV09GWkVkN2NGUQ"
+    },
+    {
       "id": "e027f6e1de71",
       "kind": "news",
       "mentions": [
@@ -116,16 +190,16 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vNFFDT2NCM3ZwQndZWTIxOHB1c0c4ZmdKQ0R1N3B2SlNfLVlXYzVzMlpZZDJsaHd3Z3BXWndnc3VEV01WVWg4NjVqV2w3ZDdacnppck9ockdHSmRjUU0ycWdxbXhiTHPSAWdBVV95cUxQTWdZZUdWZDhpbHpfbGtPZUQyZlV5d2cxWDJyUkpucjhIU2thWnVEdEl2ODdlMEFhR1dKZ2tBdmw4RHJiVTgwaEhHMnllTnJoejRfSDhxTS1Ha20yR2IxcEJNdVNmd2Jv"
     },
     {
-      "id": "3c6d68300121",
+      "id": "07ccefe4ebda",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
       "published_at": "2026-10-30T10:08:00Z",
-      "source": "Yahoo",
-      "summary": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet &nbsp;&nbsp; Yahoo",
+      "source": "Kansas City Star",
+      "summary": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet &nbsp;&nbsp; Kansas City Star",
       "title": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZUFzMk8zMmQ3YzN1U0tRNFBEZ3J2YTlRdjd6YkVhbWVJdDRmWUF5RnVHdkE3Yi1wZ3djSXpYTHRQekJTUXU2cjNDWVZ1dEFwQVBiUm8wVFV1dWU2dnJyOUt1N0RzcnBZZmM2NkVHTGZLbjRtUk9fbTVLNVVKR2NHdXZQWGpaaHRzTHVGTzEwNUcwcUQwcUE"
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE81QmNTUUpDRFRtNF81ZVcwbFRRV1phTUI3WTAyX2xBTFd4WG53ZDF1YkJIaHdQWE85aGlQc1dtQjY4VGhmYm1VckFxX1ZzLWF2SVZBOVMtb2tMVWdqMUNNRkcyQndYOGPSAWdBVV95cUxPV2ZUc244VUtCUGpERl9yS19oUDU5MmxiRUE1WkhHd2s0YnhsU0JnTGJzRGtwQ0tHRmZIV1ZHWXVyZjloVHAxdFgxUDdLbzlJaDZCdGtzQVQza2l4dDJONVlHblpId05B"
     },
     {
       "id": "504594ae1581",
@@ -1428,80 +1502,6 @@
       "summary": "KANSAS CITY, Mo. \u2014 The two major party candidates for U.S. Senate diverged in a debate Wednesday night on whether tariffs were helping or hurting a Salina manufacturing business they both visited.\u00a0 A spokesperson for the business, however, denied U.S. Sen. Roger Marshall\u2019s claim that tariffs were contributing to its growth. Tim Henry, chief financial [&#8230;]",
       "title": "Kansas manufacturing business responds to candidates\u2019 conflicting accounts of tariff effects",
       "url": "https://kansasreflector.com/2026/10/23/kansas-manufacturing-business-responds-to-candidates-conflicting-accounts-of-tariff-effects"
-    },
-    {
-      "id": "a90e08dbd627",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T23:28:25Z",
-      "source": "The Lawrence Times",
-      "summary": "Roger Marshall, Adam Hamilton clash at last debate in U.S. Senate race &nbsp;&nbsp; The Lawrence Times",
-      "title": "Roger Marshall, Adam Hamilton clash at last debate in U.S. Senate race",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBwYlRVczhOQUkyeFVGYXI3VUUtblJIUnlsby0xd1RteERaUS0wQ1F5UGlrZ05NdUNkMk9SQU1Fa1JuUVlFRXBtZkI2enZrNkZ2akEyX0tmd1NxSE9EWC1vSDV0MW5BYm04Q056WWpGa0hpSmgwZzdKRTB3TQ"
-    },
-    {
-      "id": "9ca202816872",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T22:58:36Z",
-      "source": "KSNT politics",
-      "summary": "Kobach says a midterm election is all about driving your people out to the polls, and if Marshall or Hamilton are able to get their supporters out, that could impact down ballot races like the AG race.",
-      "title": "Kansas attorney general claims U.S. Senate race may impact AG race",
-      "url": "https://www.ksnt.com/elections/kansas-attorney-general-claims-u-s-senate-race-may-impact-ag-race"
-    },
-    {
-      "id": "7fe05fbc7d73",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T22:00:55Z",
-      "source": "JC Post",
-      "summary": "Details on Vice President Vance's Kansas rally for Senator Marshall &nbsp;&nbsp; JC Post",
-      "title": "Details on Vice President Vance's Kansas rally for Senator Marshall",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA1M2RrWk0yWWV1TXFwazBkRkFOZlBSRjlpaVNaSEZjUGJtUDVlb2JsRlpaWkNKMDRaeDlMMlhjbHRsTGdxTzRmVWxYZml3ZXBXTHJVZkIxRE9LVEE0WmxVbmk0S2w2ekRZSXZjMDdR"
-    },
-    {
-      "id": "ef18ad103373",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-22T21:38:32Z",
-      "source": "Yahoo",
-      "summary": "Who is Adam Hamilton? A guide to the megachurch pastor who may become Kansas's first Democratic senator since the Great Depression. &nbsp;&nbsp; Yahoo",
-      "title": "Who is Adam Hamilton? A guide to the megachurch pastor who may become Kansas's first Democratic senator since the Great Depression.",
-      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPQTZZN1NwbGFMc2RyWGpmcjdxN2xhZW9ZYUV1WnozVzlvb0RRWnY4WVhGRkVaZ0RuWW1TaFV1VE9sRXJtSGVoNUdTSE90VUdtZFdGNmFuV09HUXJsNERfalhsZVpyOTJqclVnS19vdFY5VGFsMVJBOGZ3SHYyUVRIZ2xrTE5CbGtRbkJIdnpCcUhlaUh5S0pwZnZwOFNEZEpWMEhlajY1ZHJkQkJtb1p4WWFVYUY4dUpFTXNFWXFnLTAyNnU0MWFJNi1rUTRYTk43c21EZGFpVkZkZ2dvWlZlNXhmNXF3VmdadG5DM1pxcDZ0OGZBMTlocUp0ZnR1ZWlwUV9faHFFWm9Fa2ZoQ0tNWl9yaTl6dw"
-    },
-    {
-      "id": "d5ef484bb7da",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T21:38:00Z",
-      "source": "WSJ",
-      "summary": "Opinion | Roger Marshall Backs a Giant Tax Increase &nbsp;&nbsp; WSJ",
-      "title": "Opinion | Roger Marshall Backs a Giant Tax Increase",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1QdTd6RnBDYUVGRGw0Q1BVNXVxTFlWVnhIbktZZFJpT2ZTOEVPQ3ZaZ2J0Wkp2a2xKZTdJSnBBMndBUkpJcHF3dmZEUW53RE8yWnBxejBQUnNEQk12ZHNSWmNkNVI3WkxrclZtWWdLWTFDNlJ6UXJQQUliVQ"
-    },
-    {
-      "id": "61b5c7eea2e8",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T21:09:00Z",
-      "source": "KCUR",
-      "summary": "JD Vance is coming to Kansas to support Roger Marshall for the second time in 2 months &nbsp;&nbsp; KCUR",
-      "title": "JD Vance is coming to Kansas to support Roger Marshall for the second time in 2 months",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPeFlMeWo4Smd6R3RCYTNUWjI1b3Y2VG94ejRtOVhzSFZ0d2laN1hNVFhWOFFFcGh5alZMRXR4bkVmN1dtUTY1bFg3Nl81eHNzQnVNN0JpdkNyQ01pNmRMUmh0TldfeURYbmJVZ3RkbXlWMG9FeGQzZi1tT2dZOTMtaXRWVk9SUWM2aTZhWlV2S2Ryd0h3OG1kZEtSYVZsTlkzWmp1WU1RZm5QTS1xVk00UXhJRzF4amRxYXFaT1doOTVkcFZtNk5TcHVEaGg5ZmtfNHV4WGptRXdHUVIySDVndTFCSjBUVDZNN2RxTXVEQU5PMEVoSXc"
     }
   ],
   "schema_version": 1
