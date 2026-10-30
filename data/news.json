@@ -26,8 +26,46 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-30T03:00:44.869735Z",
+  "generated_at": "2026-10-30T09:49:05.705582Z",
   "items": [
+    {
+      "id": "504594ae1581",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-30T09:11:51Z",
+      "source": "The Topeka Capital-Journal",
+      "summary": "Kansas candidate Adam Hamilton fires back on attacks on his faith &nbsp;&nbsp; The Topeka Capital-Journal",
+      "title": "Kansas candidate Adam Hamilton fires back on attacks on his faith",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxObjNfT3VYZk9Wcy1Sb0w5T2ZsQTE1STdFb0ZKVThaWC1oRGRZSm11aElOb0xnMEVLM0J6LUhBUUYxNHlUdmw1SEs3UThHZ1Fac1phZUtQWHhqRWtRZVg5WHA5ZF9qZU82Vlg0VzNsT2ZCcFg1VlFFdXI5ekpMUnpUaG0ybm04aWUtYUJyd2E4alcyWUdyczJWdnhGdmJRbEdkbVZjYVhQVlhobG9jVExmZ3A4TlNCRDAweU5GYWllV3BEa2cy"
+    },
+    {
+      "id": "fb6d494b61ca",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T09:00:00Z",
+      "source": "KCUR",
+      "summary": "The $84.5 million in ad spending has blown past the state\u2019s previous record of $49.1 million in 2020, when Roger Marshall first ran for U.S. Senate.",
+      "title": "Marshall-Hamilton race has become most expensive election in Kansas history \u2014 by a lot",
+      "url": "https://www.kcur.org/politics-elections-and-government/2026-10-30/marshall-hamilton-spending-kansas-senate-election"
+    },
+    {
+      "id": "a56c1e0894b7",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T08:33:22Z",
+      "source": "Kansas Reflector",
+      "summary": "A swirling media storm. That\u2019s how I would describe the last few months in Kansas. The U.S. Senate race between Roger Marshall and Adam Hamilton has brought disinformation chaos to television advertising, journalism and social media. Now this: A report this week from a cybersecurity firm based in Tel Aviv alleges that \u201ccoordinated activity\u201d from [&#8230;]",
+      "title": "Opinion: \u2018Inauthentic accounts\u2019 blur social media reality in Kansas Senate race, according to report",
+      "url": "https://kansasreflector.com/2026/10/30/inauthentic-accounts-blur-social-media-reality-in-kansas-senate-race-according-to-report"
+    },
     {
       "id": "f58c282dac2b",
       "kind": "news",
@@ -52,6 +90,18 @@
       "summary": "WATCH LIVE: Dem Senate nominee Adam Hamilton holds rally in Wichita, Kansas &nbsp;&nbsp; Fox News",
       "title": "WATCH LIVE: Dem Senate nominee Adam Hamilton holds rally in Wichita, Kansas",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9IVFkzYTlDWnc3bm5pT1ZJNHR3Q1ZqbUdOeXFzU01TbWdKTkRkeFMtbmN0RzcwNGRFX0ttVFVsMzNOTzVWeF9VWUdJMDVlclV0TGtVNzln"
+    },
+    {
+      "id": "d48e3167500d",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-29T22:04:16Z",
+      "source": "KWCH",
+      "summary": "The White House said instead of coming to Kansas to rally for Sen. Roger Marshall, the president will do a tele-town hall.",
+      "title": "\u2018He\u2019s doing very well\u2019: President Trump responds to decision to cancel Salina rally",
+      "url": "https://www.kwch.com/2026/10/28/president-hold-saturday-rally-salina-regional-airport-county-adjusts-early-voting-hours"
     },
     {
       "id": "afa636d660d5",
@@ -170,7 +220,7 @@
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-10-29T14:44:18Z",
+      "published_at": "2026-10-29T15:01:32Z",
       "source": "The Daily News | Texas' Oldest Newspaper",
       "summary": "Adam Hamilton, Democratic candidate for U.S. Senate, speaks to a crowd gathered at Washburn University on Oct. 28, 2026. &nbsp;&nbsp; The Daily News | Texas' Oldest Newspaper",
       "title": "Adam Hamilton, Democratic candidate for U.S. Senate, speaks to a crowd gathered at Washburn University on Oct. 28, 2026.",
@@ -1454,55 +1504,6 @@
       "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions &nbsp;&nbsp; Action Network",
       "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQbFJ5bV93UzJnZnRtaS1kbDlIRERNemJfenFZcC1jSVM0dzBvbC1JcjRNYWpaUHUyMGJKU0hkNDZySDE5VThwVlpmelBtcnVmOXhRempybEZ6RVk5OFpxNU1OWVdRbHdRTFJiRXg3OG1VN2pEWmdMd2syYlhRdXFVYlp5X3BjRWdIdS1peVRlV21JMnktSjlrSHltUmdMUzZaR01zUXlrRno5TkJxQlp5RXNTNUpDa00xWEtoZWpGVzJ1V1RNaUNsMldFYmRPaDZ0THRLbFRvTQ"
-    },
-    {
-      "id": "dab0f7267a92",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T17:00:12Z",
-      "source": "RFD-TV",
-      "summary": "Sen. Roger Marshall: Harvest Fuel Relief Payments Will Take Time to Reach Farmers &nbsp;&nbsp; RFD-TV",
-      "title": "Sen. Roger Marshall: Harvest Fuel Relief Payments Will Take Time to Reach Farmers",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOTdZejBlUkQ4LTN2eG5EbzRGT0VZREplWVh0ZHoya2JmbDc0TkpzcG5IWlJlWHV1U1BMNEVVa1hqSXZ3VjNsaW5ROHF3dXJQOXZKX2RpTTJ3dUtqMVdXd3B1Z0N6eDRjUENWWWd1NlNBTXl2T091MG5uVGJ5cWVjTG1RTnFCX1lzYWxTVGpuRmZGdW5iOXZhZDVoXzF4NU9kRDB3"
-    },
-    {
-      "id": "3632fdfc0acd",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T16:53:02Z",
-      "source": "Wichita Eagle",
-      "summary": "Former KS House Republican leader endorses Adam Hamilton over Marshall | Opinion &nbsp;&nbsp; Wichita Eagle",
-      "title": "Former KS House Republican leader endorses Adam Hamilton over Marshall | Opinion",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yUENkcHZLZDBSeEpnVXhkaEh0TDJkYW9aN2VoWlZfTVpMVmF1SWlBcFRESFdvR01xZWRMVndLM1FmQ1VTMVNDNXM2eUJyOExwNWtyTXA5cGNDUU5WbnFYZnF4amZmMGZvYktKZnNmOXNOM3ExbTNKatIBeEFVX3lxTFBEQzctaG1JUnptSEFQOWJYVU1aZF9yNGt6aDdyWVlSSjUxRFRMV2xpWkppWDQtMlRRM24zdzBGWnFIaVh4MGl2ZFM2T1pNSHY2MlZJM3VpY1BLejFXY0hfVHFCTGtxODJQRnI3Uy1zR2RyTEhTN0JZRw"
-    },
-    {
-      "id": "ea0c4324fd10",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-22T16:20:00Z",
-      "source": "KCTV",
-      "summary": "1-on-1 with (D) Adam Hamilton, Kansas U.S. Senate candidate &nbsp;&nbsp; KCTV",
-      "title": "1-on-1 with (D) Adam Hamilton, Kansas U.S. Senate candidate",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPcU1oNDA1S1pjcGh1a2hxdENfRHk0SVZCNHFIazI3ejhxbFFYcnFDaXNmeXF3YW9hVkF0SmhpazcteWQyVzdxUlRISTdVOHhsMXpPb0tOU1FtaWZGVW1pV0pqZ3k2d0VaTWI0ckRZV0xUMkIwV1ZVamVPNjVmLUktMUtIdXdlTjQwSUJDNTBOUTJXZ9IBpgFBVV95cUxPNTktcjlaZkRJUlpUWkEwQkdlQUVOWFhkb1dDWjRaUENTLWF4djBVeGZMMzkzM3JwUkJ5dDM3Tmc3MmpldVFJclN5bk5FZTcxRGw4UG0zZ25qcHIyZkJTLUdSazc4a2RJQkJOY1lPTlN4bHoyQ0RVdGNHWWxwQXdMZGJ0c1hJYzl0TDJBMW45OTRnRm1CeDBOZDAxTmNmYmkwVHdWVlBB"
-    },
-    {
-      "id": "490c7edce3df",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T16:19:00Z",
-      "source": "KCTV",
-      "summary": "1-on-1 with (R) Roger Marshall, Kansas U.S. Senate candidate &nbsp;&nbsp; KCTV",
-      "title": "1-on-1 with (R) Roger Marshall, Kansas U.S. Senate candidate",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUk9rSnlZMVY2cmJRYW5Nc21fNmVBOTduSnpySS1fYUxFTGFmcDhGd0l1TXJkdXRDMVd6c2w0YlhvdnAydExQY0xDSXFCLWxxc0prLUMtaWRPWEQtbXRxWGpVMkZRVWtySGNMYkRTMi1XZ2k4WUp0WTZ1NjFWbmIydmUwbWtNeVNqNDNwZ2JJTHJqTW_SAacBQVVfeXFMTm1PTFYxNmZ5S2ttQjZUUlROOE12VzZ3SkpWZjhpZHQyMVdYTHdqQUVEOHVLV0gxT2pNM2hYaUk5RE9KMGFFLXdfdXpieGk3eFZRSmEyRS1jdU5SWFp1ZnZ3TXd6djV6ZUhsSGpCRS1Eb25ncExxODdHZ3E2YTgxVVhvWjEtbEM5SldYM0V6blRncmNyRDE1bEJLRENZN1pCZWhCZjFtZUU"
     }
   ],
   "schema_version": 1
