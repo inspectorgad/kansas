@@ -1,8 +1,8 @@
 {
   "aggregate": {
     "as_of": "2026-10-30T00:00:00Z",
-    "band": 2.21,
-    "hamilton": 46.9,
+    "band": 3.05,
+    "hamilton": 48.21,
     "history": [
       {
         "date": "2026-07-02",
@@ -818,46 +818,46 @@
       },
       {
         "date": "2026-10-26",
-        "hamilton": 46.9,
-        "margin": -1.32,
-        "marshall": 45.57,
+        "hamilton": 47.87,
+        "margin": -2.8,
+        "marshall": 45.07,
         "n_polls": 12
       },
       {
         "date": "2026-10-27",
-        "hamilton": 46.9,
-        "margin": -1.32,
-        "marshall": 45.57,
+        "hamilton": 47.87,
+        "margin": -2.8,
+        "marshall": 45.07,
         "n_polls": 12
       },
       {
         "date": "2026-10-28",
-        "hamilton": 46.9,
-        "margin": -1.32,
-        "marshall": 45.57,
-        "n_polls": 12
+        "hamilton": 48.21,
+        "margin": -2.89,
+        "marshall": 45.32,
+        "n_polls": 14
       },
       {
         "date": "2026-10-29",
-        "hamilton": 46.9,
-        "margin": -1.32,
-        "marshall": 45.57,
-        "n_polls": 12
+        "hamilton": 48.21,
+        "margin": -2.89,
+        "marshall": 45.32,
+        "n_polls": 14
       },
       {
         "date": "2026-10-30",
-        "hamilton": 46.9,
-        "margin": -1.32,
-        "marshall": 45.57,
-        "n_polls": 12
+        "hamilton": 48.21,
+        "margin": -2.89,
+        "marshall": 45.32,
+        "n_polls": 14
       }
     ],
     "leader": "hamilton",
-    "margin": -1.32,
-    "marshall": 45.57,
+    "margin": -2.89,
+    "marshall": 45.32,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
-    "n_polls_used": 12,
-    "trend_7d": -1.04
+    "n_polls_used": 14,
+    "trend_7d": -2.61
   },
   "attribution": [
     {
@@ -867,8 +867,49 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-30T09:45:27.812221Z",
+  "generated_at": "2026-10-30T16:34:26.880033Z",
   "polls": [
+    {
+      "added_at": "2026-10-30T16:34:26.876877Z",
+      "end_date": "2026-10-28",
+      "id": "6671c18e15a9",
+      "other": 6.5,
+      "pollster": "FiftyPlusOne",
+      "results": {
+        "hamilton": 48.4,
+        "marshall": 45.1
+      },
+      "start_date": "2026-10-28",
+      "undecided": 6.5
+    },
+    {
+      "added_at": "2026-10-30T16:34:26.877940Z",
+      "end_date": "2026-10-28",
+      "id": "34bd81ec5852",
+      "margin_of_error": 3.5,
+      "pollster": "Emerson College",
+      "population": "LV",
+      "results": {
+        "hamilton": 50.0,
+        "marshall": 47.0
+      },
+      "sample_size": 800,
+      "start_date": "2026-10-26"
+    },
+    {
+      "added_at": "2026-10-30T16:34:26.878043Z",
+      "end_date": "2026-10-26",
+      "id": "69bdddb44c96",
+      "margin_of_error": 3.9,
+      "pollster": "The Washington Post/SSPG",
+      "population": "LV",
+      "results": {
+        "hamilton": 52.0,
+        "marshall": 43.0
+      },
+      "sample_size": 801,
+      "start_date": "2026-10-22"
+    },
     {
       "added_at": "2026-10-29T13:41:31.049744Z",
       "end_date": "2026-10-26",
@@ -886,30 +927,17 @@
       "undecided": 0.0
     },
     {
-      "added_at": "2026-10-29T19:26:25.160017Z",
+      "added_at": "2026-10-30T16:34:26.876401Z",
       "end_date": "2026-10-26",
-      "id": "7f18fec37aab",
-      "other": 7.7,
-      "pollster": "FiftyPlusOne",
-      "results": {
-        "hamilton": 46.9,
-        "marshall": 45.4
-      },
-      "start_date": "2026-10-26",
-      "undecided": 7.7
-    },
-    {
-      "added_at": "2026-10-29T19:26:25.159581Z",
-      "end_date": "2026-10-26",
-      "id": "c037c5d4df74",
-      "other": 7.5,
+      "id": "be153cc330eb",
+      "other": 7.0,
       "pollster": "270toWin",
       "results": {
-        "hamilton": 47.0,
-        "marshall": 45.5
+        "hamilton": 48.0,
+        "marshall": 45.0
       },
-      "start_date": "2026-09-29",
-      "undecided": 7.5
+      "start_date": "2026-09-24",
+      "undecided": 7.0
     },
     {
       "added_at": "2026-10-26T19:32:26.944542Z",

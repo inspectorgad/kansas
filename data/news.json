@@ -26,8 +26,107 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-30T09:49:05.705582Z",
+  "generated_at": "2026-10-30T16:38:01.062505Z",
   "items": [
+    {
+      "id": "b0bf3ccb8682",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T16:07:06Z",
+      "source": "KCUR",
+      "summary": "Trump originally scheduled an event in Salina on Halloween, but abruptly canceled it. Now, he\u2019ll return to Kansas on Sunday in an attempt to boost Sen. Roger Marshall in his race against Democrat Adam Hamilton.",
+      "title": "Trump uncancels Kansas rally. He'll now visit Sunday to support Marshall's tight Senate race",
+      "url": "https://www.kcur.org/2026-10-30/trump-un-cancels-kansas-rally-and-will-now-visit-sunday-to-support-marshalls-tight-senate-race"
+    },
+    {
+      "id": "7bb9a8e70348",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-30T14:31:00Z",
+      "source": "Forbes",
+      "summary": "Latest Polls In 2026 Midterms: Democrat Adam Hamilton Ahead In Kansas Senate Race In 2 Polls &nbsp;&nbsp; Forbes",
+      "title": "Latest Polls In 2026 Midterms: Democrat Adam Hamilton Ahead In Kansas Senate Race In 2 Polls",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNNWdWUlBBdEJmQjFCeVhPVWdRM3NOaE5wdDkwM3hTNkFXY0lCdWNJRFFLQUFZMVNNWUNOWkN1LW1yZVNxX01CVFlncVhLcGh2Nm54Y25sejRyZ1BxZ0QtWGhDdFNWb3FnM1Zsc01rSTdsQTlVeUpkUDlnZ3lBTWl0SWNTSG15b0swWnRQZzgyUWs5OEMzeHdkTjR2c2tMdkJWMmxGQnJxRklTaFNNajZjMEtua1FvRnFTcVQyc1NsMFRZakxGdmUxTFFjQlFiVDhQS2dEU1pJRmQ"
+    },
+    {
+      "id": "07be20b4ff05",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T14:27:37Z",
+      "source": "KSNT politics",
+      "summary": "A brand new poll is giving us fresh insight on what's happening in the Kansas Senate race, just four days before the votes are counted.",
+      "title": "New poll shows Hamilton leading Marshall in tight Kansas Senate race",
+      "url": "https://www.ksnt.com/news/politics/new-poll-shows-hamilton-leading-marshall-in-tight-kansas-senate-race"
+    },
+    {
+      "id": "d28fcd0d3d43",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T14:02:24Z",
+      "source": "Kansas Reflector",
+      "summary": "GREAT BEND \u2014 A class action usury lawsuit filed Thursday accuses U.S. Sen. Roger Marshall and his former Great Bend medical practice of routinely charging patients illegal interest rates on unpaid medical debt. The lawsuit was filed in Barton County District Court in the final days of a bitter race between the incumbent Republican and [&#8230;]",
+      "title": "Marshall sued for charging \u2018callous and predatory\u2019 18% interest rate on medical debt in Kansas",
+      "url": "https://kansasreflector.com/2026/10/30/marshall-sued-for-charging-callous-and-predatory-18-interest-rate-on-medical-debt-in-kansas"
+    },
+    {
+      "id": "4ff8cdc4a128",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T14:00:00Z",
+      "source": "The Hill",
+      "summary": "Hamilton holds slight lead over Marshall in Kansas Senate contest: Poll &nbsp;&nbsp; The Hill",
+      "title": "Hamilton holds slight lead over Marshall in Kansas Senate contest: Poll",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTUFJVVZyVzdNZnRLOEJTaHo3ZUxMZm9SUkI5VHJoVDJoZWUySFZ2bGdqM1RvV0lPOXhYOUdxNVgyX3JNR0RtOEh6TU5lNzUxYjRGbkhVT2Y0Z0hWVzJ6V1Z4TzQtR3kyVExheFF1UVJ1RlZSUmNtckoyT3UxU3JiOURRMVNRSmpzWjJB0gGQAUFVX3lxTFBWVEtmRWF2U1VqTnB2dkNvQmY3bGw3ZEd4M0wwallTMmR2d1htVEV1ZGUtUFkwTllsX01pSDVDRHBCNms3YV9VR2lLS1ZCZDVhNEthX2RJYjB0TVJQR3BFd21aaThDdy1XamdNWW9ZUVg4VmJqRGVELVB5TzVDTThicHVQTE5vSE5nVFl3MUxtbA"
+    },
+    {
+      "id": "e027f6e1de71",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-30T13:03:02Z",
+      "source": "Washington Examiner",
+      "summary": "Trump scorns Adam Hamilton bipartisan pitch to Kansas voters: \u2018He will vote for Chuck Schumer\u2019 &nbsp;&nbsp; Washington Examiner",
+      "title": "Trump scorns Adam Hamilton bipartisan pitch to Kansas voters: \u2018He will vote for Chuck Schumer\u2019",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZFh0QlJVb0k3OExzSjNqU1h5YlNZTWd6Y19ZUlZRU1ZRVE1abGgwNC1uOFQtR1R2blN4TEY4OGYxWVhtWlNaRGtwQ1oySXd3NVRLLVRrY2J6VVg2SnNkZ1pST25BNWxNSXo4djROZTYxZFBhMkFPd3l4SUZBSnQ1V0hZaE9GMzVhY1BzTnN6cEZDQ1gtaUFNWGVPUkczSWxCYXF2UzIybmd5aVpfU3EtQ2c4c0FUNjdyRDJaTGg5VktsNmtLSHJCMnB3"
+    },
+    {
+      "id": "0224859281af",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-30T10:09:00Z",
+      "source": "Kansas City Star",
+      "summary": "U.S. Senate candidate Adam Hamilton: I will be a senator for all Kansans &nbsp;&nbsp; Kansas City Star",
+      "title": "U.S. Senate candidate Adam Hamilton: I will be a senator for all Kansans",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vNFFDT2NCM3ZwQndZWTIxOHB1c0c4ZmdKQ0R1N3B2SlNfLVlXYzVzMlpZZDJsaHd3Z3BXWndnc3VEV01WVWg4NjVqV2w3ZDdacnppck9ockdHSmRjUU0ycWdxbXhiTHPSAWdBVV95cUxQTWdZZUdWZDhpbHpfbGtPZUQyZlV5d2cxWDJyUkpucjhIU2thWnVEdEl2ODdlMEFhR1dKZ2tBdmw4RHJiVTgwaEhHMnllTnJoejRfSDhxTS1Ha20yR2IxcEJNdVNmd2Jv"
+    },
+    {
+      "id": "3c6d68300121",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T10:08:00Z",
+      "source": "Yahoo",
+      "summary": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet &nbsp;&nbsp; Yahoo",
+      "title": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZUFzMk8zMmQ3YzN1U0tRNFBEZ3J2YTlRdjd6YkVhbWVJdDRmWUF5RnVHdkE3Yi1wZ3djSXpYTHRQekJTUXU2cjNDWVZ1dEFwQVBiUm8wVFV1dWU2dnJyOUt1N0RzcnBZZmM2NkVHTGZLbjRtUk9fbTVLNVVKR2NHdXZQWGpaaHRzTHVGTzEwNUcwcUQwcUE"
+    },
     {
       "id": "504594ae1581",
       "kind": "news",
@@ -173,8 +272,8 @@
       ],
       "published_at": "2026-10-29T16:36:00Z",
       "source": "KCTV",
-      "summary": "Trump cancels second Kansas trip because Roger Marshall is \u201cdoing very well\u201d &nbsp;&nbsp; KCTV",
-      "title": "Trump cancels second Kansas trip because Roger Marshall is \u201cdoing very well\u201d",
+      "summary": "Trump cancels second Kansas trip because Roger Marshall is \u2018doing very well\u2019 &nbsp;&nbsp; KCTV",
+      "title": "Trump cancels second Kansas trip because Roger Marshall is \u2018doing very well\u2019",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWWctMU5kbUl1cXVoLTg3R0RyV3o0cUpuSFdSTjRSVkExdXVETlQxcm9RS2h6NkdVYVVwNTAzdjZ5dk11akM2ZHU1Mi0xNzZINUliSW14LUZ4MFlGZzFJLU40X1owdXlCZE1IM21qUTYxdEdac0NYZmJ5bnEyX3F3X2c0dVJJT3dsaUp6ZNIBoAFBVV95cUxQWHdDOFlTa1dnSTZod1h6Mk5naC1MbF96TEhwdE53bEJXZ1ZfMWtIc2pDWjJnU1NvblJLWXU5eXdQU202NmkyTkJqVlVGSzF3d2hyUElFT2RheUUtdDdFRnpxU3NYRU9ZZ056dUFpbGZuSjhGdlRWQnBTanpDWXRiX1djY2djMnFKVVZBbmlVZnNhd0VRRUFKZzBnWU14eEda"
     },
     {
@@ -1403,107 +1502,6 @@
       "summary": "JD Vance is coming to Kansas to support Roger Marshall for the second time in 2 months &nbsp;&nbsp; KCUR",
       "title": "JD Vance is coming to Kansas to support Roger Marshall for the second time in 2 months",
       "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPeFlMeWo4Smd6R3RCYTNUWjI1b3Y2VG94ejRtOVhzSFZ0d2laN1hNVFhWOFFFcGh5alZMRXR4bkVmN1dtUTY1bFg3Nl81eHNzQnVNN0JpdkNyQ01pNmRMUmh0TldfeURYbmJVZ3RkbXlWMG9FeGQzZi1tT2dZOTMtaXRWVk9SUWM2aTZhWlV2S2Ryd0h3OG1kZEtSYVZsTlkzWmp1WU1RZm5QTS1xVk00UXhJRzF4amRxYXFaT1doOTVkcFZtNk5TcHVEaGg5ZmtfNHV4WGptRXdHUVIySDVndTFCSjBUVDZNN2RxTXVEQU5PMEVoSXc"
-    },
-    {
-      "id": "8ddad97a3b1b",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T20:38:00Z",
-      "source": "Spectrum News",
-      "summary": "VP Vance to hold midterm rally for Sen. Marshall in Topeka &nbsp;&nbsp; Spectrum News",
-      "title": "VP Vance to hold midterm rally for Sen. Marshall in Topeka",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUzhWLTdYRzI3NEY4T2lkYU1SYWptZXNCbWYtbWtuTTlVS2tyZV9QYjBjWDVMY0RZNUk4SlZqcG9qdW5oTmZEWEZ6TmU4S3dVRnQ3VHVUWlpDOEQ1MDIzQnJDd3hjVWpDM2JLUFZ1eHZtM01TUlc3ck52TDJXRnlyS2dmaGRXbjgtZUNlNVM0MjBPV2otS2gydXFvUnc0Wm94"
-    },
-    {
-      "id": "f3fb7716c88e",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T20:03:19Z",
-      "source": "PBS",
-      "summary": "Kansas Sen. Roger Marshall in debate blames Ukraine war, not Iran war, for high diesel prices &nbsp;&nbsp; PBS",
-      "title": "Kansas Sen. Roger Marshall in debate blames Ukraine war, not Iran war, for high diesel prices",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNc21EbmNWWHhvc0JEWUhBRGczQzhCTGJTSlU4UlJOQmlRMC1uMUExNFJ5a3FkamJrMEVrWDk4WHBCYkI3RTJ1VkZpQno0SnRCTzJLVjRHVU53QnIyVzlGWUU0b0p2TzlTWG1ubWFraERzZTRoTTJiOHUxRnpMZ2JNWXRnbW1NOWdReEl0TE5ZWWF1TEMtYzAzS2lHd2h2M0JFem4tOEtyRlVIZEtmRGxtSkNhTUFQMEpJemViSGNpNTRwV0RPSUlZ0gHMAUFVX3lxTE9pYmhVNnhZUElaX0ZIem5JcnVrRUVMZkZNbkhHVHdFZU81TDhZRXEyVVVnY2JoMVFRTGNBZzJwMWpPR01KQUcwTnJrMEZmMHFwdUxqcWpMcWYzQUF4WUZJVXU5YWhlNHk5TGJmQl9kT2Q5M0NfVnJsVWtEZFBZUEZMN1BiWGtxREtqbHVmYWk5YmJRV3hJN0xERVRJeFg1OW5nUXVwZnBpcnh3MlJ5YldyX1ZPTkgwZFhJb3NxZjhXTFZITUpUNW5XZnNkaw"
-    },
-    {
-      "id": "f5c2ef1a121f",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-22T19:40:00Z",
-      "source": "X",
-      "summary": "\ud83c\uddfa\ud83c\uddf8\ud83c\uddee\ud83c\uddf7 Republican Senator Roger Marshall just admitted what's hurting his campaign, and he didn't even hesitate. Fox News asked whether it was Iran, gasoline, diesel, or all three. Marshall went straight to fuel prices. \u201cIt is the cost of gasoline and the cost of di &nbsp;&nbsp; X",
-      "title": "\ud83c\uddfa\ud83c\uddf8\ud83c\uddee\ud83c\uddf7 Republican Senator Roger Marshall just admitted what's hurting his campaign, and he didn't even hesitate. Fox News asked whether it was Iran, gasoline, diesel, or all three. Marshall went straight to fuel prices. \u201cIt is the cost of gasoline and the cost of di",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5UdTRmbFFWU0tpQ2tLQmoyaXExMEJJblEzM3N2OVgyTVlhYndPcUVfRU9vTGNGOFl6eVVBMnFXQ3JwY3Z0dWRzQUdienUtSDM0Wjlobm1TeEVwVENFOTQyVFp4RWNqazRQMXNvTQ"
-    },
-    {
-      "id": "13a554f097ce",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T18:59:21Z",
-      "source": "X",
-      "summary": "Adam Hamilton: \"Keep in mind that the president offered to pay voters $5,000 a piece to reelect Roger Marshall. He was gonna spend $1 trillion to do this. So we're talking $350 billion over 10 years to help people h ave their health insurance? ... the answer ca &nbsp;&nbsp; X",
-      "title": "Adam Hamilton: \"Keep in mind that the president offered to pay voters $5,000 a piece to reelect Roger Marshall. He was gonna spend $1 trillion to do this. So we're talking $350 billion over 10 years to help people h ave their health insurance? ... the answer ca",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9QMWhXQnJ0YUJwTHlJR2V3Ni1qajR4YlllZ0ZGMmRmWXdTWDk0cHRjMkJXVTl4RmlMajJERlExNDFxRVFnWWVNbGYxTGdkY1BfRWpEOVVOeGVKUFYtZjBaN2dEbkZkV2c"
-    },
-    {
-      "id": "f5acffcffee1",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T18:46:16Z",
-      "source": "X",
-      "summary": "Adam Hamilton to Roger Marshall: \"I'm just curious -- with all those undocumented children that you delivered, did you also call ICE and ask them to be taken away? You had compassion in delivering these children, but then you support quotas?\" &nbsp;&nbsp; X",
-      "title": "Adam Hamilton to Roger Marshall: \"I'm just curious -- with all those undocumented children that you delivered, did you also call ICE and ask them to be taken away? You had compassion in delivering these children, but then you support quotas?\"",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE12VjlEOVNid3RFZ2VPbmFLVVI0OXI3V2NSQmRBdzVNTVhfSFVxQ0RrMURnV2lnYVNkd0xjc2RwWWpTUENtQzJvLXV6b2FweUlyMkZ2SWFDaVd4c1hzb2I3OE5zWHBkUDQ"
-    },
-    {
-      "id": "9dd4e942fcdb",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T18:30:00Z",
-      "source": "Kansas City Star",
-      "summary": "Fact Check: Where do Marshall and Hamilton stand on cutting gas tax during Iran war? &nbsp;&nbsp; Kansas City Star",
-      "title": "Fact Check: Where do Marshall and Hamilton stand on cutting gas tax during Iran war?",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNVlU1SXVNeGR6RUJGVk9wRWw5LTdCYTZMdUluVVFsMXo3TTI0WEZrZWQ0Vm4yVGZtdUF4VVY4SXFIS2tOUmxwNUQ2Nk5kajBKNl9OS3dOS0MwU1lXUUQ4MDFvSFlqUEF3OVJkV0VjMTFCMXktS1J3dDNINDZtaGVGcmQyck1QSVM2c2fSAYoBQVVfeXFMUEhvOUkzejNWS0U4RlhIV0lrVmZ0cGFybzJDZ1dTRkREU0ZPOHVEUEJaWlA4elIwV1R6STNYMHdjb2xCcFF6QVhOaVlxY2Rub2J1eTZraE1QWl96bHdHM0pCaW40dzhzN3FoUmxQNVJwWGRTOFBvZDhmd0p0M1JMRGFIRE1EdGowbWZR"
-    },
-    {
-      "id": "76c1cbbe784d",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T17:50:55Z",
-      "source": "\u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
-      "summary": "Kansas Senate Debate Stuns Voters as Republican Roger Marshall Breaks With Donald Trump and Democrat Adam Hamilton Denounces Joe Biden &nbsp;&nbsp; \u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629",
-      "title": "Kansas Senate Debate Stuns Voters as Republican Roger Marshall Breaks With Donald Trump and Democrat Adam Hamilton Denounces Joe Biden",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1SZW40bUVMNjhhWUxVZ0l2VUhNbnFYWFdwOU0wSkZBNUxLN0pGazNmeVJZOE96NXNUY1hYRDBtSjdHVWlBSGxqTTJ5ZDZ1WXJCZlow"
-    },
-    {
-      "id": "c8496bb3ae84",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-22T17:01:00Z",
-      "source": "Action Network",
-      "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions &nbsp;&nbsp; Action Network",
-      "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQbFJ5bV93UzJnZnRtaS1kbDlIRERNemJfenFZcC1jSVM0dzBvbC1JcjRNYWpaUHUyMGJKU0hkNDZySDE5VThwVlpmelBtcnVmOXhRempybEZ6RVk5OFpxNU1OWVdRbHdRTFJiRXg3OG1VN2pEWmdMd2syYlhRdXFVYlp5X3BjRWdIdS1peVRlV21JMnktSjlrSHltUmdMUzZaR01zUXlrRno5TkJxQlp5RXNTNUpDa00xWEtoZWpGVzJ1V1RNaUNsMldFYmRPaDZ0THRLbFRvTQ"
     }
   ],
   "schema_version": 1
