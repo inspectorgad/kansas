@@ -26,8 +26,33 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-31T17:59:41.723955Z",
+  "generated_at": "2026-10-31T21:13:12.451652Z",
   "items": [
+    {
+      "id": "b34ca7de72db",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-31T18:11:28Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "U.S. Senate hopeful Adam Hamilton rallies supporters in Kansas City, Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "U.S. Senate hopeful Adam Hamilton rallies supporters in Kansas City, Kansas",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOb0Vtald6ZmtXd2hJajhITTRRVnlSZU9nRlZKZzFIWFg5ZFpyeWViZ3ZpdW5OVy10UTRUc3hGTUJHY3hmT1VlMTNKbXVmc2U4NXlRNFpPQ1F5RzVPVWpKTmZySW1wTGlzUFJfN1NkMkhrY21rWUZWdXJsdkxCMTdLeWRGeUtHRlBSSzc5QWM4anp3Wl9kWkl4TnczR1ZSb1JTYmxIbjN0aVFOVkRnVnpMazNRdzNZNEp6NFFxRGZWUGZKUDZORWxPM0tkNzFYQQ"
+    },
+    {
+      "id": "70b760f9211d",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-31T17:14:27Z",
+      "source": "Yahoo",
+      "summary": "Marshall to Newsmax: Hamilton 'Most Radical Liberal' in Kansas Senate Primary History &nbsp;&nbsp; Yahoo",
+      "title": "Marshall to Newsmax: Hamilton 'Most Radical Liberal' in Kansas Senate Primary History",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcGd6b1AxUlFRVFExSU1MaDJtbHRhTnlZOGpmd2pJUkF1MWV2cElsMG1zcmttUWktLWRyWWFGVmg1S0RsbTJ1T2ZPbHNiclRuckFXY0FfLThNYWhleGpyOGY3bFBxTlk5VHJZOVBtZ2w0MG0yTThsbFdOOEw1RXUxN3M3elA2aVd4aGx3SFpQQXFpQ2FVdGp6aTBjQm9vY1k"
+    },
     {
       "id": "35634be0d000",
       "kind": "news",
@@ -47,7 +72,7 @@
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-10-31T14:45:00Z",
+      "published_at": "2026-10-31T14:46:00Z",
       "source": "Action Network",
       "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 31) &nbsp;&nbsp; Action Network",
       "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 31)",
@@ -336,6 +361,19 @@
       "summary": "Trump scorns Adam Hamilton bipartisan pitch to Kansas voters: \u2018He will vote for Chuck Schumer\u2019 &nbsp;&nbsp; Washington Examiner",
       "title": "Trump scorns Adam Hamilton bipartisan pitch to Kansas voters: \u2018He will vote for Chuck Schumer\u2019",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZFh0QlJVb0k3OExzSjNqU1h5YlNZTWd6Y19ZUlZRU1ZRVE1abGgwNC1uOFQtR1R2blN4TEY4OGYxWVhtWlNaRGtwQ1oySXd3NVRLLVRrY2J6VVg2SnNkZ1pST25BNWxNSXo4djROZTYxZFBhMkFPd3l4SUZBSnQ1V0hZaE9GMzVhY1BzTnN6cEZDQ1gtaUFNWGVPUkczSWxCYXF2UzIybmd5aVpfU3EtQ2c4c0FUNjdyRDJaTGg5VktsNmtLSHJCMnB3"
+    },
+    {
+      "id": "603788047cff",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T12:34:19Z",
+      "source": "Washington Times",
+      "summary": "Trump urges Kansas farmers to lift Sen. Roger Marshall in tight race with Adam Hamilton &nbsp;&nbsp; Washington Times",
+      "title": "Trump urges Kansas farmers to lift Sen. Roger Marshall in tight race with Adam Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWmFXbzZRN2FoTlkwYXAyZmlDTEY0MUNZbjA5U0w3c1pmVXR6eDQzc3FSNmlQdDZ6ajZ3T3RyUVhaUG1QaVFFOU1xR2pkRGNob3B0Q1FZZTRkUUJ2aGcxNUgxS3VSbzI5R0c3SkVtSUlpajNzQ0h4V3l3TFFJRGVMQWlFWHBtdEQwSmlxeEFGUDVMZVh4cTF0U0FuQ3NRVk1mTDRIZW9BeUdhMkhCdjhRdHNzcTA3cUU"
     },
     {
       "id": "0224859281af",
@@ -1464,43 +1502,6 @@
       "summary": "Watch Roger Marshall details path to victory in tight Kansas Senate race - The Sunday Briefing &nbsp;&nbsp; FOX One",
       "title": "Watch Roger Marshall details path to victory in tight Kansas Senate race - The Sunday Briefing",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPQkFQOGx5S1BGbFB6eVRKWXlHTXV4czlMQnd0bWQ2S1h3by1zQnZtRFZnX0JMaXhIYkk0ek4zX2lwcG45SEFxdjB2a3J1VGl1ZHF1dHoySDZzSHZ2bm96Z0JHeGlhUFhkYWRSYWN4SzBtd01UekFZelpGZ2NldzNNZDcwc0RBS2xLSy1xTlBvUnZtcnJpSkFYTTZQVUtYZXNGc3RvMXZiNkFPckZBVjFpWUpWTTVUcGNYWWc"
-    },
-    {
-      "id": "294ce428dbd8",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-25T16:00:00Z",
-      "source": "KSNT politics",
-      "summary": "TOPEKA (KSNT) \u2013 On this episode of Inside Kansas Politics,\u00a0it's the most closely watched race in Kansas. And candidates for the Kansas seat in the U.S. Senate left it all on the stage. Inside Kansas Politics host Rebekah Chung sat down with political analyst Bob Beatty to break down the highlights and the biggest challenges facing Roger [...]",
-      "title": "Left it all on the stage: Political analysts break down the U.S. Senate debate between Roger Marshall and Adam Hamilton",
-      "url": "https://www.ksnt.com/inside-kansas-politics/left-it-all-on-the-stage-political-analysts-break-down-the-u-s-senate-debate-between-roger-marshall-and-adam-hamilton"
-    },
-    {
-      "id": "23580334efee",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-25T15:45:00Z",
-      "source": "KMBC",
-      "summary": "One-on one with Democratic Kansas U.S. Senate candidate Adam Hamilton &nbsp;&nbsp; KMBC",
-      "title": "One-on one with Democratic Kansas U.S. Senate candidate Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOY3E3QUxhQTdmdmN2czJnRFVaS0llRHI3Z0RKaUVIY0Zfak0yT3gxMllSdzR5LWE0M2ZreHlqSVdhOHRqNTNjQmFzY1JvUUpwSDNOTXN1dW9NVUlaUGY0Zkk1N0M1MDVyZldMcWNzZnc2VkkxY09Valh5MHFUem5yOWtXZ3hrVG9fZTliU0VvdnN1dmNncHNGZWxRUW9jRjAtaUhfV21hMVk"
-    },
-    {
-      "id": "22a7a950293d",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-25T15:35:00Z",
-      "source": "KMBC",
-      "summary": "PROFILE: Sen. Roger Marshall hoping Trump support pays off &nbsp;&nbsp; KMBC",
-      "title": "PROFILE: Sen. Roger Marshall hoping Trump support pays off",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSEs0bW9EekcwVmh0bnlxOG52Wm8yUGJZWk9OTHJYZXhXSDZYU0tXNWVhaHFETTZGM21yTVJuOU5PZVFLNFRnUk1qc0dRVGhlTWpQVm1hZFp4X3VTMHNzSWljeENvYm1wY1FVNXZvV2RKd1RyOG9VTUhuWDgxQUx1MDNoaFlUZXNZYzZnbThGRzdNN1owZWxuMGZ3"
     }
   ],
   "schema_version": 1
