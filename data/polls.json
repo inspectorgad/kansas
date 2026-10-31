@@ -867,7 +867,7 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-31T06:44:21.714166Z",
+  "generated_at": "2026-10-31T13:25:04.750610Z",
   "polls": [
     {
       "added_at": "2026-10-30T16:34:26.876877Z",
@@ -914,6 +914,7 @@
       "end_date": "2026-10-26",
       "id": "69bdddb44c96",
       "margin_of_error": 3.9,
+      "other": 1.0,
       "pollster": "The Washington Post/SSPG",
       "population": "LV",
       "results": {
