@@ -26,8 +26,45 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-31T00:57:41.316715Z",
+  "generated_at": "2026-10-31T06:49:19.928325Z",
   "items": [
+    {
+      "id": "343fc48de590",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-31T03:50:00Z",
+      "source": "KWCH",
+      "summary": "Polls place Adam Hamilton as lead of senate race &nbsp;&nbsp; KWCH",
+      "title": "Polls place Adam Hamilton as lead of senate race",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMGxOWm11RjBYTFpRNFBFUUtwN1Z1YzJNandmcUJYYk15UnF1X0hCMFJtQTNtOGozaG9jWGlTRmgtSDZ5bm8zSk0wTFZIWUNoZk01UFJiNFZnel8xSUdEWEJKc2dyQ1VkZ09DVl9jMm5nZmVxZTRpcHVOVlJqVHJTbnRXWDF5UDVi"
+    },
+    {
+      "id": "404c71341669",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-31T03:43:30Z",
+      "source": "KWCH",
+      "summary": "A new poll released by the Washington Post on Friday shows that Roger Marshall\u2019s challenger, Adam Hamilton, is almost ten points ahead.",
+      "title": "New poll places Adam Hamilton as leader in race for U.S. Senate",
+      "url": "https://www.kwch.com/2026/10/31/new-poll-places-adam-hamilton-leader-race-us-senate"
+    },
+    {
+      "id": "ab15b02795d2",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-31T02:42:04Z",
+      "source": "KWCH",
+      "summary": "The lawsuit comes just days ahead of the midterm election, in which Marshall is running for re-election to the U.S. Senate.",
+      "title": "Former patient suing Sen. Roger Marshall for debt arrest",
+      "url": "https://www.kwch.com/2026/10/31/former-patient-suing-sen-roger-marshall-debt-arrest"
+    },
     {
       "id": "1178b1470ec0",
       "kind": "news",
@@ -855,6 +892,19 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QNlgzeVdPOE0ybllaSlBWbDZuMkFkbmNRZGJBWTI3aU8yWkR4Q2FWaGdUOTU2am9VR1R6QlhfR1RWY3dwMTYtR184R1llR0hGRWttWjIyQ0daMHVZMFVvVlZFcjJHWUE"
     },
     {
+      "id": "a3dfadaa105e",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-28T00:38:52Z",
+      "source": "Kansas City Star",
+      "summary": "What national media is saying about the Hamilton-Marshall race in Kansas &nbsp;&nbsp; Kansas City Star",
+      "title": "What national media is saying about the Hamilton-Marshall race in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8yT3pvWDdsQVJSYWJmLWdpb0Z0Ql85UmxqdmJzWGZIUjRGZ25MS0NmdGpOS3ZDNWVMck9nd2RqazF1YlVjc2pyc3NJUW1ORWtWSXJQVElia09udE95QVJnOWt1Y9IBY0FVX3lxTE5HMTMzdWZSYzZraTJQQjBkSkotd1VnQWIweFl6ckRUV3dneGhoTFVIbGtpMkIzUWJaZi1JTEQ2elpOUHJEejNFZ0tXdFFLQ0hMaVZnVnpiYXl3cnBxYmNXcXFqQQ"
+    },
+    {
       "id": "ba7cbecebf3d",
       "kind": "news",
       "mentions": [
@@ -950,19 +1000,6 @@
       "summary": "WATCH LIVE: Dem Senate nominee Adam Hamilton holds campaign stop in Kansas City &nbsp;&nbsp; Fox News",
       "title": "WATCH LIVE: Dem Senate nominee Adam Hamilton holds campaign stop in Kansas City",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8wVnRGMmdGdWJkRkJ0cThUcFJBLTE0anYyWkRhdmdIbzNPLXB5SHEwTTd2UnZycFd1SUFPOTlVMGhGNm05M21JZkxiMFFTeXZxaG1vSXp3"
-    },
-    {
-      "id": "a3dfadaa105e",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-27T19:04:00Z",
-      "source": "Kansas City Star",
-      "summary": "What national media is saying about the Hamilton-Marshall race in Kansas &nbsp;&nbsp; Kansas City Star",
-      "title": "What national media is saying about the Hamilton-Marshall race in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8yT3pvWDdsQVJSYWJmLWdpb0Z0Ql85UmxqdmJzWGZIUjRGZ25MS0NmdGpOS3ZDNWVMck9nd2RqazF1YlVjc2pyc3NJUW1ORWtWSXJQVElia09udE95QVJnOWt1Y9IBY0FVX3lxTE5HMTMzdWZSYzZraTJQQjBkSkotd1VnQWIweFl6ckRUV3dneGhoTFVIbGtpMkIzUWJaZi1JTEQ2elpOUHJEejNFZ0tXdFFLQ0hMaVZnVnpiYXl3cnBxYmNXcXFqQQ"
     },
     {
       "id": "c561af7f2ca6",
@@ -1464,44 +1501,6 @@
       "summary": "Watch live: Marshall, Hamilton face off in final Kansas Senate debate &nbsp;&nbsp; The Hill",
       "title": "Watch live: Marshall, Hamilton face off in final Kansas Senate debate",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUHRPOTF6TVplRWNNbzk4NDJST2JkTWQ1ZGNPYjYya2V4X2pRc3Jab1Z0Z241eUJMLTB3aF94Z3p5OGlVV1FsZ0xOQ1FPYkN6TW80UEx2OVFhV2o2VE0wSHNPbTRRUzNHNDJBR2Fnd1ZyZm1KSDlTSkhNRC00NThBSVIwTEozZF83aVFyR0Z0OTI4UkxsUU9WNm5kN29ZRmlzTjRTc1doWVLSAa4BQVVfeXFMT1BoZjZfNlE1NTZWZWZCdG5nUmprRVRnd1AwRXlVd0ZzZnJqMmN0S2N4S0tZWXhscDF5Y3NIUnlCWGhxQUdTUUNDcHM1WEZPRnZiRnEtMXNwV0E0VDEzdEdKS050UWhRb1JQOWc1VktZM3RKdUxlUjNxNHdTN0tTcTJSRjg2Sm81MWNERTlTU0RjT3E1QTNueXE1S21IdlhKVFVOVlhNM2k3NjB2c0tB"
-    },
-    {
-      "id": "69e1884729ca",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-23T16:03:24Z",
-      "source": "Kansas City Star",
-      "summary": "Fact Check: Hamilton TV ad says Sen. Marshall had patients arrested for medical debt &nbsp;&nbsp; Kansas City Star",
-      "title": "Fact Check: Hamilton TV ad says Sen. Marshall had patients arrested for medical debt",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbl9HN1kxR0JEZHZLYmlNS1RrdzFmQ0tPM2U0WTVDZDNSNm1fQmplWlE3cHc4VVhIVmpGay1OVDhpUHdWdWl4MXBEYTUzU0ZIZ3o2YzVTLVM2TDBGU2piSXJuRWkza3RMVW56MHhPbTlEWDdnNnZLRzliRldaTlp4V0djbGZ3a1l4WWfSAYoBQVVfeXFMTjlMUE41TTloTTZUeFFFQ0t4OGdxc0hYT3dmSUhEM2hYWjZ5cmpnVG9lSVVDelBzRmJfUTR3SVR3MGowYTk5Z3I5SFFsUVRSS2YxOHFZMFh5UGhobV9PM0ZQbHB4eGlOUWRYMTlxRXpjb2VPMWdvaEFiaUN1Sk8tU24wZmhRT2U5bXRR"
-    },
-    {
-      "id": "5757b0505370",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-23T15:37:00Z",
-      "source": "The Hill",
-      "summary": "Kansas Senate debate RECAP: Roger Marshall & Adam Hamilton battle over Trump, Iran, Chuck Schumer &nbsp;&nbsp; The Hill",
-      "title": "Kansas Senate debate RECAP: Roger Marshall & Adam Hamilton battle over Trump, Iran, Chuck Schumer",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRDFmbVNVaWU0dU5lRUxUQ1lBYXhrck9wcmFlc3ZYZTRHLV91T0E5ZlV6Ym5ES2ZYRUlOTHFzNm1PR2twMWNrTl9wMS1NdGExaE4yaUpCM0pPa253ME05ZDVwa3JRZ2MtODZ6a1V3cXQxSHQ5S0NyekZ0blJGX0Q2aG1DLWV5VmFfSDYxdEkxMkd2RHJxelFDU2VzV19wc3Q3TlZ6XzNud01NODYzLXdkWmZiWUN6cl9RbENPUTRyWjd0VnA0MzRJSjg4MktHd0J4eEHSAdcBQVVfeXFMT0NYMnlQdmpCZ2RSRXBQQ0dma2t3QkZRVy11OTFvZWs2TEJHWGo0WlJ6YUNPUTEyemZ3dE1ldWlwTkNrZE42UTF1b2djb1k3RDdlaVpZX3UzeEJsNC1FcDdYTDNvTTB0dDFEZVFocXN4WDNMQXZzd2NpYWp4dWV3NVZuaUdLc0NGME1IRGQtUTRIS1ktV05TRzkzTEh0MnQ3Z1htZlFNbXpMcmJLRmE1ZDE3NmhhSEdYeTNOaG43d21xcFJ5SnQza21vSlk3eVlVbHF5dlZiWFE"
-    },
-    {
-      "id": "7f50d9d002cb",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-23T09:10:19Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Kansas manufacturer questions Roger Marshall's stance on tariffs &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Kansas manufacturer questions Roger Marshall's stance on tariffs",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTUxpZldxWWdZTUM3Sjc3TnZNOXI2czFSMGpFejdEX0gycVVmWTBIa0IzSnNIRTNQVHl5UnJNSXgzcDZJNk1sWmRqQlVhZThlM2c4WDlKN3dyLVVQRjhDMjhGSkVhYm1RVEVmMm5sczR4eUt0c2gyZUJRTENWak1UVjNTVWNaN1BlalpMVlY1NDQ5WlpBdDBnU0N6b3VtQTdBa0Z0NV9fZnJmNk5IX05hM3NVcXhoV043VDVHOUtEa1g0dw"
     }
   ],
   "schema_version": 1
