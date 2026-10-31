@@ -1,25 +1,11 @@
 {
   "advance_ballots": {
-    "counties": [
-      {
-        "as_of": "2026-10-30T21:06:30.001999Z",
-        "county": "Shawnee",
-        "mail_ballots_sent": 400,
-        "source_url": "https://www.snco.gov/election/"
-      }
-    ],
-    "counties_covered": [
-      "Shawnee"
-    ],
+    "counties": [],
+    "counties_covered": [],
     "coverage_note": "Kansas publishes no statewide daily advance-vote feed. These figures cover only counties that operate a public dashboard."
   },
-  "attribution": [
-    {
-      "name": "Shawnee County Election Office",
-      "url": "https://www.snco.gov/election/"
-    }
-  ],
-  "generated_at": "2026-10-30T21:06:32.205686Z",
+  "attribution": [],
+  "generated_at": "2026-10-31T00:57:45.631102Z",
   "registration": {
     "by_county": []
   },

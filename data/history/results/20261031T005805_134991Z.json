@@ -1,0 +1,16 @@
+{
+  "attribution": [
+    {
+      "name": "Kansas Secretary of State \u2014 unofficial election night results",
+      "note": "Unofficial returns. Official canvass follows in the weeks after election day.",
+      "url": "https://ent.sos.ks.gov/"
+    }
+  ],
+  "called": false,
+  "counties": [],
+  "generated_at": "2026-10-31T00:58:05.134991Z",
+  "schema_version": 1,
+  "statewide": [],
+  "status": "pending",
+  "total_votes": 0
+}

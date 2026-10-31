@@ -26,17 +26,79 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-30T21:06:28.873765Z",
+  "generated_at": "2026-10-31T00:57:41.316715Z",
   "items": [
+    {
+      "id": "1178b1470ec0",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T23:21:26Z",
+      "source": "upi",
+      "summary": "Former patient sues Sen. Roger Marshall for charging illegal interest &nbsp;&nbsp; upi",
+      "title": "Former patient sues Sen. Roger Marshall for charging illegal interest",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQWpFSFRzWDlyMlctTld5cTlvaE1ibUtwM2hpVW10bHhlZzlaU2JIRnBLUndGblFUWWtOQTNaMGExZXRwUWxibUl6SWw4Mm9nWnRmVUluTkVrMmpRZklwVndmRlEzV3NmLWxzN2JBMWt4SURQWUREaXFzQ2VNVnhTTlhWUEpMZkZsbmtkZk1mc9IBlAFBVV95cUxOSVhWYmZNcGxjUS0xbXB1T1oxY2s1NEtBUFJGRW9nSmZ6a05yd0o1bWZOMklUemI0cFdZUUNuSVZNb1ktY2hWeE5LeE9Ib1A3MUNxSTJJdFRjRkhneGVJUnE0VzgwRTNtYk1pX2NrVUN4NlVGcUJ4UlhLbTBpeG5zZGh2Xy16aFVHUWxzMUN3a1lTUlVv"
+    },
+    {
+      "id": "f846a501585b",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T22:55:52Z",
+      "source": "Kalshi News",
+      "summary": "Kansas Senate odds: Hamilton now favored 51% to 49% over Marshall &nbsp;&nbsp; Kalshi News",
+      "title": "Kansas Senate odds: Hamilton now favored 51% to 49% over Marshall",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOak4zTy16NTJXUlhfbWJsaHVkLUtmbkpHdURySnhBMFFhcTlJLWR6Rk51XzdMWmhRdmFnOWxuRmhIZjMyWEJfLXA5TGxzcU91TWoyLTJlT1g2dWI1Z0hNUG9sS3dFczVqTEU3enlZbDg0Ti0xdzAyX3N5b0Njd2E1YUFaVjJvNTZzUTdfZEZEMXZsdw"
+    },
+    {
+      "id": "ca39455813b9",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T22:46:58Z",
+      "source": "The Daily Beast",
+      "summary": "Election Guru Roasts MAGA Senator Roger Marshall With \u2018Worst Campaign\u2019 Award &nbsp;&nbsp; The Daily Beast",
+      "title": "Election Guru Roasts MAGA Senator Roger Marshall With \u2018Worst Campaign\u2019 Award",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVEFiQVYwT0NfSHV0cDBhX0NQV0JOQ2RSdFRNWmRoU1dXemdXX3VaVE12N3Z4MHZiTDlIX1ZORjFtdVpWcXpYMWFpeEdiZ1Q2YTlrbkliZGFnZFMyaG1Bbm5NMWVuU3dsTk1oQzZrQy1NRTFYeFRuUjRfNlpNbFFURzg0dUswa09DWk0tWmpaLWx6WjBja0NUODRIbHJqaUxyYzdac1BWQQ"
+    },
+    {
+      "id": "088364af5f8d",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T21:50:00Z",
+      "source": "Newsweek",
+      "summary": "GOP\u2019s Roger Marshall Sued by Ex-Patient as Trump Revives Kansas Rally Plans &nbsp;&nbsp; Newsweek",
+      "title": "GOP\u2019s Roger Marshall Sued by Ex-Patient as Trump Revives Kansas Rally Plans",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVG9hSzkySFQzV2pyOE5nU1o3QzVRZjRfY2ctQ2h2N3VQVkVaRVVKQzY4Z2tZOEZWcXNJWk9La3hteHlPaWJQS045Wmx0UU9jdENJUVpzd0pOZDhoTmpCUzZTem5Qd3A2ZTNzQ01yaklXeDR5RGtGcU9PSGs1YzNuNjRsRFBLV0xGRnZPdXdrYlpBZ0djTkdnX0dJYzdkTWs5NURpSEM2U3JhODJt"
+    },
+    {
+      "id": "b011e1433b46",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T21:49:51Z",
+      "source": "The Daily Beast",
+      "summary": "Nate Silver Makes Huge Call in Must-Win MAGA State Kansas Roger Marshall Adam Hamilton &nbsp;&nbsp; The Daily Beast",
+      "title": "Nate Silver Makes Huge Call in Must-Win MAGA State Kansas Roger Marshall Adam Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWDFGQ0k1UnNQbUVzOWZWN09nelhnSThxaXJOMlJSMlF1QjRyTDllWFdUY2t0UnFRT08zX1ZlVldzV29Lek1PLUYyMmdGM3h3M1JDTjJUcGxVYzVSamo3a2piakNzU3ZXdWl5S0cxdzVBOHBZamZTdUVDMVJHaktYVzI2TkhrQmhQTWJzeWNhcS1WSG9SUjBwdzZSYXFyeEN6OWJ0VjNNOUw1UVpMQUNsaW5JMkNEM1U"
+    },
     {
       "id": "2785e6c0b4fe",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-30T20:15:11Z",
-      "source": "www.washingtonsun.com",
-      "summary": "Roger Marshall Hit With Class-Action Lawsuit Over \u2018Aggressive\u2019 Medical Billing Practices &nbsp;&nbsp; www.washingtonsun.com",
+      "published_at": "2026-10-30T20:15:04Z",
+      "source": "NOTUS",
+      "summary": "Roger Marshall Hit With Class-Action Lawsuit Over \u2018Aggressive\u2019 Medical Billing Practices &nbsp;&nbsp; NOTUS",
       "title": "Roger Marshall Hit With Class-Action Lawsuit Over \u2018Aggressive\u2019 Medical Billing Practices",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ3pLUzNQRGpCVDVtTGhiemxhM3YweGY4U0JDZlZMUWJocE53T2Y1cWQycmJIWlJuZmpWODVVVEtZZjdERndwY1JEMG0yeDZGZ1Y4d3RrQ002UjJfellvbW5oUFdNdEdad2JJWjdPbU9hT05ZTGJxTFZWSkpSazVCYnBGQlpvbjNVQ2ZuNWVVVDVaRzVrczgxMm1rWlNWMGI1ZXFVdzVkWXNaQQ"
     },
@@ -238,6 +300,18 @@
       "summary": "A swirling media storm. That\u2019s how I would describe the last few months in Kansas. The U.S. Senate race between Roger Marshall and Adam Hamilton has brought disinformation chaos to television advertising, journalism and social media. Now this: A report this week from a cybersecurity firm based in Tel Aviv alleges that \u201ccoordinated activity\u201d from [&#8230;]",
       "title": "Opinion: \u2018Inauthentic accounts\u2019 blur social media reality in Kansas Senate race, according to report",
       "url": "https://kansasreflector.com/2026/10/30/inauthentic-accounts-blur-social-media-reality-in-kansas-senate-race-according-to-report"
+    },
+    {
+      "id": "6ac0f461c7f6",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-30T04:00:00Z",
+      "source": "C-SPAN",
+      "summary": "Sen. Ted Cruz (R-TX) Campaigns With Sen. Roger Marshall's (R-KS) in Wichita, KS &nbsp;&nbsp; C-SPAN",
+      "title": "Sen. Ted Cruz (R-TX) Campaigns With Sen. Roger Marshall's (R-KS) in Wichita, KS",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVmZfdWZDbTBWV2JGRXctczM3a3liaUtZWndJdWRnVV9kN1l6bTJNWUR0bVFjVWVkMl9sSkVuUmI1QjFZNmZhSHJ6RXZXVmpLUmcxS0R4N25EVkQwYWRkSVZIbGlwRlQycFluVmRjNHNwQjJOeGJUUUxKQmVIWGthdjFNakZNV2NVRGJYRHc5Q0pqSHNieFZyYTNqbVZOeGh0N21rMWNvbWdmLXRWdFhDaEo5NC1WSkVqR04zUEpB"
     },
     {
       "id": "f58c282dac2b",
@@ -1428,80 +1502,6 @@
       "summary": "Kansas manufacturer questions Roger Marshall's stance on tariffs &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Kansas manufacturer questions Roger Marshall's stance on tariffs",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTUxpZldxWWdZTUM3Sjc3TnZNOXI2czFSMGpFejdEX0gycVVmWTBIa0IzSnNIRTNQVHl5UnJNSXgzcDZJNk1sWmRqQlVhZThlM2c4WDlKN3dyLVVQRjhDMjhGSkVhYm1RVEVmMm5sczR4eUt0c2gyZUJRTENWak1UVjNTVWNaN1BlalpMVlY1NDQ5WlpBdDBnU0N6b3VtQTdBa0Z0NV9fZnJmNk5IX05hM3NVcXhoV043VDVHOUtEa1g0dw"
-    },
-    {
-      "id": "104e49209444",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-23T09:03:28Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "U.S. Senate candidate Adam Hamilton talks Iran War, tariffs in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZ0h6LVBaLUw0dmdvaC1EUk85MXpBU0pjYUU0VjhuSUJHeUVFUU5FQWhPWnFGMWcyMEtoN1JwWDdONE4ydUk1VzRqd2c2R1NRV25lNmJyM0FnUndObG91YklKa3RzMmh2XzRENm9Vc21CT2gzaWwtZ0VKRlZDa3hoMFE4a1BSRzl4SmxrbHpETEx2aXNhQlJXNjM3TXQ4cVQyeTl0WFpqZXlxdVRpb1Uya0NtMEZrTUdLaWV4QUtuWUZUOGVLdHpFNnJrVVlGak9ma3pLZkI4N2h2TWFyMzZmNTNB"
-    },
-    {
-      "id": "5dcbe2fafc73",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-23T09:03:15Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Small group protest Roger Marshall outside of Topeka campaign event &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Small group protest Roger Marshall outside of Topeka campaign event",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWnJnSWRBN2RIc2hiLWRBZHJzWDAxVUloVm1tTlB1VDRUalI3TklWbjNwSDFWTmVqVzZja3BuLTVxZ2xVY25JRXhMUzVDRTd5YmpyaG8ySmg4MjlNR254OFIxT2xlZHJkeDZDTjlSb2hDTnhYX1BVYWNsYkRqNUhGWlo2aFAyVzFtcDZTZXRIVFFsbEFtdFNfQ1NISThOQUxrMlhLSEtMaGJ4QzJXV2UzWTNVYmI2SnhyNkE"
-    },
-    {
-      "id": "f3deec743347",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-23T09:03:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "Sen. Roger Marshall and Adam Hamilton stop at Topeka candidate forums &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "Sen. Roger Marshall and Adam Hamilton stop at Topeka candidate forums",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQkVMenJWTExfdEdmeUNyV215UWFjaWNic2ZaZEE0OWhRY0RFTV9qRGtMNEJGc01fRVk1MUNuRXh3T0pyLU94d1ZpVE9mX25HQWtXM3J1cmw4cDg5WDE1NHI4ZXNqek9ibG03cDZDYjdnQkFmTnRyZjZ5LWJ2a0hQeGRSWnlBZnJlc2xTcldTTjBRdzVjSUVWVnR3cEZsLTYzamNsbnNCSnpUUFJ2TE1aVTM3a29MbVdjb1pjb2lKakdndDJSSHVYbUtMaHc5Uk03T0hwbTlkUlQ1RkxRUHRoVTdSSjBfVjhRb1dkODhSVmswUnZyc3lj"
-    },
-    {
-      "id": "44ed80300c92",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-23T09:03:00Z",
-      "source": "The Topeka Capital-Journal",
-      "summary": "How Roger Marshall and Adam Hamilton answered Topeka business leaders &nbsp;&nbsp; The Topeka Capital-Journal",
-      "title": "How Roger Marshall and Adam Hamilton answered Topeka business leaders",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNa1BEaW51MDJjR2dZS0piLUwyc0g1T3hkcUN5RWpaNnhoSVdQN2VzcnQ2UGdyc090TUJQZkZvbGdYYWoxbmtjVVdQaFBobGRDb0N6N1BkTlcyenQ1U1YwQU4zTEltMWFnV3VzaUwyVkFOajVhb2JhSDlEZDRCSUFWdGhPMkRsMUQwX1Y4ZHJKT3l5RXNEV0lEVUd2TU5MMXNsZFdBNWtVeVBCX1pEMV9Fb05pUElDRl9EOXhGTUl4SVByVm5nbnQ1Q1diN1F2cl9HdTdpbGdTbDNNNjNfdXprSTlB"
-    },
-    {
-      "id": "f2aa79ee18a7",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-23T09:00:00Z",
-      "source": "Politico",
-      "summary": "The Oppo Mastermind Who Could Take Down Roger Marshall &nbsp;&nbsp; Politico",
-      "title": "The Oppo Mastermind Who Could Take Down Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUjdyMkFsN2ZoTnQxSm1feW14ZlBaemxvV0ZfWlBva0dwdFA2Rzd1QlZZZ1h5NjhfSXBVbTJwRHVUZkRUNUNtdzdRZjlNeU83U0JJWTlqMkxpWUt3SXoySGtGN01iczVZSW9qYndCcjZFN2JtTWdaOEw3VWcwaVh6dUxvX2FnOEx2RTFOVEVRUnM0eklFZ3RlTlVPU0NwX0pyLVowT3pUYVk4T0Y1MktnUW5qSQ"
-    },
-    {
-      "id": "9cf44209bf1f",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-23T08:50:32Z",
-      "source": "Kansas Reflector",
-      "summary": "KANSAS CITY, Mo. \u2014 The two major party candidates for U.S. Senate diverged in a debate Wednesday night on whether tariffs were helping or hurting a Salina manufacturing business they both visited.\u00a0 A spokesperson for the business, however, denied U.S. Sen. Roger Marshall\u2019s claim that tariffs were contributing to its growth. Tim Henry, chief financial [&#8230;]",
-      "title": "Kansas manufacturing business responds to candidates\u2019 conflicting accounts of tariff effects",
-      "url": "https://kansasreflector.com/2026/10/23/kansas-manufacturing-business-responds-to-candidates-conflicting-accounts-of-tariff-effects"
     }
   ],
   "schema_version": 1
