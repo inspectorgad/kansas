@@ -2,7 +2,7 @@
   "aggregate": {
     "as_of": "2026-11-01T00:00:00Z",
     "band": 3.1,
-    "hamilton": 48.35,
+    "hamilton": 48.37,
     "history": [
       {
         "date": "2026-07-04",
@@ -818,43 +818,43 @@
       },
       {
         "date": "2026-10-28",
-        "hamilton": 48.3,
+        "hamilton": 48.33,
         "margin": -2.97,
-        "marshall": 45.33,
+        "marshall": 45.36,
         "n_polls": 14
       },
       {
         "date": "2026-10-29",
-        "hamilton": 48.3,
+        "hamilton": 48.33,
         "margin": -2.97,
-        "marshall": 45.33,
+        "marshall": 45.36,
         "n_polls": 14
       },
       {
         "date": "2026-10-30",
-        "hamilton": 48.3,
+        "hamilton": 48.33,
         "margin": -2.97,
-        "marshall": 45.33,
+        "marshall": 45.36,
         "n_polls": 14
       },
       {
         "date": "2026-10-31",
-        "hamilton": 48.3,
+        "hamilton": 48.33,
         "margin": -2.97,
-        "marshall": 45.33,
+        "marshall": 45.36,
         "n_polls": 14
       },
       {
         "date": "2026-11-01",
-        "hamilton": 48.35,
+        "hamilton": 48.37,
         "margin": -2.98,
-        "marshall": 45.37,
+        "marshall": 45.39,
         "n_polls": 12
       }
     ],
     "leader": "hamilton",
     "margin": -2.98,
-    "marshall": 45.37,
+    "marshall": 45.39,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
     "n_polls_used": 12,
     "trend_7d": -2.7
@@ -867,20 +867,20 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-11-01T00:11:45.700228Z",
+  "generated_at": "2026-11-01T06:23:13.958532Z",
   "polls": [
     {
       "added_at": "2026-10-30T16:34:26.876877Z",
       "end_date": "2026-10-28",
       "id": "6671c18e15a9",
-      "other": 6.5,
+      "other": 5.9,
       "pollster": "FiftyPlusOne",
       "results": {
-        "hamilton": 48.4,
-        "marshall": 45.1
+        "hamilton": 48.7,
+        "marshall": 45.4
       },
       "start_date": "2026-10-28",
-      "undecided": 6.5
+      "undecided": 5.9
     },
     {
       "added_at": "2026-10-30T16:34:26.877940Z",

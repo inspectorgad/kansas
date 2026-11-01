@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-01T00:15:39.140893Z",
+  "generated_at": "2026-11-01T06:27:16.481752Z",
   "items": [
     {
       "id": "3aa6ce38d714",
@@ -34,23 +34,24 @@
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-31T20:00:00Z",
+      "published_at": "2026-10-31T22:04:51Z",
       "source": "NewsNation",
       "summary": "Kansas Democrat says Trump\u2019s visit could help him, not Roger Marshall &nbsp;&nbsp; NewsNation",
       "title": "Kansas Democrat says Trump\u2019s visit could help him, not Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeV81anM4V0R2LVZVd01SLTBidjdHeXNlUVZuWU4tMEhaSWFJUzdTektTY1lqU3lhcnNMLWR0TUZ6MUpJSV9pZ0U4a2ZyRDNjbEFGcEdabTJnalJPVWNBVjN3WE1CZ3FBZjN0NUJtdmFCc3lyRHJLUjQyS3hfZ1RNZmJ5ajdQdmVsMkljMXhNeWNBWnVONjY0REFUSEFHeHB3QUY0UWJPSW9EdHpHRU42StIBtgFBVV95cUxPS0M0N3NHY2pnTFUzR19NbVlUNXN1TnNfZU9NVWZEN005VmY1amJRQ2VnTjZBSnpfWGJpZVUydFEza2M2N2hsLVI0MDZoNFVXQUZGOTREeUt0NXNJTndGOVVKaGUtTGpTM0U1WnQzVHcyM1dZSmFjQ0xUUHgyVGo3Z3Bkb29LanZHWkllOXJrVjJGSTZTTFFZaDFMWHA3VXYxYVNNVDlnakFHUmdWZ0pGN2FvWmZzQQ"
     },
     {
-      "id": "b34ca7de72db",
+      "id": "bd49d6607032",
       "kind": "news",
       "mentions": [
-        "hamilton"
+        "hamilton",
+        "marshall"
       ],
-      "published_at": "2026-10-31T18:11:28Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "U.S. Senate hopeful Adam Hamilton rallies supporters in Kansas City, Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "U.S. Senate hopeful Adam Hamilton rallies supporters in Kansas City, Kansas",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOb0Vtald6ZmtXd2hJajhITTRRVnlSZU9nRlZKZzFIWFg5ZFpyeWViZ3ZpdW5OVy10UTRUc3hGTUJHY3hmT1VlMTNKbXVmc2U4NXlRNFpPQ1F5RzVPVWpKTmZySW1wTGlzUFJfN1NkMkhrY21rWUZWdXJsdkxCMTdLeWRGeUtHRlBSSzc5QWM4anp3Wl9kWkl4TnczR1ZSb1JTYmxIbjN0aVFOVkRnVnpMazNRdzNZNEp6NFFxRGZWUGZKUDZORWxPM0tkNzFYQQ"
+      "published_at": "2026-10-31T20:54:00Z",
+      "source": "NewsNation",
+      "summary": "Democrat Adam Hamilton says Trump\u2019s rally in Kansas would help him, not Marshall &nbsp;&nbsp; NewsNation",
+      "title": "Democrat Adam Hamilton says Trump\u2019s rally in Kansas would help him, not Marshall",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORThBSkJrZE1aU1lZbjhPRGxQOUV6UW9XVjJNQU1SWWRBQWFpMXkwemNqYkJMNkhjaDB3dG1jOXRUaHBDM3pJOEU4bWRTLTFRWFNHNk04cHUyUm9fZjRxOWs1cWxvbjU1a3MtNGRCVjBNZmVSMFZ0M0Z6bHR6WWdWenlJbjJfbWF2elRQRERHTTJUR1MtSE5XcHZPNWVCZzZCRWFic0dFSHhqSk9OdHNlN2NKZHNHLUZNQjBUR3NVb1FnM3lhbjZRR1RxNXpldw"
     },
     {
       "id": "70b760f9211d",
@@ -89,6 +90,18 @@
       "summary": "Senator Roger Marshall doubles down on opposition to UP-NS merger in new op-ed &nbsp;&nbsp; Brotherhood of Locomotive Engineers and Trainmen",
       "title": "Senator Roger Marshall doubles down on opposition to UP-NS merger in new op-ed",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWU9EQ2VEaHZId2FKdmJ1cklTczhYWkRhRm5rNWVaMVFielRrVHVPZ1NPZmFBVE4zdF8tWkNRd0ZzUEZiQ0pIVmxHSUtMdWRILXBwVUdwX1FQVVhGYlIwa0JmdEVOUjBFNjBSN0dnYVA0RmtsamVWQ2s4SlY0Y3A0WlpKNlBvVVRHSUhxejVHanhEQjgxd0MxcEFudmhIT092Z0lB"
+    },
+    {
+      "id": "b34ca7de72db",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-31T16:21:00Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "U.S. Senate hopeful Adam Hamilton rallies supporters in Kansas City, Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "U.S. Senate hopeful Adam Hamilton rallies supporters in Kansas City, Kansas",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOb0Vtald6ZmtXd2hJajhITTRRVnlSZU9nRlZKZzFIWFg5ZFpyeWViZ3ZpdW5OVy10UTRUc3hGTUJHY3hmT1VlMTNKbXVmc2U4NXlRNFpPQ1F5RzVPVWpKTmZySW1wTGlzUFJfN1NkMkhrY21rWUZWdXJsdkxCMTdLeWRGeUtHRlBSSzc5QWM4anp3Wl9kWkl4TnczR1ZSb1JTYmxIbjN0aVFOVkRnVnpMazNRdzNZNEp6NFFxRGZWUGZKUDZORWxPM0tkNzFYQQ"
     },
     {
       "id": "500f1a4277ac",
@@ -413,16 +426,16 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vNFFDT2NCM3ZwQndZWTIxOHB1c0c4ZmdKQ0R1N3B2SlNfLVlXYzVzMlpZZDJsaHd3Z3BXWndnc3VEV01WVWg4NjVqV2w3ZDdacnppck9ockdHSmRjUU0ycWdxbXhiTHPSAWdBVV95cUxQTWdZZUdWZDhpbHpfbGtPZUQyZlV5d2cxWDJyUkpucjhIU2thWnVEdEl2ODdlMEFhR1dKZ2tBdmw4RHJiVTgwaEhHMnllTnJoejRfSDhxTS1Ha20yR2IxcEJNdVNmd2Jv"
     },
     {
-      "id": "07ccefe4ebda",
+      "id": "3c6d68300121",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
       "published_at": "2026-10-30T10:08:00Z",
-      "source": "Kansas City Star",
-      "summary": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet &nbsp;&nbsp; Kansas City Star",
+      "source": "Yahoo",
+      "summary": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet &nbsp;&nbsp; Yahoo",
       "title": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE81QmNTUUpDRFRtNF81ZVcwbFRRV1phTUI3WTAyX2xBTFd4WG53ZDF1YkJIaHdQWE85aGlQc1dtQjY4VGhmYm1VckFxX1ZzLWF2SVZBOVMtb2tMVWdqMUNNRkcyQndYOGPSAWdBVV95cUxPV2ZUc244VUtCUGpERl9yS19oUDU5MmxiRUE1WkhHd2s0YnhsU0JnTGJzRGtwQ0tHRmZIV1ZHWXVyZjloVHAxdFgxUDdLbzlJaDZCdGtzQVQza2l4dDJONVlHblpId05B"
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZUFzMk8zMmQ3YzN1U0tRNFBEZ3J2YTlRdjd6YkVhbWVJdDRmWUF5RnVHdkE3Yi1wZ3djSXpYTHRQekJTUXU2cjNDWVZ1dEFwQVBiUm8wVFV1dWU2dnJyOUt1N0RzcnBZZmM2NkVHTGZLbjRtUk9fbTVLNVVKR2NHdXZQWGpaaHRzTHVGTzEwNUcwcUQwcUE"
     },
     {
       "id": "504594ae1581",
@@ -1491,18 +1504,6 @@
       "summary": "U.S. Senate Candidate Adam Hamilton (D-KS) Makes Bus Tour Campaign Stop in Liberal, KS &nbsp;&nbsp; C-SPAN",
       "title": "U.S. Senate Candidate Adam Hamilton (D-KS) Makes Bus Tour Campaign Stop in Liberal, KS",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSk1Xa3l4aV82UmZZbm1TMTFhRTlNQmZYM215S0ZkMnpuTFRLM1dkQjVBRnFnLXZSdUtoZUk5NDg3QXlCX2FiekFXV2hoZ0ZfZVVoTlh3UHU3cnpfeGRLNGpMS2YxWUNMN1I0N051RkIyQ2xYOFBEX1R1ZGZJRmRTamJwdnFOZnprNXJkcVVTaWNfMVFmR0VxWm1TdG4xOXAwcWVCOHNxTkV6T0lJMzdpZUNCa1RveXBQOXFQQnYyUk9iTll3d2F1TVlTRQ"
-    },
-    {
-      "id": "8e33c1a445ee",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-26T02:31:35Z",
-      "source": "KWCH",
-      "summary": "JD Vance stumps for Roger Marshall in Kansas &nbsp;&nbsp; KWCH",
-      "title": "JD Vance stumps for Roger Marshall in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNb1Bqd2RwQkZuRUdjRk1SQk0wNnpXQS1ybExkeVVwRVloNkQ3dXRXUmI2VnpWY1BaU1haQWY2SUs1RnBSYXU5OFA2MFZOd1pSY0xZV0RQTEh5empaQldlTHV3dUxWNGhKWTVIZVdPb1pfSDdxWnhHQ1Bld3JWb3ZLbDR3"
     }
   ],
   "schema_version": 1
