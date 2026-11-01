@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-01T18:50:38.988387Z",
+  "generated_at": "2026-11-01T22:41:11.076904Z",
   "items": [
+    {
+      "id": "d3746a3281fe",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-01T19:47:31Z",
+      "source": "Fox News",
+      "summary": "WATCH LIVE: Senate candidate Adam Hamilton speaks to voters in Kansas &nbsp;&nbsp; Fox News",
+      "title": "WATCH LIVE: Senate candidate Adam Hamilton speaks to voters in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9jVWNGNHlaQkRUcWZJOW5mNU1rSTluaUtLSVdqVlM4cWhKeUdsY3hSYU1nTDllMkpFR2hlaTcwckVzMVkxZC1ZeGdKRkxZR3BQSFA5RF93"
+    },
     {
       "id": "828068fb4e96",
       "kind": "news",
@@ -359,6 +371,18 @@
       "summary": "Roger Marshall isn\u2019t paying campaign staff for his reelection bid. What\u2019s going on? &nbsp;&nbsp; Kansas City Star",
       "title": "Roger Marshall isn\u2019t paying campaign staff for his reelection bid. What\u2019s going on?",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5PbEtsejcxUUlPbVZWMkw3RGNNRERYUVNUcU9YZ2FESXAxeThNdXV0UXVjak9sM2ZjOWNZMFZDUlVqb1NBY01iTUM0V0luRHQ1SHQ5SjJOX3hJaG9lUjdhSVBHUFMtSThSdktNbl81a0psTTJxTjlFaE90SVRPd9IBfkFVX3lxTE9LSk1ycmNuM1BqZmRJVzN5TjEtSGw5ekMzc012d2hIVVBkbXdrVFRDV1lNWTlrMC1LWC16MW9sdFBnMVlKZlNIN2YtQ2xuTE9uZERWa0tZaVRUS0d2alRydmJsLUZIc05RQWRXTTBicFhRdlF0NnhTQ3hmU1NuQQ"
+    },
+    {
+      "id": "9b6d63647b7a",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-30T16:29:00Z",
+      "source": "The University Daily Kansan",
+      "summary": "All eyes on Kansas: How Adam Hamilton could break the longest Senate losing streak &nbsp;&nbsp; The University Daily Kansan",
+      "title": "All eyes on Kansas: How Adam Hamilton could break the longest Senate losing streak",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPQ3pRcTFZRGRNMnhOT0xWaW5NUFZpUDBveGM5eGMxb0dfS1d1UmVhMWlyN3Y3S2U5ZFFFT0hIZzduNFB3SnZhbGU2dS1mcTVkMEtSWE9QTjJaTzFJTVNoUTFrcjM5RU5aQVpYdlZLc3l2TkNORThXUVpNNVBZdlFQeHZOTEdKNmFwZGY5dktyalRBOTFfODRmd2lvZzNTMjZzcmxxdGlCQkpVLVNsb2Y1S2t5WDVncmtlNnlORzhPTmxERWllVVhCRUJNYjVtNHpjNjA5bjY3UGlaUWd1dkQyRmxOckhJdnBfLWZiV2x2aXc"
     },
     {
       "id": "b0bf3ccb8682",
@@ -1058,8 +1082,8 @@
         "hamilton"
       ],
       "published_at": "2026-10-28T01:32:31Z",
-      "source": "KSN.com",
-      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN.com",
+      "source": "KSN-TV",
+      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN-TV",
       "title": "Adam Hamilton \u2013 Democrat for US Senate",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQTIxOU5KTnMtWlVOejliN0EyT0hsc3FQcDc5OXR0TkVPSVQ4Tjl1Z1RqUF9PekE1T0tUN3liUnc4QmVfYUx6VGUtMlFzcXEzX2xoTkQ0RkpYMXFTdkk5YllvVGh1YnJpYkY3ank1eEprZXljOFhiQ1ZNYnhsa2gxRUNmN3pHZzRKVjZfZDdKRFZnb3JENlJsVlFSUXnSAaIBQVVfeXFMTjIyRkRwTjBSY1ZIYVcyRjQ1RHNxTGRrWVdLeDF6ZmtFaTZBTUliX0dWNldIMWVWSUthQzhUWkN3YmlQOGJUYlRwc1BheHVmQnpiRzREM2phV1dkN2oweXU4a1FhNDFpdmJoSC1JLTcwcWNlOVZjYTNXVUoxVkJhVmJld013Q3d4Q09sNEN5ZUdxbUNjbmFMYzBOcS01M0haYkhB"
     },
@@ -1478,30 +1502,6 @@
       "summary": "U.S. Senate candidate Adam Hamilton blasts Trump's tariffs for hurting Kansas businesses &nbsp;&nbsp; KCUR",
       "title": "U.S. Senate candidate Adam Hamilton blasts Trump's tariffs for hurting Kansas businesses",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOYVM5Ykd3cG9oOUhRenJmcjRLUllQVktZUGtpSEJLVkJaUnJrd1I0MlZ4bnhWNC1aU2o1amVORTVrQVlGTGRiU0NpSkROS3Npb25rNmlpM2hkTnd3N1JKTUU1TzlIQzA2VnpvVENDRl9vT29td3FMd2NXVzVDU1JFU1ZsMnpBenpwY3pwMjlEMWJjcXBnUU9USzRDSnBYUFAwRWkwcy01NDRfcEVlR201WUlncGR6UkdLTHRRWHRIeEQyNDdSX3dZeFZ3cm8yd0NycnpF"
-    },
-    {
-      "id": "70f664a41fc3",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-26T20:53:40Z",
-      "source": "Forth.News",
-      "summary": "A packed house in Topeka to welcome the Vice President! Thank you to everyone who has already voted. Republicans, don\u2019t sit this one out\u2014Adam Hamilton\u2019s policies of amnesty for illegals, support for the Green New Deal, and higher taxes are on the ballot. &nbsp;&nbsp; Forth.News",
-      "title": "A packed house in Topeka to welcome the Vice President! Thank you to everyone who has already voted. Republicans, don\u2019t sit this one out\u2014Adam Hamilton\u2019s policies of amnesty for illegals, support for the Green New Deal, and higher taxes are on the ballot.",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1KQ256WHhtZTdnVWJodGI3UU9Jd3AyQmlheTdMQTZzdGNpT1JaMkRDRGNRZDcwVEd1ZXgzLS1HVGZBa1FGOXhzR1JZTnNUQ2doQkJuMFFDVkwyTnRSR2hZMk5NV1REUXlVODE1MGJxMHg5R2c"
-    },
-    {
-      "id": "135c529c6ea5",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-26T17:40:04Z",
-      "source": "KWCH",
-      "summary": "Vance speaks at HME Manufacturing just over a week before midterms",
-      "title": "Vice President JD Vance rallies for Sen. Roger Marshall in Topeka",
-      "url": "https://www.kwch.com/2026/10/26/vice-president-jd-vance-rallies-sen-roger-marshall-topeka"
     }
   ],
   "schema_version": 1
