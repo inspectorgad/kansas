@@ -1,16 +1,9 @@
 {
   "aggregate": {
-    "as_of": "2026-10-31T00:00:00Z",
-    "band": 3.05,
-    "hamilton": 48.3,
+    "as_of": "2026-11-01T00:00:00Z",
+    "band": 3.1,
+    "hamilton": 48.35,
     "history": [
-      {
-        "date": "2026-07-03",
-        "hamilton": 51.0,
-        "margin": -2.0,
-        "marshall": 49.0,
-        "n_polls": 1
-      },
       {
         "date": "2026-07-04",
         "hamilton": 51.0,
@@ -850,14 +843,21 @@
         "margin": -2.97,
         "marshall": 45.33,
         "n_polls": 14
+      },
+      {
+        "date": "2026-11-01",
+        "hamilton": 48.35,
+        "margin": -2.98,
+        "marshall": 45.37,
+        "n_polls": 12
       }
     ],
     "leader": "hamilton",
-    "margin": -2.97,
-    "marshall": 45.33,
+    "margin": -2.98,
+    "marshall": 45.37,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
-    "n_polls_used": 14,
-    "trend_7d": -2.69
+    "n_polls_used": 12,
+    "trend_7d": -2.7
   },
   "attribution": [
     {
@@ -867,7 +867,7 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-10-31T21:09:41.855103Z",
+  "generated_at": "2026-11-01T00:11:45.700228Z",
   "polls": [
     {
       "added_at": "2026-10-30T16:34:26.876877Z",

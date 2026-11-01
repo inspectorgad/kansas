@@ -26,8 +26,20 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-10-31T21:13:12.451652Z",
+  "generated_at": "2026-11-01T00:15:39.140893Z",
   "items": [
+    {
+      "id": "3aa6ce38d714",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-31T20:00:00Z",
+      "source": "NewsNation",
+      "summary": "Kansas Democrat says Trump\u2019s visit could help him, not Roger Marshall &nbsp;&nbsp; NewsNation",
+      "title": "Kansas Democrat says Trump\u2019s visit could help him, not Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeV81anM4V0R2LVZVd01SLTBidjdHeXNlUVZuWU4tMEhaSWFJUzdTektTY1lqU3lhcnNMLWR0TUZ6MUpJSV9pZ0U4a2ZyRDNjbEFGcEdabTJnalJPVWNBVjN3WE1CZ3FBZjN0NUJtdmFCc3lyRHJLUjQyS3hfZ1RNZmJ5ajdQdmVsMkljMXhNeWNBWnVONjY0REFUSEFHeHB3QUY0UWJPSW9EdHpHRU42StIBtgFBVV95cUxPS0M0N3NHY2pnTFUzR19NbVlUNXN1TnNfZU9NVWZEN005VmY1amJRQ2VnTjZBSnpfWGJpZVUydFEza2M2N2hsLVI0MDZoNFVXQUZGOTREeUt0NXNJTndGOVVKaGUtTGpTM0U1WnQzVHcyM1dZSmFjQ0xUUHgyVGo3Z3Bkb29LanZHWkllOXJrVjJGSTZTTFFZaDFMWHA3VXYxYVNNVDlnakFHUmdWZ0pGN2FvWmZzQQ"
+    },
     {
       "id": "b34ca7de72db",
       "kind": "news",
@@ -54,12 +66,25 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcGd6b1AxUlFRVFExSU1MaDJtbHRhTnlZOGpmd2pJUkF1MWV2cElsMG1zcmttUWktLWRyWWFGVmg1S0RsbTJ1T2ZPbHNiclRuckFXY0FfLThNYWhleGpyOGY3bFBxTlk5VHJZOVBtZ2w0MG0yTThsbFdOOEw1RXUxN3M3elA2aVd4aGx3SFpQQXFpQ2FVdGp6aTBjQm9vY1k"
     },
     {
+      "id": "970538ed9109",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-31T16:47:20Z",
+      "source": "NBC News",
+      "summary": "Kansas Senate Primary Election 2026 Live Results: Marshall, Naramore, Hamilton and More &nbsp;&nbsp; NBC News",
+      "title": "Kansas Senate Primary Election 2026 Live Results: Marshall, Naramore, Hamilton and More",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRFdVdzNWTXVGWWVhNmFnbjJCRTVQTkQ4cnJ6R0NQYVdmcWRNdkw1OHhJcjJmV3R4Rl9UQTI4NFdldkF6QTByaFlaTllyXzg1Rl81c29aM3hray03QjhlY1hJU1g4ZS1VUkMtWXBJQk44a1ZPZDhCYURXSjFiWWxmU3pJSQ"
+    },
+    {
       "id": "35634be0d000",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-31T16:24:07Z",
+      "published_at": "2026-10-31T16:29:03Z",
       "source": "Brotherhood of Locomotive Engineers and Trainmen",
       "summary": "Senator Roger Marshall doubles down on opposition to UP-NS merger in new op-ed &nbsp;&nbsp; Brotherhood of Locomotive Engineers and Trainmen",
       "title": "Senator Roger Marshall doubles down on opposition to UP-NS merger in new op-ed",
@@ -1478,30 +1503,6 @@
       "summary": "JD Vance stumps for Roger Marshall in Kansas &nbsp;&nbsp; KWCH",
       "title": "JD Vance stumps for Roger Marshall in Kansas",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNb1Bqd2RwQkZuRUdjRk1SQk0wNnpXQS1ybExkeVVwRVloNkQ3dXRXUmI2VnpWY1BaU1haQWY2SUs1RnBSYXU5OFA2MFZOd1pSY0xZV0RQTEh5empaQldlTHV3dUxWNGhKWTVIZVdPb1pfSDdxWnhHQ1Bld3JWb3ZLbDR3"
-    },
-    {
-      "id": "01390a6f748e",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-25T18:52:45Z",
-      "source": "Fox News",
-      "summary": "Kansas Sen Roger Marshall urges supporters to cast their ballots &nbsp;&nbsp; Fox News",
-      "title": "Kansas Sen Roger Marshall urges supporters to cast their ballots",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB0RXZtMHh4d1oyckNwZUNoZVZqNnVJTXlDYnJIamp5NnlYYVRnRVNRaURCU01QTHpKMDNtZUtHWjI5YURxRnR1Qi1oWXp4OU9zd1d1bk1B"
-    },
-    {
-      "id": "3f2ca242d111",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-25T17:03:26Z",
-      "source": "FOX One",
-      "summary": "Watch Roger Marshall details path to victory in tight Kansas Senate race - The Sunday Briefing &nbsp;&nbsp; FOX One",
-      "title": "Watch Roger Marshall details path to victory in tight Kansas Senate race - The Sunday Briefing",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPQkFQOGx5S1BGbFB6eVRKWXlHTXV4czlMQnd0bWQ2S1h3by1zQnZtRFZnX0JMaXhIYkk0ek4zX2lwcG45SEFxdjB2a3J1VGl1ZHF1dHoySDZzSHZ2bm96Z0JHeGlhUFhkYWRSYWN4SzBtd01UekFZelpGZ2NldzNNZDcwc0RBS2xLSy1xTlBvUnZtcnJpSkFYTTZQVUtYZXNGc3RvMXZiNkFPckZBVjFpWUpWTTVUcGNYWWc"
     }
   ],
   "schema_version": 1
