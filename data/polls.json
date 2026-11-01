@@ -1,8 +1,8 @@
 {
   "aggregate": {
     "as_of": "2026-11-01T00:00:00Z",
-    "band": 3.1,
-    "hamilton": 48.37,
+    "band": 2.89,
+    "hamilton": 48.64,
     "history": [
       {
         "date": "2026-07-04",
@@ -825,39 +825,39 @@
       },
       {
         "date": "2026-10-29",
-        "hamilton": 48.33,
-        "margin": -2.97,
-        "marshall": 45.36,
-        "n_polls": 14
+        "hamilton": 48.6,
+        "margin": -2.68,
+        "marshall": 45.91,
+        "n_polls": 15
       },
       {
         "date": "2026-10-30",
-        "hamilton": 48.33,
-        "margin": -2.97,
-        "marshall": 45.36,
-        "n_polls": 14
+        "hamilton": 48.6,
+        "margin": -2.68,
+        "marshall": 45.91,
+        "n_polls": 15
       },
       {
         "date": "2026-10-31",
-        "hamilton": 48.33,
-        "margin": -2.97,
-        "marshall": 45.36,
-        "n_polls": 14
+        "hamilton": 48.6,
+        "margin": -2.68,
+        "marshall": 45.91,
+        "n_polls": 15
       },
       {
         "date": "2026-11-01",
-        "hamilton": 48.37,
-        "margin": -2.98,
-        "marshall": 45.39,
-        "n_polls": 12
+        "hamilton": 48.64,
+        "margin": -2.7,
+        "marshall": 45.95,
+        "n_polls": 13
       }
     ],
     "leader": "hamilton",
-    "margin": -2.98,
-    "marshall": 45.39,
+    "margin": -2.7,
+    "marshall": 45.95,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
-    "n_polls_used": 12,
-    "trend_7d": -2.7
+    "n_polls_used": 13,
+    "trend_7d": -2.42
   },
   "attribution": [
     {
@@ -867,8 +867,24 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-11-01T13:45:37.609338Z",
+  "generated_at": "2026-11-01T18:46:47.434193Z",
   "polls": [
+    {
+      "added_at": "2026-11-01T18:46:47.431884Z",
+      "end_date": "2026-10-29",
+      "id": "6d14c750256b",
+      "margin_of_error": 2.8,
+      "other": 1.0,
+      "pollster": "YouGov",
+      "population": "LV",
+      "results": {
+        "hamilton": 50.0,
+        "marshall": 49.0
+      },
+      "sample_size": 2092,
+      "start_date": "2026-10-26",
+      "undecided": 0.0
+    },
     {
       "added_at": "2026-10-30T16:34:26.876877Z",
       "end_date": "2026-10-28",

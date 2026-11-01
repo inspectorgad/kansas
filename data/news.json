@@ -26,8 +26,33 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-01T13:49:28.100924Z",
+  "generated_at": "2026-11-01T18:50:38.988387Z",
   "items": [
+    {
+      "id": "828068fb4e96",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-01T18:16:24Z",
+      "source": "AOL.com",
+      "summary": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids &nbsp;&nbsp; AOL.com",
+      "title": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUVpTQ1Fab2hSSzJNVTFncjhmako5Zy0zdXo0a3NSRncyRFhMTV9Pb0lfLXBKSVpqU01TenlrWTh6dGs0anMtUXJvY2xpVkU5cmpCUF81S1hvUXZ3T1dDTnNsZXBITGRCZDE0bzVmcW5wUC1EYjJqcWRicmY3Y0RERTJmT0Y"
+    },
+    {
+      "id": "970538ed9109",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-01T13:51:58Z",
+      "source": "NBC News",
+      "summary": "Kansas Senate Primary Election 2026 Live Results: Marshall, Naramore, Hamilton and More &nbsp;&nbsp; NBC News",
+      "title": "Kansas Senate Primary Election 2026 Live Results: Marshall, Naramore, Hamilton and More",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRFdVdzNWTXVGWWVhNmFnbjJCRTVQTkQ4cnJ6R0NQYVdmcWRNdkw1OHhJcjJmV3R4Rl9UQTI4NFdldkF6QTByaFlaTllyXzg1Rl81c29aM3hray03QjhlY1hJU1g4ZS1VUkMtWXBJQk44a1ZPZDhCYURXSjFiWWxmU3pJSQ"
+    },
     {
       "id": "52d2d5801599",
       "kind": "news",
@@ -39,18 +64,6 @@
       "summary": "Future of MAHA and anti-abortion policy hinges on Roger Marshall\u2019s election chances &nbsp;&nbsp; Washington Examiner",
       "title": "Future of MAHA and anti-abortion policy hinges on Roger Marshall\u2019s election chances",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbWZmU1ZzaUtWVmo1Wkt5c3ozLThtMzVZRkt6blhIeXZLbUVwSC1kb0UxVUpwbEtjTFJuaWVNb3NPT1gyazZycS1vVUdlWkRVcFZ1bjQ3NVVWQkRJRk9uQXFsekF2anhJbGo4cFdKaDliVTN5ZmN5SnJqT21lODliR0JJcnFVd2FEeUMzZ0x0UW85T2xIWjdUbEI5N2RKVWp0bmIySzRYMHQ0NFcta2c"
-    },
-    {
-      "id": "2a4e49d0be73",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-11-01T11:01:00Z",
-      "source": "Yahoo",
-      "summary": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids &nbsp;&nbsp; Yahoo",
-      "title": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNY2RnQXhmMVhSdy11dkVUaEc0dmFfWS1PaVFEakJQQ2VkZ2FfM1prRk9KZmNQb1BPZEVQWE40QWFET2UwZ2lNMUlEbHJVaVdXcUtCOHFTSTV2Vm5MQ1oxODA2Qm9xRk9YYTR0ZzZqalZ3U0NFT3dLRGszakpOd2NXYWxRNGx0Z2ZpWWh3c0pvR180SzQ1dXBiWHJn"
     },
     {
       "id": "22bc807cc2be",
@@ -101,19 +114,6 @@
       "summary": "Marshall to Newsmax: Hamilton 'Most Radical Liberal' in Kansas Senate Primary History &nbsp;&nbsp; Yahoo",
       "title": "Marshall to Newsmax: Hamilton 'Most Radical Liberal' in Kansas Senate Primary History",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcGd6b1AxUlFRVFExSU1MaDJtbHRhTnlZOGpmd2pJUkF1MWV2cElsMG1zcmttUWktLWRyWWFGVmg1S0RsbTJ1T2ZPbHNiclRuckFXY0FfLThNYWhleGpyOGY3bFBxTlk5VHJZOVBtZ2w0MG0yTThsbFdOOEw1RXUxN3M3elA2aVd4aGx3SFpQQXFpQ2FVdGp6aTBjQm9vY1k"
-    },
-    {
-      "id": "970538ed9109",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-31T16:47:20Z",
-      "source": "NBC News",
-      "summary": "Kansas Senate Primary Election 2026 Live Results: Marshall, Naramore, Hamilton and More &nbsp;&nbsp; NBC News",
-      "title": "Kansas Senate Primary Election 2026 Live Results: Marshall, Naramore, Hamilton and More",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRFdVdzNWTXVGWWVhNmFnbjJCRTVQTkQ4cnJ6R0NQYVdmcWRNdkw1OHhJcjJmV3R4Rl9UQTI4NFdldkF6QTByaFlaTllyXzg1Rl81c29aM3hray03QjhlY1hJU1g4ZS1VUkMtWXBJQk44a1ZPZDhCYURXSjFiWWxmU3pJSQ"
     },
     {
       "id": "35634be0d000",
@@ -177,19 +177,6 @@
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS0hheHBvUHQ2WEw4OVU5eUE4MHB5SG5ESko4WUpMSzVnUEgtTnFzVEM5SkdWcVItMDVuR0szdTZ1UjFkRnFPbVNzV19vcmprOWhvTlYtVTNaeUNNS2FXeTNsckE3SUpiSGdKcmxHNkQ5R0JORzlRREpzQ1hTQXI1S2txZVZDbWlfWV9jMXJWOTNrZy1zaERv"
     },
     {
-      "id": "b011e1433b46",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-31T06:58:52Z",
-      "source": "The Daily Beast",
-      "summary": "Nate Silver Makes Huge Call in Must-Win MAGA State Kansas Roger Marshall Adam Hamilton &nbsp;&nbsp; The Daily Beast",
-      "title": "Nate Silver Makes Huge Call in Must-Win MAGA State Kansas Roger Marshall Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWDFGQ0k1UnNQbUVzOWZWN09nelhnSThxaXJOMlJSMlF1QjRyTDllWFdUY2t0UnFRT08zX1ZlVldzV29Lek1PLUYyMmdGM3h3M1JDTjJUcGxVYzVSamo3a2piakNzU3ZXdWl5S0cxdzVBOHBZamZTdUVDMVJHaktYVzI2TkhrQmhQTWJzeWNhcS1WSG9SUjBwdzZSYXFyeEN6OWJ0VjNNOUw1UVpMQUNsaW5JMkNEM1U"
-    },
-    {
       "id": "343fc48de590",
       "kind": "news",
       "mentions": [
@@ -200,6 +187,18 @@
       "summary": "Polls place Adam Hamilton as lead of senate race &nbsp;&nbsp; KWCH",
       "title": "Polls place Adam Hamilton as lead of senate race",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMGxOWm11RjBYTFpRNFBFUUtwN1Z1YzJNandmcUJYYk15UnF1X0hCMFJtQTNtOGozaG9jWGlTRmgtSDZ5bm8zSk0wTFZIWUNoZk01UFJiNFZnel8xSUdEWEJKc2dyQ1VkZ09DVl9jMm5nZmVxZTRpcHVOVlJqVHJTbnRXWDF5UDVi"
+    },
+    {
+      "id": "d8ab1b261cf4",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-10-31T03:50:00Z",
+      "source": "KWCH",
+      "summary": "Lawsuit filed against Roger Marshall for debt arrest &nbsp;&nbsp; KWCH",
+      "title": "Lawsuit filed against Roger Marshall for debt arrest",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbDFTdTRRNTU3OWJCQ05DcjlacUNFbFZSTE9CcDNPdnpKZDBFdTlqTUx5Qmh4aTBNMzNhNEJpd3NGR3QzMnFURFhGa0J1MThweThtQ2tKSEJrZXg1WmlTNnM0aVBXR1JwWUtySVlqQ3lMSldZSHo3YURmcG1fb2tCVjRDdlQtWkxoRkFlNXBSeEU"
     },
     {
       "id": "404c71341669",
@@ -274,6 +273,19 @@
       "summary": "GOP\u2019s Roger Marshall Sued by Ex-Patient as Trump Revives Kansas Rally Plans &nbsp;&nbsp; Newsweek",
       "title": "GOP\u2019s Roger Marshall Sued by Ex-Patient as Trump Revives Kansas Rally Plans",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVG9hSzkySFQzV2pyOE5nU1o3QzVRZjRfY2ctQ2h2N3VQVkVaRVVKQzY4Z2tZOEZWcXNJWk9La3hteHlPaWJQS045Wmx0UU9jdENJUVpzd0pOZDhoTmpCUzZTem5Qd3A2ZTNzQ01yaklXeDR5RGtGcU9PSGs1YzNuNjRsRFBLV0xGRnZPdXdrYlpBZ0djTkdnX0dJYzdkTWs5NURpSEM2U3JhODJt"
+    },
+    {
+      "id": "b011e1433b46",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-10-30T21:49:28Z",
+      "source": "The Daily Beast",
+      "summary": "Nate Silver Makes Huge Call in Must-Win MAGA State Kansas Roger Marshall Adam Hamilton &nbsp;&nbsp; The Daily Beast",
+      "title": "Nate Silver Makes Huge Call in Must-Win MAGA State Kansas Roger Marshall Adam Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWDFGQ0k1UnNQbUVzOWZWN09nelhnSThxaXJOMlJSMlF1QjRyTDllWFdUY2t0UnFRT08zX1ZlVldzV29Lek1PLUYyMmdGM3h3M1JDTjJUcGxVYzVSamo3a2piakNzU3ZXdWl5S0cxdzVBOHBZamZTdUVDMVJHaktYVzI2TkhrQmhQTWJzeWNhcS1WSG9SUjBwdzZSYXFyeEN6OWJ0VjNNOUw1UVpMQUNsaW5JMkNEM1U"
     },
     {
       "id": "2785e6c0b4fe",
@@ -1046,8 +1058,8 @@
         "hamilton"
       ],
       "published_at": "2026-10-28T01:32:31Z",
-      "source": "KSN-TV",
-      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN.com",
       "title": "Adam Hamilton \u2013 Democrat for US Senate",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQTIxOU5KTnMtWlVOejliN0EyT0hsc3FQcDc5OXR0TkVPSVQ4Tjl1Z1RqUF9PekE1T0tUN3liUnc4QmVfYUx6VGUtMlFzcXEzX2xoTkQ0RkpYMXFTdkk5YllvVGh1YnJpYkY3ank1eEprZXljOFhiQ1ZNYnhsa2gxRUNmN3pHZzRKVjZfZDdKRFZnb3JENlJsVlFSUXnSAaIBQVVfeXFMTjIyRkRwTjBSY1ZIYVcyRjQ1RHNxTGRrWVdLeDF6ZmtFaTZBTUliX0dWNldIMWVWSUthQzhUWkN3YmlQOGJUYlRwc1BheHVmQnpiRzREM2phV1dkN2oweXU4a1FhNDFpdmJoSC1JLTcwcWNlOVZjYTNXVUoxVkJhVmJld013Q3d4Q09sNEN5ZUdxbUNjbmFMYzBOcS01M0haYkhB"
     },
@@ -1490,19 +1502,6 @@
       "summary": "Vance speaks at HME Manufacturing just over a week before midterms",
       "title": "Vice President JD Vance rallies for Sen. Roger Marshall in Topeka",
       "url": "https://www.kwch.com/2026/10/26/vice-president-jd-vance-rallies-sen-roger-marshall-topeka"
-    },
-    {
-      "id": "8ecff2ff034c",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-26T16:36:00Z",
-      "source": "Action Network",
-      "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 26) &nbsp;&nbsp; Action Network",
-      "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 26)",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQT1kxaURMNi1QSmQwT25MRUFwRWNlY3hQSV9MVDg3eWtROEpsYVJlSzd0Q3BVX3QxN1ptdzZGazZjb0NxbmVfbmlkUk51VnNURGxUYU1JUmRsRXVJNWlNank5U3hiTlBCd0JFLTJfZ2Y0aUtZN24yd1FXX1FyUXZXUFdUN0xWTTFJTDJXUDZ3dUNFRDNJYWlzQ2Rxemc5X3Izc3d2OWEybHF0dGZWT1B5NDBtNXMzOUJwVXR1Z3Y1SERkQjlZWGZzdFBwMThTLS1sN0p5clEybEwxN3FhNDVXOQ"
     }
   ],
   "schema_version": 1
