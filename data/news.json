@@ -26,8 +26,44 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-01T06:27:16.481752Z",
+  "generated_at": "2026-11-01T13:49:28.100924Z",
   "items": [
+    {
+      "id": "52d2d5801599",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-01T12:00:00Z",
+      "source": "Washington Examiner",
+      "summary": "Future of MAHA and anti-abortion policy hinges on Roger Marshall\u2019s election chances &nbsp;&nbsp; Washington Examiner",
+      "title": "Future of MAHA and anti-abortion policy hinges on Roger Marshall\u2019s election chances",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbWZmU1ZzaUtWVmo1Wkt5c3ozLThtMzVZRkt6blhIeXZLbUVwSC1kb0UxVUpwbEtjTFJuaWVNb3NPT1gyazZycS1vVUdlWkRVcFZ1bjQ3NVVWQkRJRk9uQXFsekF2anhJbGo4cFdKaDliVTN5ZmN5SnJqT21lODliR0JJcnFVd2FEeUMzZ0x0UW85T2xIWjdUbEI5N2RKVWp0bmIySzRYMHQ0NFcta2c"
+    },
+    {
+      "id": "2a4e49d0be73",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-01T11:01:00Z",
+      "source": "Yahoo",
+      "summary": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids &nbsp;&nbsp; Yahoo",
+      "title": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNY2RnQXhmMVhSdy11dkVUaEc0dmFfWS1PaVFEakJQQ2VkZ2FfM1prRk9KZmNQb1BPZEVQWE40QWFET2UwZ2lNMUlEbHJVaVdXcUtCOHFTSTV2Vm5MQ1oxODA2Qm9xRk9YYTR0ZzZqalZ3U0NFT3dLRGszakpOd2NXYWxRNGx0Z2ZpWWh3c0pvR180SzQ1dXBiWHJn"
+    },
+    {
+      "id": "22bc807cc2be",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-01T11:00:00Z",
+      "source": "Wichita Eagle",
+      "summary": "Trump set to speak today in Kansas, for 2nd time in bid to save Sen. Roger Marshall &nbsp;&nbsp; Wichita Eagle",
+      "title": "Trump set to speak today in Kansas, for 2nd time in bid to save Sen. Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5JYkhWdmVUYzdiZGNqN3FaZmtIRDkxMWtZNzBYUEVGS0Q4ajlTQWJtRlV0NG91M01QUWRKb0FaSHlLWUtvZG5MWGVZdk5Jbkh3Y3ZRanJFWE56SExiN3dtYkdMeHY5QUNRZldEWnZGdER5dFpxSlUtd9IBeEFVX3lxTFBUbE1nMnEtR0laekdfNURLcmNZMndPS2diUEJNVXRTSk9RSl9nUEo3YlY0ejZzZ1h4dVY4TDNQM0Mwd210TnJ2UkNIb09NcG1NVjZtaHNYNURUaXp5emRGd3hlcjExcFQ2X1Z6WV96LWdyY0RwY2tVeA"
+    },
     {
       "id": "3aa6ce38d714",
       "kind": "news",
@@ -129,6 +165,18 @@
       "url": "https://kansasreflector.com/2026/10/31/marshalls-payments-from-leadership-pac-to-top-aide-violate-federal-law-new-ethics-complaint-says"
     },
     {
+      "id": "b082b5041a26",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-10-31T12:36:49Z",
+      "source": "The Economist",
+      "summary": "Weekend profile: Adam Hamilton, Democrats\u2019 miracle man in Kansas &nbsp;&nbsp; The Economist",
+      "title": "Weekend profile: Adam Hamilton, Democrats\u2019 miracle man in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS0hheHBvUHQ2WEw4OVU5eUE4MHB5SG5ESko4WUpMSzVnUEgtTnFzVEM5SkdWcVItMDVuR0szdTZ1UjFkRnFPbVNzV19vcmprOWhvTlYtVTNaeUNNS2FXeTNsckE3SUpiSGdKcmxHNkQ5R0JORzlRREpzQ1hTQXI1S2txZVZDbWlfWV9jMXJWOTNrZy1zaERv"
+    },
+    {
       "id": "b011e1433b46",
       "kind": "news",
       "mentions": [
@@ -177,18 +225,6 @@
       "summary": "The lawsuit comes just days ahead of the midterm election, in which Marshall is running for re-election to the U.S. Senate.",
       "title": "Former patient suing Sen. Roger Marshall for debt arrest",
       "url": "https://www.kwch.com/2026/10/31/former-patient-suing-sen-roger-marshall-debt-arrest"
-    },
-    {
-      "id": "b082b5041a26",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-31T00:00:00Z",
-      "source": "The Economist",
-      "summary": "Weekend profile: Adam Hamilton, Democrats\u2019 miracle man in Kansas &nbsp;&nbsp; The Economist",
-      "title": "Weekend profile: Adam Hamilton, Democrats\u2019 miracle man in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS0hheHBvUHQ2WEw4OVU5eUE4MHB5SG5ESko4WUpMSzVnUEgtTnFzVEM5SkdWcVItMDVuR0szdTZ1UjFkRnFPbVNzV19vcmprOWhvTlYtVTNaeUNNS2FXeTNsckE3SUpiSGdKcmxHNkQ5R0JORzlRREpzQ1hTQXI1S2txZVZDbWlfWV9jMXJWOTNrZy1zaERv"
     },
     {
       "id": "1178b1470ec0",
@@ -1467,43 +1503,6 @@
       "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 26) &nbsp;&nbsp; Action Network",
       "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 26)",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQT1kxaURMNi1QSmQwT25MRUFwRWNlY3hQSV9MVDg3eWtROEpsYVJlSzd0Q3BVX3QxN1ptdzZGazZjb0NxbmVfbmlkUk51VnNURGxUYU1JUmRsRXVJNWlNank5U3hiTlBCd0JFLTJfZ2Y0aUtZN24yd1FXX1FyUXZXUFdUN0xWTTFJTDJXUDZ3dUNFRDNJYWlzQ2Rxemc5X3Izc3d2OWEybHF0dGZWT1B5NDBtNXMzOUJwVXR1Z3Y1SERkQjlZWGZzdFBwMThTLS1sN0p5clEybEwxN3FhNDVXOQ"
-    },
-    {
-      "id": "e7fee582c734",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-26T12:00:00Z",
-      "source": "People For the American Way",
-      "summary": "Tony Perkins Asks God To Dispatch The Holy Spirit To Help Reelect Sen. Roger Marshall &nbsp;&nbsp; People For the American Way",
-      "title": "Tony Perkins Asks God To Dispatch The Holy Spirit To Help Reelect Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRGJUbkVrMHM0VVRVQm9SazVFVjcyRmxOVjhUcGtSLVFuVjg2ZnlZRlhsMEx5MVczcFR6NE1IX3dXTWtLYUlpbUN5cUxFTHVwajl0YVlndUxWby1xa216VVAzS3V0aWlQR0M2ek9ZWW5YQ29ZaHZqalI5dU1sb1VFdHFWVFNFaWhsWjhqNWFyeXNfbEllb0V3dlg5OHBqeXVxUExkdVFKYXdrYVY5SkJhaGtYQkxlZw"
-    },
-    {
-      "id": "a74fb3eb9a79",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-26T10:00:00Z",
-      "source": "Kansas City Star",
-      "summary": "JD Vance set to rally Kansas voters amid Marshall-Hamilton Senate race &nbsp;&nbsp; Kansas City Star",
-      "title": "JD Vance set to rally Kansas voters amid Marshall-Hamilton Senate race",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE16SGJSbHlNOEctX0drZjdtYk1yY204N21OYnVqd250a1lSTWhVd0lGUmFWTnczR1hudHllZVVUaWNWTWh5QlFRQ2xOeWctUmxRbndKeE44M1oweF93YUlwTHVxaDRLMlpXSjdaTHJGMTZFeTVnWGFkRjhHZU9yQdIBfkFVX3lxTE5IQ0IwZUJXQkJhdHFGSWlrTmlEXzRTdUZySDhVY3JZLXpiWjAzRjVNYTA4NGxpeXZFRGNsSFd3ZDh2aFpLWlh0eF92RUY0RHJDOUNNY0FTLU5rbXZTel9fQW5wbW5tYXNTWjFCeF9vbGpwdXVDd2NZOFhjekFBZw"
-    },
-    {
-      "id": "1ebcf122e414",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-26T04:00:00Z",
-      "source": "C-SPAN",
-      "summary": "U.S. Senate Candidate Adam Hamilton (D-KS) Makes Bus Tour Campaign Stop in Liberal, KS &nbsp;&nbsp; C-SPAN",
-      "title": "U.S. Senate Candidate Adam Hamilton (D-KS) Makes Bus Tour Campaign Stop in Liberal, KS",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSk1Xa3l4aV82UmZZbm1TMTFhRTlNQmZYM215S0ZkMnpuTFRLM1dkQjVBRnFnLXZSdUtoZUk5NDg3QXlCX2FiekFXV2hoZ0ZfZVVoTlh3UHU3cnpfeGRLNGpMS2YxWUNMN1I0N051RkIyQ2xYOFBEX1R1ZGZJRmRTamJwdnFOZnprNXJkcVVTaWNfMVFmR0VxWm1TdG4xOXAwcWVCOHNxTkV6T0lJMzdpZUNCa1RveXBQOXFQQnYyUk9iTll3d2F1TVlTRQ"
     }
   ],
   "schema_version": 1
