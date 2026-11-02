@@ -39,6 +39,20 @@ Full inventory, with limits, in [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md).
 How the average is computed, and what the app does not know, in
 [docs/METHODOLOGY.md](docs/METHODOLOGY.md).
 
+## Web dashboard
+
+`site/index.html` is a single static page that reads the same JSON as the app,
+straight from the `data` branch, so it needs no redeploy when the collector runs.
+It shows the race summary, market and poll trends, every poll, money, news, and,
+once returns start, a sortable county table that refreshes every minute.
+
+The **Web dashboard** workflow publishes it to GitHub Pages whenever `site/`
+changes on the default branch. One-time setup: Settings → Pages → Source:
+**GitHub Actions**. The site is then at `https://inspectorgad.github.io/kansas/`.
+
+To test against local files, serve the repo and pass `?data=<folder>/`, for
+example against the output of `collector/rehearse.py --data-dir`.
+
 ## Running the collector
 
 ```sh
