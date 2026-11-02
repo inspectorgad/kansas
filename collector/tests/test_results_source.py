@@ -466,5 +466,5 @@ class TestRaceBlockSummaries:
         lines = race_block_summaries(html)
         assert len(lines) == 2
         assert lines[1].startswith("United States Senate (R): marshall=266,129")
-        assert "counties 1/105" in lines[1]
+        assert "counties 1/105 (marshall counties sum 1,191 != statewide 266,129)" in lines[1]
         assert "Allen M1,191/H0/other300 (22/22)" in lines[1]

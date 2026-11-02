@@ -535,9 +535,18 @@ def race_block_summaries(html: str) -> list[str]:
             f" ({c.precincts_reporting}/{c.precincts_total})"
             for c in result.counties[:3]
         )
+        statewide = {r.candidate_id: r.votes for r in result.statewide}
+        sums = {
+            MARSHALL: sum(c.marshall_votes for c in result.counties),
+            HAMILTON: sum(c.hamilton_votes for c in result.counties),
+        }
+        reconcile = ", ".join(
+            f"{cid} counties sum {sums[cid]:,} " + ("= statewide" if sums[cid] == n else f"!= statewide {n:,}")
+            for cid, n in statewide.items()
+        )
         lines.append(
             f"{heading}: {votes}; precincts {result.precincts_reporting}/{result.precincts_total}; "
-            f"counties {len(result.counties)}/{len(KANSAS_COUNTIES)}; e.g. {sample}"
+            f"counties {len(result.counties)}/{len(KANSAS_COUNTIES)} ({reconcile}); e.g. {sample}"
         )
     return lines
 
