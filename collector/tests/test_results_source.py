@@ -450,3 +450,21 @@ class TestKssosRaceBlocks:
 
         fixture = Path(__file__).parent / "fixtures" / "enr" / "mid.html"
         assert not is_race_block_page(fixture.read_text())
+
+
+class TestRaceBlockSummaries:
+    def test_every_senate_contest_is_summarised(self):
+        from sources.results import race_block_summaries
+        from tests.kssos_markup import page, race
+
+        html = page(
+            race("United States Senate (D)", 4150, 4150, [("Adam Hamilton", 76_102, 35)],
+                 [("Allen", 22, 22, [("D-Adam Hamilton", 107)])], race_id=1001),
+            race("United States Senate (R)", 4150, 4150, [("Roger Marshall", 266_129, 80)],
+                 [("Allen", 22, 22, [("R-Roger Marshall", 1_191), ("R-Pond Naramore", 300)])], race_id=1002),
+        )
+        lines = race_block_summaries(html)
+        assert len(lines) == 2
+        assert lines[1].startswith("United States Senate (R): marshall=266,129")
+        assert "counties 1/105" in lines[1]
+        assert "Allen M1,191/H0/other300 (22/22)" in lines[1]

@@ -514,6 +514,34 @@ def _parse_senate_block(heading: str, block: str) -> ResultsData | None:
     return data
 
 
+def race_block_summaries(html: str) -> list[str]:
+    """One line per U.S. Senate contest found, for the probe log.
+
+    The parser returns only the contest it chose, so on a primary — where it
+    correctly refuses — nothing in the log showed whether the county tooltips
+    were being read. This does, for every Senate contest on the page.
+    """
+    lines = []
+    for heading, block in _race_blocks(html):
+        if not US_SENATE.search(heading):
+            continue
+        result = _parse_senate_block(heading, block)
+        if result is None:
+            lines.append(f"{heading}: no candidate rows recognised")
+            continue
+        votes = ", ".join(f"{r.candidate_id}={r.votes:,}" for r in result.statewide)
+        sample = "; ".join(
+            f"{c.county} M{c.marshall_votes:,}/H{c.hamilton_votes:,}/other{c.other_votes:,}"
+            f" ({c.precincts_reporting}/{c.precincts_total})"
+            for c in result.counties[:3]
+        )
+        lines.append(
+            f"{heading}: {votes}; precincts {result.precincts_reporting}/{result.precincts_total}; "
+            f"counties {len(result.counties)}/{len(KANSAS_COUNTIES)}; e.g. {sample}"
+        )
+    return lines
+
+
 def _parse_race_blocks(html: str) -> ResultsData | None:
     """Read the U.S. Senate contest from the kssos.org race-block layout.
 
@@ -682,7 +710,10 @@ def probe(url: str | None = None) -> ResultsData:
                 reason = implausible(parsed)
                 if reason:
                     data.probes.append(
-                        ResultsProbe(shape, False, f"{where}: rejected — {reason}")
+                        ResultsProbe(
+                            shape, False, f"{where}: rejected — {reason}",
+                            context=race_block_summaries(html) if shape == "race-blocks" else [],
+                        )
                     )
                     continue
 
@@ -713,7 +744,7 @@ def diagnose(url: str | None = None) -> str:
         if attempt.body_sample:
             lines.append(f"        served: {attempt.body_sample[:300]}…")
         if attempt.context:
-            lines.append(f"        {len(attempt.context)} row(s) mentioning the contest, candidates or precincts:")
+            lines.append(f"        {len(attempt.context)} detail line(s):")
             for row in attempt.context:
                 lines.append(f"          {row}")
         for excerpt in attempt.raw:
