@@ -380,16 +380,16 @@
             "name": "BLUE HEN FEDERAL PAC"
           },
           {
-            "amount": 2000.0,
+            "amount": 2500.0,
             "committee_id": "C00412304",
-            "gifts": 1,
+            "gifts": 2,
             "kind": "pac",
             "name": "MONTANANS FOR TESTER"
           }
         ],
         "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
         "itemized_total": 11851871.79,
-        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (24 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
+        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (25 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
         "large_donors": [
           {
             "amount": 10680.6,
@@ -458,10 +458,12 @@
             "state": "KS"
           },
           {
-            "amount": 7131.25,
+            "amount": 7311.85,
             "city": "LEAWOOD",
             "employer": "NOT EMPLOYED",
-            "gifts": 2,
+            "first_gift": "2026-04-02",
+            "gifts": 3,
+            "last_gift": "2026-06-13",
             "name": "PETERSEN, JOHN",
             "occupation": "NOT EMPLOYED",
             "state": "KS"
@@ -693,7 +695,7 @@
         "threshold": 1000.0,
         "top_cities": [
           {
-            "amount": 46311.85,
+            "amount": 46492.45,
             "donors": 6,
             "label": "Leawood, KS"
           },
@@ -1846,12 +1848,36 @@
   "cycle": 2026,
   "filings": [
     {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-31",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/706/202610319945306706/202610319945306706.pdf"
+    },
+    {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-30",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
       "url": "https://docquery.fec.gov/pdf/510/202610309945305510/202610309945305510.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-29",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/518/202610299945299518/202610299945299518.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-29",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/354/202610299945297354/202610299945297354.pdf"
     },
     {
       "committee_id": "C00948901",
@@ -1870,6 +1896,14 @@
       "url": "https://docquery.fec.gov/pdf/261/202610299945300261/202610299945300261.pdf"
     },
     {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-25",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/295/202610259945202295/202610259945202295.pdf"
+    },
+    {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
@@ -1885,12 +1919,30 @@
       "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
     },
     {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-23",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/088/202610239945197088/202610239945197088.pdf"
+    },
+    {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-23",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
       "url": "https://docquery.fec.gov/pdf/842/202610239945199842/202610239945199842.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "coverage_end_date": "2026-10-14",
+      "date": "2026-10-22",
+      "form_type": "F3",
+      "report_type": "PRE-GENERAL",
+      "total_receipts": 540371.28,
+      "url": "https://docquery.fec.gov/pdf/352/202610229941033352/202610229941033352.pdf"
     },
     {
       "committee_id": "C00948901",
@@ -1911,12 +1963,28 @@
       "url": "https://docquery.fec.gov/pdf/351/202610229945144351/202610229945144351.pdf"
     },
     {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-21",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/723/202610219931798723/202610219931798723.pdf"
+    },
+    {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-20",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
       "url": "https://docquery.fec.gov/pdf/341/202610209921391341/202610209921391341.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-19",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/794/202610199916221794/202610199916221794.pdf"
     },
     {
       "committee_id": "C00948901",
@@ -1927,12 +1995,30 @@
       "url": "https://docquery.fec.gov/pdf/123/202610199916221123/202610199916221123.pdf"
     },
     {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "date": "2026-10-17",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/388/202610179916173388/202610179916173388.pdf"
+    },
+    {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-16",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
       "url": "https://docquery.fec.gov/pdf/605/202610169916160605/202610169916160605.pdf"
+    },
+    {
+      "committee_id": "C00576173",
+      "committee_name": "KANSANS FOR MARSHALL",
+      "coverage_end_date": "2026-09-30",
+      "date": "2026-10-15",
+      "form_type": "F3",
+      "report_type": "OCTOBER QUARTERLY",
+      "total_receipts": 800617.52,
+      "url": "https://docquery.fec.gov/pdf/145/202610159914696145/202610159914696145.pdf"
     },
     {
       "committee_id": "C00948901",
@@ -1970,94 +2056,12 @@
       "date": "2026-10-11",
       "form_type": "F1",
       "url": "https://docquery.fec.gov/pdf/659/202610119908612659/202610119908612659.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-08-02",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/106/202608029899313106/202608029899313106.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-31",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/277/202607319899298277/202607319899298277.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-30",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/580/202607309899241580/202607309899241580.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-28",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/371/202607289894482371/202607289894482371.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-26",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/826/202607269894474826/202607269894474826.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-24",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/459/202607249894463459/202607249894463459.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "coverage_end_date": "2026-07-15",
-      "date": "2026-07-23",
-      "form_type": "F3",
-      "report_type": "PRE-PRIMARY",
-      "total_receipts": 490367.65,
-      "url": "https://docquery.fec.gov/pdf/738/202607239894459738/202607239894459738.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-23",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/918/202607239894441918/202607239894441918.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-21",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/005/202607219894400005/202607219894400005.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-07-19",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/688/202607199890895688/202607199890895688.pdf"
     }
   ],
-  "generated_at": "2026-11-02T19:53:08.645902Z",
+  "generated_at": "2026-11-02T20:18:07.202326Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 17238968.99,
+      "hamilton": 31979171.07,
       "marshall": 47749649.31
     },
     "recent": [
@@ -2423,10 +2427,17 @@
       }
     ],
     "supporting": {
-      "hamilton": 9286575.07,
+      "hamilton": 11481943.1,
       "marshall": 3941119.67
     },
     "top_spenders": [
+      {
+        "amount": 16908589.1,
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "opposes": "hamilton",
+        "supports": "marshall"
+      },
       {
         "amount": 14731269.55,
         "committee_id": "C00953299",
@@ -2440,18 +2451,11 @@
         "opposes": "marshall"
       },
       {
-        "amount": 11160584.3,
+        "amount": 11683803.68,
         "committee_id": "C00961276",
         "committee_name": "LOWER COSTS NOW",
         "opposes": "marshall",
         "supports": "hamilton"
-      },
-      {
-        "amount": 10945351.07,
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "opposes": "hamilton",
-        "supports": "marshall"
       },
       {
         "amount": 7851030.92,
@@ -2467,22 +2471,40 @@
         "supports": "hamilton"
       },
       {
-        "amount": 2451000.0,
-        "committee_id": "C00960435",
-        "committee_name": "NO GOING BACK PAC INC.",
+        "amount": 4388356.5,
+        "committee_id": "C00957928",
+        "committee_name": "MAIN STREET FUND",
         "opposes": "hamilton"
       },
       {
-        "amount": 1698673.25,
+        "amount": 2998120.5,
         "committee_id": "C00687103",
         "committee_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
         "opposes": "hamilton",
         "supports": "marshall"
       },
       {
+        "amount": 2456460.49,
+        "committee_id": "C00487470",
+        "committee_name": "CLUB FOR GROWTH ACTION",
+        "opposes": "hamilton"
+      },
+      {
+        "amount": 2451000.0,
+        "committee_id": "C00960435",
+        "committee_name": "NO GOING BACK PAC INC.",
+        "opposes": "hamilton"
+      },
+      {
         "amount": 1600799.48,
         "committee_id": "C00750174",
         "committee_name": "PLAINS PAC",
+        "opposes": "hamilton"
+      },
+      {
+        "amount": 1539252.97,
+        "committee_id": "C00844613",
+        "committee_name": "WIN IT BACK PAC",
         "opposes": "hamilton"
       },
       {
@@ -2492,37 +2514,20 @@
         "opposes": "hamilton"
       },
       {
-        "amount": 1185233.5,
-        "committee_id": "C00957928",
-        "committee_name": "MAIN STREET FUND",
-        "opposes": "hamilton"
+        "amount": 950456.32,
+        "committee_id": "C00960385",
+        "committee_name": "UNITED FUTURES PAC",
+        "opposes": "marshall",
+        "supports": "hamilton"
       },
       {
         "amount": 908610.17,
         "committee_id": "C00962696",
         "committee_name": "NEW DEAL FOR ALL, INC.",
         "opposes": "marshall"
-      },
-      {
-        "amount": 658234.28,
-        "committee_id": "C00963736",
-        "committee_name": "OUR HERITAGE MATTERS",
-        "opposes": "marshall"
-      },
-      {
-        "amount": 657953.37,
-        "committee_id": "C00657866",
-        "committee_name": "PROTECT FREEDOM POLITICAL ACTION COMMITTEE",
-        "supports": "marshall"
-      },
-      {
-        "amount": 508505.0,
-        "committee_id": "C00960997",
-        "committee_name": "READY FOR THE FIGHT",
-        "supports": "hamilton"
       }
     ],
-    "total": 78216313.04
+    "total": 95151883.15
   },
   "schema_version": 1
 }

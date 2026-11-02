@@ -26,8 +26,21 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-02T19:53:12.410201Z",
+  "generated_at": "2026-11-02T20:18:10.985201Z",
   "items": [
+    {
+      "id": "83202bf46026",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-02T19:55:00Z",
+      "source": "The Hill",
+      "summary": "Hamilton calls Marshall medical debt video \u2018desperate\u2019 &nbsp;&nbsp; The Hill",
+      "title": "Hamilton calls Marshall medical debt video \u2018desperate\u2019",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQOG9hVmlCbzV3WEprUkwzaTJUOEF5eThwQUwtbkRBTmhCNl92T0pFU3FhU01PUEMtVlVWc3l4dHozRS05TU03eXVaV3lWeWp5cmhzX1ZOdjR0YW1KVXpuYWMzSWNxMHJlTUQtN29VaVBscU5SZFV1eTdkZkRtbENHMGd1cHJ3cmlybUo3azZ6Wm40NUXSAZgBQVVfeXFMT2tnWk9kdElIMjNocmVRT0JYWWduSWUxQk9BdDZkVzNfUUprTFRQOEwzVjBhZ245SzlMMWwtcndpOHlrSnpVUjhpbkxpUWtsQTVjNGZDZWtJZzVxU1RWMFByd1B5cXhzbU5vRkxRVjNOSURVdi1yajNrWTlCTVVBcTNDcGNvcjFPdklfQkloUjB4LWtMb29GSjY"
+    },
     {
       "id": "dbd04fbdced2",
       "kind": "news",
@@ -1490,18 +1503,6 @@
       "summary": "Roger Marshall \u2014 Topeka rally &nbsp;&nbsp; themercury.com",
       "title": "Roger Marshall \u2014 Topeka rally",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUGdDbkptUEZweExrN0kxVEhRWXR0ekRMam1JSlhiYmlYNlU3TVJQMnd5M0ZtTHEyd0NpN2drcmc0dTVZS2VaUVZGRFlZWEN6YWZEaHlja1ZnZHVLa2c1MVlZWjNpNzF5bDJ4UTJiUUpWNHJEc3gtNGlTVUdsbTFSOFg3V3BteHB6Mjh2T3AzSWN6a2Z5azBhRXBiYVFKZTg"
-    },
-    {
-      "id": "2d029e8df448",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-27T17:27:53Z",
-      "source": "Kansas City Star",
-      "summary": "In Sen. Roger Marshall\u2019s longtime home of Great Bend, public support is lukewarm &nbsp;&nbsp; Kansas City Star",
-      "title": "In Sen. Roger Marshall\u2019s longtime home of Great Bend, public support is lukewarm",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSHRXcVRoNi1wQUpQMjVRV1JFM09Bc1VMeGs5dUg0UEhoaUpSOUZIN2lydjNzUHF4WEpmenBfRHhGVGYtR1BJaDIzNm5wbkpVeEFRbUx0NmVTQWt5enZUcjBMUUxFVkNHRC15T3dkQlpxQ183cTUxWGlUV01GT3gtMjh4R01fU0xmS3ctRUFfdXBtZ9IBkgFBVV95cUxQZnVFc09pa0w2QTRPUnFHaFFvLWFNNnZOemo4a2pIeVV1QzlhMDNCNkpoM1FpaV93dk5oX1JENktkWDZ4OTVyUzMxbVZNLUFMaUwtQ3BLV2NXMVVDMWVpS2hyY05ocDY1MHhHWmRqemNab1U4bnBuc3VLMFRQcnhnSUg5MWV4NFdMSzM1SUFTVFhadw"
     }
   ],
   "schema_version": 1
