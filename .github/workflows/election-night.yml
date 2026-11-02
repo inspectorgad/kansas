@@ -1,0 +1,201 @@
+name: Election night results loop
+
+# Refreshes results.json every couple of minutes for as long as the count runs.
+#
+# Why a loop and not the cron: GitHub throttles scheduled workflows. collect.yml
+# asks for every 20 minutes and in the week before the election actually ran every
+# 3 to 5 hours (runs 513–520). A results count cannot be served on that, and no
+# cron expression fixes it. So this job stays alive, collects `results` on a fixed
+# interval, publishes after each pass, and — because a job is capped at 6 hours —
+# dispatches its own successor before it ends, until `until` has passed.
+#
+# Kick-off, belt and braces (any one is enough; extras just queue and are dropped):
+#   1. Manually:   Actions → Election night results loop → Run workflow
+#                  (or: gh workflow run election-night.yml --ref <default branch>)
+#   2. Scheduled:  the two crons below, on Nov 3. They may fire late — that is the
+#                  whole problem — which is why they are not the only route.
+#   3. Externally: anything that can POST to the workflow_dispatch API.
+# See docs/ELECTION_NIGHT.md for the runbook.
+#
+# Run it from the default branch. The data branch records which commit wrote it,
+# and collect.yml refuses to publish over data from a newer commit; a loop running
+# on an unmerged branch would therefore freeze markets, news and the rest.
+
+on:
+  workflow_dispatch:
+    inputs:
+      interval_seconds:
+        description: "Seconds between collections"
+        required: false
+        default: "120"
+      run_minutes:
+        description: "Minutes this job loops before handing off to a successor (max ~340)"
+        required: false
+        default: "330"
+      until:
+        description: "Stop chaining after this UTC time (ISO 8601)"
+        required: false
+        default: "2026-11-04T12:00:00Z"
+      publish:
+        description: "Push to the data branch (false = rehearsal: collect and log only)"
+        required: false
+        default: "true"
+  schedule:
+    # 21:37 and 22:07 UTC on Nov 3 = 3:37pm and 4:07pm CT, ahead of the SOS page
+    # going live at 5pm CT. Off the hour because :00 is when GitHub's scheduler is
+    # most congested. Both fire again next year; the year check below drops them.
+    - cron: "37 21 3 11 *"
+    - cron: "7 22 3 11 *"
+
+concurrency:
+  # One loop at a time. A second kick-off waits as the single pending run; when the
+  # running loop dispatches its successor, that replaces it, so duplicates collapse
+  # rather than double the request rate on the SOS server.
+  #
+  # Deliberately not the `collect` group: that one is held for minutes at a time by
+  # the full collector, and a pending successor in it would be replaced by the
+  # next scheduled collect run, breaking the chain.
+  group: election-night
+  cancel-in-progress: false
+
+permissions:
+  contents: write  # push the data branch
+  actions: write   # dispatch the successor
+
+jobs:
+  loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      INTERVAL: ${{ github.event.inputs.interval_seconds || '120' }}
+      RUN_MINUTES: ${{ github.event.inputs.run_minutes || '330' }}
+      UNTIL: ${{ github.event.inputs.until || '2026-11-04T12:00:00Z' }}
+      PUBLISH: ${{ github.event.inputs.publish || 'true' }}
+    steps:
+      - name: Check the window
+        id: window
+        run: |
+          now=$(date -u +%s)
+          until=$(date -u -d "$UNTIL" +%s)
+          # A scheduled trigger in any year but 2026 is the cron repeating, not
+          # an election night.
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%Y)" != "2026" ]; then
+            echo "Not 2026; nothing to do."; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ "$now" -ge "$until" ]; then
+            echo "Past $UNTIL; nothing to do."; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "go=true" >> "$GITHUB_OUTPUT"
+
+      - name: Check out code
+        if: steps.window.outputs.go == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # the staleness guard asks git about ancestry
+
+      - uses: actions/setup-python@v5
+        if: steps.window.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: collector/requirements.txt
+
+      - name: Install dependencies
+        if: steps.window.outputs.go == 'true'
+        run: pip install -r collector/requirements.txt
+
+      - name: Collect results on a loop
+        id: loop
+        if: steps.window.outputs.go == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OURS: ${{ github.sha }}
+        run: |
+          set -uo pipefail
+          deadline=$(( $(date -u +%s) + RUN_MINUTES * 60 ))
+          until_s=$(date -u -d "$UNTIL" +%s)
+          [ "$until_s" -lt "$deadline" ] && deadline=$until_s
+
+          passes=0; failed=0; published=0
+          while [ "$(date -u +%s)" -lt "$deadline" ]; do
+            started=$(date -u +%s)
+            passes=$((passes + 1))
+            echo "::group::pass $passes at $(date -u +%H:%M:%SZ)"
+
+            # Start every pass from the current branch tip rather than rebasing
+            # onto it. collect.yml writes the same branch every so often; a fresh
+            # checkout means a lost push race costs one interval, never a
+            # half-applied rebase that poisons every pass after it.
+            rm -rf published && mkdir published
+            (
+              cd published
+              git init -q -b data
+              git remote add origin \
+                "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+              git config user.name "ks-senate-collector"
+              git config user.email "noreply@github.com"
+              git fetch -q --depth=1 origin data && git reset -q --hard FETCH_HEAD
+            ) || { echo "::warning::pass $passes: could not fetch the data branch"; failed=$((failed + 1)); echo "::endgroup::"; sleep "$INTERVAL"; continue; }
+
+            # A pass that hangs must not eat the interval forever.
+            timeout 300 python collector/run.py --only results --data-dir published/data
+            status=$?
+            if [ "$status" -ne 0 ]; then
+              failed=$((failed + 1))
+              echo "::warning::pass $passes: collector exited $status; publishing nothing this pass"
+            elif [ "$PUBLISH" != "true" ]; then
+              echo "rehearsal: would publish"; (cd published && git status --short data | head -5)
+              published=$((published + 1))
+            elif (cd published && "$GITHUB_WORKSPACE/.github/scripts/publish-data.sh"); then
+              published=$((published + 1))
+            else
+              failed=$((failed + 1))
+              echo "::warning::pass $passes: publish failed; retrying next pass"
+            fi
+            echo "::endgroup::"
+
+            # Hold the cadence: sleep whatever is left of the interval.
+            elapsed=$(( $(date -u +%s) - started ))
+            remaining=$(( INTERVAL - elapsed ))
+            [ "$remaining" -gt 0 ] && sleep "$remaining"
+          done
+
+          echo "passes=$passes published=$published failed=$failed"
+          {
+            echo "### Election night loop"
+            echo "- passes: $passes, published: $published, failed: $failed"
+            echo "- interval: ${INTERVAL}s, chaining until $UNTIL, publish: $PUBLISH"
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "failed=$failed" >> "$GITHUB_OUTPUT"
+          echo "passes=$passes" >> "$GITHUB_OUTPUT"
+
+      - name: Hand off to a successor
+        # Runs even when the loop step failed, so one bad pass cannot end the
+        # night. Not after a manual cancel: that is how the chain is stopped.
+        if: "!cancelled() && steps.window.outputs.go == 'true'"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "$(date -u +%s)" -ge "$(date -u -d "$UNTIL" +%s)" ]; then
+            echo "Past $UNTIL; the chain ends here."
+            exit 0
+          fi
+          # workflow_dispatch is one of the two events GITHUB_TOKEN is allowed to
+          # trigger, so no personal token is needed.
+          gh workflow run election-night.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref "$GITHUB_REF_NAME" \
+            -f interval_seconds="$INTERVAL" \
+            -f run_minutes="$RUN_MINUTES" \
+            -f until="$UNTIL" \
+            -f publish="$PUBLISH"
+          echo "Successor dispatched on $GITHUB_REF_NAME."
+
+      - name: Fail visibly if most passes failed
+        if: steps.loop.outputs.passes != '' && steps.loop.outputs.failed != '0'
+        run: |
+          echo "::warning::${{ steps.loop.outputs.failed }} of ${{ steps.loop.outputs.passes }} passes failed; see the grouped logs."
+          if [ "${{ steps.loop.outputs.failed }}" -ge "${{ steps.loop.outputs.passes }}" ]; then
+            echo "::error::Every pass failed."
+            exit 1
+          fi

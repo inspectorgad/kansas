@@ -79,6 +79,10 @@ class ResultsProbe:
     ok: bool
     detail: str
     body_sample: str = ""
+    # Table rows (or text windows) around the words this contest would carry.
+    # The first 600 characters of a 900 KB page are its navigation, which is
+    # all the probe used to show — not enough to write a parser from.
+    context: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -301,6 +305,36 @@ def _parse_html_table(html: str) -> ResultsData | None:
     return data
 
 
+CONTEXT_TERMS = re.compile(r"senat|marshall|hamilton|precinct", re.IGNORECASE)
+
+
+def _context(html: str, limit: int = 25) -> list[str]:
+    """Rows of the page that mention the contest, the candidates or precincts.
+
+    Printed by the probe so whatever kssos.org is serving can be identified from
+    one CI log: which contest each table holds, how a candidate row is labelled,
+    and where precinct counts sit. Falls back to text windows when the page has
+    no table rows at all.
+    """
+    out: list[str] = []
+    for row_html in ROW.findall(html):
+        cells = _cells(row_html)
+        joined = " | ".join(c for c in cells if c)
+        if joined and CONTEXT_TERMS.search(joined):
+            out.append(joined[:200])
+            if len(out) >= limit:
+                return out
+    if out:
+        return out
+    text = re.sub(r"\s+", " ", TAG.sub(" ", html))
+    for match in CONTEXT_TERMS.finditer(text):
+        start = max(0, match.start() - 80)
+        out.append(text[start : match.end() + 120])
+        if len(out) >= limit:
+            break
+    return out
+
+
 # --- precinct reporting ------------------------------------------------------
 
 PRECINCT_PATTERNS = (
@@ -445,6 +479,7 @@ def probe(url: str | None = None) -> ResultsData:
             ResultsProbe(
                 "html", False, f"{page_url}: fetched {len(html)} bytes, no shape matched",
                 body_sample=re.sub(r"\s+", " ", TAG.sub(" ", html))[:600],
+                context=_context(html),
             )
         )
 
@@ -459,6 +494,10 @@ def diagnose(url: str | None = None) -> str:
         lines.append(f"[{'OK  ' if attempt.ok else 'MISS'}] {attempt.shape}: {attempt.detail}")
         if attempt.body_sample:
             lines.append(f"        served: {attempt.body_sample[:300]}…")
+        if attempt.context:
+            lines.append(f"        {len(attempt.context)} row(s) mentioning the contest, candidates or precincts:")
+            for row in attempt.context:
+                lines.append(f"          {row}")
     lines.append("")
     if data.statewide:
         lines.append(f"PARSED via {next(p.shape for p in data.probes if p.ok)}")

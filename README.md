@@ -11,13 +11,17 @@ organization. Every figure carries its source and its timestamp.
 Two halves, no server, no recurring cost:
 
 ```
-GitHub Actions cron (every 20 min)         Android app (Kotlin / Compose)
+GitHub Actions cron (every 20 min*)        Android app (Kotlin / Compose)
   collector/  (Python)                       reads the static JSON over HTTPS
     fetch → parse → aggregate → validate     Room cache, full offline read
     write only when content changed          WorkManager refresh + local alerts
          │                                                  ▲
          └────────►  data branch (raw JSON + history/) ──────┘
 ```
+
+\* Nominally. GitHub throttles scheduled workflows and in practice they run every
+few hours. Election-night results use a dedicated loop that refreshes every two
+minutes — see [docs/ELECTION_NIGHT.md](docs/ELECTION_NIGHT.md).
 
 Polling data has no free API, so aggregation happens once in CI rather than on
 every phone. That keeps API keys out of the APK, gives every device identical

@@ -1144,3 +1144,97 @@ class TestMarginDistribution:
         from sources.markets import _kalshi_markets
 
         assert _kalshi_markets({"markets": self._rows()}) == []
+
+
+class TestKnownEventLookup:
+    """The race is fetched by ticker first, because the event walk stopped reaching it.
+
+    Runs 513 onward walked 2,400 open events and 2,400 markets, matched nothing,
+    and failed the job: the Kalshi listing had grown past the page budget and the
+    Kansas grid sat beyond the last page.
+    """
+
+    def _rows(self):
+        cells = {"REPREP": 0.40, "DEMREP": 0.30, "REPDEM": 0.10, "DEMDEM": 0.20}
+        return [
+            {
+                "ticker": f"KXKSSENGOVCOMBO-26NOV-{k}",
+                "status": "active",
+                "yes_bid_dollars": v,
+                "yes_ask_dollars": v,
+            }
+            for k, v in cells.items()
+        ]
+
+    def test_known_event_is_used_without_walking_the_listing(self, monkeypatch):
+        from sources import markets
+
+        calls = []
+
+        def fake_get_json(url, params=None):
+            calls.append((url, dict(params or {})))
+            if (params or {}).get("event_ticker") == "KXKSSENGOVCOMBO-26NOV":
+                return {"markets": self._rows()}
+            if url.endswith("/events"):
+                raise AssertionError("the event walk should not run when the lookup succeeds")
+            return {"markets": []}
+
+        monkeypatch.setattr(markets, "get_json", fake_get_json)
+        notes: list[str] = []
+        rows, scanned = markets._kalshi_pages(notes)
+        assert len(rows) == 4 and scanned == 4
+        assert any(n.startswith("KXKSSENGOVCOMBO-26NOV: 4 market(s), 4 open") for n in notes)
+        marshall, hamilton = markets.marginalise_combos(rows)
+        assert marshall == pytest.approx(0.70)
+        assert hamilton == pytest.approx(0.30)
+
+    def test_closed_markets_are_not_read_as_current(self, monkeypatch):
+        from sources import markets
+
+        closed = [dict(r, status="closed") for r in self._rows()]
+
+        def fake_get_json(url, params=None):
+            if (params or {}).get("event_ticker") == "KXKSSENGOVCOMBO-26NOV":
+                return {"markets": closed}
+            return {"markets": [], "events": []}
+
+        monkeypatch.setattr(markets, "get_json", fake_get_json)
+        rows, notes = markets._kalshi_known_markets()
+        assert rows == []
+        assert any("0 open ['closed']" in n for n in notes)
+
+    def test_a_series_lookup_cannot_pull_in_another_race(self, monkeypatch):
+        from sources import markets
+
+        def fake_get_json(url, params=None):
+            if (params or {}).get("series_ticker") == "KXSENATEKS":
+                return {
+                    "markets": [
+                        {"ticker": "KXSENATEKS-26-R", "status": "active"},
+                        {"ticker": "KXSENATETX-26-R", "status": "active"},
+                    ]
+                }
+            return {"markets": []}
+
+        monkeypatch.setattr(markets, "get_json", fake_get_json)
+        rows, _ = markets._kalshi_known_markets()
+        assert [r["ticker"] for r in rows] == ["KXSENATEKS-26-R"]
+
+    def test_a_failing_lookup_falls_back_to_the_walk(self, monkeypatch):
+        from fetch import SourceError
+        from sources import markets
+
+        walked = []
+
+        def fake_get_json(url, params=None):
+            params = params or {}
+            if "event_ticker" in params or "series_ticker" in params:
+                raise SourceError("boom")
+            walked.append(url)
+            return {"events": [], "markets": []}
+
+        monkeypatch.setattr(markets, "get_json", fake_get_json)
+        notes: list[str] = []
+        markets._kalshi_pages(notes)
+        assert walked, "the walk must still run when every direct lookup fails"
+        assert all("boom" in n for n in notes)

@@ -301,3 +301,31 @@ class TestImplausibleResultsAreRejected:
 
         assert implausible(self._data([("marshall", 500)])) is not None
         assert implausible(self._data([("marshall", 500), ("hamilton", 400)])) is None
+
+
+class TestProbeContext:
+    """The probe prints the rows that mention the contest, not just the page head."""
+
+    def test_rows_naming_the_contest_or_candidates_are_returned(self):
+        from sources.results import _context
+
+        html = (
+            "<table><tr><td>Home</td><td>About</td></tr>"
+            "<tr><td>United States Senator</td></tr>"
+            "<tr><td>Roger Marshall (R)</td><td>1,234</td></tr>"
+            "<tr><td>Hamilton</td><td>5</td></tr>"
+            "<tr><td>12 of 3,500 precincts</td></tr></table>"
+        )
+        rows = _context(html)
+        assert rows == [
+            "United States Senator",
+            "Roger Marshall (R) | 1,234",
+            "Hamilton | 5",
+            "12 of 3,500 precincts",
+        ]
+
+    def test_text_windows_when_the_page_has_no_table(self):
+        from sources.results import _context
+
+        rows = _context("<div>Results for U.S. Senate will appear here</div>")
+        assert rows and "Senate" in rows[0]

@@ -128,7 +128,14 @@ def get_text(url: str, params: dict[str, Any] | None = None) -> str:
                     request=response.request,
                     response=response,
                 )
-            response.raise_for_status()
+            if response.is_error:
+                # Any other 4xx is an answer, not a hiccup: a 403 or 404 comes
+                # back identically on the next try. Retrying them tripled every
+                # blocked ENR request (5 URLs x 3 attempts, each run) and is the
+                # opposite of polite to a host that has already said no.
+                raise SourceError(
+                    f"GET {url} failed: HTTP {response.status_code} {response.reason_phrase}"
+                )
             return response.text
         except (httpx.HTTPError, httpx.HTTPStatusError) as exc:
             last_error = exc
