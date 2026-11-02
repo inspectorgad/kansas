@@ -1124,9 +1124,8 @@ class TestManualRatings:
         """The real entries, read off screenshots of the live pages on 2026-11-02.
 
         Cook moved Lean R -> Toss-up on Oct 6, so it carries `previous` and no
-        lean. Sabato's map shows Kansas as Leans D, hatched as a D flip, with no
-        date anywhere on it; as_of stays null and the loader must say so rather
-        than the file inventing one.
+        lean. Sabato's map shows Kansas as Leans D, hatched as a D flip; its
+        as_of is the map's own "Updated Nov. 2, 2026" line.
         """
         from datetime import date
 
@@ -1151,12 +1150,11 @@ class TestManualRatings:
         sabato = by_source["Sabato's Crystal Ball"]
         assert sabato.rating == "Leans D"
         assert sabato.lean == "D"
-        assert sabato.as_of is None
+        assert sabato.as_of.isoformat() == "2026-11-02"
         assert sabato.previous == "Likely R"
 
-        # Cook is dated and recent; the only note is Sabato's missing date.
-        assert len(notes) == 1, notes
-        assert notes[0].startswith("Sabato's Crystal Ball: hand-entered with no as_of date")
+        # Both dated and both recent, so nothing should be flagged.
+        assert notes == [], notes
 
 
 class TestMemoEntriesAreNetted:

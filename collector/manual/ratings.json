@@ -32,10 +32,11 @@
     "showed the move as LEAN R -> TOSS UP, which is where `previous` comes from.",
     "",
     "Sabato's page is a map. Kansas is hatched in the legend's 'Leans D' light blue,",
-    "which the legend marks as a D flip. The map carries no rating date, so as_of is",
-    "null and the collector warns about it rather than guessing one. `previous` is",
-    "the last rating recorded here (Likely R, 2026-08-19); any intermediate move",
-    "between then and now was not observed."
+    "which the legend marks as a D flip. as_of is the page's own 'Updated Nov. 2,",
+    "2026' line: the date the whole map was last published, which may be later than",
+    "the day Kansas itself moved. `previous` is the last rating recorded here",
+    "(Likely R, 2026-08-19); any intermediate move between then and now was not",
+    "observed."
   ],
   "ratings": [
     {
@@ -50,7 +51,7 @@
       "source": "Sabato's Crystal Ball",
       "rating": "Leans D",
       "lean": "D",
-      "as_of": null,
+      "as_of": "2026-11-02",
       "url": "https://centerforpolitics.org/crystalball/2026-senate/",
       "previous": "Likely R"
     }
