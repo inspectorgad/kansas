@@ -1104,6 +1104,26 @@ class TestMarginDistribution:
 
         assert margin_distribution(self._rows(), None) is None
 
+    def test_a_zero_point_rung_is_not_a_band(self):
+        """Kalshi added KXMIDTERMMOV-KSSENR-P0 in November. "At least 0" is the
+        win question again; read as the floor it published "Marshall by under 0"
+        (low 0, high 0) and labelled the next band "0–1" instead of "under 1"."""
+        from sources.markets import margin_distribution, margin_ladder
+
+        ladder = [(0, 0.365), (1, 0.34), (2, 0.245), (3, 0.225)]
+        wins = {"marshall": 0.3682, "hamilton": 0.6318}
+
+        _, rungs = margin_ladder(self._rows(ladder))
+        assert [t for t, _ in rungs] == [1, 2, 3]
+
+        d = margin_distribution(self._rows(ladder), wins)
+        bands = {b.label: b.probability for b in d.buckets}
+        assert "Marshall by under 0" not in bands and "Marshall by 0–1" not in bands
+        assert bands["Marshall by under 1"] == pytest.approx(0.3682 - 0.34, abs=1e-3)
+        assert all(b.high is None or b.high > b.low for b in d.buckets)
+        assert sum(bands.values()) == pytest.approx(1.0, abs=5e-4)
+        assert d.rungs == 3
+
     def test_one_rung_is_not_a_ladder(self):
         from sources.markets import margin_distribution
 

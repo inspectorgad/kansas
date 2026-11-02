@@ -425,6 +425,14 @@ def margin_ladder(rows: list[dict]) -> tuple[str | None, list[tuple[int, float]]
         if probability is None:
             continue
         party, points = match.group(1), int(match.group(2))
+        if points == 0:
+            # "Margin of at least 0" is the win question again, not a margin
+            # band. Kalshi added a P0 rung in November; read as the ladder's
+            # floor it produced a zero-width "Marshall by under 0" band (really
+            # the gap between two estimates of the same win probability) and
+            # mislabelled the next band "0–1" instead of "under 1". The win
+            # probability already comes from its own market.
+            continue
         candidate = MARSHALL if party == "R" else HAMILTON
         by_party.setdefault(candidate, {})[points] = probability
 
