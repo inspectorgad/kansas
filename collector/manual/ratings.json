@@ -25,32 +25,35 @@
     "lean is R, D, or null. Use null for Toss-up.",
     "",
     "Provenance of the two entries below, recorded because it is not verifiable",
-    "from the collector: both were read off the live pages in a browser on",
-    "2026-08-24 and transcribed here.",
+    "from the collector: both were read off screenshots of the live pages supplied",
+    "on 2026-11-02, replacing the entries first read on 2026-08-24.",
     "",
-    "Cook carried its own date — 'RACE RATING / Last updated: Aug 5, 2026' — and",
-    "showed the move as SOLID R -> LIKELY R, which is where `previous` comes from.",
+    "Cook carried its own date — 'RACE RATING / Last updated: Oct 6, 2026' — and",
+    "showed the move as LEAN R -> TOSS UP, which is where `previous` comes from.",
     "",
-    "Sabato's page is a map. Kansas is filled in the legend's 'Likely R' red and",
-    "is not hatched, so no flip is indicated. The map itself carries no rating",
-    "date; 2026-08-19 was supplied separately on 2026-08-24 and is recorded here",
-    "as their publication date, not the day it was read."
+    "Sabato's page is a map. Kansas is hatched in the legend's 'Leans D' light blue,",
+    "which the legend marks as a D flip. as_of is the page's own 'Updated Nov. 2,",
+    "2026' line: the date the whole map was last published, which may be later than",
+    "the day Kansas itself moved. `previous` is the last rating recorded here",
+    "(Likely R, 2026-08-19); any intermediate move between then and now was not",
+    "observed."
   ],
   "ratings": [
     {
       "source": "Cook Political Report",
-      "rating": "Likely R",
-      "lean": "R",
-      "as_of": "2026-08-05",
+      "rating": "Toss-up",
+      "lean": null,
+      "as_of": "2026-10-06",
       "url": "https://www.cookpolitical.com/senate/race/488581",
-      "previous": "Solid R"
+      "previous": "Lean R"
     },
     {
       "source": "Sabato's Crystal Ball",
-      "rating": "Likely R",
-      "lean": "R",
-      "as_of": "2026-08-19",
-      "url": "https://centerforpolitics.org/crystalball/2026-senate/"
+      "rating": "Leans D",
+      "lean": "D",
+      "as_of": "2026-11-02",
+      "url": "https://centerforpolitics.org/crystalball/2026-senate/",
+      "previous": "Likely R"
     }
   ]
 }
