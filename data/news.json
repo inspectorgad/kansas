@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-02T20:18:10.985201Z",
+  "generated_at": "2026-11-02T21:23:24.420227Z",
   "items": [
     {
       "id": "83202bf46026",
@@ -125,6 +125,19 @@
       "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (November Update) &nbsp;&nbsp; Action Network",
       "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (November Update)",
       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPNHhUUXRxeHdkb1lMZ0RvUF80WXlvVkFiN2pkZ2o0S0xTNGViNG5LWnF6X0cxUGxMZ21LZzU5bDA0S1hvMU1TVm1jTU9ZVk1LbWhQWGNORnJxVjh0b21Za0tlTUhkYjdOcmtmQTBld2tlYTdNeURLa3JyQmFreS15SGZ1UzcwSHJXaVhBeGhfa1pOb3Ixcl9lN29OU05aU192eC1RTjd2SWlzeTRRc1I0azBBRFhIWTZGTUpMNTZVVkxOWU0xVjhhaU9qUTZ5R2ladW81LTNlUG9wWUNLOHJsX2dLNnNJeVo2US1xNQ"
+    },
+    {
+      "id": "d058cf814946",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-02T14:36:00Z",
+      "source": "Action Network",
+      "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 31) &nbsp;&nbsp; Action Network",
+      "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 31)",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPajZNV3lLUDg4UVMtRGNiSHIxRDEzVGxOaUlSTXNFdE9sdFREOU1CRjdqa2ZHcVF1YjFSeU9OVEowNnpoN1lQN0ZmNTJPdm82dVpZM3dBU0pQZ0tzV1hjdF9IV1N6aHdDS1NkeE9XUDZuME1TNVNzM0pLNjVnSkNSUUhLYXpsTGZxREZCaUd6NGx5M1B1MHlKUGlQbWtjVjZZNEFaOWhLY0JGQkM4LUxKTmFmTm5QdlB1Xzk4VE5scUh2UkVoMUZDU1BUdVZJdTh5Z0s2ZC04YWZOeHFRSEZaM0xaOA"
     },
     {
       "id": "33717415cb18",
@@ -337,6 +350,18 @@
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5JYkhWdmVUYzdiZGNqN3FaZmtIRDkxMWtZNzBYUEVGS0Q4ajlTQWJtRlV0NG91M01QUWRKb0FaSHlLWUtvZG5MWGVZdk5Jbkh3Y3ZRanJFWE56SExiN3dtYkdMeHY5QUNRZldEWnZGdER5dFpxSlUtd9IBeEFVX3lxTFBUbE1nMnEtR0laekdfNURLcmNZMndPS2diUEJNVXRTSk9RSl9nUEo3YlY0ejZzZ1h4dVY4TDNQM0Mwd210TnJ2UkNIb09NcG1NVjZtaHNYNURUaXp5emRGd3hlcjExcFQ2X1Z6WV96LWdyY0RwY2tVeA"
     },
     {
+      "id": "8a61f82c66f0",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-01T07:43:39Z",
+      "source": "The Economist",
+      "summary": "Weekend profile: Adam Hamilton, Democrats\u2019 miracle man in Kansas &nbsp;&nbsp; The Economist",
+      "title": "Weekend profile: Adam Hamilton, Democrats\u2019 miracle man in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYVpsU0FCNU9uU1Vud1hqRkNYNFNhTFhia3Fjc1JkanRmZnplSE54d2VKV0kzWUlVX2RkaUpfdVd1MGN4OUNBa0FCNXZyUFFNSGpyRWFGejFwbU5mX21FMGJ6VnB1c2hqaEtLWlFjWlc5QlhTblZtOHpSbzZINURyMkNqNHN2V3FWS1NnVHNiV1VJeFJoSlF3"
+    },
+    {
       "id": "3aa6ce38d714",
       "kind": "news",
       "mentions": [
@@ -399,19 +424,6 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWU9EQ2VEaHZId2FKdmJ1cklTczhYWkRhRm5rNWVaMVFielRrVHVPZ1NPZmFBVE4zdF8tWkNRd0ZzUEZiQ0pIVmxHSUtMdWRILXBwVUdwX1FQVVhGYlIwa0JmdEVOUjBFNjBSN0dnYVA0RmtsamVWQ2s4SlY0Y3A0WlpKNlBvVVRHSUhxejVHanhEQjgxd0MxcEFudmhIT092Z0lB"
     },
     {
-      "id": "500f1a4277ac",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-10-31T14:46:00Z",
-      "source": "Action Network",
-      "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 31) &nbsp;&nbsp; Action Network",
-      "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (Oct 31)",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUG9acms2a3dQVDVZSkFydVdBemhSdEtXTWZnd1B3bTVEZ1AzaDdqUHJoZzFhXy1BMlNxdUFQdzBjcVlqcl9jZGRKYUhmX1ZRU3BIbThSQjRTN0lYYko2dDJSTXl0amstdmpGS2FrOGJ4a0pZNzhJTGYwUlhaTWtRaXc5cVNBdnBxdkd3TVdfV29uaVZqWnp5SjhQTzBNUmJkdVpidWh2RGdHOWdRWlkzUkFQamlHejZNODBPSXhlcjdxZmd3QlZCQng4RXc2WjR1c2JGajRCd0xmOXJ5ZnQwNw"
-    },
-    {
       "id": "b1dd602b8f72",
       "kind": "news",
       "mentions": [
@@ -422,18 +434,6 @@
       "summary": "TOPEKA \u2014 U.S. Sen. Roger Marshall may have violated federal campaign finance law when he paid a top aide with funds from a leadership PAC, which can\u2019t be used to finance a candidate\u2019s own campaign, according to a complaint filed Friday with the Federal Election Commission. End Citizens United, a campaign finance watchdog, sent the [&#8230;]",
       "title": "Marshall\u2019s payments from leadership PAC to top aide violate federal law, new ethics complaint says",
       "url": "https://kansasreflector.com/2026/10/31/marshalls-payments-from-leadership-pac-to-top-aide-violate-federal-law-new-ethics-complaint-says"
-    },
-    {
-      "id": "b082b5041a26",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-31T12:36:49Z",
-      "source": "The Economist",
-      "summary": "Weekend profile: Adam Hamilton, Democrats\u2019 miracle man in Kansas &nbsp;&nbsp; The Economist",
-      "title": "Weekend profile: Adam Hamilton, Democrats\u2019 miracle man in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS0hheHBvUHQ2WEw4OVU5eUE4MHB5SG5ESko4WUpMSzVnUEgtTnFzVEM5SkdWcVItMDVuR0szdTZ1UjFkRnFPbVNzV19vcmprOWhvTlYtVTNaeUNNS2FXeTNsckE3SUpiSGdKcmxHNkQ5R0JORzlRREpzQ1hTQXI1S2txZVZDbWlfWV9jMXJWOTNrZy1zaERv"
     },
     {
       "id": "b011e1433b46",
@@ -744,16 +744,16 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vNFFDT2NCM3ZwQndZWTIxOHB1c0c4ZmdKQ0R1N3B2SlNfLVlXYzVzMlpZZDJsaHd3Z3BXWndnc3VEV01WVWg4NjVqV2w3ZDdacnppck9ockdHSmRjUU0ycWdxbXhiTHPSAWdBVV95cUxQTWdZZUdWZDhpbHpfbGtPZUQyZlV5d2cxWDJyUkpucjhIU2thWnVEdEl2ODdlMEFhR1dKZ2tBdmw4RHJiVTgwaEhHMnllTnJoejRfSDhxTS1Ha20yR2IxcEJNdVNmd2Jv"
     },
     {
-      "id": "3c6d68300121",
+      "id": "07ccefe4ebda",
       "kind": "news",
       "mentions": [
         "marshall"
       ],
       "published_at": "2026-10-30T10:08:00Z",
-      "source": "Yahoo",
-      "summary": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet &nbsp;&nbsp; Yahoo",
+      "source": "Kansas City Star",
+      "summary": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet &nbsp;&nbsp; Kansas City Star",
       "title": "Sen. Roger Marshall: Kansas needs a fighter, not a Schumer puppet",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZUFzMk8zMmQ3YzN1U0tRNFBEZ3J2YTlRdjd6YkVhbWVJdDRmWUF5RnVHdkE3Yi1wZ3djSXpYTHRQekJTUXU2cjNDWVZ1dEFwQVBiUm8wVFV1dWU2dnJyOUt1N0RzcnBZZmM2NkVHTGZLbjRtUk9fbTVLNVVKR2NHdXZQWGpaaHRzTHVGTzEwNUcwcUQwcUE"
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE81QmNTUUpDRFRtNF81ZVcwbFRRV1phTUI3WTAyX2xBTFd4WG53ZDF1YkJIaHdQWE85aGlQc1dtQjY4VGhmYm1VckFxX1ZzLWF2SVZBOVMtb2tMVWdqMUNNRkcyQndYOGPSAWdBVV95cUxPV2ZUc244VUtCUGpERl9yS19oUDU5MmxiRUE1WkhHd2s0YnhsU0JnTGJzRGtwQ0tHRmZIV1ZHWXVyZjloVHAxdFgxUDdLbzlJaDZCdGtzQVQza2l4dDJONVlHblpId05B"
     },
     {
       "id": "504594ae1581",
