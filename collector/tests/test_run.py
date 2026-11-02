@@ -1121,36 +1121,42 @@ class TestManualRatings:
         assert ratings[0].previous == "Lean Republican"
 
     def test_the_shipped_file_holds_what_it_claims(self):
-        """The real entries, read off the live pages in a browser on 2026-08-24.
+        """The real entries, read off screenshots of the live pages on 2026-11-02.
 
-        Both handicappers are at Likely R, both dated, so this file should now
-        load with no warnings at all. Cook showed the move from Solid R, which is
-        why it carries `previous`. Sabato's date does not appear on the map and was
-        supplied separately; it is their publication date, not the day it was read.
+        Cook moved Lean R -> Toss-up on Oct 6, so it carries `previous` and no
+        lean. Sabato's map shows Kansas as Leans D, hatched as a D flip, with no
+        date anywhere on it; as_of stays null and the loader must say so rather
+        than the file inventing one.
         """
         from datetime import date
 
         import config
         from sources.ratings import load_manual
 
-        # Pinned to the day after the entries were read. "Recent" is relative to
-        # today, so unpinned this test started failing on its own once the
-        # ratings aged past the staleness threshold — a fact about the calendar,
-        # not about the file. The staleness warning has its own tests.
-        ratings, notes = load_manual(config.MANUAL_RATINGS_PATH, today=date(2026, 8, 25))
+        # Pinned to the day the entries were read. "Recent" is relative to
+        # today, so unpinned this test fails on its own once the ratings age
+        # past the staleness threshold — a fact about the calendar, not about
+        # the file. The staleness warning has its own tests.
+        ratings, notes = load_manual(config.MANUAL_RATINGS_PATH, today=date(2026, 11, 2))
         by_source = {r.source: r for r in ratings}
         assert set(by_source) == {"Cook Political Report", "Sabato's Crystal Ball"}
         assert all(r.entered_by_hand for r in ratings)
-        assert all(r.rating == "Likely R" for r in ratings)
 
         cook = by_source["Cook Political Report"]
-        assert cook.as_of.isoformat() == "2026-08-05"
-        assert cook.previous == "Solid R"
+        assert cook.rating == "Toss-up"
+        assert cook.lean is None
+        assert cook.as_of.isoformat() == "2026-10-06"
+        assert cook.previous == "Lean R"
 
         sabato = by_source["Sabato's Crystal Ball"]
-        assert sabato.as_of.isoformat() == "2026-08-19"
-        # Both dated and both recent, so nothing should be flagged.
-        assert notes == [], notes
+        assert sabato.rating == "Leans D"
+        assert sabato.lean == "D"
+        assert sabato.as_of is None
+        assert sabato.previous == "Likely R"
+
+        # Cook is dated and recent; the only note is Sabato's missing date.
+        assert len(notes) == 1, notes
+        assert notes[0].startswith("Sabato's Crystal Ball: hand-entered with no as_of date")
 
 
 class TestMemoEntriesAreNetted:
