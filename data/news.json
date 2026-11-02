@@ -26,8 +26,70 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-01T22:41:11.076904Z",
+  "generated_at": "2026-11-02T01:53:38.626608Z",
   "items": [
+    {
+      "id": "a159bfeeb156",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-02T01:35:41Z",
+      "source": "Nacionale",
+      "summary": "Kansas Senate race: pastor Adam Hamilton v Sen. Roger Marshall where Democrats last won a seat in 1932 &nbsp;&nbsp; Nacionale",
+      "title": "Kansas Senate race: pastor Adam Hamilton v Sen. Roger Marshall where Democrats last won a seat in 1932",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNlRTaHRIRTFLa3JQT1ZRQXVIMVhoUk91a2dtSURyWGVIa1FUcXdubTZBNEVpb3JjMEtYZkNmRWg5dWY4YjBvSUVCa0lLM3ZrQTZCc0NuQVpiZTRJV2xBQi0wRlNkdjFDOFVENVZTdDVReGZmNmZEY0RsUk5IYXFVUDhHNzVzQQ"
+    },
+    {
+      "id": "1c691306bcdd",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-02T01:31:00Z",
+      "source": "KWCH",
+      "summary": "Roger Marshall speaks at midterm rally in Salina, Kansas &nbsp;&nbsp; KWCH",
+      "title": "Roger Marshall speaks at midterm rally in Salina, Kansas",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPT3ZPNmRzUE03OV85c1hrcGNxV21nUW5peEdOZFNYcktvN2FLRkdMUEowVUdEVTBPemsxTFFUTlRqNFAzb3VwTzNCb0p0dDJudVRxTjhRY1RHNWpmTC1Ramd6OW91SG5ldHhMM0FDRmx1d3NBZzRCTjM4NHN0Z3RSSnZmQldDMHJad2hGUVh3cGRiQQ"
+    },
+    {
+      "id": "c65191473fe2",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-01T22:57:21Z",
+      "source": "Kalshi News",
+      "summary": "Kansas Senate odds: Democrat Adam Hamilton grabs largest lead at 53% &nbsp;&nbsp; Kalshi News",
+      "title": "Kansas Senate odds: Democrat Adam Hamilton grabs largest lead at 53%",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOZS1PZVdIOV9sdTZtVDI3VFNwN0lzQ29LcDhtdjJWMG5QV2pZb29yQnZOem5nV25WS2Fha2pyNnpfY095LXNOaElnLWp2NzRrZy1YVFVQU0NyNDBJdl9Pa2NCWjBfYUFEakpqM0xjTWZYb2Z0OS10bkJYbTBMcXZYVA"
+    },
+    {
+      "id": "d4dd799eb8e2",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-01T22:48:02Z",
+      "source": "KWCH",
+      "summary": "Hamilton, the Democratic candidate for U.S. Senate, faces a tight race with incumbent Republican Senator Roger Marshall.",
+      "title": "Adam Hamilton speaks out ahead of President Trump\u2019s visit to Salina",
+      "url": "https://www.kwch.com/2026/11/01/adam-hamilton-speaks-out-ahead-president-trumps-visit-salina"
+    },
+    {
+      "id": "dfa8643245f3",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-01T22:10:43Z",
+      "source": "The New York Times",
+      "summary": "Roger Marshall Goes Rogue in Kansas Senate Race With a Video &nbsp;&nbsp; The New York Times",
+      "title": "Roger Marshall Goes Rogue in Kansas Senate Race With a Video",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdmdJZHYxZ1pHdm1oZXIwYzlKdi13TVRpMkN5LTB2ZUhqMXhLTFVnY2pSZUhRZFE1N1hzM29UMjdWSGJWaVUzYm9OS0JVVnpBN20wQ0RDZ2RIRGl6cU40RmN3cmk1YlNsejRuRHF3aUthX1JxUnRTdmlLYW9RNXNTWEJKZnR5V0YyOUdCajZnejY4cGM"
+    },
     {
       "id": "d3746a3281fe",
       "kind": "news",
@@ -39,18 +101,6 @@
       "summary": "WATCH LIVE: Senate candidate Adam Hamilton speaks to voters in Kansas &nbsp;&nbsp; Fox News",
       "title": "WATCH LIVE: Senate candidate Adam Hamilton speaks to voters in Kansas",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9jVWNGNHlaQkRUcWZJOW5mNU1rSTluaUtLSVdqVlM4cWhKeUdsY3hSYU1nTDllMkpFR2hlaTcwckVzMVkxZC1ZeGdKRkxZR3BQSFA5RF93"
-    },
-    {
-      "id": "828068fb4e96",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-11-01T18:16:24Z",
-      "source": "AOL.com",
-      "summary": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids &nbsp;&nbsp; AOL.com",
-      "title": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUVpTQ1Fab2hSSzJNVTFncjhmako5Zy0zdXo0a3NSRncyRFhMTV9Pb0lfLXBKSVpqU01TenlrWTh6dGs0anMtUXJvY2xpVkU5cmpCUF81S1hvUXZ3T1dDTnNsZXBITGRCZDE0bzVmcW5wUC1EYjJqcWRicmY3Y0RERTJmT0Y"
     },
     {
       "id": "970538ed9109",
@@ -76,6 +126,18 @@
       "summary": "Future of MAHA and anti-abortion policy hinges on Roger Marshall\u2019s election chances &nbsp;&nbsp; Washington Examiner",
       "title": "Future of MAHA and anti-abortion policy hinges on Roger Marshall\u2019s election chances",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbWZmU1ZzaUtWVmo1Wkt5c3ozLThtMzVZRkt6blhIeXZLbUVwSC1kb0UxVUpwbEtjTFJuaWVNb3NPT1gyazZycS1vVUdlWkRVcFZ1bjQ3NVVWQkRJRk9uQXFsekF2anhJbGo4cFdKaDliVTN5ZmN5SnJqT21lODliR0JJcnFVd2FEeUMzZ0x0UW85T2xIWjdUbEI5N2RKVWp0bmIySzRYMHQ0NFcta2c"
+    },
+    {
+      "id": "2e9042c889b0",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-01T11:01:00Z",
+      "source": "FOX4KC.com",
+      "summary": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids &nbsp;&nbsp; FOX4KC.com",
+      "title": "4 The People: Candidate Conversations with U.S. Sen. Roger Marshall, Rep. Sharice Davids",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOOGNjU094UnpfblR1NU1la0Mwa1N6WjAxOWlvejAyM0ZrZzZ5Nnh6YzlHM2taR0pXZmpHTF9VQk9CRDZqRXNVYWlNUFE3ZUdOS1VpQ3Fjbm5nSkxpRzV2d0NyTExCZnVaUlFPbFlVOFlqWk1qX2M0dS1oYk5PUmI5cTZPS0k5eXZQeGJKRUNHOUtyVDVSQnItelRDTjIzUzN4aV9RVWlSYy1HbUF2S2dIMkczanN3bXEyaHl3dHNUa0s5M0XSAcgBQVVfeXFMTmJ3bHNoNVpiSENNVjFQLXp0SnZkWUJvcE1senVyc0pLSzVucnZxejJCZDNpU3dZNG9LS21zbk5ZSURzaTVMUjlZTVdXcXNxMXU3OXI1YmJFRi11SHJoMmlQam5MLXpzeUtGcl9OMFJyb0VZOGxRQzVOVUEzSDBmNklZSDlja2tXajZ0UmJ1NjJTbmxLdDBJRXF4cG15Nl9CWWdzVGh1NWJKS0lZcFFMbWJXQndweWdmekN5VURGMk5GM3ZJV2ViUHU"
     },
     {
       "id": "22bc807cc2be",
@@ -1442,66 +1504,6 @@
       "summary": "Adam Hamilton's bus tour stops in Pratt ahead of midterm election &nbsp;&nbsp; KWCH",
       "title": "Adam Hamilton's bus tour stops in Pratt ahead of midterm election",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeS1abEc2RHJ2LTJCZkhPTmZqN1RVUWtSc001Ni1BbHgtdUtjRTJ2Uk1IbUJZY3R3NjBrakh2QjZwVThlcm95ZlZhN1hodk01MGZJUFVtUU5tT18wWloxQzNkWV9Mc2gtY0txQzg1X0ZoeDNMM3JxTnpISUpMcm8zLWVzUVdUOVVqdERuRlJmMU5WQkh5akZJeUNHN2hadw"
-    },
-    {
-      "id": "ba3986b3db38",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-26T22:58:00Z",
-      "source": "KWCH",
-      "summary": "Senate candidate Adam Hamilton visits Kansans, speaks on issues during statewide bus tour &nbsp;&nbsp; KWCH",
-      "title": "Senate candidate Adam Hamilton visits Kansans, speaks on issues during statewide bus tour",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX2NNamVCbmdpc2ZabXZUT3lBdnpQNjl0bmk5c1cydDJsYk5kNlZsSXczRGtjMk1xV2otZjZPbXljQ3JoaWtGSmhLcE80VW8yTzdmRnJwQkRNVW00WlI3RzYzUVZwU3dfY2M5UnhMeThVVnctYUZmQm9vTVRVU3lqR0pLRGVSY2l5M3pkb3c5b0t4bTJlNUc4OVlncmFqUWtBU3VLd3JiQkY0NTM3c3VOckNpQzhTQ2Zy0gHMAUFVX3lxTFBqV05aQ2h3Q0o4TkNvZGlOd0t4V3NfTTRQaTJYbmdodHVyMXljLUJsUGlGdDdsV1JDWWU2eGVEVm5MbmU5X3BKM0E2bWd1X1oxd1A1SjZxZVU0UlpscGxPTFZpUG9ZMzlCdDY1MWV6V3RpaUlabnJHaHZJV0cwYzBSTndra1o1d2plRHBma20tTXp0RzItZ2dreUFfOU9jSThaOVpuM1l5TzVpRWxJb1ZfLTNFMVU4QUVSc3VuOHZuTlU0U0JEdVRZeHk2eg"
-    },
-    {
-      "id": "eac5e470d803",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-26T22:37:00Z",
-      "source": "KWCH",
-      "summary": "Adam Hamilton's bus tour makes final stops before midterm election next week. &nbsp;&nbsp; KWCH",
-      "title": "Adam Hamilton's bus tour makes final stops before midterm election next week.",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOT1VEMmNvU3lhTklod2l0cjFUUk1na1pZSk5raTg3S0NDOHJwQmNPQ1ZWZzRDcmdZcm96MDB0eWY4UHVxOXQ3RVcydUF6TXBUaGtxdllMUFZkMTJFSVRDLUNuZGFiczZoZFZtQkhDdWw1TDdCQS1paWFYUzNKY0ZmQmRiMHR2S2NUaExEdm1LckxUZFMxOTNLRDR5SFNDUGQ1XzZRdm1mLVhBbG5FU0ZGQVZ4UjM"
-    },
-    {
-      "id": "7bfd1a2b0b31",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-26T22:25:29Z",
-      "source": "DSCC",
-      "summary": "NEW: Roger Marshall\u2019s \u201cClosing Pitch Leans Heavily on Discounting His Own Constituents\u2019 Concerns\u201d As Kansans Face Skyrocketing Prices &nbsp;&nbsp; DSCC",
-      "title": "NEW: Roger Marshall\u2019s \u201cClosing Pitch Leans Heavily on Discounting His Own Constituents\u2019 Concerns\u201d As Kansans Face Skyrocketing Prices",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNEtlRTMzN3BjXzdMS2lvOXZudDhGNTllVWlKSWRKTlYyN2t2UHZMOXVNQ0dyYU9uNk5EMUNKLWd3ZmJEdlJyVmNMOS1ZeGlxV2pqWngtX3dVbjJ1OFptdEtSd3o5RHdtb1Znbkl1Rmx0SjFodWlWanFDWmxHNTJscWdLa2RYVXV3Y3kzYW1ONnpWd0ZfTzMwaENRc2RQdWVBQlFoRkpPY1l1amgtSkJxZXFuT3hIY3Y4dXJOeDk2a2U5Qzdkdzd0VnVMYlFTWVFKLVY3UlRMNHhnM0RiSV9Va3VDeVdaWEpxazlBbGdpTQ"
-    },
-    {
-      "id": "1b1992b1c1d4",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-26T21:37:18Z",
-      "source": "Kansas Reflector",
-      "summary": "TOPEKA \u2014 Gov. Laura Kelly remains the most-liked politician in Kansas, as public support crumbles for U.S. Sen. Roger Marshall, President Donald Trump, the Republican and Democratic parties, and politics at large. The Docking Institute of Public Affairs at Fort Hays State University released its annual Kansas Speaks survey on Monday, which examines public opinions [&#8230;]",
-      "title": "Annual Kansas Speaks survey shows distrust in politics but support for Gov. Laura Kelly",
-      "url": "https://kansasreflector.com/2026/10/26/annual-kansas-speaks-survey-shows-distrust-in-politics-but-support-for-gov-laura-kelly"
-    },
-    {
-      "id": "7f16581c01b1",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-26T20:58:00Z",
-      "source": "KCUR",
-      "summary": "U.S. Senate candidate Adam Hamilton blasts Trump's tariffs for hurting Kansas businesses &nbsp;&nbsp; KCUR",
-      "title": "U.S. Senate candidate Adam Hamilton blasts Trump's tariffs for hurting Kansas businesses",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOYVM5Ykd3cG9oOUhRenJmcjRLUllQVktZUGtpSEJLVkJaUnJrd1I0MlZ4bnhWNC1aU2o1amVORTVrQVlGTGRiU0NpSkROS3Npb25rNmlpM2hkTnd3N1JKTUU1TzlIQzA2VnpvVENDRl9vT29td3FMd2NXVzVDU1JFU1ZsMnpBenpwY3pwMjlEMWJjcXBnUU9USzRDSnBYUFAwRWkwcy01NDRfcEVlR201WUlncGR6UkdLTHRRWHRIeEQyNDdSX3dZeFZ3cm8yd0NycnpF"
     }
   ],
   "schema_version": 1

@@ -1,16 +1,9 @@
 {
   "aggregate": {
-    "as_of": "2026-11-01T00:00:00Z",
-    "band": 2.87,
-    "hamilton": 48.71,
+    "as_of": "2026-11-02T00:00:00Z",
+    "band": 2.8,
+    "hamilton": 48.78,
     "history": [
-      {
-        "date": "2026-07-04",
-        "hamilton": 51.0,
-        "margin": -2.0,
-        "marshall": 49.0,
-        "n_polls": 1
-      },
       {
         "date": "2026-07-05",
         "hamilton": 51.0,
@@ -846,18 +839,25 @@
       },
       {
         "date": "2026-11-01",
-        "hamilton": 48.71,
-        "margin": -2.64,
-        "marshall": 46.07,
-        "n_polls": 13
+        "hamilton": 48.78,
+        "margin": -2.98,
+        "marshall": 45.8,
+        "n_polls": 14
+      },
+      {
+        "date": "2026-11-02",
+        "hamilton": 48.78,
+        "margin": -2.98,
+        "marshall": 45.8,
+        "n_polls": 14
       }
     ],
     "leader": "hamilton",
-    "margin": -2.64,
-    "marshall": 46.07,
+    "margin": -2.98,
+    "marshall": 45.8,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
-    "n_polls_used": 13,
-    "trend_7d": -2.36
+    "n_polls_used": 14,
+    "trend_7d": -0.21
   },
   "attribution": [
     {
@@ -867,8 +867,24 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-11-01T22:36:58.881966Z",
+  "generated_at": "2026-11-02T01:49:05.189377Z",
   "polls": [
+    {
+      "added_at": "2026-11-02T01:49:05.187754Z",
+      "end_date": "2026-11-01",
+      "id": "7d5244af3572",
+      "margin_of_error": 4.4,
+      "other": 0.0,
+      "pollster": "New York Times/Siena University",
+      "population": "LV",
+      "results": {
+        "hamilton": 49.0,
+        "marshall": 44.0
+      },
+      "sample_size": 736,
+      "start_date": "2026-10-27",
+      "undecided": 3.0
+    },
     {
       "added_at": "2026-11-01T18:46:47.431884Z",
       "end_date": "2026-10-29",
