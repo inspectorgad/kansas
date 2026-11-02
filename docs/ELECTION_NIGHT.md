@@ -209,3 +209,30 @@ open question rather than a suspicion:
    table is *something* — quite possibly a single county or a down-ballot contest —
    and identifying it is how a real parser gets written.
 3. Rehearse against a full archived general election, not a primary.
+
+## What the probe found on 2026-11-02
+
+Re-run from a CI runner the day before the election.
+
+- `ent.sos.ks.gov` still answers **403 Forbidden** on every path, now from
+  GitHub's runners too. Nothing more can be learned about it before the night.
+- The **kssos.org fallback** was identified. It is the vendor's all-races page:
+  each contest is a `<div class='race'>` with an `<h3>` heading, a
+  "Precincts Reporting: N of M" line and name/votes rows; the county breakdown
+  sits in the tooltips of an image map (`<span class='county'>Allen County</span>`
+  followed by `R-Roger Marshall | 1,191` rows). The 3,075-vote "result" from
+  August was the generic table reader taking one county's tooltip row as the
+  statewide total.
+- A parser for that layout now exists (`race-blocks` in `sources/results.py`).
+  It reads the U.S. Senate contest's statewide rows, its own precinct line, and
+  every county tooltip, with `Marshall County` and `Hamilton County` kept as
+  counties. A page in this layout is read by that parser only.
+- Against the archived primary it correctly **refuses**: the primary lists
+  `United States Senate (D)` and `(R)` as separate contests, and two party
+  primaries are never added together. The first real test is the general.
+
+What to expect on the night: the probe line `[OK  ] race-blocks: … [United
+States Senate]` once the page switches to the general. Until then the loop
+publishes `pending`. If the heading or rows differ from the primary, the probe
+prints the raw markup around the contest, so the change can be made from one
+run's log.

@@ -96,6 +96,8 @@ class ResultsData:
     precincts_total: int | None = None
     pct_reporting: float | None = None
     source_url: str | None = None
+    # The heading of the contest the numbers came from, for the probe log.
+    contest: str | None = None
     probes: list[ResultsProbe] = field(default_factory=list)
     attribution: list[Attribution] = field(default_factory=lambda: [ATTRIBUTION])
 
@@ -369,6 +371,174 @@ def _raw_excerpts(html: str, before: int = 2500, after: int = 2000) -> list[str]
     return out
 
 
+# --- shape 4: kssos.org race blocks ------------------------------------------
+#
+# The layout the Kansas fallback page actually uses, observed on the archived
+# August 4, 2026 primary from a CI runner on 2026-11-02:
+#
+#   <div class='race'>
+#     <h3>United States Senate (D)</h3>
+#     <p>Precincts Reporting: 4150 of 4150</p>
+#     <div class='race-candidate-list'>
+#       <div class='col-6'><p>Adam Hamilton</p></div>
+#       <div class='col-2'><p>76,102</p></div> <div class='col-1'><p>35%</p></div>
+#       ...
+#       <div class='col-6'><p>Total Votes</p></div> <div class='col-2'><p>...</p></div>
+#     </div><!-- end of .race-candidate-list -->
+#     <div class='race-details'> ... an image map whose <area title="..."> tooltips
+#       each hold one county:
+#       <span class='county'>Allen County</span><br/>22 of 22 precincts reporting
+#       <tr><td>R-Roger Marshall</td><td style='text-align:right'>1,191</td></tr>
+#
+# Every contest on the ballot is on the one page. The primary splits the Senate
+# into a (D) and an (R) contest; the general puts both candidates in one.
+#
+# This layout is also what produced the 3,075-vote "result" in August: the
+# generic table reader saw the tooltip rows ("D-Adam Hamilton | 107"), which
+# carry no county of their own, and took the last as statewide. So a page in
+# this layout is read by this parser only — see probe().
+
+RACE_START = re.compile(r"<div\s+class=['\"]race['\"]\s*>", re.IGNORECASE)
+RACE_HEADING = re.compile(r"<h3[^>]*>(.*?)</h3>", re.IGNORECASE | re.DOTALL)
+US_SENATE = re.compile(r"united\s+states\s+senat|u\.\s*s\.\s+senat|\bus\s+senat", re.IGNORECASE)
+LIST_START = re.compile(r"race-candidate-list['\"]", re.IGNORECASE)
+LIST_END = re.compile(r"end of \.race-candidate-list|race-details", re.IGNORECASE)
+NAME_VOTES = re.compile(
+    r"<div\s+class=['\"]col-6['\"]\s*>\s*<p>(.*?)</p>\s*</div>\s*"
+    r"<div\s+class=['\"]col-2['\"]\s*>\s*<p>\s*([\d,]+)\s*</p>",
+    re.IGNORECASE | re.DOTALL,
+)
+COUNTY_SPAN = re.compile(r"<span\s+class=['\"]county['\"]\s*>(.*?)</span>", re.IGNORECASE | re.DOTALL)
+# Tooltip rows are not well formed (an unclosed <tr> precedes the first
+# candidate), so cells are paired directly rather than through ROW.
+LABEL_VOTES = re.compile(
+    r"<td[^>]*>([^<]*?)</td>\s*<td[^>]*>\s*([\d,]+)\s*</td>", re.IGNORECASE
+)
+PARTY_PREFIX = re.compile(r"^\s*[A-Z]{1,3}\s*-\s*")
+_COUNTY_LOOKUP = {name.lower(): name for name in KANSAS_COUNTIES}
+
+
+def _county_name(label: str) -> str | None:
+    """"McPherson County" -> "McPherson". str.title() would give "Mcpherson"."""
+    text = re.sub(r"\s+", " ", TAG.sub(" ", label)).strip()
+    text = re.sub(r"\s+county$", "", text, flags=re.IGNORECASE)
+    return _COUNTY_LOOKUP.get(text.lower())
+
+
+def _race_blocks(html: str) -> list[tuple[str, str]]:
+    """(heading, block html) for every contest on the page."""
+    starts = [m.start() for m in RACE_START.finditer(html)]
+    blocks = []
+    for i, start in enumerate(starts):
+        block = html[start : starts[i + 1] if i + 1 < len(starts) else len(html)]
+        heading = RACE_HEADING.search(block)
+        if heading:
+            text = re.sub(r"\s+", " ", TAG.sub(" ", heading.group(1))).strip()
+            blocks.append((text, block))
+    return blocks
+
+
+def is_race_block_page(html: str) -> bool:
+    """Does this page use the race-block layout and list a U.S. Senate contest?"""
+    return any(US_SENATE.search(heading) for heading, _ in _race_blocks(html))
+
+
+def _parse_senate_block(heading: str, block: str) -> ResultsData | None:
+    list_at = LIST_START.search(block)
+    if not list_at:
+        return None
+    end = LIST_END.search(block, list_at.end())
+    statewide_html = block[list_at.end() : end.start() if end else len(block)]
+    details_html = block[end.start() :] if end else ""
+
+    statewide: dict[str, int] = {}
+    for name_html, votes_text in NAME_VOTES.findall(statewide_html):
+        candidate_id = _candidate_id(TAG.sub(" ", name_html))
+        votes = _to_int(votes_text)
+        if candidate_id and votes is not None:
+            statewide[candidate_id] = votes
+    if not statewide:
+        return None
+
+    counties: list[CountyResult] = []
+    seen: set[str] = set()
+    spans = list(COUNTY_SPAN.finditer(details_html))
+    for i, span in enumerate(spans):
+        county = _county_name(span.group(1))
+        if not county or county in seen:
+            continue
+        chunk = details_html[span.end() : spans[i + 1].start() if i + 1 < len(spans) else len(details_html)]
+        votes = {MARSHALL: 0, HAMILTON: 0}
+        other = 0
+        found = False
+        for label, count_text in LABEL_VOTES.findall(chunk):
+            count = _to_int(count_text)
+            if count is None:
+                continue
+            candidate_id = _candidate_id(PARTY_PREFIX.sub("", label))
+            if candidate_id:
+                votes[candidate_id] = count
+                found = True
+            elif label.strip() and label.strip().lower() not in ("candidate", "votes"):
+                other += count
+        if not found:
+            continue
+        reporting, total = _precincts(TAG.sub(" ", chunk[:400]))
+        seen.add(county)
+        counties.append(
+            CountyResult(
+                county=county,
+                marshall_votes=votes[MARSHALL],
+                hamilton_votes=votes[HAMILTON],
+                other_votes=other,
+                total_votes=votes[MARSHALL] + votes[HAMILTON],
+                precincts_reporting=reporting,
+                precincts_total=total,
+                pct_reporting=round(reporting / total * 100, 2)
+                if reporting is not None and total
+                else None,
+            )
+        )
+
+    data = ResultsData(status=ResultsStatus.LIVE, contest=heading)
+    data.statewide = _statewide_from(statewide)
+    data.total_votes = sum(statewide.values())
+    data.counties = sorted(counties, key=lambda c: c.county)
+    # Precincts for this contest, from its own subheading — not the first
+    # "N of M precincts" on a page that lists every contest and every county.
+    reporting, total = _precincts(TAG.sub(" ", block[: list_at.start()]))
+    data.precincts_reporting = reporting
+    data.precincts_total = total
+    if reporting is not None and total:
+        data.pct_reporting = round(reporting / total * 100, 2)
+    return data
+
+
+def _parse_race_blocks(html: str) -> ResultsData | None:
+    """Read the U.S. Senate contest from the kssos.org race-block layout.
+
+    Prefers a contest that lists both candidates, which is the general. If none
+    does — a primary, where each party's contest names only its own — the first
+    Senate contest found is returned as it stands, and the plausibility gate
+    rejects it for a missing candidate. Two party primaries are never added
+    together: they are different contests with different electorates.
+    """
+    parsed = [
+        result
+        for heading, block in _race_blocks(html)
+        if US_SENATE.search(heading)
+        for result in [_parse_senate_block(heading, block)]
+        if result is not None
+    ]
+    if not parsed:
+        return None
+    for result in parsed:
+        ids = {row.candidate_id for row in result.statewide}
+        if {MARSHALL, HAMILTON} <= ids:
+            return result
+    return parsed[0]
+
+
 # --- precinct reporting ------------------------------------------------------
 
 PRECINCT_PATTERNS = (
@@ -487,23 +657,36 @@ def probe(url: str | None = None) -> ResultsData:
 
         reporting, total = _precincts(TAG.sub(" ", html))
 
-        for shape, parser in (("embedded-json", _parse_embedded_json), ("html-table", _parse_html_table)):
+        shapes = [("embedded-json", _parse_embedded_json)]
+        if is_race_block_page(html):
+            # This layout is read by its own parser only. The generic table
+            # reader turns its county tooltips into a statewide figure, which
+            # is how the August primary page produced a 3,075-vote "result".
+            shapes.append(("race-blocks", _parse_race_blocks))
+        else:
+            shapes.append(("html-table", _parse_html_table))
+
+        for shape, parser in shapes:
             parsed = parser(html)
             if parsed:
-                # Populated before the plausibility check, which reads them.
-                parsed.precincts_reporting = reporting
-                parsed.precincts_total = total
-                if reporting is not None and total:
-                    parsed.pct_reporting = round(reporting / total * 100, 2)
+                # Populated before the plausibility check, which reads them. A
+                # parser that found the contest's own precinct line keeps it; the
+                # page-wide first match is only a fallback.
+                if parsed.precincts_reporting is None:
+                    parsed.precincts_reporting = reporting
+                    parsed.precincts_total = total
+                    if reporting is not None and total:
+                        parsed.pct_reporting = round(reporting / total * 100, 2)
 
+                where = f"{page_url} [{parsed.contest}]" if parsed.contest else page_url
                 reason = implausible(parsed)
                 if reason:
                     data.probes.append(
-                        ResultsProbe(shape, False, f"{page_url}: rejected — {reason}")
+                        ResultsProbe(shape, False, f"{where}: rejected — {reason}")
                     )
                     continue
 
-                parsed.probes = data.probes + [ResultsProbe(shape, True, page_url)]
+                parsed.probes = data.probes + [ResultsProbe(shape, True, where)]
                 parsed.source_url = page_url
                 parsed.attribution = data.attribution
                 return parsed
@@ -538,6 +721,8 @@ def diagnose(url: str | None = None) -> str:
     lines.append("")
     if data.statewide:
         lines.append(f"PARSED via {next(p.shape for p in data.probes if p.ok)}")
+        if data.contest:
+            lines.append(f"  contest: {data.contest}")
         for row in data.statewide:
             lines.append(f"  {row.candidate_id}: {row.votes:,} ({row.pct}%)")
         lines.append(f"  counties: {len(data.counties)} of {len(KANSAS_COUNTIES)}")
