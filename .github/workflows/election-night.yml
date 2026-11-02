@@ -40,9 +40,6 @@ on:
         description: "Push to the data branch (false = rehearsal: collect and log only)"
         required: false
         default: "true"
-  # TEMPORARY: rehearsal of the loop body from an unmerged branch. Reverted.
-  push:
-    branches: [claude/jolly-darwin-tb1nn6]
   schedule:
     # 21:37 and 22:07 UTC on Nov 3 = 3:37pm and 4:07pm CT, ahead of the SOS page
     # going live at 5pm CT. Off the hour because :00 is when GitHub's scheduler is
@@ -70,10 +67,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 355
     env:
-      INTERVAL: ${{ github.event_name == 'push' && '60' || github.event.inputs.interval_seconds || '120' }}
-      RUN_MINUTES: ${{ github.event_name == 'push' && '4' || github.event.inputs.run_minutes || '330' }}
-      UNTIL: ${{ github.event_name == 'push' && '2026-11-02T18:30:00Z' || github.event.inputs.until || '2026-11-04T12:00:00Z' }}
-      PUBLISH: ${{ github.event_name == 'push' && 'false' || github.event.inputs.publish || 'true' }}
+      INTERVAL: ${{ github.event.inputs.interval_seconds || '120' }}
+      RUN_MINUTES: ${{ github.event.inputs.run_minutes || '330' }}
+      UNTIL: ${{ github.event.inputs.until || '2026-11-04T12:00:00Z' }}
+      PUBLISH: ${{ github.event.inputs.publish || 'true' }}
     steps:
       - name: Check the window
         id: window
