@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kansas Senate 2026 Tracker</title>
+<meta name="description" content="Polls, prediction markets, campaign finance, news and election-night returns for the 2026 U.S. Senate race in Kansas. Every figure carries its source and its age.">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f4f3ef;
+  --surface: #fcfcfb;
+  --border: #e2e0da;
+  --grid: #ebe9e4;
+  --text: #0b0b0b;
+  --text-2: #52514e;
+  --text-3: #6f6e69;
+  --r: #e34948;
+  --d: #2a78d6;
+  --warn-bg: #fff4d6;
+  --warn-fg: #7a5300;
+  --ok-fg: #1f6b3a;
+  --focus: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #121211;
+    --surface: #1a1a19;
+    --border: #2f2f2d;
+    --grid: #2a2a28;
+    --text: #f0efec;
+    --text-2: #c3c2b7;
+    --text-3: #9a998f;
+    --r: #e66767;
+    --d: #3987e5;
+    --warn-bg: #3a2e0f;
+    --warn-fg: #f3cf75;
+    --ok-fg: #7fd39b;
+    --focus: #3987e5;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121211;
+  --surface: #1a1a19;
+  --border: #2f2f2d;
+  --grid: #2a2a28;
+  --text: #f0efec;
+  --text-2: #c3c2b7;
+  --text-3: #9a998f;
+  --r: #e66767;
+  --d: #3987e5;
+  --warn-bg: #3a2e0f;
+  --warn-fg: #f3cf75;
+  --ok-fg: #7fd39b;
+  --focus: #3987e5;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--d); }
+a:focus-visible, button:focus-visible, input:focus-visible, th button:focus-visible {
+  outline: 2px solid var(--focus); outline-offset: 2px;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+header.top {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0 16px;
+}
+.top-row { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-end; justify-content: space-between; }
+h1 { font-size: 22px; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+.sub { color: var(--text-2); margin: 4px 0 0; font-size: 14px; }
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13px; color: var(--text-2); }
+button.btn {
+  font: inherit; font-size: 13px; color: var(--text);
+  background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  padding: 5px 10px; cursor: pointer;
+}
+button.btn:hover { border-color: var(--text-3); }
+
+main { padding: 20px 0 40px; display: grid; gap: 20px; }
+section.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 18px 20px;
+  min-width: 0;
+}
+.card-head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
+h2 { font-size: 17px; margin: 0; }
+h3 { font-size: 14px; margin: 16px 0 8px; color: var(--text-2); font-weight: 600; }
+.age { font-size: 12px; color: var(--text-3); white-space: nowrap; }
+.age.stale { color: var(--warn-fg); background: var(--warn-bg); padding: 1px 6px; border-radius: 4px; }
+.note { font-size: 13px; color: var(--text-2); margin: 8px 0 0; }
+.muted { color: var(--text-3); }
+.grid2 { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); }
+.grid2 > section { min-width: 0; }
+
+/* Party chips: identity is carried by the letter, not the color alone. */
+.chip { display: inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: baseline; margin-right: 6px; }
+.chip.R { background: var(--r); }
+.chip.D { background: var(--d); }
+
+/* Stat tiles */
+.tiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.tile { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+.tile .label { font-size: 12px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.04em; }
+.tile .big.sm { font-size: 20px; }
+.tile .big { font-size: 26px; font-weight: 650; line-height: 1.2; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.tile .small { font-size: 13px; color: var(--text-2); margin-top: 2px; }
+
+/* Two-sided bar */
+.split { display: flex; height: 14px; border-radius: 4px; overflow: hidden; gap: 2px; margin: 10px 0 6px; background: var(--surface); }
+.split > div { height: 100%; }
+.split .D { background: var(--d); }
+.split .R { background: var(--r); }
+.split .O { background: var(--text-3); }
+.split-legend { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-2); font-variant-numeric: tabular-nums; gap: 8px; }
+
+/* Results */
+.results-head { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.cand { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.cand .name { font-weight: 600; }
+.cand .pct { font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.cand .votes { color: var(--text-2); font-size: 13px; font-variant-numeric: tabular-nums; }
+.badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-2); }
+.badge.live { color: var(--r); border-color: var(--r); }
+.badge.final { color: var(--ok-fg); border-color: var(--ok-fg); }
+.pending-box { border: 1px dashed var(--border); border-radius: 8px; padding: 16px; color: var(--text-2); }
+
+/* Tables */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { font-weight: 600; color: var(--text-2); font-size: 12.5px; }
+td.num, th.num { text-align: right; }
+td.wrap-cell { white-space: normal; min-width: 180px; }
+td.label-cell { white-space: normal; }
+th button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+th button::after { content: ""; margin-left: 4px; color: var(--text-3); }
+th[aria-sort="ascending"] button::after { content: "▲"; }
+th[aria-sort="descending"] button::after { content: "▼"; }
+tbody tr:hover { background: var(--bg); }
+.mini { display: inline-block; height: 8px; border-radius: 0 3px 3px 0; vertical-align: middle; margin-left: 6px; }
+.mini.R { background: var(--r); }
+.mini.D { background: var(--d); }
+input.search {
+  font: inherit; font-size: 13px; color: var(--text); background: var(--bg);
+  border: 1px solid var(--border); border-radius: 6px; padding: 5px 10px; width: 200px; max-width: 100%;
+}
+.tag { font-size: 11px; padding: 1px 5px; border-radius: 3px; border: 1px solid var(--border); color: var(--text-2); }
+
+/* Charts */
+.chart { position: relative; width: 100%; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .axis text { fill: var(--text-3); font-size: 11px; }
+.chart .gridline { stroke: var(--grid); stroke-width: 1; }
+.chart .ref { stroke: var(--text-3); stroke-width: 1; stroke-dasharray: 3 3; }
+.chart .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .band { opacity: 0.12; }
+.chart .cross { stroke: var(--text-3); stroke-width: 1; }
+.chart .dlabel { font-size: 12px; font-weight: 600; fill: var(--text); }
+.tip {
+  position: absolute; pointer-events: none; background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12); white-space: nowrap; display: none; z-index: 2;
+  font-variant-numeric: tabular-nums;
+}
+.legend { display: flex; gap: 14px; font-size: 13px; color: var(--text-2); margin-bottom: 6px; flex-wrap: wrap; }
+
+/* News */
+ul.news { list-style: none; margin: 0; padding: 0; }
+ul.news li { padding: 9px 0; border-bottom: 1px solid var(--grid); }
+ul.news li:last-child { border-bottom: 0; }
+ul.news a { text-decoration: none; color: var(--text); font-weight: 500; }
+ul.news a:hover { text-decoration: underline; }
+ul.news .meta { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+
+.error { color: var(--warn-fg); background: var(--warn-bg); padding: 8px 10px; border-radius: 6px; font-size: 13px; }
+
+footer { color: var(--text-3); font-size: 12.5px; padding: 0 0 40px; }
+footer ul { padding-left: 18px; margin: 6px 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 520px) {
+  section.card { padding: 14px; }
+  .tile .big { font-size: 22px; }
+  .cand .pct { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <div>
+      <h1>Kansas U.S. Senate 2026</h1>
+      <p class="sub" id="subtitle">Roger Marshall (R, incumbent) vs. Adam Hamilton (D) · Election day November 3, 2026</p>
+    </div>
+    <div class="controls">
+      <span id="refresh-status" aria-live="polite">Loading…</span>
+      <button class="btn" id="refresh-btn" type="button">Refresh now</button>
+      <button class="btn" id="theme-btn" type="button" aria-label="Toggle dark mode">Theme</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card" id="results" aria-labelledby="results-h">
+    <div class="card-head"><h2 id="results-h">Election night returns</h2><span class="age" data-age="results"></span></div>
+    <div id="results-body"><p class="muted">Loading…</p></div>
+  </section>
+
+  <section class="card" id="glance" aria-labelledby="glance-h">
+    <div class="card-head"><h2 id="glance-h">At a glance</h2></div>
+    <div class="tiles" id="tiles"></div>
+    <div id="ratings"></div>
+  </section>
+
+  <div class="grid2">
+    <section class="card" aria-labelledby="markets-h">
+      <div class="card-head"><h2 id="markets-h">Prediction markets</h2><span class="age" data-age="markets"></span></div>
+      <div id="markets-body"></div>
+    </section>
+    <section class="card" aria-labelledby="polltrend-h">
+      <div class="card-head"><h2 id="polltrend-h">Poll average</h2><span class="age" data-age="polls"></span></div>
+      <div id="polltrend-body"></div>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="polls-h">
+    <div class="card-head"><h2 id="polls-h">Every public poll</h2><span class="age" data-age="polls"></span></div>
+    <div id="polls-body"></div>
+  </section>
+
+  <section class="card" aria-labelledby="money-h">
+    <div class="card-head"><h2 id="money-h">Money</h2><span class="age" data-age="finance"></span></div>
+    <div id="money-body"></div>
+  </section>
+
+  <section class="card" aria-labelledby="news-h">
+    <div class="card-head"><h2 id="news-h">News</h2><span class="age" data-age="news"></span></div>
+    <div id="news-body"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Not affiliated with either campaign, any election authority, or any news organization. This page does not forecast and does not call races. A prediction-market price is an implied probability of winning, never a projected vote share. When a source fails, the last good figure stays up with its real age.</p>
+  <p>Methodology and limits: <a href="https://github.com/inspectorgad/kansas/blob/HEAD/docs/METHODOLOGY.md">METHODOLOGY.md</a> · <a href="https://github.com/inspectorgad/kansas/blob/HEAD/docs/DATA_SOURCES.md">DATA_SOURCES.md</a> · <a href="https://github.com/inspectorgad/kansas">Source code</a></p>
+  <div id="attribution"></div>
+</footer>
+
+<script>
+(() => {
+  "use strict";
+
+  // Same static JSON the Android app reads. `?data=<url>` overrides it, which is
+  // how the page is tested against rehearsal output.
+  const DEFAULT_BASE = "https://raw.githubusercontent.com/inspectorgad/kansas/data/data/";
+  const params = new URLSearchParams(location.search);
+  const BASE = (params.get("data") || DEFAULT_BASE).replace(/\/?$/, "/");
+  const FILES = ["race", "results", "markets", "polls", "finance", "news"];
+  // The collector runs every 20 minutes. Twice that without a new file is late.
+  const STALE_MIN = { race: 60, results: 45, markets: 60, polls: 24 * 60, finance: 24 * 60, news: 120 };
+  const NAMES = { marshall: "Marshall", hamilton: "Hamilton" };
+  const PARTY = { marshall: "R", hamilton: "D" };
+
+  const state = {};
+  let timer = null;
+
+  // ---------- helpers ----------
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const safeUrl = (u) => (typeof u === "string" && /^https?:\/\//i.test(u) ? esc(u) : null);
+  const link = (u, text) => { const s = safeUrl(u); return s ? `<a href="${s}" target="_blank" rel="noopener noreferrer">${esc(text)}</a>` : esc(text); };
+  const pct = (x, d = 0) => (x == null ? "—" : (x * 100).toFixed(d) + "%");
+  const num = (x) => (x == null ? "—" : Math.round(x).toLocaleString("en-US"));
+  const money = (x) => {
+    if (x == null) return "—";
+    const a = Math.abs(x);
+    if (a >= 1e6) return "$" + (x / 1e6).toFixed(a >= 1e8 ? 0 : 1) + "M";
+    if (a >= 1e3) return "$" + (x / 1e3).toFixed(0) + "K";
+    return "$" + Math.round(x);
+  };
+  const chip = (id) => `<span class="chip ${PARTY[id]}" aria-hidden="true"></span>`;
+  const candLabel = (id) => `${chip(id)}${NAMES[id]} (${PARTY[id]})`;
+  const fmtDate = (s) => { if (!s) return "—"; const d = new Date(s.length === 10 ? s + "T12:00:00" : s); return d.toLocaleDateString("en-US", { month: "short", day: "numeric" }); };
+  const fmtTime = (s) => new Date(s).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+  const margin = (m) => {
+    // Positive means Marshall leads (collector contract).
+    if (m == null) return "—";
+    if (Math.abs(m) < 0.05) return "Tied";
+    return (m > 0 ? "Marshall +" : "Hamilton +") + Math.abs(m).toFixed(1);
+  };
+  function ageText(iso) {
+    const mins = (Date.now() - new Date(iso).getTime()) / 60000;
+    if (mins < 1) return "just now";
+    if (mins < 60) return Math.round(mins) + " min ago";
+    if (mins < 48 * 60) return Math.round(mins / 60) + " h ago";
+    return Math.round(mins / 1440) + " days ago";
+  }
+
+  // ---------- data ----------
+  async function load() {
+    $("refresh-status").textContent = "Refreshing…";
+    // raw.githubusercontent.com caches for 5 minutes; a per-minute query string
+    // asks for a fresh copy without hammering it.
+    const bust = Math.floor(Date.now() / 60000);
+    const results = await Promise.allSettled(
+      FILES.map((f) => fetch(`${BASE}${f}.json?t=${bust}`, { cache: "no-store" }).then((r) => {
+        if (!r.ok) throw new Error(`${f}.json: HTTP ${r.status}`);
+        return r.json();
+      }))
+    );
+    const failed = [];
+    results.forEach((r, i) => {
+      if (r.status === "fulfilled") state[FILES[i]] = r.value;
+      else failed.push(FILES[i]);
+    });
+    render();
+    const live = state.results && state.results.status === "live";
+    const t = new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+    $("refresh-status").textContent = (failed.length ? `Could not load ${failed.join(", ")} (showing last copy). ` : "") +
+      `Checked ${t} · auto-refresh every ${live ? "minute" : "5 min"}`;
+    clearTimeout(timer);
+    timer = setTimeout(load, live ? 60000 : 300000);
+  }
+
+  function render() {
+    const parts = [renderAges, renderResults, renderTiles, renderMarkets, renderPollTrend, renderPolls, renderMoney, renderNews, renderAttribution];
+    for (const fn of parts) {
+      try { fn(); } catch (e) { console.error(fn.name, e); }
+    }
+  }
+
+  function renderAges() {
+    document.querySelectorAll("[data-age]").forEach((el) => {
+      const d = state[el.dataset.age];
+      if (!d || !d.generated_at) { el.textContent = "not loaded"; el.classList.add("stale"); return; }
+      const mins = (Date.now() - new Date(d.generated_at).getTime()) / 60000;
+      // The collector rewrites a file only when its content changed, so this is
+      // the age of the figure, not of the last check. Pending results never age.
+      const pending = el.dataset.age === "results" && d.status === "pending";
+      const stale = !pending && mins > STALE_MIN[el.dataset.age];
+      el.textContent = (stale ? "No new data for " : "Changed ") + ageText(d.generated_at).replace(" ago", stale ? "" : " ago");
+      el.title = new Date(d.generated_at).toString();
+      el.classList.toggle("stale", stale);
+    });
+  }
+
+  // ---------- results ----------
+  const sortState = { key: "total_votes", dir: -1 };
+  let countyFilter = "";
+
+  function renderResults() {
+    const r = state.results, body = $("results-body");
+    const section = $("results");
+    if (!r) { body.innerHTML = `<p class="error">Results file not loaded.</p>`; return; }
+    if (r.status === "pending" || !r.statewide || !r.statewide.length) {
+      // Before returns, the results card drops below the race summary.
+      section.parentNode.insertBefore(section, $("glance").nextSibling);
+      const days = state.race ? state.race.days_until_election : null;
+      body.innerHTML = `<div class="pending-box">
+        <strong>No returns yet.</strong> Unofficial results from the Kansas Secretary of State appear here after polls close on November 3${days != null && days > 0 ? ` (${days} day${days === 1 ? "" : "s"} away)` : ""}.
+        There is no vote share of any kind before then. This page refreshes every minute once counting starts.</div>`;
+      return;
+    }
+    // Returns are in: they go to the top of the page.
+    section.parentNode.insertBefore(section, section.parentNode.firstElementChild);
+
+    const by = Object.fromEntries(r.statewide.map((c) => [c.candidate_id, c]));
+    const total = r.total_votes || r.statewide.reduce((a, c) => a + c.votes, 0);
+    const other = Math.max(0, total - (by.marshall?.votes || 0) - (by.hamilton?.votes || 0));
+    const badge = r.status === "final" ? `<span class="badge final">Final unofficial</span>` : `<span class="badge live">Counting</span>`;
+    const called = r.called && r.called_for ? ` · <strong>Called for ${esc(NAMES[r.called_for] || r.called_for)}</strong> (by the source)` : " · Not called";
+    const reporting = r.pct_reporting != null
+      ? `${r.pct_reporting.toFixed(1)}% of precincts reporting${r.precincts_total ? ` (${num(r.precincts_reporting)} of ${num(r.precincts_total)})` : ""}`
+      : "Precinct reporting not published";
+
+    const candBlock = (id) => {
+      const c = by[id] || { votes: 0, pct: 0 };
+      return `<div><div class="cand"><span class="name">${candLabel(id)}</span><span class="pct">${c.pct.toFixed(1)}%</span></div>
+        <div class="votes">${num(c.votes)} votes</div></div>`;
+    };
+    const w = (v) => (total ? (v / total) * 100 : 0);
+
+    body.innerHTML = `
+      <p style="margin:0 0 12px">${badge} <span class="muted">${esc(reporting)}${called}</span></p>
+      <div class="results-head">${candBlock("hamilton")}${candBlock("marshall")}</div>
+      <div class="split" role="img" aria-label="Hamilton ${by.hamilton?.pct ?? 0}%, Marshall ${by.marshall?.pct ?? 0}%">
+        <div class="D" style="width:${w(by.hamilton?.votes || 0)}%"></div>
+        ${other ? `<div class="O" style="width:${w(other)}%"></div>` : ""}
+        <div class="R" style="width:${w(by.marshall?.votes || 0)}%"></div>
+      </div>
+      <div class="split-legend"><span>${num(total)} total votes${other ? ` · ${num(other)} other` : ""}</span>
+        <span>${r.last_updated ? "Source updated " + esc(fmtTime(r.last_updated)) : ""}</span></div>
+      <h3>By county <span class="muted" style="font-weight:400">(${r.counties.length} reporting)</span></h3>
+      <input class="search" id="county-search" type="search" placeholder="Filter counties" aria-label="Filter counties" value="${esc(countyFilter)}">
+      <div class="table-wrap" style="margin-top:8px"><table id="county-table"></table></div>
+      <p class="note">Unofficial returns. The official canvass follows in the weeks after election day.</p>`;
+    $("county-search").addEventListener("input", (e) => { countyFilter = e.target.value; renderCountyTable(); });
+    renderCountyTable();
+  }
+
+  function renderCountyTable() {
+    const r = state.results, table = $("county-table");
+    if (!table) return;
+    const rows = r.counties.map((c) => {
+      const two = c.marshall_votes + c.hamilton_votes;
+      return { ...c, h_pct: two ? (c.hamilton_votes / c.total_votes) * 100 : 0, m_pct: two ? (c.marshall_votes / c.total_votes) * 100 : 0,
+        margin: c.total_votes ? ((c.marshall_votes - c.hamilton_votes) / c.total_votes) * 100 : 0 };
+    }).filter((c) => c.county.toLowerCase().includes(countyFilter.trim().toLowerCase()));
+    const { key, dir } = sortState;
+    rows.sort((a, b) => (typeof a[key] === "string" ? a[key].localeCompare(b[key]) : (a[key] ?? -1) - (b[key] ?? -1)) * dir);
+    const cols = [
+      ["county", "County", false], ["hamilton_votes", "Hamilton (D)", true], ["h_pct", "D %", true],
+      ["marshall_votes", "Marshall (R)", true], ["m_pct", "R %", true], ["margin", "Margin", true],
+      ["total_votes", "Total", true], ["pct_reporting", "Reporting", true],
+    ];
+    const head = cols.map(([k, label, n]) => `<th class="${n ? "num" : ""}" aria-sort="${k === key ? (dir > 0 ? "ascending" : "descending") : "none"}"><button type="button" data-sort="${k}">${label}</button></th>`).join("");
+    const bodyRows = rows.map((c) => `<tr>
+      <td>${esc(c.county)}</td>
+      <td class="num">${num(c.hamilton_votes)}</td><td class="num">${c.h_pct.toFixed(1)}</td>
+      <td class="num">${num(c.marshall_votes)}</td><td class="num">${c.m_pct.toFixed(1)}</td>
+      <td class="num">${margin(c.margin)}</td>
+      <td class="num">${num(c.total_votes)}</td>
+      <td class="num">${c.pct_reporting != null ? c.pct_reporting.toFixed(0) + "%" : "—"}</td></tr>`).join("");
+    table.innerHTML = `<caption class="sr-only">Returns by county, sortable</caption><thead><tr>${head}</tr></thead><tbody>${bodyRows || `<tr><td colspan="8" class="muted">No matching county.</td></tr>`}</tbody>`;
+    table.querySelectorAll("th button").forEach((b) => b.addEventListener("click", () => {
+      const k = b.dataset.sort;
+      sortState.dir = sortState.key === k ? -sortState.dir : (k === "county" ? 1 : -1);
+      sortState.key = k;
+      renderCountyTable();
+      table.querySelector(`th button[data-sort="${k}"]`).focus();
+    }));
+  }
+
+  // ---------- at a glance ----------
+  function renderTiles() {
+    const m = state.markets?.consensus, a = state.polls?.aggregate, f = state.finance?.candidates, race = state.race;
+    const tiles = [];
+    if (race) {
+      const d = race.days_until_election;
+      tiles.push(`<div class="tile"><div class="label">Election day</div><div class="big">${d > 0 ? d + (d === 1 ? " day" : " days") : d === 0 ? "Today" : "Held"}</div>
+        <div class="small">Tuesday, November 3, 2026</div></div>`);
+    }
+    if (m) {
+      const lead = m.hamilton >= m.marshall ? "hamilton" : "marshall";
+      const ch = m.change_24h != null ? ` · ${m.change_24h >= 0 ? "+" : ""}${(m.change_24h * 100).toFixed(1)} pts for Hamilton in 24 h` : "";
+      tiles.push(`<div class="tile"><div class="label">Market chance of winning</div>
+        <div class="big">${chip(lead)}${NAMES[lead]} ${pct(m[lead])}</div>
+        <div class="small">Hamilton ${pct(m.hamilton)} · Marshall ${pct(m.marshall)}${ch}</div></div>`);
+    }
+    if (a) {
+      tiles.push(`<div class="tile"><div class="label">Poll average</div>
+        <div class="big">${chip(a.leader)}${margin(a.margin)}</div>
+        <div class="small">Hamilton ${a.hamilton.toFixed(1)} · Marshall ${a.marshall.toFixed(1)} · ±${a.band.toFixed(1)} · ${a.n_polls_used} polls</div></div>`);
+    }
+    if (f) {
+      tiles.push(`<div class="tile"><div class="label">Campaign cash on hand</div>
+        <div class="big sm">${chip("hamilton")}${money(f.hamilton.cash_on_hand)} <span class="muted" style="font-weight:400">vs</span> ${chip("marshall")}${money(f.marshall.cash_on_hand)}</div>
+        <div class="small">Hamilton vs Marshall · as of ${fmtDate(f.hamilton.coverage_end_date)} FEC report</div></div>`);
+    }
+    $("tiles").innerHTML = tiles.join("");
+    const ratings = race?.ratings || [];
+    $("ratings").innerHTML = ratings.length ? `<h3>Race ratings</h3><div class="table-wrap"><table><thead><tr><th>Source</th><th>Rating</th><th>Previous</th><th>As of</th></tr></thead><tbody>${
+      ratings.map((x) => `<tr><td>${link(x.url, x.source)}</td><td><strong>${esc(x.rating)}</strong></td><td>${esc(x.previous || "—")}</td><td>${fmtDate(x.as_of)}${x.entered_by_hand ? ' <span class="tag" title="Typed in by a person, not read by a scraper">by hand</span>' : ""}</td></tr>`).join("")
+    }</tbody></table></div>` : "";
+  }
+
+  // ---------- line chart ----------
+  // series: [{ id, label, cls, values: [{x: Date, y}] , band?: [{x, lo, hi}] }]
+  function lineChart(el, { series, yMin, yMax, yFmt, refY, ariaLabel, tipFmt }) {
+    const W = 640, H = 260, P = { l: 40, r: 78, t: 10, b: 26 };
+    const xs = series[0].values.map((v) => v.x.getTime());
+    const x0 = Math.min(...xs), x1 = Math.max(...xs);
+    const sx = (t) => P.l + ((t - x0) / (x1 - x0 || 1)) * (W - P.l - P.r);
+    const sy = (y) => P.t + (1 - (y - yMin) / (yMax - yMin)) * (H - P.t - P.b);
+    const ticks = 5, yTicks = [];
+    for (let i = 0; i <= ticks; i++) yTicks.push(yMin + ((yMax - yMin) * i) / ticks);
+    const months = [];
+    const d = new Date(x0); d.setDate(1); d.setHours(0, 0, 0, 0); d.setMonth(d.getMonth() + 1);
+    while (d.getTime() <= x1) { months.push(new Date(d)); d.setMonth(d.getMonth() + 1); }
+    const path = (vals) => vals.map((v, i) => `${i ? "L" : "M"}${sx(v.x.getTime()).toFixed(1)},${sy(v.y).toFixed(1)}`).join("");
+    const color = (s) => (s.cls === "R" ? "var(--r)" : "var(--d)");
+    let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(ariaLabel)}">`;
+    svg += `<g class="axis">${yTicks.map((y) => `<line class="gridline" x1="${P.l}" x2="${W - P.r}" y1="${sy(y)}" y2="${sy(y)}"/><text x="${P.l - 6}" y="${sy(y) + 4}" text-anchor="end">${yFmt(y)}</text>`).join("")}`;
+    svg += months.map((m) => `<text x="${sx(m.getTime())}" y="${H - 6}" text-anchor="middle">${m.toLocaleDateString("en-US", { month: "short" })}</text>`).join("") + `</g>`;
+    if (refY != null) svg += `<line class="ref" x1="${P.l}" x2="${W - P.r}" y1="${sy(refY)}" y2="${sy(refY)}"/>`;
+    for (const s of series) {
+      if (s.band) {
+        const top = s.band.map((v, i) => `${i ? "L" : "M"}${sx(v.x.getTime()).toFixed(1)},${sy(v.hi).toFixed(1)}`).join("");
+        const bot = s.band.slice().reverse().map((v) => `L${sx(v.x.getTime()).toFixed(1)},${sy(v.lo).toFixed(1)}`).join("");
+        svg += `<path class="band" d="${top}${bot}Z" fill="${color(s)}"/>`;
+      }
+    }
+    for (const s of series) {
+      svg += `<path class="line" d="${path(s.values)}" stroke="${color(s)}"/>`;
+    }
+    // Direct labels at the line ends, nudged apart if they collide.
+    const ends = series.map((s) => ({ s, y: sy(s.values[s.values.length - 1].y), v: s.values[s.values.length - 1].y }));
+    ends.sort((a, b) => a.y - b.y);
+    for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 16) ends[i].y = ends[i - 1].y + 16;
+    for (const e of ends) {
+      const lx = sx(x1);
+      svg += `<circle cx="${lx}" cy="${sy(e.v)}" r="4" fill="${color(e.s)}" stroke="var(--surface)" stroke-width="2"/>`;
+      svg += `<text class="dlabel" x="${lx + 8}" y="${e.y + 4}">${esc(e.s.label)} ${yFmt(e.v, true)}</text>`;
+    }
+    svg += `<line class="cross" id="${el.id}-cross" y1="${P.t}" y2="${H - P.b}" style="display:none"/>`;
+    svg += series.map((s, i) => `<circle id="${el.id}-dot${i}" r="4" fill="${color(s)}" stroke="var(--surface)" stroke-width="2" style="display:none"/>`).join("");
+    svg += `<rect x="${P.l}" y="0" width="${W - P.l - P.r}" height="${H}" fill="transparent" class="hit"/></svg><div class="tip"></div>`;
+    el.innerHTML = svg;
+
+    const svgEl = el.querySelector("svg"), tip = el.querySelector(".tip"), cross = el.querySelector(`#${el.id}-cross`);
+    const hide = () => { tip.style.display = "none"; cross.style.display = "none"; series.forEach((_, i) => (el.querySelector(`#${el.id}-dot${i}`).style.display = "none")); };
+    svgEl.addEventListener("pointerleave", hide);
+    svgEl.addEventListener("pointermove", (ev) => {
+      const rect = svgEl.getBoundingClientRect();
+      const px = ((ev.clientX - rect.left) / rect.width) * W;
+      if (px < P.l || px > W - P.r) { hide(); return; }
+      const t = x0 + ((px - P.l) / (W - P.l - P.r)) * (x1 - x0);
+      let best = 0, bd = Infinity;
+      xs.forEach((v, i) => { const dd = Math.abs(v - t); if (dd < bd) { bd = dd; best = i; } });
+      const cx = sx(xs[best]);
+      cross.setAttribute("x1", cx); cross.setAttribute("x2", cx); cross.style.display = "";
+      series.forEach((s, i) => { const dot = el.querySelector(`#${el.id}-dot${i}`); dot.setAttribute("cx", cx); dot.setAttribute("cy", sy(s.values[best].y)); dot.style.display = ""; });
+      tip.innerHTML = tipFmt(best);
+      tip.style.display = "block";
+      const scale = rect.width / W;
+      const left = cx * scale + 12, tw = tip.offsetWidth;
+      tip.style.left = (left + tw > rect.width ? cx * scale - tw - 12 : left) + "px";
+      tip.style.top = "8px";
+    });
+  }
+
+  // ---------- markets ----------
+  function renderMarkets() {
+    const mk = state.markets, el = $("markets-body");
+    if (!mk?.consensus) { el.innerHTML = `<p class="error">Market data not loaded.</p>`; return; }
+    const c = mk.consensus;
+    const hist = (c.history || []).map((h) => ({ x: new Date(h.t), h: h.hamilton, m: h.marshall }));
+    let html = `<p class="note" style="margin:0 0 8px">Chance of winning implied by prices on ${esc((c.platforms || []).join(", "))}. Last price ${esc(fmtTime(c.as_of))}.</p>`;
+    html += `<div class="legend"><span>${chip("hamilton")}Hamilton (D)</span><span>${chip("marshall")}Marshall (R)</span><span class="muted">Dashed line: 50%</span></div><div class="chart" id="mchart"></div>`;
+    html += `<p class="note">${esc(mk.disclaimer || "")}</p>`;
+    // Margin distribution, as a compact table with inline bars.
+    const b = mk.margin?.buckets || [];
+    if (b.length) {
+      const max = Math.max(...b.map((x) => x.probability));
+      html += `<details style="margin-top:10px"><summary style="cursor:pointer;font-size:14px">Market-implied margin bands</summary>
+        <div class="table-wrap"><table><thead><tr><th>Outcome</th><th class="num">Probability</th><th></th></tr></thead><tbody>${
+        b.map((x) => `<tr><td>${chip(x.candidate_id)}${esc(x.label)}</td><td class="num">${pct(x.probability, 1)}</td><td style="width:40%"><span class="mini ${PARTY[x.candidate_id]}" style="width:${max ? (x.probability / max) * 100 : 0}%"></span></td></tr>`).join("")
+        }</tbody></table></div><p class="note">${esc(mk.margin.note || "")}</p></details>`;
+    }
+    el.innerHTML = html;
+    if (hist.length > 1) {
+      lineChart($("mchart"), {
+        series: [
+          { id: "hamilton", label: "Hamilton", cls: "D", values: hist.map((h) => ({ x: h.x, y: h.h * 100 })) },
+          { id: "marshall", label: "Marshall", cls: "R", values: hist.map((h) => ({ x: h.x, y: h.m * 100 })) },
+        ],
+        yMin: 0, yMax: 100, refY: 50, yFmt: (y) => Math.round(y) + "%",
+        ariaLabel: `Market win probability over time. Latest: Hamilton ${pct(c.hamilton)}, Marshall ${pct(c.marshall)}.`,
+        tipFmt: (i) => `<strong>${esc(fmtTime(hist[i].x))}</strong><br>${chip("hamilton")}Hamilton ${pct(hist[i].h, 1)}<br>${chip("marshall")}Marshall ${pct(hist[i].m, 1)}`,
+      });
+    }
+  }
+
+  // ---------- poll trend ----------
+  function renderPollTrend() {
+    const a = state.polls?.aggregate, el = $("polltrend-body");
+    if (!a) { el.innerHTML = `<p class="error">Poll data not loaded.</p>`; return; }
+    const h = a.history.map((p) => ({ ...p, x: new Date(p.date + "T12:00:00") }));
+    const all = h.flatMap((p) => [p.marshall, p.hamilton]);
+    const yMin = Math.floor((Math.min(...all) - 2) / 5) * 5, yMax = Math.ceil((Math.max(...all) + 2) / 5) * 5;
+    const tr = a.trend_7d != null ? ` 7-day change in margin: ${a.trend_7d >= 0 ? "+" : ""}${a.trend_7d.toFixed(1)} toward ${a.trend_7d >= 0 ? "Marshall" : "Hamilton"}.` : "";
+    el.innerHTML = `<p class="note" style="margin:0 0 8px">${esc(margin(a.margin))} in the weighted average of ${a.n_polls_used} polls.${esc(tr)}</p>
+      <div class="legend"><span>${chip("hamilton")}Hamilton (D)</span><span>${chip("marshall")}Marshall (R)</span></div>
+      <div class="chart" id="pchart"></div>
+      <details style="margin-top:8px"><summary style="cursor:pointer;font-size:14px">How the average is computed</summary><p class="note">${esc(a.method)}</p></details>`;
+    if (h.length > 1) {
+      lineChart($("pchart"), {
+        series: [
+          { id: "hamilton", label: "Hamilton", cls: "D", values: h.map((p) => ({ x: p.x, y: p.hamilton })) },
+          { id: "marshall", label: "Marshall", cls: "R", values: h.map((p) => ({ x: p.x, y: p.marshall })) },
+        ],
+        yMin, yMax, yFmt: (y, end) => (end ? y.toFixed(1) : Math.round(y) + "%"),
+        ariaLabel: `Poll average over time. Latest: Hamilton ${a.hamilton.toFixed(1)}, Marshall ${a.marshall.toFixed(1)}.`,
+        tipFmt: (i) => `<strong>${esc(fmtDate(h[i].date))}</strong> · ${h[i].n_polls} poll${h[i].n_polls === 1 ? "" : "s"}<br>${chip("hamilton")}Hamilton ${h[i].hamilton.toFixed(1)}<br>${chip("marshall")}Marshall ${h[i].marshall.toFixed(1)}<br>${esc(margin(h[i].margin))}`,
+      });
+    }
+  }
+
+  // ---------- poll table ----------
+  function renderPolls() {
+    const p = state.polls, el = $("polls-body");
+    if (!p) { el.innerHTML = `<p class="error">Poll data not loaded.</p>`; return; }
+    const rows = p.polls.slice().sort((a, b) => b.end_date.localeCompare(a.end_date));
+    el.innerHTML = `<div class="table-wrap"><table><caption class="sr-only">Public polls, newest first</caption><thead><tr>
+      <th>Pollster</th><th>Field dates</th><th class="num">Sample</th><th class="num">Hamilton</th><th class="num">Marshall</th><th class="num">Margin</th><th class="num">MoE</th></tr></thead><tbody>${
+      rows.map((x) => {
+        const sponsor = x.sponsor ? ` <span class="muted">for ${esc(x.sponsor)}</span>` : "";
+        const partisan = x.partisan ? ` <span class="tag" title="Sponsored by a partisan or campaign source">${esc(x.partisan)} sponsor</span>` : "";
+        return `<tr><td class="wrap-cell">${x.url ? link(x.url, x.pollster) : esc(x.pollster)}${sponsor}${partisan}</td>
+          <td>${fmtDate(x.start_date)}–${fmtDate(x.end_date)}</td>
+          <td class="num">${x.sample_size ? num(x.sample_size) : "—"}${x.population ? " " + esc(x.population) : ""}</td>
+          <td class="num">${x.results.hamilton.toFixed(0)}</td><td class="num">${x.results.marshall.toFixed(0)}</td>
+          <td class="num">${margin(x.results.marshall - x.results.hamilton)}</td>
+          <td class="num">${x.margin_of_error != null ? "±" + x.margin_of_error.toFixed(1) : "—"}</td></tr>`;
+      }).join("")}</tbody></table></div>
+      <p class="note">LV = likely voters, RV = registered voters. Poll table parsed from Wikipedia (CC BY-SA 4.0).</p>`;
+  }
+
+  // ---------- money ----------
+  function renderMoney() {
+    const f = state.finance, el = $("money-body");
+    if (!f) { el.innerHTML = `<p class="error">Finance data not loaded.</p>`; return; }
+    const h = f.candidates.hamilton, m = f.candidates.marshall;
+    const rowsDef = [
+      ["Total raised", "total_receipts", money], ["Total spent", "total_disbursements", money], ["Cash on hand", "cash_on_hand", money],
+      ["Monthly burn rate", "burn_rate_monthly", money], ["From individuals", "individual_contributions", money],
+      ["Small-dollar (unitemized, under $200)", "small_dollar_contributions", money], ["From PACs", "pac_contributions", money],
+      ["Itemized money from Kansas", "in_state_pct", (x) => (x == null ? "—" : x.toFixed(0) + "%")], ["Debts owed", "debts_owed", money],
+    ];
+    const cmp = `<div class="table-wrap"><table><caption class="sr-only">Campaign committee totals</caption><thead><tr><th></th><th class="num">${candLabel("hamilton")}</th><th class="num">${candLabel("marshall")}</th></tr></thead><tbody>${
+      rowsDef.map(([l, k, fmt]) => `<tr><td class="label-cell">${l}</td><td class="num">${fmt(h[k])}</td><td class="num">${fmt(m[k])}</td></tr>`).join("")
+    }</tbody></table></div><p class="note">Principal campaign committees (${esc(h.committee_name)}; ${esc(m.committee_name)}). Through ${fmtDate(h.coverage_end_date)} FEC reports; 48-hour notices filed since are not in these totals.</p>`;
+
+    const os = f.outside_spending;
+    let outside = "";
+    if (os) {
+      const forH = (os.supporting.hamilton || 0) + (os.opposing.marshall || 0);
+      const forM = (os.supporting.marshall || 0) + (os.opposing.hamilton || 0);
+      const max = Math.max(os.supporting.hamilton, os.supporting.marshall, os.opposing.hamilton, os.opposing.marshall);
+      const bar = (v, cls) => `<span class="mini ${cls}" style="width:${max ? (v / max) * 140 : 0}px"></span>`;
+      outside = `<h3>Outside spending · ${money(os.total)} independent expenditures</h3>
+        <div class="table-wrap"><table><thead><tr><th>Spending</th><th class="num">Amount</th><th></th></tr></thead><tbody>
+        <tr><td>Supporting Hamilton</td><td class="num">${money(os.supporting.hamilton)}</td><td>${bar(os.supporting.hamilton, "D")}</td></tr>
+        <tr><td>Opposing Marshall</td><td class="num">${money(os.opposing.marshall)}</td><td>${bar(os.opposing.marshall, "D")}</td></tr>
+        <tr><td>Supporting Marshall</td><td class="num">${money(os.supporting.marshall)}</td><td>${bar(os.supporting.marshall, "R")}</td></tr>
+        <tr><td>Opposing Hamilton</td><td class="num">${money(os.opposing.hamilton)}</td><td>${bar(os.opposing.hamilton, "R")}</td></tr>
+        </tbody></table></div>
+        <p class="note">Net help: Hamilton side ${money(forH)}, Marshall side ${money(forM)}. Blue bars help Hamilton; red bars help Marshall.</p>`;
+      if (os.top_spenders?.length) {
+        outside += `<details style="margin-top:8px"><summary style="cursor:pointer;font-size:14px">Top outside spenders</summary><div class="table-wrap"><table><thead><tr><th>Committee</th><th>Helps</th><th class="num">Amount</th></tr></thead><tbody>${
+          os.top_spenders.map((s) => { const side = s.supports || (s.opposes === "hamilton" ? "marshall" : s.opposes === "marshall" ? "hamilton" : null);
+            return `<tr><td class="wrap-cell">${esc(s.committee_name)}</td><td>${side ? candLabel(side) : "—"}</td><td class="num">${money(s.amount)}</td></tr>`; }).join("")
+        }</tbody></table></div></details>`;
+      }
+    }
+    el.innerHTML = `<div class="grid2"><div>${cmp}</div><div>${outside}</div></div>`;
+  }
+
+  // ---------- news ----------
+  function renderNews() {
+    const n = state.news, el = $("news-body");
+    if (!n) { el.innerHTML = `<p class="error">News not loaded.</p>`; return; }
+    const items = n.items.slice().sort((a, b) => (b.published_at || "").localeCompare(a.published_at || "")).slice(0, 15);
+    el.innerHTML = `<ul class="news">${items.map((i) => `<li>${link(i.url, i.title)}<div class="meta">${esc(i.source)} · ${i.published_at ? esc(fmtTime(i.published_at)) : ""}</div></li>`).join("")}</ul>
+      <p class="note">Headlines link out to the publisher. ${n.items.length} items collected; newest 15 shown.</p>`;
+  }
+
+  function renderAttribution() {
+    const seen = new Map();
+    for (const f of FILES) for (const a of state[f]?.attribution || []) if (!seen.has(a.name)) seen.set(a.name, a);
+    $("attribution").innerHTML = seen.size ? `Sources:<ul>${[...seen.values()].map((a) => `<li>${link(a.url, a.name)}${a.license ? ` · ${esc(a.license)}` : ""}</li>`).join("")}</ul>` : "";
+  }
+
+  // ---------- controls ----------
+  $("refresh-btn").addEventListener("click", load);
+  $("theme-btn").addEventListener("click", () => {
+    const root = document.documentElement;
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) { /* storage blocked */ }
+  });
+  try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) { /* storage blocked */ }
+  setInterval(renderAges, 60000);
+  load();
+})();
+</script>
+</body>
+</html>
