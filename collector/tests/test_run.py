@@ -1128,10 +1128,16 @@ class TestManualRatings:
         why it carries `previous`. Sabato's date does not appear on the map and was
         supplied separately; it is their publication date, not the day it was read.
         """
+        from datetime import date
+
         import config
         from sources.ratings import load_manual
 
-        ratings, notes = load_manual(config.MANUAL_RATINGS_PATH)
+        # Pinned to the day after the entries were read. "Recent" is relative to
+        # today, so unpinned this test started failing on its own once the
+        # ratings aged past the staleness threshold — a fact about the calendar,
+        # not about the file. The staleness warning has its own tests.
+        ratings, notes = load_manual(config.MANUAL_RATINGS_PATH, today=date(2026, 8, 25))
         by_source = {r.source: r for r in ratings}
         assert set(by_source) == {"Cook Political Report", "Sabato's Crystal Ball"}
         assert all(r.entered_by_hand for r in ratings)
