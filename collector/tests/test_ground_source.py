@@ -157,7 +157,14 @@ class TestAdvanceVotingWindow:
         assert (ELECTION_DATE - ADVANCE_VOTING_OPENS).days == 20
 
     def test_dashboards_are_not_read_before_the_window(self, monkeypatch):
+        from datetime import date
+
         import sources.ground as ground
+
+        # Move the window rather than the clock. Unpinned, this test began
+        # failing on 2026-10-14, the real opening day, because "before the
+        # window" stopped being true.
+        monkeypatch.setattr(ground, "ADVANCE_VOTING_OPENS", date(2099, 1, 1))
 
         calls: list[str] = []
 

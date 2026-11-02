@@ -301,3 +301,170 @@ class TestImplausibleResultsAreRejected:
 
         assert implausible(self._data([("marshall", 500)])) is not None
         assert implausible(self._data([("marshall", 500), ("hamilton", 400)])) is None
+
+
+class TestProbeContext:
+    """The probe prints the rows that mention the contest, not just the page head."""
+
+    def test_rows_naming_the_contest_or_candidates_are_returned(self):
+        from sources.results import _context
+
+        html = (
+            "<table><tr><td>Home</td><td>About</td></tr>"
+            "<tr><td>United States Senator</td></tr>"
+            "<tr><td>Roger Marshall (R)</td><td>1,234</td></tr>"
+            "<tr><td>Hamilton</td><td>5</td></tr>"
+            "<tr><td>Allen County 12 of 22 precincts reporting</td></tr></table>"
+        )
+        rows = _context(html)
+        assert rows[:3] == [
+            "United States Senator",
+            "Roger Marshall (R) | 1,234",
+            "Hamilton | 5",
+        ]
+        assert not any("precincts" in r for r in rows)
+
+    def test_text_windows_when_the_page_has_no_table(self):
+        from sources.results import _context
+
+        rows = _context("<div>Results for U.S. Senate will appear here</div>")
+        assert rows and "Senate" in rows[0]
+
+
+class TestKssosRaceBlocks:
+    """The race-block layout kssos.org actually serves (observed 2026-11-02)."""
+
+    def _general(self, **overrides):
+        from tests.kssos_markup import page, race
+
+        counties = overrides.pop(
+            "counties",
+            [
+                ("Johnson", 300, 600, [("R-Roger Marshall", 92_607), ("D-Adam Hamilton", 117_864), ("L-Jane Doe", 3_100)]),
+                ("Marshall", 32, 32, [("R-Roger Marshall", 3_900), ("D-Adam Hamilton", 1_200)]),
+                ("Hamilton", 12, 12, [("R-Roger Marshall", 700), ("D-Adam Hamilton", 150)]),
+                ("McPherson", 10, 30, [("R-Roger Marshall", 4_000), ("D-Adam Hamilton", 2_000)]),
+            ],
+        )
+        statewide = overrides.pop(
+            "statewide",
+            [("Roger Marshall", 101_207, 47), ("Adam Hamilton", 121_214, 52), ("Jane Doe", 3_100, 1)],
+        )
+        return page(
+            race("Governor / Lt. Governor", 2_000, 4_150, [("Ty Masterson", 9, 50), ("Cindy Holscher", 9, 50)], [], race_id=1000),
+            race("United States Senate", 2_000, 4_150, statewide, counties),
+            **overrides,
+        )
+
+    def test_reads_the_general_contest(self):
+        from schemas import HAMILTON, MARSHALL
+        from sources.results import _parse_race_blocks
+
+        data = _parse_race_blocks(self._general())
+        votes = {r.candidate_id: r.votes for r in data.statewide}
+        assert votes == {MARSHALL: 101_207, HAMILTON: 121_214}
+        assert data.total_votes == 222_421
+        assert data.contest == "United States Senate"
+        # The contest's own precinct line, not the page's first "N of M".
+        assert (data.precincts_reporting, data.precincts_total) == (2_000, 4_150)
+        assert data.pct_reporting == 48.19
+
+    def test_reads_counties_without_mistaking_them_for_candidates(self):
+        from sources.results import _parse_race_blocks
+
+        data = _parse_race_blocks(self._general())
+        by_county = {c.county: c for c in data.counties}
+        # Marshall and Hamilton counties are counties, and McPherson keeps its case.
+        assert set(by_county) == {"Johnson", "Marshall", "Hamilton", "McPherson"}
+        johnson = by_county["Johnson"]
+        assert (johnson.marshall_votes, johnson.hamilton_votes, johnson.other_votes) == (92_607, 117_864, 3_100)
+        assert johnson.total_votes == 92_607 + 117_864
+        assert (johnson.precincts_reporting, johnson.precincts_total, johnson.pct_reporting) == (300, 600, 50.0)
+        assert by_county["Marshall"].marshall_votes == 3_900
+
+    def test_probe_accepts_the_general_through_this_parser(self, monkeypatch):
+        import sources.results as results
+        from fetch import SourceError
+
+        html = self._general()
+
+        def fake_get_text(url, params=None):
+            if url == results.KS_ENR_FALLBACK:
+                return html
+            raise SourceError("HTTP 403 Forbidden")
+
+        monkeypatch.setattr(results, "get_text", fake_get_text)
+        data = results.probe()
+        ok = [p for p in data.probes if p.ok]
+        assert [p.shape for p in ok] == ["race-blocks"]
+        assert "United States Senate" in ok[0].detail
+        assert len(data.counties) == 4
+
+    def test_the_primary_is_rejected_not_summed(self, monkeypatch):
+        """The archived page: separate (D) and (R) contests, real August figures."""
+        import sources.results as results
+        from fetch import SourceError
+        from tests.kssos_markup import page, race
+
+        html = page(
+            race(
+                "United States Senate (D)", 4150, 4150,
+                [("Damon Anderson", 5_736, 3), ("Christy Davis", 30_996, 14), ("Adam Hamilton", 76_102, 35)],
+                [("Allen", 22, 22, [("D-Adam Hamilton", 107), ("D-Christy Davis", 40)])],
+                race_id=1001,
+            ),
+            race(
+                "United States Senate (R)", 4150, 4150,
+                [("Roger Marshall", 266_129, 80), ("Pond Naramore", 66_910, 20)],
+                [("Allen", 22, 22, [("R-Roger Marshall", 1_191), ("R-Pond Naramore", 300)])],
+                race_id=1002,
+            ),
+        )
+
+        def fake_get_text(url, params=None):
+            if url == results.KS_ENR_FALLBACK:
+                return html
+            raise SourceError("HTTP 403 Forbidden")
+
+        monkeypatch.setattr(results, "get_text", fake_get_text)
+        data = results.probe()
+        assert not data.statewide
+        shapes = [p.shape for p in data.probes]
+        # The generic table reader never sees this layout: it is what turned
+        # county tooltips into the 3,075-vote "result" in August.
+        assert "html-table" not in shapes
+        rejection = next(p for p in data.probes if p.shape == "race-blocks")
+        assert "rejected" in rejection.detail and "marshall" in rejection.detail
+
+    def test_a_state_senate_contest_is_not_the_us_senate(self):
+        from sources.results import _parse_race_blocks
+        from tests.kssos_markup import page, race
+
+        html = page(race("State Senate District 7", 10, 10, [("Roger Marshall", 5, 50), ("Adam Hamilton", 5, 50)], []))
+        assert _parse_race_blocks(html) is None
+
+    def test_other_pages_still_use_the_table_reader(self):
+        from pathlib import Path
+
+        from sources.results import is_race_block_page
+
+        fixture = Path(__file__).parent / "fixtures" / "enr" / "mid.html"
+        assert not is_race_block_page(fixture.read_text())
+
+
+class TestRaceBlockSummaries:
+    def test_every_senate_contest_is_summarised(self):
+        from sources.results import race_block_summaries
+        from tests.kssos_markup import page, race
+
+        html = page(
+            race("United States Senate (D)", 4150, 4150, [("Adam Hamilton", 76_102, 35)],
+                 [("Allen", 22, 22, [("D-Adam Hamilton", 107)])], race_id=1001),
+            race("United States Senate (R)", 4150, 4150, [("Roger Marshall", 266_129, 80)],
+                 [("Allen", 22, 22, [("R-Roger Marshall", 1_191), ("R-Pond Naramore", 300)])], race_id=1002),
+        )
+        lines = race_block_summaries(html)
+        assert len(lines) == 2
+        assert lines[1].startswith("United States Senate (R): marshall=266,129")
+        assert "counties 1/105 (marshall counties sum 1,191 != statewide 266,129)" in lines[1]
+        assert "Allen M1,191/H0/other300 (22/22)" in lines[1]

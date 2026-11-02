@@ -879,13 +879,94 @@ def _kalshi_event_markets() -> tuple[list[dict], int]:
     return rows, scanned
 
 
-def _kalshi_pages() -> tuple[list[dict], int]:
-    """Event-first discovery, falling back to a bounded market scan.
+# The events this race is actually quoted under, asked for by name.
+#
+# Discovery by walking /events stopped working on 2026-10-31. The open-event list
+# grew past the page budget in the last week of the cycle (every run from 513 on
+# walked 2,400 events and 2,400 markets, all sports and parlays) and the Kansas
+# combination grid was simply beyond the last page. The race had not gone
+# anywhere; the scan had stopped reaching it. Raising the budget only moves the
+# cliff, so the known events are fetched directly first and the walk is kept as
+# discovery for anything new.
+#
+# The rows still pass every filter below — combo_grid, margin_ladder and
+# _kalshi_markets each check the ticker positively — so naming an event here
+# cannot smuggle another state's prices in.
+KNOWN_KALSHI_EVENTS = (
+    "KXKSSENGOVCOMBO-26NOV",  # governor x senate grid; the probability is derived from it
+    "KXMIDTERMMOV-KSSENR",  # the margin ladder
+)
+# Series a standalone 2026 contract would be listed under if one opens. Cheap to
+# ask (one request each) and harmless when empty.
+KNOWN_KALSHI_SERIES = ("KXSENATEKS", "KXKSSEN")
 
-    The fallback exists only so a change to /events does not take the source down
-    entirely; it is not expected to find anything on its own, for the reason
-    above.
+# Kalshi reports an open market as "active"; the list filter calls it "open".
+# A market fetched by event ticker comes back whatever its state, and a closed
+# book's last price is not a current probability.
+OPEN_STATUSES = {"active", "open"}
+
+
+def _is_open(market: dict) -> bool:
+    status = str(market.get("status") or "active").lower()
+    return status in OPEN_STATUSES
+
+
+def _kalshi_known_markets() -> tuple[list[dict], list[str]]:
+    """Fetch the race's known events and series by ticker.
+
+    Returns the open rows and a note per lookup, so a run that finds nothing says
+    whether the event was empty, closed, or unreachable — three different fixes.
+    A lookup that errors is noted and skipped; if every one fails the caller still
+    has the broad walk to fall back on.
     """
+    rows: list[dict] = []
+    notes: list[str] = []
+    seen: set[str] = set()
+
+    lookups = [("event_ticker", t) for t in KNOWN_KALSHI_EVENTS] + [
+        ("series_ticker", t) for t in KNOWN_KALSHI_SERIES
+    ]
+    for key, ticker in lookups:
+        try:
+            payload = get_json(f"{KALSHI_API}/markets", {key: ticker, "limit": 200})
+        except SourceError as exc:
+            notes.append(f"{ticker}: {exc}")
+            continue
+        found = payload.get("markets") or []
+        kept = 0
+        for market in found:
+            market_ticker = str(market.get("ticker", ""))
+            if not market_ticker or market_ticker in seen or not _is_open(market):
+                continue
+            # A series lookup can return other cycles or (in principle) other
+            # races; require the ticker to name this one, as the walk does.
+            if key == "series_ticker" and not _matches_race(
+                f"{market_ticker} {market.get('title', '')}"
+            ):
+                continue
+            seen.add(market_ticker)
+            rows.append(market)
+            kept += 1
+        statuses = sorted({str(m.get("status", "?")) for m in found})
+        notes.append(f"{ticker}: {len(found)} market(s), {kept} open" + (f" {statuses}" if found else ""))
+
+    return rows, notes
+
+
+def _kalshi_pages(notes: list[str] | None = None) -> tuple[list[dict], int]:
+    """Known events first, then event-walk discovery, then a bounded market scan.
+
+    The direct lookup is what finds the race now; see KNOWN_KALSHI_EVENTS. The
+    walk still runs when the lookup comes back empty, so a contract listed under
+    a ticker nobody has seen yet is not missed. The market-scan fallback exists
+    only so a change to /events does not take the source down entirely.
+    """
+    known, lookup_notes = _kalshi_known_markets()
+    if notes is not None:
+        notes.extend(lookup_notes)
+    if known:
+        return known, len(known)
+
     rows, scanned = _kalshi_event_markets()
     if rows:
         return rows, scanned
@@ -956,6 +1037,9 @@ class ScanReport:
     scanned: int = 0
     titles: list[str] = field(default_factory=list)
     containers_scanned: int = 0
+    # One line per direct ticker lookup, so "nothing found" says which lookup
+    # came back empty, closed, or erroring.
+    lookups: list[str] = field(default_factory=list)
 
     @property
     def distinct(self) -> int:
@@ -985,6 +1069,8 @@ class ScanReport:
             parts.insert(1, f"events={self.containers_scanned}")
         if self.pagination_stalled:
             parts.append("PAGINATION STALLED (same page refetched)")
+        if self.lookups:
+            parts.append(f"lookups=[{'; '.join(self.lookups)}]")
         office = self.office_mentions()
         parts.append(
             f"office mentions={office}" if office else f"no office mentions; sample={self.sample(3)}"
@@ -1001,7 +1087,7 @@ def collect(history: list[MarketPoint] | None = None) -> MarketsResult:
     kalshi_rows: list[dict] = []
     kalshi = ScanReport("kalshi")
     try:
-        rows, kalshi.containers_scanned = _kalshi_pages()
+        rows, kalshi.containers_scanned = _kalshi_pages(kalshi.lookups)
         kalshi_rows = rows
         # scanned must count what titles holds — markets, not the events walked
         # to reach them — or the stall check compares unlike things.
@@ -1121,9 +1207,10 @@ def diagnose() -> str:
     "Kansas". Printing the near-misses distinguishes them in one run.
     """
     lines = ["Prediction market probe", "=" * 40]
+    lookup_notes: list[str] = []
 
     for label, loader, title_of in (
-        ("kalshi", _kalshi_pages, lambda r: f"{r.get('title', '')} {r.get('yes_sub_title', '')} [{r.get('ticker', '')}]"),
+        ("kalshi", lambda: _kalshi_pages(lookup_notes), lambda r: f"{r.get('title', '')} {r.get('yes_sub_title', '')} [{r.get('ticker', '')}]"),
         ("polymarket", _polymarket_pages, lambda r: r.get("question") or r.get("title") or ""),
     ):
         lines.append(f"\n[{label}]")
@@ -1134,6 +1221,9 @@ def diagnose() -> str:
             continue
 
         lines.append(f"  scanned {scanned} open markets")
+        if label == "kalshi":
+            for note in lookup_notes:
+                lines.append(f"  lookup {note}")
         senate = [title_of(r) for r in rows if "senate" in title_of(r).lower()]
         kansas = [t for t in senate if "kansas" in t.lower() or " ks" in t.lower()]
 

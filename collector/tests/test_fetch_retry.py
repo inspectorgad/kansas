@@ -87,3 +87,37 @@ class TestServerRequestedDelay:
 
     def test_a_5xx_cannot_ask_for_shorter_than_the_schedule(self):
         assert _retry_delay(_error(503, "1"), 2) == 4.0
+
+
+class TestClientErrorsAreNotRetried:
+    """A 403 is an answer. ent.sos.ks.gov returns one to every path, and retrying
+    each three times tripled the requests the collector made to a host that had
+    already refused it."""
+
+    def _patch(self, monkeypatch, status):
+        import fetch
+
+        calls = []
+
+        def handler(request):
+            calls.append(request.url)
+            return httpx.Response(status, request=request)
+
+        monkeypatch.delenv("KS_FIXTURES", raising=False)
+        monkeypatch.setattr(fetch, "_client", httpx.Client(transport=httpx.MockTransport(handler)))
+        monkeypatch.setattr(fetch.time, "sleep", lambda s: None)
+        return fetch, calls
+
+    def test_a_403_is_tried_once(self, monkeypatch):
+        fetch, calls = self._patch(monkeypatch, 403)
+        with pytest.raises(fetch.SourceError, match="403"):
+            fetch.get_text("https://example.test/blocked")
+        assert len(calls) == 1
+
+    def test_a_503_is_still_retried(self, monkeypatch):
+        from config import MAX_RETRIES
+
+        fetch, calls = self._patch(monkeypatch, 503)
+        with pytest.raises(fetch.SourceError):
+            fetch.get_text("https://example.test/flaky")
+        assert len(calls) == MAX_RETRIES

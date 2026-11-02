@@ -78,12 +78,51 @@ this reason, and it never calls a race on its own.
 Collection switches on automatically three days out — `default_targets()` adds
 `results` inside `RESULTS_WINDOW_DAYS`. Nothing needs to be enabled by hand.
 
-Cadence: the GitHub Actions cron runs every 20 minutes, which is too slow for a
-count in progress. The app compensates: `RaceViewModel.startResultsPolling()`
-refreshes `results.json` every 60 seconds while returns are live, so the phone
-polls the published file faster than the collector rewrites it. If you want
-fresher data than 20 minutes, trigger the workflow manually — repeatedly, or
-temporarily lower the cron.
+### Cadence: the results loop, not the cron
+
+`collect.yml` asks for every 20 minutes, but GitHub throttles scheduled
+workflows: in the week before the election it actually ran every **3 to 5
+hours** (runs 513–520). No cron expression fixes that, and lowering it makes no
+difference. Election-night results therefore come from a separate workflow,
+`.github/workflows/election-night.yml`, which:
+
+- stays alive and runs `collector/run.py --only results` every 120 seconds,
+  publishing after each pass;
+- hands off before GitHub's 6-hour job cap by dispatching its own successor
+  (`workflow_dispatch` is allowed from `GITHUB_TOKEN`, so no extra secret);
+- keeps chaining until `until` (default `2026-11-04T12:00:00Z`, 6am CT), then
+  stops on its own;
+- starts every pass from the current tip of the `data` branch, so a push race
+  with the 20-minute collector costs one interval and never wedges the loop.
+
+The app's `RaceViewModel.startResultsPolling()` re-reads `results.json` every 60
+seconds while returns are live, so a 2-minute publish cadence reaches phones
+within about 3 minutes.
+
+**Starting it.** Any one of these is enough; extra starts queue behind the
+running loop and are dropped, never doubled:
+
+1. **By hand, ~4pm CT on Nov 3** — Actions → *Election night results loop* →
+   *Run workflow* on the **default branch**, or:
+   ```sh
+   gh workflow run election-night.yml --ref claude/kansas-senate-tracker-app-yg5ol3
+   ```
+2. **Its own crons** at 3:37pm and 4:07pm CT on Nov 3. These are subject to
+   the same throttling, so treat them as a backstop, not the plan.
+3. **Externally** — anything that can call the `workflow_dispatch` API.
+
+Run it from the default branch. The data branch records which commit wrote it
+and `collect.yml` refuses to publish over newer code, so a loop on an unmerged
+branch would freeze markets and news for the night.
+
+**Stopping it.** Cancel the running job in the Actions tab. A cancelled job does
+not dispatch a successor. To end early without cancelling, re-dispatch with an
+earlier `until`.
+
+**Rehearsing it.** Dispatch with `publish=false`, `run_minutes=3`,
+`interval_seconds=60` and `until` ten minutes out. It runs the real collector
+against the real page, logs what it would have published, and chains once
+before stopping. Nothing is written.
 
 Watch for:
 
@@ -170,3 +209,30 @@ open question rather than a suspicion:
    table is *something* — quite possibly a single county or a down-ballot contest —
    and identifying it is how a real parser gets written.
 3. Rehearse against a full archived general election, not a primary.
+
+## What the probe found on 2026-11-02
+
+Re-run from a CI runner the day before the election.
+
+- `ent.sos.ks.gov` still answers **403 Forbidden** on every path, now from
+  GitHub's runners too. Nothing more can be learned about it before the night.
+- The **kssos.org fallback** was identified. It is the vendor's all-races page:
+  each contest is a `<div class='race'>` with an `<h3>` heading, a
+  "Precincts Reporting: N of M" line and name/votes rows; the county breakdown
+  sits in the tooltips of an image map (`<span class='county'>Allen County</span>`
+  followed by `R-Roger Marshall | 1,191` rows). The 3,075-vote "result" from
+  August was the generic table reader taking one county's tooltip row as the
+  statewide total.
+- A parser for that layout now exists (`race-blocks` in `sources/results.py`).
+  It reads the U.S. Senate contest's statewide rows, its own precinct line, and
+  every county tooltip, with `Marshall County` and `Hamilton County` kept as
+  counties. A page in this layout is read by that parser only.
+- Against the archived primary it correctly **refuses**: the primary lists
+  `United States Senate (D)` and `(R)` as separate contests, and two party
+  primaries are never added together. The first real test is the general.
+
+What to expect on the night: the probe line `[OK  ] race-blocks: … [United
+States Senate]` once the page switches to the general. Until then the loop
+publishes `pending`. If the heading or rows differ from the primary, the probe
+prints the raw markup around the contest, so the change can be made from one
+run's log.
