@@ -314,15 +314,15 @@ class TestProbeContext:
             "<tr><td>United States Senator</td></tr>"
             "<tr><td>Roger Marshall (R)</td><td>1,234</td></tr>"
             "<tr><td>Hamilton</td><td>5</td></tr>"
-            "<tr><td>12 of 3,500 precincts</td></tr></table>"
+            "<tr><td>Allen County 12 of 22 precincts reporting</td></tr></table>"
         )
         rows = _context(html)
-        assert rows == [
+        assert rows[:3] == [
             "United States Senator",
             "Roger Marshall (R) | 1,234",
             "Hamilton | 5",
-            "12 of 3,500 precincts",
         ]
+        assert not any("precincts" in r for r in rows)
 
     def test_text_windows_when_the_page_has_no_table(self):
         from sources.results import _context

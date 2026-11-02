@@ -305,16 +305,18 @@ def _parse_html_table(html: str) -> ResultsData | None:
     return data
 
 
-CONTEXT_TERMS = re.compile(r"senat|marshall|hamilton|precinct", re.IGNORECASE)
+CONTEXT_TERMS = re.compile(r"senat|marshall|hamilton", re.IGNORECASE)
 
 
 def _context(html: str, limit: int = 25) -> list[str]:
-    """Rows of the page that mention the contest, the candidates or precincts.
+    """Rows of the page that mention the contest or the candidates.
 
     Printed by the probe so whatever kssos.org is serving can be identified from
-    one CI log: which contest each table holds, how a candidate row is labelled,
-    and where precinct counts sit. Falls back to text windows when the page has
-    no table rows at all.
+    one CI log: which contest each table holds and how a candidate row is
+    labelled. Precinct lines are left out — the first live run filled all 25
+    slots with "Allen County 22 of 22 precincts reporting". When no table row
+    names the contest, text windows around each mention are returned instead,
+    since the page may render its results outside <tr> markup.
     """
     out: list[str] = []
     for row_html in ROW.findall(html):
@@ -327,9 +329,13 @@ def _context(html: str, limit: int = 25) -> list[str]:
     if out:
         return out
     text = re.sub(r"\s+", " ", TAG.sub(" ", html))
+    last_end = -1
     for match in CONTEXT_TERMS.finditer(text):
-        start = max(0, match.start() - 80)
-        out.append(text[start : match.end() + 120])
+        if match.start() < last_end:
+            continue  # already inside the previous window
+        start = max(0, match.start() - 100)
+        last_end = match.end() + 160
+        out.append("…" + text[start:last_end] + "…")
         if len(out) >= limit:
             break
     return out
