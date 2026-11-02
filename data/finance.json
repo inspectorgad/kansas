@@ -493,6 +493,116 @@
           {
             "amount": 7000.0,
             "city": "OVERLAND PARK",
+            "employer": "SELF EMPLOYED",
+            "first_gift": "2026-07-06",
+            "gifts": 2,
+            "last_gift": "2026-07-06",
+            "name": "PHILLIPS, MIKE",
+            "occupation": "CONSULTANT",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "KANSAS CITY",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-07-15",
+            "gifts": 2,
+            "last_gift": "2026-07-15",
+            "name": "O'NEILL, CARLA",
+            "occupation": "NOT EMPLOYED",
+            "state": "MO"
+          },
+          {
+            "amount": 7000.0,
+            "city": "GREENWICH",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-07-14",
+            "gifts": 2,
+            "last_gift": "2026-07-14",
+            "name": "MANDEL, SUE",
+            "occupation": "NOT EMPLOYED",
+            "state": "CT"
+          },
+          {
+            "amount": 7000.0,
+            "city": "GREENWICH",
+            "employer": "LONE PINE CAPITAL",
+            "first_gift": "2026-07-15",
+            "gifts": 2,
+            "last_gift": "2026-07-15",
+            "name": "MANDEL, STEVE",
+            "occupation": "FOUNDER",
+            "state": "CT"
+          },
+          {
+            "amount": 7000.0,
+            "city": "KNOXVILLE",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-05-23",
+            "gifts": 2,
+            "last_gift": "2026-07-10",
+            "name": "LAWSON, JANET",
+            "occupation": "NOT EMPLOYED",
+            "state": "TN"
+          },
+          {
+            "amount": 7000.0,
+            "city": "ATHERTON",
+            "employer": "MEDLEY PARTNERS LLC",
+            "first_gift": "2026-07-13",
+            "gifts": 2,
+            "last_gift": "2026-07-13",
+            "name": "HEISING, MARK",
+            "occupation": "MANAGING DIRECTOR",
+            "state": "CA"
+          },
+          {
+            "amount": 7000.0,
+            "city": "NEW YORK",
+            "employer": "JAMES AND JUDITH K. DIMON FOUNDATION",
+            "first_gift": "2026-07-09",
+            "gifts": 2,
+            "last_gift": "2026-07-09",
+            "name": "DIMON, JUDITH",
+            "occupation": "CO-MANAGER",
+            "state": "NY"
+          },
+          {
+            "amount": 7000.0,
+            "city": "GREAT BEND",
+            "employer": "BAUER PIKE BAUER WARY & CARROLL LLC",
+            "first_gift": "2026-04-30",
+            "gifts": 3,
+            "last_gift": "2026-07-12",
+            "name": "BAUER, ROBERT",
+            "occupation": "ATTORNEY",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "WASHINGTON",
+            "employer": "BUCHANAN INGERSOLL & ROONEY",
+            "first_gift": "2026-07-15",
+            "gifts": 2,
+            "last_gift": "2026-07-15",
+            "name": "ABRAMSON, RONALD",
+            "occupation": "ATTORNEY",
+            "state": "DC"
+          },
+          {
+            "amount": 7000.0,
+            "city": "WASHINGTON",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-07-15",
+            "gifts": 2,
+            "last_gift": "2026-07-15",
+            "name": "ABRAMSON, ANNE",
+            "occupation": "NOT EMPLOYED",
+            "state": "DC"
+          },
+          {
+            "amount": 7000.0,
+            "city": "OVERLAND PARK",
             "employer": "NOT EMPLOYED",
             "first_gift": "2026-05-01",
             "gifts": 2,
@@ -553,116 +663,6 @@
             "name": "TOUGHEY, KAREN",
             "occupation": "NOT EMPLOYED",
             "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "LEAWOOD",
-            "employer": "T SERVE CAPITAL",
-            "first_gift": "2026-05-05",
-            "gifts": 2,
-            "last_gift": "2026-05-05",
-            "name": "TOUGHEY, DANIEL",
-            "occupation": "PRESIDENT",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "LEAWOOD",
-            "employer": "AMERICAN CENTURY INVESTMENTS",
-            "first_gift": "2026-05-01",
-            "gifts": 2,
-            "last_gift": "2026-05-01",
-            "name": "TONEY, KEVIN",
-            "occupation": "INVESTMENT MANAGEMENT",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "LEAWOOD",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-05-01",
-            "gifts": 2,
-            "last_gift": "2026-05-01",
-            "name": "TONEY, CYNTHIA",
-            "occupation": "NOT EMPLOYED",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "WHITEFISH",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-05-19",
-            "gifts": 2,
-            "last_gift": "2026-05-19",
-            "name": "THOMPSON, KRISTAL",
-            "occupation": "NOT EMPLOYED",
-            "state": "MT"
-          },
-          {
-            "amount": 7000.0,
-            "city": "WHITEFISH",
-            "employer": "EDELMAN AND THOMPSON",
-            "first_gift": "2026-05-10",
-            "gifts": 2,
-            "last_gift": "2026-05-19",
-            "name": "THOMPSON, JAMES",
-            "occupation": "ATTORNEY",
-            "state": "MT"
-          },
-          {
-            "amount": 7000.0,
-            "city": "LEAWOOD",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-05-01",
-            "gifts": 2,
-            "last_gift": "2026-05-01",
-            "name": "TEEL, SUSANNE",
-            "occupation": "NOT EMPLOYED",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "OLATHE",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-05-20",
-            "gifts": 2,
-            "last_gift": "2026-05-20",
-            "name": "TAYLOR, WILLIAM",
-            "occupation": "RETIRED",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "OLATHE",
-            "employer": "M TAYLOR GIFTS",
-            "first_gift": "2026-05-20",
-            "gifts": 2,
-            "last_gift": "2026-05-20",
-            "name": "TAYLOR, MARILYN",
-            "occupation": "PRESIDENT",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "MISSION HILLS",
-            "employer": "SELF EMPLOYED",
-            "first_gift": "2026-06-15",
-            "gifts": 2,
-            "last_gift": "2026-06-15",
-            "name": "SYLVESTER, DAVID",
-            "occupation": "CONSULTANT",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "OLATHE",
-            "employer": "BETTER LIVING LLC",
-            "first_gift": "2026-06-18",
-            "gifts": 2,
-            "last_gift": "2026-06-18",
-            "name": "SWORD, STAN",
-            "occupation": "CEO",
-            "state": "KS"
           }
         ],
         "size_buckets": [
@@ -695,34 +695,54 @@
         "threshold": 1000.0,
         "top_cities": [
           {
-            "amount": 74492.45,
-            "donors": 10,
+            "amount": 46492.45,
+            "donors": 6,
             "label": "Leawood, KS"
           },
           {
-            "amount": 42500.0,
-            "donors": 6,
-            "label": "Olathe, KS"
-          },
-          {
-            "amount": 31375.0,
-            "donors": 4,
+            "amount": 38375.0,
+            "donors": 5,
             "label": "Overland Park, KS"
           },
           {
-            "amount": 15735.0,
-            "donors": 2,
-            "label": "Mission Hills, KS"
+            "amount": 21500.0,
+            "donors": 3,
+            "label": "Olathe, KS"
           },
           {
             "amount": 14000.0,
             "donors": 2,
-            "label": "Whitefish, MT"
+            "label": "Greenwich, CT"
+          },
+          {
+            "amount": 14000.0,
+            "donors": 2,
+            "label": "Washington, DC"
           },
           {
             "amount": 10187.5,
             "donors": 1,
             "label": "Stilwell, KS"
+          },
+          {
+            "amount": 8735.0,
+            "donors": 1,
+            "label": "Mission Hills, KS"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Kansas City, MO"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Knoxville, TN"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 1,
+            "label": "Atherton, CA"
           }
         ],
         "top_employers": [
@@ -2040,7 +2060,7 @@
       "url": "https://docquery.fec.gov/pdf/699/202609299908490699/202609299908490699.pdf"
     }
   ],
-  "generated_at": "2026-11-02T01:53:34.595436Z",
+  "generated_at": "2026-11-02T09:04:16.203761Z",
   "outside_spending": {
     "opposing": {
       "hamilton": 31979171.07,
