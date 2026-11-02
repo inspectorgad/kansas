@@ -83,6 +83,7 @@ class ResultsProbe:
     # The first 600 characters of a 900 KB page are its navigation, which is
     # all the probe used to show — not enough to write a parser from.
     context: list[str] = field(default_factory=list)
+    raw: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -341,6 +342,33 @@ def _context(html: str, limit: int = 25) -> list[str]:
     return out
 
 
+RAW_ANCHORS = ("united states senat", "u.s. senat", "us senat", "adam hamilton", "roger marshall")
+
+
+def _raw_excerpts(html: str, before: int = 2500, after: int = 2000) -> list[str]:
+    """Raw markup around the first mention of the contest and of each candidate.
+
+    The row text in `_context` says what a page contains but not how it is
+    built — which element holds the county name, whether a contest is a table or
+    a run of divs. A parser needs the markup, and on election night the markup
+    is only visible from a runner, so the probe prints it. Whitespace is
+    collapsed and a line break put before each block-level tag so the log reads.
+    """
+    lowered = html.lower()
+    out: list[str] = []
+    covered: list[tuple[int, int]] = []
+    for anchor in RAW_ANCHORS:
+        at = lowered.find(anchor)
+        if at < 0 or any(lo <= at < hi for lo, hi in covered):
+            continue
+        lo, hi = max(0, at - before), min(len(html), at + after)
+        covered.append((lo, hi))
+        chunk = re.sub(r"\s+", " ", html[lo:hi])
+        chunk = re.sub(r"(?i)(<(?:tr|table|div|h[1-6]|li|section|p)\b)", r"\n\1", chunk)
+        out.append(f"--- around {anchor!r} (offset {at}) ---\n{chunk}")
+    return out
+
+
 # --- precinct reporting ------------------------------------------------------
 
 PRECINCT_PATTERNS = (
@@ -486,6 +514,7 @@ def probe(url: str | None = None) -> ResultsData:
                 "html", False, f"{page_url}: fetched {len(html)} bytes, no shape matched",
                 body_sample=re.sub(r"\s+", " ", TAG.sub(" ", html))[:600],
                 context=_context(html),
+                raw=_raw_excerpts(html),
             )
         )
 
@@ -504,6 +533,8 @@ def diagnose(url: str | None = None) -> str:
             lines.append(f"        {len(attempt.context)} row(s) mentioning the contest, candidates or precincts:")
             for row in attempt.context:
                 lines.append(f"          {row}")
+        for excerpt in attempt.raw:
+            lines.append(excerpt)
     lines.append("")
     if data.statewide:
         lines.append(f"PARSED via {next(p.shape for p in data.probes if p.ok)}")
