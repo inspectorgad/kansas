@@ -26,20 +26,80 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-02T21:23:24.420227Z",
+  "generated_at": "2026-11-03T01:50:13.123014Z",
   "items": [
     {
-      "id": "83202bf46026",
+      "id": "780a73c9ca92",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-02T23:37:29Z",
+      "source": "C-SPAN",
+      "summary": "Senate Candidate Adam Hamilton Campaigns in Overland Park, KS &nbsp;&nbsp; C-SPAN",
+      "title": "Senate Candidate Adam Hamilton Campaigns in Overland Park, KS",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWTJKZUpQTy1iUzJlcFRjRkJ0c3JWTWVZbzVGNUQ2TnBXVDBXclAxUk50ZWY0Smt3YnphTkhGbmR4RDlJbzJVcHdCOTZpczlBUEd1THpXczhRRDI1QXlfaGlvT1V1LTI1YW9oOGNSWDB5aDBSLTRoZENXay1lR1dlSk9GLWE1QU96NVQ0RWdpUnBlQkxGRnljMGlzcUZOcjdSUUF5OWJuM3ZzeDhoa0tLR2Fn"
+    },
+    {
+      "id": "534727b4a6fe",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-02T23:18:28Z",
+      "source": "Kalshi News",
+      "summary": "Kansas Senate odds: Democrat Adam Hamilton surges to 63% on Kalshi with Election Day hours away &nbsp;&nbsp; Kalshi News",
+      "title": "Kansas Senate odds: Democrat Adam Hamilton surges to 63% on Kalshi with Election Day hours away",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMC1fR1kzdDRMSGVoa0xHLVEwbDVRRlM2STBQNF9GUndqOVdQRU1kdmNLTy1IUHR0c3dNc1p1QnRxMHczSGFpdDFMRlZhdnh4WGFhTGdhV3ZrWmstV0xUbkxQb3VGSFdsUVN5Y3hyVkh1blhzMmlKWmhFVHFNeThLSlpncUx4UmI2emNBQ0NDWWwxZ0RvWjhxTGFBTFNSakEtelRmZ0lSMnRneU9MZWZZWmxXVGF4S1lIeFk0SWZybXJJeTIt"
+    },
+    {
+      "id": "2d61c3627bcb",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-02T22:08:33Z",
+      "source": "Fox News",
+      "summary": "Sen Roger Marshall pushes back on opponent's attacks: 'Couldn't have been further from the truth' &nbsp;&nbsp; Fox News",
+      "title": "Sen Roger Marshall pushes back on opponent's attacks: 'Couldn't have been further from the truth'",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5EUUJXQlUxMzRydHUtNWppWjNMM0JkNXJ1aWt4VWIxbmRvMnJGU293MmxtdjlKQXpxbzlraUd2ZzdYOEtaRjFBUHVBTnptTnJNalZsT1d3"
+    },
+    {
+      "id": "b038318b56d9",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-02T21:48:10Z",
+      "source": "Central Oregon Daily",
+      "summary": "Kansas Senate candidate Adam Hamilton 'cautiously optimistic' about midterms &nbsp;&nbsp; Central Oregon Daily",
+      "title": "Kansas Senate candidate Adam Hamilton 'cautiously optimistic' about midterms",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQY3VyODl6bTRuUWRVWGhEOFh3Z3Fpc2dJaFQ5YVdNWms4Si1kUGRuZXZUTWdqWko3b09ZQnVMbzQ1aHRZSWFiOXFlYUNtN1VNNTlWNTdwWnJGMEEtMWxZcUlrLUtXb1pvcWNjcXZ2QzU2SkhzaWNEWGpOUmJlekc3dHlBT0VDUE5TVFJHVk9YT0lobGc5SXpuWm11REFMNUtUcllnS2cxZ0piSHE2OFJnUHpHRHR3Z0JlMlFaTGVkV19BMjExTkVWcDNHNld2dEo0ZjU3ckp0aktFbjRPRjVJVkJKWS0xT2NvaTVYWThBejRMb1ZZcEM0Qmd1ZnhVUUNzeEpseHJB"
+    },
+    {
+      "id": "0bfd2ff543c5",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-02T20:58:32Z",
+      "source": "Yahoo",
+      "summary": "Sen. Roger Marshall and Sec. Brooke Rollins give their final pitch to Kansas Voters ahead of the Midterms &nbsp;&nbsp; Yahoo",
+      "title": "Sen. Roger Marshall and Sec. Brooke Rollins give their final pitch to Kansas Voters ahead of the Midterms",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS2JVNUdFbDNPT0F4MlFYV3NyOVdtbDk5bVhPMkJwcTJveEFTMU5iVHhBckluWF9aWmRpLVVkNFljQXYwTEo4ejh0MjVjN05wRXIwTzhKWi1OWXlBZm0zWXdqZ0tNU2ZnYXBCZWgtc2M3bE9tNTdwNE5mX0xNeVY1Q2xTdDg"
+    },
+    {
+      "id": "fa57dd1be3cd",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-11-02T19:55:00Z",
+      "published_at": "2026-11-02T19:55:54Z",
       "source": "The Hill",
       "summary": "Hamilton calls Marshall medical debt video \u2018desperate\u2019 &nbsp;&nbsp; The Hill",
       "title": "Hamilton calls Marshall medical debt video \u2018desperate\u2019",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQOG9hVmlCbzV3WEprUkwzaTJUOEF5eThwQUwtbkRBTmhCNl92T0pFU3FhU01PUEMtVlVWc3l4dHozRS05TU03eXVaV3lWeWp5cmhzX1ZOdjR0YW1KVXpuYWMzSWNxMHJlTUQtN29VaVBscU5SZFV1eTdkZkRtbENHMGd1cHJ3cmlybUo3azZ6Wm40NUXSAZgBQVVfeXFMT2tnWk9kdElIMjNocmVRT0JYWWduSWUxQk9BdDZkVzNfUUprTFRQOEwzVjBhZ245SzlMMWwtcndpOHlrSnpVUjhpbkxpUWtsQTVjNGZDZWtJZzVxU1RWMFByd1B5cXhzbU5vRkxRVjNOSURVdi1yajNrWTlCTVVBcTNDcGNvcjFPdklfQkloUjB4LWtMb29GSjY"
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPa2daT2R0SUgyM2hyZVFPQlhZZ25JZTFCT0F0NmRXM19RSmtMVFA4TDNWMGFnbjlLOUwxbC1yd2k4eWtKelVSOGluTGlRa2xBNWM0ZkNla0lnNXFTVFYwUHJ3UHlxeHNtTm9GTFFWM05JRFV2LXJqM2tZOUJNVUFxM0NwY29yMU92SV9CSWhSMHgta0xvb0ZKNtIBmAFBVV95cUxPa2daT2R0SUgyM2hyZVFPQlhZZ25JZTFCT0F0NmRXM19RSmtMVFA4TDNWMGFnbjlLOUwxbC1yd2k4eWtKelVSOGluTGlRa2xBNWM0ZkNla0lnNXFTVFYwUHJ3UHlxeHNtTm9GTFFWM05JRFV2LXJqM2tZOUJNVUFxM0NwY29yMU92SV9CSWhSMHgta0xvb0ZKNg"
     },
     {
       "id": "dbd04fbdced2",
@@ -151,6 +211,18 @@
       "summary": "Trump holds second rally in Kansas as new polls show close race between Sen. Roger Marshall, Adam Hamilton &nbsp;&nbsp; KMBC",
       "title": "Trump holds second rally in Kansas as new polls show close race between Sen. Roger Marshall, Adam Hamilton",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORVVYTjJjUzk1TG1rY1lMbEIzaDYyWXdmMjF3X3AzR182amhmaWR3SGZfVFh2eEx1ekZtcFdFWmgzYVNYYnk3d3FxZmViS1dGODE0RDRYNW1iM2tMQzU1Z1gtWGdveE0wZlRhQjYxX2FpOTlIaWo2WUM2S2FhOE11ZWExMmlvQ3FlSVVFZS1SelowSUJ2dlNJREd4YzFqOURGQnF4SUJ1TVJyMVI2b1ExQnB1Zw"
+    },
+    {
+      "id": "e616a5e93247",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-02T05:00:00Z",
+      "source": "C-SPAN",
+      "summary": "U.S. Senate Candidate Adam Hamilton (D-KS) Rally in Overland Park, KS &nbsp;&nbsp; C-SPAN",
+      "title": "U.S. Senate Candidate Adam Hamilton (D-KS) Rally in Overland Park, KS",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQ21CRm5sNy1hM0UybWhxTDF4T2lYeWNQZF9lSEVSYjZ3bzQyb3lrWTN1cEFSU3NyVm8yZXJsTk9ad1dad0lMOVo2VjFWa05IbWZqQVlqWWZPWVh6a0Y5X0Z5Xzh2LXBHS0VLM0dOVTZYanlBVjNkckxUYVNDM19VTnVGYURIYVdaT0ZFOUp0WDA5c09rWTVoVm03LWtmTXdydmJXWHZ4TzVZVEYzbkNlMjhWQ0g"
     },
     {
       "id": "97fb24f62b58",
@@ -613,7 +685,7 @@
       "mentions": [
         "marshall"
       ],
-      "published_at": "2026-10-30T16:47:00Z",
+      "published_at": "2026-10-30T16:53:23Z",
       "source": "Kansas City Star",
       "summary": "Roger Marshall isn\u2019t paying campaign staff for his reelection bid. What\u2019s going on? &nbsp;&nbsp; Kansas City Star",
       "title": "Roger Marshall isn\u2019t paying campaign staff for his reelection bid. What\u2019s going on?",
@@ -1328,8 +1400,8 @@
         "hamilton"
       ],
       "published_at": "2026-10-28T01:32:31Z",
-      "source": "KSN-TV",
-      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Adam Hamilton \u2013 Democrat for US Senate &nbsp;&nbsp; KSN.com",
       "title": "Adam Hamilton \u2013 Democrat for US Senate",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQTIxOU5KTnMtWlVOejliN0EyT0hsc3FQcDc5OXR0TkVPSVQ4Tjl1Z1RqUF9PekE1T0tUN3liUnc4QmVfYUx6VGUtMlFzcXEzX2xoTkQ0RkpYMXFTdkk5YllvVGh1YnJpYkY3ank1eEprZXljOFhiQ1ZNYnhsa2gxRUNmN3pHZzRKVjZfZDdKRFZnb3JENlJsVlFSUXnSAaIBQVVfeXFMTjIyRkRwTjBSY1ZIYVcyRjQ1RHNxTGRrWVdLeDF6ZmtFaTZBTUliX0dWNldIMWVWSUthQzhUWkN3YmlQOGJUYlRwc1BheHVmQnpiRzREM2phV1dkN2oweXU4a1FhNDFpdmJoSC1JLTcwcWNlOVZjYTNXVUoxVkJhVmJld013Q3d4Q09sNEN5ZUdxbUNjbmFMYzBOcS01M0haYkhB"
     },
@@ -1431,78 +1503,6 @@
       "summary": "Watch: U.S. Senate candidate Adam Hamilton (D-KS) makes bus tour campaign stop in Liberal, KS &nbsp;&nbsp; Kansas Public Radio",
       "title": "Watch: U.S. Senate candidate Adam Hamilton (D-KS) makes bus tour campaign stop in Liberal, KS",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUVJ2YUk2bEVHRnpyTXdyOFc4R05Ba1E4Z29Va0pnSlN5U05pa1pEeUtvMGw3eGo0clN6eDhqZkV2N2JwSGVnVzRmUWpfUUxJTDlmUjJ5UjNsVS02NlpOM0Y5UUtHX29uTkRFRHNhRFBTdDczdXdHT2xveHJlSkx3TEc3a0FGV0lFVVJCRDlONkJmOThHcG9Oa083QU8wdnlFdWZ2cHlEZ0JEQnZhaXBIY3pYTlRwU1JSeGV3X3NxMXJCR0ZkTi13M0dBNmJJNUFE"
-    },
-    {
-      "id": "07f19d6d8d7f",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-27T20:34:00Z",
-      "source": "KSN-TV",
-      "summary": "WATCH: Sen. Roger Marshall speaks at Trump rally &nbsp;&nbsp; KSN-TV",
-      "title": "WATCH: Sen. Roger Marshall speaks at Trump rally",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPeUZBS3M3WmVjVmJXUTJubUd4RVg3RFJhaDdfckJMeUNuTXo0Y0w2eTN6Rld0S19JWFNCQ1ZjYXljeUR6cDVoYTNHX3F2M291c1pyb182WXdLYy1jaHNJLXdqVkJaMFlQV2FFUGNJZDFYdkVhLUVCLVRfTXFjZ3VST2pBSzJuZkhzS1E"
-    },
-    {
-      "id": "65be1a4927a8",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-27T20:31:00Z",
-      "source": "KAKE",
-      "summary": "Adam Hamilton's 'Leading from the Middle' bus tour stops in Wichita ahead of Election Day &nbsp;&nbsp; KAKE",
-      "title": "Adam Hamilton's 'Leading from the Middle' bus tour stops in Wichita ahead of Election Day",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPc2lTOU5KMGhKcmlWZEFEVTlpSF9UUEZKMlBPWllQaUkxdGFDcURuYl9xbEd0elhzUlBDREZMQ1QzRDVxZEJJOUYxMjRlcEpZMm5vZFNaM0E4NHM3RkpNNmd4bG1rc3ROYlotWDFrQXVfcFE4bkZpYjd1aC11UkI0SWFGSFNfZ0NyNnY1M0NqcVZpY0VUUTFuUC15Z3dpSVMyWmlkelZxMF9fUXoza3lrNWQ5VTQ2Vi03QTFmT014SDVpWjc5N0FtbDFJTUtPV3hNdFFkLTJJUElTdzVaZE1NVURXeVdlemJaYkp5a2Frdlo2aXhO"
-    },
-    {
-      "id": "b85e22b9d075",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-10-27T19:51:43Z",
-      "source": "Fox News",
-      "summary": "WATCH LIVE: Dem Senate nominee Adam Hamilton holds campaign stop in Kansas City &nbsp;&nbsp; Fox News",
-      "title": "WATCH LIVE: Dem Senate nominee Adam Hamilton holds campaign stop in Kansas City",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8wVnRGMmdGdWJkRkJ0cThUcFJBLTE0anYyWkRhdmdIbzNPLXB5SHEwTTd2UnZycFd1SUFPOTlVMGhGNm05M21JZkxiMFFTeXZxaG1vSXp3"
-    },
-    {
-      "id": "c561af7f2ca6",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-27T19:01:35Z",
-      "source": "Kansas Reflector",
-      "summary": "Traducido por Claudia Amaro. TOPEKA \u2014 La gobernadora Laura Kelly sigue siendo la pol\u00edtica m\u00e1s querida de Kansas, mientras el apoyo p\u00fablico se desmorona para el senador estadounidense Roger Marshall, el presidente Donald Trump, los partidos Republicano y Dem\u00f3crata y la pol\u00edtica en general. El Instituto de Asuntos P\u00fablicos Docking de la Universidad Estatal de [&#8230;]",
-      "title": "Una encuesta anual muestra desconfianza en la pol\u00edtica pero apoyo a la gobernadora Laura Kelly",
-      "url": "https://kansasreflector.com/2026/10/27/annual-kansas-speaks-survey-shows-distrust-in-politics-but-support-for-gov-laura-kelly-2"
-    },
-    {
-      "id": "3745f71e2ccf",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-27T18:50:17Z",
-      "source": "themercury.com",
-      "summary": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally &nbsp;&nbsp; themercury.com",
-      "title": "JD Vance announces millions in meatpacking grants, bolsters Roger Marshall at Topeka rally",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQY2I5X0RjUEZya21neGw3ZjN6UEZyS2QtOGFWSVAzOGtIc3k4T1BEVTBZNHIzU2xEdUplQ21HbERMem1GNDROYjl5UTNpcGR4RkJQckVuLU91b1RtUmg1NldqNGJTUU5DaS1uQUVKbDhBdjVoNVF5am82ZlFVSm91NUVqNHZKdFpyS25fY1VpY2kxbXRNT2lHbmV2WTJwUXdnNFRCMHlMOEc5SklrVG1GdW9qUUY5Y3Y2MU05MWxsLWJScnpYOGJ2SlRGbkpWWGFobTRmZFhNZm1pcGRZSXJBdHhUMkxFbF85aVJpbmlxYmFSQ2ZSVzNZYkZ1V1VES3BYQnc"
-    },
-    {
-      "id": "2e6df2f61565",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-10-27T17:29:00Z",
-      "source": "themercury.com",
-      "summary": "Roger Marshall \u2014 Topeka rally &nbsp;&nbsp; themercury.com",
-      "title": "Roger Marshall \u2014 Topeka rally",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUGdDbkptUEZweExrN0kxVEhRWXR0ekRMam1JSlhiYmlYNlU3TVJQMnd5M0ZtTHEyd0NpN2drcmc0dTVZS2VaUVZGRFlZWEN6YWZEaHlja1ZnZHVLa2c1MVlZWjNpNzF5bDJ4UTJiUUpWNHJEc3gtNGlTVUdsbTFSOFg3V3BteHB6Mjh2T3AzSWN6a2Z5azBhRXBiYVFKZTg"
     }
   ],
   "schema_version": 1
