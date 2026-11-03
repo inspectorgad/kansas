@@ -1,8 +1,8 @@
 {
   "aggregate": {
     "as_of": "2026-11-03T00:00:00Z",
-    "band": 2.78,
-    "hamilton": 49.41,
+    "band": 2.77,
+    "hamilton": 49.48,
     "history": [
       {
         "date": "2026-07-06",
@@ -832,32 +832,32 @@
       },
       {
         "date": "2026-11-01",
-        "hamilton": 49.41,
-        "margin": -4.07,
-        "marshall": 45.34,
+        "hamilton": 49.48,
+        "margin": -4.17,
+        "marshall": 45.31,
         "n_polls": 16
       },
       {
         "date": "2026-11-02",
-        "hamilton": 49.41,
-        "margin": -4.07,
-        "marshall": 45.34,
+        "hamilton": 49.48,
+        "margin": -4.17,
+        "marshall": 45.31,
         "n_polls": 16
       },
       {
         "date": "2026-11-03",
-        "hamilton": 49.41,
-        "margin": -4.07,
-        "marshall": 45.34,
+        "hamilton": 49.48,
+        "margin": -4.17,
+        "marshall": 45.31,
         "n_polls": 16
       }
     ],
     "leader": "hamilton",
-    "margin": -4.07,
-    "marshall": 45.34,
+    "margin": -4.17,
+    "marshall": 45.31,
     "method": "Weighted average of public polls: 14-day recency half-life, sqrt(sample) weighting normalised to n=600, 0.45x weight for campaign-sponsored polls, and shrunk house-effect correction for pollsters with 2+ polls in the 45-day window.",
     "n_polls_used": 16,
-    "trend_7d": -1.3
+    "trend_7d": -1.4
   },
   "attribution": [
     {
@@ -867,7 +867,7 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-11-03T17:09:10.425178Z",
+  "generated_at": "2026-11-03T22:21:59.532619Z",
   "polls": [
     {
       "added_at": "2026-11-03T01:45:58.374256Z",
@@ -905,14 +905,14 @@
       "added_at": "2026-11-02T19:25:15.029603Z",
       "end_date": "2026-11-01",
       "id": "6992e2cf03b0",
-      "other": 5.2,
+      "other": 4.8,
       "pollster": "FiftyPlusOne",
       "results": {
-        "hamilton": 49.1,
-        "marshall": 45.7
+        "hamilton": 49.8,
+        "marshall": 45.4
       },
       "start_date": "2026-11-01",
-      "undecided": 5.2
+      "undecided": 4.8
     },
     {
       "added_at": "2026-11-03T01:45:58.374207Z",
@@ -934,14 +934,14 @@
       "added_at": "2026-11-02T19:25:15.029201Z",
       "end_date": "2026-11-01",
       "id": "1e6977535715",
-      "other": 5.0,
+      "other": 4.6,
       "pollster": "270toWin",
       "results": {
-        "hamilton": 49.8,
+        "hamilton": 50.2,
         "marshall": 45.2
       },
       "start_date": "2026-10-20",
-      "undecided": 5.0
+      "undecided": 4.6
     },
     {
       "added_at": "2026-11-01T18:46:47.431884Z",
