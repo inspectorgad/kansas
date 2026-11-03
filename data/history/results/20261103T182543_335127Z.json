@@ -1,0 +1,32 @@
+{
+  "attribution": [
+    {
+      "name": "Kansas Secretary of State \u2014 unofficial election night results",
+      "note": "Unofficial returns. Official canvass follows in the weeks after election day.",
+      "url": "https://ent.sos.ks.gov/"
+    }
+  ],
+  "called": false,
+  "counties": [],
+  "generated_at": "2026-11-03T18:25:43.335127Z",
+  "last_updated": "2026-11-03T18:25:43.335131Z",
+  "pct_reporting": 0.0,
+  "precincts_reporting": 0,
+  "precincts_total": 4168,
+  "schema_version": 1,
+  "source_url": "https://www.kssos.org/ent/kssos_ent.html",
+  "statewide": [
+    {
+      "candidate_id": "hamilton",
+      "pct": 0.0,
+      "votes": 0
+    },
+    {
+      "candidate_id": "marshall",
+      "pct": 0.0,
+      "votes": 0
+    }
+  ],
+  "status": "live",
+  "total_votes": 0
+}
