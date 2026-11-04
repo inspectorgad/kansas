@@ -150,13 +150,13 @@
     },
     {
       "county": "Crawford",
-      "hamilton_votes": 3780,
-      "marshall_votes": 3962,
-      "other_votes": 401,
-      "pct_reporting": 68.42,
-      "precincts_reporting": 39,
+      "hamilton_votes": 5702,
+      "marshall_votes": 5880,
+      "other_votes": 575,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 57,
       "precincts_total": 57,
-      "total_votes": 7742
+      "total_votes": 11582
     },
     {
       "county": "Decatur",
@@ -899,25 +899,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:37:52.575797Z",
-  "last_updated": "2026-11-04T03:36:00Z",
-  "pct_reporting": 73.13,
-  "precincts_reporting": 3048,
+  "generated_at": "2026-11-04T03:39:52.310486Z",
+  "last_updated": "2026-11-04T03:38:00Z",
+  "pct_reporting": 73.56,
+  "precincts_reporting": 3066,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 55.31,
-      "votes": 498145
+      "pct": 55.29,
+      "votes": 500067
     },
     {
       "candidate_id": "marshall",
-      "pct": 44.69,
-      "votes": 402448
+      "pct": 44.71,
+      "votes": 404366
     }
   ],
   "status": "live",
-  "total_votes": 900593
+  "total_votes": 904433
 }
