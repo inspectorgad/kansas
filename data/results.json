@@ -339,6 +339,16 @@
       "total_votes": 9617
     },
     {
+      "county": "Haskell",
+      "hamilton_votes": 266,
+      "marshall_votes": 700,
+      "other_votes": 31,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 13,
+      "precincts_total": 13,
+      "total_votes": 966
+    },
+    {
       "county": "Hodgeman",
       "hamilton_votes": 72,
       "marshall_votes": 244,
@@ -400,13 +410,13 @@
     },
     {
       "county": "Kingman",
-      "hamilton_votes": 756,
-      "marshall_votes": 2119,
-      "other_votes": 86,
-      "pct_reporting": 96.43,
-      "precincts_reporting": 27,
+      "hamilton_votes": 819,
+      "marshall_votes": 2205,
+      "other_votes": 92,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 28,
       "precincts_total": 28,
-      "total_votes": 2875
+      "total_votes": 3024
     },
     {
       "county": "Kiowa",
@@ -849,25 +859,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:27:52.339409Z",
-  "last_updated": "2026-11-04T03:26:00Z",
-  "pct_reporting": 59.12,
-  "precincts_reporting": 2464,
+  "generated_at": "2026-11-04T03:29:52.957090Z",
+  "last_updated": "2026-11-04T03:28:00Z",
+  "pct_reporting": 59.45,
+  "precincts_reporting": 2478,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 56.33,
-      "votes": 460939
+      "pct": 56.29,
+      "votes": 461268
     },
     {
       "candidate_id": "marshall",
-      "pct": 43.67,
-      "votes": 357393
+      "pct": 43.71,
+      "votes": 358179
     }
   ],
   "status": "live",
-  "total_votes": 818332
+  "total_votes": 819447
 }
