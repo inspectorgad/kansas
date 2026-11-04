@@ -110,13 +110,13 @@
     },
     {
       "county": "Edwards",
-      "hamilton_votes": 164,
-      "marshall_votes": 460,
-      "other_votes": 29,
-      "pct_reporting": 46.67,
-      "precincts_reporting": 7,
+      "hamilton_votes": 172,
+      "marshall_votes": 541,
+      "other_votes": 36,
+      "pct_reporting": 60.0,
+      "precincts_reporting": 9,
       "precincts_total": 15,
-      "total_votes": 624
+      "total_votes": 713
     },
     {
       "county": "Ellis",
@@ -150,13 +150,13 @@
     },
     {
       "county": "Franklin",
-      "hamilton_votes": 2343,
-      "marshall_votes": 2394,
-      "other_votes": 191,
-      "pct_reporting": 28.0,
-      "precincts_reporting": 7,
+      "hamilton_votes": 2816,
+      "marshall_votes": 3197,
+      "other_votes": 253,
+      "pct_reporting": 48.0,
+      "precincts_reporting": 12,
       "precincts_total": 25,
-      "total_votes": 4737
+      "total_votes": 6013
     },
     {
       "county": "Harvey",
@@ -207,6 +207,16 @@
       "precincts_reporting": 1,
       "precincts_total": 5,
       "total_votes": 107
+    },
+    {
+      "county": "Labette",
+      "hamilton_votes": 439,
+      "marshall_votes": 367,
+      "other_votes": 32,
+      "pct_reporting": 2.63,
+      "precincts_reporting": 1,
+      "precincts_total": 38,
+      "total_votes": 806
     },
     {
       "county": "Leavenworth",
@@ -399,25 +409,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T01:57:52.314645Z",
-  "last_updated": "2026-11-04T01:56:00Z",
-  "pct_reporting": 2.81,
-  "precincts_reporting": 117,
+  "generated_at": "2026-11-04T01:59:52.652939Z",
+  "last_updated": "2026-11-04T01:58:00Z",
+  "pct_reporting": 3.0,
+  "precincts_reporting": 125,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 64.53,
-      "votes": 277871
+      "pct": 64.42,
+      "votes": 278791
     },
     {
       "candidate_id": "marshall",
-      "pct": 35.47,
-      "votes": 152708
+      "pct": 35.58,
+      "votes": 153959
     }
   ],
   "status": "live",
-  "total_votes": 430579
+  "total_votes": 432750
 }
