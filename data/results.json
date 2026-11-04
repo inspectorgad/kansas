@@ -190,13 +190,13 @@
     },
     {
       "county": "Elk",
-      "hamilton_votes": 63,
-      "marshall_votes": 150,
-      "other_votes": 3,
-      "pct_reporting": 9.09,
-      "precincts_reporting": 1,
+      "hamilton_votes": 182,
+      "marshall_votes": 775,
+      "other_votes": 49,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
       "precincts_total": 11,
-      "total_votes": 213
+      "total_votes": 957
     },
     {
       "county": "Ellis",
@@ -499,6 +499,16 @@
       "total_votes": 4623
     },
     {
+      "county": "Norton",
+      "hamilton_votes": 366,
+      "marshall_votes": 1357,
+      "other_votes": 77,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
+      "precincts_total": 11,
+      "total_votes": 1723
+    },
+    {
       "county": "Osage",
       "hamilton_votes": 2008,
       "marshall_votes": 3731,
@@ -729,25 +739,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:03:52.232289Z",
-  "last_updated": "2026-11-04T03:02:00Z",
-  "pct_reporting": 42.9,
-  "precincts_reporting": 1788,
+  "generated_at": "2026-11-04T03:05:52.666498Z",
+  "last_updated": "2026-11-04T03:04:00Z",
+  "pct_reporting": 43.4,
+  "precincts_reporting": 1809,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 57.96,
-      "votes": 419284
+      "pct": 57.83,
+      "votes": 419769
     },
     {
       "candidate_id": "marshall",
-      "pct": 42.04,
-      "votes": 304148
+      "pct": 42.17,
+      "votes": 306130
     }
   ],
   "status": "live",
-  "total_votes": 723432
+  "total_votes": 725899
 }
