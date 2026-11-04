@@ -610,13 +610,13 @@
     },
     {
       "county": "Miami",
-      "hamilton_votes": 5444,
-      "marshall_votes": 8104,
-      "other_votes": 453,
-      "pct_reporting": 78.43,
-      "precincts_reporting": 40,
+      "hamilton_votes": 5481,
+      "marshall_votes": 8166,
+      "other_votes": 457,
+      "pct_reporting": 98.04,
+      "precincts_reporting": 50,
       "precincts_total": 51,
-      "total_votes": 13548
+      "total_votes": 13647
     },
     {
       "county": "Mitchell",
@@ -680,13 +680,13 @@
     },
     {
       "county": "Ness",
-      "hamilton_votes": 143,
-      "marshall_votes": 713,
-      "other_votes": 29,
-      "pct_reporting": 50.0,
-      "precincts_reporting": 6,
+      "hamilton_votes": 171,
+      "marshall_votes": 877,
+      "other_votes": 36,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 12,
       "precincts_total": 12,
-      "total_votes": 856
+      "total_votes": 1048
     },
     {
       "county": "Norton",
@@ -1049,25 +1049,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T05:54:11.460357Z",
-  "last_updated": "2026-11-04T05:52:00Z",
-  "pct_reporting": 98.75,
-  "precincts_reporting": 4116,
+  "generated_at": "2026-11-04T05:56:12.348003Z",
+  "last_updated": "2026-11-04T05:54:00Z",
+  "pct_reporting": 99.14,
+  "precincts_reporting": 4132,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 52.6,
-      "votes": 555350
+      "pct": 52.59,
+      "votes": 555415
     },
     {
       "candidate_id": "marshall",
-      "pct": 47.4,
-      "votes": 500543
+      "pct": 47.41,
+      "votes": 500769
     }
   ],
   "status": "live",
-  "total_votes": 1055893
+  "total_votes": 1056184
 }
