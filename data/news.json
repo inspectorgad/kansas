@@ -5,6 +5,10 @@
       "url": "https://kansasreflector.com/feed/"
     },
     {
+      "name": "KCUR",
+      "url": "https://www.kcur.org/politics-elections-and-government.rss"
+    },
+    {
       "name": "KWCH",
       "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
     },
@@ -18,15 +22,11 @@
       "url": "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"
     },
     {
-      "name": "KCUR",
-      "url": "https://www.kcur.org/politics-elections-and-government.rss"
-    },
-    {
       "name": "KSNT",
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-04T18:18:36.567683Z",
+  "generated_at": "2026-11-04T23:49:40.560796Z",
   "items": [
     {
       "id": "e90f2a7e3c51",
@@ -34,7 +34,7 @@
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-04T18:13:28Z",
+      "published_at": "2026-11-04T23:46:24Z",
       "source": "NBC News",
       "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
       "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
@@ -47,11 +47,144 @@
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-11-04T18:13:00Z",
+      "published_at": "2026-11-04T23:46:00Z",
       "source": "The New York Times",
       "summary": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton &nbsp;&nbsp; The New York Times",
       "title": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcVZUSXpwVzk4YWR0a1UwR3h0aFpLZ3h0MzNiOEZDako2TjVNcVNQSEw4UzdYSkJLbDAyQ2hVYXlScU9Jd0RsV0c0R1dwVW5XTG1uZ0FwS0JpSTlJNE50aDI5VUMxdHFFazZrSkpRT1hfUWtOZjJ6cmFWczVkT3JHWkZ5S3c1YmwtdGdMTlVYdXN4NVk"
+    },
+    {
+      "id": "5ac9b308c82d",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T23:29:15Z",
+      "source": "KWCH",
+      "summary": "Ford, Finney, and Seward counties back Democrat Adam Hamilton in historic vote following September federal enforcement actions",
+      "title": "Southwest Kansas counties shift blue following immigration enforcement concerns",
+      "url": "https://www.kwch.com/2026/11/04/southwest-kansas-counties-shift-blue-following-immigration-enforcement-concerns"
+    },
+    {
+      "id": "5b4ac3a9ee20",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T23:16:00Z",
+      "source": "KCTV",
+      "summary": "Adam Hamilton to remain lead pastor at Resurrection United Methodist Church after Senate win &nbsp;&nbsp; KCTV",
+      "title": "Adam Hamilton to remain lead pastor at Resurrection United Methodist Church after Senate win",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObWZmNTlrUXBSMUdBU3RKZG9vXzhqZ2tpQXBMU1EyS3h3NktPTENpb1VZQzM2Uks5cUZNZURQQldTOU4yV0xoNVh5YlctSlFIMG9udC1SblYtaktDclp6ZWl5aFA1X1hvNXBSRjBjWEVBSXMyVmJoaXZuYXVwS2pJenVkd1YwczZCaGFVcVFQbGJqYkhSNzVzc0FibmVhR3BoTWszcE5Yc3pJZlZWNllVekFTSUJmRVdCVndsUNIB0AFBVV95cUxONy14SUQyVzJQcDByaE1tVjVGdHhXOGl0RjZwbTFWa29CRXZ2YXBpWTYzWDJ1RGFheTFuV01tYmlYUXNMbmlId3ZkaWVVWnhhSEV5RE9iTHJ1T0Zmb1pmY0J0SlJMMmtBODdodHpkLVVrTVFVaVBYZVZTdXRKLWFVWDNfY0taaHdidnlSc29QNHIwZ0lyTUE0Y2g4bl9mY0lJWGxWcTctdEhZc1Z1ZThJclV1ajh0VFUwel9HczJoamhfZlR5dkhpemJxZ0c1WFl5"
+    },
+    {
+      "id": "acfd5822a6cb",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T22:25:18Z",
+      "source": "The Lufkin Daily News",
+      "summary": "Supporters of Democratic candidate for U.S. House Adam Hamilton celebrate at a watch party inside the Marriott Kansas City in Overland Park, Kansas on Nov. 3, 2026. &nbsp;&nbsp; The Lufkin Daily News",
+      "title": "Supporters of Democratic candidate for U.S. House Adam Hamilton celebrate at a watch party inside the Marriott Kansas City in Overland Park, Kansas on Nov. 3, 2026.",
+      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxONllqWVZZTlhzZzkwZEJHZU9jeW5xNHJ2bGMtOHU4TnZsZGYxeDF2a1FBQ2hBRENWbnltSWQ4RElST01CNzlCTGw5QTI1Nk8zQTVYamlSdkk0d245Q1ZNSEs2dWFPemtoQmhZaGU2bUdwV2szY294MTZpTi1pN0NYUmhzS3hldDBlWnVha1ZsMkhYc05waU92SEhxVFBaUVhaQW1fbE9FbGpBN2JDeGtrMTRXRTY2d3J2cTNfUmg1NzFTZl9STlA2TzNLejdscy11c0RCMFVuNTd6N0d6elNJQlNLVEpYeXVGei1Wdi1ycVZaN1NJWk1peTVjaWxiV0JqZ19JX09RMnhaTlhQQ0UtUFAxT2V6Zw"
+    },
+    {
+      "id": "f75f8691e467",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T22:24:08Z",
+      "source": "KCUR",
+      "summary": "Kansas U.S. Senator-elect Adam Hamilton says that after his victory, he feels a \"deep sense of responsibility to make sure that we actually change things for the better.\" He spoke with KCUR's Up To Date, along with election experts and several congressional winners from Missouri, about what led to the Democratic wave in Tuesday's election.",
+      "title": "What Adam Hamilton\u2019s win means for Kansas, and other big 2026 election takeaways",
+      "url": "https://www.kcur.org/podcast/up-to-date/2026-11-04/adam-hamilton-kansas-senate-win-election-takeaways"
+    },
+    {
+      "id": "71d834b61270",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T22:12:23Z",
+      "source": "Christian Post",
+      "summary": "US Sen.-elect Adam Hamilton says he'll remain lead pastor at Kansas megachurch &nbsp;&nbsp; Christian Post",
+      "title": "US Sen.-elect Adam Hamilton says he'll remain lead pastor at Kansas megachurch",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNM2YyYUJlV0xRQlhBazhnSk02Ti1CZ0xzTlBFcWVnRXF3V2JNWVdmUmEzaXU5WG5jTTZrRnB2T1F5QUlHTENqZm55eGU0R2dsU0tOeVUwOXVnMzhPb2s5WmxBZGRYMGhGMVZWSS1TSFFURmZxRUdKeDJ4WElqamRiVHd5OE8xYkpkTFE5Nm9WSlpKVXlaMlVPRE90Sm1XQk93OXN4aA"
+    },
+    {
+      "id": "15df20b236a9",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T22:07:45Z",
+      "source": "Reuters",
+      "summary": "Adam Hamilton first Kansas Democrat elected to US Senate in 94 years &nbsp;&nbsp; Reuters",
+      "title": "Adam Hamilton first Kansas Democrat elected to US Senate in 94 years",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16Y2g2Sk4xS19Wc1ROM0N5RnBrS1g5emFxRUJKbFBKTXRSc1RUNUYzeFU3TWludWJCUGptYTVlSFo5VkJDZUN3MFBabmRURkVKczRvRzlKYlFCTFR2b0dITVBWWHROZ2s"
+    },
+    {
+      "id": "39b63123de78",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T21:21:36Z",
+      "source": "The Iola Register",
+      "summary": "The quiet brilliance of Adam Hamilton\u2019s campaign &nbsp;&nbsp; The Iola Register",
+      "title": "The quiet brilliance of Adam Hamilton\u2019s campaign",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPM0k4cHpnOElaVHZKeVhFZ2xLeGFFaGMzeXUtZ3B1YnpyMUhZV1F2UUtPOWZmXzRzRXhDSWt0Zjh6dzduX2h4ZGZDdW82TW5lTWpGM0VwVFViNkhZTTFtM3VnLUo5QVE4ZEVkdmt5dWYyYmNsYlRNcGlZajZieTROYW9mR1FFT1YxUXZaSlYtMU5sTGtrSzBfaHZKOA"
+    },
+    {
+      "id": "f4cd060d3724",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T20:14:57Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "Democrat Adam Hamilton wins tight US Senate race in Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "Democrat Adam Hamilton wins tight US Senate race in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOc0d6bTVSSFIwTGpIVFgwZjJaNDc1aWpqWHJLZU9Qc1JFYzdLeDBZY0d2YUVQTW5hN1R3RjFxb1RJeEJLZFl0ZTJpelY0N0I3VGcyVXhZc0l2WUw5TUI3dlR5OGhmek1XdzRpUjd6dUtZa19HcDU1eDNnWk5admltalROMWY1RVNVTV9UNjkycGxTNlg0SzBBSlA0TQ"
+    },
+    {
+      "id": "77648b2d7a50",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-04T19:58:00Z",
+      "source": "KMBC",
+      "summary": "November 3, 2026 Election Results: Adam Hamilton defeats U.S. Sen. Roger Marshall &nbsp;&nbsp; KMBC",
+      "title": "November 3, 2026 Election Results: Adam Hamilton defeats U.S. Sen. Roger Marshall",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPU3VPVzZsd3dOU2FYZjZJeU9XMzZGNGdqTnhNYm45REEyWFdOVDRyUUFNWE0zX0lKazJNYnlsNUNpTTN2YmNIdDNSa3V2T2I0TU9ESGIyazQ1LU9xazdIX0VnTnRkRVdHb2lHelV5d1JETkxmckpidElXekJBa2NaS2pUdG5DQkwtYWdnanFXd1hlc3oxVzE4Ylpn"
+    },
+    {
+      "id": "fe486666d51f",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T19:15:50Z",
+      "source": "People.com",
+      "summary": "Kansas Hadn\u2019t Elected a Democratic Senator Since Before The Wizard of Oz Until Adam Hamilton Just Flipped the Seat &nbsp;&nbsp; People.com",
+      "title": "Kansas Hadn\u2019t Elected a Democratic Senator Since Before The Wizard of Oz Until Adam Hamilton Just Flipped the Seat",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQTThQVk5uSFJEZkI5VkJFR1NOQ3o1X1BwT0hsRDY0bEEyT1V1S1JHV0IzS0JIY25PVUI3RnlRamZPSFRqcXRsZHJhbEtvb1VpbTE2UHQ3ZmstSnJWTkNSc21sUXF4M3VGWlNNam93YTFYSUM0bVE4NS1YUTBRZWZKejctWnA1TDI4OGZ6OFk5amhXbFlZdVc5OXFWXzY3OXF6VDU2ejY1M0NlSngtMVJMNmhSeWVTRXhpMGpIMw"
+    },
+    {
+      "id": "95ea70ebf474",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T18:15:00Z",
+      "source": "KCTV",
+      "summary": "Kansas voters react to Adam Hamilton\u2019s U.S. Senate win &nbsp;&nbsp; KCTV",
+      "title": "Kansas voters react to Adam Hamilton\u2019s U.S. Senate win",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPdldfTWFWemNlRFUxakN6VUJRV3B4TGdjdVAtZGYzWTZKU3hwcVFIWjlkaWY4MlBjMG9oUU12cnBfcS1uM0hxUlI5LUFuWFBBdzI4RjVVbEdIdzlRbWJ0aTlYdUFpV084LVQyVjhYQ2lvTWdNbWp1c1k1RVNXVFBUbVZxWjBXZEkxalHSAZ4BQVVfeXFMTUxydVNLNWF4WEV2clVsMzhCdG55ZUpUa1BjdEVmbG5DLXZrSl9lOEpwN0JoZ2FobmFTbVRsdnNLY3lrWVhSS2w0MHRtcmV6VGFteGNfOWZlTGlHRUptZ1BnbEtZOHJUdkNQMlpZR1JhUVJlX2ZuWGtYa0JXcUx5WTBnY0xHVkZJVVRGdXdnNmp5ZFpzeE5fRjJmVlNSUkE"
     },
     {
       "id": "bdec2a6d6c37",
@@ -66,6 +199,18 @@
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOTjBGTmVBRlBMeWVuMTFZV1M1LUNLYkx4NEdZblVKbFMyVHE4MXRWRE50ZWFpYXlpUG1yak5uMUpFSUtGRExTVzBSUEhNS05mdkZzcUJHV2x6bjc4R3VWdHRoME1pNzM1bkE0RUVpLVB0RjVUT182c0pVck0xc1c2OTJia2xXY185WUdiUWo4dUJUYkI5bnZLRGhXSWxUWk8taTZuYVJCWmtHdkh5d0kyXzhYdS03UmdDcU96LTdtT3lfWDVuRmpsQ2hGVmpna0wyRTRTaGljU3p3UQ"
     },
     {
+      "id": "a2829e1674df",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T17:20:29Z",
+      "source": "MS NOW",
+      "summary": "Senator-elect Adam Hamilton on how his faith was \u2018critical\u2019 to his historic win in Kansas &nbsp;&nbsp; MS NOW",
+      "title": "Senator-elect Adam Hamilton on how his faith was \u2018critical\u2019 to his historic win in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPd05lNE1nN0ZkSnlKd3loRHZaeTBZbEN4WXBPY1VjRzc5WDdqcExsQ05rMUo0Smx0cWRVYWFEMXpza0hKR0JkZEZJdEFyQTQ2R055YTVDSEZDeGFLTVRwSEdKbFlRZF9OUG5qRWRyeU5McGUtbi11T1lQOUsxT18wbUtTb2ZQb1RhdWRfY2hHWVRLQ1cxVEdjaldEaDlMV0FHMFFHWjE4YnhCZ0MyTjFRN2JUMnJCZTdUbEV3N0xaRHBHdFFJM2NKa2M1Y3c2OWZ0Um84TA"
+    },
+    {
       "id": "af4c790c1460",
       "kind": "news",
       "mentions": [
@@ -77,18 +222,6 @@
       "summary": "Kansas elects first Democratic Senator in 94 years | Adam Hamilton ousts Sen. Roger Marshall &nbsp;&nbsp; 9News",
       "title": "Kansas elects first Democratic Senator in 94 years | Adam Hamilton ousts Sen. Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQejVHekdjY0FOcTVScGZ3bzBWUUZJTUNfZ1EtaHRZUW11SEJNeVZ2Y1BKOVVuY2NWdzlMZDJPVTFzMjE0RmdhVnJQaEI4elMtRUhVVzV0b0p6VFR6ZXoyLW51ZmRvRzIwZkxGOFlBODVwQk1MelVrZnRIb3dvbjV6ekMxdTlYSjU5OEVjU1d5WmRrWmNCbWxaY3FyS3c3c3pYRWR1M2dHUk9QNzBaV1FHZldaMUNueXA2b3gzbUFWOEZ1ajN0Rk1oQVdFTnJFOVJnOTRhcnUtN2JScHFsUm1ZcHJaSGNMdHQ4Q05LT0xUdU5Ua0U"
-    },
-    {
-      "id": "02eb5455a4b9",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T17:18:46Z",
-      "source": "Yahoo",
-      "summary": "Senator-elect Adam Hamilton on how his faith was 'critical' to his historic win in Kansas &nbsp;&nbsp; Yahoo",
-      "title": "Senator-elect Adam Hamilton on how his faith was 'critical' to his historic win in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMFdLcDlRWEJ1NnlMTEJMN2JkV3VKYkVPSi1tX2lYdUJfX1loa2ZlUDRUUXhlRUFjNmF6cnp1blVaV19hdVpNX2lUWlhfLXdkZm0yVEUyUGI4NHk4TnN1RkhiejBLMVNoQjdRWkpCbFh1WmZuSGU3Yloxa3QtUl9xZkVhVmNrSDh0MWc"
     },
     {
       "id": "3222be938483",
@@ -133,7 +266,7 @@
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-04T14:59:51Z",
+      "published_at": "2026-11-04T15:02:20Z",
       "source": "Democracy Now!",
       "summary": "Adam Hamilton Becomes First Kansas Democrat Elected to the Senate Since 1932 &nbsp;&nbsp; Democracy Now!",
       "title": "Adam Hamilton Becomes First Kansas Democrat Elected to the Senate Since 1932",
@@ -150,6 +283,19 @@
       "summary": "Democrat Hamilton wins Kansas Senate seat &nbsp;&nbsp; The Fence Post",
       "title": "Democrat Hamilton wins Kansas Senate seat",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxON19LSGhQNHE0SmtGdWV6VGpmN01RdEE2X0RSY1Q1b014SkdUM3ZaeW44WmJmS1BtNTB0Tk41QzdQTlZuU29vTEZ5NzFsY1ZVNUVWcFdNSjNrUE4xb2ZBX29SSmNyWEpoaDcxSVRvTGgyWDhaZkxCYWUwLTVFNUVRTmh3"
+    },
+    {
+      "id": "b2a466074d33",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-04T13:39:00Z",
+      "source": "Audacy",
+      "summary": "Adam Hamilton defeats Sen. Marshall for Kansas US Senate seat &nbsp;&nbsp; Audacy",
+      "title": "Adam Hamilton defeats Sen. Marshall for Kansas US Senate seat",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOR2lNeGtGcWZ6UkZ3WlBmSFhfSDhDU2dHZEFqQzNfNmc4ajVkcXI2a1lad2RYeEF1bGZ0bkZsX1FJV1JpX3Z2MW1EbWNvcW1ZaFYxclFtaTlZRnFfVjQ2YURFdFNER2N5Z2NnejVmZkJPa1laQm9kQU8xLXpUa3ZhNzMtcjB6SExwR1g5WExQTVVMTmVIQURMQ0syUlJjQi1j"
     },
     {
       "id": "d67777ab973e",
@@ -274,18 +420,6 @@
       "summary": "Adam Hamilton Wins Kansas, Delivering Democrats First Senate Victory in 94 Years &nbsp;&nbsp; Yahoo",
       "title": "Adam Hamilton Wins Kansas, Delivering Democrats First Senate Victory in 94 Years",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOblZpME1tc1lqTnMwdENrVWdPN1JwSXZTcWhFdndBalE1SzhCZ2g3b2p2cTl5NHFWSkdyTWg4TjJsRmUxZGVHcWdiS19JRlZublEyU0t2U0pRUnhoYWZHRk5LWUZaYTZpLVZRckZOMEtjR2d1Zl9hODhhbWZHVUg4TnJRMjhmT0Q4TnFlSmJn"
-    },
-    {
-      "id": "15df20b236a9",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T08:44:24Z",
-      "source": "Reuters",
-      "summary": "Adam Hamilton first Kansas Democrat elected to US Senate in 94 years &nbsp;&nbsp; Reuters",
-      "title": "Adam Hamilton first Kansas Democrat elected to US Senate in 94 years",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16Y2g2Sk4xS19Wc1ROM0N5RnBrS1g5emFxRUJKbFBKTXRSc1RUNUYzeFU3TWludWJCUGptYTVlSFo5VkJDZUN3MFBabmRURkVKczRvRzlKYlFCTFR2b0dITVBWWHROZ2s"
     },
     {
       "id": "caef602d7b7b",
@@ -446,18 +580,6 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdkM1LURjZ2pYYWVfMmpnS1V4Rnk4bUxjUVBLRk8xZGNBNlB2SUhpZVhKaVZNRDFYSWd4ZnZFWDRZTnU4NFhEM3FMTWNMeGFqMXFIc3RsLURia2o1emlMZllIa0NsYnFRTUhQMVlWOEZZTDZUSU5lZEZwSDg3RlRWNi1GYnE"
     },
     {
-      "id": "444a25eb2499",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T05:55:05Z",
-      "source": "Axios",
-      "summary": "Adam Hamilton ends Democrats' 94-year Kansas Senate drought &nbsp;&nbsp; Axios",
-      "title": "Adam Hamilton ends Democrats' 94-year Kansas Senate drought",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOSkNrdG8wNGlwbWhjRVFzMXpzZVNUQ3lrYVNLYUxEU0ZOODlIXy1nWkIyTXk0ZUE4VUliZ1doZ3RFTnNBY1NrRnRhOHZnV0RSUXdWNmVCa0htbzlLZ3NiQWdQNTljekdoelZsMlI0bFR6Z1k4cWM0Q2Q2UWhHalVJN2VxYw"
-    },
-    {
       "id": "f0037a55a53b",
       "kind": "news",
       "mentions": [
@@ -482,30 +604,29 @@
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UUWpLV3J2dklEMnM5TE13MW5EcnFVbjJFcDZvdXZXZkd6YXdRR3hLOEVEazhWMEhqWURGNUpKNWY4VHljSk5kNlQ4bGJGSXBqMGNzNS1vaWo5bUJ1UVVBOTJXbmVfTmRrTmxLc3NFZjVOaDNaaVRmYUtQR2czRGs"
     },
     {
-      "id": "77648b2d7a50",
+      "id": "444a25eb2499",
       "kind": "news",
       "mentions": [
-        "hamilton",
-        "marshall"
+        "hamilton"
       ],
-      "published_at": "2026-11-04T05:41:00Z",
-      "source": "KMBC",
-      "summary": "November 3, 2026 Election Results: Adam Hamilton defeats U.S. Sen. Roger Marshall &nbsp;&nbsp; KMBC",
-      "title": "November 3, 2026 Election Results: Adam Hamilton defeats U.S. Sen. Roger Marshall",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPU3VPVzZsd3dOU2FYZjZJeU9XMzZGNGdqTnhNYm45REEyWFdOVDRyUUFNWE0zX0lKazJNYnlsNUNpTTN2YmNIdDNSa3V2T2I0TU9ESGIyazQ1LU9xazdIX0VnTnRkRVdHb2lHelV5d1JETkxmckpidElXekJBa2NaS2pUdG5DQkwtYWdnanFXd1hlc3oxVzE4Ylpn"
+      "published_at": "2026-11-04T05:37:36Z",
+      "source": "Axios",
+      "summary": "Adam Hamilton ends Democrats' 94-year Kansas Senate drought &nbsp;&nbsp; Axios",
+      "title": "Adam Hamilton ends Democrats' 94-year Kansas Senate drought",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOSkNrdG8wNGlwbWhjRVFzMXpzZVNUQ3lrYVNLYUxEU0ZOODlIXy1nWkIyTXk0ZUE4VUliZ1doZ3RFTnNBY1NrRnRhOHZnV0RSUXdWNmVCa0htbzlLZ3NiQWdQNTljekdoelZsMlI0bFR6Z1k4cWM0Q2Q2UWhHalVJN2VxYw"
     },
     {
-      "id": "549d82cbe0b6",
+      "id": "a3416be00495",
       "kind": "news",
       "mentions": [
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-11-04T05:33:45Z",
-      "source": "Clinton Herald",
-      "summary": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years &nbsp;&nbsp; Clinton Herald",
+      "published_at": "2026-11-04T05:33:00Z",
+      "source": "AP News",
+      "summary": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years &nbsp;&nbsp; AP News",
       "title": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years",
-      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNdkFpbDNfQ2hjNEg3VlRtS1VzMFZZOWlqWDN5OEZEWHVUU2N0X3JPVS1HZHV3M1pBemFnekJqTHRQOGkyRTZNT2E0MldmUmpQbTljWm1WZ0JjeDhGbXRZVlF1VEZ6OGNwTUM5QzFhUUlmRnFRS1NnZURJd21DNldDOURhN3k4bkZ5UUNyeU1lQ21vTkZSTHFJWEtTVURqMThFZ3lGUF9JUm5GLU0yc1dDSFNKTzZGbUtqV09nRlh6SEZNb0NZeDZEN3Z5czF0UHYxYkVIQ3htOGRyeU5VMWFobVZ3TThmWlF5M2piS280dVA5ZUJOY2hSSHZLLXhMM2x1TXpUTk5XNlRfMmlqdk1oeXk3UnQ"
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcGtpT0Y1cGZfVW9FT1dZX2pqNVcyLUw2RUJHNVk3aHhyQjZLNnd2RFc0Q2gwM19qcGJJVTlJVkJwRDRTdWkyMzh3RWJJamd1eEYxMEZRSUtjcjcyQTNHajhBMkJkbE9vM1Zla2dLSVVUekZSTnBUa0FfWXZtS0h4Yl9jbnBvWDZFeFZiUlhKSVQ5TlI1V2pUUGJoZmJCV3kzNnA3SktnNGVpWS1vanR0eA"
     },
     {
       "id": "e08d4fefa094",
@@ -538,7 +659,7 @@
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-04T05:26:00Z",
+      "published_at": "2026-11-04T05:26:43Z",
       "source": "Kansas City Star",
       "summary": "Adam Hamilton made history in GOP-led Kansas. Here\u2019s how he pulled it off &nbsp;&nbsp; Kansas City Star",
       "title": "Adam Hamilton made history in GOP-led Kansas. Here\u2019s how he pulled it off",
@@ -642,16 +763,16 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOM1RCVHE1N0wwSW96LW54OTd0ZTJOMFpqU2NXb0l2Zzk2cWF2UmZmMVhUU0Y5bkJWTUlCeDRPV2x0cTU1RFUwakh2YzRpbl9OVVpkYjktRzFxQlN4MU5iWG5iUXhNRHBkV3BIeTZfczR4T2JyWXUtSVNxZ2hMMlNidHZLOGwxRGNBVnRiRHVuU0ZPdjdUY0I4R2x0aEN1RXpFWWV5MzJPNVNsMXBSRlZUMTYtLUlwejladEFJUmZlZGV6N2xZbDBvZ25XV055QWs"
     },
     {
-      "id": "eabed15ef210",
+      "id": "5ef4af244951",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-04T04:45:53Z",
-      "source": "WJAR",
-      "summary": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years &nbsp;&nbsp; WJAR",
+      "published_at": "2026-11-04T04:51:40Z",
+      "source": "NBC Montana",
+      "summary": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years &nbsp;&nbsp; NBC Montana",
       "title": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years",
-      "url": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxNVWE0S21WQlFkTjM1M1NaR2M0MjY4TXZTZ1p2RE94ak12MHdSS0tKUUhQWjFDWnhJeGhFWmdodHVxYXJSbXF5VERMdXhsSjZlbEQ0SlJ5TjJGWTFSelhVdlVYMGthTjBCWTFXdEtwU3BDWjlVTTVWMDlTbV9QSzV3T3ZseWpVYUFfOFRfRnpKRDVSVjR3SzJOUWRUTFVWYWhlWG1TWXFTTGp2akVzR29JNTdNc0F3ZEFqYWpNckdyU1FDVzhjNjQ3STZOZ1lURTBsQ2VsME92cEluQzdma1RnSUZpZk1hekphSVEzZmVvbGY1alhYXzk4WVVBd1I0VEd4RlJxZEc5bzhhTzhUV0ZkS2t0ODk2UDJsNkVuR0pXOUFzUUJHV2tZam84eTFuejVBdE5rWXFRZjBqdjhPRHV3cmx6SGtEQndPT0tzczBMZHRfMlJ4a3hMN0FUVjV4d1k"
+      "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxOVGZoRW9UUzk0WVRvcWJoU29GSG82QnJOYUU4eXNDRDdVU1NlcUI2NzFWd1pPWTNZd1lqblJGeUh5Y3l0U1ZJeUg2QnRFRFdwUDZ0RFZ3U2V0YVF1bVJuRnh2VjVjY1VJVVdBa3VwZ1ZuRV8tWjluU19UZTdRVXV3M3N4UlhiY3duRkJlcHNyVjN4clM0LUh2UXBpRmpPbVNqYURPWnhlU3Q2eW5ZMEIzVHJRVXpLd05YVEhSUzFGa1dqN1JBM2hGc05MS1M4RXZvX1AzaDkwdUp3d1M0WUc0U1c3aGRJZnAwdTBZQU9DN1lyWTdubGR1Qm5JUmNpM19vMTV6b2RfcXlzeWszalBPbmZEQkZ2d3VwYWdveEE3NUxkQXZzcFdlemo4Vk5BZ0hVdmg4cHZDdi1ENFl1OENYWkFZSE1qbUI1UnBualE4RzFhNUtzVURUN1c4UnRmUHdObkE"
     },
     {
       "id": "63d9eb418cf7",
@@ -970,18 +1091,6 @@
       "summary": "Adam Hamilton wins Kansas US Senate race in historic election &nbsp;&nbsp; KSN.com",
       "title": "Adam Hamilton wins Kansas US Senate race in historic election",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPelRrUWJGbFluTVFRb2lPbnQ0eGFPNXNWZHY2b0FBN0NXWG1GU1RoeVNsVnJwUno1NEFtOUE3OEFoSXVFU3duYWVTaEJWOXFFS1pFZ29sMEQ2Y0VyNWIzZkNMejNLLXlBYkFCdWJrcU9RQ3c0Wjk4cWxvb3UxTnpjcHVsZzB3S0ktNXZDZNIBkgFBVV95cUxPNjJKZTM0YjdSTEtTUGpMbTNiLU9sUlRWQy1SbVFxWkljU0pURHh4UE03dWRsYVZoNjBVdzFJa3ZnOWxxelJFeVh1RktmdFJqOThrTDhSaXRLRDRFaTRyR1lWMnJBUGY2Slk5RWdXZUlGbDhOb3VwbUNIMW94QmxDMUt3NDJvdnJaYUxQVy1FMVBaQQ"
-    },
-    {
-      "id": "f4cd060d3724",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T02:26:00Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "Democrat Adam Hamilton wins tight US Senate race in Kansas &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "Democrat Adam Hamilton wins tight US Senate race in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOc0d6bTVSSFIwTGpIVFgwZjJaNDc1aWpqWHJLZU9Qc1JFYzdLeDBZY0d2YUVQTW5hN1R3RjFxb1RJeEJLZFl0ZTJpelY0N0I3VGcyVXhZc0l2WUw5TUI3dlR5OGhmek1XdzRpUjd6dUtZa19HcDU1eDNnWk5admltalROMWY1RVNVTV9UNjkycGxTNlg0SzBBSlA0TQ"
     },
     {
       "id": "496181936e53",
@@ -1396,116 +1505,6 @@
       "summary": "Senate Candidate Adam Hamilton Campaigns in Overland Park, KS &nbsp;&nbsp; C-SPAN",
       "title": "Senate Candidate Adam Hamilton Campaigns in Overland Park, KS",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWTJKZUpQTy1iUzJlcFRjRkJ0c3JWTWVZbzVGNUQ2TnBXVDBXclAxUk50ZWY0Smt3YnphTkhGbmR4RDlJbzJVcHdCOTZpczlBUEd1THpXczhRRDI1QXlfaGlvT1V1LTI1YW9oOGNSWDB5aDBSLTRoZENXay1lR1dlSk9GLWE1QU96NVQ0RWdpUnBlQkxGRnljMGlzcUZOcjdSUUF5OWJuM3ZzeDhoa0tLR2Fn"
-    },
-    {
-      "id": "2d61c3627bcb",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-11-02T22:08:33Z",
-      "source": "Fox News",
-      "summary": "Sen Roger Marshall pushes back on opponent's attacks: 'Couldn't have been further from the truth' &nbsp;&nbsp; Fox News",
-      "title": "Sen Roger Marshall pushes back on opponent's attacks: 'Couldn't have been further from the truth'",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5EUUJXQlUxMzRydHUtNWppWjNMM0JkNXJ1aWt4VWIxbmRvMnJGU293MmxtdjlKQXpxbzlraUd2ZzdYOEtaRjFBUHVBTnptTnJNalZsT1d3"
-    },
-    {
-      "id": "b038318b56d9",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-02T21:48:10Z",
-      "source": "Central Oregon Daily",
-      "summary": "Kansas Senate candidate Adam Hamilton 'cautiously optimistic' about midterms &nbsp;&nbsp; Central Oregon Daily",
-      "title": "Kansas Senate candidate Adam Hamilton 'cautiously optimistic' about midterms",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQY3VyODl6bTRuUWRVWGhEOFh3Z3Fpc2dJaFQ5YVdNWms4Si1kUGRuZXZUTWdqWko3b09ZQnVMbzQ1aHRZSWFiOXFlYUNtN1VNNTlWNTdwWnJGMEEtMWxZcUlrLUtXb1pvcWNjcXZ2QzU2SkhzaWNEWGpOUmJlekc3dHlBT0VDUE5TVFJHVk9YT0lobGc5SXpuWm11REFMNUtUcllnS2cxZ0piSHE2OFJnUHpHRHR3Z0JlMlFaTGVkV19BMjExTkVWcDNHNld2dEo0ZjU3ckp0aktFbjRPRjVJVkJKWS0xT2NvaTVYWThBejRMb1ZZcEM0Qmd1ZnhVUUNzeEpseHJB"
-    },
-    {
-      "id": "0bfd2ff543c5",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-11-02T20:58:32Z",
-      "source": "Yahoo",
-      "summary": "Sen. Roger Marshall and Sec. Brooke Rollins give their final pitch to Kansas Voters ahead of the Midterms &nbsp;&nbsp; Yahoo",
-      "title": "Sen. Roger Marshall and Sec. Brooke Rollins give their final pitch to Kansas Voters ahead of the Midterms",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS2JVNUdFbDNPT0F4MlFYV3NyOVdtbDk5bVhPMkJwcTJveEFTMU5iVHhBckluWF9aWmRpLVVkNFljQXYwTEo4ejh0MjVjN05wRXIwTzhKWi1OWXlBZm0zWXdqZ0tNU2ZnYXBCZWgtc2M3bE9tNTdwNE5mX0xNeVY1Q2xTdDg"
-    },
-    {
-      "id": "83202bf46026",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-02T19:55:00Z",
-      "source": "The Hill",
-      "summary": "Hamilton calls Marshall medical debt video \u2018desperate\u2019 &nbsp;&nbsp; The Hill",
-      "title": "Hamilton calls Marshall medical debt video \u2018desperate\u2019",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQOG9hVmlCbzV3WEprUkwzaTJUOEF5eThwQUwtbkRBTmhCNl92T0pFU3FhU01PUEMtVlVWc3l4dHozRS05TU03eXVaV3lWeWp5cmhzX1ZOdjR0YW1KVXpuYWMzSWNxMHJlTUQtN29VaVBscU5SZFV1eTdkZkRtbENHMGd1cHJ3cmlybUo3azZ6Wm40NUXSAZgBQVVfeXFMT2tnWk9kdElIMjNocmVRT0JYWWduSWUxQk9BdDZkVzNfUUprTFRQOEwzVjBhZ245SzlMMWwtcndpOHlrSnpVUjhpbkxpUWtsQTVjNGZDZWtJZzVxU1RWMFByd1B5cXhzbU5vRkxRVjNOSURVdi1yajNrWTlCTVVBcTNDcGNvcjFPdklfQkloUjB4LWtMb29GSjY"
-    },
-    {
-      "id": "08f3e119a549",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-02T18:33:17Z",
-      "source": "Hays Post",
-      "summary": "\ud83c\udfa5Kansas Democrat Adam Hamilton woos Trump voters in new video &nbsp;&nbsp; Hays Post",
-      "title": "\ud83c\udfa5Kansas Democrat Adam Hamilton woos Trump voters in new video",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE05bFZ3WTl1UXVfX3dJYWZaX21qQUg2VU52LXZqS3RoeVNaLXNhLXlKY2xacDBOSm9yVjRMaU1FMVNJb3BHYW5Ia2g4Mmtid2tPOFF5QzlSUkFPMVBETTVldEhMd1daLXl2THJVWnI4OVU"
-    },
-    {
-      "id": "2771f52f096a",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-02T17:40:00Z",
-      "source": "Modern Ghana",
-      "summary": "LIVE: Democratic Kansas Senate candidate Adam Hamilton holds canvass launch &nbsp;&nbsp; Modern Ghana",
-      "title": "LIVE: Democratic Kansas Senate candidate Adam Hamilton holds canvass launch",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5MNmJNZU41SF9XM01MY1UyZmxsb29UWWVTeHpYVlJTamxLWDRBbEVoYlRnZmtBTkRTYkNuRWVhWjBCS1VmS0VNbUJKYVI0NnhrZ1R5dHRmZDZucjM5U3lz0gFcQVVfeXFMTWM3MjJ0dm10ZHlNbnR1M1VWVnh0dTM0VHR0Vm1Cc3NQZGFGaTBHczAzX1VvRDJBMmZydjJSSjBJQ0FpNGFsT0lSV3hfVGdlVllFVjRtdzRjbVRQdzA"
-    },
-    {
-      "id": "66b940f80fc1",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-11-02T17:24:16Z",
-      "source": "Hutch Post",
-      "summary": "Sen. Roger Marshall makes campaign stop in Hutchinson ahead of Election Day &nbsp;&nbsp; Hutch Post",
-      "title": "Sen. Roger Marshall makes campaign stop in Hutchinson ahead of Election Day",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE8wakpJLURBUHdpcy1hMUQyczlVWm5zRzlPZ3N6M3J1Yld2UUxERHZsSXR3ZmpoS2M3MmZpckFySEZfYTlVZjZyTGJ6YTNQQUxlbmJHSVkzR3g5RUlpYVVOZkFVdnRnSUdiVWwyUUZ3YzdBUQ"
-    },
-    {
-      "id": "df963782f123",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-11-02T16:44:54Z",
-      "source": "Washington Examiner",
-      "summary": "Roger Marshall: Union workers with a bass boat will never hand Kansas to Chuck Schumer &nbsp;&nbsp; Washington Examiner",
-      "title": "Roger Marshall: Union workers with a bass boat will never hand Kansas to Chuck Schumer",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQamR1WlM4V0xsaEtlZEVZaEltbjJ1RGtRWlhEcnZKQjVoTGpPV3Zzc3NTclloTERLSHhsMDd6WjVhc0I4U2NtRG9aeV94ak95QzNLMGFqYVNzZGRmemNTVWE0MElYWHljbkt4aWJuWlMzUnNTcGtuSHQ1QzE0N0d1a3hKWVhvN2VldGNoUnpaS2o4eVFfN29GTE9rOVZLczIzZmg0X09RdENfcEtyenFLdzJSU1AyMzNaS3g1UXhBZjlFQi1famc"
-    },
-    {
-      "id": "819d8ccca02e",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-02T14:40:50Z",
-      "source": "Action Network",
-      "summary": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (November Update) &nbsp;&nbsp; Action Network",
-      "title": "Kansas Senate Race & Kansas Governor Race 2026 | Hamilton vs Marshall Polls & Masterson vs Holscher Predictions (November Update)",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPNHhUUXRxeHdkb1lMZ0RvUF80WXlvVkFiN2pkZ2o0S0xTNGViNG5LWnF6X0cxUGxMZ21LZzU5bDA0S1hvMU1TVm1jTU9ZVk1LbWhQWGNORnJxVjh0b21Za0tlTUhkYjdOcmtmQTBld2tlYTdNeURLa3JyQmFreS15SGZ1UzcwSHJXaVhBeGhfa1pOb3Ixcl9lN29OU05aU192eC1RTjd2SWlzeTRRc1I0azBBRFhIWTZGTUpMNTZVVkxOWU0xVjhhaU9qUTZ5R2ladW81LTNlUG9wWUNLOHJsX2dLNnNJeVo2US1xNQ"
     }
   ],
   "schema_version": 1
