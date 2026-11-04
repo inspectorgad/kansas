@@ -180,13 +180,13 @@
     },
     {
       "county": "Edwards",
-      "hamilton_votes": 186,
-      "marshall_votes": 630,
-      "other_votes": 37,
-      "pct_reporting": 80.0,
-      "precincts_reporting": 12,
+      "hamilton_votes": 218,
+      "marshall_votes": 755,
+      "other_votes": 43,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
       "precincts_total": 15,
-      "total_votes": 816
+      "total_votes": 973
     },
     {
       "county": "Elk",
@@ -230,13 +230,13 @@
     },
     {
       "county": "Ford",
-      "hamilton_votes": 1840,
-      "marshall_votes": 1463,
-      "other_votes": 85,
-      "pct_reporting": 2.38,
-      "precincts_reporting": 1,
+      "hamilton_votes": 1852,
+      "marshall_votes": 1549,
+      "other_votes": 90,
+      "pct_reporting": 4.76,
+      "precincts_reporting": 2,
       "precincts_total": 42,
-      "total_votes": 3303
+      "total_votes": 3401
     },
     {
       "county": "Franklin",
@@ -290,13 +290,13 @@
     },
     {
       "county": "Hodgeman",
-      "hamilton_votes": 43,
-      "marshall_votes": 111,
-      "other_votes": 0,
-      "pct_reporting": 6.25,
-      "precincts_reporting": 1,
+      "hamilton_votes": 72,
+      "marshall_votes": 244,
+      "other_votes": 8,
+      "pct_reporting": 18.75,
+      "precincts_reporting": 3,
       "precincts_total": 16,
-      "total_votes": 154
+      "total_votes": 316
     },
     {
       "county": "Jackson",
@@ -390,13 +390,13 @@
     },
     {
       "county": "Lyon",
-      "hamilton_votes": 3610,
-      "marshall_votes": 2704,
-      "other_votes": 298,
-      "pct_reporting": 40.48,
-      "precincts_reporting": 17,
+      "hamilton_votes": 5811,
+      "marshall_votes": 4906,
+      "other_votes": 541,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 42,
       "precincts_total": 42,
-      "total_votes": 6314
+      "total_votes": 10717
     },
     {
       "county": "Marion",
@@ -467,6 +467,16 @@
       "precincts_reporting": 1,
       "precincts_total": 31,
       "total_votes": 584
+    },
+    {
+      "county": "Neosho",
+      "hamilton_votes": 1674,
+      "marshall_votes": 2949,
+      "other_votes": 278,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 43,
+      "precincts_total": 43,
+      "total_votes": 4623
     },
     {
       "county": "Osage",
@@ -669,25 +679,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T02:57:52.370866Z",
-  "last_updated": "2026-11-04T02:56:00Z",
-  "pct_reporting": 36.73,
-  "precincts_reporting": 1531,
+  "generated_at": "2026-11-04T02:59:52.985579Z",
+  "last_updated": "2026-11-04T02:58:00Z",
+  "pct_reporting": 38.51,
+  "precincts_reporting": 1605,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 58.99,
-      "votes": 410095
+      "pct": 58.76,
+      "votes": 414043
     },
     {
       "candidate_id": "marshall",
-      "pct": 41.01,
-      "votes": 285047
+      "pct": 41.24,
+      "votes": 290542
     }
   ],
   "status": "live",
-  "total_votes": 695142
+  "total_votes": 704585
 }
