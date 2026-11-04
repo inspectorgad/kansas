@@ -300,13 +300,13 @@
     },
     {
       "county": "Reno",
-      "hamilton_votes": 4346,
-      "marshall_votes": 3971,
-      "other_votes": 247,
-      "pct_reporting": 1.12,
-      "precincts_reporting": 1,
+      "hamilton_votes": 7212,
+      "marshall_votes": 8147,
+      "other_votes": 577,
+      "pct_reporting": 56.18,
+      "precincts_reporting": 50,
       "precincts_total": 89,
-      "total_votes": 8317
+      "total_votes": 15359
     },
     {
       "county": "Riley",
@@ -389,25 +389,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T01:53:52.180609Z",
-  "last_updated": "2026-11-04T01:52:00Z",
-  "pct_reporting": 1.61,
-  "precincts_reporting": 67,
+  "generated_at": "2026-11-04T01:55:52.850952Z",
+  "last_updated": "2026-11-04T01:54:00Z",
+  "pct_reporting": 2.78,
+  "precincts_reporting": 116,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 64.99,
-      "votes": 274729
+      "pct": 64.6,
+      "votes": 277595
     },
     {
       "candidate_id": "marshall",
-      "pct": 35.01,
-      "votes": 147971
+      "pct": 35.4,
+      "votes": 152147
     }
   ],
   "status": "live",
-  "total_votes": 422700
+  "total_votes": 429742
 }
