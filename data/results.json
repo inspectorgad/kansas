@@ -900,13 +900,13 @@
     },
     {
       "county": "Sheridan",
-      "hamilton_votes": 79,
-      "marshall_votes": 511,
-      "other_votes": 21,
-      "pct_reporting": 88.24,
-      "precincts_reporting": 15,
+      "hamilton_votes": 137,
+      "marshall_votes": 869,
+      "other_votes": 41,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 17,
       "precincts_total": 17,
-      "total_votes": 590
+      "total_votes": 1006
     },
     {
       "county": "Sherman",
@@ -1059,25 +1059,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T06:58:28.608267Z",
-  "last_updated": "2026-11-04T06:56:00Z",
-  "pct_reporting": 99.95,
-  "precincts_reporting": 4166,
+  "generated_at": "2026-11-04T07:00:28.538128Z",
+  "last_updated": "2026-11-04T06:58:00Z",
+  "pct_reporting": 100.0,
+  "precincts_reporting": 4168,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 52.52,
-      "votes": 556356
+      "pct": 52.51,
+      "votes": 556414
     },
     {
       "candidate_id": "marshall",
-      "pct": 47.48,
-      "votes": 502872
+      "pct": 47.49,
+      "votes": 503230
     }
   ],
   "status": "live",
-  "total_votes": 1059228
+  "total_votes": 1059644
 }
