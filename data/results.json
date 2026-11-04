@@ -109,6 +109,16 @@
       "total_votes": 1067
     },
     {
+      "county": "Cherokee",
+      "hamilton_votes": 1863,
+      "marshall_votes": 3851,
+      "other_votes": 330,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 36,
+      "precincts_total": 36,
+      "total_votes": 5714
+    },
+    {
       "county": "Cheyenne",
       "hamilton_votes": 219,
       "marshall_votes": 792,
@@ -840,13 +850,13 @@
     },
     {
       "county": "Sedgwick",
-      "hamilton_votes": 94033,
-      "marshall_votes": 80149,
-      "other_votes": 4418,
-      "pct_reporting": 94.09,
-      "precincts_reporting": 525,
+      "hamilton_votes": 95151,
+      "marshall_votes": 81533,
+      "other_votes": 4480,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 558,
       "precincts_total": 558,
-      "total_votes": 174182
+      "total_votes": 176684
     },
     {
       "county": "Seward",
@@ -1019,25 +1029,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:29:52.330149Z",
-  "last_updated": "2026-11-04T04:28:00Z",
-  "pct_reporting": 87.02,
-  "precincts_reporting": 3627,
+  "generated_at": "2026-11-04T04:31:52.750915Z",
+  "last_updated": "2026-11-04T04:29:00Z",
+  "pct_reporting": 88.68,
+  "precincts_reporting": 3696,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.67,
-      "votes": 539709
+      "pct": 53.53,
+      "votes": 542690
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.33,
-      "votes": 465958
+      "pct": 46.47,
+      "votes": 471193
     }
   ],
   "status": "live",
-  "total_votes": 1005667
+  "total_votes": 1013883
 }
