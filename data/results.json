@@ -410,13 +410,13 @@
     },
     {
       "county": "Jewell",
-      "hamilton_votes": 72,
-      "marshall_votes": 204,
-      "other_votes": 11,
-      "pct_reporting": 3.85,
-      "precincts_reporting": 1,
+      "hamilton_votes": 187,
+      "marshall_votes": 960,
+      "other_votes": 51,
+      "pct_reporting": 96.15,
+      "precincts_reporting": 25,
       "precincts_total": 26,
-      "total_votes": 276
+      "total_votes": 1147
     },
     {
       "county": "Johnson",
@@ -740,13 +740,13 @@
     },
     {
       "county": "Rooks",
-      "hamilton_votes": 109,
-      "marshall_votes": 251,
-      "other_votes": 14,
-      "pct_reporting": 6.67,
-      "precincts_reporting": 1,
+      "hamilton_votes": 133,
+      "marshall_votes": 346,
+      "other_votes": 18,
+      "pct_reporting": 20.0,
+      "precincts_reporting": 3,
       "precincts_total": 15,
-      "total_votes": 360
+      "total_votes": 479
     },
     {
       "county": "Rush",
@@ -959,25 +959,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:51:52.722261Z",
-  "last_updated": "2026-11-04T03:50:00Z",
-  "pct_reporting": 78.21,
-  "precincts_reporting": 3260,
+  "generated_at": "2026-11-04T03:53:52.634180Z",
+  "last_updated": "2026-11-04T03:52:00Z",
+  "pct_reporting": 78.84,
+  "precincts_reporting": 3286,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 54.3,
-      "votes": 514574
+      "pct": 54.25,
+      "votes": 514713
     },
     {
       "candidate_id": "marshall",
-      "pct": 45.7,
-      "votes": 433151
+      "pct": 45.75,
+      "votes": 434002
     }
   ],
   "status": "live",
-  "total_votes": 947725
+  "total_votes": 948715
 }
