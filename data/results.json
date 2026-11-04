@@ -20,13 +20,13 @@
     },
     {
       "county": "Barton",
-      "hamilton_votes": 0,
-      "marshall_votes": 0,
-      "other_votes": 0,
+      "hamilton_votes": 1098,
+      "marshall_votes": 1700,
+      "other_votes": 70,
       "pct_reporting": 2.44,
       "precincts_reporting": 1,
       "precincts_total": 41,
-      "total_votes": 0
+      "total_votes": 2798
     },
     {
       "county": "Brown",
@@ -359,6 +359,16 @@
       "total_votes": 568
     },
     {
+      "county": "Trego",
+      "hamilton_votes": 127,
+      "marshall_votes": 328,
+      "other_votes": 28,
+      "pct_reporting": 9.09,
+      "precincts_reporting": 1,
+      "precincts_total": 11,
+      "total_votes": 455
+    },
+    {
       "county": "Wabaunsee",
       "hamilton_votes": 402,
       "marshall_votes": 470,
@@ -379,25 +389,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T01:51:52.706406Z",
-  "last_updated": "2026-11-04T01:50:00Z",
-  "pct_reporting": 1.58,
-  "precincts_reporting": 66,
+  "generated_at": "2026-11-04T01:53:52.180609Z",
+  "last_updated": "2026-11-04T01:52:00Z",
+  "pct_reporting": 1.61,
+  "precincts_reporting": 67,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 65.21,
-      "votes": 273504
+      "pct": 64.99,
+      "votes": 274729
     },
     {
       "candidate_id": "marshall",
-      "pct": 34.79,
-      "votes": 145943
+      "pct": 35.01,
+      "votes": 147971
     }
   ],
   "status": "live",
-  "total_votes": 419447
+  "total_votes": 422700
 }
