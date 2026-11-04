@@ -840,13 +840,13 @@
     },
     {
       "county": "Saline",
-      "hamilton_votes": 8076,
-      "marshall_votes": 10910,
-      "other_votes": 596,
-      "pct_reporting": 98.25,
-      "precincts_reporting": 56,
+      "hamilton_votes": 8108,
+      "marshall_votes": 10919,
+      "other_votes": 599,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 57,
       "precincts_total": 57,
-      "total_votes": 18986
+      "total_votes": 19027
     },
     {
       "county": "Scott",
@@ -1049,10 +1049,10 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T06:04:12.326398Z",
-  "last_updated": "2026-11-04T06:03:00Z",
-  "pct_reporting": 99.14,
-  "precincts_reporting": 4132,
+  "generated_at": "2026-11-04T06:06:12.059787Z",
+  "last_updated": "2026-11-04T06:05:00Z",
+  "pct_reporting": 99.16,
+  "precincts_reporting": 4133,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
@@ -1060,14 +1060,14 @@
     {
       "candidate_id": "hamilton",
       "pct": 52.59,
-      "votes": 555415
+      "votes": 555447
     },
     {
       "candidate_id": "marshall",
       "pct": 47.41,
-      "votes": 500769
+      "votes": 500778
     }
   ],
   "status": "live",
-  "total_votes": 1056184
+  "total_votes": 1056225
 }
