@@ -202,7 +202,7 @@
       "county": "Franklin",
       "hamilton_votes": 3022,
       "marshall_votes": 3703,
-      "other_votes": 3047,
+      "other_votes": 307,
       "pct_reporting": 60.0,
       "precincts_reporting": 15,
       "precincts_total": 25,
@@ -251,12 +251,12 @@
     {
       "county": "Kiowa",
       "hamilton_votes": 119,
-      "marshall_votes": 70,
-      "other_votes": 3,
+      "marshall_votes": 331,
+      "other_votes": 25,
       "pct_reporting": 60.0,
       "precincts_reporting": 3,
       "precincts_total": 5,
-      "total_votes": 189
+      "total_votes": 450
     },
     {
       "county": "Labette",
@@ -479,8 +479,8 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:11:52.964914Z",
-  "last_updated": "2026-11-04T02:10:00Z",
+  "generated_at": "2026-11-04T02:13:52.546334Z",
+  "last_updated": "2026-11-04T02:12:00Z",
   "pct_reporting": 7.65,
   "precincts_reporting": 319,
   "precincts_total": 4168,
@@ -489,15 +489,15 @@
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 63.01,
+      "pct": 62.97,
       "votes": 296641
     },
     {
       "candidate_id": "marshall",
-      "pct": 36.99,
-      "votes": 174167
+      "pct": 37.03,
+      "votes": 174428
     }
   ],
   "status": "live",
-  "total_votes": 470808
+  "total_votes": 471069
 }
