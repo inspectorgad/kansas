@@ -110,13 +110,13 @@
     },
     {
       "county": "Crawford",
-      "hamilton_votes": 1336,
-      "marshall_votes": 712,
-      "other_votes": 64,
-      "pct_reporting": 1.75,
-      "precincts_reporting": 1,
+      "hamilton_votes": 3780,
+      "marshall_votes": 3962,
+      "other_votes": 401,
+      "pct_reporting": 68.42,
+      "precincts_reporting": 39,
       "precincts_total": 57,
-      "total_votes": 2048
+      "total_votes": 7742
     },
     {
       "county": "Doniphan",
@@ -130,13 +130,13 @@
     },
     {
       "county": "Douglas",
-      "hamilton_votes": 21128,
-      "marshall_votes": 3826,
-      "other_votes": 379,
-      "pct_reporting": 0.98,
-      "precincts_reporting": 1,
+      "hamilton_votes": 24917,
+      "marshall_votes": 4972,
+      "other_votes": 518,
+      "pct_reporting": 20.59,
+      "precincts_reporting": 21,
       "precincts_total": 102,
-      "total_votes": 24954
+      "total_votes": 29889
     },
     {
       "county": "Edwards",
@@ -219,6 +219,16 @@
       "total_votes": 5315
     },
     {
+      "county": "Hodgeman",
+      "hamilton_votes": 43,
+      "marshall_votes": 111,
+      "other_votes": 0,
+      "pct_reporting": 6.25,
+      "precincts_reporting": 1,
+      "precincts_total": 16,
+      "total_votes": 154
+    },
+    {
       "county": "Jackson",
       "hamilton_votes": 706,
       "marshall_votes": 686,
@@ -287,6 +297,16 @@
       "precincts_reporting": 1,
       "precincts_total": 51,
       "total_votes": 9775
+    },
+    {
+      "county": "Linn",
+      "hamilton_votes": 691,
+      "marshall_votes": 2115,
+      "other_votes": 126,
+      "pct_reporting": 80.0,
+      "precincts_reporting": 8,
+      "precincts_total": 10,
+      "total_votes": 2806
     },
     {
       "county": "Lyon",
@@ -529,25 +549,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:23:52.521820Z",
-  "last_updated": "2026-11-04T02:22:00Z",
-  "pct_reporting": 11.13,
-  "precincts_reporting": 464,
+  "generated_at": "2026-11-04T02:25:53.149852Z",
+  "last_updated": "2026-11-04T02:24:00Z",
+  "pct_reporting": 12.74,
+  "precincts_reporting": 531,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 61.77,
-      "votes": 310049
+      "pct": 61.49,
+      "votes": 317016
     },
     {
       "candidate_id": "marshall",
-      "pct": 38.23,
-      "votes": 191925
+      "pct": 38.51,
+      "votes": 198547
     }
   ],
   "status": "live",
-  "total_votes": 501974
+  "total_votes": 515563
 }
