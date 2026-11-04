@@ -630,13 +630,13 @@
     },
     {
       "county": "Montgomery",
-      "hamilton_votes": 668,
-      "marshall_votes": 785,
-      "other_votes": 35,
-      "pct_reporting": 1.11,
-      "precincts_reporting": 1,
+      "hamilton_votes": 2897,
+      "marshall_votes": 5716,
+      "other_votes": 398,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 90,
       "precincts_total": 90,
-      "total_votes": 1453
+      "total_votes": 8613
     },
     {
       "county": "Morris",
@@ -1049,25 +1049,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T05:17:52.343410Z",
-  "last_updated": "2026-11-04T05:16:00Z",
-  "pct_reporting": 95.23,
-  "precincts_reporting": 3969,
+  "generated_at": "2026-11-04T05:19:52.808631Z",
+  "last_updated": "2026-11-04T05:18:00Z",
+  "pct_reporting": 97.36,
+  "precincts_reporting": 4058,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 52.83,
-      "votes": 552517
+      "pct": 52.69,
+      "votes": 554746
     },
     {
       "candidate_id": "marshall",
-      "pct": 47.17,
-      "votes": 493245
+      "pct": 47.31,
+      "votes": 498176
     }
   ],
   "status": "live",
-  "total_votes": 1045762
+  "total_votes": 1052922
 }
