@@ -429,14 +429,24 @@
       "total_votes": 21190
     },
     {
+      "county": "Lincoln",
+      "hamilton_votes": 271,
+      "marshall_votes": 977,
+      "other_votes": 40,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 22,
+      "precincts_total": 22,
+      "total_votes": 1248
+    },
+    {
       "county": "Linn",
-      "hamilton_votes": 691,
-      "marshall_votes": 2115,
-      "other_votes": 126,
-      "pct_reporting": 80.0,
-      "precincts_reporting": 8,
+      "hamilton_votes": 875,
+      "marshall_votes": 2595,
+      "other_votes": 150,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 10,
       "precincts_total": 10,
-      "total_votes": 2806
+      "total_votes": 3470
     },
     {
       "county": "Lyon",
@@ -731,12 +741,12 @@
     {
       "county": "Sumner",
       "hamilton_votes": 882,
-      "marshall_votes": 0,
-      "other_votes": 0,
+      "marshall_votes": 1059,
+      "other_votes": 73,
       "pct_reporting": 2.0,
       "precincts_reporting": 1,
       "precincts_total": 50,
-      "total_votes": 882
+      "total_votes": 1941
     },
     {
       "county": "Thomas",
@@ -799,25 +809,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:15:52.624856Z",
-  "last_updated": "2026-11-04T03:14:00Z",
-  "pct_reporting": 54.8,
-  "precincts_reporting": 2284,
+  "generated_at": "2026-11-04T03:17:52.069008Z",
+  "last_updated": "2026-11-04T03:16:00Z",
+  "pct_reporting": 55.37,
+  "precincts_reporting": 2308,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 57.06,
-      "votes": 452642
+      "pct": 56.91,
+      "votes": 453097
     },
     {
       "candidate_id": "marshall",
-      "pct": 42.94,
-      "votes": 340584
+      "pct": 43.09,
+      "votes": 343100
     }
   ],
   "status": "live",
-  "total_votes": 793226
+  "total_votes": 796197
 }
