@@ -369,6 +369,16 @@
       "total_votes": 424
     },
     {
+      "county": "Greenwood",
+      "hamilton_votes": 138,
+      "marshall_votes": 256,
+      "other_votes": 12,
+      "pct_reporting": 5.56,
+      "precincts_reporting": 1,
+      "precincts_total": 18,
+      "total_votes": 394
+    },
+    {
       "county": "Hamilton",
       "hamilton_votes": 133,
       "marshall_votes": 413,
@@ -1039,25 +1049,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:43:52.700165Z",
-  "last_updated": "2026-11-04T04:42:00Z",
-  "pct_reporting": 91.48,
-  "precincts_reporting": 3813,
+  "generated_at": "2026-11-04T04:45:52.664765Z",
+  "last_updated": "2026-11-04T04:44:00Z",
+  "pct_reporting": 91.51,
+  "precincts_reporting": 3814,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.27,
-      "votes": 544180
+      "pct": 53.26,
+      "votes": 544318
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.73,
-      "votes": 477458
+      "pct": 46.74,
+      "votes": 477714
     }
   ],
   "status": "live",
-  "total_votes": 1021638
+  "total_votes": 1022032
 }
