@@ -24,8 +24,11 @@ be closed quickly, and AP's paid Elections API remains the documented fallback.
 from __future__ import annotations
 
 import json
+import random
 import re
 from dataclasses import dataclass, field
+from datetime import UTC, datetime
+from zoneinfo import ZoneInfo
 
 from config import KS_ENR_BASE, KS_ENR_FALLBACK
 from fetch import SourceError, get_text
@@ -98,6 +101,10 @@ class ResultsData:
     source_url: str | None = None
     # The heading of the contest the numbers came from, for the probe log.
     contest: str | None = None
+    # The source page's own "Last Updated" time, not when we read it. A cached
+    # copy can be 45 minutes old and still parse perfectly, so this is the only
+    # honest answer to "how current are these numbers?".
+    last_updated: datetime | None = None
     probes: list[ResultsProbe] = field(default_factory=list)
     attribution: list[Attribution] = field(default_factory=lambda: [ATTRIBUTION])
 
@@ -657,6 +664,48 @@ def implausible(data: ResultsData) -> str | None:
     return None
 
 
+# --- reaching past the CDN -----------------------------------------------------
+#
+# kssos.org is served through CloudFront. On election night the cached copy
+# was 45 minutes old — "Last Updated 6:46 PM", zero votes — while the origin
+# had 156,000 votes counted. CloudFront ignores query strings and client
+# no-cache headers here, but keys its cache on the exact path, while the origin
+# (IIS) matches paths case-insensitively. A path with a fresh capitalisation is
+# therefore a cache miss served by the origin. One request per pass, the same
+# load as one reader pressing reload.
+
+def _origin_url(url: str, rng: random.Random | None = None) -> str:
+    """The same URL with the file name's letters randomly re-cased."""
+    rng = rng or random.Random()
+    head, _, name = url.rpartition("/")
+    for _ in range(20):
+        varied = "".join(c.upper() if c.isalpha() and rng.random() < 0.5 else c.lower() for c in name)
+        if varied != name:
+            return f"{head}/{varied}"
+    return f"{head}/{name.upper()}"
+
+
+PAGE_STAMP = re.compile(
+    r"last\s+updated\s*:?\s*(\d{1,2})/(\d{1,2})/(\d{4})\s+(\d{1,2}):(\d{2})\s*([ap])\.?m\.?",
+    re.IGNORECASE,
+)
+KANSAS_TIME = ZoneInfo("America/Chicago")
+
+
+def page_last_updated(html: str) -> datetime | None:
+    """The page's own "Last Updated: 11/03/2026 7:32 PM" (Central), in UTC."""
+    match = PAGE_STAMP.search(TAG.sub(" ", html))
+    if not match:
+        return None
+    month, day, year, hour, minute, half = match.groups()
+    hour = int(hour) % 12 + (12 if half.lower() == "p" else 0)
+    try:
+        local = datetime(int(year), int(month), int(day), hour, int(minute), tzinfo=KANSAS_TIME)
+    except ValueError:
+        return None
+    return local.astimezone(UTC)
+
+
 def probe(url: str | None = None) -> ResultsData:
     """Try each known shape against the ENR page, recording what happened."""
     data = ResultsData()
@@ -686,8 +735,9 @@ def probe(url: str | None = None) -> ResultsData:
         )
 
     for page_url in (base + "/", KS_ENR_FALLBACK):
+        fetch_url = _origin_url(page_url) if page_url == KS_ENR_FALLBACK else page_url
         try:
-            html = get_text(page_url)
+            html = get_text(fetch_url)
         except SourceError as exc:
             data.probes.append(ResultsProbe("html", False, f"{page_url}: {exc}"))
             continue
@@ -715,7 +765,10 @@ def probe(url: str | None = None) -> ResultsData:
                     if reporting is not None and total:
                         parsed.pct_reporting = round(reporting / total * 100, 2)
 
+                parsed.last_updated = page_last_updated(html)
                 where = f"{page_url} [{parsed.contest}]" if parsed.contest else page_url
+                if parsed.last_updated:
+                    where += f" (page updated {parsed.last_updated.isoformat()})"
                 reason = implausible(parsed)
                 if reason:
                     data.probes.append(
@@ -872,5 +925,10 @@ def collect(url: str | None = None) -> ResultsData:
     if not data.statewide:
         # Before 5pm on election day there is genuinely nothing to report, so a
         # dormant file is the correct output rather than an error.
+        data.status = ResultsStatus.PENDING
+    elif sum(row.votes for row in data.statewide) == 0:
+        # The page lists the contest at 0-0 from the morning on. That is not a
+        # count in progress, and "live" fires the app's one-time results
+        # notification — it went out at 9:39am CT on election day.
         data.status = ResultsStatus.PENDING
     return data

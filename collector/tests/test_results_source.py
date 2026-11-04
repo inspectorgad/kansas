@@ -389,7 +389,7 @@ class TestKssosRaceBlocks:
         html = self._general()
 
         def fake_get_text(url, params=None):
-            if url == results.KS_ENR_FALLBACK:
+            if url.lower() == results.KS_ENR_FALLBACK.lower():
                 return html
             raise SourceError("HTTP 403 Forbidden")
 
@@ -422,7 +422,7 @@ class TestKssosRaceBlocks:
         )
 
         def fake_get_text(url, params=None):
-            if url == results.KS_ENR_FALLBACK:
+            if url.lower() == results.KS_ENR_FALLBACK.lower():
                 return html
             raise SourceError("HTTP 403 Forbidden")
 
@@ -468,3 +468,111 @@ class TestRaceBlockSummaries:
         assert lines[1].startswith("United States Senate (R): marshall=266,129")
         assert "counties 1/105 (marshall counties sum 1,191 != statewide 266,129)" in lines[1]
         assert "Allen M1,191/H0/other300 (22/22)" in lines[1]
+
+
+class TestElectionNightCacheFixes:
+    """kssos.org sits behind CloudFront; on election night the cached copy was 45
+    minutes old (6:46 PM, zero votes) while the origin had 156,000 counted."""
+
+    def test_the_origin_url_differs_only_in_case(self):
+        import random
+
+        from sources.results import KS_ENR_FALLBACK, _origin_url
+
+        seen = set()
+        for seed in range(20):
+            varied = _origin_url(KS_ENR_FALLBACK, random.Random(seed))
+            assert varied != KS_ENR_FALLBACK
+            assert varied.lower() == KS_ENR_FALLBACK.lower()
+            # Only the file name changes; the host and directory are untouched.
+            assert varied.rsplit("/", 1)[0] == KS_ENR_FALLBACK.rsplit("/", 1)[0]
+            seen.add(varied)
+        assert len(seen) > 10, "each pass must be a fresh cache key"
+
+    def test_the_page_stamp_is_read_as_central_time(self):
+        from datetime import UTC, datetime
+
+        from sources.results import page_last_updated
+
+        stamp = page_last_updated("<p>Results - All Races Last Updated: 11/03/2026 7:32 PM COUNTIES</p>")
+        assert stamp == datetime(2026, 11, 4, 1, 32, tzinfo=UTC)
+        assert page_last_updated("<p>Last Updated: 11/03/2026 12:05 AM</p>") == datetime(2026, 11, 3, 6, 5, tzinfo=UTC)
+        assert page_last_updated("<p>no stamp here</p>") is None
+
+    def _serve(self, monkeypatch, html):
+        import sources.results as results
+        from fetch import SourceError
+
+        fetched = []
+
+        def fake_get_text(url, params=None):
+            fetched.append(url)
+            if url.lower() == results.KS_ENR_FALLBACK.lower():
+                return html
+            raise SourceError("HTTP 403 Forbidden")
+
+        monkeypatch.setattr(results, "get_text", fake_get_text)
+        return results, fetched
+
+    def _page(self, marshall, hamilton, stamp="11/03/2026 7:32 PM"):
+        from tests.kssos_markup import page, race
+
+        return page(
+            race("United States Senate", 300, 4168, [("R-Roger Marshall", marshall, 40), ("D-Adam Hamilton", hamilton, 58)], [])
+        ).replace("11/03/2026 9:40 PM", stamp)
+
+    def test_the_fallback_page_is_fetched_past_the_cache(self, monkeypatch):
+        results, fetched = self._serve(monkeypatch, self._page(64_330, 92_146))
+        data = results.collect()
+        page_fetches = [u for u in fetched if u.lower() == results.KS_ENR_FALLBACK.lower()]
+        assert page_fetches and all(u != results.KS_ENR_FALLBACK for u in page_fetches)
+        assert data.source_url == results.KS_ENR_FALLBACK  # attribution keeps the real URL
+        assert data.status == "live"
+        assert data.last_updated.isoformat() == "2026-11-04T01:32:00+00:00"
+
+    def test_a_zero_zero_page_is_pending_not_live(self, monkeypatch):
+        """"live" fires the app's one-time notification; it went out at 9:39am CT."""
+        results, _ = self._serve(monkeypatch, self._page(0, 0, "11/03/2026 6:46 PM"))
+        data = results.collect()
+        assert data.statewide and data.status == "pending"
+
+
+class TestResultsNeverGoBackwards:
+    def _run(self, monkeypatch, tmp_path, published, page_stamp, votes=(64_330, 92_146)):
+        import json
+        from datetime import datetime
+
+        import run
+        import sources.results as results
+        from schemas.results import CandidateResult
+
+        (tmp_path / "results.json").write_text(json.dumps(published))
+
+        def fake_collect():
+            data = results.ResultsData(status="live")
+            data.statewide = [CandidateResult(candidate_id="marshall", votes=votes[0]),
+                              CandidateResult(candidate_id="hamilton", votes=votes[1])]
+            data.total_votes = sum(votes)
+            data.last_updated = datetime.fromisoformat(page_stamp)
+            return data
+
+        monkeypatch.setattr(results, "collect", fake_collect)
+        return run.collect_results(run.RunReport(started_at=datetime.now()), str(tmp_path))
+
+    def test_an_older_page_does_not_replace_a_newer_count(self, monkeypatch, tmp_path):
+        from fetch import SourceError
+
+        published = {"total_votes": 156_476, "last_updated": "2026-11-04T01:32:00Z"}
+        with pytest.raises(SourceError, match="older than the published file"):
+            self._run(monkeypatch, tmp_path, published, "2026-11-04T00:46:00+00:00")
+
+    def test_a_newer_page_publishes_with_its_own_stamp(self, monkeypatch, tmp_path):
+        published = {"total_votes": 156_476, "last_updated": "2026-11-04T01:32:00Z"}
+        payload = self._run(monkeypatch, tmp_path, published, "2026-11-04T01:40:00+00:00")
+        assert payload.last_updated.isoformat() == "2026-11-04T01:40:00+00:00"
+
+    def test_a_zero_vote_file_from_the_old_code_does_not_block(self, monkeypatch, tmp_path):
+        """Old files stamped the fetch time, which can look newer than the page."""
+        published = {"total_votes": 0, "last_updated": "2026-11-04T01:48:00Z"}
+        payload = self._run(monkeypatch, tmp_path, published, "2026-11-04T01:44:00+00:00")
+        assert payload.total_votes == 156_476
