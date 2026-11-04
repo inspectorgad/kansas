@@ -230,13 +230,13 @@
     },
     {
       "county": "Ellsworth",
-      "hamilton_votes": 263,
-      "marshall_votes": 322,
-      "other_votes": 23,
-      "pct_reporting": 3.85,
-      "precincts_reporting": 1,
+      "hamilton_votes": 698,
+      "marshall_votes": 1457,
+      "other_votes": 83,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 26,
       "precincts_total": 26,
-      "total_votes": 585
+      "total_votes": 2155
     },
     {
       "county": "Finney",
@@ -380,13 +380,13 @@
     },
     {
       "county": "Jewell",
-      "hamilton_votes": 71,
-      "marshall_votes": 200,
-      "other_votes": 10,
+      "hamilton_votes": 72,
+      "marshall_votes": 204,
+      "other_votes": 11,
       "pct_reporting": 3.85,
       "precincts_reporting": 1,
       "precincts_total": 26,
-      "total_votes": 271
+      "total_votes": 276
     },
     {
       "county": "Johnson",
@@ -700,13 +700,13 @@
     },
     {
       "county": "Rush",
-      "hamilton_votes": 117,
-      "marshall_votes": 231,
-      "other_votes": 4,
-      "pct_reporting": 7.69,
-      "precincts_reporting": 1,
+      "hamilton_votes": 232,
+      "marshall_votes": 561,
+      "other_votes": 37,
+      "pct_reporting": 30.77,
+      "precincts_reporting": 4,
       "precincts_total": 13,
-      "total_votes": 348
+      "total_votes": 793
     },
     {
       "county": "Russell",
@@ -899,25 +899,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:39:52.310486Z",
-  "last_updated": "2026-11-04T03:38:00Z",
-  "pct_reporting": 73.56,
-  "precincts_reporting": 3066,
+  "generated_at": "2026-11-04T03:41:52.793535Z",
+  "last_updated": "2026-11-04T03:40:00Z",
+  "pct_reporting": 74.23,
+  "precincts_reporting": 3094,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 55.29,
-      "votes": 500067
+      "pct": 55.23,
+      "votes": 500618
     },
     {
       "candidate_id": "marshall",
-      "pct": 44.71,
-      "votes": 404366
+      "pct": 44.77,
+      "votes": 405835
     }
   ],
   "status": "live",
-  "total_votes": 904433
+  "total_votes": 906453
 }
