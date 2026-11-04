@@ -768,9 +768,17 @@ def _cache_report(url: str) -> list[str]:
     from fetch import _client_or_create
 
     out = []
-    for label, params in (("plain", None), ("cache-busted", {"_": str(int(time.time()))})):
+    # CloudFront keys its cache on the exact path and ignored the query string;
+    # the origin (IIS, by its weak ETag) matches paths case-insensitively. One
+    # request on a differently-cased path shows what the origin itself holds.
+    origin_probe = url.replace("kssos_ent.html", "Kssos_Ent.html")
+    for label, target, params in (
+        ("plain", url, None),
+        ("cache-busted", url, {"_": str(int(time.time()))}),
+        ("origin (case-varied path)", origin_probe, None),
+    ):
         try:
-            response = _client_or_create().get(url, params=params, headers={"Cache-Control": "no-cache", "Pragma": "no-cache"})
+            response = _client_or_create().get(target, params=params, headers={"Cache-Control": "no-cache", "Pragma": "no-cache"})
         except httpx.HTTPError as exc:
             out.append(f"  {label}: {exc}")
             continue
