@@ -203,8 +203,8 @@
       "hamilton_votes": 3842,
       "marshall_votes": 6463,
       "other_votes": 319,
-      "pct_reporting": 54.84,
-      "precincts_reporting": 17,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
       "precincts_total": 31,
       "total_votes": 10305
     },
@@ -240,13 +240,13 @@
     },
     {
       "county": "Franklin",
-      "hamilton_votes": 3022,
-      "marshall_votes": 3703,
-      "other_votes": 307,
-      "pct_reporting": 60.0,
-      "precincts_reporting": 15,
+      "hamilton_votes": 3396,
+      "marshall_votes": 4555,
+      "other_votes": 368,
+      "pct_reporting": 72.0,
+      "precincts_reporting": 18,
       "precincts_total": 25,
-      "total_votes": 6725
+      "total_votes": 7951
     },
     {
       "county": "Harvey",
@@ -369,6 +369,16 @@
       "total_votes": 1255
     },
     {
+      "county": "McPherson",
+      "hamilton_votes": 1236,
+      "marshall_votes": 1363,
+      "other_votes": 44,
+      "pct_reporting": 3.03,
+      "precincts_reporting": 1,
+      "precincts_total": 33,
+      "total_votes": 2599
+    },
+    {
       "county": "Meade",
       "hamilton_votes": 297,
       "marshall_votes": 1003,
@@ -440,13 +450,13 @@
     },
     {
       "county": "Ottawa",
-      "hamilton_votes": 411,
-      "marshall_votes": 1375,
-      "other_votes": 66,
-      "pct_reporting": 57.69,
-      "precincts_reporting": 15,
+      "hamilton_votes": 459,
+      "marshall_votes": 1680,
+      "other_votes": 76,
+      "pct_reporting": 88.46,
+      "precincts_reporting": 23,
       "precincts_total": 26,
-      "total_votes": 1786
+      "total_votes": 2139
     },
     {
       "county": "Phillips",
@@ -580,13 +590,13 @@
     },
     {
       "county": "Washington",
-      "hamilton_votes": 217,
-      "marshall_votes": 1083,
-      "other_votes": 51,
-      "pct_reporting": 74.07,
-      "precincts_reporting": 20,
+      "hamilton_votes": 249,
+      "marshall_votes": 1318,
+      "other_votes": 60,
+      "pct_reporting": 96.3,
+      "precincts_reporting": 26,
       "precincts_total": 27,
-      "total_votes": 1300
+      "total_votes": 1567
     },
     {
       "county": "Wilson",
@@ -609,25 +619,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:33:52.816474Z",
-  "last_updated": "2026-11-04T02:32:00Z",
-  "pct_reporting": 26.87,
-  "precincts_reporting": 1120,
+  "generated_at": "2026-11-04T02:35:52.651814Z",
+  "last_updated": "2026-11-04T02:34:00Z",
+  "pct_reporting": 27.64,
+  "precincts_reporting": 1152,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.95,
-      "votes": 373569
+      "pct": 59.79,
+      "votes": 375259
     },
     {
       "candidate_id": "marshall",
-      "pct": 40.05,
-      "votes": 249585
+      "pct": 40.21,
+      "votes": 252340
     }
   ],
   "status": "live",
-  "total_votes": 623154
+  "total_votes": 627599
 }
