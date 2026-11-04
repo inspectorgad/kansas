@@ -249,6 +249,16 @@
       "total_votes": 7951
     },
     {
+      "county": "Harper",
+      "hamilton_votes": 169,
+      "marshall_votes": 283,
+      "other_votes": 9,
+      "pct_reporting": 6.67,
+      "precincts_reporting": 1,
+      "precincts_total": 15,
+      "total_votes": 452
+    },
+    {
       "county": "Harvey",
       "hamilton_votes": 5115,
       "marshall_votes": 4502,
@@ -619,25 +629,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:41:52.716908Z",
-  "last_updated": "2026-11-04T02:40:00Z",
-  "pct_reporting": 30.3,
-  "precincts_reporting": 1263,
+  "generated_at": "2026-11-04T02:43:51.867182Z",
+  "last_updated": "2026-11-04T02:42:00Z",
+  "pct_reporting": 30.33,
+  "precincts_reporting": 1264,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.12,
-      "votes": 383612
+      "pct": 59.11,
+      "votes": 383781
     },
     {
       "candidate_id": "marshall",
-      "pct": 40.88,
-      "votes": 265226
+      "pct": 40.89,
+      "votes": 265509
     }
   ],
   "status": "live",
-  "total_votes": 648838
+  "total_votes": 649290
 }
