@@ -740,13 +740,13 @@
     },
     {
       "county": "Phillips",
-      "hamilton_votes": 335,
-      "marshall_votes": 1528,
+      "hamilton_votes": 337,
+      "marshall_votes": 1532,
       "other_votes": 112,
-      "pct_reporting": 97.3,
-      "precincts_reporting": 36,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 37,
       "precincts_total": 37,
-      "total_votes": 1863
+      "total_votes": 1869
     },
     {
       "county": "Pottawatomie",
@@ -1059,10 +1059,10 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T06:30:11.813053Z",
-  "last_updated": "2026-11-04T06:28:00Z",
-  "pct_reporting": 99.93,
-  "precincts_reporting": 4165,
+  "generated_at": "2026-11-04T06:32:11.801341Z",
+  "last_updated": "2026-11-04T06:30:00Z",
+  "pct_reporting": 99.95,
+  "precincts_reporting": 4166,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
@@ -1070,14 +1070,14 @@
     {
       "candidate_id": "hamilton",
       "pct": 52.52,
-      "votes": 556354
+      "votes": 556356
     },
     {
       "candidate_id": "marshall",
       "pct": 47.48,
-      "votes": 502868
+      "votes": 502872
     }
   ],
   "status": "live",
-  "total_votes": 1059222
+  "total_votes": 1059228
 }
