@@ -751,6 +751,38 @@ DATA_REFS = re.compile(
 LAST_UPDATED = re.compile(r"last\s+updated[^<]{0,60}", re.IGNORECASE)
 
 
+CACHE_HEADERS = ("date", "last-modified", "age", "cache-control", "expires", "etag", "x-cache", "cf-cache-status", "server", "via")
+
+
+def _cache_report(url: str) -> list[str]:
+    """Fetch the page plainly and with a cache-busting query, and compare.
+
+    On election night the page served to runners still read "Last Updated
+    6:46 PM" and zero votes while AP showed 12% reporting, so the first question
+    is whether a cache in front of kssos.org is serving a stale copy.
+    """
+    import time
+
+    import httpx
+
+    from fetch import _client_or_create
+
+    out = []
+    for label, params in (("plain", None), ("cache-busted", {"_": str(int(time.time()))})):
+        try:
+            response = _client_or_create().get(url, params=params, headers={"Cache-Control": "no-cache", "Pragma": "no-cache"})
+        except httpx.HTTPError as exc:
+            out.append(f"  {label}: {exc}")
+            continue
+        text = response.text
+        stamps = sorted({re.sub(r"\s+", " ", m.group(0)).strip() for m in LAST_UPDATED.finditer(TAG.sub(" ", text))})
+        senate = [r for h, b in _race_blocks(text) if US_SENATE.search(h) for r in [_parse_senate_block(h, b)] if r]
+        votes = {row.candidate_id: row.votes for row in senate[0].statewide} if senate else None
+        headers = {k: response.headers[k] for k in CACHE_HEADERS if k in response.headers}
+        out.append(f"  {label}: HTTP {response.status_code} {len(text):,} bytes; stamp {stamps}; senate {votes}; headers {headers}")
+    return out
+
+
 def _page_report(url: str) -> list[str]:
     """What the fallback page says about itself, printed whether or not it parsed.
 
@@ -766,6 +798,7 @@ def _page_report(url: str) -> list[str]:
     except SourceError as exc:
         return [f"page report: {url}: {exc}"]
     lines = [f"page report: {url} ({len(html):,} bytes)"]
+    lines.extend(_cache_report(url))
     stamps = sorted({re.sub(r"\s+", " ", m.group(0)).strip() for m in LAST_UPDATED.finditer(TAG.sub(" ", html))})
     lines.append(f"  page timestamp(s): {stamps or 'none found'}")
     blocks = _race_blocks(html)
