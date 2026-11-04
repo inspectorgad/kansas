@@ -619,6 +619,16 @@
       "total_votes": 10266
     },
     {
+      "county": "Pratt",
+      "hamilton_votes": 1028,
+      "marshall_votes": 2128,
+      "other_votes": 130,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 18,
+      "precincts_total": 18,
+      "total_votes": 3156
+    },
+    {
       "county": "Rawlins",
       "hamilton_votes": 211,
       "marshall_votes": 828,
@@ -750,13 +760,13 @@
     },
     {
       "county": "Sumner",
-      "hamilton_votes": 882,
-      "marshall_votes": 1059,
-      "other_votes": 73,
-      "pct_reporting": 2.0,
-      "precincts_reporting": 1,
+      "hamilton_votes": 1560,
+      "marshall_votes": 2728,
+      "other_votes": 187,
+      "pct_reporting": 36.0,
+      "precincts_reporting": 18,
       "precincts_total": 50,
-      "total_votes": 1941
+      "total_votes": 4288
     },
     {
       "county": "Thomas",
@@ -829,25 +839,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:23:52.533000Z",
-  "last_updated": "2026-11-04T03:22:00Z",
-  "pct_reporting": 58.04,
-  "precincts_reporting": 2419,
+  "generated_at": "2026-11-04T03:25:52.884707Z",
+  "last_updated": "2026-11-04T03:24:00Z",
+  "pct_reporting": 58.88,
+  "precincts_reporting": 2454,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 56.55,
-      "votes": 458800
+      "pct": 56.38,
+      "votes": 460506
     },
     {
       "candidate_id": "marshall",
-      "pct": 43.45,
-      "votes": 352478
+      "pct": 43.62,
+      "votes": 356275
     }
   ],
   "status": "live",
-  "total_votes": 811278
+  "total_votes": 816781
 }
