@@ -110,13 +110,13 @@
     },
     {
       "county": "Coffey",
-      "hamilton_votes": 291,
-      "marshall_votes": 546,
-      "other_votes": 25,
-      "pct_reporting": 5.56,
-      "precincts_reporting": 1,
+      "hamilton_votes": 909,
+      "marshall_votes": 2223,
+      "other_votes": 163,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 18,
       "precincts_total": 18,
-      "total_votes": 837
+      "total_votes": 3132
     },
     {
       "county": "Comanche",
@@ -240,13 +240,13 @@
     },
     {
       "county": "Franklin",
-      "hamilton_votes": 3396,
-      "marshall_votes": 4555,
-      "other_votes": 368,
-      "pct_reporting": 72.0,
-      "precincts_reporting": 18,
+      "hamilton_votes": 3778,
+      "marshall_votes": 5541,
+      "other_votes": 436,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 25,
       "precincts_total": 25,
-      "total_votes": 7951
+      "total_votes": 9319
     },
     {
       "county": "Gove",
@@ -280,13 +280,13 @@
     },
     {
       "county": "Harper",
-      "hamilton_votes": 169,
-      "marshall_votes": 283,
-      "other_votes": 9,
-      "pct_reporting": 6.67,
-      "precincts_reporting": 1,
+      "hamilton_votes": 447,
+      "marshall_votes": 1328,
+      "other_votes": 66,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
       "precincts_total": 15,
-      "total_votes": 452
+      "total_votes": 1775
     },
     {
       "county": "Harvey",
@@ -739,25 +739,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:05:52.666498Z",
-  "last_updated": "2026-11-04T03:04:00Z",
-  "pct_reporting": 43.4,
-  "precincts_reporting": 1809,
+  "generated_at": "2026-11-04T03:07:52.156857Z",
+  "last_updated": "2026-11-04T03:06:00Z",
+  "pct_reporting": 44.31,
+  "precincts_reporting": 1847,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 57.83,
-      "votes": 419769
+      "pct": 57.61,
+      "votes": 421047
     },
     {
       "candidate_id": "marshall",
-      "pct": 42.17,
-      "votes": 306130
+      "pct": 42.39,
+      "votes": 309838
     }
   ],
   "status": "live",
-  "total_votes": 725899
+  "total_votes": 730885
 }
