@@ -610,13 +610,13 @@
     },
     {
       "county": "Mitchell",
-      "hamilton_votes": 506,
-      "marshall_votes": 1685,
-      "other_votes": 66,
-      "pct_reporting": 88.0,
-      "precincts_reporting": 22,
+      "hamilton_votes": 535,
+      "marshall_votes": 1851,
+      "other_votes": 70,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 25,
       "precincts_total": 25,
-      "total_votes": 2191
+      "total_votes": 2386
     },
     {
       "county": "Montgomery",
@@ -800,13 +800,13 @@
     },
     {
       "county": "Rooks",
-      "hamilton_votes": 133,
-      "marshall_votes": 346,
-      "other_votes": 18,
-      "pct_reporting": 20.0,
-      "precincts_reporting": 3,
+      "hamilton_votes": 369,
+      "marshall_votes": 1411,
+      "other_votes": 73,
+      "pct_reporting": 93.33,
+      "precincts_reporting": 14,
       "precincts_total": 15,
-      "total_votes": 479
+      "total_votes": 1780
     },
     {
       "county": "Rush",
@@ -1039,25 +1039,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:41:52.783961Z",
-  "last_updated": "2026-11-04T04:40:00Z",
-  "pct_reporting": 91.15,
-  "precincts_reporting": 3799,
+  "generated_at": "2026-11-04T04:43:52.700165Z",
+  "last_updated": "2026-11-04T04:42:00Z",
+  "pct_reporting": 91.48,
+  "precincts_reporting": 3813,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.32,
-      "votes": 543915
+      "pct": 53.27,
+      "votes": 544180
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.68,
-      "votes": 476227
+      "pct": 46.73,
+      "votes": 477458
     }
   ],
   "status": "live",
-  "total_votes": 1020142
+  "total_votes": 1021638
 }
