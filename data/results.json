@@ -240,13 +240,13 @@
     },
     {
       "county": "Finney",
-      "hamilton_votes": 1903,
-      "marshall_votes": 1437,
-      "other_votes": 103,
-      "pct_reporting": 1.41,
-      "precincts_reporting": 1,
+      "hamilton_votes": 4512,
+      "marshall_votes": 4313,
+      "other_votes": 290,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 71,
       "precincts_total": 71,
-      "total_votes": 3340
+      "total_votes": 8825
     },
     {
       "county": "Ford",
@@ -297,6 +297,16 @@
       "precincts_reporting": 3,
       "precincts_total": 3,
       "total_votes": 424
+    },
+    {
+      "county": "Hamilton",
+      "hamilton_votes": 133,
+      "marshall_votes": 413,
+      "other_votes": 29,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 12,
+      "precincts_total": 12,
+      "total_votes": 546
     },
     {
       "county": "Harper",
@@ -600,13 +610,13 @@
     },
     {
       "county": "Reno",
-      "hamilton_votes": 8020,
-      "marshall_votes": 10325,
-      "other_votes": 714,
-      "pct_reporting": 73.03,
-      "precincts_reporting": 65,
+      "hamilton_votes": 8675,
+      "marshall_votes": 12132,
+      "other_votes": 845,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 89,
       "precincts_total": 89,
-      "total_votes": 18345
+      "total_votes": 20807
     },
     {
       "county": "Riley",
@@ -789,25 +799,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:13:52.295721Z",
-  "last_updated": "2026-11-04T03:12:00Z",
-  "pct_reporting": 52.26,
-  "precincts_reporting": 2178,
+  "generated_at": "2026-11-04T03:15:52.624856Z",
+  "last_updated": "2026-11-04T03:14:00Z",
+  "pct_reporting": 54.8,
+  "precincts_reporting": 2284,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 57.25,
-      "votes": 449245
+      "pct": 57.06,
+      "votes": 452642
     },
     {
       "candidate_id": "marshall",
-      "pct": 42.75,
-      "votes": 335488
+      "pct": 42.94,
+      "votes": 340584
     }
   ],
   "status": "live",
-  "total_votes": 784733
+  "total_votes": 793226
 }
