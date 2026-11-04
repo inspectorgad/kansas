@@ -460,13 +460,13 @@
     },
     {
       "county": "Sedgwick",
-      "hamilton_votes": 55626,
-      "marshall_votes": 39732,
-      "other_votes": 1690,
-      "pct_reporting": 0.18,
-      "precincts_reporting": 1,
+      "hamilton_votes": 74455,
+      "marshall_votes": 57933,
+      "other_votes": 3007,
+      "pct_reporting": 37.46,
+      "precincts_reporting": 209,
       "precincts_total": 558,
-      "total_votes": 95358
+      "total_votes": 132388
     },
     {
       "county": "Seward",
@@ -487,6 +487,16 @@
       "precincts_reporting": 101,
       "precincts_total": 248,
       "total_votes": 40250
+    },
+    {
+      "county": "Sheridan",
+      "hamilton_votes": 26,
+      "marshall_votes": 120,
+      "other_votes": 2,
+      "pct_reporting": 5.88,
+      "precincts_reporting": 1,
+      "precincts_total": 17,
+      "total_votes": 146
     },
     {
       "county": "Stafford",
@@ -549,25 +559,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:25:53.149852Z",
-  "last_updated": "2026-11-04T02:24:00Z",
-  "pct_reporting": 12.74,
-  "precincts_reporting": 531,
+  "generated_at": "2026-11-04T02:27:52.879023Z",
+  "last_updated": "2026-11-04T02:26:00Z",
+  "pct_reporting": 17.75,
+  "precincts_reporting": 740,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 61.49,
-      "votes": 317016
+      "pct": 60.76,
+      "votes": 335871
     },
     {
       "candidate_id": "marshall",
-      "pct": 38.51,
-      "votes": 198547
+      "pct": 39.24,
+      "votes": 216868
     }
   ],
   "status": "live",
-  "total_votes": 515563
+  "total_votes": 552739
 }
