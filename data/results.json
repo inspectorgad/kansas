@@ -89,6 +89,16 @@
       "total_votes": 1049
     },
     {
+      "county": "Coffey",
+      "hamilton_votes": 291,
+      "marshall_votes": 546,
+      "other_votes": 25,
+      "pct_reporting": 5.56,
+      "precincts_reporting": 1,
+      "precincts_total": 18,
+      "total_votes": 837
+    },
+    {
       "county": "Comanche",
       "hamilton_votes": 43,
       "marshall_votes": 57,
@@ -150,13 +160,13 @@
     },
     {
       "county": "Ellis",
-      "hamilton_votes": 2892,
-      "marshall_votes": 4479,
-      "other_votes": 214,
-      "pct_reporting": 3.23,
-      "precincts_reporting": 1,
+      "hamilton_votes": 3842,
+      "marshall_votes": 6463,
+      "other_votes": 319,
+      "pct_reporting": 54.84,
+      "precincts_reporting": 17,
       "precincts_total": 31,
-      "total_votes": 7371
+      "total_votes": 10305
     },
     {
       "county": "Ellsworth",
@@ -167,6 +177,16 @@
       "precincts_reporting": 1,
       "precincts_total": 26,
       "total_votes": 585
+    },
+    {
+      "county": "Finney",
+      "hamilton_votes": 1903,
+      "marshall_votes": 1437,
+      "other_votes": 103,
+      "pct_reporting": 1.41,
+      "precincts_reporting": 1,
+      "precincts_total": 71,
+      "total_votes": 3340
     },
     {
       "county": "Ford",
@@ -240,13 +260,13 @@
     },
     {
       "county": "Labette",
-      "hamilton_votes": 439,
-      "marshall_votes": 367,
-      "other_votes": 32,
-      "pct_reporting": 2.63,
-      "precincts_reporting": 1,
+      "hamilton_votes": 2215,
+      "marshall_votes": 3332,
+      "other_votes": 257,
+      "pct_reporting": 97.37,
+      "precincts_reporting": 37,
       "precincts_total": 38,
-      "total_votes": 806
+      "total_votes": 5547
     },
     {
       "county": "Leavenworth",
@@ -379,6 +399,16 @@
       "total_votes": 348
     },
     {
+      "county": "Scott",
+      "hamilton_votes": 90,
+      "marshall_votes": 304,
+      "other_votes": 9,
+      "pct_reporting": 9.09,
+      "precincts_reporting": 1,
+      "precincts_total": 11,
+      "total_votes": 394
+    },
+    {
       "county": "Sedgwick",
       "hamilton_votes": 55626,
       "marshall_votes": 39732,
@@ -449,25 +479,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:07:52.577965Z",
-  "last_updated": "2026-11-04T02:06:00Z",
-  "pct_reporting": 5.85,
-  "precincts_reporting": 244,
+  "generated_at": "2026-11-04T02:09:51.995466Z",
+  "last_updated": "2026-11-04T02:08:00Z",
+  "pct_reporting": 7.17,
+  "precincts_reporting": 299,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 63.69,
-      "votes": 291301
+      "pct": 63.1,
+      "votes": 296311
     },
     {
       "candidate_id": "marshall",
-      "pct": 36.31,
-      "votes": 166075
+      "pct": 36.9,
+      "votes": 173311
     }
   ],
   "status": "live",
-  "total_votes": 457376
+  "total_votes": 469622
 }
