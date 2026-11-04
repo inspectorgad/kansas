@@ -280,13 +280,13 @@
     },
     {
       "county": "Lyon",
-      "hamilton_votes": 2198,
-      "marshall_votes": 1318,
-      "other_votes": 130,
-      "pct_reporting": 2.38,
-      "precincts_reporting": 1,
+      "hamilton_votes": 3610,
+      "marshall_votes": 2704,
+      "other_votes": 298,
+      "pct_reporting": 40.48,
+      "precincts_reporting": 17,
       "precincts_total": 42,
-      "total_votes": 3516
+      "total_votes": 6314
     },
     {
       "county": "Marion",
@@ -307,6 +307,16 @@
       "precincts_reporting": 9,
       "precincts_total": 9,
       "total_votes": 1300
+    },
+    {
+      "county": "Miami",
+      "hamilton_votes": 3022,
+      "marshall_votes": 3153,
+      "other_votes": 160,
+      "pct_reporting": 1.96,
+      "precincts_reporting": 1,
+      "precincts_total": 51,
+      "total_votes": 6175
     },
     {
       "county": "Montgomery",
@@ -370,13 +380,13 @@
     },
     {
       "county": "Reno",
-      "hamilton_votes": 7212,
-      "marshall_votes": 8147,
-      "other_votes": 577,
-      "pct_reporting": 56.18,
-      "precincts_reporting": 50,
+      "hamilton_votes": 8020,
+      "marshall_votes": 10325,
+      "other_votes": 714,
+      "pct_reporting": 73.03,
+      "precincts_reporting": 65,
       "precincts_total": 89,
-      "total_votes": 15359
+      "total_votes": 18345
     },
     {
       "county": "Riley",
@@ -479,25 +489,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:17:52.490974Z",
-  "last_updated": "2026-11-04T02:16:00Z",
-  "pct_reporting": 8.4,
-  "precincts_reporting": 350,
+  "generated_at": "2026-11-04T02:19:53.197926Z",
+  "last_updated": "2026-11-04T02:18:00Z",
+  "pct_reporting": 9.17,
+  "precincts_reporting": 382,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 62.86,
-      "votes": 300141
+      "pct": 62.4,
+      "votes": 305383
     },
     {
       "candidate_id": "marshall",
-      "pct": 37.14,
-      "votes": 177327
+      "pct": 37.6,
+      "votes": 184044
     }
   ],
   "status": "live",
-  "total_votes": 477468
+  "total_votes": 489427
 }
