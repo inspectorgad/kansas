@@ -930,13 +930,13 @@
     },
     {
       "county": "Wabaunsee",
-      "hamilton_votes": 627,
-      "marshall_votes": 1041,
-      "other_votes": 71,
-      "pct_reporting": 56.25,
-      "precincts_reporting": 9,
+      "hamilton_votes": 1026,
+      "marshall_votes": 2068,
+      "other_votes": 150,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 16,
       "precincts_total": 16,
-      "total_votes": 1668
+      "total_votes": 3094
     },
     {
       "county": "Wallace",
@@ -999,25 +999,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:03:52.240675Z",
-  "last_updated": "2026-11-04T04:02:00Z",
-  "pct_reporting": 81.45,
-  "precincts_reporting": 3395,
+  "generated_at": "2026-11-04T04:05:53.229998Z",
+  "last_updated": "2026-11-04T04:04:00Z",
+  "pct_reporting": 81.62,
+  "precincts_reporting": 3402,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 54.09,
-      "votes": 519538
+      "pct": 54.05,
+      "votes": 519937
     },
     {
       "candidate_id": "marshall",
-      "pct": 45.91,
-      "votes": 440968
+      "pct": 45.95,
+      "votes": 441995
     }
   ],
   "status": "live",
-  "total_votes": 960506
+  "total_votes": 961932
 }
