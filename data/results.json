@@ -300,13 +300,13 @@
     },
     {
       "county": "Kingman",
-      "hamilton_votes": 165,
-      "marshall_votes": 290,
-      "other_votes": 10,
-      "pct_reporting": 3.57,
-      "precincts_reporting": 1,
+      "hamilton_votes": 591,
+      "marshall_votes": 1829,
+      "other_votes": 76,
+      "pct_reporting": 96.43,
+      "precincts_reporting": 27,
       "precincts_total": 28,
-      "total_votes": 455
+      "total_votes": 2420
     },
     {
       "county": "Kiowa",
@@ -619,25 +619,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:37:52.568549Z",
-  "last_updated": "2026-11-04T02:36:00Z",
-  "pct_reporting": 28.14,
-  "precincts_reporting": 1173,
+  "generated_at": "2026-11-04T02:39:53.115940Z",
+  "last_updated": "2026-11-04T02:38:00Z",
+  "pct_reporting": 28.77,
+  "precincts_reporting": 1199,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.66,
-      "votes": 377140
+      "pct": 59.55,
+      "votes": 377566
     },
     {
       "candidate_id": "marshall",
-      "pct": 40.34,
-      "votes": 254966
+      "pct": 40.45,
+      "votes": 256505
     }
   ],
   "status": "live",
-  "total_votes": 632106
+  "total_votes": 634071
 }
