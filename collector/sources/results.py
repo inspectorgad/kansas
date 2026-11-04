@@ -744,6 +744,54 @@ def probe(url: str | None = None) -> ResultsData:
     return data
 
 
+DATA_REFS = re.compile(
+    r"""(?:src|href|url)\s*[=:(]\s*['"]?([^'"\s>)]+\.(?:json|js|xml|csv|txt|aspx|php)[^'"\s>)]*)""",
+    re.IGNORECASE,
+)
+LAST_UPDATED = re.compile(r"last\s+updated[^<]{0,60}", re.IGNORECASE)
+
+
+def _page_report(url: str) -> list[str]:
+    """What the fallback page says about itself, printed whether or not it parsed.
+
+    On election night a successful parse of all zeros raises one question the
+    parsed numbers cannot answer: is the page itself still at zero, or are the
+    votes somewhere the parser is not reading (another contest heading, a script
+    that loads them, a stale snapshot)? This prints the page's own timestamp,
+    every contest that has votes, the Senate block's raw markup and anything the
+    page loads data from.
+    """
+    try:
+        html = get_text(url)
+    except SourceError as exc:
+        return [f"page report: {url}: {exc}"]
+    lines = [f"page report: {url} ({len(html):,} bytes)"]
+    stamps = sorted({re.sub(r"\s+", " ", m.group(0)).strip() for m in LAST_UPDATED.finditer(TAG.sub(" ", html))})
+    lines.append(f"  page timestamp(s): {stamps or 'none found'}")
+    blocks = _race_blocks(html)
+    counting = []
+    for heading, block in blocks:
+        votes = [_to_int(v) or 0 for _, v in NAME_VOTES.findall(block)]
+        if sum(votes):
+            counting.append(f"{heading} ({sum(votes):,})")
+    lines.append(f"  contests: {len(blocks)}; with any votes: {len(counting)}")
+    for entry in counting[:15]:
+        lines.append(f"    {entry}")
+    senate = [h for h, _ in blocks if US_SENATE.search(h)]
+    lines.append(f"  U.S. Senate headings: {senate}")
+    for line in race_block_summaries(html):
+        lines.append(f"    {line}")
+    refs = sorted(set(DATA_REFS.findall(html)))
+    lines.append(f"  data/script references ({len(refs)}): {refs[:25]}")
+    for heading, block in blocks:
+        if US_SENATE.search(heading):
+            chunk = re.sub(r"\s+", " ", block[:3500])
+            chunk = re.sub(r"(?i)(<(?:tr|table|div|h[1-6]|span class='county'))", r"\n\1", chunk)
+            lines.append(f"--- raw Senate block (first 3,500 chars) ---\n{chunk}")
+            break
+    return lines
+
+
 def diagnose(url: str | None = None) -> str:
     """Human-readable probe report, for pinning the format down before Nov 3."""
     data = probe(url)
@@ -758,6 +806,7 @@ def diagnose(url: str | None = None) -> str:
                 lines.append(f"          {row}")
         for excerpt in attempt.raw:
             lines.append(excerpt)
+    lines.extend(_page_report(KS_ENR_FALLBACK))
     lines.append("")
     if data.statewide:
         lines.append(f"PARSED via {next(p.shape for p in data.probes if p.ok)}")
