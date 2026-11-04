@@ -610,13 +610,13 @@
     },
     {
       "county": "Miami",
-      "hamilton_votes": 4132,
-      "marshall_votes": 5434,
-      "other_votes": 300,
-      "pct_reporting": 7.84,
-      "precincts_reporting": 4,
+      "hamilton_votes": 5444,
+      "marshall_votes": 8104,
+      "other_votes": 453,
+      "pct_reporting": 78.43,
+      "precincts_reporting": 40,
       "precincts_total": 51,
-      "total_votes": 9566
+      "total_votes": 13548
     },
     {
       "county": "Mitchell",
@@ -820,13 +820,13 @@
     },
     {
       "county": "Rush",
-      "hamilton_votes": 232,
-      "marshall_votes": 561,
-      "other_votes": 37,
-      "pct_reporting": 30.77,
-      "precincts_reporting": 4,
+      "hamilton_votes": 325,
+      "marshall_votes": 919,
+      "other_votes": 55,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 13,
       "precincts_total": 13,
-      "total_votes": 793
+      "total_votes": 1244
     },
     {
       "county": "Russell",
@@ -1049,25 +1049,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:53:52.526995Z",
-  "last_updated": "2026-11-04T04:52:00Z",
-  "pct_reporting": 91.75,
-  "precincts_reporting": 3824,
+  "generated_at": "2026-11-04T04:55:53.503657Z",
+  "last_updated": "2026-11-04T04:54:00Z",
+  "pct_reporting": 92.83,
+  "precincts_reporting": 3869,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.22,
-      "votes": 544550
+      "pct": 53.13,
+      "votes": 545955
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.78,
-      "votes": 478614
+      "pct": 46.87,
+      "votes": 481642
     }
   ],
   "status": "live",
-  "total_votes": 1023164
+  "total_votes": 1027597
 }
