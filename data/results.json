@@ -599,6 +599,16 @@
       "total_votes": 568
     },
     {
+      "county": "Thomas",
+      "hamilton_votes": 677,
+      "marshall_votes": 2064,
+      "other_votes": 94,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 19,
+      "precincts_total": 19,
+      "total_votes": 2741
+    },
+    {
       "county": "Trego",
       "hamilton_votes": 276,
       "marshall_votes": 1001,
@@ -649,25 +659,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T02:51:51.990163Z",
-  "last_updated": "2026-11-04T02:50:00Z",
-  "pct_reporting": 36.16,
-  "precincts_reporting": 1507,
+  "generated_at": "2026-11-04T02:53:52.462115Z",
+  "last_updated": "2026-11-04T02:52:00Z",
+  "pct_reporting": 36.61,
+  "precincts_reporting": 1526,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.17,
-      "votes": 409219
+      "pct": 59.03,
+      "votes": 409896
     },
     {
       "candidate_id": "marshall",
-      "pct": 40.83,
-      "votes": 282378
+      "pct": 40.97,
+      "votes": 284442
     }
   ],
   "status": "live",
-  "total_votes": 691597
+  "total_votes": 694338
 }
