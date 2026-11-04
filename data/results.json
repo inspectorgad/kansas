@@ -490,13 +490,13 @@
     },
     {
       "county": "Leavenworth",
-      "hamilton_votes": 11202,
-      "marshall_votes": 9988,
-      "other_votes": 865,
-      "pct_reporting": 74.51,
-      "precincts_reporting": 38,
+      "hamilton_votes": 13468,
+      "marshall_votes": 13727,
+      "other_votes": 1117,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 51,
       "precincts_total": 51,
-      "total_votes": 21190
+      "total_votes": 27195
     },
     {
       "county": "Lincoln",
@@ -999,25 +999,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:11:52.581477Z",
-  "last_updated": "2026-11-04T04:10:00Z",
-  "pct_reporting": 85.46,
-  "precincts_reporting": 3562,
+  "generated_at": "2026-11-04T04:13:53.584836Z",
+  "last_updated": "2026-11-04T04:12:00Z",
+  "pct_reporting": 85.77,
+  "precincts_reporting": 3575,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.88,
-      "votes": 532840
+      "pct": 53.78,
+      "votes": 535106
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.12,
-      "votes": 456103
+      "pct": 46.22,
+      "votes": 459842
     }
   ],
   "status": "live",
-  "total_votes": 988943
+  "total_votes": 994948
 }
