@@ -19,6 +19,16 @@
       "total_votes": 1099
     },
     {
+      "county": "Barton",
+      "hamilton_votes": 0,
+      "marshall_votes": 0,
+      "other_votes": 0,
+      "pct_reporting": 2.44,
+      "precincts_reporting": 1,
+      "precincts_total": 41,
+      "total_votes": 0
+    },
+    {
       "county": "Brown",
       "hamilton_votes": 323,
       "marshall_votes": 378,
@@ -90,13 +100,13 @@
     },
     {
       "county": "Ellis",
-      "hamilton_votes": 1756,
-      "marshall_votes": 2083,
-      "other_votes": 89,
+      "hamilton_votes": 2892,
+      "marshall_votes": 4479,
+      "other_votes": 214,
       "pct_reporting": 3.23,
       "precincts_reporting": 1,
       "precincts_total": 31,
-      "total_votes": 3839
+      "total_votes": 7371
     },
     {
       "county": "Ellsworth",
@@ -157,6 +167,16 @@
       "precincts_reporting": 1,
       "precincts_total": 591,
       "total_votes": 188991
+    },
+    {
+      "county": "Kingman",
+      "hamilton_votes": 165,
+      "marshall_votes": 290,
+      "other_votes": 10,
+      "pct_reporting": 3.57,
+      "precincts_reporting": 1,
+      "precincts_total": 28,
+      "total_votes": 455
     },
     {
       "county": "Kiowa",
@@ -319,25 +339,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T01:43:52.601659Z",
-  "last_updated": "2026-11-04T01:42:00Z",
-  "pct_reporting": 0.89,
-  "precincts_reporting": 37,
+  "generated_at": "2026-11-04T01:45:51.984633Z",
+  "last_updated": "2026-11-04T01:44:00Z",
+  "pct_reporting": 0.94,
+  "precincts_reporting": 39,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 65.87,
-      "votes": 269374
+      "pct": 65.55,
+      "votes": 270675
     },
     {
       "candidate_id": "marshall",
-      "pct": 34.13,
-      "votes": 139563
+      "pct": 34.45,
+      "votes": 142249
     }
   ],
   "status": "live",
-  "total_votes": 408937
+  "total_votes": 412924
 }
