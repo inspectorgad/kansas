@@ -799,6 +799,16 @@
       "total_votes": 1845
     },
     {
+      "county": "Rice",
+      "hamilton_votes": 907,
+      "marshall_votes": 2090,
+      "other_votes": 122,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 27,
+      "precincts_total": 27,
+      "total_votes": 2997
+    },
+    {
       "county": "Riley",
       "hamilton_votes": 11800,
       "marshall_votes": 7598,
@@ -1049,25 +1059,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T06:20:11.804968Z",
-  "last_updated": "2026-11-04T06:18:00Z",
-  "pct_reporting": 99.28,
-  "precincts_reporting": 4138,
+  "generated_at": "2026-11-04T06:22:11.488781Z",
+  "last_updated": "2026-11-04T06:20:00Z",
+  "pct_reporting": 99.93,
+  "precincts_reporting": 4165,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 52.59,
-      "votes": 555447
+      "pct": 52.52,
+      "votes": 556354
     },
     {
       "candidate_id": "marshall",
-      "pct": 47.41,
-      "votes": 500778
+      "pct": 47.48,
+      "votes": 502868
     }
   ],
   "status": "live",
-  "total_votes": 1056225
+  "total_votes": 1059222
 }
