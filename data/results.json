@@ -249,6 +249,16 @@
       "total_votes": 7951
     },
     {
+      "county": "Gove",
+      "hamilton_votes": 161,
+      "marshall_votes": 752,
+      "other_votes": 36,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 9,
+      "precincts_total": 9,
+      "total_votes": 913
+    },
+    {
       "county": "Harper",
       "hamilton_votes": 169,
       "marshall_votes": 283,
@@ -310,13 +320,13 @@
     },
     {
       "county": "Kingman",
-      "hamilton_votes": 591,
-      "marshall_votes": 1829,
-      "other_votes": 76,
+      "hamilton_votes": 756,
+      "marshall_votes": 2119,
+      "other_votes": 86,
       "pct_reporting": 96.43,
       "precincts_reporting": 27,
       "precincts_total": 28,
-      "total_votes": 2420
+      "total_votes": 2875
     },
     {
       "county": "Kiowa",
@@ -480,13 +490,13 @@
     },
     {
       "county": "Pottawatomie",
-      "hamilton_votes": 1348,
-      "marshall_votes": 1674,
-      "other_votes": 125,
-      "pct_reporting": 25.81,
-      "precincts_reporting": 8,
+      "hamilton_votes": 3577,
+      "marshall_votes": 6689,
+      "other_votes": 471,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
       "precincts_total": 31,
-      "total_votes": 3022
+      "total_votes": 10266
     },
     {
       "county": "Reno",
@@ -629,25 +639,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T02:47:53.032857Z",
-  "last_updated": "2026-11-04T02:46:00Z",
-  "pct_reporting": 34.31,
-  "precincts_reporting": 1430,
+  "generated_at": "2026-11-04T02:49:52.753414Z",
+  "last_updated": "2026-11-04T02:48:00Z",
+  "pct_reporting": 35.08,
+  "precincts_reporting": 1462,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.38,
-      "votes": 400120
+      "pct": 59.0,
+      "votes": 402675
     },
     {
       "candidate_id": "marshall",
-      "pct": 40.62,
-      "votes": 273753
+      "pct": 41.0,
+      "votes": 279810
     }
   ],
   "status": "live",
-  "total_votes": 673873
+  "total_votes": 682485
 }
