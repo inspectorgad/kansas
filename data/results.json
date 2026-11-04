@@ -70,13 +70,13 @@
     },
     {
       "county": "Chautauqua",
-      "hamilton_votes": 86,
-      "marshall_votes": 414,
-      "other_votes": 11,
-      "pct_reporting": 60.0,
-      "precincts_reporting": 9,
+      "hamilton_votes": 199,
+      "marshall_votes": 868,
+      "other_votes": 41,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
       "precincts_total": 15,
-      "total_votes": 500
+      "total_votes": 1067
     },
     {
       "county": "Cheyenne",
@@ -439,6 +439,16 @@
       "total_votes": 5571
     },
     {
+      "county": "Lane",
+      "hamilton_votes": 131,
+      "marshall_votes": 508,
+      "other_votes": 31,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 10,
+      "precincts_total": 10,
+      "total_votes": 639
+    },
+    {
       "county": "Leavenworth",
       "hamilton_votes": 11202,
       "marshall_votes": 9988,
@@ -720,13 +730,13 @@
     },
     {
       "county": "Sedgwick",
-      "hamilton_votes": 74455,
-      "marshall_votes": 57933,
-      "other_votes": 3007,
-      "pct_reporting": 37.46,
-      "precincts_reporting": 209,
+      "hamilton_votes": 94033,
+      "marshall_votes": 80149,
+      "other_votes": 4418,
+      "pct_reporting": 94.09,
+      "precincts_reporting": 525,
       "precincts_total": 558,
-      "total_votes": 132388
+      "total_votes": 174182
     },
     {
       "county": "Seward",
@@ -777,6 +787,16 @@
       "precincts_reporting": 1,
       "precincts_total": 25,
       "total_votes": 568
+    },
+    {
+      "county": "Stevens",
+      "hamilton_votes": 302,
+      "marshall_votes": 975,
+      "other_votes": 61,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
+      "precincts_total": 11,
+      "total_votes": 1277
     },
     {
       "county": "Sumner",
@@ -879,25 +899,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:35:52.972380Z",
-  "last_updated": "2026-11-04T03:34:00Z",
-  "pct_reporting": 64.9,
-  "precincts_reporting": 2705,
+  "generated_at": "2026-11-04T03:37:52.575797Z",
+  "last_updated": "2026-11-04T03:36:00Z",
+  "pct_reporting": 73.13,
+  "precincts_reporting": 3048,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 55.82,
-      "votes": 478021
+      "pct": 55.31,
+      "votes": 498145
     },
     {
       "candidate_id": "marshall",
-      "pct": 44.18,
-      "votes": 378295
+      "pct": 44.69,
+      "votes": 402448
     }
   ],
   "status": "live",
-  "total_votes": 856316
+  "total_votes": 900593
 }
