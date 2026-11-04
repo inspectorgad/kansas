@@ -50,13 +50,13 @@
     },
     {
       "county": "Brown",
-      "hamilton_votes": 1029,
-      "marshall_votes": 1952,
-      "other_votes": 165,
-      "pct_reporting": 89.47,
-      "precincts_reporting": 17,
+      "hamilton_votes": 1092,
+      "marshall_votes": 2095,
+      "other_votes": 180,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 19,
       "precincts_total": 19,
-      "total_votes": 2981
+      "total_votes": 3187
     },
     {
       "county": "Chase",
@@ -130,13 +130,13 @@
     },
     {
       "county": "Cowley",
-      "hamilton_votes": 2444,
-      "marshall_votes": 2687,
-      "other_votes": 158,
-      "pct_reporting": 2.22,
-      "precincts_reporting": 1,
+      "hamilton_votes": 3931,
+      "marshall_votes": 6055,
+      "other_votes": 420,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 45,
       "precincts_total": 45,
-      "total_votes": 5131
+      "total_votes": 9986
     },
     {
       "county": "Crawford",
@@ -150,13 +150,13 @@
     },
     {
       "county": "Dickinson",
-      "hamilton_votes": 886,
-      "marshall_votes": 1423,
-      "other_votes": 66,
-      "pct_reporting": 3.12,
-      "precincts_reporting": 1,
+      "hamilton_votes": 2095,
+      "marshall_votes": 4768,
+      "other_votes": 307,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 32,
       "precincts_total": 32,
-      "total_votes": 2309
+      "total_votes": 6863
     },
     {
       "county": "Doniphan",
@@ -269,6 +269,16 @@
       "total_votes": 355
     },
     {
+      "county": "Greeley",
+      "hamilton_votes": 110,
+      "marshall_votes": 314,
+      "other_votes": 20,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 3,
+      "precincts_total": 3,
+      "total_votes": 424
+    },
+    {
       "county": "Harper",
       "hamilton_votes": 169,
       "marshall_votes": 283,
@@ -337,6 +347,16 @@
       "precincts_reporting": 351,
       "precincts_total": 591,
       "total_votes": 247163
+    },
+    {
+      "county": "Kearny",
+      "hamilton_votes": 228,
+      "marshall_votes": 767,
+      "other_votes": 29,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 10,
+      "precincts_total": 10,
+      "total_votes": 995
     },
     {
       "county": "Kingman",
@@ -430,13 +450,13 @@
     },
     {
       "county": "Miami",
-      "hamilton_votes": 3022,
-      "marshall_votes": 3153,
-      "other_votes": 160,
-      "pct_reporting": 1.96,
-      "precincts_reporting": 1,
+      "hamilton_votes": 3562,
+      "marshall_votes": 4343,
+      "other_votes": 250,
+      "pct_reporting": 3.92,
+      "precincts_reporting": 2,
       "precincts_total": 51,
-      "total_votes": 6175
+      "total_votes": 7905
     },
     {
       "county": "Mitchell",
@@ -679,25 +699,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T02:59:52.985579Z",
-  "last_updated": "2026-11-04T02:58:00Z",
-  "pct_reporting": 38.51,
-  "precincts_reporting": 1605,
+  "generated_at": "2026-11-04T03:01:52.676681Z",
+  "last_updated": "2026-11-04T03:00:00Z",
+  "pct_reporting": 40.69,
+  "precincts_reporting": 1696,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 58.76,
-      "votes": 414043
+      "pct": 58.23,
+      "votes": 417680
     },
     {
       "candidate_id": "marshall",
-      "pct": 41.24,
-      "votes": 290542
+      "pct": 41.77,
+      "votes": 299669
     }
   ],
   "status": "live",
-  "total_votes": 704585
+  "total_votes": 717349
 }
