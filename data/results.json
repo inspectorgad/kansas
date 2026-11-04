@@ -850,13 +850,13 @@
     },
     {
       "county": "Scott",
-      "hamilton_votes": 109,
-      "marshall_votes": 354,
-      "other_votes": 12,
-      "pct_reporting": 9.09,
-      "precincts_reporting": 1,
+      "hamilton_votes": 341,
+      "marshall_votes": 1254,
+      "other_votes": 60,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
       "precincts_total": 11,
-      "total_votes": 463
+      "total_votes": 1595
     },
     {
       "county": "Sedgwick",
@@ -1049,25 +1049,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:47:52.288764Z",
-  "last_updated": "2026-11-04T04:46:00Z",
-  "pct_reporting": 91.51,
-  "precincts_reporting": 3814,
+  "generated_at": "2026-11-04T04:49:53.072641Z",
+  "last_updated": "2026-11-04T04:48:00Z",
+  "pct_reporting": 91.75,
+  "precincts_reporting": 3824,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.26,
-      "votes": 544318
+      "pct": 53.22,
+      "votes": 544550
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.74,
-      "votes": 477714
+      "pct": 46.78,
+      "votes": 478614
     }
   ],
   "status": "live",
-  "total_votes": 1022032
+  "total_votes": 1023164
 }
