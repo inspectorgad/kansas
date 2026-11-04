@@ -570,13 +570,13 @@
     },
     {
       "county": "Marion",
-      "hamilton_votes": 717,
-      "marshall_votes": 1269,
-      "other_votes": 72,
-      "pct_reporting": 9.38,
-      "precincts_reporting": 3,
+      "hamilton_votes": 1452,
+      "marshall_votes": 3098,
+      "other_votes": 156,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 32,
       "precincts_total": 32,
-      "total_votes": 1986
+      "total_votes": 4550
     },
     {
       "county": "Marshall",
@@ -590,13 +590,13 @@
     },
     {
       "county": "McPherson",
-      "hamilton_votes": 2865,
-      "marshall_votes": 5036,
-      "other_votes": 224,
-      "pct_reporting": 60.61,
-      "precincts_reporting": 20,
+      "hamilton_votes": 3813,
+      "marshall_votes": 6826,
+      "other_votes": 316,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 33,
       "precincts_total": 33,
-      "total_votes": 7901
+      "total_votes": 10639
     },
     {
       "county": "Meade",
@@ -923,8 +923,8 @@
       "hamilton_votes": 369,
       "marshall_votes": 1024,
       "other_votes": 81,
-      "pct_reporting": 96.0,
-      "precincts_reporting": 24,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 25,
       "precincts_total": 25,
       "total_votes": 1393
     },
@@ -1049,25 +1049,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:57:53.387169Z",
-  "last_updated": "2026-11-04T04:56:00Z",
-  "pct_reporting": 92.83,
-  "precincts_reporting": 3869,
+  "generated_at": "2026-11-04T04:59:53.212965Z",
+  "last_updated": "2026-11-04T04:58:00Z",
+  "pct_reporting": 93.86,
+  "precincts_reporting": 3912,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.13,
-      "votes": 545955
+      "pct": 53.02,
+      "votes": 547638
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.87,
-      "votes": 481642
+      "pct": 46.98,
+      "votes": 485261
     }
   ],
   "status": "live",
-  "total_votes": 1027597
+  "total_votes": 1032899
 }
