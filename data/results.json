@@ -59,6 +59,16 @@
       "total_votes": 3187
     },
     {
+      "county": "Butler",
+      "hamilton_votes": 9498,
+      "marshall_votes": 15638,
+      "other_votes": 864,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 54,
+      "precincts_total": 54,
+      "total_votes": 25136
+    },
+    {
       "county": "Chase",
       "hamilton_votes": 362,
       "marshall_votes": 749,
@@ -899,25 +909,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:41:52.793535Z",
-  "last_updated": "2026-11-04T03:40:00Z",
-  "pct_reporting": 74.23,
-  "precincts_reporting": 3094,
+  "generated_at": "2026-11-04T03:43:52.319840Z",
+  "last_updated": "2026-11-04T03:42:00Z",
+  "pct_reporting": 75.53,
+  "precincts_reporting": 3148,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 55.23,
-      "votes": 500618
+      "pct": 54.76,
+      "votes": 510116
     },
     {
       "candidate_id": "marshall",
-      "pct": 44.77,
-      "votes": 405835
+      "pct": 45.24,
+      "votes": 421473
     }
   ],
   "status": "live",
-  "total_votes": 906453
+  "total_votes": 931589
 }
