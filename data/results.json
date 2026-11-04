@@ -39,6 +39,16 @@
       "total_votes": 4949
     },
     {
+      "county": "Barber",
+      "hamilton_votes": 300,
+      "marshall_votes": 1293,
+      "other_votes": 78,
+      "pct_reporting": 4.55,
+      "precincts_reporting": 1,
+      "precincts_total": 22,
+      "total_votes": 1593
+    },
+    {
       "county": "Barton",
       "hamilton_votes": 2478,
       "marshall_votes": 5705,
@@ -307,6 +317,16 @@
       "precincts_reporting": 6,
       "precincts_total": 6,
       "total_votes": 1562
+    },
+    {
+      "county": "Gray",
+      "hamilton_votes": 370,
+      "marshall_votes": 1204,
+      "other_votes": 71,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 8,
+      "precincts_total": 8,
+      "total_votes": 1574
     },
     {
       "county": "Greeley",
@@ -909,25 +929,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:45:52.991355Z",
-  "last_updated": "2026-11-04T03:44:00Z",
-  "pct_reporting": 76.01,
-  "precincts_reporting": 3168,
+  "generated_at": "2026-11-04T03:47:52.535469Z",
+  "last_updated": "2026-11-04T03:46:00Z",
+  "pct_reporting": 76.22,
+  "precincts_reporting": 3177,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 54.68,
-      "votes": 511380
+      "pct": 54.56,
+      "votes": 512050
     },
     {
       "candidate_id": "marshall",
-      "pct": 45.32,
-      "votes": 423898
+      "pct": 45.44,
+      "votes": 426395
     }
   ],
   "status": "live",
-  "total_votes": 935278
+  "total_votes": 938445
 }
