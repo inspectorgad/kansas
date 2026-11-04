@@ -250,13 +250,13 @@
     },
     {
       "county": "Kiowa",
-      "hamilton_votes": 37,
+      "hamilton_votes": 119,
       "marshall_votes": 70,
       "other_votes": 3,
-      "pct_reporting": 20.0,
-      "precincts_reporting": 1,
+      "pct_reporting": 60.0,
+      "precincts_reporting": 3,
       "precincts_total": 5,
-      "total_votes": 107
+      "total_votes": 189
     },
     {
       "county": "Labette",
@@ -460,13 +460,13 @@
     },
     {
       "county": "Wilson",
-      "hamilton_votes": 276,
-      "marshall_votes": 561,
-      "other_votes": 36,
-      "pct_reporting": 3.85,
-      "precincts_reporting": 1,
+      "hamilton_votes": 524,
+      "marshall_votes": 1417,
+      "other_votes": 98,
+      "pct_reporting": 73.08,
+      "precincts_reporting": 19,
       "precincts_total": 26,
-      "total_votes": 837
+      "total_votes": 1941
     },
     {
       "county": "Wyandotte",
@@ -479,25 +479,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:09:51.995466Z",
-  "last_updated": "2026-11-04T02:08:00Z",
-  "pct_reporting": 7.17,
-  "precincts_reporting": 299,
+  "generated_at": "2026-11-04T02:11:52.964914Z",
+  "last_updated": "2026-11-04T02:10:00Z",
+  "pct_reporting": 7.65,
+  "precincts_reporting": 319,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 63.1,
-      "votes": 296311
+      "pct": 63.01,
+      "votes": 296641
     },
     {
       "candidate_id": "marshall",
-      "pct": 36.9,
-      "votes": 173311
+      "pct": 36.99,
+      "votes": 174167
     }
   ],
   "status": "live",
-  "total_votes": 469622
+  "total_votes": 470808
 }
