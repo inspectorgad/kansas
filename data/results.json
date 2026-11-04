@@ -10,13 +10,13 @@
   "counties": [
     {
       "county": "Allen",
-      "hamilton_votes": 535,
-      "marshall_votes": 564,
-      "other_votes": 48,
-      "pct_reporting": 4.55,
-      "precincts_reporting": 1,
+      "hamilton_votes": 1447,
+      "marshall_votes": 2387,
+      "other_votes": 248,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 22,
       "precincts_total": 22,
-      "total_votes": 1099
+      "total_votes": 3834
     },
     {
       "county": "Anderson",
@@ -289,6 +289,16 @@
       "total_votes": 355
     },
     {
+      "county": "Grant",
+      "hamilton_votes": 496,
+      "marshall_votes": 1066,
+      "other_votes": 58,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 6,
+      "precincts_total": 6,
+      "total_votes": 1562
+    },
+    {
       "county": "Greeley",
       "hamilton_votes": 110,
       "marshall_votes": 314,
@@ -410,13 +420,13 @@
     },
     {
       "county": "Labette",
-      "hamilton_votes": 2215,
-      "marshall_votes": 3332,
-      "other_votes": 257,
-      "pct_reporting": 97.37,
-      "precincts_reporting": 37,
+      "hamilton_votes": 2229,
+      "marshall_votes": 3342,
+      "other_votes": 259,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 38,
       "precincts_total": 38,
-      "total_votes": 5547
+      "total_votes": 5571
     },
     {
       "county": "Leavenworth",
@@ -819,25 +829,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:21:52.966734Z",
-  "last_updated": "2026-11-04T03:20:00Z",
-  "pct_reporting": 57.37,
-  "precincts_reporting": 2391,
+  "generated_at": "2026-11-04T03:23:52.533000Z",
+  "last_updated": "2026-11-04T03:22:00Z",
+  "pct_reporting": 58.04,
+  "precincts_reporting": 2419,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 56.68,
-      "votes": 457378
+      "pct": 56.55,
+      "votes": 458800
     },
     {
       "candidate_id": "marshall",
-      "pct": 43.32,
-      "votes": 349579
+      "pct": 43.45,
+      "votes": 352478
     }
   ],
   "status": "live",
-  "total_votes": 806957
+  "total_votes": 811278
 }
