@@ -40,13 +40,13 @@
     },
     {
       "county": "Barton",
-      "hamilton_votes": 1098,
-      "marshall_votes": 1700,
-      "other_votes": 70,
-      "pct_reporting": 2.44,
-      "precincts_reporting": 1,
+      "hamilton_votes": 2478,
+      "marshall_votes": 5705,
+      "other_votes": 276,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 41,
       "precincts_total": 41,
-      "total_votes": 2798
+      "total_votes": 8183
     },
     {
       "county": "Brown",
@@ -489,6 +489,16 @@
       "total_votes": 1986
     },
     {
+      "county": "Marshall",
+      "hamilton_votes": 1254,
+      "marshall_votes": 2466,
+      "other_votes": 169,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
+      "precincts_total": 31,
+      "total_votes": 3720
+    },
+    {
       "county": "McPherson",
       "hamilton_votes": 1236,
       "marshall_votes": 1363,
@@ -513,8 +523,8 @@
       "hamilton_votes": 4132,
       "marshall_votes": 5434,
       "other_votes": 300,
-      "pct_reporting": 5.88,
-      "precincts_reporting": 3,
+      "pct_reporting": 7.84,
+      "precincts_reporting": 4,
       "precincts_total": 51,
       "total_votes": 9566
     },
@@ -730,13 +740,13 @@
     },
     {
       "county": "Shawnee",
-      "hamilton_votes": 25600,
-      "marshall_votes": 14650,
-      "other_votes": 1272,
-      "pct_reporting": 40.73,
-      "precincts_reporting": 101,
+      "hamilton_votes": 39086,
+      "marshall_votes": 26685,
+      "other_votes": 2398,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 248,
       "precincts_total": 248,
-      "total_votes": 40250
+      "total_votes": 65771
     },
     {
       "county": "Sheridan",
@@ -869,25 +879,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:33:52.219368Z",
-  "last_updated": "2026-11-04T03:32:00Z",
-  "pct_reporting": 59.64,
-  "precincts_reporting": 2486,
+  "generated_at": "2026-11-04T03:35:52.972380Z",
+  "last_updated": "2026-11-04T03:34:00Z",
+  "pct_reporting": 64.9,
+  "precincts_reporting": 2705,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 56.21,
-      "votes": 461901
+      "pct": 55.82,
+      "votes": 478021
     },
     {
       "candidate_id": "marshall",
-      "pct": 43.79,
-      "votes": 359789
+      "pct": 44.18,
+      "votes": 378295
     }
   ],
   "status": "live",
-  "total_votes": 821690
+  "total_votes": 856316
 }
