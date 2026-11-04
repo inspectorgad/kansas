@@ -620,34 +620,34 @@
     },
     {
       "county": "Wyandotte",
-      "hamilton_votes": 15940,
-      "marshall_votes": 3973,
-      "other_votes": 482,
-      "pct_reporting": 0.68,
-      "precincts_reporting": 1,
+      "hamilton_votes": 31404,
+      "marshall_votes": 10401,
+      "other_votes": 1315,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 148,
       "precincts_total": 148,
-      "total_votes": 19913
+      "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T02:45:52.483683Z",
-  "last_updated": "2026-11-04T02:44:00Z",
-  "pct_reporting": 30.78,
-  "precincts_reporting": 1283,
+  "generated_at": "2026-11-04T02:47:53.032857Z",
+  "last_updated": "2026-11-04T02:46:00Z",
+  "pct_reporting": 34.31,
+  "precincts_reporting": 1430,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.0,
-      "votes": 384656
+      "pct": 59.38,
+      "votes": 400120
     },
     {
       "candidate_id": "marshall",
-      "pct": 41.0,
-      "votes": 267325
+      "pct": 40.62,
+      "votes": 273753
     }
   ],
   "status": "live",
-  "total_votes": 651981
+  "total_votes": 673873
 }
