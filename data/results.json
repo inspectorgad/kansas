@@ -83,8 +83,8 @@
       "hamilton_votes": 219,
       "marshall_votes": 792,
       "other_votes": 51,
-      "pct_reporting": 77.78,
-      "precincts_reporting": 7,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 9,
       "precincts_total": 9,
       "total_votes": 1011
     },
@@ -520,13 +520,23 @@
     },
     {
       "county": "Ottawa",
-      "hamilton_votes": 459,
-      "marshall_votes": 1680,
-      "other_votes": 76,
-      "pct_reporting": 88.46,
-      "precincts_reporting": 23,
+      "hamilton_votes": 508,
+      "marshall_votes": 1846,
+      "other_votes": 87,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 26,
       "precincts_total": 26,
-      "total_votes": 2139
+      "total_votes": 2354
+    },
+    {
+      "county": "Pawnee",
+      "hamilton_votes": 606,
+      "marshall_votes": 1358,
+      "other_votes": 85,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 30,
+      "precincts_total": 30,
+      "total_votes": 1964
     },
     {
       "county": "Phillips",
@@ -579,6 +589,16 @@
       "total_votes": 348
     },
     {
+      "county": "Russell",
+      "hamilton_votes": 651,
+      "marshall_votes": 1782,
+      "other_votes": 112,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 29,
+      "precincts_total": 29,
+      "total_votes": 2433
+    },
+    {
       "county": "Scott",
       "hamilton_votes": 109,
       "marshall_votes": 354,
@@ -627,6 +647,16 @@
       "precincts_reporting": 1,
       "precincts_total": 17,
       "total_votes": 146
+    },
+    {
+      "county": "Smith",
+      "hamilton_votes": 298,
+      "marshall_votes": 1173,
+      "other_votes": 52,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 28,
+      "precincts_total": 28,
+      "total_votes": 1471
     },
     {
       "county": "Stafford",
@@ -699,25 +729,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:01:52.676681Z",
-  "last_updated": "2026-11-04T03:00:00Z",
-  "pct_reporting": 40.69,
-  "precincts_reporting": 1696,
+  "generated_at": "2026-11-04T03:03:52.232289Z",
+  "last_updated": "2026-11-04T03:02:00Z",
+  "pct_reporting": 42.9,
+  "precincts_reporting": 1788,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 58.23,
-      "votes": 417680
+      "pct": 57.96,
+      "votes": 419284
     },
     {
       "candidate_id": "marshall",
-      "pct": 41.77,
-      "votes": 299669
+      "pct": 42.04,
+      "votes": 304148
     }
   ],
   "status": "live",
-  "total_votes": 717349
+  "total_votes": 723432
 }
