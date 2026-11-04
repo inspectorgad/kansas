@@ -289,6 +289,16 @@
       "total_votes": 9319
     },
     {
+      "county": "Geary",
+      "hamilton_votes": 3345,
+      "marshall_votes": 2996,
+      "other_votes": 355,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 49,
+      "precincts_total": 49,
+      "total_votes": 6341
+    },
+    {
       "county": "Gove",
       "hamilton_votes": 161,
       "marshall_votes": 752,
@@ -597,6 +607,16 @@
       "precincts_reporting": 1,
       "precincts_total": 90,
       "total_votes": 1453
+    },
+    {
+      "county": "Morris",
+      "hamilton_votes": 823,
+      "marshall_votes": 1366,
+      "other_votes": 135,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
+      "precincts_total": 15,
+      "total_votes": 2189
     },
     {
       "county": "Morton",
@@ -979,25 +999,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:59:52.769305Z",
-  "last_updated": "2026-11-04T03:58:00Z",
-  "pct_reporting": 79.89,
-  "precincts_reporting": 3330,
+  "generated_at": "2026-11-04T04:01:52.561759Z",
+  "last_updated": "2026-11-04T04:00:00Z",
+  "pct_reporting": 81.43,
+  "precincts_reporting": 3394,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 54.14,
-      "votes": 515370
+      "pct": 54.09,
+      "votes": 519538
     },
     {
       "candidate_id": "marshall",
-      "pct": 45.86,
-      "votes": 436606
+      "pct": 45.91,
+      "votes": 440968
     }
   ],
   "status": "live",
-  "total_votes": 951976
+  "total_votes": 960506
 }
