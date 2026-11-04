@@ -264,7 +264,7 @@ def collect_news(report: RunReport, data_dir: str) -> NewsPayload:
 
 
 # Collectors that need to read their own prior output to stay idempotent.
-NEEDS_DATA_DIR = {"race", "polls", "markets", "news"}
+NEEDS_DATA_DIR = {"race", "polls", "markets", "news", "results"}
 
 def collect_ads(report: RunReport) -> AdsPayload:
     from sources.ads import collect
@@ -292,7 +292,25 @@ def collect_ground(report: RunReport) -> GroundPayload:
     )
 
 
-def collect_results(report: RunReport) -> ResultsPayload:
+def _published_results_stamp(data_dir: str) -> datetime | None:
+    """last_updated of the published results file, if it holds any votes.
+
+    A file with no votes needs no protecting, and files written before the page
+    timestamp was read carry the fetch time instead, which could otherwise look
+    newer than the page and block the first real count.
+    """
+    path = Path(data_dir) / "results.json"
+    try:
+        published = json.loads(path.read_text())
+        value = published.get("last_updated")
+        if not value or not published.get("total_votes"):
+            return None
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except (OSError, ValueError, AttributeError):
+        return None
+
+
+def collect_results(report: RunReport, data_dir: str) -> ResultsPayload:
     """Election-night returns.
 
     Publishes a dormant file rather than failing when there is nothing to report,
@@ -303,6 +321,17 @@ def collect_results(report: RunReport) -> ResultsPayload:
     from sources.results import collect
 
     data = collect()
+
+    # Never go backwards. Two reads a pass apart can come from different cache
+    # copies, and one of them may be the 6:46 PM page with every count at zero.
+    # Failing the source keeps the newer published file in place.
+    previous = _published_results_stamp(data_dir)
+    if previous and data.last_updated and data.last_updated < previous:
+        raise SourceError(
+            f"results page is older than the published file (page {data.last_updated.isoformat()}, "
+            f"published {previous.isoformat()}); keeping the published numbers"
+        )
+
     for attempt in data.probes:
         if not attempt.ok:
             report.warnings.append(f"results probe [{attempt.shape}]: {attempt.detail}")
@@ -319,7 +348,9 @@ def collect_results(report: RunReport) -> ResultsPayload:
         precincts_total=data.precincts_total,
         pct_reporting=data.pct_reporting,
         counties=data.counties,
-        last_updated=publish.now() if data.statewide else None,
+        # The source page's own timestamp where it has one: a cached or lagging
+        # page must not look fresh just because we read it a moment ago.
+        last_updated=data.last_updated or (publish.now() if data.statewide else None),
         source_url=data.source_url,
         attribution=data.attribution,
     )
