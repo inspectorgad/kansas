@@ -810,13 +810,13 @@
     },
     {
       "county": "Rooks",
-      "hamilton_votes": 369,
-      "marshall_votes": 1411,
-      "other_votes": 73,
-      "pct_reporting": 93.33,
-      "precincts_reporting": 14,
+      "hamilton_votes": 379,
+      "marshall_votes": 1468,
+      "other_votes": 75,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
       "precincts_total": 15,
-      "total_votes": 1780
+      "total_votes": 1847
     },
     {
       "county": "Rush",
@@ -1049,10 +1049,10 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T05:32:11.621765Z",
-  "last_updated": "2026-11-04T05:30:00Z",
-  "pct_reporting": 98.32,
-  "precincts_reporting": 4098,
+  "generated_at": "2026-11-04T05:34:11.965514Z",
+  "last_updated": "2026-11-04T05:32:00Z",
+  "pct_reporting": 98.34,
+  "precincts_reporting": 4099,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
@@ -1060,14 +1060,14 @@
     {
       "candidate_id": "hamilton",
       "pct": 52.64,
-      "votes": 554916
+      "votes": 554926
     },
     {
       "candidate_id": "marshall",
       "pct": 47.36,
-      "votes": 499178
+      "votes": 499235
     }
   ],
   "status": "live",
-  "total_votes": 1054094
+  "total_votes": 1054161
 }
