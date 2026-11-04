@@ -29,6 +29,16 @@
       "total_votes": 1135
     },
     {
+      "county": "Atchison",
+      "hamilton_votes": 1075,
+      "marshall_votes": 944,
+      "other_votes": 68,
+      "pct_reporting": 5.26,
+      "precincts_reporting": 1,
+      "precincts_total": 19,
+      "total_votes": 2019
+    },
+    {
       "county": "Barton",
       "hamilton_votes": 1098,
       "marshall_votes": 1700,
@@ -379,6 +389,16 @@
       "total_votes": 6175
     },
     {
+      "county": "Mitchell",
+      "hamilton_votes": 239,
+      "marshall_votes": 443,
+      "other_votes": 19,
+      "pct_reporting": 4.0,
+      "precincts_reporting": 1,
+      "precincts_total": 25,
+      "total_votes": 682
+    },
+    {
       "county": "Montgomery",
       "hamilton_votes": 668,
       "marshall_votes": 785,
@@ -540,13 +560,13 @@
     },
     {
       "county": "Trego",
-      "hamilton_votes": 127,
-      "marshall_votes": 328,
-      "other_votes": 28,
-      "pct_reporting": 9.09,
-      "precincts_reporting": 1,
+      "hamilton_votes": 276,
+      "marshall_votes": 1001,
+      "other_votes": 82,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
       "precincts_total": 11,
-      "total_votes": 455
+      "total_votes": 1277
     },
     {
       "county": "Wabaunsee",
@@ -589,25 +609,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:31:52.285083Z",
-  "last_updated": "2026-11-04T02:30:00Z",
-  "pct_reporting": 26.58,
-  "precincts_reporting": 1108,
+  "generated_at": "2026-11-04T02:33:52.816474Z",
+  "last_updated": "2026-11-04T02:32:00Z",
+  "pct_reporting": 26.87,
+  "precincts_reporting": 1120,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 60.05,
-      "votes": 372106
+      "pct": 59.95,
+      "votes": 373569
     },
     {
       "candidate_id": "marshall",
-      "pct": 39.95,
-      "votes": 247525
+      "pct": 40.05,
+      "votes": 249585
     }
   ],
   "status": "live",
-  "total_votes": 619631
+  "total_votes": 623154
 }
