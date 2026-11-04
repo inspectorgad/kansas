@@ -120,13 +120,13 @@
     },
     {
       "county": "Doniphan",
-      "hamilton_votes": 134,
-      "marshall_votes": 220,
-      "other_votes": 12,
-      "pct_reporting": 7.14,
-      "precincts_reporting": 1,
+      "hamilton_votes": 594,
+      "marshall_votes": 1778,
+      "other_votes": 109,
+      "pct_reporting": 92.86,
+      "precincts_reporting": 13,
       "precincts_total": 14,
-      "total_votes": 354
+      "total_votes": 2372
     },
     {
       "county": "Douglas",
@@ -360,13 +360,13 @@
     },
     {
       "county": "Ottawa",
-      "hamilton_votes": 195,
-      "marshall_votes": 517,
-      "other_votes": 24,
-      "pct_reporting": 3.85,
-      "precincts_reporting": 1,
+      "hamilton_votes": 411,
+      "marshall_votes": 1375,
+      "other_votes": 66,
+      "pct_reporting": 57.69,
+      "precincts_reporting": 15,
       "precincts_total": 26,
-      "total_votes": 712
+      "total_votes": 1786
     },
     {
       "county": "Pottawatomie",
@@ -469,6 +469,16 @@
       "total_votes": 872
     },
     {
+      "county": "Washington",
+      "hamilton_votes": 217,
+      "marshall_votes": 1083,
+      "other_votes": 51,
+      "pct_reporting": 74.07,
+      "precincts_reporting": 20,
+      "precincts_total": 27,
+      "total_votes": 1300
+    },
+    {
       "county": "Wilson",
       "hamilton_votes": 524,
       "marshall_votes": 1417,
@@ -489,25 +499,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:19:53.197926Z",
-  "last_updated": "2026-11-04T02:18:00Z",
-  "pct_reporting": 9.17,
-  "precincts_reporting": 382,
+  "generated_at": "2026-11-04T02:21:52.739500Z",
+  "last_updated": "2026-11-04T02:20:00Z",
+  "pct_reporting": 10.27,
+  "precincts_reporting": 428,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 62.4,
-      "votes": 305383
+      "pct": 62.02,
+      "votes": 306276
     },
     {
       "candidate_id": "marshall",
-      "pct": 37.6,
-      "votes": 184044
+      "pct": 37.98,
+      "votes": 187543
     }
   ],
   "status": "live",
-  "total_votes": 489427
+  "total_votes": 493819
 }
