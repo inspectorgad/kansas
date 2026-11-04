@@ -80,13 +80,13 @@
     },
     {
       "county": "Cheyenne",
-      "hamilton_votes": 93,
-      "marshall_votes": 230,
-      "other_votes": 10,
-      "pct_reporting": 11.11,
-      "precincts_reporting": 1,
+      "hamilton_votes": 140,
+      "marshall_votes": 388,
+      "other_votes": 25,
+      "pct_reporting": 22.22,
+      "precincts_reporting": 2,
       "precincts_total": 9,
-      "total_votes": 323
+      "total_votes": 528
     },
     {
       "county": "Clark",
@@ -250,13 +250,13 @@
     },
     {
       "county": "Harvey",
-      "hamilton_votes": 3281,
-      "marshall_votes": 2034,
-      "other_votes": 98,
-      "pct_reporting": 2.44,
-      "precincts_reporting": 1,
+      "hamilton_votes": 5115,
+      "marshall_votes": 4502,
+      "other_votes": 258,
+      "pct_reporting": 51.22,
+      "precincts_reporting": 21,
       "precincts_total": 41,
-      "total_votes": 5315
+      "total_votes": 9617
     },
     {
       "county": "Hodgeman",
@@ -619,25 +619,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:35:52.651814Z",
-  "last_updated": "2026-11-04T02:34:00Z",
-  "pct_reporting": 27.64,
-  "precincts_reporting": 1152,
+  "generated_at": "2026-11-04T02:37:52.568549Z",
+  "last_updated": "2026-11-04T02:36:00Z",
+  "pct_reporting": 28.14,
+  "precincts_reporting": 1173,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.79,
-      "votes": 375259
+      "pct": 59.66,
+      "votes": 377140
     },
     {
       "candidate_id": "marshall",
-      "pct": 40.21,
-      "votes": 252340
+      "pct": 40.34,
+      "votes": 254966
     }
   ],
   "status": "live",
-  "total_votes": 627599
+  "total_votes": 632106
 }
