@@ -39,6 +39,16 @@
       "total_votes": 701
     },
     {
+      "county": "Chase",
+      "hamilton_votes": 362,
+      "marshall_votes": 749,
+      "other_votes": 35,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
+      "precincts_total": 11,
+      "total_votes": 1111
+    },
+    {
       "county": "Cheyenne",
       "hamilton_votes": 93,
       "marshall_votes": 230,
@@ -67,6 +77,16 @@
       "precincts_reporting": 1,
       "precincts_total": 5,
       "total_votes": 100
+    },
+    {
+      "county": "Crawford",
+      "hamilton_votes": 1336,
+      "marshall_votes": 712,
+      "other_votes": 64,
+      "pct_reporting": 1.75,
+      "precincts_reporting": 1,
+      "precincts_total": 57,
+      "total_votes": 2048
     },
     {
       "county": "Doniphan",
@@ -339,25 +359,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T01:45:51.984633Z",
-  "last_updated": "2026-11-04T01:44:00Z",
-  "pct_reporting": 0.94,
-  "precincts_reporting": 39,
+  "generated_at": "2026-11-04T01:47:52.766657Z",
+  "last_updated": "2026-11-04T01:46:00Z",
+  "pct_reporting": 1.22,
+  "precincts_reporting": 51,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 65.55,
-      "votes": 270675
+      "pct": 65.46,
+      "votes": 272373
     },
     {
       "candidate_id": "marshall",
-      "pct": 34.45,
-      "votes": 142249
+      "pct": 34.54,
+      "votes": 143710
     }
   ],
   "status": "live",
-  "total_votes": 412924
+  "total_votes": 416083
 }
