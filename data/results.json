@@ -160,13 +160,13 @@
     },
     {
       "county": "Doniphan",
-      "hamilton_votes": 594,
-      "marshall_votes": 1778,
-      "other_votes": 109,
-      "pct_reporting": 92.86,
-      "precincts_reporting": 13,
+      "hamilton_votes": 609,
+      "marshall_votes": 1838,
+      "other_votes": 113,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 14,
       "precincts_total": 14,
-      "total_votes": 2372
+      "total_votes": 2447
     },
     {
       "county": "Douglas",
@@ -440,13 +440,13 @@
     },
     {
       "county": "Osage",
-      "hamilton_votes": 1148,
-      "marshall_votes": 1975,
-      "other_votes": 167,
-      "pct_reporting": 35.71,
-      "precincts_reporting": 10,
+      "hamilton_votes": 2008,
+      "marshall_votes": 3731,
+      "other_votes": 315,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 28,
       "precincts_total": 28,
-      "total_votes": 3123
+      "total_votes": 5739
     },
     {
       "county": "Osborne",
@@ -629,25 +629,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:43:51.867182Z",
-  "last_updated": "2026-11-04T02:42:00Z",
-  "pct_reporting": 30.33,
-  "precincts_reporting": 1264,
+  "generated_at": "2026-11-04T02:45:26.940282Z",
+  "last_updated": "2026-11-04T02:44:00Z",
+  "pct_reporting": 30.78,
+  "precincts_reporting": 1283,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.11,
-      "votes": 383781
+      "pct": 59.0,
+      "votes": 384656
     },
     {
       "candidate_id": "marshall",
-      "pct": 40.89,
-      "votes": 265509
+      "pct": 41.0,
+      "votes": 267325
     }
   ],
   "status": "live",
-  "total_votes": 649290
+  "total_votes": 651981
 }
