@@ -90,13 +90,13 @@
     },
     {
       "county": "Clark",
-      "hamilton_votes": 98,
-      "marshall_votes": 367,
-      "other_votes": 29,
-      "pct_reporting": 87.5,
-      "precincts_reporting": 7,
+      "hamilton_votes": 152,
+      "marshall_votes": 561,
+      "other_votes": 37,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 8,
       "precincts_total": 8,
-      "total_votes": 465
+      "total_votes": 713
     },
     {
       "county": "Clay",
@@ -157,6 +157,16 @@
       "precincts_reporting": 39,
       "precincts_total": 57,
       "total_votes": 7742
+    },
+    {
+      "county": "Decatur",
+      "hamilton_votes": 69,
+      "marshall_votes": 204,
+      "other_votes": 16,
+      "pct_reporting": 3.7,
+      "precincts_reporting": 1,
+      "precincts_total": 27,
+      "total_votes": 273
     },
     {
       "county": "Dickinson",
@@ -779,25 +789,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:11:53.049614Z",
-  "last_updated": "2026-11-04T03:10:00Z",
-  "pct_reporting": 52.21,
-  "precincts_reporting": 2176,
+  "generated_at": "2026-11-04T03:13:52.295721Z",
+  "last_updated": "2026-11-04T03:12:00Z",
+  "pct_reporting": 52.26,
+  "precincts_reporting": 2178,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 57.27,
-      "votes": 449122
+      "pct": 57.25,
+      "votes": 449245
     },
     {
       "candidate_id": "marshall",
-      "pct": 42.73,
-      "votes": 335090
+      "pct": 42.75,
+      "votes": 335488
     }
   ],
   "status": "live",
-  "total_votes": 784212
+  "total_votes": 784733
 }
