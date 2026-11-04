@@ -270,13 +270,13 @@
     },
     {
       "county": "Ford",
-      "hamilton_votes": 1852,
-      "marshall_votes": 1549,
-      "other_votes": 90,
-      "pct_reporting": 4.76,
-      "precincts_reporting": 2,
+      "hamilton_votes": 3501,
+      "marshall_votes": 3427,
+      "other_votes": 233,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 42,
       "precincts_total": 42,
-      "total_votes": 3401
+      "total_votes": 6928
     },
     {
       "county": "Franklin",
@@ -710,13 +710,13 @@
     },
     {
       "county": "Phillips",
-      "hamilton_votes": 159,
-      "marshall_votes": 494,
-      "other_votes": 42,
-      "pct_reporting": 2.7,
-      "precincts_reporting": 1,
+      "hamilton_votes": 278,
+      "marshall_votes": 1089,
+      "other_votes": 93,
+      "pct_reporting": 29.73,
+      "precincts_reporting": 11,
       "precincts_total": 37,
-      "total_votes": 653
+      "total_votes": 1367
     },
     {
       "county": "Pottawatomie",
@@ -999,25 +999,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:09:52.918847Z",
-  "last_updated": "2026-11-04T04:08:00Z",
-  "pct_reporting": 84.26,
-  "precincts_reporting": 3512,
+  "generated_at": "2026-11-04T04:11:52.581477Z",
+  "last_updated": "2026-11-04T04:10:00Z",
+  "pct_reporting": 85.46,
+  "precincts_reporting": 3562,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.93,
-      "votes": 531072
+      "pct": 53.88,
+      "votes": 532840
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.07,
-      "votes": 453630
+      "pct": 46.12,
+      "votes": 456103
     }
   ],
   "status": "live",
-  "total_votes": 984702
+  "total_votes": 988943
 }
