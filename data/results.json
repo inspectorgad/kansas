@@ -269,6 +269,16 @@
       "total_votes": 1059
     },
     {
+      "county": "Osborne",
+      "hamilton_votes": 80,
+      "marshall_votes": 184,
+      "other_votes": 12,
+      "pct_reporting": 3.23,
+      "precincts_reporting": 1,
+      "precincts_total": 31,
+      "total_votes": 264
+    },
+    {
       "county": "Ottawa",
       "hamilton_votes": 195,
       "marshall_votes": 517,
@@ -369,25 +379,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T01:49:52.225105Z",
-  "last_updated": "2026-11-04T01:49:00Z",
-  "pct_reporting": 1.56,
-  "precincts_reporting": 65,
+  "generated_at": "2026-11-04T01:51:52.706406Z",
+  "last_updated": "2026-11-04T01:50:00Z",
+  "pct_reporting": 1.58,
+  "precincts_reporting": 66,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 65.23,
-      "votes": 273424
+      "pct": 65.21,
+      "votes": 273504
     },
     {
       "candidate_id": "marshall",
-      "pct": 34.77,
-      "votes": 145759
+      "pct": 34.79,
+      "votes": 145943
     }
   ],
   "status": "live",
-  "total_votes": 419183
+  "total_votes": 419447
 }
