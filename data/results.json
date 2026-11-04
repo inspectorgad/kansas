@@ -390,13 +390,13 @@
     },
     {
       "county": "Harvey",
-      "hamilton_votes": 6379,
-      "marshall_votes": 6927,
+      "hamilton_votes": 6380,
+      "marshall_votes": 6928,
       "other_votes": 370,
       "pct_reporting": 100.0,
       "precincts_reporting": 41,
       "precincts_total": 41,
-      "total_votes": 13306
+      "total_votes": 13308
     },
     {
       "county": "Haskell",
@@ -1029,8 +1029,8 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:31:52.750915Z",
-  "last_updated": "2026-11-04T04:29:00Z",
+  "generated_at": "2026-11-04T04:33:52.264008Z",
+  "last_updated": "2026-11-04T04:32:00Z",
   "pct_reporting": 88.68,
   "precincts_reporting": 3696,
   "precincts_total": 4168,
@@ -1040,14 +1040,14 @@
     {
       "candidate_id": "hamilton",
       "pct": 53.53,
-      "votes": 542690
+      "votes": 542691
     },
     {
       "candidate_id": "marshall",
       "pct": 46.47,
-      "votes": 471193
+      "votes": 471194
     }
   ],
   "status": "live",
-  "total_votes": 1013883
+  "total_votes": 1013885
 }
