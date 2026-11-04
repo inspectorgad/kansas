@@ -763,8 +763,8 @@
       "hamilton_votes": 1560,
       "marshall_votes": 2728,
       "other_votes": 187,
-      "pct_reporting": 36.0,
-      "precincts_reporting": 18,
+      "pct_reporting": 42.0,
+      "precincts_reporting": 21,
       "precincts_total": 50,
       "total_votes": 4288
     },
@@ -800,13 +800,13 @@
     },
     {
       "county": "Washington",
-      "hamilton_votes": 249,
-      "marshall_votes": 1318,
-      "other_votes": 60,
-      "pct_reporting": 96.3,
-      "precincts_reporting": 26,
+      "hamilton_votes": 412,
+      "marshall_votes": 1667,
+      "other_votes": 68,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 27,
       "precincts_total": 27,
-      "total_votes": 1567
+      "total_votes": 2079
     },
     {
       "county": "Wichita",
@@ -829,6 +829,16 @@
       "total_votes": 2630
     },
     {
+      "county": "Woodson",
+      "hamilton_votes": 270,
+      "marshall_votes": 769,
+      "other_votes": 68,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 9,
+      "precincts_total": 9,
+      "total_votes": 1039
+    },
+    {
       "county": "Wyandotte",
       "hamilton_votes": 31404,
       "marshall_votes": 10401,
@@ -839,25 +849,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:25:52.884707Z",
-  "last_updated": "2026-11-04T03:24:00Z",
-  "pct_reporting": 58.88,
-  "precincts_reporting": 2454,
+  "generated_at": "2026-11-04T03:27:52.339409Z",
+  "last_updated": "2026-11-04T03:26:00Z",
+  "pct_reporting": 59.12,
+  "precincts_reporting": 2464,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 56.38,
-      "votes": 460506
+      "pct": 56.33,
+      "votes": 460939
     },
     {
       "candidate_id": "marshall",
-      "pct": 43.62,
-      "votes": 356275
+      "pct": 43.67,
+      "votes": 357393
     }
   ],
   "status": "live",
-  "total_votes": 816781
+  "total_votes": 818332
 }
