@@ -650,13 +650,13 @@
     },
     {
       "county": "Nemaha",
-      "hamilton_votes": 205,
-      "marshall_votes": 379,
-      "other_votes": 15,
-      "pct_reporting": 3.23,
-      "precincts_reporting": 1,
+      "hamilton_votes": 922,
+      "marshall_votes": 3370,
+      "other_votes": 191,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
       "precincts_total": 31,
-      "total_votes": 584
+      "total_votes": 4292
     },
     {
       "county": "Neosho",
@@ -919,6 +919,16 @@
       "total_votes": 568
     },
     {
+      "county": "Stanton",
+      "hamilton_votes": 137,
+      "marshall_votes": 364,
+      "other_votes": 30,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 4,
+      "precincts_total": 4,
+      "total_votes": 501
+    },
+    {
       "county": "Stevens",
       "hamilton_votes": 302,
       "marshall_votes": 975,
@@ -1029,25 +1039,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:33:52.264008Z",
-  "last_updated": "2026-11-04T04:32:00Z",
-  "pct_reporting": 88.68,
-  "precincts_reporting": 3696,
+  "generated_at": "2026-11-04T04:35:52.948190Z",
+  "last_updated": "2026-11-04T04:34:00Z",
+  "pct_reporting": 89.49,
+  "precincts_reporting": 3730,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 53.53,
-      "votes": 542691
+      "pct": 53.39,
+      "votes": 543545
     },
     {
       "candidate_id": "marshall",
-      "pct": 46.47,
-      "votes": 471194
+      "pct": 46.61,
+      "votes": 474549
     }
   ],
   "status": "live",
-  "total_votes": 1013885
+  "total_votes": 1018094
 }

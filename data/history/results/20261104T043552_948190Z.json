@@ -1,0 +1,1063 @@
+{
+  "attribution": [
+    {
+      "name": "Kansas Secretary of State \u2014 unofficial election night results",
+      "note": "Unofficial returns. Official canvass follows in the weeks after election day.",
+      "url": "https://ent.sos.ks.gov/"
+    }
+  ],
+  "called": false,
+  "counties": [
+    {
+      "county": "Allen",
+      "hamilton_votes": 1447,
+      "marshall_votes": 2387,
+      "other_votes": 248,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 22,
+      "precincts_total": 22,
+      "total_votes": 3834
+    },
+    {
+      "county": "Anderson",
+      "hamilton_votes": 771,
+      "marshall_votes": 1964,
+      "other_votes": 123,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 18,
+      "precincts_total": 18,
+      "total_votes": 2735
+    },
+    {
+      "county": "Atchison",
+      "hamilton_votes": 2113,
+      "marshall_votes": 2836,
+      "other_votes": 227,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 19,
+      "precincts_total": 19,
+      "total_votes": 4949
+    },
+    {
+      "county": "Barber",
+      "hamilton_votes": 300,
+      "marshall_votes": 1293,
+      "other_votes": 78,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 22,
+      "precincts_total": 22,
+      "total_votes": 1593
+    },
+    {
+      "county": "Barton",
+      "hamilton_votes": 2478,
+      "marshall_votes": 5705,
+      "other_votes": 276,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 41,
+      "precincts_total": 41,
+      "total_votes": 8183
+    },
+    {
+      "county": "Bourbon",
+      "hamilton_votes": 1382,
+      "marshall_votes": 2971,
+      "other_votes": 220,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 30,
+      "precincts_total": 30,
+      "total_votes": 4353
+    },
+    {
+      "county": "Brown",
+      "hamilton_votes": 1092,
+      "marshall_votes": 2095,
+      "other_votes": 180,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 19,
+      "precincts_total": 19,
+      "total_votes": 3187
+    },
+    {
+      "county": "Butler",
+      "hamilton_votes": 9498,
+      "marshall_votes": 15638,
+      "other_votes": 864,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 54,
+      "precincts_total": 54,
+      "total_votes": 25136
+    },
+    {
+      "county": "Chase",
+      "hamilton_votes": 362,
+      "marshall_votes": 749,
+      "other_votes": 35,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
+      "precincts_total": 11,
+      "total_votes": 1111
+    },
+    {
+      "county": "Chautauqua",
+      "hamilton_votes": 199,
+      "marshall_votes": 868,
+      "other_votes": 41,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
+      "precincts_total": 15,
+      "total_votes": 1067
+    },
+    {
+      "county": "Cherokee",
+      "hamilton_votes": 1863,
+      "marshall_votes": 3851,
+      "other_votes": 330,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 36,
+      "precincts_total": 36,
+      "total_votes": 5714
+    },
+    {
+      "county": "Cheyenne",
+      "hamilton_votes": 219,
+      "marshall_votes": 792,
+      "other_votes": 51,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 9,
+      "precincts_total": 9,
+      "total_votes": 1011
+    },
+    {
+      "county": "Clark",
+      "hamilton_votes": 152,
+      "marshall_votes": 561,
+      "other_votes": 37,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 8,
+      "precincts_total": 8,
+      "total_votes": 713
+    },
+    {
+      "county": "Clay",
+      "hamilton_votes": 905,
+      "marshall_votes": 2238,
+      "other_votes": 161,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 22,
+      "precincts_total": 22,
+      "total_votes": 3143
+    },
+    {
+      "county": "Cloud",
+      "hamilton_votes": 837,
+      "marshall_votes": 2163,
+      "other_votes": 140,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 30,
+      "precincts_total": 30,
+      "total_votes": 3000
+    },
+    {
+      "county": "Coffey",
+      "hamilton_votes": 909,
+      "marshall_votes": 2223,
+      "other_votes": 163,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 18,
+      "precincts_total": 18,
+      "total_votes": 3132
+    },
+    {
+      "county": "Comanche",
+      "hamilton_votes": 171,
+      "marshall_votes": 462,
+      "other_votes": 34,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 5,
+      "precincts_total": 5,
+      "total_votes": 633
+    },
+    {
+      "county": "Cowley",
+      "hamilton_votes": 3931,
+      "marshall_votes": 6055,
+      "other_votes": 420,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 45,
+      "precincts_total": 45,
+      "total_votes": 9986
+    },
+    {
+      "county": "Crawford",
+      "hamilton_votes": 5702,
+      "marshall_votes": 5880,
+      "other_votes": 575,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 57,
+      "precincts_total": 57,
+      "total_votes": 11582
+    },
+    {
+      "county": "Decatur",
+      "hamilton_votes": 69,
+      "marshall_votes": 204,
+      "other_votes": 16,
+      "pct_reporting": 3.7,
+      "precincts_reporting": 1,
+      "precincts_total": 27,
+      "total_votes": 273
+    },
+    {
+      "county": "Dickinson",
+      "hamilton_votes": 2095,
+      "marshall_votes": 4768,
+      "other_votes": 307,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 32,
+      "precincts_total": 32,
+      "total_votes": 6863
+    },
+    {
+      "county": "Doniphan",
+      "hamilton_votes": 609,
+      "marshall_votes": 1838,
+      "other_votes": 113,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 14,
+      "precincts_total": 14,
+      "total_votes": 2447
+    },
+    {
+      "county": "Douglas",
+      "hamilton_votes": 38009,
+      "marshall_votes": 10768,
+      "other_votes": 1061,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 102,
+      "precincts_total": 102,
+      "total_votes": 48777
+    },
+    {
+      "county": "Edwards",
+      "hamilton_votes": 218,
+      "marshall_votes": 755,
+      "other_votes": 43,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
+      "precincts_total": 15,
+      "total_votes": 973
+    },
+    {
+      "county": "Elk",
+      "hamilton_votes": 182,
+      "marshall_votes": 775,
+      "other_votes": 49,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
+      "precincts_total": 11,
+      "total_votes": 957
+    },
+    {
+      "county": "Ellis",
+      "hamilton_votes": 3842,
+      "marshall_votes": 6463,
+      "other_votes": 319,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
+      "precincts_total": 31,
+      "total_votes": 10305
+    },
+    {
+      "county": "Ellsworth",
+      "hamilton_votes": 698,
+      "marshall_votes": 1457,
+      "other_votes": 83,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 26,
+      "precincts_total": 26,
+      "total_votes": 2155
+    },
+    {
+      "county": "Finney",
+      "hamilton_votes": 4512,
+      "marshall_votes": 4313,
+      "other_votes": 290,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 71,
+      "precincts_total": 71,
+      "total_votes": 8825
+    },
+    {
+      "county": "Ford",
+      "hamilton_votes": 3501,
+      "marshall_votes": 3427,
+      "other_votes": 233,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 42,
+      "precincts_total": 42,
+      "total_votes": 6928
+    },
+    {
+      "county": "Franklin",
+      "hamilton_votes": 3778,
+      "marshall_votes": 5541,
+      "other_votes": 436,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 25,
+      "precincts_total": 25,
+      "total_votes": 9319
+    },
+    {
+      "county": "Geary",
+      "hamilton_votes": 3345,
+      "marshall_votes": 2996,
+      "other_votes": 355,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 49,
+      "precincts_total": 49,
+      "total_votes": 6341
+    },
+    {
+      "county": "Gove",
+      "hamilton_votes": 161,
+      "marshall_votes": 752,
+      "other_votes": 36,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 9,
+      "precincts_total": 9,
+      "total_votes": 913
+    },
+    {
+      "county": "Graham",
+      "hamilton_votes": 122,
+      "marshall_votes": 233,
+      "other_votes": 21,
+      "pct_reporting": 5.26,
+      "precincts_reporting": 1,
+      "precincts_total": 19,
+      "total_votes": 355
+    },
+    {
+      "county": "Grant",
+      "hamilton_votes": 496,
+      "marshall_votes": 1066,
+      "other_votes": 53,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 6,
+      "precincts_total": 6,
+      "total_votes": 1562
+    },
+    {
+      "county": "Gray",
+      "hamilton_votes": 370,
+      "marshall_votes": 1204,
+      "other_votes": 71,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 8,
+      "precincts_total": 8,
+      "total_votes": 1574
+    },
+    {
+      "county": "Greeley",
+      "hamilton_votes": 110,
+      "marshall_votes": 314,
+      "other_votes": 20,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 3,
+      "precincts_total": 3,
+      "total_votes": 424
+    },
+    {
+      "county": "Hamilton",
+      "hamilton_votes": 133,
+      "marshall_votes": 413,
+      "other_votes": 29,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 12,
+      "precincts_total": 12,
+      "total_votes": 546
+    },
+    {
+      "county": "Harper",
+      "hamilton_votes": 447,
+      "marshall_votes": 1328,
+      "other_votes": 66,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
+      "precincts_total": 15,
+      "total_votes": 1775
+    },
+    {
+      "county": "Harvey",
+      "hamilton_votes": 6380,
+      "marshall_votes": 6928,
+      "other_votes": 370,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 41,
+      "precincts_total": 41,
+      "total_votes": 13308
+    },
+    {
+      "county": "Haskell",
+      "hamilton_votes": 266,
+      "marshall_votes": 700,
+      "other_votes": 31,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 13,
+      "precincts_total": 13,
+      "total_votes": 966
+    },
+    {
+      "county": "Hodgeman",
+      "hamilton_votes": 141,
+      "marshall_votes": 555,
+      "other_votes": 21,
+      "pct_reporting": 75.0,
+      "precincts_reporting": 12,
+      "precincts_total": 16,
+      "total_votes": 696
+    },
+    {
+      "county": "Jackson",
+      "hamilton_votes": 1903,
+      "marshall_votes": 3074,
+      "other_votes": 287,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 25,
+      "precincts_total": 25,
+      "total_votes": 4977
+    },
+    {
+      "county": "Jefferson",
+      "hamilton_votes": 3065,
+      "marshall_votes": 4514,
+      "other_votes": 326,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 16,
+      "precincts_total": 16,
+      "total_votes": 7579
+    },
+    {
+      "county": "Jewell",
+      "hamilton_votes": 187,
+      "marshall_votes": 960,
+      "other_votes": 51,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 26,
+      "precincts_total": 26,
+      "total_votes": 1147
+    },
+    {
+      "county": "Johnson",
+      "hamilton_votes": 186707,
+      "marshall_votes": 103857,
+      "other_votes": 5645,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 591,
+      "precincts_total": 591,
+      "total_votes": 290564
+    },
+    {
+      "county": "Kearny",
+      "hamilton_votes": 228,
+      "marshall_votes": 767,
+      "other_votes": 29,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 10,
+      "precincts_total": 10,
+      "total_votes": 995
+    },
+    {
+      "county": "Kingman",
+      "hamilton_votes": 819,
+      "marshall_votes": 2205,
+      "other_votes": 92,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 28,
+      "precincts_total": 28,
+      "total_votes": 3024
+    },
+    {
+      "county": "Kiowa",
+      "hamilton_votes": 167,
+      "marshall_votes": 672,
+      "other_votes": 43,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 5,
+      "precincts_total": 5,
+      "total_votes": 839
+    },
+    {
+      "county": "Labette",
+      "hamilton_votes": 2229,
+      "marshall_votes": 3342,
+      "other_votes": 259,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 38,
+      "precincts_total": 38,
+      "total_votes": 5571
+    },
+    {
+      "county": "Lane",
+      "hamilton_votes": 131,
+      "marshall_votes": 508,
+      "other_votes": 31,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 10,
+      "precincts_total": 10,
+      "total_votes": 639
+    },
+    {
+      "county": "Leavenworth",
+      "hamilton_votes": 13468,
+      "marshall_votes": 13727,
+      "other_votes": 1117,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 51,
+      "precincts_total": 51,
+      "total_votes": 27195
+    },
+    {
+      "county": "Lincoln",
+      "hamilton_votes": 271,
+      "marshall_votes": 977,
+      "other_votes": 40,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 22,
+      "precincts_total": 22,
+      "total_votes": 1248
+    },
+    {
+      "county": "Linn",
+      "hamilton_votes": 875,
+      "marshall_votes": 2595,
+      "other_votes": 150,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 10,
+      "precincts_total": 10,
+      "total_votes": 3470
+    },
+    {
+      "county": "Logan",
+      "hamilton_votes": 213,
+      "marshall_votes": 830,
+      "other_votes": 49,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 13,
+      "precincts_total": 13,
+      "total_votes": 1043
+    },
+    {
+      "county": "Lyon",
+      "hamilton_votes": 5811,
+      "marshall_votes": 4906,
+      "other_votes": 541,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 42,
+      "precincts_total": 42,
+      "total_votes": 10717
+    },
+    {
+      "county": "Marion",
+      "hamilton_votes": 717,
+      "marshall_votes": 1269,
+      "other_votes": 72,
+      "pct_reporting": 9.38,
+      "precincts_reporting": 3,
+      "precincts_total": 32,
+      "total_votes": 1986
+    },
+    {
+      "county": "Marshall",
+      "hamilton_votes": 1254,
+      "marshall_votes": 2466,
+      "other_votes": 169,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
+      "precincts_total": 31,
+      "total_votes": 3720
+    },
+    {
+      "county": "McPherson",
+      "hamilton_votes": 2865,
+      "marshall_votes": 5036,
+      "other_votes": 224,
+      "pct_reporting": 60.61,
+      "precincts_reporting": 20,
+      "precincts_total": 33,
+      "total_votes": 7901
+    },
+    {
+      "county": "Meade",
+      "hamilton_votes": 297,
+      "marshall_votes": 1003,
+      "other_votes": 51,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 9,
+      "precincts_total": 9,
+      "total_votes": 1300
+    },
+    {
+      "county": "Miami",
+      "hamilton_votes": 4132,
+      "marshall_votes": 5434,
+      "other_votes": 300,
+      "pct_reporting": 7.84,
+      "precincts_reporting": 4,
+      "precincts_total": 51,
+      "total_votes": 9566
+    },
+    {
+      "county": "Mitchell",
+      "hamilton_votes": 506,
+      "marshall_votes": 1685,
+      "other_votes": 66,
+      "pct_reporting": 88.0,
+      "precincts_reporting": 22,
+      "precincts_total": 25,
+      "total_votes": 2191
+    },
+    {
+      "county": "Montgomery",
+      "hamilton_votes": 668,
+      "marshall_votes": 785,
+      "other_votes": 35,
+      "pct_reporting": 1.11,
+      "precincts_reporting": 1,
+      "precincts_total": 90,
+      "total_votes": 1453
+    },
+    {
+      "county": "Morris",
+      "hamilton_votes": 823,
+      "marshall_votes": 1366,
+      "other_votes": 135,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 15,
+      "precincts_total": 15,
+      "total_votes": 2189
+    },
+    {
+      "county": "Morton",
+      "hamilton_votes": 143,
+      "marshall_votes": 565,
+      "other_votes": 29,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 14,
+      "precincts_total": 14,
+      "total_votes": 708
+    },
+    {
+      "county": "Nemaha",
+      "hamilton_votes": 922,
+      "marshall_votes": 3370,
+      "other_votes": 191,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
+      "precincts_total": 31,
+      "total_votes": 4292
+    },
+    {
+      "county": "Neosho",
+      "hamilton_votes": 1674,
+      "marshall_votes": 2949,
+      "other_votes": 278,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 43,
+      "precincts_total": 43,
+      "total_votes": 4623
+    },
+    {
+      "county": "Ness",
+      "hamilton_votes": 105,
+      "marshall_votes": 382,
+      "other_votes": 17,
+      "pct_reporting": 8.33,
+      "precincts_reporting": 1,
+      "precincts_total": 12,
+      "total_votes": 487
+    },
+    {
+      "county": "Norton",
+      "hamilton_votes": 366,
+      "marshall_votes": 1357,
+      "other_votes": 77,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
+      "precincts_total": 11,
+      "total_votes": 1723
+    },
+    {
+      "county": "Osage",
+      "hamilton_votes": 2008,
+      "marshall_votes": 3731,
+      "other_votes": 315,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 28,
+      "precincts_total": 28,
+      "total_votes": 5739
+    },
+    {
+      "county": "Osborne",
+      "hamilton_votes": 261,
+      "marshall_votes": 965,
+      "other_votes": 66,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
+      "precincts_total": 31,
+      "total_votes": 1226
+    },
+    {
+      "county": "Ottawa",
+      "hamilton_votes": 508,
+      "marshall_votes": 1846,
+      "other_votes": 87,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 26,
+      "precincts_total": 26,
+      "total_votes": 2354
+    },
+    {
+      "county": "Pawnee",
+      "hamilton_votes": 606,
+      "marshall_votes": 1358,
+      "other_votes": 85,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 30,
+      "precincts_total": 30,
+      "total_votes": 1964
+    },
+    {
+      "county": "Phillips",
+      "hamilton_votes": 278,
+      "marshall_votes": 1089,
+      "other_votes": 93,
+      "pct_reporting": 29.73,
+      "precincts_reporting": 11,
+      "precincts_total": 37,
+      "total_votes": 1367
+    },
+    {
+      "county": "Pottawatomie",
+      "hamilton_votes": 3577,
+      "marshall_votes": 6689,
+      "other_votes": 471,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
+      "precincts_total": 31,
+      "total_votes": 10266
+    },
+    {
+      "county": "Pratt",
+      "hamilton_votes": 1028,
+      "marshall_votes": 2128,
+      "other_votes": 130,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 18,
+      "precincts_total": 18,
+      "total_votes": 3156
+    },
+    {
+      "county": "Rawlins",
+      "hamilton_votes": 211,
+      "marshall_votes": 828,
+      "other_votes": 45,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 17,
+      "precincts_total": 17,
+      "total_votes": 1039
+    },
+    {
+      "county": "Reno",
+      "hamilton_votes": 8675,
+      "marshall_votes": 12132,
+      "other_votes": 845,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 89,
+      "precincts_total": 89,
+      "total_votes": 20807
+    },
+    {
+      "county": "Republic",
+      "hamilton_votes": 441,
+      "marshall_votes": 1404,
+      "other_votes": 97,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 23,
+      "precincts_total": 23,
+      "total_votes": 1845
+    },
+    {
+      "county": "Riley",
+      "hamilton_votes": 11800,
+      "marshall_votes": 7598,
+      "other_votes": 552,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 68,
+      "precincts_total": 68,
+      "total_votes": 19398
+    },
+    {
+      "county": "Rooks",
+      "hamilton_votes": 133,
+      "marshall_votes": 346,
+      "other_votes": 18,
+      "pct_reporting": 20.0,
+      "precincts_reporting": 3,
+      "precincts_total": 15,
+      "total_votes": 479
+    },
+    {
+      "county": "Rush",
+      "hamilton_votes": 232,
+      "marshall_votes": 561,
+      "other_votes": 37,
+      "pct_reporting": 30.77,
+      "precincts_reporting": 4,
+      "precincts_total": 13,
+      "total_votes": 793
+    },
+    {
+      "county": "Russell",
+      "hamilton_votes": 651,
+      "marshall_votes": 1782,
+      "other_votes": 112,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 29,
+      "precincts_total": 29,
+      "total_votes": 2433
+    },
+    {
+      "county": "Saline",
+      "hamilton_votes": 3221,
+      "marshall_votes": 3145,
+      "other_votes": 132,
+      "pct_reporting": 1.75,
+      "precincts_reporting": 1,
+      "precincts_total": 57,
+      "total_votes": 6366
+    },
+    {
+      "county": "Scott",
+      "hamilton_votes": 109,
+      "marshall_votes": 354,
+      "other_votes": 12,
+      "pct_reporting": 9.09,
+      "precincts_reporting": 1,
+      "precincts_total": 11,
+      "total_votes": 463
+    },
+    {
+      "county": "Sedgwick",
+      "hamilton_votes": 95151,
+      "marshall_votes": 81533,
+      "other_votes": 4480,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 558,
+      "precincts_total": 558,
+      "total_votes": 176684
+    },
+    {
+      "county": "Seward",
+      "hamilton_votes": 2299,
+      "marshall_votes": 1740,
+      "other_votes": 140,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 22,
+      "precincts_total": 22,
+      "total_votes": 4039
+    },
+    {
+      "county": "Shawnee",
+      "hamilton_votes": 39086,
+      "marshall_votes": 26685,
+      "other_votes": 2398,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 248,
+      "precincts_total": 248,
+      "total_votes": 65771
+    },
+    {
+      "county": "Sheridan",
+      "hamilton_votes": 26,
+      "marshall_votes": 120,
+      "other_votes": 2,
+      "pct_reporting": 5.88,
+      "precincts_reporting": 1,
+      "precincts_total": 17,
+      "total_votes": 146
+    },
+    {
+      "county": "Sherman",
+      "hamilton_votes": 400,
+      "marshall_votes": 1414,
+      "other_votes": 86,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 19,
+      "precincts_total": 19,
+      "total_votes": 1814
+    },
+    {
+      "county": "Smith",
+      "hamilton_votes": 298,
+      "marshall_votes": 1173,
+      "other_votes": 52,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 28,
+      "precincts_total": 28,
+      "total_votes": 1471
+    },
+    {
+      "county": "Stafford",
+      "hamilton_votes": 177,
+      "marshall_votes": 391,
+      "other_votes": 26,
+      "pct_reporting": 4.0,
+      "precincts_reporting": 1,
+      "precincts_total": 25,
+      "total_votes": 568
+    },
+    {
+      "county": "Stanton",
+      "hamilton_votes": 137,
+      "marshall_votes": 364,
+      "other_votes": 30,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 4,
+      "precincts_total": 4,
+      "total_votes": 501
+    },
+    {
+      "county": "Stevens",
+      "hamilton_votes": 302,
+      "marshall_votes": 975,
+      "other_votes": 61,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
+      "precincts_total": 11,
+      "total_votes": 1277
+    },
+    {
+      "county": "Sumner",
+      "hamilton_votes": 2638,
+      "marshall_votes": 5087,
+      "other_votes": 354,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 50,
+      "precincts_total": 50,
+      "total_votes": 7725
+    },
+    {
+      "county": "Thomas",
+      "hamilton_votes": 677,
+      "marshall_votes": 2064,
+      "other_votes": 94,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 19,
+      "precincts_total": 19,
+      "total_votes": 2741
+    },
+    {
+      "county": "Trego",
+      "hamilton_votes": 276,
+      "marshall_votes": 1001,
+      "other_votes": 82,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 11,
+      "precincts_total": 11,
+      "total_votes": 1277
+    },
+    {
+      "county": "Wabaunsee",
+      "hamilton_votes": 1026,
+      "marshall_votes": 2068,
+      "other_votes": 150,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 16,
+      "precincts_total": 16,
+      "total_votes": 3094
+    },
+    {
+      "county": "Wallace",
+      "hamilton_votes": 63,
+      "marshall_votes": 519,
+      "other_votes": 16,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 7,
+      "precincts_total": 7,
+      "total_votes": 582
+    },
+    {
+      "county": "Washington",
+      "hamilton_votes": 412,
+      "marshall_votes": 1667,
+      "other_votes": 68,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 27,
+      "precincts_total": 27,
+      "total_votes": 2079
+    },
+    {
+      "county": "Wichita",
+      "hamilton_votes": 128,
+      "marshall_votes": 537,
+      "other_votes": 28,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 3,
+      "precincts_total": 3,
+      "total_votes": 665
+    },
+    {
+      "county": "Wilson",
+      "hamilton_votes": 675,
+      "marshall_votes": 1955,
+      "other_votes": 146,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 26,
+      "precincts_total": 26,
+      "total_votes": 2630
+    },
+    {
+      "county": "Woodson",
+      "hamilton_votes": 270,
+      "marshall_votes": 769,
+      "other_votes": 68,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 9,
+      "precincts_total": 9,
+      "total_votes": 1039
+    },
+    {
+      "county": "Wyandotte",
+      "hamilton_votes": 31404,
+      "marshall_votes": 10401,
+      "other_votes": 1315,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 148,
+      "precincts_total": 148,
+      "total_votes": 41805
+    }
+  ],
+  "generated_at": "2026-11-04T04:35:52.948190Z",
+  "last_updated": "2026-11-04T04:34:00Z",
+  "pct_reporting": 89.49,
+  "precincts_reporting": 3730,
+  "precincts_total": 4168,
+  "schema_version": 1,
+  "source_url": "https://www.kssos.org/ent/kssos_ent.html",
+  "statewide": [
+    {
+      "candidate_id": "hamilton",
+      "pct": 53.39,
+      "votes": 543545
+    },
+    {
+      "candidate_id": "marshall",
+      "pct": 46.61,
+      "votes": 474549
+    }
+  ],
+  "status": "live",
+  "total_votes": 1018094
+}
