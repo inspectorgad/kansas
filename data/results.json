@@ -423,8 +423,8 @@
       "hamilton_votes": 187,
       "marshall_votes": 960,
       "other_votes": 51,
-      "pct_reporting": 96.15,
-      "precincts_reporting": 25,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 26,
       "precincts_total": 26,
       "total_votes": 1147
     },
@@ -999,10 +999,10 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T04:01:52.561759Z",
-  "last_updated": "2026-11-04T04:00:00Z",
-  "pct_reporting": 81.43,
-  "precincts_reporting": 3394,
+  "generated_at": "2026-11-04T04:03:52.240675Z",
+  "last_updated": "2026-11-04T04:02:00Z",
+  "pct_reporting": 81.45,
+  "precincts_reporting": 3395,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
