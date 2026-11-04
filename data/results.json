@@ -340,13 +340,13 @@
     },
     {
       "county": "Harvey",
-      "hamilton_votes": 5115,
-      "marshall_votes": 4502,
-      "other_votes": 258,
-      "pct_reporting": 51.22,
-      "precincts_reporting": 21,
+      "hamilton_votes": 6379,
+      "marshall_votes": 6927,
+      "other_votes": 370,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 41,
       "precincts_total": 41,
-      "total_votes": 9617
+      "total_votes": 13306
     },
     {
       "county": "Haskell",
@@ -909,25 +909,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:43:52.319840Z",
-  "last_updated": "2026-11-04T03:42:00Z",
-  "pct_reporting": 75.53,
-  "precincts_reporting": 3148,
+  "generated_at": "2026-11-04T03:45:52.991355Z",
+  "last_updated": "2026-11-04T03:44:00Z",
+  "pct_reporting": 76.01,
+  "precincts_reporting": 3168,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 54.76,
-      "votes": 510116
+      "pct": 54.68,
+      "votes": 511380
     },
     {
       "candidate_id": "marshall",
-      "pct": 45.24,
-      "votes": 421473
+      "pct": 45.32,
+      "votes": 423898
     }
   ],
   "status": "live",
-  "total_votes": 931589
+  "total_votes": 935278
 }
