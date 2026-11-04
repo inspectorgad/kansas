@@ -150,13 +150,13 @@
     },
     {
       "county": "Franklin",
-      "hamilton_votes": 1601,
-      "marshall_votes": 1332,
-      "other_votes": 79,
-      "pct_reporting": 4.0,
-      "precincts_reporting": 1,
+      "hamilton_votes": 2343,
+      "marshall_votes": 2394,
+      "other_votes": 191,
+      "pct_reporting": 28.0,
+      "precincts_reporting": 7,
       "precincts_total": 25,
-      "total_votes": 2933
+      "total_votes": 4737
     },
     {
       "county": "Harvey",
@@ -239,6 +239,16 @@
       "total_votes": 1085
     },
     {
+      "county": "Meade",
+      "hamilton_votes": 108,
+      "marshall_votes": 411,
+      "other_votes": 16,
+      "pct_reporting": 11.11,
+      "precincts_reporting": 1,
+      "precincts_total": 9,
+      "total_votes": 519
+    },
+    {
       "county": "Montgomery",
       "hamilton_votes": 668,
       "marshall_votes": 785,
@@ -270,13 +280,13 @@
     },
     {
       "county": "Pottawatomie",
-      "hamilton_votes": 1147,
-      "marshall_votes": 1098,
-      "other_votes": 65,
-      "pct_reporting": 3.23,
-      "precincts_reporting": 1,
+      "hamilton_votes": 1348,
+      "marshall_votes": 1674,
+      "other_votes": 125,
+      "pct_reporting": 25.81,
+      "precincts_reporting": 8,
       "precincts_total": 31,
-      "total_votes": 2245
+      "total_votes": 3022
     },
     {
       "county": "Reno",
@@ -359,25 +369,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T01:47:52.766657Z",
-  "last_updated": "2026-11-04T01:46:00Z",
-  "pct_reporting": 1.22,
-  "precincts_reporting": 51,
+  "generated_at": "2026-11-04T01:49:52.225105Z",
+  "last_updated": "2026-11-04T01:49:00Z",
+  "pct_reporting": 1.56,
+  "precincts_reporting": 65,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 65.46,
-      "votes": 272373
+      "pct": 65.23,
+      "votes": 273424
     },
     {
       "candidate_id": "marshall",
-      "pct": 34.54,
-      "votes": 143710
+      "pct": 34.77,
+      "votes": 145759
     }
   ],
   "status": "live",
-  "total_votes": 416083
+  "total_votes": 419183
 }
