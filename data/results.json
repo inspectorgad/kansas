@@ -59,6 +59,16 @@
       "total_votes": 1111
     },
     {
+      "county": "Chautauqua",
+      "hamilton_votes": 86,
+      "marshall_votes": 0,
+      "other_votes": 0,
+      "pct_reporting": 60.0,
+      "precincts_reporting": 9,
+      "precincts_total": 15,
+      "total_votes": 86
+    },
+    {
       "county": "Cheyenne",
       "hamilton_votes": 93,
       "marshall_votes": 230,
@@ -117,6 +127,16 @@
       "precincts_reporting": 39,
       "precincts_total": 57,
       "total_votes": 7742
+    },
+    {
+      "county": "Dickinson",
+      "hamilton_votes": 886,
+      "marshall_votes": 1423,
+      "other_votes": 66,
+      "pct_reporting": 3.12,
+      "precincts_reporting": 1,
+      "precincts_total": 32,
+      "total_votes": 2309
     },
     {
       "county": "Doniphan",
@@ -250,13 +270,13 @@
     },
     {
       "county": "Johnson",
-      "hamilton_votes": 129387,
-      "marshall_votes": 59604,
-      "other_votes": 2617,
-      "pct_reporting": 0.17,
-      "precincts_reporting": 1,
+      "hamilton_votes": 161942,
+      "marshall_votes": 85221,
+      "other_votes": 4270,
+      "pct_reporting": 59.39,
+      "precincts_reporting": 351,
       "precincts_total": 591,
-      "total_votes": 188991
+      "total_votes": 247163
     },
     {
       "county": "Kingman",
@@ -559,25 +579,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:27:52.879023Z",
-  "last_updated": "2026-11-04T02:26:00Z",
-  "pct_reporting": 17.75,
-  "precincts_reporting": 740,
+  "generated_at": "2026-11-04T02:29:52.424276Z",
+  "last_updated": "2026-11-04T02:28:00Z",
+  "pct_reporting": 26.39,
+  "precincts_reporting": 1100,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 60.76,
-      "votes": 335871
+      "pct": 60.23,
+      "votes": 369398
     },
     {
       "candidate_id": "marshall",
-      "pct": 39.24,
-      "votes": 216868
+      "pct": 39.77,
+      "votes": 243908
     }
   ],
   "status": "live",
-  "total_votes": 552739
+  "total_votes": 613306
 }
