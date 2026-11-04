@@ -589,6 +589,16 @@
       "total_votes": 1453
     },
     {
+      "county": "Morton",
+      "hamilton_votes": 143,
+      "marshall_votes": 565,
+      "other_votes": 29,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 14,
+      "precincts_total": 14,
+      "total_votes": 708
+    },
+    {
       "county": "Nemaha",
       "hamilton_votes": 205,
       "marshall_votes": 379,
@@ -630,13 +640,13 @@
     },
     {
       "county": "Osborne",
-      "hamilton_votes": 80,
-      "marshall_votes": 184,
-      "other_votes": 12,
-      "pct_reporting": 3.23,
-      "precincts_reporting": 1,
+      "hamilton_votes": 261,
+      "marshall_votes": 965,
+      "other_votes": 261,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 31,
       "precincts_total": 31,
-      "total_votes": 264
+      "total_votes": 1226
     },
     {
       "county": "Ottawa",
@@ -707,6 +717,16 @@
       "precincts_reporting": 89,
       "precincts_total": 89,
       "total_votes": 20807
+    },
+    {
+      "county": "Republic",
+      "hamilton_votes": 171,
+      "marshall_votes": 323,
+      "other_votes": 24,
+      "pct_reporting": 4.35,
+      "precincts_reporting": 1,
+      "precincts_total": 23,
+      "total_votes": 494
     },
     {
       "county": "Riley",
@@ -797,6 +817,16 @@
       "precincts_reporting": 1,
       "precincts_total": 17,
       "total_votes": 146
+    },
+    {
+      "county": "Sherman",
+      "hamilton_votes": 400,
+      "marshall_votes": 1414,
+      "other_votes": 86,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 19,
+      "precincts_total": 19,
+      "total_votes": 1814
     },
     {
       "county": "Smith",
@@ -929,25 +959,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T03:47:52.535469Z",
-  "last_updated": "2026-11-04T03:46:00Z",
-  "pct_reporting": 76.22,
-  "precincts_reporting": 3177,
+  "generated_at": "2026-11-04T03:49:52.842279Z",
+  "last_updated": "2026-11-04T03:48:00Z",
+  "pct_reporting": 77.76,
+  "precincts_reporting": 3241,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 54.56,
-      "votes": 512050
+      "pct": 54.43,
+      "votes": 512945
     },
     {
       "candidate_id": "marshall",
-      "pct": 45.44,
-      "votes": 426395
+      "pct": 45.57,
+      "votes": 429478
     }
   ],
   "status": "live",
-  "total_votes": 938445
+  "total_votes": 942423
 }
