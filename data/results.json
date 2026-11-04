@@ -229,6 +229,16 @@
       "total_votes": 1392
     },
     {
+      "county": "Jefferson",
+      "hamilton_votes": 1150,
+      "marshall_votes": 1386,
+      "other_votes": 88,
+      "pct_reporting": 25.0,
+      "precincts_reporting": 4,
+      "precincts_total": 16,
+      "total_votes": 2536
+    },
+    {
       "county": "Johnson",
       "hamilton_votes": 129387,
       "marshall_votes": 59604,
@@ -250,13 +260,13 @@
     },
     {
       "county": "Kiowa",
-      "hamilton_votes": 119,
-      "marshall_votes": 331,
-      "other_votes": 25,
-      "pct_reporting": 60.0,
-      "precincts_reporting": 3,
+      "hamilton_votes": 167,
+      "marshall_votes": 672,
+      "other_votes": 43,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 5,
       "precincts_total": 5,
-      "total_votes": 450
+      "total_votes": 839
     },
     {
       "county": "Labette",
@@ -369,6 +379,16 @@
       "total_votes": 1786
     },
     {
+      "county": "Phillips",
+      "hamilton_votes": 125,
+      "marshall_votes": 377,
+      "other_votes": 26,
+      "pct_reporting": 2.7,
+      "precincts_reporting": 1,
+      "precincts_total": 37,
+      "total_votes": 502
+    },
+    {
       "county": "Pottawatomie",
       "hamilton_votes": 1348,
       "marshall_votes": 1674,
@@ -429,6 +449,16 @@
       "total_votes": 95358
     },
     {
+      "county": "Seward",
+      "hamilton_votes": 2299,
+      "marshall_votes": 1740,
+      "other_votes": 140,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 22,
+      "precincts_total": 22,
+      "total_votes": 4039
+    },
+    {
       "county": "Shawnee",
       "hamilton_votes": 25600,
       "marshall_votes": 14650,
@@ -480,13 +510,13 @@
     },
     {
       "county": "Wilson",
-      "hamilton_votes": 524,
-      "marshall_votes": 1417,
-      "other_votes": 98,
-      "pct_reporting": 73.08,
-      "precincts_reporting": 19,
+      "hamilton_votes": 675,
+      "marshall_votes": 1955,
+      "other_votes": 146,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 26,
       "precincts_total": 26,
-      "total_votes": 1941
+      "total_votes": 2630
     },
     {
       "county": "Wyandotte",
@@ -499,25 +529,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:21:52.739500Z",
-  "last_updated": "2026-11-04T02:20:00Z",
-  "pct_reporting": 10.27,
-  "precincts_reporting": 428,
+  "generated_at": "2026-11-04T02:23:52.521820Z",
+  "last_updated": "2026-11-04T02:22:00Z",
+  "pct_reporting": 11.13,
+  "precincts_reporting": 464,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 62.02,
-      "votes": 306276
+      "pct": 61.77,
+      "votes": 310049
     },
     {
       "candidate_id": "marshall",
-      "pct": 37.98,
-      "votes": 187543
+      "pct": 38.23,
+      "votes": 191925
     }
   ],
   "status": "live",
-  "total_votes": 493819
+  "total_votes": 501974
 }
