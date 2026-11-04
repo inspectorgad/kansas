@@ -120,13 +120,13 @@
     },
     {
       "county": "Comanche",
-      "hamilton_votes": 43,
-      "marshall_votes": 57,
-      "other_votes": 4,
-      "pct_reporting": 20.0,
-      "precincts_reporting": 1,
+      "hamilton_votes": 171,
+      "marshall_votes": 462,
+      "other_votes": 34,
+      "pct_reporting": 100.0,
+      "precincts_reporting": 5,
       "precincts_total": 5,
-      "total_votes": 100
+      "total_votes": 633
     },
     {
       "county": "Cowley",
@@ -317,6 +317,16 @@
       "precincts_reporting": 4,
       "precincts_total": 16,
       "total_votes": 2536
+    },
+    {
+      "county": "Jewell",
+      "hamilton_votes": 71,
+      "marshall_votes": 200,
+      "other_votes": 10,
+      "pct_reporting": 3.85,
+      "precincts_reporting": 1,
+      "precincts_total": 26,
+      "total_votes": 271
     },
     {
       "county": "Johnson",
@@ -659,25 +669,25 @@
       "total_votes": 41805
     }
   ],
-  "generated_at": "2026-11-04T02:55:52.970279Z",
-  "last_updated": "2026-11-04T02:54:00Z",
-  "pct_reporting": 36.61,
-  "precincts_reporting": 1526,
+  "generated_at": "2026-11-04T02:57:52.370866Z",
+  "last_updated": "2026-11-04T02:56:00Z",
+  "pct_reporting": 36.73,
+  "precincts_reporting": 1531,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 59.03,
-      "votes": 409896
+      "pct": 58.99,
+      "votes": 410095
     },
     {
       "candidate_id": "marshall",
-      "pct": 40.97,
-      "votes": 284442
+      "pct": 41.01,
+      "votes": 285047
     }
   ],
   "status": "live",
-  "total_votes": 694338
+  "total_votes": 695142
 }
