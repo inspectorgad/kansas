@@ -19,6 +19,16 @@
       "total_votes": 1099
     },
     {
+      "county": "Anderson",
+      "hamilton_votes": 402,
+      "marshall_votes": 733,
+      "other_votes": 47,
+      "pct_reporting": 5.56,
+      "precincts_reporting": 1,
+      "precincts_total": 18,
+      "total_votes": 1135
+    },
+    {
       "county": "Barton",
       "hamilton_votes": 1098,
       "marshall_votes": 1700,
@@ -67,6 +77,16 @@
       "precincts_reporting": 1,
       "precincts_total": 8,
       "total_votes": 138
+    },
+    {
+      "county": "Clay",
+      "hamilton_votes": 391,
+      "marshall_votes": 658,
+      "other_votes": 40,
+      "pct_reporting": 4.55,
+      "precincts_reporting": 1,
+      "precincts_total": 22,
+      "total_votes": 1049
     },
     {
       "county": "Comanche",
@@ -370,13 +390,13 @@
     },
     {
       "county": "Shawnee",
-      "hamilton_votes": 15000,
-      "marshall_votes": 6484,
-      "other_votes": 440,
-      "pct_reporting": 0.4,
-      "precincts_reporting": 1,
+      "hamilton_votes": 25600,
+      "marshall_votes": 14650,
+      "other_votes": 1272,
+      "pct_reporting": 40.73,
+      "precincts_reporting": 101,
       "precincts_total": 248,
-      "total_votes": 21484
+      "total_votes": 40250
     },
     {
       "county": "Stafford",
@@ -429,25 +449,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T02:05:52.104560Z",
-  "last_updated": "2026-11-04T02:04:00Z",
-  "pct_reporting": 3.41,
-  "precincts_reporting": 142,
+  "generated_at": "2026-11-04T02:07:52.577965Z",
+  "last_updated": "2026-11-04T02:06:00Z",
+  "pct_reporting": 5.85,
+  "precincts_reporting": 244,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 64.14,
-      "votes": 279908
+      "pct": 63.69,
+      "votes": 291301
     },
     {
       "candidate_id": "marshall",
-      "pct": 35.86,
-      "votes": 156518
+      "pct": 36.31,
+      "votes": 166075
     }
   ],
   "status": "live",
-  "total_votes": 436426
+  "total_votes": 457376
 }
