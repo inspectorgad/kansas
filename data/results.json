@@ -69,6 +69,16 @@
       "total_votes": 354
     },
     {
+      "county": "Douglas",
+      "hamilton_votes": 21128,
+      "marshall_votes": 3826,
+      "other_votes": 379,
+      "pct_reporting": 0.98,
+      "precincts_reporting": 1,
+      "precincts_total": 102,
+      "total_votes": 24954
+    },
+    {
       "county": "Edwards",
       "hamilton_votes": 164,
       "marshall_votes": 460,
@@ -309,25 +319,25 @@
       "total_votes": 19913
     }
   ],
-  "generated_at": "2026-11-04T01:41:52.042906Z",
-  "last_updated": "2026-11-04T01:40:00Z",
-  "pct_reporting": 0.86,
-  "precincts_reporting": 36,
+  "generated_at": "2026-11-04T01:43:52.601659Z",
+  "last_updated": "2026-11-04T01:42:00Z",
+  "pct_reporting": 0.89,
+  "precincts_reporting": 37,
   "precincts_total": 4168,
   "schema_version": 1,
   "source_url": "https://www.kssos.org/ent/kssos_ent.html",
   "statewide": [
     {
       "candidate_id": "hamilton",
-      "pct": 64.65,
-      "votes": 248246
+      "pct": 65.87,
+      "votes": 269374
     },
     {
       "candidate_id": "marshall",
-      "pct": 35.35,
-      "votes": 135737
+      "pct": 34.13,
+      "votes": 139563
     }
   ],
   "status": "live",
-  "total_votes": 383983
+  "total_votes": 408937
 }
