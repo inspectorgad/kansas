@@ -1923,16 +1923,16 @@
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
+      "form_type": "F1",
+      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
     },
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
-      "form_type": "F1",
-      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -1963,20 +1963,20 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-22",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-10-14",
       "date": "2026-10-22",
       "form_type": "F3",
       "report_type": "PRE-GENERAL",
       "total_receipts": 5641333.41,
       "url": "https://docquery.fec.gov/pdf/351/202610229945144351/202610229945144351.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-10-22",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2057,13 +2057,103 @@
       "url": "https://docquery.fec.gov/pdf/667/202610139908689667/202610139908689667.pdf"
     }
   ],
-  "generated_at": "2026-11-05T05:43:55.186124Z",
+  "generated_at": "2026-11-05T14:17:19.272365Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 31979171.07,
-      "marshall": 51836870.92
+      "hamilton": 32261171.07,
+      "marshall": 55148590.9
     },
     "recent": [
+      {
+        "amount": 5063.6,
+        "candidate_id": "marshall",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-11-03",
+        "purpose": "TEXT MESSAGING",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 4000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00835041",
+        "committee_name": "FORWARD BLUE",
+        "date": "2026-11-03",
+        "purpose": "VOTER CONTACT TEXTING - ESTIMATED AMOUNT",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 4658.49,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-11-02",
+        "purpose": "TEXT MESSAGING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 0.1,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-11-02",
+        "purpose": "TELEPHONE ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 49738.66,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-11-02",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 2559.31,
+        "candidate_id": "marshall",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-11-02",
+        "purpose": "TEXT MESSAGING",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 54192.0,
+        "candidate_id": "marshall",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-11-02",
+        "purpose": "PHONE CALLS",
+        "support_oppose": "S"
+      },
+      {
+        "amount": 250000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00571703",
+        "committee_name": "SLF PAC",
+        "date": "2026-11-02",
+        "purpose": "MEDIA PLACEMENT",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 32000.0,
+        "candidate_id": "hamilton",
+        "committee_id": "C00637041",
+        "committee_name": "FUND FOR A WORKING CONGRESS",
+        "date": "2026-11-02",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 71183.84,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-11-01",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
       {
         "amount": 4438.59,
         "candidate_id": "marshall",
@@ -2169,6 +2259,33 @@
         "committee_id": "C00963736",
         "committee_name": "OUR HERITAGE MATTERS",
         "date": "2026-10-31",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 2390.66,
+        "candidate_id": "marshall",
+        "committee_id": "C00962696",
+        "committee_name": "NEW DEAL FOR ALL, INC.",
+        "date": "2026-10-30",
+        "purpose": "ADVERTISING PRODUCTION COSTS (ESTIMATE)",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 44552.7,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-10-30",
+        "purpose": "DIRECT MAIL",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 99834.71,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-10-30",
         "purpose": "DIGITAL ADVERTISING",
         "support_oppose": "O"
       },
@@ -2306,128 +2423,11 @@
         "date": "2026-10-30",
         "purpose": "TEXT MESSAGES",
         "support_oppose": "O"
-      },
-      {
-        "amount": 34125.57,
-        "candidate_id": "marshall",
-        "committee_id": "C00865444",
-        "committee_name": "WINSENATE",
-        "date": "2026-10-29",
-        "purpose": "MEDIA PRODUCTION - ESTIMATE",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 2678.38,
-        "candidate_id": "marshall",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-29",
-        "purpose": "TEXT MESSAGING",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 1653.13,
-        "candidate_id": "marshall",
-        "committee_id": "C00963736",
-        "committee_name": "OUR HERITAGE MATTERS",
-        "date": "2026-10-29",
-        "purpose": "TELEPHONE ADVERTISING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 90071.31,
-        "candidate_id": "marshall",
-        "committee_id": "C00963736",
-        "committee_name": "OUR HERITAGE MATTERS",
-        "date": "2026-10-29",
-        "purpose": "DIGITAL ADVERTISING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 8313.0,
-        "candidate_id": "marshall",
-        "committee_id": "C00687103",
-        "committee_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-        "date": "2026-10-29",
-        "purpose": "CANVASSING",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 31149.09,
-        "candidate_id": "marshall",
-        "committee_id": "C00945733",
-        "committee_name": "THE 1861 INITIATIVE",
-        "date": "2026-10-29",
-        "purpose": "DIRECT MAIL - ESTIMATE",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 516000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00960435",
-        "committee_name": "NO GOING BACK PAC INC.",
-        "date": "2026-10-29",
-        "purpose": "PLACED MEDIA: TV",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 2500.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-29",
-        "purpose": "MEDIA PRODUCTION",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 2500.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00571703",
-        "committee_name": "SLF PAC",
-        "date": "2026-10-29",
-        "purpose": "MEDIA PRODUCTION",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 3000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00915595",
-        "committee_name": "GOVERNMENT THAT WORKS PAC",
-        "date": "2026-10-29",
-        "purpose": "AD PRODUCTION (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 10000.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00915595",
-        "committee_name": "GOVERNMENT THAT WORKS PAC",
-        "date": "2026-10-29",
-        "purpose": "RADIO AD BUY (ESTIMATE)",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 8313.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00687103",
-        "committee_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
-        "date": "2026-10-29",
-        "purpose": "CANVASSING",
-        "support_oppose": "O"
-      },
-      {
-        "amount": 1500.0,
-        "candidate_id": "hamilton",
-        "committee_id": "C00878025",
-        "committee_name": "MOMSRISING PAC",
-        "date": "2026-10-29",
-        "purpose": "TEXT MESSAGES(ESTIMATE)",
-        "support_oppose": "S"
       }
     ],
     "supporting": {
-      "hamilton": 12019123.97,
-      "marshall": 3941119.67
+      "hamilton": 12023123.97,
+      "marshall": 4002934.58
     },
     "top_spenders": [
       {
@@ -2437,7 +2437,7 @@
         "opposes": "marshall"
       },
       {
-        "amount": 16908589.1,
+        "amount": 17220404.01,
         "committee_id": "C00571703",
         "committee_name": "SLF PAC",
         "opposes": "hamilton",
@@ -2476,6 +2476,12 @@
         "opposes": "hamilton"
       },
       {
+        "amount": 3695811.0,
+        "committee_id": "C00962696",
+        "committee_name": "NEW DEAL FOR ALL, INC.",
+        "opposes": "marshall"
+      },
+      {
         "amount": 2998120.5,
         "committee_id": "C00687103",
         "committee_name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
@@ -2507,26 +2513,19 @@
         "opposes": "hamilton"
       },
       {
+        "amount": 1315401.61,
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "opposes": "marshall"
+      },
+      {
         "amount": 1304214.6,
         "committee_id": "C00961656",
         "committee_name": "CHOOSE FREEDOM PAC",
         "opposes": "hamilton"
-      },
-      {
-        "amount": 950456.32,
-        "committee_id": "C00960385",
-        "committee_name": "UNITED FUTURES PAC",
-        "opposes": "marshall",
-        "supports": "hamilton"
-      },
-      {
-        "amount": 908610.17,
-        "committee_id": "C00962696",
-        "committee_name": "NEW DEAL FOR ALL, INC.",
-        "opposes": "marshall"
       }
     ],
-    "total": 99776285.63
+    "total": 103435820.52
   },
   "schema_version": 1
 }
