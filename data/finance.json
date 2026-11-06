@@ -366,6 +366,55 @@
         "committee_donor_note": "Organizations giving directly to the campaign. Money routed through a conduit such as ActBlue or WinRed is individual money and is counted with individuals, not here. A committee transfer is money moved from a joint fundraising or affiliated committee rather than a donation from an outside group.",
         "committee_donors": [
           {
+            "amount": 989000.0,
+            "committee_id": "C00958272",
+            "gifts": 4,
+            "kind": "transfer",
+            "name": "KANSAS SENATE VICTORY FUND 2026"
+          },
+          {
+            "amount": 27500.0,
+            "committee_id": "C00960377",
+            "gifts": 2,
+            "kind": "transfer",
+            "name": "ADAM HAMILTON VICTORY FUND"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00824342",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "WAY BACK PAC"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00832147",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "MITTEN PAC"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00497073",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "LOBO PAC"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00392738",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "HOOPS PAC"
+          },
+          {
+            "amount": 10000.0,
+            "committee_id": "C00493700",
+            "gifts": 2,
+            "kind": "pac",
+            "name": "BLUE HEN FEDERAL PAC"
+          },
+          {
             "amount": 10000.0,
             "committee_id": "C00538835",
             "gifts": 2,
@@ -374,23 +423,84 @@
           },
           {
             "amount": 5000.0,
-            "committee_id": "C00493700",
+            "committee_id": "C00416743",
             "gifts": 1,
             "kind": "pac",
-            "name": "BLUE HEN FEDERAL PAC"
+            "name": "VICTORY NOW PAC"
           },
           {
-            "amount": 2500.0,
-            "committee_id": "C00412304",
-            "gifts": 2,
+            "amount": 5000.0,
+            "committee_id": "C00654475",
+            "gifts": 1,
             "kind": "pac",
-            "name": "MONTANANS FOR TESTER"
+            "name": "SMART SOLUTIONS PAC"
+          },
+          {
+            "amount": 5000.0,
+            "committee_id": "C00562660",
+            "gifts": 1,
+            "kind": "pac",
+            "name": "SINCLAIR BROADCAST GROUP PAC"
+          },
+          {
+            "amount": 5000.0,
+            "committee_id": "C00767871",
+            "gifts": 1,
+            "kind": "pac",
+            "name": "REV UP PAC"
+          },
+          {
+            "amount": 5000.0,
+            "committee_id": "C00497131",
+            "gifts": 1,
+            "kind": "pac",
+            "name": "PURPOSE PAC"
+          },
+          {
+            "amount": 5000.0,
+            "committee_id": "C00410092",
+            "gifts": 1,
+            "kind": "pac",
+            "name": "PEOPLE'S VOICE PAC"
           }
         ],
         "itemized_note": "Federal law itemizes donors only above $200 for the cycle. Smaller contributions are reported as one unnamed total, so these lists show a campaign's larger donors and not its typical one.",
         "itemized_total": 11851871.79,
-        "large_donor_coverage": "Every contribution at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (25 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
+        "large_donor_coverage": "Read the 1600 largest of 3570 contributions at or above $1,000. Ranked on gifts of $1,000 or more, then each total recomputed over every itemized gift (25 of 25 confirmed). Net of refunds. Memo entries are excluded, so a contribution later reattributed between household members is shown against whoever originally gave it.",
         "large_donors": [
+          {
+            "amount": 13575.3,
+            "city": "MANHATTAN",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-06-30",
+            "gifts": 4,
+            "last_gift": "2026-09-21",
+            "name": "ICE, MARY",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 12235.0,
+            "city": "MISSION HILLS",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-05-06",
+            "gifts": 5,
+            "last_gift": "2026-09-21",
+            "name": "ISENBERG, ANN SLEGMAN",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 12000.0,
+            "city": "OVERLAND PARK",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-04-29",
+            "gifts": 3,
+            "last_gift": "2026-09-15",
+            "name": "SIMS, JOSEPH",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
           {
             "amount": 10680.6,
             "city": "LEAWOOD",
@@ -399,6 +509,28 @@
             "gifts": 3,
             "last_gift": "2026-04-30",
             "name": "KASTNER, RICK",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 10500.0,
+            "city": "GREENWICH",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-07-28",
+            "gifts": 3,
+            "last_gift": "2026-08-10",
+            "name": "MORAN, GARETT",
+            "occupation": "NOT EMPLOYED",
+            "state": "CT"
+          },
+          {
+            "amount": 10500.0,
+            "city": "MISSION HILLS",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-06-04",
+            "gifts": 3,
+            "last_gift": "2026-09-21",
+            "name": "ISENBERG, TOM",
             "occupation": "NOT EMPLOYED",
             "state": "KS"
           },
@@ -425,14 +557,58 @@
             "state": "KS"
           },
           {
-            "amount": 8735.0,
-            "city": "MISSION HILLS",
+            "amount": 10000.0,
+            "city": "OVERLAND PARK",
             "employer": "NOT EMPLOYED",
-            "first_gift": "2026-05-06",
-            "gifts": 4,
-            "last_gift": "2026-06-05",
-            "name": "ISENBERG, ANN SLEGMAN",
+            "first_gift": "2026-09-23",
+            "gifts": 1,
+            "last_gift": "2026-09-23",
+            "name": "JANECEK, JEAN",
             "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 9740.63,
+            "city": "LEAWOOD",
+            "employer": "KANSAS UNIVERSITY",
+            "first_gift": "2026-05-02",
+            "gifts": 4,
+            "last_gift": "2026-08-03",
+            "name": "HOCKSTAD, MARY",
+            "occupation": "PHYSICIAN",
+            "state": "KS"
+          },
+          {
+            "amount": 9075.3,
+            "city": "CHAPEL HILL",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-04-30",
+            "gifts": 3,
+            "last_gift": "2026-08-23",
+            "name": "HENLEY, DOUGLAS",
+            "occupation": "NOT EMPLOYED",
+            "state": "NC"
+          },
+          {
+            "amount": 9000.0,
+            "city": "DALLAS",
+            "employer": "BEASLEY ASSOCIATES",
+            "first_gift": "2026-07-30",
+            "gifts": 3,
+            "last_gift": "2026-09-23",
+            "name": "BEASLEY, JEAN",
+            "occupation": "BUSINESS ANALYST",
+            "state": "TX"
+          },
+          {
+            "amount": 8500.0,
+            "city": "LEAWOOD",
+            "employer": "SELF EMPLOYED",
+            "first_gift": "2026-06-17",
+            "gifts": 2,
+            "last_gift": "2026-09-17",
+            "name": "HILKER, CHRISTI",
+            "occupation": "ATTORNEY",
             "state": "KS"
           },
           {
@@ -447,17 +623,6 @@
             "state": "KS"
           },
           {
-            "amount": 7500.0,
-            "city": "OLATHE",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-04-30",
-            "gifts": 3,
-            "last_gift": "2026-05-27",
-            "name": "VERMEIRE, DEAN",
-            "occupation": "NOT EMPLOYED",
-            "state": "KS"
-          },
-          {
             "amount": 7311.85,
             "city": "LEAWOOD",
             "employer": "NOT EMPLOYED",
@@ -467,6 +632,28 @@
             "name": "PETERSEN, JOHN",
             "occupation": "NOT EMPLOYED",
             "state": "KS"
+          },
+          {
+            "amount": 7131.55,
+            "city": "DALLAS",
+            "employer": "TICHENOR VENTURES, LLC",
+            "first_gift": "2026-07-22",
+            "gifts": 2,
+            "last_gift": "2026-07-30",
+            "name": "TICHENOR, MCHENRY JR",
+            "occupation": "PRESIDENT",
+            "state": "TX"
+          },
+          {
+            "amount": 7131.55,
+            "city": "WELLINGTON",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-08-03",
+            "gifts": 2,
+            "last_gift": "2026-09-10",
+            "name": "GRAVES, WILLIAM",
+            "occupation": "NOT EMPLOYED",
+            "state": "FL"
           },
           {
             "amount": 7000.0,
@@ -481,213 +668,105 @@
           },
           {
             "amount": 7000.0,
-            "city": "OVERLAND PARK",
-            "employer": "UNITED METHODIST CHURCH",
-            "first_gift": "2026-03-04",
-            "gifts": 3,
-            "last_gift": "2026-05-01",
-            "name": "SHOUP, GLEN",
-            "occupation": "MINISTER",
+            "city": "LEAWOOD",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-05-20",
+            "gifts": 8,
+            "last_gift": "2026-09-20",
+            "name": "TRIPLETT, BETSY",
+            "occupation": "NOT EMPLOYED",
             "state": "KS"
           },
           {
             "amount": 7000.0,
-            "city": "OVERLAND PARK",
-            "employer": "SELF EMPLOYED",
-            "first_gift": "2026-07-06",
-            "gifts": 2,
-            "last_gift": "2026-07-06",
-            "name": "PHILLIPS, MIKE",
-            "occupation": "CONSULTANT",
+            "city": "STILWELL",
+            "employer": "KOENIG VENTURES LLC",
+            "first_gift": "2026-05-04",
+            "gifts": 4,
+            "last_gift": "2026-08-21",
+            "name": "KOENIG, STEVEN",
+            "occupation": "VENTURE CAPITAL",
             "state": "KS"
           },
           {
             "amount": 7000.0,
-            "city": "KANSAS CITY",
+            "city": "BRONXVILLE",
             "employer": "NOT EMPLOYED",
-            "first_gift": "2026-07-15",
-            "gifts": 2,
-            "last_gift": "2026-07-15",
-            "name": "O'NEILL, CARLA",
+            "first_gift": "2026-09-17",
+            "gifts": 1,
+            "last_gift": "2026-09-17",
+            "name": "ZION, SARA",
             "occupation": "NOT EMPLOYED",
-            "state": "MO"
-          },
-          {
-            "amount": 7000.0,
-            "city": "GREENWICH",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-07-14",
-            "gifts": 2,
-            "last_gift": "2026-07-14",
-            "name": "MANDEL, SUE",
-            "occupation": "NOT EMPLOYED",
-            "state": "CT"
-          },
-          {
-            "amount": 7000.0,
-            "city": "GREENWICH",
-            "employer": "LONE PINE CAPITAL",
-            "first_gift": "2026-07-15",
-            "gifts": 2,
-            "last_gift": "2026-07-15",
-            "name": "MANDEL, STEVE",
-            "occupation": "FOUNDER",
-            "state": "CT"
-          },
-          {
-            "amount": 7000.0,
-            "city": "KNOXVILLE",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-05-23",
-            "gifts": 2,
-            "last_gift": "2026-07-10",
-            "name": "LAWSON, JANET",
-            "occupation": "NOT EMPLOYED",
-            "state": "TN"
-          },
-          {
-            "amount": 7000.0,
-            "city": "ATHERTON",
-            "employer": "MEDLEY PARTNERS LLC",
-            "first_gift": "2026-07-13",
-            "gifts": 2,
-            "last_gift": "2026-07-13",
-            "name": "HEISING, MARK",
-            "occupation": "MANAGING DIRECTOR",
-            "state": "CA"
-          },
-          {
-            "amount": 7000.0,
-            "city": "NEW YORK",
-            "employer": "JAMES AND JUDITH K. DIMON FOUNDATION",
-            "first_gift": "2026-07-09",
-            "gifts": 2,
-            "last_gift": "2026-07-09",
-            "name": "DIMON, JUDITH",
-            "occupation": "CO-MANAGER",
             "state": "NY"
           },
           {
             "amount": 7000.0,
-            "city": "GREAT BEND",
-            "employer": "BAUER PIKE BAUER WARY & CARROLL LLC",
-            "first_gift": "2026-04-30",
+            "city": "HAYS",
+            "employer": "NOT EMPLOYED",
+            "first_gift": "2026-07-29",
+            "gifts": 1,
+            "last_gift": "2026-07-29",
+            "name": "CLINKSCALES, BARBARA",
+            "occupation": "NOT EMPLOYED",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "OVERLAND PARK",
+            "employer": "APPLE",
+            "first_gift": "2026-07-30",
+            "gifts": 1,
+            "last_gift": "2026-07-30",
+            "name": "ALLSHOUSE, MARSHAL",
+            "occupation": "ATTORNEY",
+            "state": "KS"
+          },
+          {
+            "amount": 7000.0,
+            "city": "SEATTLE",
+            "employer": "SP HOLDINGS",
+            "first_gift": "2026-06-30",
+            "gifts": 2,
+            "last_gift": "2026-08-11",
+            "name": "YOUNGER, SCOTT",
+            "occupation": "PRESIDENT",
+            "state": "WA"
+          },
+          {
+            "amount": 6500.0,
+            "city": "KANSAS CITY",
+            "employer": "JOE'S KC BBQ",
+            "first_gift": "2026-05-14",
             "gifts": 3,
-            "last_gift": "2026-07-12",
-            "name": "BAUER, ROBERT",
-            "occupation": "ATTORNEY",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "WASHINGTON",
-            "employer": "BUCHANAN INGERSOLL & ROONEY",
-            "first_gift": "2026-07-15",
-            "gifts": 2,
-            "last_gift": "2026-07-15",
-            "name": "ABRAMSON, RONALD",
-            "occupation": "ATTORNEY",
-            "state": "DC"
-          },
-          {
-            "amount": 7000.0,
-            "city": "WASHINGTON",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-07-15",
-            "gifts": 2,
-            "last_gift": "2026-07-15",
-            "name": "ABRAMSON, ANNE",
-            "occupation": "NOT EMPLOYED",
-            "state": "DC"
-          },
-          {
-            "amount": 7000.0,
-            "city": "OVERLAND PARK",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-05-01",
-            "gifts": 2,
-            "last_gift": "2026-05-01",
-            "name": "WOOD, BRENDA",
-            "occupation": "RETIRED",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "OVERLAND PARK",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-05-01",
-            "gifts": 2,
-            "last_gift": "2026-05-01",
-            "name": "WOOD, BARRY",
-            "occupation": "NOT EMPLOYED",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "OLATHE",
-            "first_gift": "2026-06-05",
-            "gifts": 2,
-            "last_gift": "2026-06-05",
-            "name": "WEINBERG, GARY",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "OLATHE",
-            "employer": "SELF EMPLOYED",
-            "first_gift": "2026-05-06",
-            "gifts": 2,
-            "last_gift": "2026-05-06",
-            "name": "WARREN, ROGER",
-            "occupation": "FARMER/ATTORNEY",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "LEAWOOD",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-04-29",
-            "gifts": 2,
-            "last_gift": "2026-04-29",
-            "name": "WALSWORTH, SHEA",
-            "occupation": "NOT EMPLOYED",
-            "state": "KS"
-          },
-          {
-            "amount": 7000.0,
-            "city": "LEAWOOD",
-            "employer": "NOT EMPLOYED",
-            "first_gift": "2026-06-13",
-            "gifts": 2,
-            "last_gift": "2026-06-24",
-            "name": "TOUGHEY, KAREN",
-            "occupation": "NOT EMPLOYED",
+            "last_gift": "2026-09-29",
+            "name": "STEHNEY, JOY",
+            "occupation": "ENTREPRENEUR",
             "state": "KS"
           }
         ],
         "size_buckets": [
           {
-            "amount": 634744.69,
-            "count": 585,
+            "amount": 2099330.6,
+            "count": 1995,
             "label": "$1,000 to $1,999"
           },
           {
-            "amount": 2055377.9,
-            "count": 637,
+            "amount": 4876998.06,
+            "count": 1595,
             "label": "$2,000 and above"
           },
           {
-            "amount": 222390.3,
-            "count": 868,
+            "amount": 951854.14,
+            "count": 3687,
             "label": "$200 to $499"
           },
           {
-            "amount": 295803.25,
-            "count": 577,
+            "amount": 1298775.33,
+            "count": 2550,
             "label": "$500 to $999"
           },
           {
-            "amount": 4805257.61,
+            "amount": 5566801.02,
             "count": 0,
             "label": "Under $200"
           }
@@ -695,158 +774,107 @@
         "threshold": 1000.0,
         "top_cities": [
           {
-            "amount": 46492.45,
-            "donors": 6,
+            "amount": 57733.08,
+            "donors": 7,
             "label": "Leawood, KS"
           },
           {
-            "amount": 38375.0,
-            "donors": 5,
+            "amount": 39375.0,
+            "donors": 4,
             "label": "Overland Park, KS"
           },
           {
-            "amount": 21500.0,
-            "donors": 3,
-            "label": "Olathe, KS"
-          },
-          {
-            "amount": 14000.0,
+            "amount": 22735.0,
             "donors": 2,
-            "label": "Greenwich, CT"
-          },
-          {
-            "amount": 14000.0,
-            "donors": 2,
-            "label": "Washington, DC"
-          },
-          {
-            "amount": 10187.5,
-            "donors": 1,
-            "label": "Stilwell, KS"
-          },
-          {
-            "amount": 8735.0,
-            "donors": 1,
             "label": "Mission Hills, KS"
           },
           {
-            "amount": 7000.0,
+            "amount": 17187.5,
+            "donors": 2,
+            "label": "Stilwell, KS"
+          },
+          {
+            "amount": 16131.55,
+            "donors": 2,
+            "label": "Dallas, TX"
+          },
+          {
+            "amount": 13575.3,
             "donors": 1,
-            "label": "Kansas City, MO"
+            "label": "Manhattan, KS"
+          },
+          {
+            "amount": 10500.0,
+            "donors": 1,
+            "label": "Greenwich, CT"
+          },
+          {
+            "amount": 9075.3,
+            "donors": 1,
+            "label": "Chapel Hill, NC"
+          },
+          {
+            "amount": 7131.55,
+            "donors": 1,
+            "label": "Wellington, FL"
           },
           {
             "amount": 7000.0,
             "donors": 1,
-            "label": "Knoxville, TN"
-          },
-          {
-            "amount": 7000.0,
-            "donors": 1,
-            "label": "Atherton, CA"
+            "label": "Bronxville, NY"
           }
         ],
-        "top_employers": [
+        "top_employers": [],
+        "top_occupations": [
           {
-            "amount": 14000.0,
-            "donors": 8,
-            "label": "COLORECTAL SURGICAL ASSOCIATES"
+            "amount": 5103984.92,
+            "donors": 15741,
+            "label": "NOT EMPLOYED"
           },
           {
-            "amount": 14000.0,
-            "donors": 4,
-            "label": "CULVER'S"
+            "amount": 24348.73,
+            "donors": 60,
+            "label": "DIRECTOR"
           },
           {
-            "amount": 9075.0,
-            "donors": 3,
-            "label": "KCUC"
+            "amount": 17135.64,
+            "donors": 28,
+            "label": "CPA"
+          },
+          {
+            "amount": 14389.05,
+            "donors": 13,
+            "label": "ENTREPRENEUR"
           },
           {
             "amount": 8000.0,
             "donors": 3,
-            "label": "KU HEALTH"
+            "label": "MANUFACTURING"
           },
           {
-            "amount": 7018.75,
-            "donors": 4,
-            "label": "KANSAS UNIVERSITY"
+            "amount": 7831.76,
+            "donors": 35,
+            "label": "VETERINARIAN"
           },
           {
-            "amount": 7000.0,
-            "donors": 2,
-            "label": "ANDE"
-          },
-          {
-            "amount": 7000.0,
-            "donors": 2,
-            "label": "SOLID GROUND ENVIRONMENTAL, LL"
-          },
-          {
-            "amount": 7000.0,
-            "donors": 2,
-            "label": "THE CLOVER CO."
-          },
-          {
-            "amount": 7000.0,
-            "donors": 2,
-            "label": "ALTUM INSIGHT"
-          },
-          {
-            "amount": 7000.0,
-            "donors": 2,
-            "label": "IGNITION DEALER SERVICES"
-          }
-        ],
-        "top_occupations": [
-          {
-            "amount": 333504.67,
-            "donors": 288,
-            "label": "RETIRED"
-          },
-          {
-            "amount": 93198.45,
-            "donors": 91,
-            "label": "PHYSICIAN"
-          },
-          {
-            "amount": 61418.92,
-            "donors": 55,
-            "label": "OWNER"
-          },
-          {
-            "amount": 16565.93,
-            "donors": 12,
-            "label": "MINISTER"
-          },
-          {
-            "amount": 14250.0,
-            "donors": 5,
-            "label": "REAL ESTATE AGENT"
-          },
-          {
-            "amount": 11500.0,
-            "donors": 5,
-            "label": "PARTNER"
-          },
-          {
-            "amount": 7500.0,
+            "amount": 7250.0,
             "donors": 3,
-            "label": "PRESIDENT & CEO"
-          },
-          {
-            "amount": 7500.0,
-            "donors": 3,
-            "label": "REAL ESTATE DEVELOPER"
-          },
-          {
-            "amount": 7446.55,
-            "donors": 10,
-            "label": "CFO"
+            "label": "CO FOUNDER"
           },
           {
             "amount": 7000.0,
             "donors": 2,
-            "label": "AGENT"
+            "label": "RESEARCH"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "MARKET CHAIRMAN"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "FINANCIAL MANAGER"
           }
         ],
         "unitemized_total": 4674136.08
@@ -1963,20 +1991,20 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-10-22",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-10-14",
       "date": "2026-10-22",
       "form_type": "F3",
       "report_type": "PRE-GENERAL",
       "total_receipts": 5641333.41,
       "url": "https://docquery.fec.gov/pdf/351/202610229945144351/202610229945144351.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-22",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2057,13 +2085,31 @@
       "url": "https://docquery.fec.gov/pdf/667/202610139908689667/202610139908689667.pdf"
     }
   ],
-  "generated_at": "2026-11-06T08:34:58.550659Z",
+  "generated_at": "2026-11-06T16:19:13.420083Z",
   "outside_spending": {
     "opposing": {
       "hamilton": 32261171.07,
-      "marshall": 55148590.9
+      "marshall": 55874875.5
     },
     "recent": [
+      {
+        "amount": 1704.55,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-11-03",
+        "purpose": "TEXT MESSAGING",
+        "support_oppose": "O"
+      },
+      {
+        "amount": 28451.3,
+        "candidate_id": "marshall",
+        "committee_id": "C00963736",
+        "committee_name": "OUR HERITAGE MATTERS",
+        "date": "2026-11-03",
+        "purpose": "DIGITAL ADVERTISING",
+        "support_oppose": "O"
+      },
       {
         "amount": 5063.6,
         "candidate_id": "marshall",
@@ -2405,28 +2451,10 @@
         "date": "2026-10-30",
         "purpose": "DIGITAL AD BUY (ESTIMATE)",
         "support_oppose": "S"
-      },
-      {
-        "amount": 991.85,
-        "candidate_id": "hamilton",
-        "committee_id": "C00418897",
-        "committee_name": "VOTEVETS",
-        "date": "2026-10-30",
-        "purpose": "DIGITAL COMMUNICATIONS - ESTIMATED COST",
-        "support_oppose": "S"
-      },
-      {
-        "amount": 9233.5,
-        "candidate_id": "hamilton",
-        "committee_id": "C00957928",
-        "committee_name": "MAIN STREET FUND",
-        "date": "2026-10-30",
-        "purpose": "TEXT MESSAGES",
-        "support_oppose": "O"
       }
     ],
     "supporting": {
-      "hamilton": 12023123.97,
+      "hamilton": 12026158.87,
       "marshall": 4002934.58
     },
     "top_spenders": [
@@ -2450,7 +2478,7 @@
         "opposes": "marshall"
       },
       {
-        "amount": 11798302.68,
+        "amount": 12497466.33,
         "committee_id": "C00961276",
         "committee_name": "LOWER COSTS NOW",
         "opposes": "marshall",
@@ -2513,7 +2541,7 @@
         "opposes": "hamilton"
       },
       {
-        "amount": 1315401.61,
+        "amount": 1345557.46,
         "committee_id": "C00963736",
         "committee_name": "OUR HERITAGE MATTERS",
         "opposes": "marshall"
@@ -2525,7 +2553,7 @@
         "opposes": "hamilton"
       }
     ],
-    "total": 103435820.52
+    "total": 104165140.02
   },
   "schema_version": 1
 }

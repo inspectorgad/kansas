@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-06T08:35:02.006296Z",
+  "generated_at": "2026-11-06T16:19:17.788575Z",
   "items": [
     {
       "id": "e3f3a4732e01",
@@ -223,18 +223,6 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxORk5ucjJ0eEhkZDI3Rk1RNHhMSnhrSXlfWDEyWm9EbDBXX1JCNUViYXJJU2JMSWo2TW1DNEIwN1BjT0RYVm5VcWVJM0EzZmdUUVAtSm9PS3phdnZlTWU3TlJkSTlmbDc2azNPX3JJNTR3Q0F0bVBVM01TelNkTDNjaS1ySENJY1dMX1Z4WHBkd2k5a3VPcFdKemRENGRaaHVwQ2hrb0VzaWdfYjg3Zzh2WlFrWHhDVUJuVlZ3aUl5aw"
     },
     {
-      "id": "a2e7868ea548",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-05T00:29:00Z",
-      "source": "KMBC",
-      "summary": "'The perfect campaign': Political expert breaks down how Adam Hamilton ended a 94-year drought in Kansas &nbsp;&nbsp; KMBC",
-      "title": "'The perfect campaign': Political expert breaks down how Adam Hamilton ended a 94-year drought in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMXFLTzVzS1lUWmhQYmxOcFdjbl9HRkZFcDNjV1ozQzNhNGE5eE1ZdEludzd3VGJHamd1TlUzNWpCNFJPQUZfbHpiV1VpcnluNF9DR3VSZXhKSi1wRmNVVFhLTEVwbDZCRW1ZbVpaQUl2d2xCMHU3VE9CWGdNczJESFBVWFZBQQ"
-    },
-    {
       "id": "79b773ced6f1",
       "kind": "news",
       "mentions": [
@@ -245,6 +233,18 @@
       "summary": "\u2018I want to become Jerry Moran\u2019s best friend\u2019: Senator-Elect Adam Hamilton pledges bipartisan cooperation &nbsp;&nbsp; KWCH",
       "title": "\u2018I want to become Jerry Moran\u2019s best friend\u2019: Senator-Elect Adam Hamilton pledges bipartisan cooperation",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPX2Zhb3BwUjhzbGhCdmQ0ekRWN2RmUmlDRkRncEpOSllYTVg4bFkwcjRoVjFDNlF4SmlWb2RVMGFvNGNtc3FDN2V3OGNYdWFKX1IyOUs5cWtQRldFSm01UkhxTXJzQkxGRF9lVzZQc1pTdGZtLVNSaDJHbWY1OW9PY2JjUUNNaWpwRUQyeERKR1ViYUlfZVlqVnFuNDNDVlVpRWc1RnJWbUpZcFE5X0RQWDdKU0tvWEJnbXplUWxFbXJ4MlVBZFdVclBB"
+    },
+    {
+      "id": "a2e7868ea548",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-05T00:29:00Z",
+      "source": "KMBC",
+      "summary": "'The perfect campaign': Political expert breaks down how Adam Hamilton ended a 94-year drought in Kansas &nbsp;&nbsp; KMBC",
+      "title": "'The perfect campaign': Political expert breaks down how Adam Hamilton ended a 94-year drought in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMXFLTzVzS1lUWmhQYmxOcFdjbl9HRkZFcDNjV1ozQzNhNGE5eE1ZdEludzd3VGJHamd1TlUzNWpCNFJPQUZfbHpiV1VpcnluNF9DR3VSZXhKSi1wRmNVVFhLTEVwbDZCRW1ZbVpaQUl2d2xCMHU3VE9CWGdNczJESFBVWFZBQQ"
     },
     {
       "id": "afa1cd13f8f6",
@@ -978,18 +978,6 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcFEyRDB1V2gxWGk5bldkd0p6d1h2dVBwMVJBc05IazhZamhXV1VzNGh6SmlKZTBLZFNiT1ByTEoxMGN0d24tRDlPM2lpUHhoaGlPbG9zZWxhT25oVUZLYmFfbGlnSGpDOURCbGgyLU1xR0FRelFKU05HakF5R2xTWlNmcElCSEw0ZHJjTk1VZTVsV2NVblNNMk44bkoyVDBLdDBIQzQzQy1PMG1weHlaWUxlcDQ"
     },
     {
-      "id": "d2b5223e831f",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T04:53:53Z",
-      "source": "The Lawrence Times",
-      "summary": "Douglas County Democrats cheer election of Adam Hamilton as Kansas\u2019 senator &nbsp;&nbsp; The Lawrence Times",
-      "title": "Douglas County Democrats cheer election of Adam Hamilton as Kansas\u2019 senator",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WcUlSaGtWU0ZPWXJzNmtKcnVtS2prZEJqWGYxZ19lV2FoMThCdVMtcGlBRUFrZHNmbkVicUUwOHBkTExZdFlDR1h1aENtUWJ0VFNfSnR0SjBRLTBnVUJ5MVFlX2tnVjhIOXNObldnbmlpdW8"
-    },
-    {
       "id": "64d4516d464a",
       "kind": "news",
       "mentions": [
@@ -1012,6 +1000,18 @@
       "summary": "U.S. Senate Candidate Sen. Roger Marshall (R-KS) Gives Concession Speech to Supporters on Election Night &nbsp;&nbsp; C-SPAN",
       "title": "U.S. Senate Candidate Sen. Roger Marshall (R-KS) Gives Concession Speech to Supporters on Election Night",
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOcHNuMUp1MlpqT2UyWFNWMGxrSGJfQWhZd0dNQ0RsN2w5WjBDYVZwUVd3Z2lGTXZBUUlWZUdfS2JBT0hiYXZYQXdScHdSVUJld2xlSy1Jb29rTmlRNWxuOUVxMFZBX3FiRjVzWWw1UTVtZGtOd2M5ZG9abnVBRzlLaDdzTURlcXA2NmpvNmVpNVZ3M1hfb3RzSHBqUmRxakhjOGVyUkQ3S3JxQUpJb2JrSjNOU253aG9SY2RLbWtBM2xsSW1kdng4NURyZ1VwSEt0MUk0VWpEc01oRnBnX1M5NXdTbzBPdw"
+    },
+    {
+      "id": "d2b5223e831f",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T04:50:18Z",
+      "source": "The Lawrence Times",
+      "summary": "Douglas County Democrats cheer election of Adam Hamilton as Kansas\u2019 senator &nbsp;&nbsp; The Lawrence Times",
+      "title": "Douglas County Democrats cheer election of Adam Hamilton as Kansas\u2019 senator",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WcUlSaGtWU0ZPWXJzNmtKcnVtS2prZEJqWGYxZ19lV2FoMThCdVMtcGlBRUFrZHNmbkVicUUwOHBkTExZdFlDR1h1aENtUWJ0VFNfSnR0SjBRLTBnVUJ5MVFlX2tnVjhIOXNObldnbmlpdW8"
     },
     {
       "id": "eabed15ef210",
@@ -1106,8 +1106,8 @@
       ],
       "published_at": "2026-11-04T04:29:50Z",
       "source": "The New York Times",
-      "summary": "Opinion | The Quiet Brilliance of Adam Hamilton\u2019s Kansas Campaign &nbsp;&nbsp; The New York Times",
-      "title": "Opinion | The Quiet Brilliance of Adam Hamilton\u2019s Kansas Campaign",
+      "summary": "Opinion | Adam Hamilton Wins: How Kansas Finally Elected a Democratic Senator &nbsp;&nbsp; The New York Times",
+      "title": "Opinion | Adam Hamilton Wins: How Kansas Finally Elected a Democratic Senator",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPX3FzMjFPcTZwbGRWdEJ5RDhFRER6N0lFbEU4VDdqQS1BVUhUOVlsSWRBWjgwSXN4bFYtWlhMY2RfbGtaU1phRDZIQjY5YTZ2U1VQdG5MZ1c2MDJ2RkhNcXpkWEwybGZBTkpXd2FpdUV0djhCMG9MelI1eHBWS0gtSQ"
     },
     {
