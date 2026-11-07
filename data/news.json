@@ -9,10 +9,6 @@
       "url": "https://www.kcur.org/politics-elections-and-government.rss"
     },
     {
-      "name": "KWCH",
-      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
-    },
-    {
       "name": "KSNT politics",
       "url": "https://www.ksnt.com/news/politics/feed/"
     },
@@ -22,12 +18,28 @@
       "url": "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"
     },
     {
+      "name": "KWCH",
+      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
+    },
+    {
       "name": "KSNT",
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-07T01:15:28.538602Z",
+  "generated_at": "2026-11-07T07:22:14.341243Z",
   "items": [
+    {
+      "id": "1d2328a46d01",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-07T01:26:05Z",
+      "source": "THIRTEEN - New York Public Media",
+      "summary": "Hamilton on why Kansas voters chose a Democrat for Senate &nbsp;&nbsp; THIRTEEN - New York Public Media",
+      "title": "Hamilton on why Kansas voters chose a Democrat for Senate",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9wTVdxa0FYY1FHZEJTcWQtT3gwODJoU19OUzJPdENxd0JjWE9uT3Nmb0JzVmNOeDNDckNrQjR0LXlMbGltVUtKalVHamRNZk9SamF2d3MxRVRBVDZ1bTB6dmxUT1o3UThEZlhTWFpwc1EtbGg1a3ZraVpOVDU"
+    },
     {
       "id": "32a875290515",
       "kind": "news",
@@ -53,16 +65,16 @@
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxObmpSOFZjdVFkZGFkZ0VzR3hmVHlZamNPU2tYc1psVGo4WWxqc0RObmRPMFExSU9fbWplZ0loQVFvaFc5OTB3cDBtNk9NdEVfQUZOMVNWT09Oa08zUTdxNHBiOHl4UHFqQ0k5Q19mcHFfRFdYZmhCTEZweUdwVDB4ZVdFemZValJzeHNWdVN2Tl9zTEVQQ2lMTHBfaFdtbzlLWU1QczF2UDFZaHZNcWo4NWVwaHc3NG45Y0ZyaGtCRFVWRlhQdUtNLTJsdVB0M2ZVWkp3MkJsejhCWUZwQ29mVGY1WUFRWU5Gb1V2SkJLUmt0YXc"
     },
     {
-      "id": "e3f3a4732e01",
+      "id": "c7cbcfa56eee",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-06T05:17:57Z",
+      "published_at": "2026-11-06T05:17:00Z",
       "source": "KWCH",
-      "summary": "Hamilton said one key goal is to focus on what is good for the people of Kansas.",
+      "summary": "Kansas senator-elect Adam Hamilton outlines priorities ahead of Capitol Hill transition &nbsp;&nbsp; KWCH",
       "title": "Kansas senator-elect Adam Hamilton outlines priorities ahead of Capitol Hill transition",
-      "url": "https://www.kwch.com/2026/11/06/kansas-senator-elect-adam-hamilton-outlines-priorities-ahead-capitol-hill-transition"
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNM3Q0bWlhZVREVFh5QW5KWE02aF96TVdsdnNHOGhUbnc0YUgyRlBIcXhydXRKTndhQi1qd1pYczV0bFdqS2Q2cHV4bC1BX0VqUHVITjJBRFNGeUlLTnJkRkxNLU1KaE5uNThZdjJOMkRXVEc4ZkR3MDVKU2N6bjUxN0h5QVprcVlkcEFGd1JvM29hV1VhWWpOLVk5WEpabnRsOWVoOS1sVHR4bzVJaEVPYXFqY1hwZE9o0gHMAUFVX3lxTE9jdkJOT3d5Yno0cWszbXpZSHVzVlhKX2NadlVzUmYyVHdpWTZlbE51VVJkX2IwUFV0NUdZNlZVWkZJV0Q0YlowNUMwbnM3d3hGYndJeUI1ZWppUVpaeG5RTzNBWTZfSm9WOXhxTDVycnQwcXVzVHlGUXc5LXI2UnVvcDVxbVQ0MHNNOUZNWm9PRm9QZjRlMFFoYUNsSnJZc3ZEWUxrRDBHVWw1YVoxN2hZV3RFS1RSaHhqVDN3eElCc2pQVHJYMEYydXJ4eQ"
     },
     {
       "id": "3498a9ef4a65",
@@ -107,8 +119,8 @@
         "hamilton"
       ],
       "published_at": "2026-11-06T01:06:54Z",
-      "source": "KSN-TV",
-      "summary": "What\u2019s next for Sen.-elect Adam Hamilton? &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "What\u2019s next for Sen.-elect Adam Hamilton? &nbsp;&nbsp; KSN.com",
       "title": "What\u2019s next for Sen.-elect Adam Hamilton?",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVFViZEhWckNXWk9aQVM1cThJcVJHZ0dNR2h2M2dWVFF4aUNQVjZQRlFLby1uck1uZDhaTEJEbnlBOFlLejBvQXN5TWdEQkxvLWE0aHpfb3NOQ1BsMDZPTXpRd1pYTWIzNWJ5TXRfUWJFbm1heXRxQXR2WGVBTG0xS3BIRWM1cFM1VlhUbklvWW7SAZYBQVVfeXFMUDlRbk91VlY1YmNZd2EzVHVQN3lGbWZfcUtmRXdkM2xoTTIxVk9hcHhGYWNIdzAtams1QlpKV0hoWFBsNlQwaDZ5WjBEeTdESGllVUQ3cVVPNm03eGxqeVZiT0gtbjZrYmlQaFF1dEdMS2RscVN2aGZ1Uk9XQTY1ZDJHVTlkSURyYnZIT3hPNEpNa3JXcExB"
     },
@@ -219,6 +231,18 @@
       "summary": "Two Kansas counties gave Adam Hamilton a victory in Senate race &nbsp;&nbsp; JC Post",
       "title": "Two Kansas counties gave Adam Hamilton a victory in Senate race",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5HdXQ3VTlrUDc0WTdhaExITFE1NTBFOXZkNjhqanpQVkNMOXFyRUg0Y1pQRGlPYU1ScVRpSEkzNUtRM3dsLW1DbFppZ2NWdXdoNXlKZ3ZRTVBFTXdyUUVwaWdKUlQ5eUVnaGlCNzNR"
+    },
+    {
+      "id": "36a9c57732b4",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-05T08:00:00Z",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "summary": "Democratic Senate candidate Adam Hamilton says he's fighting for the 'rights of all people' &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
+      "title": "Democratic Senate candidate Adam Hamilton says he's fighting for the 'rights of all people'",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVm1HSTcxeW9sLVFFQVE5cHJUalJBb3BQYTNHM3NWa1dhZnU0OHIteHV0bFMwd3RxNlJBclUwU054N2c0bGp3S1ZPMzUtaExsa29NbHc1OVFoYjZKbUNpaGdFQlNoVDI2cDVGdkp6ZlUtZXAyTC1UVWNFTVdicGhmc2U5Y0s5VmRzQmVsb3Z1RTBaVlNzZHlFTzVEb0V2OF9IS1JqMXY4NzR1bFdodDdGNFlR0gG3AUFVX3lxTE1RaXJpdHNmNDllWUs2aTE0RnFlS2VQUFBybUhBNVRwSHdqbWg4QUo2ZXBnWHVwMDJYMUU5RGVnR2EtNjg4NEJNQXFzSU1RdnRicHlpYXg3cnJlS19nT0hxWkx5SThyaXY0T0VBdUJUZ05PRnhwSlNrQmR0MXBqS3g5T2lock5FVk43SVUtTHJUeTFzYXFWYzdKdm1IYmR0bWhfZGNPRzVyd2tLQjVYTTJLOGY2eTVnTQ"
     },
     {
       "id": "93e7c368a54a",
@@ -1051,6 +1075,18 @@
       "url": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxNVWE0S21WQlFkTjM1M1NaR2M0MjY4TXZTZ1p2RE94ak12MHdSS0tKUUhQWjFDWnhJeGhFWmdodHVxYXJSbXF5VERMdXhsSjZlbEQ0SlJ5TjJGWTFSelhVdlVYMGthTjBCWTFXdEtwU3BDWjlVTTVWMDlTbV9QSzV3T3ZseWpVYUFfOFRfRnpKRDVSVjR3SzJOUWRUTFVWYWhlWG1TWXFTTGp2akVzR29JNTdNc0F3ZEFqYWpNckdyU1FDVzhjNjQ3STZOZ1lURTBsQ2VsME92cEluQzdma1RnSUZpZk1hekphSVEzZmVvbGY1alhYXzk4WVVBd1I0VEd4RlJxZEc5bzhhTzhUV0ZkS2t0ODk2UDJsNkVuR0pXOUFzUUJHV2tZam84eTFuejVBdE5rWXFRZjBqdjhPRHV3cmx6SGtEQndPT0tzczBMZHRfMlJ4a3hMN0FUVjV4d1k"
     },
     {
+      "id": "093006cf878f",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T04:42:17Z",
+      "source": "C-SPAN",
+      "summary": "U.S. Senate Candidate Adam Hamilton (D-KS) Delivers Victory Speech to Supporters on Election Night &nbsp;&nbsp; C-SPAN",
+      "title": "U.S. Senate Candidate Adam Hamilton (D-KS) Delivers Victory Speech to Supporters on Election Night",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNdXA2QktYMjZycktVcTlDcFhEWnRjWk1KaVFtMmVOd1NHUE5QN2FjN2txUEFha1J2MkE5eDJDZnoyY2lDTzQ4TWE2ZGpsbWZETXJYOFZlQ0tkWFJQVVQyWVlRbGpiR2ptQmVjdmFENkNOVUE5U2xIT3hiVm94b2FMSU9EUWIweVZkQjFSUWZzc0J0aHE0S1NkaTIzSFdtc0pzTDhKTU0yendZTVMtZkcwcGNOTXB2cTg2NTJ3and4YVZwdzhMTkw1cWdKRnlrczdHaGFoR0UzOU4tVlloVFhR"
+    },
+    {
       "id": "63d9eb418cf7",
       "kind": "news",
       "mentions": [
@@ -1455,45 +1491,6 @@
       "summary": "OVERLAND PARK \u2014 The Rev. Adam Hamilton made history as the first Democrat elected to the U.S. Senate in Kansas in 94 years, defeating Republican incumbent U.S. Sen. Roger Marshall at the end of a fervid race defined by clashing political visions and strong turnout in some of the state\u2019s most populous counties. Hamilton led [&#8230;]",
       "title": "Hamilton makes history with US Senate win over Republican incumbent",
       "url": "https://kansasreflector.com/2026/11/03/hamilton-makes-history-with-u-s-senate-win"
-    },
-    {
-      "id": "ea2a7482ca82",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T01:18:03Z",
-      "source": "Kansas Reflector",
-      "summary": "OVERLAND PARK \u2014 Democratic pastor Adam Hamilton led the Republican incumbent U.S. Sen. Roger Marshall in early vote counts that included one of Kansas\u2019 most populous counties. With more than 125,000 votes counted as of 7:17 p.m. in eight counties, Hamilton led with more than 73,000 votes compared with Marshall\u2019s 50,000 votes, according to unofficial [&#8230;]",
-      "title": "Kansas voters to decide battleground U.S. Senate race",
-      "url": "https://kansasreflector.com/2026/11/03/kansas-voters-to-decide-battleground-u-s-senate-race"
-    },
-    {
-      "id": "9ff64d48fc2d",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T01:09:04Z",
-      "source": "FOX 29 Philadelphia",
-      "summary": "Adam Hamilton (D) challenges Incumbent Roger Marshall (R) in Kansas Senate race &nbsp;&nbsp; FOX 29 Philadelphia",
-      "title": "Adam Hamilton (D) challenges Incumbent Roger Marshall (R) in Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE43Y2ZLWlgtMGxDREJxdUxRMWc2ekFma2pLcWUwelNrM1FpVy1Za3k4YjktRG0xSmZlQkpCZnNmVDZPclU5WXVMb2ZmdTNDMjJhSUkxbXJrZ0hXLXdL0gFiQVVfeXFMT3kydEJWaDFVLVlMaF9RZWUtZy1xVS1YdmdIM1R1YnNCbThzTzZZVUw2VTNIMm9HVndiNy01a0tzbkRoXzA5MW8zRzA1RTU2NDBqZ0xubF9TdkJWSmgtRVAyeUE"
-    },
-    {
-      "id": "8b579a6c668d",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T00:21:23Z",
-      "source": "KVUE",
-      "summary": "2026 Kansas US Senate live election night results | Roger Marshall vs. Adam Hamilton &nbsp;&nbsp; KVUE",
-      "title": "2026 Kansas US Senate live election night results | Roger Marshall vs. Adam Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQOVhqZlRreE5pY2dHdHBmZzgwRXZHVktFSEtVdG52bjdDaEVrTXBad2ZOS21CcEhqZFkwVXZiNkxOZHhDby1EVS1jQjFDUHI1aU5ybDhIWGp5QjFVanFrQ2xvbThIU3VIR2k5aHVjY0ZxNU9ZY0R0ZDR0ODVmOWQ0Wlpwbl9fWW5nYzdZTXpSQjFfc24tX0NFeEkwN3VCUWRVM0JGVDlOcE04VEtHQ19VRVlidUM5RWlUdldFeFNDMUJtcDlmSkR1NWpHTjJKT1FqcDQ1LVFKckI"
     }
   ],
   "schema_version": 1
