@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-06T21:39:42.908238Z",
+  "generated_at": "2026-11-07T01:15:28.538602Z",
   "items": [
     {
       "id": "32a875290515",
@@ -107,8 +107,8 @@
         "hamilton"
       ],
       "published_at": "2026-11-06T01:06:54Z",
-      "source": "KSN.com",
-      "summary": "What\u2019s next for Sen.-elect Adam Hamilton? &nbsp;&nbsp; KSN.com",
+      "source": "KSN-TV",
+      "summary": "What\u2019s next for Sen.-elect Adam Hamilton? &nbsp;&nbsp; KSN-TV",
       "title": "What\u2019s next for Sen.-elect Adam Hamilton?",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVFViZEhWckNXWk9aQVM1cThJcVJHZ0dNR2h2M2dWVFF4aUNQVjZQRlFLby1uck1uZDhaTEJEbnlBOFlLejBvQXN5TWdEQkxvLWE0aHpfb3NOQ1BsMDZPTXpRd1pYTWIzNWJ5TXRfUWJFbm1heXRxQXR2WGVBTG0xS3BIRWM1cFM1VlhUbklvWW7SAZYBQVVfeXFMUDlRbk91VlY1YmNZd2EzVHVQN3lGbWZfcUtmRXdkM2xoTTIxVk9hcHhGYWNIdzAtams1QlpKV0hoWFBsNlQwaDZ5WjBEeTdESGllVUQ3cVVPNm03eGxqeVZiT0gtbjZrYmlQaFF1dEdMS2RscVN2aGZ1Uk9XQTY1ZDJHVTlkSURyYnZIT3hPNEpNa3JXcExB"
     },
@@ -247,18 +247,6 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxORk5ucjJ0eEhkZDI3Rk1RNHhMSnhrSXlfWDEyWm9EbDBXX1JCNUViYXJJU2JMSWo2TW1DNEIwN1BjT0RYVm5VcWVJM0EzZmdUUVAtSm9PS3phdnZlTWU3TlJkSTlmbDc2azNPX3JJNTR3Q0F0bVBVM01TelNkTDNjaS1ySENJY1dMX1Z4WHBkd2k5a3VPcFdKemRENGRaaHVwQ2hrb0VzaWdfYjg3Zzh2WlFrWHhDVUJuVlZ3aUl5aw"
     },
     {
-      "id": "a2e7868ea548",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-05T00:29:00Z",
-      "source": "KMBC",
-      "summary": "'The perfect campaign': Political expert breaks down how Adam Hamilton ended a 94-year drought in Kansas &nbsp;&nbsp; KMBC",
-      "title": "'The perfect campaign': Political expert breaks down how Adam Hamilton ended a 94-year drought in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMXFLTzVzS1lUWmhQYmxOcFdjbl9HRkZFcDNjV1ozQzNhNGE5eE1ZdEludzd3VGJHamd1TlUzNWpCNFJPQUZfbHpiV1VpcnluNF9DR3VSZXhKSi1wRmNVVFhLTEVwbDZCRW1ZbVpaQUl2d2xCMHU3VE9CWGdNczJESFBVWFZBQQ"
-    },
-    {
       "id": "79b773ced6f1",
       "kind": "news",
       "mentions": [
@@ -269,6 +257,18 @@
       "summary": "\u2018I want to become Jerry Moran\u2019s best friend\u2019: Senator-Elect Adam Hamilton pledges bipartisan cooperation &nbsp;&nbsp; KWCH",
       "title": "\u2018I want to become Jerry Moran\u2019s best friend\u2019: Senator-Elect Adam Hamilton pledges bipartisan cooperation",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPX2Zhb3BwUjhzbGhCdmQ0ekRWN2RmUmlDRkRncEpOSllYTVg4bFkwcjRoVjFDNlF4SmlWb2RVMGFvNGNtc3FDN2V3OGNYdWFKX1IyOUs5cWtQRldFSm01UkhxTXJzQkxGRF9lVzZQc1pTdGZtLVNSaDJHbWY1OW9PY2JjUUNNaWpwRUQyeERKR1ViYUlfZVlqVnFuNDNDVlVpRWc1RnJWbUpZcFE5X0RQWDdKU0tvWEJnbXplUWxFbXJ4MlVBZFdVclBB"
+    },
+    {
+      "id": "a2e7868ea548",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-05T00:29:00Z",
+      "source": "KMBC",
+      "summary": "'The perfect campaign': Political expert breaks down how Adam Hamilton ended a 94-year drought in Kansas &nbsp;&nbsp; KMBC",
+      "title": "'The perfect campaign': Political expert breaks down how Adam Hamilton ended a 94-year drought in Kansas",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMXFLTzVzS1lUWmhQYmxOcFdjbl9HRkZFcDNjV1ozQzNhNGE5eE1ZdEludzd3VGJHamd1TlUzNWpCNFJPQUZfbHpiV1VpcnluNF9DR3VSZXhKSi1wRmNVVFhLTEVwbDZCRW1ZbVpaQUl2d2xCMHU3VE9CWGdNczJESFBVWFZBQQ"
     },
     {
       "id": "afa1cd13f8f6",
@@ -475,6 +475,18 @@
       "summary": "Kansas elects first Democratic Senator in 94 years | Adam Hamilton ousts Sen. Roger Marshall &nbsp;&nbsp; 9News",
       "title": "Kansas elects first Democratic Senator in 94 years | Adam Hamilton ousts Sen. Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQejVHekdjY0FOcTVScGZ3bzBWUUZJTUNfZ1EtaHRZUW11SEJNeVZ2Y1BKOVVuY2NWdzlMZDJPVTFzMjE0RmdhVnJQaEI4elMtRUhVVzV0b0p6VFR6ZXoyLW51ZmRvRzIwZkxGOFlBODVwQk1MelVrZnRIb3dvbjV6ekMxdTlYSjU5OEVjU1d5WmRrWmNCbWxaY3FyS3c3c3pYRWR1M2dHUk9QNzBaV1FHZldaMUNueXA2b3gzbUFWOEZ1ajN0Rk1oQVdFTnJFOVJnOTRhcnUtN2JScHFsUm1ZcHJaSGNMdHQ4Q05LT0xUdU5Ua0U"
+    },
+    {
+      "id": "6934e9ad7f37",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T16:21:34Z",
+      "source": "Reuters",
+      "summary": "Adam Hamilton becomes first Democrat elected to US Senate from Kansas in 94 years &nbsp;&nbsp; Reuters",
+      "title": "Adam Hamilton becomes first Democrat elected to US Senate from Kansas in 94 years",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMHVVb3F0TE9uYjVlOFhaV21Xc1hqQVNVY1MwS09qM1BrTEFSUzRma2oteUIxT2x4TTRKMG1jVW5nT0VpNjFNUW1BZ2VReTRJYmtDUHFmcmFPS2VqeEVLbmFaQWFoMnQ1V3l4WkxWQm11b2JvVkg4WWZ3d3F2SFZrcDNvRTh5VHhhRU8xOFZ6SWQ5YS1tY0lGRDlEc0hDTzBrcnNkRG1xSS12UnhaZU01M1B2VVM3QQ"
     },
     {
       "id": "7cc1a6d8af68",
@@ -979,6 +991,18 @@
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPYW0tUldWUVBpVlNObW9uamtYdU5PY01pd3hwSThzQWFlNTZLS3JYQlRkYTZ0WGxRT1lmUy1pckVNXzFwbkRGWGhlZU14SHRIbG9UcVpDbnE5X1BVMWxGS2ZrN3pkVFdOel9XcVcySkNIYTg4MnYzb2FJY3ZYN2pqbi1rdFJTZHc"
     },
     {
+      "id": "6fa72ae267da",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T04:56:40Z",
+      "source": "WHBL News",
+      "summary": "Adam Hamilton becomes first Democrat elected to the US Senate from Kansas in 94 years &nbsp;&nbsp; WHBL News",
+      "title": "Adam Hamilton becomes first Democrat elected to the US Senate from Kansas in 94 years",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcFEyRDB1V2gxWGk5bldkd0p6d1h2dVBwMVJBc05IazhZamhXV1VzNGh6SmlKZTBLZFNiT1ByTEoxMGN0d24tRDlPM2lpUHhoaGlPbG9zZWxhT25oVUZLYmFfbGlnSGpDOURCbGgyLU1xR0FRelFKU05HakF5R2xTWlNmcElCSEw0ZHJjTk1VZTVsV2NVblNNMk44bkoyVDBLdDBIQzQzQy1PMG1weHlaWUxlcDQ"
+    },
+    {
       "id": "64d4516d464a",
       "kind": "news",
       "mentions": [
@@ -1015,16 +1039,16 @@
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WcUlSaGtWU0ZPWXJzNmtKcnVtS2prZEJqWGYxZ19lV2FoMThCdVMtcGlBRUFrZHNmbkVicUUwOHBkTExZdFlDR1h1aENtUWJ0VFNfSnR0SjBRLTBnVUJ5MVFlX2tnVjhIOXNObldnbmlpdW8"
     },
     {
-      "id": "119d399823a0",
+      "id": "eabed15ef210",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-04T04:45:06Z",
-      "source": "WZTV",
-      "summary": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years &nbsp;&nbsp; WZTV",
+      "published_at": "2026-11-04T04:45:53Z",
+      "source": "WJAR",
+      "summary": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years &nbsp;&nbsp; WJAR",
       "title": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years",
-      "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxOT2xqelh6dFlFSUM2ZFNpZnVUVmU1cExTd1NwOGZ3N0ZJa2QxQTRDUFZXS3JDUC0wLWQzVWYyZlVxdXNtRm45R2k0X2kxU3A1Y2FrZ2RVQkUycmRnSTFIeF9fUkc0SDM1UllUNXFyOGpPdFM2aUxCM0RucU92dWpuUmwzX3o1emZra3p2cnc3TUlvV0FiSVJYdFNRdVFybl9BZEd6SmNpdjJWcTl2QmtTSWh0cS1GWTM1RzctRWJlMEowOUpwcnF5TXBzLVVIYmhuZEtIX2tKSTMtdTkzM3F4emE4WWlmZUcyZTh0aXkyNW4wQVhfTXBpR0M4WGZmQW93dHJEMV9XVldTeVpwejhJODZDcV84cUVaNVEtWEtpd2J2NE1SanpTUEhacXVOQkoyVjhZVUFXZkRiMGJmSk1aOVdaTnlvbkVIanJsUkgzX0tCcU9ac0dtem5fSQ"
+      "url": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxNVWE0S21WQlFkTjM1M1NaR2M0MjY4TXZTZ1p2RE94ak12MHdSS0tKUUhQWjFDWnhJeGhFWmdodHVxYXJSbXF5VERMdXhsSjZlbEQ0SlJ5TjJGWTFSelhVdlVYMGthTjBCWTFXdEtwU3BDWjlVTTVWMDlTbV9QSzV3T3ZseWpVYUFfOFRfRnpKRDVSVjR3SzJOUWRUTFVWYWhlWG1TWXFTTGp2akVzR29JNTdNc0F3ZEFqYWpNckdyU1FDVzhjNjQ3STZOZ1lURTBsQ2VsME92cEluQzdma1RnSUZpZk1hekphSVEzZmVvbGY1alhYXzk4WVVBd1I0VEd4RlJxZEc5bzhhTzhUV0ZkS2t0ODk2UDJsNkVuR0pXOUFzUUJHV2tZam84eTFuejVBdE5rWXFRZjBqdjhPRHV3cmx6SGtEQndPT0tzczBMZHRfMlJ4a3hMN0FUVjV4d1k"
     },
     {
       "id": "63d9eb418cf7",
@@ -1074,18 +1098,6 @@
       "summary": "Who is Adam Hamilton, the new Senator from Kansas? See his story &nbsp;&nbsp; USA Today",
       "title": "Who is Adam Hamilton, the new Senator from Kansas? See his story",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSUVzUGRuQ09nNmx0Ylp4UGp3RmNKZFF3alhZQVl0UlVLaW4yZjlzelBGeEUtcExEbEh2eFVNUTY0bUlfOGtSWWY5UkhCdEJhQVExXzJzR1hscF9rTFBBdjI5ajBlTTdKd04wZnBjdHlBUGw1OUdZS09Yb2x1dHlhZTRqcjQxcUtTd0JuRkV0QTJMLUVLS0FNRGpWbTZvREdTTEppZm92TWIxVkRLeDY0VGd0UFpfaDdF"
-    },
-    {
-      "id": "04bba3b30e48",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T04:40:53Z",
-      "source": "WTVB",
-      "summary": "Adam Hamilton becomes first Democrat elected to the US Senate from Kansas in 94 years &nbsp;&nbsp; WTVB",
-      "title": "Adam Hamilton becomes first Democrat elected to the US Senate from Kansas in 94 years",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNVUZnQVZTMmtjWEJXcjNoX29BMEx6TTlpa294VngtMTBUQ1A1enRKQ29FUHF4cTNINlZvTE94LXNSSnJ4OE9IQ1Vqd0c2UFRlRkVIblZXTGpjZFBOYkRZUkdNRHV2YWlqajBYVHFEcHlRUW43aUlnelhyZGVZM21fR0ZxcE9rMkJaM0FnVXhCR2RpQVJvSFloNUhuVlN6UVFWUThXbWZuc3lOSnUtbjg2OW1CdWp0RGs"
     },
     {
       "id": "f4429e7eba97",
@@ -1232,18 +1244,6 @@
       "summary": "Democrat Adam Hamilton Flips Kansas Senate Seat, Defeats GOP Sen. Roger Marshall &nbsp;&nbsp; GV Wire",
       "title": "Democrat Adam Hamilton Flips Kansas Senate Seat, Defeats GOP Sen. Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZ2s0b1FSSWJDUUMwVHlXYUV0WFRuZGM2QTdUN0lyLVZyQjljblRDaWw5Z3REVGdKQjhzdWVIbkpaenFxQzBjbG5rMkcyaDhjcHZqX1RZcE1xcTVUTmloS3dXLU9CV3A1Z3hXTzYyOENXVHRFU3BRalJCV082Mm5VRHdDbUpOWWdSN1hyaXVzUEg4TzJ6QXgwQlVZNEJESHZOaGdfSXhyd192ZHBvZVE"
-    },
-    {
-      "id": "6934e9ad7f37",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T04:24:00Z",
-      "source": "Reuters",
-      "summary": "Adam Hamilton becomes first Democrat elected to US Senate from Kansas in 94 years &nbsp;&nbsp; Reuters",
-      "title": "Adam Hamilton becomes first Democrat elected to US Senate from Kansas in 94 years",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMHVVb3F0TE9uYjVlOFhaV21Xc1hqQVNVY1MwS09qM1BrTEFSUzRma2oteUIxT2x4TTRKMG1jVW5nT0VpNjFNUW1BZ2VReTRJYmtDUHFmcmFPS2VqeEVLbmFaQWFoMnQ1V3l4WkxWQm11b2JvVkg4WWZ3d3F2SFZrcDNvRTh5VHhhRU8xOFZ6SWQ5YS1tY0lGRDlEc0hDTzBrcnNkRG1xSS12UnhaZU01M1B2VVM3QQ"
     },
     {
       "id": "09df5a7737e1",
