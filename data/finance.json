@@ -19,347 +19,361 @@
       "debts_owed": 50000.0,
       "donor_states": [
         {
-          "amount": 2335742.49,
-          "donors": 3198,
+          "amount": 5714491.04,
+          "donors": 15135,
           "name": "Kansas",
-          "pct": 69.9,
+          "pct": 56.5,
           "state": "KS"
         },
         {
-          "amount": 333999.82,
-          "donors": 367,
+          "amount": 715187.13,
+          "donors": 1584,
           "name": "Missouri",
-          "pct": 10.0,
+          "pct": 7.1,
           "state": "MO"
         },
         {
-          "amount": 90589.14,
-          "donors": 143,
-          "name": "Texas",
-          "pct": 2.7,
-          "state": "TX"
-        },
-        {
-          "amount": 63518.75,
-          "donors": 36,
-          "name": "District Of Columbia",
-          "pct": 1.9,
-          "state": "DC"
-        },
-        {
-          "amount": 45883.06,
-          "donors": 77,
+          "amount": 609207.95,
+          "donors": 1293,
           "name": "California",
-          "pct": 1.4,
+          "pct": 6.0,
           "state": "CA"
         },
         {
-          "amount": 42864.69,
-          "donors": 77,
-          "name": "Florida",
-          "pct": 1.3,
-          "state": "FL"
-        },
-        {
-          "amount": 42792.98,
-          "donors": 69,
-          "name": "Arkansas",
-          "pct": 1.3,
-          "state": "AR"
-        },
-        {
-          "amount": 41300.4,
-          "donors": 22,
-          "name": "Arizona",
-          "pct": 1.2,
-          "state": "AZ"
-        },
-        {
-          "amount": 41006.26,
-          "donors": 55,
-          "name": "Virginia",
-          "pct": 1.2,
-          "state": "VA"
-        },
-        {
-          "amount": 25520.6,
-          "donors": 29,
+          "amount": 366368.32,
+          "donors": 444,
           "name": "New York",
-          "pct": 0.8,
+          "pct": 3.6,
           "state": "NY"
         },
         {
-          "amount": 24844.66,
-          "donors": 27,
-          "name": "Maryland",
-          "pct": 0.7,
-          "state": "MD"
+          "amount": 298272.72,
+          "donors": 674,
+          "name": "Texas",
+          "pct": 2.9,
+          "state": "TX"
         },
         {
-          "amount": 24348.52,
-          "donors": 29,
-          "name": "Colorado",
-          "pct": 0.7,
-          "state": "CO"
+          "amount": 237040.96,
+          "donors": 295,
+          "name": "Massachusetts",
+          "pct": 2.3,
+          "state": "MA"
         },
         {
-          "amount": 23894.05,
-          "donors": 42,
+          "amount": 182941.68,
+          "donors": 444,
+          "name": "Florida",
+          "pct": 1.8,
+          "state": "FL"
+        },
+        {
+          "amount": 181369.07,
+          "donors": 205,
+          "name": "District Of Columbia",
+          "pct": 1.8,
+          "state": "DC"
+        },
+        {
+          "amount": 168975.67,
+          "donors": 369,
           "name": "North Carolina",
-          "pct": 0.7,
+          "pct": 1.7,
           "state": "NC"
         },
         {
-          "amount": 21904.93,
-          "donors": 21,
-          "name": "Ohio",
-          "pct": 0.7,
-          "state": "OH"
+          "amount": 163046.85,
+          "donors": 426,
+          "name": "Virginia",
+          "pct": 1.6,
+          "state": "VA"
         },
         {
-          "amount": 19351.0,
-          "donors": 33,
+          "amount": 145735.58,
+          "donors": 229,
+          "name": "Maryland",
+          "pct": 1.4,
+          "state": "MD"
+        },
+        {
+          "amount": 135142.53,
+          "donors": 292,
+          "name": "Colorado",
+          "pct": 1.3,
+          "state": "CO"
+        },
+        {
+          "amount": 119052.5,
+          "donors": 300,
           "name": "Illinois",
-          "pct": 0.6,
+          "pct": 1.2,
           "state": "IL"
         },
         {
-          "amount": 18950.0,
-          "donors": 14,
+          "amount": 108747.67,
+          "donors": 232,
           "name": "Washington",
-          "pct": 0.6,
+          "pct": 1.1,
           "state": "WA"
         },
         {
-          "amount": 17072.1,
-          "donors": 30,
+          "amount": 87576.62,
+          "donors": 189,
+          "name": "Arizona",
+          "pct": 0.9,
+          "state": "AZ"
+        },
+        {
+          "amount": 84320.58,
+          "donors": 115,
+          "name": "Connecticut",
+          "pct": 0.8,
+          "state": "CT"
+        },
+        {
+          "amount": 74937.14,
+          "donors": 173,
+          "name": "Arkansas",
+          "pct": 0.7,
+          "state": "AR"
+        },
+        {
+          "amount": 64054.05,
+          "donors": 133,
+          "name": "Pennsylvania",
+          "pct": 0.6,
+          "state": "PA"
+        },
+        {
+          "amount": 59863.98,
+          "donors": 166,
+          "name": "Ohio",
+          "pct": 0.6,
+          "state": "OH"
+        },
+        {
+          "amount": 49976.22,
+          "donors": 122,
+          "name": "South Carolina",
+          "pct": 0.5,
+          "state": "SC"
+        },
+        {
+          "amount": 45628.73,
+          "donors": 154,
           "name": "Tennessee",
           "pct": 0.5,
           "state": "TN"
         },
         {
-          "amount": 15000.0,
-          "donors": 6,
-          "name": "Connecticut",
-          "pct": 0.4,
-          "state": "CT"
-        },
-        {
-          "amount": 14749.22,
-          "donors": 32,
-          "name": "South Carolina",
-          "pct": 0.4,
-          "state": "SC"
-        },
-        {
-          "amount": 14631.55,
-          "donors": 10,
-          "name": "Massachusetts",
-          "pct": 0.4,
-          "state": "MA"
-        },
-        {
-          "amount": 14000.0,
-          "donors": 4,
-          "name": "Montana",
-          "pct": 0.4,
-          "state": "MT"
-        },
-        {
-          "amount": 8757.5,
-          "donors": 24,
+          "amount": 45549.8,
+          "donors": 154,
           "name": "Minnesota",
-          "pct": 0.3,
+          "pct": 0.5,
           "state": "MN"
         },
         {
-          "amount": 7442.5,
-          "donors": 24,
-          "name": "Indiana",
-          "pct": 0.2,
-          "state": "IN"
-        },
-        {
-          "amount": 7422.8,
-          "donors": 20,
+          "amount": 42141.6,
+          "donors": 150,
           "name": "Georgia",
-          "pct": 0.2,
+          "pct": 0.4,
           "state": "GA"
         },
         {
-          "amount": 5750.0,
-          "donors": 6,
-          "name": "Idaho",
-          "pct": 0.2,
-          "state": "ID"
+          "amount": 41151.24,
+          "donors": 112,
+          "name": "New Jersey",
+          "pct": 0.4,
+          "state": "NJ"
         },
         {
-          "amount": 4387.8,
-          "donors": 4,
-          "name": "New Hampshire",
-          "pct": 0.1,
-          "state": "NH"
-        },
-        {
-          "amount": 4190.63,
-          "donors": 6,
-          "name": "Nevada",
-          "pct": 0.1,
-          "state": "NV"
-        },
-        {
-          "amount": 3225.0,
-          "donors": 9,
-          "name": "Pennsylvania",
-          "pct": 0.1,
-          "state": "PA"
-        },
-        {
-          "amount": 3026.85,
-          "donors": 13,
+          "amount": 31620.46,
+          "donors": 161,
           "name": "Oklahoma",
-          "pct": 0.1,
+          "pct": 0.3,
           "state": "OK"
         },
         {
-          "amount": 2975.0,
-          "donors": 8,
+          "amount": 28397.48,
+          "donors": 43,
+          "name": "Nevada",
+          "pct": 0.3,
+          "state": "NV"
+        },
+        {
+          "amount": 28019.73,
+          "donors": 149,
+          "name": "Oregon",
+          "pct": 0.3,
+          "state": "OR"
+        },
+        {
+          "amount": 27629.05,
+          "donors": 100,
           "name": "Michigan",
-          "pct": 0.1,
+          "pct": 0.3,
           "state": "MI"
         },
         {
-          "amount": 2900.0,
-          "donors": 10,
+          "amount": 27626.86,
+          "donors": 99,
+          "name": "Indiana",
+          "pct": 0.3,
+          "state": "IN"
+        },
+        {
+          "amount": 22671.68,
+          "donors": 106,
+          "name": "Louisiana",
+          "pct": 0.2,
+          "state": "LA"
+        },
+        {
+          "amount": 21847.8,
+          "donors": 95,
+          "name": "New Mexico",
+          "pct": 0.2,
+          "state": "NM"
+        },
+        {
+          "amount": 21052.95,
+          "donors": 25,
+          "name": "New Hampshire",
+          "pct": 0.2,
+          "state": "NH"
+        },
+        {
+          "amount": 21000.0,
+          "donors": 11,
+          "name": "Wyoming",
+          "pct": 0.2,
+          "state": "WY"
+        },
+        {
+          "amount": 16269.8,
+          "donors": 67,
           "name": "Nebraska",
-          "pct": 0.1,
+          "pct": 0.2,
           "state": "NE"
         },
         {
-          "amount": 2703.06,
-          "donors": 17,
+          "amount": 15910.0,
+          "donors": 28,
+          "name": "Montana",
+          "pct": 0.2,
+          "state": "MT"
+        },
+        {
+          "amount": 13785.0,
+          "donors": 12,
+          "name": "Maine",
+          "pct": 0.1,
+          "state": "ME"
+        },
+        {
+          "amount": 12903.1,
+          "donors": 147,
           "name": "Alabama",
           "pct": 0.1,
           "state": "AL"
         },
         {
-          "amount": 2500.0,
-          "donors": 9,
+          "amount": 12685.0,
+          "donors": 57,
           "name": "Wisconsin",
           "pct": 0.1,
           "state": "WI"
         },
         {
-          "amount": 2019.68,
-          "donors": 13,
-          "name": "Louisiana",
+          "amount": 11740.0,
+          "donors": 40,
+          "name": "Idaho",
           "pct": 0.1,
-          "state": "LA"
+          "state": "ID"
         },
         {
-          "amount": 1939.05,
-          "donors": 14,
-          "name": "Oregon",
-          "pct": 0.1,
-          "state": "OR"
-        },
-        {
-          "amount": 1500.0,
-          "donors": 1,
-          "name": "Alaska",
-          "pct": 0.0,
-          "state": "AK"
-        },
-        {
-          "amount": 1500.0,
-          "donors": 2,
-          "name": "Mississippi",
-          "pct": 0.0,
-          "state": "MS"
-        },
-        {
-          "amount": 1038.1,
-          "donors": 2,
-          "name": "New Jersey",
-          "pct": 0.0,
-          "state": "NJ"
-        },
-        {
-          "amount": 1000.0,
-          "donors": 1,
-          "name": "Wyoming",
-          "pct": 0.0,
-          "state": "WY"
-        },
-        {
-          "amount": 565.98,
-          "donors": 8,
+          "amount": 9880.98,
+          "donors": 40,
           "name": "Utah",
-          "pct": 0.0,
+          "pct": 0.1,
           "state": "UT"
         },
         {
-          "amount": 500.0,
-          "donors": 2,
-          "name": "New Mexico",
-          "pct": 0.0,
-          "state": "NM"
+          "amount": 9255.0,
+          "donors": 30,
+          "name": "Kentucky",
+          "pct": 0.1,
+          "state": "KY"
         },
         {
-          "amount": 470.0,
-          "donors": 5,
-          "name": "South Dakota",
-          "pct": 0.0,
-          "state": "SD"
+          "amount": 6794.05,
+          "donors": 22,
+          "name": "Iowa",
+          "pct": 0.1,
+          "state": "IA"
         },
         {
-          "amount": 400.0,
-          "donors": 2,
-          "name": "Delaware",
-          "pct": 0.0,
-          "state": "DE"
+          "amount": 6000.0,
+          "donors": 3,
+          "name": "North Dakota",
+          "pct": 0.1,
+          "state": "ND"
         },
         {
-          "amount": 252.0,
-          "donors": 2,
+          "amount": 5822.5,
+          "donors": 14,
+          "name": "Hawaii",
+          "pct": 0.1,
+          "state": "HI"
+        },
+        {
+          "amount": 5700.0,
+          "donors": 21,
+          "name": "Vermont",
+          "pct": 0.1,
+          "state": "VT"
+        },
+        {
+          "amount": 5060.0,
+          "donors": 44,
+          "name": "Alaska",
+          "pct": 0.1,
+          "state": "AK"
+        },
+        {
+          "amount": 4802.0,
+          "donors": 12,
           "name": "West Virginia",
           "pct": 0.0,
           "state": "WV"
         },
         {
-          "amount": 250.0,
-          "donors": 1,
-          "name": "Iowa",
+          "amount": 4210.0,
+          "donors": 18,
+          "name": "Mississippi",
           "pct": 0.0,
-          "state": "IA"
+          "state": "MS"
         },
         {
-          "amount": 250.0,
-          "donors": 1,
-          "name": "Kentucky",
-          "pct": 0.0,
-          "state": "KY"
-        },
-        {
-          "amount": 250.0,
-          "donors": 1,
-          "name": "Vermont",
-          "pct": 0.0,
-          "state": "VT"
-        },
-        {
-          "amount": 207.5,
-          "donors": 2,
-          "name": "Hawaii",
-          "pct": 0.0,
-          "state": "HI"
-        },
-        {
-          "amount": 50.0,
-          "donors": 1,
+          "amount": 3950.0,
+          "donors": 15,
           "name": "Rhode Island",
           "pct": 0.0,
           "state": "RI"
+        },
+        {
+          "amount": 2360.0,
+          "donors": 16,
+          "name": "South Dakota",
+          "pct": 0.0,
+          "state": "SD"
+        },
+        {
+          "amount": 1850.0,
+          "donors": 6,
+          "name": "Delaware",
+          "pct": 0.0,
+          "state": "DE"
         }
       ],
       "donors": {
@@ -824,7 +838,58 @@
             "label": "Bronxville, NY"
           }
         ],
-        "top_employers": [],
+        "top_employers": [
+          {
+            "amount": 8249.8,
+            "donors": 6,
+            "label": "NVIDIA"
+          },
+          {
+            "amount": 7600.0,
+            "donors": 4,
+            "label": "TORTOISE CAPITAL"
+          },
+          {
+            "amount": 7500.0,
+            "donors": 3,
+            "label": "CHILDREN'S MERCY"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "FINKLE + WILLIAMS"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 4,
+            "label": "REECE CONSTRUCTION CO, INC"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "JE DUNN CONSTRUCTION"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 3,
+            "label": "BAUER PIKE BAUER WARY & CARROLL LLC"
+          },
+          {
+            "amount": 7000.0,
+            "donors": 2,
+            "label": "CD AUTOMOTIVE"
+          },
+          {
+            "amount": 4537.8,
+            "donors": 2,
+            "label": "FINELINE EMPLOYMENT LAW LLC"
+          },
+          {
+            "amount": 3525.0,
+            "donors": 2,
+            "label": "ROCKET FUEL PARTNERS"
+          }
+        ],
         "top_occupations": [
           {
             "amount": 5103984.92,
@@ -880,8 +945,8 @@
         "unitemized_total": 4674136.08
       },
       "fec_candidate_id": "S6KS00312",
-      "in_state_amount": 2335742.49,
-      "in_state_pct": 69.9,
+      "in_state_amount": 5714491.04,
+      "in_state_pct": 56.5,
       "individual_contributions": 16526007.87,
       "other_receipts": 13376.97,
       "pac_contributions": 245500.0,
@@ -1929,7 +1994,7 @@
       "date": "2026-10-29",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/261/202610299945300261/202610299945300261.pdf"
+      "url": "https://docquery.fec.gov/pdf/277/202610299945271277/202610299945271277.pdf"
     },
     {
       "committee_id": "C00948901",
@@ -1937,7 +2002,7 @@
       "date": "2026-10-29",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/277/202610299945271277/202610299945271277.pdf"
+      "url": "https://docquery.fec.gov/pdf/261/202610299945300261/202610299945300261.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -1951,16 +2016,16 @@
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
-      "form_type": "F1",
-      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
     },
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
+      "form_type": "F1",
+      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -1991,20 +2056,20 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-22",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-10-14",
       "date": "2026-10-22",
       "form_type": "F3",
       "report_type": "PRE-GENERAL",
       "total_receipts": 5641333.41,
       "url": "https://docquery.fec.gov/pdf/351/202610229945144351/202610229945144351.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-10-22",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2085,10 +2150,10 @@
       "url": "https://docquery.fec.gov/pdf/667/202610139908689667/202610139908689667.pdf"
     }
   ],
-  "generated_at": "2026-11-07T07:22:11.545092Z",
+  "generated_at": "2026-11-07T14:14:50.287389Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 32261171.07,
+      "hamilton": 32414491.87,
       "marshall": 55874875.5
     },
     "recent": [
@@ -2553,7 +2618,7 @@
         "opposes": "hamilton"
       }
     ],
-    "total": 104165140.02
+    "total": 104318460.82
   },
   "schema_version": 1
 }

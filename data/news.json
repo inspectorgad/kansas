@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-07T07:22:14.341243Z",
+  "generated_at": "2026-11-07T14:14:55.191442Z",
   "items": [
     {
       "id": "1d2328a46d01",
@@ -34,7 +34,7 @@
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-07T01:26:05Z",
+      "published_at": "2026-11-07T01:29:04Z",
       "source": "THIRTEEN - New York Public Media",
       "summary": "Hamilton on why Kansas voters chose a Democrat for Senate &nbsp;&nbsp; THIRTEEN - New York Public Media",
       "title": "Hamilton on why Kansas voters chose a Democrat for Senate",
@@ -917,6 +917,19 @@
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UUWpLV3J2dklEMnM5TE13MW5EcnFVbjJFcDZvdXZXZkd6YXdRR3hLOEVEazhWMEhqWURGNUpKNWY4VHljSk5kNlQ4bGJGSXBqMGNzNS1vaWo5bUJ1UVVBOTJXbmVfTmRrTmxLc3NFZjVOaDNaaVRmYUtQR2czRGs"
     },
     {
+      "id": "549d82cbe0b6",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-04T05:33:45Z",
+      "source": "Clinton Herald",
+      "summary": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years &nbsp;&nbsp; Clinton Herald",
+      "title": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNdkFpbDNfQ2hjNEg3VlRtS1VzMFZZOWlqWDN5OEZEWHVUU2N0X3JPVS1HZHV3M1pBemFnekJqTHRQOGkyRTZNT2E0MldmUmpQbTljWm1WZ0JjeDhGbXRZVlF1VEZ6OGNwTUM5QzFhUUlmRnFRS1NnZURJd21DNldDOURhN3k4bkZ5UUNyeU1lQ21vTkZSTHFJWEtTVURqMThFZ3lGUF9JUm5GLU0yc1dDSFNKTzZGbUtqV09nRlh6SEZNb0NZeDZEN3Z5czF0UHYxYkVIQ3htOGRyeU5VMWFobVZ3TThmWlF5M2piS280dVA5ZUJOY2hSSHZLLXhMM2x1TXpUTk5XNlRfMmlqdk1oeXk3UnQ"
+    },
+    {
       "id": "e08d4fefa094",
       "kind": "news",
       "mentions": [
@@ -1027,18 +1040,6 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcFEyRDB1V2gxWGk5bldkd0p6d1h2dVBwMVJBc05IazhZamhXV1VzNGh6SmlKZTBLZFNiT1ByTEoxMGN0d24tRDlPM2lpUHhoaGlPbG9zZWxhT25oVUZLYmFfbGlnSGpDOURCbGgyLU1xR0FRelFKU05HakF5R2xTWlNmcElCSEw0ZHJjTk1VZTVsV2NVblNNMk44bkoyVDBLdDBIQzQzQy1PMG1weHlaWUxlcDQ"
     },
     {
-      "id": "64d4516d464a",
-      "kind": "news",
-      "mentions": [
-        "marshall"
-      ],
-      "published_at": "2026-11-04T04:53:22Z",
-      "source": "C-SPAN",
-      "summary": "U.S. Senate Candidate Sen. Roger Marshall (R-KS) Speaks to Supporters on Election Night &nbsp;&nbsp; C-SPAN",
-      "title": "U.S. Senate Candidate Sen. Roger Marshall (R-KS) Speaks to Supporters on Election Night",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOM1RCVHE1N0wwSW96LW54OTd0ZTJOMFpqU2NXb0l2Zzk2cWF2UmZmMVhUU0Y5bkJWTUlCeDRPV2x0cTU1RFUwakh2YzRpbl9OVVpkYjktRzFxQlN4MU5iWG5iUXhNRHBkV3BIeTZfczR4T2JyWXUtSVNxZ2hMMlNidHZLOGwxRGNBVnRiRHVuU0ZPdjdUY0I4R2x0aEN1RXpFWWV5MzJPNVNsMXBSRlZUMTYtLUlwejladEFJUmZlZGV6N2xZbDBvZ25XV055QWs"
-    },
-    {
       "id": "8d30cf3b8eaa",
       "kind": "news",
       "mentions": [
@@ -1049,6 +1050,18 @@
       "summary": "U.S. Senate Candidate Sen. Roger Marshall (R-KS) Gives Concession Speech to Supporters on Election Night &nbsp;&nbsp; C-SPAN",
       "title": "U.S. Senate Candidate Sen. Roger Marshall (R-KS) Gives Concession Speech to Supporters on Election Night",
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOcHNuMUp1MlpqT2UyWFNWMGxrSGJfQWhZd0dNQ0RsN2w5WjBDYVZwUVd3Z2lGTXZBUUlWZUdfS2JBT0hiYXZYQXdScHdSVUJld2xlSy1Jb29rTmlRNWxuOUVxMFZBX3FiRjVzWWw1UTVtZGtOd2M5ZG9abnVBRzlLaDdzTURlcXA2NmpvNmVpNVZ3M1hfb3RzSHBqUmRxakhjOGVyUkQ3S3JxQUpJb2JrSjNOU253aG9SY2RLbWtBM2xsSW1kdng4NURyZ1VwSEt0MUk0VWpEc01oRnBnX1M5NXdTbzBPdw"
+    },
+    {
+      "id": "64d4516d464a",
+      "kind": "news",
+      "mentions": [
+        "marshall"
+      ],
+      "published_at": "2026-11-04T04:53:22Z",
+      "source": "C-SPAN",
+      "summary": "U.S. Senate Candidate Sen. Roger Marshall (R-KS) Speaks to Supporters on Election Night &nbsp;&nbsp; C-SPAN",
+      "title": "U.S. Senate Candidate Sen. Roger Marshall (R-KS) Speaks to Supporters on Election Night",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOM1RCVHE1N0wwSW96LW54OTd0ZTJOMFpqU2NXb0l2Zzk2cWF2UmZmMVhUU0Y5bkJWTUlCeDRPV2x0cTU1RFUwakh2YzRpbl9OVVpkYjktRzFxQlN4MU5iWG5iUXhNRHBkV3BIeTZfczR4T2JyWXUtSVNxZ2hMMlNidHZLOGwxRGNBVnRiRHVuU0ZPdjdUY0I4R2x0aEN1RXpFWWV5MzJPNVNsMXBSRlZUMTYtLUlwejladEFJUmZlZGV6N2xZbDBvZ25XV055QWs"
     },
     {
       "id": "d2b5223e831f",
@@ -1218,19 +1231,6 @@
       "summary": "Democrat Adam Hamilton projected to win Senate race in Kansas &nbsp;&nbsp; NBC News",
       "title": "Democrat Adam Hamilton projected to win Senate race in Kansas",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPM0k3SlBPN3RuMUZQbEQ1Sjg2THFSSERNaUs0THpzaTBBR0pFTTlWb0xJTkJ3NHZwODN1emhGSFRDdGpjLW1oMy1yYTVUSFJiS3pxVmlfMGZYdjVuam91UjdLX0ZCSHRBbnVtZ0JHZko4UTg3WEd3RVdNYmFLSkRjcFlQVTF6SUFsdXVFaHQ3b0oxM0NnR1NyVzQzT2M0cHBWNjdUbnA2UQ"
-    },
-    {
-      "id": "96b7284cb92c",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T04:28:00Z",
-      "source": "KAKE",
-      "summary": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years &nbsp;&nbsp; KAKE",
-      "title": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNcDBrZTdRaFJpTXJCTFFUbnZacjFDaUVSamRxb3FGMktyVVRjVDNJU2g4SnB0bG95eDNrZ1N3bk1EWjA5YXE1MTJfMTJieDgwRnRFVVNfaDF0eHpvQlBNdXpiNFdSdTR1MGVtSHpmQnlkNWpmWEZtc01wT3RxanZrYk13VnZST05jUnV1X0dSR09yUksxYTh6alpLYktnaWNtalJjQnoyQm8wM3dwaWlYRDJDcXdnLVZFcE80TWRDZnVDakRFYkROcWRDR0lmOXpBeVFCS3dhYlFRZGVrbW83dXpzQkRaNHZyaHZPSllkSTJaX3p6NXc"
     },
     {
       "id": "e5b6febb74d2",
@@ -1437,8 +1437,8 @@
         "hamilton"
       ],
       "published_at": "2026-11-04T03:00:00Z",
-      "source": "KSN-TV",
-      "summary": "Adam Hamilton wins Kansas US Senate race in historic election &nbsp;&nbsp; KSN-TV",
+      "source": "KSN.com",
+      "summary": "Adam Hamilton wins Kansas US Senate race in historic election &nbsp;&nbsp; KSN.com",
       "title": "Adam Hamilton wins Kansas US Senate race in historic election",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPelRrUWJGbFluTVFRb2lPbnQ0eGFPNXNWZHY2b0FBN0NXWG1GU1RoeVNsVnJwUno1NEFtOUE3OEFoSXVFU3duYWVTaEJWOXFFS1pFZ29sMEQ2Y0VyNWIzZkNMejNLLXlBYkFCdWJrcU9RQ3c0Wjk4cWxvb3UxTnpjcHVsZzB3S0ktNXZDZNIBkgFBVV95cUxPNjJKZTM0YjdSTEtTUGpMbTNiLU9sUlRWQy1SbVFxWkljU0pURHh4UE03dWRsYVZoNjBVdzFJa3ZnOWxxelJFeVh1RktmdFJqOThrTDhSaXRLRDRFaTRyR1lWMnJBUGY2Slk5RWdXZUlGbDhOb3VwbUNIMW94QmxDMUt3NDJvdnJaYUxQVy1FMVBaQQ"
     },
