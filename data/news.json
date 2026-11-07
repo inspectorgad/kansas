@@ -26,8 +26,33 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-07T18:54:54.442860Z",
+  "generated_at": "2026-11-07T22:35:26.107968Z",
   "items": [
+    {
+      "id": "e90f2a7e3c51",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-07T20:12:44Z",
+      "source": "NBC News",
+      "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
+      "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VLXM4M0xvcmJZMFNweWd5SGQ5MGg5OE9hMFBqLTN0TE1GakUwSGhfZFhpYUVILXFrMGFHSVFVTVE5QkFxd3lMZWhqY05wT2xCazdrSnNIZFQyc21LOWdDV2g1SW5DS0tQUzJSWVEwOHlCRnBYUUtTQw"
+    },
+    {
+      "id": "93e7c368a54a",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-07T19:00:00Z",
+      "source": "The New York Times",
+      "summary": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton &nbsp;&nbsp; The New York Times",
+      "title": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcVZUSXpwVzk4YWR0a1UwR3h0aFpLZ3h0MzNiOEZDako2TjVNcVNQSEw4UzdYSkJLbDAyQ2hVYXlScU9Jd0RsV0c0R1dwVW5XTG1uZ0FwS0JpSTlJNE50aDI5VUMxdHFFazZrSkpRT1hfUWtOZjJ6cmFWczVkT3JHWkZ5S3c1YmwtdGdMTlVYdXN4NVk"
+    },
     {
       "id": "1d2328a46d01",
       "kind": "news",
@@ -41,43 +66,6 @@
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9wTVdxa0FYY1FHZEJTcWQtT3gwODJoU19OUzJPdENxd0JjWE9uT3Nmb0JzVmNOeDNDckNrQjR0LXlMbGltVUtKalVHamRNZk9SamF2d3MxRVRBVDZ1bTB6dmxUT1o3UThEZlhTWFpwc1EtbGg1a3ZraVpOVDU"
     },
     {
-      "id": "e90f2a7e3c51",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-07T01:04:02Z",
-      "source": "NBC News",
-      "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
-      "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VLXM4M0xvcmJZMFNweWd5SGQ5MGg5OE9hMFBqLTN0TE1GakUwSGhfZFhpYUVILXFrMGFHSVFVTVE5QkFxd3lMZWhqY05wT2xCazdrSnNIZFQyc21LOWdDV2g1SW5DS0tQUzJSWVEwOHlCRnBYUUtTQw"
-    },
-    {
-      "id": "93e7c368a54a",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-07T00:00:00Z",
-      "source": "The New York Times",
-      "summary": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton &nbsp;&nbsp; The New York Times",
-      "title": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcVZUSXpwVzk4YWR0a1UwR3h0aFpLZ3h0MzNiOEZDako2TjVNcVNQSEw4UzdYSkJLbDAyQ2hVYXlScU9Jd0RsV0c0R1dwVW5XTG1uZ0FwS0JpSTlJNE50aDI5VUMxdHFFazZrSkpRT1hfUWtOZjJ6cmFWczVkT3JHWkZ5S3c1YmwtdGdMTlVYdXN4NVk"
-    },
-    {
-      "id": "32a875290515",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-06T17:52:09Z",
-      "source": "Yahoo",
-      "summary": "How Adam Hamilton used \u2018decency and kindness\" to deliver a historic Kansas Senate win &nbsp;&nbsp; Yahoo",
-      "title": "How Adam Hamilton used \u2018decency and kindness\" to deliver a historic Kansas Senate win",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQnBVd3lqTXp3NEdYRGRkNWdnV3RYaDRoTTctSG9MblVZR25VX3pCekpDMmtQbWZTOXdxeXBTcnNRUXRoU2hDWlVEV0MwT214V1pVVDAwbXJnNGNJSkRLMm1SNzEySWNsa2M1TTBmX3JoZ09IT2FzYU9wSlQzbFRtdXQxTDluMTBEYlBCdg"
-    },
-    {
       "id": "fc7430604ed9",
       "kind": "news",
       "mentions": [
@@ -88,6 +76,18 @@
       "summary": "OPINION: Adam Hamilton may not be the perfect Democrat, but he's perfect for Kansas &nbsp;&nbsp; The University Daily Kansan",
       "title": "OPINION: Adam Hamilton may not be the perfect Democrat, but he's perfect for Kansas",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxObmpSOFZjdVFkZGFkZ0VzR3hmVHlZamNPU2tYc1psVGo4WWxqc0RObmRPMFExSU9fbWplZ0loQVFvaFc5OTB3cDBtNk9NdEVfQUZOMVNWT09Oa08zUTdxNHBiOHl4UHFqQ0k5Q19mcHFfRFdYZmhCTEZweUdwVDB4ZVdFemZValJzeHNWdVN2Tl9zTEVQQ2lMTHBfaFdtbzlLWU1QczF2UDFZaHZNcWo4NWVwaHc3NG45Y0ZyaGtCRFVWRlhQdUtNLTJsdVB0M2ZVWkp3MkJsejhCWUZwQ29mVGY1WUFRWU5Gb1V2SkJLUmt0YXc"
+    },
+    {
+      "id": "da5a67b08b33",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-06T12:06:07Z",
+      "source": "MS NOW",
+      "summary": "How Adam Hamilton used \u2018decency and kindness\" to deliver a historic Kansas Senate win &nbsp;&nbsp; MS NOW",
+      "title": "How Adam Hamilton used \u2018decency and kindness\" to deliver a historic Kansas Senate win",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNa1RhRTkzd3VyNEZWZGh3eU8zQU1FOW02TG1YTC1Ya0JvUDNoTFNHM2xJUjZHSWNvNmZCY1V6dDRpRW5NLTc0Vi1rTmNTb3J6TnFYZ181akZhRWdjN3plOWtubFFsRHdjdlVfQ0lyQ0RzbnVQTlhOejhBLWQ5ZWN3RkZDQ0FCWHZCVFBVVVB6aVR1V25XWVBrVG50cXhyeGtXUE9GWXA1TVRQdUthNWpLUEQwR0hIVjhCczE5dnM4NVAyVGZoQkpnV3ppWW5FM2M"
     },
     {
       "id": "c7cbcfa56eee",
@@ -1076,16 +1076,16 @@
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WcUlSaGtWU0ZPWXJzNmtKcnVtS2prZEJqWGYxZ19lV2FoMThCdVMtcGlBRUFrZHNmbkVicUUwOHBkTExZdFlDR1h1aENtUWJ0VFNfSnR0SjBRLTBnVUJ5MVFlX2tnVjhIOXNObldnbmlpdW8"
     },
     {
-      "id": "119d399823a0",
+      "id": "2e52a95255fd",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-04T04:45:06Z",
-      "source": "WZTV",
-      "summary": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years &nbsp;&nbsp; WZTV",
+      "published_at": "2026-11-04T04:46:04Z",
+      "source": "WTVC",
+      "summary": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years &nbsp;&nbsp; WTVC",
       "title": "Adam Hamilton becomes first Democratic senator from Kansas in nearly 100 years",
-      "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxOT2xqelh6dFlFSUM2ZFNpZnVUVmU1cExTd1NwOGZ3N0ZJa2QxQTRDUFZXS3JDUC0wLWQzVWYyZlVxdXNtRm45R2k0X2kxU3A1Y2FrZ2RVQkUycmRnSTFIeF9fUkc0SDM1UllUNXFyOGpPdFM2aUxCM0RucU92dWpuUmwzX3o1emZra3p2cnc3TUlvV0FiSVJYdFNRdVFybl9BZEd6SmNpdjJWcTl2QmtTSWh0cS1GWTM1RzctRWJlMEowOUpwcnF5TXBzLVVIYmhuZEtIX2tKSTMtdTkzM3F4emE4WWlmZUcyZTh0aXkyNW4wQVhfTXBpR0M4WGZmQW93dHJEMV9XVldTeVpwejhJODZDcV84cUVaNVEtWEtpd2J2NE1SanpTUEhacXVOQkoyVjhZVUFXZkRiMGJmSk1aOVdaTnlvbkVIanJsUkgzX0tCcU9ac0dtem5fSQ"
+      "url": "https://news.google.com/rss/articles/CBMi5AJBVV95cUxNYTNHUzk5T3RJaERzak5pVnhCcl85dWhLWGtmaVA0VE9ocnBnMEh5cU54dTc1ZDdFaG0tUDY1bkxqUjQyLWVZa056Y0xmWG1qbmtjczJ4VDgwT0prOWllTFNGdHJSZTAxVUV3TkVNVHJydFJOVjJUc2ozV1FFdG84NnhUdlFxbG1OWEhHdkszbXctQlpQbDRCSkhsd2RTSTE0RmxIWElKVFptc0p1N1JlN3hIb2tBLWp6V3pHdTUwWDZaQ2k2c2pLX2MxLXh5NWMxU3dWQUdhYmZ1TU1lT3U0Zi1uTTNLUkw2VkxfbVZyWmdQNHVXY01JbzVKRVpTdnBTbzdZSm1pZmNGbVI4QzNtUE9kQTZQZDB5WVJ2b2J3RFRhTERHWUQ4Z1ljVkVLSV9RSFhURkpKaGJINkw5YzdweWlxZl9IckJVN3dTYzY4U0NRWEozajFzWUw0MVZ2VXZ6ZEJZVg"
     },
     {
       "id": "093006cf878f",
