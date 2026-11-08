@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-08T01:51:36.872344Z",
+  "generated_at": "2026-11-08T08:46:41.019459Z",
   "items": [
     {
       "id": "93e7c368a54a",
@@ -35,11 +35,23 @@
         "hamilton",
         "marshall"
       ],
-      "published_at": "2026-11-08T01:00:00Z",
+      "published_at": "2026-11-08T07:00:00Z",
       "source": "The New York Times",
       "summary": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton &nbsp;&nbsp; The New York Times",
       "title": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcVZUSXpwVzk4YWR0a1UwR3h0aFpLZ3h0MzNiOEZDako2TjVNcVNQSEw4UzdYSkJLbDAyQ2hVYXlScU9Jd0RsV0c0R1dwVW5XTG1uZ0FwS0JpSTlJNE50aDI5VUMxdHFFazZrSkpRT1hfUWtOZjJ6cmFWczVkT3JHWkZ5S3c1YmwtdGdMTlVYdXN4NVk"
+    },
+    {
+      "id": "bbe18fa10315",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-08T03:22:08Z",
+      "source": "KSNT 27 News",
+      "summary": "Adam Hamilton on Trump's Iran war after historic Senate win &nbsp;&nbsp; KSNT 27 News",
+      "title": "Adam Hamilton on Trump's Iran war after historic Senate win",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdEJrdWwxaWJJaS15LVM0U3RxZkllVDluT2xfc3RLN1d1S0dHTWZ2TkFNQ0dZZXpVM01pWGhKVkl0dXNyaGdCV25wWFFScTI4Tm54UWNNajVkUVR6LVRJX3J4aEpPanNxV1J3cjJWMlRLX080N0h1REJGYWtwTWxfZWpyYWwzWF8yVlFlZTdwVU1SamNuMENNU1owcw"
     },
     {
       "id": "e90f2a7e3c51",
@@ -1478,19 +1490,6 @@
       "summary": "WATCH LIVE: Sen. Roger Marshall speaks at Election Night watch party &nbsp;&nbsp; Fox Business",
       "title": "WATCH LIVE: Sen. Roger Marshall speaks at Election Night watch party",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5jYktrY3BRX3BqLVRKblJRY1VnWjh6Q2lFcHVNQ21PQkVSZHl6N3IxZU1VVUtTLUpmUVNRZjdlaGwwVW5IV3RBSGxNc1lRSTViLWNZSzg5aHgtRU0"
-    },
-    {
-      "id": "d0699aae5e48",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T01:18:03Z",
-      "source": "Kansas Reflector",
-      "summary": "OVERLAND PARK \u2014 The Rev. Adam Hamilton made history as the first Democrat elected to the U.S. Senate in Kansas in 94 years, defeating Republican incumbent U.S. Sen. Roger Marshall at the end of a fervid race defined by clashing political visions and strong turnout in some of the state\u2019s most populous counties. Hamilton led [&#8230;]",
-      "title": "Hamilton makes history with US Senate win over Republican incumbent",
-      "url": "https://kansasreflector.com/2026/11/03/hamilton-makes-history-with-u-s-senate-win"
     }
   ],
   "schema_version": 1
