@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-08T20:19:53.883288Z",
+  "generated_at": "2026-11-08T23:52:01.752835Z",
   "items": [
     {
       "id": "ab4b0d1221b6",
@@ -40,19 +40,6 @@
       "summary": "Adam Hamilton (D) defeated incumbent Roger Marshall (R) and David Graham (L) to win the general election for U.S. Senate in Kansas &nbsp;&nbsp; Ballotpedia News",
       "title": "Adam Hamilton (D) defeated incumbent Roger Marshall (R) and David Graham (L) to win the general election for U.S. Senate in Kansas",
       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNUUw4QVcyNDBzOVg0cjRkVlhZRzB4eDlJZzVRZ3BreE1TZzVWV0ZobnJlWGx3YXlJTXJ0M2hZdTZ6NW50WEJxLTlvNEs0T0gzTElJcW10RFpqaHFmZ3FJdE93cjdrUjMtbmpYaDlvNHNVeUNLbUdvN3BHTjgtbGw2SDZadHlyVXF3a3BxeVRZM3Q1VHMwUzZ6cXE4cU5FOE1ZZUhUQzh3QWt1dVY0bnprNFYybE5BaTJCRncydmJham9NQk9LNURPLVNMSDJXaWJpQ0NSSHQ3MEdIakZsVjJ4UXZwZmV1aEVRTkZWQ0trNS1uUGZ3UmZr"
-    },
-    {
-      "id": "93e7c368a54a",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-08T18:00:00Z",
-      "source": "The New York Times",
-      "summary": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton &nbsp;&nbsp; The New York Times",
-      "title": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcVZUSXpwVzk4YWR0a1UwR3h0aFpLZ3h0MzNiOEZDako2TjVNcVNQSEw4UzdYSkJLbDAyQ2hVYXlScU9Jd0RsV0c0R1dwVW5XTG1uZ0FwS0JpSTlJNE50aDI5VUMxdHFFazZrSkpRT1hfUWtOZjJ6cmFWczVkT3JHWkZ5S3c1YmwtdGdMTlVYdXN4NVk"
     },
     {
       "id": "3db1504c4abd",
@@ -149,6 +136,19 @@
       "summary": "Adam Hamilton on Trump's Iran war after historic Senate win &nbsp;&nbsp; KSNT 27 News",
       "title": "Adam Hamilton on Trump's Iran war after historic Senate win",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdEJrdWwxaWJJaS15LVM0U3RxZkllVDluT2xfc3RLN1d1S0dHTWZ2TkFNQ0dZZXpVM01pWGhKVkl0dXNyaGdCV25wWFFScTI4Tm54UWNNajVkUVR6LVRJX3J4aEpPanNxV1J3cjJWMlRLX080N0h1REJGYWtwTWxfZWpyYWwzWF8yVlFlZTdwVU1SamNuMENNU1owcw"
+    },
+    {
+      "id": "93e7c368a54a",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-08T00:00:00Z",
+      "source": "The New York Times",
+      "summary": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton &nbsp;&nbsp; The New York Times",
+      "title": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcVZUSXpwVzk4YWR0a1UwR3h0aFpLZ3h0MzNiOEZDako2TjVNcVNQSEw4UzdYSkJLbDAyQ2hVYXlScU9Jd0RsV0c0R1dwVW5XTG1uZ0FwS0JpSTlJNE50aDI5VUMxdHFFazZrSkpRT1hfUWtOZjJ6cmFWczVkT3JHWkZ5S3c1YmwtdGdMTlVYdXN4NVk"
     },
     {
       "id": "e90f2a7e3c51",
