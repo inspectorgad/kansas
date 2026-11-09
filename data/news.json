@@ -26,8 +26,32 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-09T05:14:39.678140Z",
+  "generated_at": "2026-11-09T14:05:15.312470Z",
   "items": [
+    {
+      "id": "4cd3466adde3",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T11:00:00Z",
+      "source": "Kansas City Star",
+      "summary": "Adam Hamilton\u2019s church welcomed him back as senator-elect. Here\u2019s what he said &nbsp;&nbsp; Kansas City Star",
+      "title": "Adam Hamilton\u2019s church welcomed him back as senator-elect. Here\u2019s what he said",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE92WUJOai1VT3ROZEVnel9CSlkyVlBSbHlZN0o0V3l2akFVd0lMZlFKeFFRVEVaOURhQW1BV0NQMzhhazR5WGpVcUpRT01FOGt5ZGVaZWluNEFST3VQTllsNmtvVVFrQ09Rc0ZnQ0RpaXg5SzB2RmxKTmFPaGw4QdIBfkFVX3lxTE1VNWg5d2lqZTVETGt6WDF3SHNOTHRTSGkzQTREcm5peHNGbmlGNlp5QjdScWwwMnNEQ1VTampiejhkMVNIS3BjS3lYVkZSMkp4ZjA3U29UMWZGTGZaZWJFcVBiYWJuaEo4QTYzWTkyX0owWm1PRjVZNmYzczFMUQ"
+    },
+    {
+      "id": "6e1e11576cfc",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T04:27:00Z",
+      "source": "KCTV",
+      "summary": "Kansas Senator-elect Adam Hamilton spoke to his congregation for the first time since his win &nbsp;&nbsp; KCTV",
+      "title": "Kansas Senator-elect Adam Hamilton spoke to his congregation for the first time since his win",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdFpFcm5zUUZVazUxaEVuZjUweHV1QnZoWFZEb2VXMjZXSGdjU2FFRDFMYkpZck04RjZ0WWs3VkVKVDQwUFVIcmJUbWE5Z1hXXzhlazFkQjlEOUFZUGFsbk9UM3dWNTY4bE9hdWF1MVVqdV8xYXR0czhBdy1fajZYdGVMaUttTExKMTFzN2ZudG84SVVYdzV3ZXFPTlpxWXpscEtPOW9GWmlWcUhuUnVnQjZ6RWFKUnV0QnNzMUNmcw"
+    },
     {
       "id": "881131474789",
       "kind": "news",
@@ -53,16 +77,16 @@
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdm9rZHd1cjNHb004TUN1SzBwdGtpNnVVeWExX3VJRHp6VlM5dHBNZmJOX2NPZ1BZMTlWYU12VW9SNjdEVmdZa0tlcjRsWW42OUk2M2YtRU1UNzNaY3NhNGFnckliZHk4UHFjR3hhOHE3WVFyRFZpbFZMWGJuZ2R3cQ"
     },
     {
-      "id": "71b036fb786d",
+      "id": "62640254f4ab",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-09T00:57:00Z",
-      "source": "Yahoo",
-      "summary": "Kansas senator-elect Adam Hamilton addresses Church of the Resurrection congregation after election &nbsp;&nbsp; Yahoo",
+      "published_at": "2026-11-09T00:57:20Z",
+      "source": "FOX4KC.com",
+      "summary": "Kansas senator-elect Adam Hamilton addresses Church of the Resurrection congregation after election &nbsp;&nbsp; FOX4KC.com",
       "title": "Kansas senator-elect Adam Hamilton addresses Church of the Resurrection congregation after election",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUnJPU29NNmp2UkNMYUQ0c1pvRDNfQ1NfNWZrb3JlOEdGcEowRmZwNzF3ZXYzX2Z1UE5maFRxM0FVUi0ybGoxQk1Od0hwLVI1LTVxa0VEamVQb212MXRid3pYbndsNmw1TE1MX0RDTFZyeEZCYUlVOVVFRVVQSUpJeEZubnlib3piak1vdS1MS3hsUGJQdWYwaHNn"
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSlZvcm4wR2RweUViSzdDU3RTcGhXN0VDVGVjMzNXMWR1OXZkRkFlYlkwaHZYR2xVZ21JNGZISnZFZGVDRk5wYzRnbWVIN1dHVTFtNHFmNGllRFhDZ3RaQ3pEMlpFRU05eWQta2dVcXUwbnJOUHMtS1M2RHB0d29Zdk1XQjBGVG5tN0pFRUxhZlVXLVBmVDBLN3J6ZF9FdDJCRWE3WkZhMUd6OFl3YjgtMEJ4SDFibmhsUGRrdTV3X3hhUdIBxwFBVV95cUxQVjBoTlhiekRmLU5oTFdtV3hqcTZlUm1lcjRkLWU4b0JjSF9ydGotSXRKV3FwU0VpaTZONHVvenZhTEpEWHN4aVhIV3YtYjBLakE3QkdQdjNTdG13Wnh6bkRaRmREaDRnRVhZTUZWWHItVTVtc29hMFpYN0Mwei1SYVhnTlhnRFVRbXJxM0xFbDl3WHVsdVp2aW5GSmpLVjlDMFZpMUxhSHZuYU5FclBsVF9oOFFoOUdNUGx2TTFPeHduWElQM2ow"
     },
     {
       "id": "707b6e2a8544",
@@ -112,6 +136,18 @@
       "summary": "Adam Hamilton on how he plans to use his faith as senator &nbsp;&nbsp; NBC News",
       "title": "Adam Hamilton on how he plans to use his faith as senator",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLUNGWU81ZFJuX3Nma0dPa04waVJZT0hEVTBZRVNsNHdhdmx2QlFXMml5YXZZSkJLdS1ZMjk0LThFM2VnamhrTEtnTHpDNFZwdFBOWW43VmVvYUU5R3hseTVIWG1lTEJXNjRLRDJnUXZkQTZzVXZ1Q1c3anZtTDBPN1hzMHJIWk5SbDBTMDBOZ2hEUUpEdHZQdHIxYU84bGxGVmFablVteTJ3Z2M"
+    },
+    {
+      "id": "7347c062f312",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-08T16:00:31Z",
+      "source": "Yahoo",
+      "summary": "Adam Hamilton says Democratic blue wave could be \"one and done\" &nbsp;&nbsp; Yahoo",
+      "title": "Adam Hamilton says Democratic blue wave could be \"one and done\"",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOb0FZZGZ6V2RabmZweEpVemdvOURQbnVQNzlGcmx6MWlhcGhWelRWdE9BQS0wdk9VbFYxc2xoSVJkUWdFNUtNVElibGhYZUp1UllSOFUyNHMwNmhNQlZIT29Nc2cwVmkxelhhV1otdXFqSGFDMXVsV0dsZjB6V1NFQmI2UDdGVmUtWUdGQ184RmZfMkRQVXMyM1Z3"
     },
     {
       "id": "03b7a863e684",
@@ -1448,44 +1484,6 @@
       "summary": "Adam Hamilton wins US Senate race in Kansas: 'Let's love our neighbors as we love ourselves' &nbsp;&nbsp; Christian Post",
       "title": "Adam Hamilton wins US Senate race in Kansas: 'Let's love our neighbors as we love ourselves'",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVXQ1VXZnY3Y4U0xQSC00ZjV3MWpid0UtZFBZNHltUEJGRUFHcWxlenF4VW4xRlc4SnkwdXZZRnMxQV9RdHhoVmRXSldUM193TVlzTGhuLXVvWXhTcVRtbjFwcnc5MDlMNURObjRIbTBxNzN5djIyTDAzcTFyRDNtR3FxMVplVWc"
-    },
-    {
-      "id": "bf12053a7b1d",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T04:20:00Z",
-      "source": "NBC News",
-      "summary": "Democrat Adam Hamilton pulls off upset over GOP Sen. Roger Marshall in Kansas &nbsp;&nbsp; NBC News",
-      "title": "Democrat Adam Hamilton pulls off upset over GOP Sen. Roger Marshall in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPM0lscklFTFhCOTlVTnFELXZ0b3NDaVE5M3dvbXJtY0VieHA4WGdHYndGMjVhM2l6ZlVidkdhUkgwc0NOSGwtcHNJNHlPbTBtaG9yOXhjWUhFYzRnbndaT1o0dXB5WTAtWGxmTEs0dkpZcUF2WEhCLUNxMm4xM1lDenI5Nk9yWGJkUmFsNkJ1MlZxODk4WXQ2Ujh4Y29rZ25Nc1FmeGYySmF2Z3RRMkdUZkpoeE12NkRLWE11OUFIYw"
-    },
-    {
-      "id": "0aa1142c3e75",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T04:18:00Z",
-      "source": "Newsweek",
-      "summary": "Adam Hamilton Beats Roger Marshall, Creating Earthquake in Kansas &nbsp;&nbsp; Newsweek",
-      "title": "Adam Hamilton Beats Roger Marshall, Creating Earthquake in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcjZfcVdkOTh4d1pHUUc2MXRfNjJOM0xGUjhPYlBtUzc3dXhPZkNXWC14bWFRSXRWMHVnN3g2RUV2b1FzVmJJa3pDUUtab2pSRXVneF9sN05jMXBZV21Kek5tR3haekwwUHFCeFB5Q19SaE02Mzc0UjFLUzZraTZvMFhzQmRsMDFGM041UXp3"
-    },
-    {
-      "id": "f3759961f463",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T04:06:00Z",
-      "source": "AlterNet",
-      "summary": "GOP senator humiliated in big loss to Dem pastor Adam Hamilton in Kansas &nbsp;&nbsp; AlterNet",
-      "title": "GOP senator humiliated in big loss to Dem pastor Adam Hamilton in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE12NDctR3I4eXlnRC11REhndTRMek9WdFp2LVFwTjdpNjlnU3dnbXNaa09uUEVLakZiR3Q1dzh1M2EtYk8zTHlkb0pMeG0xcmFyZGF6cFBuOA"
     }
   ],
   "schema_version": 1
