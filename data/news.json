@@ -26,8 +26,56 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-08T23:52:01.752835Z",
+  "generated_at": "2026-11-09T05:14:39.678140Z",
   "items": [
+    {
+      "id": "881131474789",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T03:18:28Z",
+      "source": "FOX4KC.com",
+      "summary": "Kansas Senator-elect Adam Hamilton returns to church \u2013 FOX 4 Kansas City WDAF-TV | News, Weather, Sports &nbsp;&nbsp; FOX4KC.com",
+      "title": "Kansas Senator-elect Adam Hamilton returns to church \u2013 FOX 4 Kansas City WDAF-TV | News, Weather, Sports",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQU2pmVlZ0MVM3cUxUZ1kzeTFRVU13bUZlMXlOQndablNoLWYtdVpZYk8xQk0yYTU3ZjFMQlRHcnJWM1RLNnVpTDYzdlhRNlR5V3pqb1pSTHN3S2VBdUdpd3NIcmlMaWU3aDBpX0l5cDY1Q1NWck5mdjlaUXR6WWx6THl0anFSajJfTUVvamxTdkE"
+    },
+    {
+      "id": "068030c30a15",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T02:32:00Z",
+      "source": "Yahoo News Singapore",
+      "summary": "Kansas Senator-Elect Adam Hamilton Voices Concerns About Schumer As Majority Leader &nbsp;&nbsp; Yahoo News Singapore",
+      "title": "Kansas Senator-Elect Adam Hamilton Voices Concerns About Schumer As Majority Leader",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdm9rZHd1cjNHb004TUN1SzBwdGtpNnVVeWExX3VJRHp6VlM5dHBNZmJOX2NPZ1BZMTlWYU12VW9SNjdEVmdZa0tlcjRsWW42OUk2M2YtRU1UNzNaY3NhNGFnckliZHk4UHFjR3hhOHE3WVFyRFZpbFZMWGJuZ2R3cQ"
+    },
+    {
+      "id": "71b036fb786d",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T00:57:00Z",
+      "source": "Yahoo",
+      "summary": "Kansas senator-elect Adam Hamilton addresses Church of the Resurrection congregation after election &nbsp;&nbsp; Yahoo",
+      "title": "Kansas senator-elect Adam Hamilton addresses Church of the Resurrection congregation after election",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUnJPU29NNmp2UkNMYUQ0c1pvRDNfQ1NfNWZrb3JlOEdGcEowRmZwNzF3ZXYzX2Z1UE5maFRxM0FVUi0ybGoxQk1Od0hwLVI1LTVxa0VEamVQb212MXRid3pYbndsNmw1TE1MX0RDTFZyeEZCYUlVOVVFRVVQSUpJeEZubnlib3piak1vdS1MS3hsUGJQdWYwaHNn"
+    },
+    {
+      "id": "707b6e2a8544",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-08T23:50:37Z",
+      "source": "Johnson County Post",
+      "summary": "Adam Hamilton speaks to Resurrection congregation for first time after U.S. Senate win &nbsp;&nbsp; Johnson County Post",
+      "title": "Adam Hamilton speaks to Resurrection congregation for first time after U.S. Senate win",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNFVOMnFoRjdBNEk4SEtWdTA4cXJuQmFNbkxLY1N6WVJneUNIOFE1MXZ5akFHZm5yMjVhdHc5SHJ4UEloa0hfaFNZcGZMLVdvLWlHLXIwZEEyR3JHV3JhQklELXY3SlBmOWxKcGRlNTVXWENNN28yeWlGeTZnb1RDT2RMemcyVG5qYTg3Z0R5NE91cjg"
+    },
     {
       "id": "ab4b0d1221b6",
       "kind": "news",
@@ -136,19 +184,6 @@
       "summary": "Adam Hamilton on Trump's Iran war after historic Senate win &nbsp;&nbsp; KSNT 27 News",
       "title": "Adam Hamilton on Trump's Iran war after historic Senate win",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdEJrdWwxaWJJaS15LVM0U3RxZkllVDluT2xfc3RLN1d1S0dHTWZ2TkFNQ0dZZXpVM01pWGhKVkl0dXNyaGdCV25wWFFScTI4Tm54UWNNajVkUVR6LVRJX3J4aEpPanNxV1J3cjJWMlRLX080N0h1REJGYWtwTWxfZWpyYWwzWF8yVlFlZTdwVU1SamNuMENNU1owcw"
-    },
-    {
-      "id": "93e7c368a54a",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-08T00:00:00Z",
-      "source": "The New York Times",
-      "summary": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton &nbsp;&nbsp; The New York Times",
-      "title": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcVZUSXpwVzk4YWR0a1UwR3h0aFpLZ3h0MzNiOEZDako2TjVNcVNQSEw4UzdYSkJLbDAyQ2hVYXlScU9Jd0RsV0c0R1dwVW5XTG1uZ0FwS0JpSTlJNE50aDI5VUMxdHFFazZrSkpRT1hfUWtOZjJ6cmFWczVkT3JHWkZ5S3c1YmwtdGdMTlVYdXN4NVk"
     },
     {
       "id": "e90f2a7e3c51",
@@ -1451,43 +1486,6 @@
       "summary": "GOP senator humiliated in big loss to Dem pastor Adam Hamilton in Kansas &nbsp;&nbsp; AlterNet",
       "title": "GOP senator humiliated in big loss to Dem pastor Adam Hamilton in Kansas",
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE12NDctR3I4eXlnRC11REhndTRMek9WdFp2LVFwTjdpNjlnU3dnbXNaa09uUEVLakZiR3Q1dzh1M2EtYk8zTHlkb0pMeG0xcmFyZGF6cFBuOA"
-    },
-    {
-      "id": "d2e34e62c500",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T04:00:09Z",
-      "source": "KSNT politics",
-      "summary": "A majority of Kansas voters have selected pastor Adam Hamilton (D) to replace incumbent Senator Roger Marshall (R) in Washington D.C.",
-      "title": "Adam Hamilton projected to win bid for U.S. Senate seat in Kansas",
-      "url": "https://www.ksnt.com/elections/adam-hamilton-projected-to-win-bid-for-u-s-senate-seat-in-kansas"
-    },
-    {
-      "id": "21e8e1556540",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T03:59:00Z",
-      "source": "NBC4 WCMH-TV",
-      "summary": "BREAKING: Adam Hamilton projected to win Kansas Senate race over Roger Hamilton &nbsp;&nbsp; NBC4 WCMH-TV",
-      "title": "BREAKING: Adam Hamilton projected to win Kansas Senate race over Roger Hamilton",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNczlyVno0c19fWllmeG1sZ1J3cTdGUGRsang5V1ROX2xERXc2NVRmMXFURDE1emN6VW4yMGpvZHR3SE14dTlnX2g0dEpLOWEzRWNoN3lJTE1yaFhjb2pFaThRNjl3eGwzdzRyb2RDSFhFX01KdjI1NG84cjFzSmRTa0RVMERCWEYtbU94TkZsYjVBOWJDX2c5eVF1T0pIUS0xYzFIQmxnQzFxa1lqalMzbWJ0dDNRcDQ"
-    },
-    {
-      "id": "7da57cba0cef",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T03:51:00Z",
-      "source": "The Hill",
-      "summary": "Adam Hamilton flips Senate seat blue in Kansas &nbsp;&nbsp; The Hill",
-      "title": "Adam Hamilton flips Senate seat blue in Kansas",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOdFdjYmdzSTAtdFNxN25HVXRMdnlCenZZdXNDY3pRUVdlREV5dHlTcERfQTFMVnotWE1vWmk2YmlDTGVUWVR3Q3pKWnZDZEpUYkJlVGFmUTFFeWFjLW9GQVo1S2hBNVNsWmZhQnozSllJMy1XYklTVGM0dnd3dnpBTUVFekthdm1wWXhMQjFRUGJCdXNwY1MzVHlZNzgwSXdtSEpEbHFVaUNDcnpY0gGyAUFVX3lxTE85anp6X25qWkpiQWJnTjZ1bVFPY3FtajczTGQzazN1WVRWQWt1UjBndmYyOExVdnlxQ25IUTF1eUxkV21sTldFZHlieGxkc0xwRmkxSG9oWFhDQVhjOV9KQXhCWDE3UnRjN0d4YnNCaFIxUGYzSWhVSkpEVTlKdGZHZlplMllNT0VpWk9waHNzNENCZHhUaWs5Y2VUeF9yTWk4cHlUV1BkYWd5bVFfZldaYnc"
     }
   ],
   "schema_version": 1
