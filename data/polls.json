@@ -1,16 +1,9 @@
 {
   "aggregate": {
-    "as_of": "2026-11-09T00:00:00Z",
+    "as_of": "2026-11-10T00:00:00Z",
     "band": 2.82,
     "hamilton": 49.48,
     "history": [
-      {
-        "date": "2026-07-12",
-        "hamilton": 51.0,
-        "margin": -2.0,
-        "marshall": 49.0,
-        "n_polls": 1
-      },
       {
         "date": "2026-07-13",
         "hamilton": 43.01,
@@ -850,6 +843,13 @@
         "margin": -4.17,
         "marshall": 45.31,
         "n_polls": 16
+      },
+      {
+        "date": "2026-11-10",
+        "hamilton": 49.48,
+        "margin": -4.17,
+        "marshall": 45.31,
+        "n_polls": 16
       }
     ],
     "leader": "hamilton",
@@ -867,7 +867,7 @@
       "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas"
     }
   ],
-  "generated_at": "2026-11-09T23:28:04.328292Z",
+  "generated_at": "2026-11-10T04:46:55.580280Z",
   "polls": [
     {
       "added_at": "2026-11-03T01:45:58.374256Z",
