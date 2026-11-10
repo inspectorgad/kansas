@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-10T04:52:22.935640Z",
+  "generated_at": "2026-11-10T13:21:18.551795Z",
   "items": [
     {
       "id": "224e257985d1",
@@ -41,6 +41,30 @@
       "url": "https://kansasreflector.com/2026/11/09/repub/the-us-senates-11-democratic-freshmen-including-adam-hamilton-arrive-at-the-capitol"
     },
     {
+      "id": "e90f2a7e3c51",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T21:53:49Z",
+      "source": "NBC News",
+      "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
+      "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VLXM4M0xvcmJZMFNweWd5SGQ5MGg5OE9hMFBqLTN0TE1GakUwSGhfZFhpYUVILXFrMGFHSVFVTVE5QkFxd3lMZWhqY05wT2xCazdrSnNIZFQyc21LOWdDV2g1SW5DS0tQUzJSWVEwOHlCRnBYUUtTQw"
+    },
+    {
+      "id": "c6fd6c695a8d",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T21:52:02Z",
+      "source": "Facebook",
+      "summary": "Seward County, Kansas, swung left to the Democratic Senate candidate Adam Hamilton in last week\u2019s midterm elections. After ICE agents raided areas near meatpacking plants and dairy farms in the region in late September, voter registration increased. Man &nbsp;&nbsp; Facebook",
+      "title": "Seward County, Kansas, swung left to the Democratic Senate candidate Adam Hamilton in last week\u2019s midterm elections. After ICE agents raided areas near meatpacking plants and dairy farms in the region in late September, voter registration increased. Man",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPVmpvWTJkd2J3dTFXRmhvTjNWMXZWam9ZV2VFdU9qSk1ua3NhSkN5aFF3QTVkZ1JlNjBXcVpqak1KZzFfcmdQTGlMTnNCZTkxRjJxVlB3em0zYUZKamZpa284bUh5SXlZQ3hWNGhCMkZVT1d6SHhTcDllb2lHNksySXZoTVAzdDVrQ0xfdWZyX1hLWHRoeTNOS1NYSzRKMlhvVjR0NnRKVkhPWWg1T0pTUzd1SnFGdy1FNWdvQzZTam1JbkpYNXBkQXZJVVNIeGV5N1R3"
+    },
+    {
       "id": "02a5277bed12",
       "kind": "news",
       "mentions": [
@@ -53,18 +77,6 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNUEtlRkFrdUlKV1p4blJldTV0LUotcVNIRWpZN3pXSTJKUHVZZWJuZy0zblUtSm1vNmhhb2h2MXZLVWlXRlVkT0MzXzlpaHVDWEJuc0VRaFpxWkVkMXJLd2N3MjZvTVhTMmk4NlM5Y0NBV1pJQUdiS2c1VTgxclo5elhXMGNyN0VKQjhzaE1nNHVKYzZudEM5cGcyaHI5aDJUSEprVEo1Nk1sLXdxaHZSdWxaUzY1SldreENKSG5WMlNCZ0c1eHY3eV9pRHhGQ3dpZVphMA"
     },
     {
-      "id": "e90f2a7e3c51",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-09T21:05:43Z",
-      "source": "NBC News",
-      "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
-      "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VLXM4M0xvcmJZMFNweWd5SGQ5MGg5OE9hMFBqLTN0TE1GakUwSGhfZFhpYUVILXFrMGFHSVFVTVE5QkFxd3lMZWhqY05wT2xCazdrSnNIZFQyc21LOWdDV2g1SW5DS0tQUzJSWVEwOHlCRnBYUUtTQw"
-    },
-    {
       "id": "675f6085323a",
       "kind": "news",
       "mentions": [
@@ -75,6 +87,18 @@
       "summary": "Sen.-elect Adam Hamilton returns to pulpit after historic Kansas election win.",
       "title": "Kansas Sen.-elect Adam Hamilton addresses congregation before leaving for Washington",
       "url": "https://www.kwch.com/2026/11/09/kansas-sen-elect-adam-hamilton-addresses-congregation-before-leaving-washington"
+    },
+    {
+      "id": "7717b665e047",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T17:52:58Z",
+      "source": "KSHB 41 Kansas City",
+      "summary": "Sen.-elect Adam Hamilton calls for 'fresh, new ideas' for Senate leadership &nbsp;&nbsp; KSHB 41 Kansas City",
+      "title": "Sen.-elect Adam Hamilton calls for 'fresh, new ideas' for Senate leadership",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYk8zY2gwQzU3UHVVTUtmaWlwSUs4dGRxczdhYkF1YkFMNk1XWGhIQUVxX1l5bTQ3R2NhV000bGdDUEZTMmROdmVZVUtjdm1uV2RUX05OXzRxODJMckk1eExaTldJNlhUcXNicHh2bjA2aHlfXzUzLXBQSW9iQUJyTkV1WnNCT1dJeTdLeGt0ZWhMRzhkRkZ3WEs5UktPSzZON29YdnMySFl0Tjl1"
     },
     {
       "id": "05e5e5edf012",
@@ -99,18 +123,6 @@
       "summary": "Blue wave wasn\u2019t \u2018rousing endorsement of Democrats\u2019: Adam Hamilton &nbsp;&nbsp; Washington Examiner",
       "title": "Blue wave wasn\u2019t \u2018rousing endorsement of Democrats\u2019: Adam Hamilton",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNejA1WWl0cUlDNmtBYmtDT1RHOEJYUWZNNE5Kd1htbEN6ZWY3TEtScm02TEt3QVl0T1M1VTBKUDlvRHRhU2lxb3JrQktFOG5vTjZkZWdNS3JNakprR3duT0NGbHhseUlBZk5vZG1tYVU3MXRlMWQ2MzdFV05SeVZIeTctMWd3aEFOTUFIdVdXb0NQa19xdGJHNUFKMEhCczRwR0ZBSS1aUXZ1a21lMzZmNHRjQQ"
-    },
-    {
-      "id": "7717b665e047",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-09T15:59:00Z",
-      "source": "KSHB 41 Kansas City",
-      "summary": "Sen.-elect Adam Hamilton calls for 'fresh, new ideas' for Senate leadership &nbsp;&nbsp; KSHB 41 Kansas City",
-      "title": "Sen.-elect Adam Hamilton calls for 'fresh, new ideas' for Senate leadership",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYk8zY2gwQzU3UHVVTUtmaWlwSUs4dGRxczdhYkF1YkFMNk1XWGhIQUVxX1l5bTQ3R2NhV000bGdDUEZTMmROdmVZVUtjdm1uV2RUX05OXzRxODJMckk1eExaTldJNlhUcXNicHh2bjA2aHlfXzUzLXBQSW9iQUJyTkV1WnNCT1dJeTdLeGt0ZWhMRzhkRkZ3WEs5UktPSzZON29YdnMySFl0Tjl1"
     },
     {
       "id": "1bf18f093890",
@@ -1351,19 +1363,6 @@
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeUFXMWlRZjFVREp0YU81WkhWTDN2Y2ZRUlppc1lnX3hpMWc4cWlfNndCcnFCWkx1aVNVVURYc3RWVU01Y0VvMFFFVTcyN210eTNRZk9QUkJMSUdjWUpqU3ZtZU1fcVBuTkxRNjZiYnNubzFZZm9Oc1NPbzlWMUFKUU9TTXlNZFlCdDlvR3pMb2FTMDBGRFpKR0d0RGM3TEtLdHNoVU1RRHg2ZGs3TEFLNmYxYXEtNTNfTXIzaQ"
     },
     {
-      "id": "3222be938483",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-04T04:42:11Z",
-      "source": "KOAM News Now",
-      "summary": "Adam Hamilton unseats Roger Marshall in Kansas Senate race &nbsp;&nbsp; KOAM News Now",
-      "title": "Adam Hamilton unseats Roger Marshall in Kansas Senate race",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQWkJvSXpvZWN0ZVZjb2w4YW5XNlRkNTdPRHFCdlJ2ZVl5b0o5cGp5dFRIeDQybS0ydExRZkM5RmwzSEJqX21UYXpwV0xETC1uR2hHWXJnTHZmbjMzNW55dXFVOUZ6Z1hBaWlRRVRBZFRpekloTk96Zkh3Z1hLQ2Vza2F3cmlvc2YxeWRjLXFSRmNwRWFyVmhqQzhpbzF5WGh2NUU4Q0pUcnJkdm9rd2hNVnpyRF9LOGZmMUZ3RzU5V1pQMjhNR05pZ2NHZkRsQ1QxSWcxMjRqRndmT1dpcktiR0pOcW95UQ"
-    },
-    {
       "id": "ce010c7f87bb",
       "kind": "news",
       "mentions": [
@@ -1410,6 +1409,19 @@
       "summary": "Democrat Adam Hamilton flips Kansas\u2019 Senate seat &nbsp;&nbsp; Daily Kos",
       "title": "Democrat Adam Hamilton flips Kansas\u2019 Senate seat",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYVhQdGhQdjF1elBIUkVPUlVvcXZhdjFMX3h1TWNiOFIwbUI0bDR2N2x5TG5iOHl2UU5XYXJDVW9Sb2tpTkt2SDV3cUt5SnhRelJWeGVwVnJ3SXc3VVlGQXZVdjhkOVkxOVVnRmdnUVItSG1vUVVQbFB5MkhQZi0yOFJEWThwaU1iUHI3dDBvR0IzSG83UUFCOEV6Q2V4c2xrNk5aNVZ2a0NRMC1ObXlvSTBXTngtQkdZ"
+    },
+    {
+      "id": "3222be938483",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-04T04:31:51Z",
+      "source": "KOAM News Now",
+      "summary": "Adam Hamilton unseats Roger Marshall in Kansas Senate race &nbsp;&nbsp; KOAM News Now",
+      "title": "Adam Hamilton unseats Roger Marshall in Kansas Senate race",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQWkJvSXpvZWN0ZVZjb2w4YW5XNlRkNTdPRHFCdlJ2ZVl5b0o5cGp5dFRIeDQybS0ydExRZkM5RmwzSEJqX21UYXpwV0xETC1uR2hHWXJnTHZmbjMzNW55dXFVOUZ6Z1hBaWlRRVRBZFRpekloTk96Zkh3Z1hLQ2Vza2F3cmlvc2YxeWRjLXFSRmNwRWFyVmhqQzhpbzF5WGh2NUU4Q0pUcnJkdm9rd2hNVnpyRF9LOGZmMUZ3RzU5V1pQMjhNR05pZ2NHZkRsQ1QxSWcxMjRqRndmT1dpcktiR0pOcW95UQ"
     },
     {
       "id": "360ed84b1ea6",
@@ -1470,18 +1482,6 @@
       "summary": "Democrat Adam Hamilton projected to win Senate race in Kansas &nbsp;&nbsp; NBC News",
       "title": "Democrat Adam Hamilton projected to win Senate race in Kansas",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPM0k3SlBPN3RuMUZQbEQ1Sjg2THFSSERNaUs0THpzaTBBR0pFTTlWb0xJTkJ3NHZwODN1emhGSFRDdGpjLW1oMy1yYTVUSFJiS3pxVmlfMGZYdjVuam91UjdLX0ZCSHRBbnVtZ0JHZko4UTg3WEd3RVdNYmFLSkRjcFlQVTF6SUFsdXVFaHQ3b0oxM0NnR1NyVzQzT2M0cHBWNjdUbnA2UQ"
-    },
-    {
-      "id": "e5b6febb74d2",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T04:25:43Z",
-      "source": "KWCH",
-      "summary": "For the first time since 1932, Kansans elect a Democrat to the U.S. Senate as Adam Hamilton wins.",
-      "title": "Hamilton makes history: Kansas Democrat wins U.S. Senate race for first time in nearly a century",
-      "url": "https://www.kwch.com/2026/11/04/hamilton-makes-history-kansas-democrat-wins-us-senate-race-first-time-nearly-century"
     }
   ],
   "schema_version": 1

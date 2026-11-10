@@ -1978,7 +1978,7 @@
       "date": "2026-10-29",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/518/202610299945299518/202610299945299518.pdf"
+      "url": "https://docquery.fec.gov/pdf/354/202610299945297354/202610299945297354.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -1986,7 +1986,7 @@
       "date": "2026-10-29",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/354/202610299945297354/202610299945297354.pdf"
+      "url": "https://docquery.fec.gov/pdf/518/202610299945299518/202610299945299518.pdf"
     },
     {
       "committee_id": "C00948901",
@@ -2056,20 +2056,20 @@
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
-      "date": "2026-10-22",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
-    },
-    {
-      "committee_id": "C00948901",
-      "committee_name": "HAMILTON FOR KANSAS",
       "coverage_end_date": "2026-10-14",
       "date": "2026-10-22",
       "form_type": "F3",
       "report_type": "PRE-GENERAL",
       "total_receipts": 5641333.41,
       "url": "https://docquery.fec.gov/pdf/351/202610229945144351/202610229945144351.pdf"
+    },
+    {
+      "committee_id": "C00948901",
+      "committee_name": "HAMILTON FOR KANSAS",
+      "date": "2026-10-22",
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/190/202610229945143190/202610229945143190.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2150,10 +2150,10 @@
       "url": "https://docquery.fec.gov/pdf/667/202610139908689667/202610139908689667.pdf"
     }
   ],
-  "generated_at": "2026-11-10T04:52:18.948616Z",
+  "generated_at": "2026-11-10T13:21:14.274498Z",
   "outside_spending": {
     "opposing": {
-      "hamilton": 32414491.87,
+      "hamilton": 34416215.87,
       "marshall": 55874875.5
     },
     "recent": [
@@ -2519,7 +2519,7 @@
       }
     ],
     "supporting": {
-      "hamilton": 12026158.87,
+      "hamilton": 12028921.55,
       "marshall": 4002934.58
     },
     "top_spenders": [
@@ -2563,7 +2563,7 @@
         "supports": "hamilton"
       },
       {
-        "amount": 4388356.5,
+        "amount": 6390080.5,
         "committee_id": "C00957928",
         "committee_name": "MAIN STREET FUND",
         "opposes": "hamilton"
@@ -2618,7 +2618,7 @@
         "opposes": "hamilton"
       }
     ],
-    "total": 104318460.82
+    "total": 106322947.5
   },
   "schema_version": 1
 }
