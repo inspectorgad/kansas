@@ -9,10 +9,6 @@
       "url": "https://www.kcur.org/politics-elections-and-government.rss"
     },
     {
-      "name": "KWCH",
-      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
-    },
-    {
       "name": "KSNT politics",
       "url": "https://www.ksnt.com/news/politics/feed/"
     },
@@ -22,12 +18,28 @@
       "url": "https://news.google.com/rss/search?q=%22Kansas+Senate%22+OR+%22Roger+Marshall%22+OR+%22Adam+Hamilton%22&hl=en-US&gl=US&ceid=US:en"
     },
     {
+      "name": "KWCH",
+      "url": "https://www.kwch.com/arc/outboundfeeds/rss/category/news/"
+    },
+    {
       "name": "KSNT",
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-10T13:21:18.551795Z",
+  "generated_at": "2026-11-10T20:34:49.868943Z",
   "items": [
+    {
+      "id": "e90f2a7e3c51",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-10T17:55:43Z",
+      "source": "NBC News",
+      "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
+      "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VLXM4M0xvcmJZMFNweWd5SGQ5MGg5OE9hMFBqLTN0TE1GakUwSGhfZFhpYUVILXFrMGFHSVFVTVE5QkFxd3lMZWhqY05wT2xCazdrSnNIZFQyc21LOWdDV2g1SW5DS0tQUzJSWVEwOHlCRnBYUUtTQw"
+    },
     {
       "id": "224e257985d1",
       "kind": "news",
@@ -39,18 +51,6 @@
       "summary": "WASHINGTON \u2014 Senate Minority Leader Chuck Schumer Monday welcomed 11 newly elected Senate Democrats at the U.S. Capitol, following midterm elections in which his party flipped both chambers in Congress.&#160; \u201cLast week the American people put Donald Trump and the GOP on blast,\u201d Schumer, a New York Democrat, said on the Senate floor. \u201cAmericans pulverized [&#8230;]",
       "title": "The US Senate\u2019s 11 Democratic freshmen, including Adam Hamilton, arrive at the Capitol",
       "url": "https://kansasreflector.com/2026/11/09/repub/the-us-senates-11-democratic-freshmen-including-adam-hamilton-arrive-at-the-capitol"
-    },
-    {
-      "id": "e90f2a7e3c51",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-09T21:53:49Z",
-      "source": "NBC News",
-      "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
-      "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VLXM4M0xvcmJZMFNweWd5SGQ5MGg5OE9hMFBqLTN0TE1GakUwSGhfZFhpYUVILXFrMGFHSVFVTVE5QkFxd3lMZWhqY05wT2xCazdrSnNIZFQyc21LOWdDV2g1SW5DS0tQUzJSWVEwOHlCRnBYUUtTQw"
     },
     {
       "id": "c6fd6c695a8d",
@@ -77,16 +77,16 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNUEtlRkFrdUlKV1p4blJldTV0LUotcVNIRWpZN3pXSTJKUHVZZWJuZy0zblUtSm1vNmhhb2h2MXZLVWlXRlVkT0MzXzlpaHVDWEJuc0VRaFpxWkVkMXJLd2N3MjZvTVhTMmk4NlM5Y0NBV1pJQUdiS2c1VTgxclo5elhXMGNyN0VKQjhzaE1nNHVKYzZudEM5cGcyaHI5aDJUSEprVEo1Nk1sLXdxaHZSdWxaUzY1SldreENKSG5WMlNCZ0c1eHY3eV9pRHhGQ3dpZVphMA"
     },
     {
-      "id": "675f6085323a",
+      "id": "958df897c04d",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-09T17:58:35Z",
-      "source": "KWCH",
-      "summary": "Sen.-elect Adam Hamilton returns to pulpit after historic Kansas election win.",
+      "published_at": "2026-11-09T17:58:00Z",
+      "source": "KCTV",
+      "summary": "Kansas Sen.-elect Adam Hamilton addresses congregation before leaving for Washington &nbsp;&nbsp; KCTV",
       "title": "Kansas Sen.-elect Adam Hamilton addresses congregation before leaving for Washington",
-      "url": "https://www.kwch.com/2026/11/09/kansas-sen-elect-adam-hamilton-addresses-congregation-before-leaving-washington"
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZmJVRTlxaV93S3A5dXBJQ2tUbXRETENnMEx6TTBqUzVjWUN5am5FVmVGZW0tcjJqWXZabVdweG1OTUtuVW9qUFVzdFJCcnA5MmhxMTYxVngwcWNlbzdEMG9xZXYxM1BfSkMtQkNPR0trQ3QxU2h5MFhSOU12QUZ5d0NzZ0NUaWJlZ2s0TzZhUmhmYVk3RmJYRmo0bWZPMWVDQlZUSHhpMFNaM2psM1Rib1F2Z9IBxwFBVV95cUxOWjd6eURUdUxESFByZkpHeXVjVHROV19Pb0hpUnpUSXJSUU5xVlJ4bHdYc0JWYW5PclBxQkRpdC0wZFhvWlI0VkE4UjZlTjdGZ1p0enJVcGtlb0ttSEszV0xrQVp1ZVotV2hVd29obzI1YjZDeFpiYWl0ZUpEOGl0WGFMTXQxX0xEZHlTcW5kamlnUmNTOEQzRlhzQnZtc2JXc2g3b0NJS2h5X21DYmg0RllJckx5QW5XUDVHMTFBWUNBU3NET3VV"
     },
     {
       "id": "7717b665e047",
@@ -282,18 +282,6 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZGx5YXJFcmg4ZWg4NDY1TXNZS2VkaFhEYUh6SEw4ajFpQldTOFpmMFZQRzlFcFhTeDdCNmNIS2J1N015YmxpZm1VMHU5RDVERjZjaURrc3dDU3dGVkFaZUNXSjFCdDdKQ2ZTMWZjX1lqZ0pVYVd4UFBkcGVyb1F0dF9DUjJ3MXVQSHlpYkR4R1dTVUh6X2pkQ29SZXZhdGNOdENKM0ZMbk01Y1NhTEE"
     },
     {
-      "id": "554aaa214672",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-08T15:25:08Z",
-      "source": "NBC News",
-      "summary": "Adam Hamilton on how faith will shape \u2018who I am in Washington D.C.\u2019 as Kansas\u2019 senator &nbsp;&nbsp; NBC News",
-      "title": "Adam Hamilton on how faith will shape \u2018who I am in Washington D.C.\u2019 as Kansas\u2019 senator",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNN0x1THRQT2V3SGFVeHpuYTdKMkpvYnZURTRnLVhObWVNejZaQmJTd2pFd09uX3I1cHRZdWp1SHNXaFFXcnBWTmVXbklBVU1HV19jV0tRX3kxX2VkYUNacXdLYmNid1A5S01abDVobUxwT21sM1pUZEFJaGRjNDdxckhGcDJESmdkOVk0Z3V5bkxBb0FKUnRKbDNoX0NzTGRNelMwajY0YUNwb2o0WG54cUZyaVNVNGRoMjV3Z0hidE1JQ2J0cHprVGlfMGc3U0ZhTGdtWER2MA"
-    },
-    {
       "id": "897dc5bb9912",
       "kind": "news",
       "mentions": [
@@ -304,6 +292,18 @@
       "summary": "Sen.-elect Adam Hamilton says he\u2019d be disappointed if Democrats focus on investigating Trump &nbsp;&nbsp; NBC News",
       "title": "Sen.-elect Adam Hamilton says he\u2019d be disappointed if Democrats focus on investigating Trump",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeWliUUVQLUIwblJESW9meTA3OGMyTnB1U1NXSmRVTHdhUkY1WndiZ2EybFFEYXNpSFp6cVdZcGxBSTFreFhUc2l4MUxCU3ZlZGxwaXhtU093d0hJWW5BRUwzSTY5dXdHWHVqQ1pORE5UQ2FwaGt4SWs5cjhydHZ2TDJLZFhuS1RzSVhNVFB0UXQ5SDZ4d0c2TzVYY3RET2RQMXAyV0hWLUxVVVZFYVRfVkhGeGp5bmthOFBOZFFNOA"
+    },
+    {
+      "id": "554aaa214672",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-08T14:17:44Z",
+      "source": "NBC News",
+      "summary": "Adam Hamilton on how faith will shape \u2018who I am in Washington D.C.\u2019 as Kansas\u2019 senator &nbsp;&nbsp; NBC News",
+      "title": "Adam Hamilton on how faith will shape \u2018who I am in Washington D.C.\u2019 as Kansas\u2019 senator",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNN0x1THRQT2V3SGFVeHpuYTdKMkpvYnZURTRnLVhObWVNejZaQmJTd2pFd09uX3I1cHRZdWp1SHNXaFFXcnBWTmVXbklBVU1HV19jV0tRX3kxX2VkYUNacXdLYmNid1A5S01abDVobUxwT21sM1pUZEFJaGRjNDdxckhGcDJESmdkOVk0Z3V5bkxBb0FKUnRKbDNoX0NzTGRNelMwajY0YUNwb2o0WG54cUZyaVNVNGRoMjV3Z0hidE1JQ2J0cHprVGlfMGc3U0ZhTGdtWER2MA"
     },
     {
       "id": "bbe18fa10315",
