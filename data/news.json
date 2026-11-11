@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-10T20:34:49.868943Z",
+  "generated_at": "2026-11-11T00:57:34.619110Z",
   "items": [
     {
       "id": "e90f2a7e3c51",
@@ -34,7 +34,7 @@
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-10T17:55:43Z",
+      "published_at": "2026-11-10T21:18:09Z",
       "source": "NBC News",
       "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
       "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
@@ -366,6 +366,18 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNM3Q0bWlhZVREVFh5QW5KWE02aF96TVdsdnNHOGhUbnc0YUgyRlBIcXhydXRKTndhQi1qd1pYczV0bFdqS2Q2cHV4bC1BX0VqUHVITjJBRFNGeUlLTnJkRkxNLU1KaE5uNThZdjJOMkRXVEc4ZkR3MDVKU2N6bjUxN0h5QVprcVlkcEFGd1JvM29hV1VhWWpOLVk5WEpabnRsOWVoOS1sVHR4bzVJaEVPYXFqY1hwZE9o0gHMAUFVX3lxTE9jdkJOT3d5Yno0cWszbXpZSHVzVlhKX2NadlVzUmYyVHdpWTZlbE51VVJkX2IwUFV0NUdZNlZVWkZJV0Q0YlowNUMwbnM3d3hGYndJeUI1ZWppUVpaeG5RTzNBWTZfSm9WOXhxTDVycnQwcXVzVHlGUXc5LXI2UnVvcDVxbVQ0MHNNOUZNWm9PRm9QZjRlMFFoYUNsSnJZc3ZEWUxrRDBHVWw1YVoxN2hZV3RFS1RSaHhqVDN3eElCc2pQVHJYMEYydXJ4eQ"
     },
     {
+      "id": "3498a9ef4a65",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-06T03:00:18Z",
+      "source": "Salina Post",
+      "summary": "Two Kansas counties gave Adam Hamilton advantage in Senate race &nbsp;&nbsp; Salina Post",
+      "title": "Two Kansas counties gave Adam Hamilton advantage in Senate race",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5XdHZLUzRFR2ExV08wZkZNRVFKT0NVOUhzSUJTdTJnRGhRU2c0VDRvaENlSmE1SWlISlh1ZGtPNXJyR2YweGNOaWZueS1NV0MweUh2YjIwNVc2eU14MTdjQ1JqUnplRU9Tall6ampSQUs0R00"
+    },
+    {
       "id": "4460ebb2cac4",
       "kind": "news",
       "mentions": [
@@ -448,18 +460,6 @@
       "summary": "Adam Hamilton to Remain Senior Pastor after Historic Kansas Senate Victory &nbsp;&nbsp; Crosswalk.com",
       "title": "Adam Hamilton to Remain Senior Pastor after Historic Kansas Senate Victory",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOZ2NBUTlUTmNXZXRDNG13Sk51RndzbVlscGtMbXhnUkxSZnRTRWljdEE0YVM0QVFsN2pXVFFEN1p2dmtHVF9jRERGQ1ZzbjRWcWJXMUVsT0NURXFNTTJoMi1Db1I5bmpRal8xZDhmZy1GaHl4UG9TSXFjSmR6VTNMVU1MUW1XbV9fUjNHNWEwSTktTWZIZ0ZxOUxSYnNtQ0tyVXd4RHV3c1hXbF8xR2U0WGlhTjZGRHpUNmY0ZS1qa0IwdW56bk9kV0FrV0QxMV9sMXZDRVR4WkJabzV1NkVwTg"
-    },
-    {
-      "id": "1561b8975c5a",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-05T19:03:52Z",
-      "source": "JC Post",
-      "summary": "Two Kansas counties gave Adam Hamilton advantage in Senate race &nbsp;&nbsp; JC Post",
-      "title": "Two Kansas counties gave Adam Hamilton advantage in Senate race",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5HdXQ3VTlrUDc0WTdhaExITFE1NTBFOXZkNjhqanpQVkNMOXFyRUg0Y1pQRGlPYU1ScVRpSEkzNUtRM3dsLW1DbFppZ2NWdXdoNXlKZ3ZRTVBFTXdyUUVwaWdKUlQ5eUVnaGlCNzNR"
     },
     {
       "id": "3b610a2e0500",
