@@ -26,8 +26,21 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-12T03:12:03.075460Z",
+  "generated_at": "2026-11-12T11:33:25.614367Z",
   "items": [
+    {
+      "id": "05ed3b5d81f3",
+      "kind": "news",
+      "mentions": [
+        "hamilton",
+        "marshall"
+      ],
+      "published_at": "2026-11-12T09:33:13Z",
+      "source": "Kansas Reflector",
+      "summary": "During his reelection campaign, Republican U.S. Sen. Roger Marshall trumpeted his role writing a new farm bill. It was minimal and apparently not enough. Democratic Sen.-elect Adam Hamilton said he would have voted to advance the Senate\u2019s bill. Kansas politics rewards farm largesse and punishes parsimony \u2014 Sunflower State bipartisanship. Our congressional delegation fronts every [&#8230;]",
+      "title": "Opinion: Will a new farm bill arrive in Kansas farmers\u2019 stockings this holiday season? Don\u2019t count on it.",
+      "url": "https://kansasreflector.com/2026/11/12/will-a-new-farm-bill-arrive-in-kansas-farmers-stockings-this-holiday-season-dont-count-on-it"
+    },
     {
       "id": "e90f2a7e3c51",
       "kind": "news",
@@ -306,6 +319,18 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeWliUUVQLUIwblJESW9meTA3OGMyTnB1U1NXSmRVTHdhUkY1WndiZ2EybFFEYXNpSFp6cVdZcGxBSTFreFhUc2l4MUxCU3ZlZGxwaXhtU093d0hJWW5BRUwzSTY5dXdHWHVqQ1pORE5UQ2FwaGt4SWs5cjhydHZ2TDJLZFhuS1RzSVhNVFB0UXQ5SDZ4d0c2TzVYY3RET2RQMXAyV0hWLUxVVVZFYVRfVkhGeGp5bmthOFBOZFFNOA"
     },
     {
+      "id": "57ffd6b408ce",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-08T14:30:34Z",
+      "source": "X",
+      "summary": "Sen.-elect Adam Hamilton on Trump making Stephen Miller chief of staff: \"I'm actually surprised that he did that, because the election was a repudiation of so much of what Trump has stood for and so much of that was designed by Stephen Miller ... it's concerni &nbsp;&nbsp; X",
+      "title": "Sen.-elect Adam Hamilton on Trump making Stephen Miller chief of staff: \"I'm actually surprised that he did that, because the election was a repudiation of so much of what Trump has stood for and so much of that was designed by Stephen Miller ... it's concerni",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB3UWcyXzhudFhOV0E2MWptaDJqWm1zT0xxSFd1eDQzYTlCdEQwRGl2Ql9pbXpIODFRNUQwQ1FYbWtRMTBJMDhZMkRkT0tfSnp0ZmZ4MjF4T0ZNdTJmR3p5YUUzYmsyNEE"
+    },
+    {
       "id": "554aaa214672",
       "kind": "news",
       "mentions": [
@@ -354,6 +379,18 @@
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9wTVdxa0FYY1FHZEJTcWQtT3gwODJoU19OUzJPdENxd0JjWE9uT3Nmb0JzVmNOeDNDckNrQjR0LXlMbGltVUtKalVHamRNZk9SamF2d3MxRVRBVDZ1bTB6dmxUT1o3UThEZlhTWFpwc1EtbGg1a3ZraVpOVDU"
     },
     {
+      "id": "32a875290515",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-06T17:52:09Z",
+      "source": "Yahoo",
+      "summary": "How Adam Hamilton used \u2018decency and kindness\" to deliver a historic Kansas Senate win &nbsp;&nbsp; Yahoo",
+      "title": "How Adam Hamilton used \u2018decency and kindness\" to deliver a historic Kansas Senate win",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQnBVd3lqTXp3NEdYRGRkNWdnV3RYaDRoTTctSG9MblVZR25VX3pCekpDMmtQbWZTOXdxeXBTcnNRUXRoU2hDWlVEV0MwT214V1pVVDAwbXJnNGNJSkRLMm1SNzEySWNsa2M1TTBmX3JoZ09IT2FzYU9wSlQzbFRtdXQxTDluMTBEYlBCdg"
+    },
+    {
       "id": "fc7430604ed9",
       "kind": "news",
       "mentions": [
@@ -364,18 +401,6 @@
       "summary": "OPINION: Adam Hamilton may not be the perfect Democrat, but he's perfect for Kansas &nbsp;&nbsp; The University Daily Kansan",
       "title": "OPINION: Adam Hamilton may not be the perfect Democrat, but he's perfect for Kansas",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxObmpSOFZjdVFkZGFkZ0VzR3hmVHlZamNPU2tYc1psVGo4WWxqc0RObmRPMFExSU9fbWplZ0loQVFvaFc5OTB3cDBtNk9NdEVfQUZOMVNWT09Oa08zUTdxNHBiOHl4UHFqQ0k5Q19mcHFfRFdYZmhCTEZweUdwVDB4ZVdFemZValJzeHNWdVN2Tl9zTEVQQ2lMTHBfaFdtbzlLWU1QczF2UDFZaHZNcWo4NWVwaHc3NG45Y0ZyaGtCRFVWRlhQdUtNLTJsdVB0M2ZVWkp3MkJsejhCWUZwQ29mVGY1WUFRWU5Gb1V2SkJLUmt0YXc"
-    },
-    {
-      "id": "da5a67b08b33",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-06T12:06:07Z",
-      "source": "MS NOW",
-      "summary": "How Adam Hamilton used \u2018decency and kindness\" to deliver a historic Kansas Senate win &nbsp;&nbsp; MS NOW",
-      "title": "How Adam Hamilton used \u2018decency and kindness\" to deliver a historic Kansas Senate win",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNa1RhRTkzd3VyNEZWZGh3eU8zQU1FOW02TG1YTC1Ya0JvUDNoTFNHM2xJUjZHSWNvNmZCY1V6dDRpRW5NLTc0Vi1rTmNTb3J6TnFYZ181akZhRWdjN3plOWtubFFsRHdjdlVfQ0lyQ0RzbnVQTlhOejhBLWQ5ZWN3RkZDQ0FCWHZCVFBVVVB6aVR1V25XWVBrVG50cXhyeGtXUE9GWXA1TVRQdUthNWpLUEQwR0hIVjhCczE5dnM4NVAyVGZoQkpnV3ppWW5FM2M"
     },
     {
       "id": "c7cbcfa56eee",
@@ -508,18 +533,6 @@
       "summary": "The Methodist pastor who flipped a Republican Senate seat says voters want more than political change. Adam Hamilton tells NPR what he heard from Kansans about decency, faith and finding common ground.",
       "title": "Kansas just elected a Democrat. His message to Washington? Be decent",
       "url": "https://www.kcur.org/politics-elections-and-government/2026-11-04/kansas-just-elected-a-democrat-his-message-to-washington-be-decent"
-    },
-    {
-      "id": "36a9c57732b4",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-05T08:00:00Z",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "summary": "Democratic Senate candidate Adam Hamilton says he's fighting for the 'rights of all people' &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
-      "title": "Democratic Senate candidate Adam Hamilton says he's fighting for the 'rights of all people'",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVm1HSTcxeW9sLVFFQVE5cHJUalJBb3BQYTNHM3NWa1dhZnU0OHIteHV0bFMwd3RxNlJBclUwU054N2c0bGp3S1ZPMzUtaExsa29NbHc1OVFoYjZKbUNpaGdFQlNoVDI2cDVGdkp6ZlUtZXAyTC1UVWNFTVdicGhmc2U5Y0s5VmRzQmVsb3Z1RTBaVlNzZHlFTzVEb0V2OF9IS1JqMXY4NzR1bFdodDdGNFlR0gG3AUFVX3lxTE1RaXJpdHNmNDllWUs2aTE0RnFlS2VQUFBybUhBNVRwSHdqbWg4QUo2ZXBnWHVwMDJYMUU5RGVnR2EtNjg4NEJNQXFzSU1RdnRicHlpYXg3cnJlS19nT0hxWkx5SThyaXY0T0VBdUJUZ05PRnhwSlNrQmR0MXBqS3g5T2lock5FVk43SVUtTHJUeTFzYXFWYzdKdm1IYmR0bWhfZGNPRzVyd2tLQjVYTTJLOGY2eTVnTQ"
     },
     {
       "id": "79ec89389e07",
@@ -738,18 +751,6 @@
       "summary": "Kansas elects first Democratic Senator in 94 years | Adam Hamilton ousts Sen. Roger Marshall &nbsp;&nbsp; 9News",
       "title": "Kansas elects first Democratic Senator in 94 years | Adam Hamilton ousts Sen. Roger Marshall",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQejVHekdjY0FOcTVScGZ3bzBWUUZJTUNfZ1EtaHRZUW11SEJNeVZ2Y1BKOVVuY2NWdzlMZDJPVTFzMjE0RmdhVnJQaEI4elMtRUhVVzV0b0p6VFR6ZXoyLW51ZmRvRzIwZkxGOFlBODVwQk1MelVrZnRIb3dvbjV6ekMxdTlYSjU5OEVjU1d5WmRrWmNCbWxaY3FyS3c3c3pYRWR1M2dHUk9QNzBaV1FHZldaMUNueXA2b3gzbUFWOEZ1ajN0Rk1oQVdFTnJFOVJnOTRhcnUtN2JScHFsUm1ZcHJaSGNMdHQ4Q05LT0xUdU5Ua0U"
-    },
-    {
-      "id": "6934e9ad7f37",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T16:21:34Z",
-      "source": "Reuters",
-      "summary": "Adam Hamilton becomes first Democrat elected to US Senate from Kansas in 94 years &nbsp;&nbsp; Reuters",
-      "title": "Adam Hamilton becomes first Democrat elected to US Senate from Kansas in 94 years",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMHVVb3F0TE9uYjVlOFhaV21Xc1hqQVNVY1MwS09qM1BrTEFSUzRma2oteUIxT2x4TTRKMG1jVW5nT0VpNjFNUW1BZ2VReTRJYmtDUHFmcmFPS2VqeEVLbmFaQWFoMnQ1V3l4WkxWQm11b2JvVkg4WWZ3d3F2SFZrcDNvRTh5VHhhRU8xOFZ6SWQ5YS1tY0lGRDlEc0hDTzBrcnNkRG1xSS12UnhaZU01M1B2VVM3QQ"
     },
     {
       "id": "7cc1a6d8af68",
@@ -984,6 +985,30 @@
       "summary": "Roger Marshall and Ty Masterson host election watch party in Wichita &nbsp;&nbsp; The Topeka Capital-Journal",
       "title": "Roger Marshall and Ty Masterson host election watch party in Wichita",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOOU1lbnQ2cjJLaEFLRXJUN3dxc3Q1WVFqSWN6YUVsYTAwbnBLUFFPckN5eFk3M3MzLUhfZHMtSS05Y3ZIRm1JdHJXZXhxcW02NWwyS0ZraTBrdVRLMmJMOGg2V1FZRHVXR1MxUGhnazZYYlRZeGFrN1dDMG9wNUdPaTBjRFlTRWtNWGk0VlZuYVo1VFZJb2xDMkZtdkZMQjIxRkp0ZlJRWWh2c0xqZzhuQm00T2VXcGQtazJnUV85bEtXSUhxR2JvWWlsTHlMWlZzRVc0Q1RJcVJtRTlYVnhuVWpfY2lQMWZuQ3c"
+    },
+    {
+      "id": "6934e9ad7f37",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T08:00:00Z",
+      "source": "Reuters",
+      "summary": "Adam Hamilton becomes first Democrat elected to US Senate from Kansas in 94 years &nbsp;&nbsp; Reuters",
+      "title": "Adam Hamilton becomes first Democrat elected to US Senate from Kansas in 94 years",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMHVVb3F0TE9uYjVlOFhaV21Xc1hqQVNVY1MwS09qM1BrTEFSUzRma2oteUIxT2x4TTRKMG1jVW5nT0VpNjFNUW1BZ2VReTRJYmtDUHFmcmFPS2VqeEVLbmFaQWFoMnQ1V3l4WkxWQm11b2JvVkg4WWZ3d3F2SFZrcDNvRTh5VHhhRU8xOFZ6SWQ5YS1tY0lGRDlEc0hDTzBrcnNkRG1xSS12UnhaZU01M1B2VVM3QQ"
+    },
+    {
+      "id": "75da8b073a89",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-04T08:00:00Z",
+      "source": "CBS News",
+      "summary": "Adam Hamilton wins Kansas 2026 Senate election, CBS News projects, flipping seat for Democrats &nbsp;&nbsp; CBS News",
+      "title": "Adam Hamilton wins Kansas 2026 Senate election, CBS News projects, flipping seat for Democrats",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9fT0thdVdHNjVaMzZlR2lBTHVDU0JOMG5fQndsczBpTUxnRXpnQ0RRRV9pLWY5TzItQjJ5LXZ0SUdCeGdab1o4M1ZnZXROV2tGV2lzTVRFOGI5akRuWmlGcHEyU2FhNzcxcFJuSHIyVC1zOE5M"
     },
     {
       "id": "5e211954969f",
@@ -1448,18 +1473,6 @@
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZnFrT2hhTkRUbkticHZuQWRFWHE2eExtMlZ1a19JZnl3cjduNkVBWE5CMGU3OHVHTG84WHdzQl9EOUczVFU1YkpYVm0zWGszZlhQbGdvRFlwaFVtbXVRMFNSbGwza1U1cTVmUnVDWDNzcXJUck9VU1ZBcTRiQzdRUFVlNzVudEZUWWlsbEVaWlBDZEYtQWltdHB0TEM3M3NCOGRTZlFzQ3lrODRnY1BiUW1VVFpTdU0tb1ZtVHRERWlmbndDbGplY2gtTTB5TkNOTnFiTW9hYk02eTA"
     },
     {
-      "id": "75da8b073a89",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T04:25:00Z",
-      "source": "CBS News",
-      "summary": "Adam Hamilton wins Kansas 2026 Senate election, CBS News projects, flipping seat for Democrats &nbsp;&nbsp; CBS News",
-      "title": "Adam Hamilton wins Kansas 2026 Senate election, CBS News projects, flipping seat for Democrats",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9fT0thdVdHNjVaMzZlR2lBTHVDU0JOMG5fQndsczBpTUxnRXpnQ0RRRV9pLWY5TzItQjJ5LXZ0SUdCeGdab1o4M1ZnZXROV2tGV2lzTVRFOGI5akRuWmlGcHEyU2FhNzcxcFJuSHIyVC1zOE5M"
-    },
-    {
       "id": "d2e34e62c500",
       "kind": "news",
       "mentions": [
@@ -1471,18 +1484,6 @@
       "summary": "A majority of Kansas voters have selected pastor Adam Hamilton (D) to replace incumbent Senator Roger Marshall (R) in Washington D.C.",
       "title": "Adam Hamilton projected to win bid for U.S. Senate seat in Kansas",
       "url": "https://www.ksnt.com/elections/adam-hamilton-projected-to-win-bid-for-u-s-senate-seat-in-kansas"
-    },
-    {
-      "id": "edd6e53f2edb",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-04T02:32:00Z",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "summary": "Kansas 2026 live midterm elections results: Democrat Adam Hamilton projected to win Senate seat &nbsp;&nbsp; ABC News - Breaking News, Latest News and Videos",
-      "title": "Kansas 2026 live midterm elections results: Democrat Adam Hamilton projected to win Senate seat",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWloxSW5IWWdDZnpMZTRab1JMQW93ZTlaYXVWNjB4dDM0UHE0aTUxRE42UU9nTmJkN3RhWko4QllHY0pBc1NBaVNlakRSMXVwRzJVczVjQUJIRmVrSFZCbjVMXzJxR3dUS2xFblRZTlZDWDI2T2ZzTG1oTlVGMXpDU1pRX013YlVBbmZkYnFyS2RIR2_SAZgBQVVfeXFMTkpaaGVRVnU5V0VHS09OeGVlUnEyRFZhdkpnX2c1T1dYcDFJeE1aamxOU01tajJGS0ZLX3ZETjF6cUQyRmtBaENIUGlKRzM3S0ZUUVRPR1pTZFI0UjJ5N3RHZ0RXSHJsdU90RmlPdjYyOHJCRjZjT0JSSHNySzdNR19YOVNkOGxyTUJhT05DdUM0blpXejBrcmk"
     }
   ],
   "schema_version": 1
