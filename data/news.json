@@ -26,15 +26,27 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-13T21:40:39.797516Z",
+  "generated_at": "2026-11-14T01:50:26.017127Z",
   "items": [
+    {
+      "id": "fc994f95c093",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-14T00:30:00Z",
+      "source": "WIBW",
+      "summary": "Sen. Moran looking forward to bipartisanship following Adam Hamilton\u2019s historic win &nbsp;&nbsp; WIBW",
+      "title": "Sen. Moran looking forward to bipartisanship following Adam Hamilton\u2019s historic win",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMFR0MzFxd3VjVldsbHFERi1Rc09pZk1vYmpxTVprM0hsOFJ4SW5uWUhITmNhR054WmlvU3Y0Z2tPU1VhY0ZRZWxhMlAydzJMWlNPdG54QXN5UVpLSDVKdldpMHU0ZFMzY0dwUGhoN2JNVzVTYnlRLVZsck1qcDBGMWZSdFJ1eWhFSk1XY2ZtQ3NVNmJlUE1JekFRaW9iVnpXOE15V0lkeHVXNjhuTHpuQ9IBxAFBVV95cUxOTUpRbVRhMDRFZDQ1LUtyV1puQzZrU2t3b3NkOWZpd0luMWF2SXFod0pYRFZjTE1aVlZqdEp5bzN2OGg1X05qMkxleDlxQVhCdHVvZC01dmgyY3hXQ2E2X2tWNFZwd1NLMXNhN0xmMG5VTmdMcVFHTlhDQ0diV0RmRnNQVVc2OWNnTnU1SU5ZaS1CZUFHa2MxNGh3dDRGZm11ODFCWXVYaHhvYU1iVGU4M2h4UFNLcGlYMGx1N01fZGN3OW9v"
+    },
     {
       "id": "e90f2a7e3c51",
       "kind": "news",
       "mentions": [
         "hamilton"
       ],
-      "published_at": "2026-11-13T21:30:33Z",
+      "published_at": "2026-11-13T22:37:25Z",
       "source": "NBC News",
       "summary": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins &nbsp;&nbsp; NBC News",
       "title": "Kansas U.S. Senate Election 2026 Live Results: Adam Hamilton Wins",
@@ -1474,19 +1486,6 @@
       "summary": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton &nbsp;&nbsp; The New York Times",
       "title": "Kansas U.S. Senate 2026: Live Midterm Election Results, Marshall vs. Hamilton",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcVZUSXpwVzk4YWR0a1UwR3h0aFpLZ3h0MzNiOEZDako2TjVNcVNQSEw4UzdYSkJLbDAyQ2hVYXlScU9Jd0RsV0c0R1dwVW5XTG1uZ0FwS0JpSTlJNE50aDI5VUMxdHFFazZrSkpRT1hfUWtOZjJ6cmFWczVkT3JHWkZ5S3c1YmwtdGdMTlVYdXN4NVk"
-    },
-    {
-      "id": "a3416be00495",
-      "kind": "news",
-      "mentions": [
-        "hamilton",
-        "marshall"
-      ],
-      "published_at": "2026-11-03T08:00:00Z",
-      "source": "AP News",
-      "summary": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years &nbsp;&nbsp; AP News",
-      "title": "Pastor Adam Hamilton ousts GOP Sen. Roger Marshall, Democrats' 1st Senate win in Kansas in 94 years",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcGtpT0Y1cGZfVW9FT1dZX2pqNVcyLUw2RUJHNVk3aHhyQjZLNnd2RFc0Q2gwM19qcGJJVTlJVkJwRDRTdWkyMzh3RWJJamd1eEYxMEZRSUtjcjcyQTNHajhBMkJkbE9vM1Zla2dLSVVUekZSTnBUa0FfWXZtS0h4Yl9jbnBvWDZFeFZiUlhKSVQ5TlI1V2pUUGJoZmJCV3kzNnA3SktnNGVpWS1vanR0eA"
     }
   ],
   "schema_version": 1
