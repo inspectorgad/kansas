@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-14T01:50:26.017127Z",
+  "generated_at": "2026-11-14T08:47:13.633811Z",
   "items": [
     {
       "id": "fc994f95c093",
@@ -114,6 +114,18 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNUEtlRkFrdUlKV1p4blJldTV0LUotcVNIRWpZN3pXSTJKUHVZZWJuZy0zblUtSm1vNmhhb2h2MXZLVWlXRlVkT0MzXzlpaHVDWEJuc0VRaFpxWkVkMXJLd2N3MjZvTVhTMmk4NlM5Y0NBV1pJQUdiS2c1VTgxclo5elhXMGNyN0VKQjhzaE1nNHVKYzZudEM5cGcyaHI5aDJUSEprVEo1Nk1sLXdxaHZSdWxaUzY1SldreENKSG5WMlNCZ0c1eHY3eV9pRHhGQ3dpZVphMA"
     },
     {
+      "id": "4cd3466adde3",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-09T20:14:02Z",
+      "source": "Kansas City Star",
+      "summary": "Adam Hamilton\u2019s church welcomed him back as senator-elect. Here\u2019s what he said &nbsp;&nbsp; Kansas City Star",
+      "title": "Adam Hamilton\u2019s church welcomed him back as senator-elect. Here\u2019s what he said",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE92WUJOai1VT3ROZEVnel9CSlkyVlBSbHlZN0o0V3l2akFVd0lMZlFKeFFRVEVaOURhQW1BV0NQMzhhazR5WGpVcUpRT01FOGt5ZGVaZWluNEFST3VQTllsNmtvVVFrQ09Rc0ZnQ0RpaXg5SzB2RmxKTmFPaGw4QdIBfkFVX3lxTE1VNWg5d2lqZTVETGt6WDF3SHNOTHRTSGkzQTREcm5peHNGbmlGNlp5QjdScWwwMnNEQ1VTampiejhkMVNIS3BjS3lYVkZSMkp4ZjA3U29UMWZGTGZaZWJFcVBiYWJuaEo4QTYzWTkyX0owWm1PRjVZNmYzczFMUQ"
+    },
+    {
       "id": "958df897c04d",
       "kind": "news",
       "mentions": [
@@ -172,18 +184,6 @@
       "summary": "Adam Hamilton speaks to his Leawood congregation for first time after U.S. Senate win &nbsp;&nbsp; KCUR",
       "title": "Adam Hamilton speaks to his Leawood congregation for first time after U.S. Senate win",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUGx6ankxck9CNmpSYzQ3MjdtTTl6amMwaHJQNks3OVJnWnVSM18zdHlzbFhCMGFHZXVhR1hRaklSVE9MQWg1dVc1NFR4Ymc5WUZvWi1jd0NxM0lnWnRiR0Rjay1CRnVXUEdrVU80WTM0U2EtQlFBWFZtdDQ2VG9WN05uUWR2akU4d3JPUE9NeXRycDhud1NkcXRQYUNXX2JMcmV2S0JodFo2aDBHbkFMb08xOA"
-    },
-    {
-      "id": "4cd3466adde3",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-09T11:00:00Z",
-      "source": "Kansas City Star",
-      "summary": "Adam Hamilton\u2019s church welcomed him back as senator-elect. Here\u2019s what he said &nbsp;&nbsp; Kansas City Star",
-      "title": "Adam Hamilton\u2019s church welcomed him back as senator-elect. Here\u2019s what he said",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE92WUJOai1VT3ROZEVnel9CSlkyVlBSbHlZN0o0V3l2akFVd0lMZlFKeFFRVEVaOURhQW1BV0NQMzhhazR5WGpVcUpRT01FOGt5ZGVaZWluNEFST3VQTllsNmtvVVFrQ09Rc0ZnQ0RpaXg5SzB2RmxKTmFPaGw4QdIBfkFVX3lxTE1VNWg5d2lqZTVETGt6WDF3SHNOTHRTSGkzQTREcm5peHNGbmlGNlp5QjdScWwwMnNEQ1VTampiejhkMVNIS3BjS3lYVkZSMkp4ZjA3U29UMWZGTGZaZWJFcVBiYWJuaEo4QTYzWTkyX0owWm1PRjVZNmYzczFMUQ"
     },
     {
       "id": "0a91e0567ab6",
@@ -499,18 +499,6 @@
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVFViZEhWckNXWk9aQVM1cThJcVJHZ0dNR2h2M2dWVFF4aUNQVjZQRlFLby1uck1uZDhaTEJEbnlBOFlLejBvQXN5TWdEQkxvLWE0aHpfb3NOQ1BsMDZPTXpRd1pYTWIzNWJ5TXRfUWJFbm1heXRxQXR2WGVBTG0xS3BIRWM1cFM1VlhUbklvWW7SAZYBQVVfeXFMUDlRbk91VlY1YmNZd2EzVHVQN3lGbWZfcUtmRXdkM2xoTTIxVk9hcHhGYWNIdzAtams1QlpKV0hoWFBsNlQwaDZ5WjBEeTdESGllVUQ3cVVPNm03eGxqeVZiT0gtbjZrYmlQaFF1dEdMS2RscVN2aGZ1Uk9XQTY1ZDJHVTlkSURyYnZIT3hPNEpNa3JXcExB"
     },
     {
-      "id": "de9e2d774079",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-05T21:43:00Z",
-      "source": "KCTV",
-      "summary": "Kansas Senator-elect Adam Hamilton pledges independent voice, push for bipartisan coalitions &nbsp;&nbsp; KCTV",
-      "title": "Kansas Senator-elect Adam Hamilton pledges independent voice, push for bipartisan coalitions",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNaGRfS1hYRnU0cFpWNm45OHdIV2cyV1lScXZaZ25DV1h6VGJjbEdQbHVFQlA2LTRRQjhVcmdGQzlxWGJPTHd5TFdtdUZ6YlE3VDdmMmw1RXYwMWZSSm9QWmhGa1RubDlrQ1Zab0tZOG1uUnpOZFc3NFJKNXExMHB0STU0bTl6QkVTc2xFd1l2LW1VUHZkSDVzNFRBdXpxckJ5U3ItejNnbmxFMjNJbjF3UEpQT21uV01PeUYzR1J30gHSAUFVX3lxTFAyV0ladXZNMmhzZU9hY2E1X3ZJRWJ3WEJTbDF3NkdmM0s2NEhtdHVLUEM1b1ZZdnoxQmpuQ2FBNkIyUzc4U2dWc0YwNHREeng1NEhIamV1b3RkbDFIOW1YcWlCQTAxUzJLYUpFX1R3dVlmbGd2dEh1MXhVSl9iVXE1cjN2OHNmWDlhS01tWjRzbVNyeGJuWk1tRTdSX1NiVzdSdk5rUG11RVozUURDaWdOclR1LVFVNm5PbUVqSHlVZWxLbTJVTWhFdEdBRmkxYVRvUQ"
-    },
-    {
       "id": "f994d07b0dc1",
       "kind": "news",
       "mentions": [
@@ -569,6 +557,18 @@
       "summary": "The Methodist pastor who flipped a Republican Senate seat says voters want more than political change. Adam Hamilton tells NPR what he heard from Kansans about decency, faith and finding common ground.",
       "title": "Kansas just elected a Democrat. His message to Washington? Be decent",
       "url": "https://www.kcur.org/politics-elections-and-government/2026-11-04/kansas-just-elected-a-democrat-his-message-to-washington-be-decent"
+    },
+    {
+      "id": "de9e2d774079",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-05T08:00:00Z",
+      "source": "KCTV",
+      "summary": "Kansas Senator-elect Adam Hamilton pledges independent voice, push for bipartisan coalitions &nbsp;&nbsp; KCTV",
+      "title": "Kansas Senator-elect Adam Hamilton pledges independent voice, push for bipartisan coalitions",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNaGRfS1hYRnU0cFpWNm45OHdIV2cyV1lScXZaZ25DV1h6VGJjbEdQbHVFQlA2LTRRQjhVcmdGQzlxWGJPTHd5TFdtdUZ6YlE3VDdmMmw1RXYwMWZSSm9QWmhGa1RubDlrQ1Zab0tZOG1uUnpOZFc3NFJKNXExMHB0STU0bTl6QkVTc2xFd1l2LW1VUHZkSDVzNFRBdXpxckJ5U3ItejNnbmxFMjNJbjF3UEpQT21uV01PeUYzR1J30gHSAUFVX3lxTFAyV0ladXZNMmhzZU9hY2E1X3ZJRWJ3WEJTbDF3NkdmM0s2NEhtdHVLUEM1b1ZZdnoxQmpuQ2FBNkIyUzc4U2dWc0YwNHREeng1NEhIamV1b3RkbDFIOW1YcWlCQTAxUzJLYUpFX1R3dVlmbGd2dEh1MXhVSl9iVXE1cjN2OHNmWDlhS01tWjRzbVNyeGJuWk1tRTdSX1NiVzdSdk5rUG11RVozUURDaWdOclR1LVFVNm5PbUVqSHlVZWxLbTJVTWhFdEdBRmkxYVRvUQ"
     },
     {
       "id": "79ec89389e07",
