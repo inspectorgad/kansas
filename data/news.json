@@ -26,7 +26,7 @@
       "url": "https://www.ksnt.com/feed/"
     }
   ],
-  "generated_at": "2026-11-14T15:42:28.313405Z",
+  "generated_at": "2026-11-14T20:09:27.850875Z",
   "items": [
     {
       "id": "fc994f95c093",
@@ -283,6 +283,18 @@
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLUNGWU81ZFJuX3Nma0dPa04waVJZT0hEVTBZRVNsNHdhdmx2QlFXMml5YXZZSkJLdS1ZMjk0LThFM2VnamhrTEtnTHpDNFZwdFBOWW43VmVvYUU5R3hseTVIWG1lTEJXNjRLRDJnUXZkQTZzVXZ1Q1c3anZtTDBPN1hzMHJIWk5SbDBTMDBOZ2hEUUpEdHZQdHIxYU84bGxGVmFablVteTJ3Z2M"
     },
     {
+      "id": "59383e5020e4",
+      "kind": "news",
+      "mentions": [
+        "hamilton"
+      ],
+      "published_at": "2026-11-08T16:10:00Z",
+      "source": "Modern Ghana",
+      "summary": "Why Adam Hamilton isn\u2019t backing Schumer to be Senate leader &nbsp;&nbsp; Modern Ghana",
+      "title": "Why Adam Hamilton isn\u2019t backing Schumer to be Senate leader",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE93QjVaUF9PX1UwS2pxWDhGNEtXNUExazU3UXh1cGNhcVVfZW5EcEFLMUZ4ejVlc18zUmEzZV9pMkpIRlFxa1VQZDMtT3k1aG5FUHNyZ2RJOXMzbURYdFBr0gFcQVVfeXFMTTEzWnpoSUQ2QVB0YTBlT2hyY3dsblRCTEQ1NGVOcmlOQlJwZzNMcld4MGZBRWFoZ2R2dDNaZFdVdzNaSjFkN25jVFk1NlRlOEdpeW9OM2lvcU9YRlM"
+    },
+    {
       "id": "7347c062f312",
       "kind": "news",
       "mentions": [
@@ -305,18 +317,6 @@
       "summary": "Adam Hamilton Warns Democrats Against Trump Investigations After Kansas Win &nbsp;&nbsp; Newsweek",
       "title": "Adam Hamilton Warns Democrats Against Trump Investigations After Kansas Win",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOX0REV2hvQldBYjJyQ00zNXhGU0dSOVVOSDRKZ2xFWi1xaEdnNXhJeF9WS2ZFcXl5Ykw3Z01qWWl2eV9yUmE1SnRqWW1XQWEtU0Zlc1hKUUE5RGlHZUVvRmNWNVl2dnRHelhWd0hJbWE0X1lyZXF1SVU2UWNlUHdlOVpBbWhWQ2hnWGd0czJR"
-    },
-    {
-      "id": "9f6a3b8d1392",
-      "kind": "news",
-      "mentions": [
-        "hamilton"
-      ],
-      "published_at": "2026-11-08T15:25:43Z",
-      "source": "NBC News",
-      "summary": "Why Adam Hamilton isn\u2019t backing Schumer to be Senate leader &nbsp;&nbsp; NBC News",
-      "title": "Why Adam Hamilton isn\u2019t backing Schumer to be Senate leader",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZGx5YXJFcmg4ZWg4NDY1TXNZS2VkaFhEYUh6SEw4ajFpQldTOFpmMFZQRzlFcFhTeDdCNmNIS2J1N015YmxpZm1VMHU5RDVERjZjaURrc3dDU3dGVkFaZUNXSjFCdDdKQ2ZTMWZjX1lqZ0pVYVd4UFBkcGVyb1F0dF9DUjJ3MXVQSHlpYkR4R1dTVUh6X2pkQ29SZXZhdGNOdENKM0ZMbk01Y1NhTEE"
     },
     {
       "id": "7ed407982015",
