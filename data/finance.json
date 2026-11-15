@@ -1994,7 +1994,7 @@
       "date": "2026-10-29",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/277/202610299945271277/202610299945271277.pdf"
+      "url": "https://docquery.fec.gov/pdf/261/202610299945300261/202610299945300261.pdf"
     },
     {
       "committee_id": "C00948901",
@@ -2002,7 +2002,7 @@
       "date": "2026-10-29",
       "form_type": "F6",
       "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/261/202610299945300261/202610299945300261.pdf"
+      "url": "https://docquery.fec.gov/pdf/277/202610299945271277/202610299945271277.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2016,16 +2016,16 @@
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
-      "form_type": "F6",
-      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
-      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
+      "form_type": "F1",
+      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
     },
     {
       "committee_id": "C00948901",
       "committee_name": "HAMILTON FOR KANSAS",
       "date": "2026-10-25",
-      "form_type": "F1",
-      "url": "https://docquery.fec.gov/pdf/687/202610259945202687/202610259945202687.pdf"
+      "form_type": "F6",
+      "report_type": "48-HOUR NOTICE OF CONTRIBUTIONS OR LOANS RECEIVED",
+      "url": "https://docquery.fec.gov/pdf/696/202610259945202696/202610259945202696.pdf"
     },
     {
       "committee_id": "C00576173",
@@ -2150,7 +2150,7 @@
       "url": "https://docquery.fec.gov/pdf/667/202610139908689667/202610139908689667.pdf"
     }
   ],
-  "generated_at": "2026-11-15T06:14:10.175270Z",
+  "generated_at": "2026-11-15T14:09:21.596923Z",
   "outside_spending": {
     "opposing": {
       "hamilton": 34416215.87,
